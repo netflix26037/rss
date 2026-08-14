@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="قارئ الخلاصات">
+    
+    <title>REDDIT - خلاصات الأخبار</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class' }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+        
+        body { 
+            font-family: 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .pt-safe { padding-top: max(1rem, env(safe-area-inset-top)); }
+        .pb-safe { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
+        .pb-safe-nav { padding-bottom: max(4.5rem, calc(4rem + env(safe-area-inset-bottom))); }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .sidebar-slide { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .fade-out-card { transition: opacity 0.5s ease, transform 0.5s ease; opacity: 0; transform: translateY(-10px); }
+    </style>
+</head>
+<body class="bg-slate-950 text-gray-100 min-h-screen flex flex-col pb-safe-nav antialiased">
+
+    <!-- القائمة الجانبية (Sidebar) للمجموعات والتصنيفات -->
+    <div id="sidebar-overlay" onclick="closeSidebar()" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+    <aside id="sidebar" class="fixed top-0 right-0 bottom-0 w-4/5 max-w-xs bg-slate-900 border-l border-slate-800 z-50 transform translate-x-full sidebar-slide flex flex-col pt-safe pb-safe px-4">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800 mb-4">
+            <h2 class="font-bold text-sm text-[#FF4500] flex items-center gap-2">
+                <i class="fa-solid fa-layer-group"></i> التصنيفات والمجموعات
+            </h2>
+            <button onclick="closeSidebar()" class="text-gray-400 p-1 active:scale-95">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+        </div>
+
+        <div id="sidebar-categories" class="flex-grow overflow-y-auto space-y-3 no-scrollbar"></div>
+
+        <div class="pt-4 border-t border-slate-800 space-y-2 text-xs">
+            <button onclick="openModal(); closeSidebar();" class="w-full py-2 bg-[#FF4500] text-white font-bold rounded-xl flex items-center justify-center gap-2">
+                <i class="fa-solid fa-plus"></i> إضافة مصدر جديد
+            </button>
+        </div>
+    </aside>
+
+    <!-- الشريط العلوي الرئيسي -->
+    <header class="bg-slate-900/90 backdrop-blur-md border-b border-slate-800 sticky top-0 z-40 pt-safe">
+        <!-- شريط الأسعار -->
+        <div class="px-4 py-1.5 flex items-center justify-between border-b border-slate-800/60 text-xs">
+            <div class="flex items-center gap-1.5 shrink-0 pl-2 border-l border-slate-800">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span class="font-bold text-gray-400 text-[10px]">مباشر:</span>
+            </div>
+            
+            <div class="no-scrollbar flex items-center gap-3 overflow-x-auto whitespace-nowrap px-2 flex-grow font-mono text-[11px]">
+                <div id="box-BRENT" class="flex items-center gap-1"><span class="text-amber-500 font-bold">BRENT</span> <span id="price-BRENT">--.--</span></div>
+                <div id="box-BTC" class="flex items-center gap-1"><span class="text-cyan-400 font-bold">BTC</span> <span id="price-BTC">--.--</span></div>
+                <div id="box-BTCD" class="flex items-center gap-1"><span class="text-purple-400 font-bold">BTC.D</span> <span id="price-BTCD">--.--%</span></div>
+                <div id="box-GME" class="flex items-center gap-1"><span class="text-amber-400 font-bold">GME</span> <span id="price-GME">--.--</span></div>
+            </div>
+        </div>
+
+        <!-- الهيدر السفلي -->
+        <div class="px-4 py-2.5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <button onclick="openSidebar()" class="text-gray-200 text-lg p-1.5 rounded-xl bg-slate-800 active:scale-95 transition">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="flex items-center gap-2">
+                    <div class="bg-[#FF4500] text-white p-1.5 rounded-xl">
+                        <i class="fa-brands fa-reddit-alien text-base"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-sm font-bold leading-none">REDDIT FEEDS</h1>
+                        <span class="text-[9px] text-[#FF4500] font-semibold">تطبيق الخلاصات المجمع</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <span id="header-unread-count-badge" class="bg-emerald-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold">
+                    0
+                </span>
+                <button onclick="toggleLiveWidget()" class="bg-red-600 text-white p-1.5 rounded-xl text-xs active:scale-95 transition">
+                    <i class="fa-solid fa-tv"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="px-4 py-4 space-y-3 flex-grow">
+        <div class="flex items-center justify-between">
+            <h2 id="current-feed-title" class="text-sm font-bold text-gray-200">المنشورات غير المقروءة (آخر 24 ساعة)</h2>
+        </div>
+        
+        <div id="articles-grid" class="space-y-3">
+            <div class="text-center py-16 text-gray-500 bg-slate-900/50 rounded-2xl border border-slate-800">
+                <i class="fa-solid fa-spinner fa-spin text-2xl mb-2 text-[#FF4500]"></i>
+                <p class="text-xs">جاري تحميل الخلاصات...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- شريط التنقل السفلي -->
+    <nav class="fixed bottom-0 inset-x-0 bg-slate-900/95 backdrop-blur-lg border-t border-slate-800/80 z-40 px-4 py-2 flex justify-around items-center text-gray-400 pb-safe">
+        <button onclick="loadAllUnreadFeed()" class="flex flex-col items-center gap-1 active:text-[#FF4500] text-xs font-semibold">
+            <i class="fa-solid fa-envelope-open-text text-base text-emerald-500"></i>
+            <span class="text-[10px]">الغير مقروء</span>
+        </button>
+
+        <button onclick="loadViewedFeed()" class="flex flex-col items-center gap-1 active:text-[#FF4500] text-xs font-semibold">
+            <i class="fa-solid fa-eye text-base text-indigo-400"></i>
+            <span class="text-[10px]">تمت المشاهدة (24س)</span>
+        </button>
+
+        <button onclick="loadFavoritesFeed()" class="flex flex-col items-center gap-1 active:text-[#FF4500] text-xs font-semibold">
+            <i class="fa-solid fa-star text-base text-amber-500"></i>
+            <span class="text-[10px]">المفضلة</span>
+        </button>
+
+        <button onclick="openModal()" class="flex flex-col items-center gap-1 active:text-[#FF4500] text-xs font-semibold">
+            <i class="fa-solid fa-plus text-base text-white"></i>
+            <span class="text-[10px]">إضافة مصدر</span>
+        </button>
+    </nav>
+
+    <!-- نافذة البث المباشر -->
+    <div id="live-widget" class="fixed top-16 inset-x-4 z-50 bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden hidden">
+        <div class="bg-slate-950 px-3 py-2 flex justify-between items-center text-xs font-bold border-b border-slate-800">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle text-red-600 text-[8px] animate-pulse"></i> قناة العربية مباشر</span>
+            <button onclick="toggleLiveWidget()" class="text-gray-400 p-1"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="relative w-full aspect-video bg-black">
+            <video id="live-stream-player" controls autoplay muted playsinline class="w-full h-full object-cover"></video>
+        </div>
+    </div>
+
+    <!-- نافذة إضافة مصدر RSS -->
+    <div id="add-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+        <div class="bg-slate-900 text-gray-100 w-full max-w-sm rounded-2xl border border-slate-800 p-5 space-y-4">
+            <h3 class="text-base font-bold">إضافة مصدر جديد</h3>
+            <form onsubmit="addSource(event)" class="space-y-3">
+                <input type="text" id="source-name" placeholder="اسم المصدر" class="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-xl text-xs focus:outline-none focus:border-[#FF4500]">
+                <input type="url" id="source-url" required placeholder="رابط الـ RSS" class="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-xl text-xs focus:outline-none focus:border-[#FF4500]">
+                <input type="text" id="source-category" placeholder="التصنيف (اختياري)" class="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-xl text-xs focus:outline-none focus:border-[#FF4500]">
+                <div class="flex justify-end gap-2 pt-2">
+                    <button type="button" onclick="closeModal()" class="px-4 py-2 bg-slate-800 rounded-xl text-xs">إلغاء</button>
+                    <button type="submit" class="px-4 py-2 bg-[#FF4500] text-white rounded-xl text-xs font-bold">إضافة</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // كافة المصادر التي تم استخراجها وتصنيفها من ملف الـ OPML الخاص بك
+        const DEFAULT_SOURCES = [
+            // مجتمعي
+            { name: "مجتمعي", url: "https://www.reddit.com/user/strictdog2350/m/mjtmy/.rss", category: "مجتمعي" },
+
+            // سفر
+            { name: "Reddit | Cruise", url: "https://www.reddit.com/r/Cruise/.rss", category: "سفر" },
+
+            // الاقتصاد
+            { name: "EconomyCharts", url: "https://www.reddit.com/r/EconomyCharts/.rss", category: "الاقتصاد" },
+            { name: "Economics", url: "https://www.reddit.com/r/Economics/.rss", category: "الاقتصاد" },
+            { name: "EU_Economics", url: "https://www.reddit.com/r/EU_Economics/.rss", category: "الاقتصاد" },
+            { name: "Oil, Gas & Energy", url: "https://www.reddit.com/r/oil/.rss", category: "الاقتصاد" },
+            { name: "OilPrices", url: "https://www.reddit.com/r/OilPrices/.rss", category: "الاقتصاد" },
+            { name: "NoFilterFinance", url: "https://www.reddit.com/r/NoFilterFinance/.rss", category: "الاقتصاد" },
+            { name: "Economic Inflation", url: "https://www.reddit.com/r/inflation/.rss", category: "الاقتصاد" },
+            { name: "Economy", url: "https://www.reddit.com/r/economy/.rss", category: "الاقتصاد" },
+            { name: "Bond Market", url: "https://www.reddit.com/r/bondmarket/.rss", category: "الاقتصاد" },
+            { name: "BoredPandaHQ", url: "https://www.reddit.com/r/BoredPandaHQ/.rss", category: "الاقتصاد" },
+            { name: "Business", url: "https://www.reddit.com/r/business/.rss", category: "الاقتصاد" },
+            { name: "Business Today News", url: "https://www.reddit.com/r/BusinessTodayNews/.rss", category: "الاقتصاد" },
+
+            // الأسهم
+            { name: "Optionmillionaires", url: "https://www.reddit.com/r/Optionmillionaires/.rss", category: "الاسهم" },
+            { name: "Pennystock", url: "https://www.reddit.com/r/Pennystock/.rss", category: "الاسهم" },
+            { name: "Market Forecasts", url: "https://www.reddit.com/r/Market_Forecasts/new/.rss", category: "الاسهم" },
+            { name: "PennyStocks Watch", url: "https://www.reddit.com/r/PennyStocksWatch/.rss", category: "الاسهم" },
+            { name: "PennyStocks Main", url: "https://www.reddit.com/r/pennystocks/.rss", category: "الاسهم" },
+            { name: "Penny Stocks Alt", url: "https://www.reddit.com/r/Penny_Stocks/.rss", category: "الاسهم" },
+            { name: "MBOT Stock", url: "https://www.reddit.com/r/MBOT_Stock/new/.rss", category: "الاسهم" },
+            { name: "Market Pulse Report", url: "https://www.reddit.com/r/MarketPulseReport/new/.rss", category: "الاسهم" },
+            { name: "Junior Stocks", url: "https://www.reddit.com/r/Junior_Stocks/new/.rss", category: "الاسهم" },
+            { name: "Options Trading", url: "https://www.reddit.com/r/options/.rss", category: "الاسهم" },
+            { name: "NextMoveStocks", url: "https://www.reddit.com/r/NextMoveStocks/.rss", category: "الاسهم" },
+            { name: "FFIEMeltdown", url: "https://www.reddit.com/r/FFIEMeltdown/.rss", category: "الاسهم" },
+            { name: "Hot Stocks", url: "https://www.reddit.com/r/hot_stocks/new/.rss", category: "الاسهم" },
+            { name: "FFIE Stock", url: "https://www.reddit.com/r/FFIE/.rss", category: "الاسهم" },
+            { name: "Epiphanystonk", url: "https://www.reddit.com/r/epiphanystonk/.rss", category: "الاسهم" },
+            { name: "Dividends", url: "https://www.reddit.com/r/dividends/.rss", category: "الاسهم" },
+            { name: "Investing", url: "https://www.reddit.com/r/investing/.rss", category: "الاسهم" },
+            { name: "InterstellarKinetics", url: "https://www.reddit.com/r/InterstellarKinetics/new/.rss", category: "الاسهم" },
+            { name: "ADTX", url: "https://www.reddit.com/r/ADTX/.rss", category: "الاسهم" },
+            { name: "Energy Stocks", url: "https://www.reddit.com/r/energyStocks/.rss", category: "الاسهم" },
+            { name: "Growth Stocks", url: "https://www.reddit.com/r/GrowthStocks/.rss", category: "الاسهم" },
+            { name: "Water Stocks", url: "https://www.reddit.com/r/WaterStocks/.rss", category: "الاسهم" },
+            { name: "Beginner Investing", url: "https://www.reddit.com/r/BeginnerInvesting/.rss", category: "الاسهم" },
+            { name: "AMD Hardware", url: "https://www.reddit.com/r/Amd/.rss", category: "الاسهم" },
+            { name: "AMC Stock", url: "https://www.reddit.com/r/amcstock/.rss", category: "الاسهم" },
+            { name: "Wallstreetbets Wins", url: "https://www.reddit.com/r/wallstreetbets_wins/.rss", category: "الاسهم" },
+            { name: "WallStreetbets ELITE", url: "https://www.reddit.com/r/WallStreetbetsELITE/.rss", category: "الاسهم" },
+            { name: "Wallstreetbets Germany", url: "https://www.reddit.com/r/wallstreetbetsGER/.rss", category: "الاسهم" },
+            { name: "Wall Street Silver", url: "https://www.reddit.com/r/Wallstreetsilver/.rss", category: "الاسهم" },
+            { name: "Webull Penny Stocks", url: "https://www.reddit.com/r/WebullPennyStocks/.rss", category: "الاسهم" },
+            { name: "Weed Stocks", url: "https://www.reddit.com/r/weedstocks/.rss", category: "الاسهم" },
+            { name: "Wallstreetbets2", url: "https://www.reddit.com/r/wallstreetbets2/.rss", category: "الاسهم" },
+            { name: "WallStreetBets Main", url: "https://www.reddit.com/r/wallstreetbets/.rss", category: "الاسهم" },
+            { name: "EMJX Stock", url: "https://www.reddit.com/r/EMJX/.rss", category: "الاسهم" },
+            { name: "Biotech Stocks", url: "https://www.reddit.com/r/biotech_stocks/.rss", category: "الاسهم" },
+            { name: "10x Penny Stocks", url: "https://www.reddit.com/r/10xPennyStocks/.rss", category: "الاسهم" },
+            { name: "100x Penny Stock", url: "https://www.reddit.com/r/100xpennystock/.rss", category: "الاسهم" },
+            { name: "Opendoor Stock", url: "https://www.reddit.com/r/opendoor/.rss", category: "الاسهم" },
+            { name: "GameStop (GME)", url: "https://www.reddit.com/r/GME/.rss", category: "الاسهم" },
+            { name: "Biopharma Stocks", url: "https://www.reddit.com/r/BiopharmaStocks/.rss", category: "الاسهم" },
+
+            // كريبتو
+            { name: "Bitcoin Beginners", url: "https://www.reddit.com/r/BitcoinBeginners/.rss", category: "كريبتو" },
+            { name: "Bitcoin.com", url: "https://www.reddit.com/r/bitcoin_com/.rss", category: "كريبتو" },
+            { name: "Crypto MoonShots", url: "https://www.reddit.com/r/CryptoMoonShots/.rss", category: "كريبتو" },
+            { name: "Crypto Markets", url: "https://www.reddit.com/r/CryptoMarkets/.rss", category: "كريبتو" },
+            { name: "CryptoCurrencies", url: "https://www.reddit.com/r/CryptoCurrencies/.rss", category: "كريبتو" },
+            { name: "Crypto Memes", url: "https://www.reddit.com/r/cryptocurrencymemes/.rss", category: "كريبتو" },
+            { name: "Aptos Crypto", url: "https://www.reddit.com/r/Aptos/.rss", category: "كريبتو" },
+            { name: "Binance Community", url: "https://www.reddit.com/r/binance/.rss", category: "كريبتو" },
+            { name: "Ethereum", url: "https://www.reddit.com/r/ethereum/.rss", category: "كريبتو" },
+            { name: "Altcoin", url: "https://www.reddit.com/r/altcoin/.rss", category: "كريبتو" },
+            { name: "Satoshi Street Bets", url: "https://www.reddit.com/r/SatoshiStreetBets/.rss", category: "كريبتو" },
+            { name: "DeFi", url: "https://www.reddit.com/r/defi/.rss", category: "كريبتو" },
+            { name: "RWA Asset Tokenization", url: "https://www.reddit.com/r/RWA/.rss", category: "كريبتو" },
+            { name: "RWATimes", url: "https://www.reddit.com/r/RWATimes/.rss", category: "كريبتو" },
+            { name: "Memecoins", url: "https://www.reddit.com/r/memecoins/.rss", category: "كريبتو" },
+            { name: "Tokenomics", url: "https://www.reddit.com/r/tokenomics/.rss", category: "كريبتو" },
+            { name: "Chainlink", url: "https://www.reddit.com/r/Chainlink/.rss", category: "كريبتو" },
+            { name: "Smart Contracts", url: "https://www.reddit.com/r/smartcontracts/.rss", category: "كريبتو" },
+            { name: "CryptoCurrency Main", url: "https://www.reddit.com/r/CryptoCurrency/.rss", category: "كريبتو" },
+            { name: "BTC Discussion", url: "https://www.reddit.com/r/btc/.rss", category: "كريبتو" },
+            { name: "Sui Network", url: "https://www.reddit.com/r/sui/.rss", category: "كريبتو" },
+            { name: "Dogecoin", url: "https://www.reddit.com/r/dogecoin/.rss", category: "كريبتو" },
+            { name: "Stellar XLM", url: "https://www.reddit.com/r/xlm/.rss", category: "كريبتو" },
+            { name: "Litecoin", url: "https://www.reddit.com/r/litecoin/new/.rss", category: "كريبتو" },
+            { name: "Nano Currency", url: "https://www.reddit.com/r/nanocurrency/new/.rss", category: "كريبتو" },
+            { name: "Memecoins New", url: "https://www.reddit.com/r/memecoins/new/.rss", category: "كريبتو" },
+            { name: "Official Trump Coin", url: "https://www.reddit.com/r/OfficialTrumpCoin/.rss", category: "كريبتو" },
+            { name: "Hedera (HBAR)", url: "https://www.reddit.com/r/Hedera/.rss", category: "كريبتو" },
+            { name: "EthTrader", url: "https://www.reddit.com/r/ethtrader/.rss", category: "كريبتو" },
+            { name: "CryptoCurrency FIRE", url: "https://www.reddit.com/r/CryptoCurrencyFIRE/.rss", category: "كريبتو" },
+            { name: "CryptoCurrency MAX", url: "https://www.reddit.com/r/CryptoCurrencyMAX/.rss", category: "كريبتو" },
+            { name: "Crypto Chart Watch", url: "https://www.reddit.com/r/CryptoChartWatch/.rss", category: "كريبتو" },
+            { name: "Crypto General", url: "https://www.reddit.com/r/Crypto_General/.rss", category: "كريبتو" },
+            { name: "Crypto Scams", url: "https://www.reddit.com/r/CryptoScams/.rss", category: "كريبتو" },
+            { name: "Crypto Community Africa", url: "https://www.reddit.com/r/CryptoCommunityAfric/.rss", category: "كريبتو" },
+            { name: "Crypto Currency News", url: "https://www.reddit.com/r/Crypto_Currency_News/.rss", category: "كريبتو" },
+            { name: "Bitcoin Markets", url: "https://www.reddit.com/r/BitcoinMarkets/.rss", category: "كريبتو" },
+            { name: "Buttcoin", url: "https://www.reddit.com/r/Buttcoin/.rss", category: "كريبتو" },
+            { name: "Bitcoin Cash SV", url: "https://www.reddit.com/r/bitcoincashSV/.rss", category: "كريبتو" },
+            { name: "AlgoTrading", url: "https://www.reddit.com/r/algotrading/.rss", category: "كريبتو" },
+            { name: "AltScope", url: "https://www.reddit.com/r/AltScope/.rss", category: "كريبتو" },
+            { name: "XRP Ripple", url: "https://www.reddit.com/r/XRP/.rss", category: "كريبتو" },
+            { name: "ChartScout", url: "https://www.reddit.com/r/ChartScout_io/.rss", category: "كريبتو" },
+            { name: "Cardano Protocol", url: "https://www.reddit.com/r/cardano/.rss", category: "كريبتو" },
+
+            // الأخبار
+            { name: "The Onion", url: "https://theonion.com/feed/", category: "الاخبار" },
+            { name: "US-Iran War", url: "https://www.reddit.com/r/USIranWar/.rss", category: "الاخبار" },
+            { name: "Iran War Report", url: "https://www.reddit.com/r/IranWarReport/.rss", category: "الاخبار" },
+            { name: "Iran Forum", url: "https://www.reddit.com/r/iran/.rss", category: "الاخبار" },
+            { name: "Politics", url: "https://www.reddit.com/r/politics/.rss", category: "الاخبار" },
+            { name: "In The News", url: "https://www.reddit.com/r/inthenews/.rss", category: "الاخبار" },
+            { name: "World News", url: "https://www.reddit.com/r/worldnews/.rss", category: "الاخبار" },
+            { name: "General News", url: "https://www.reddit.com/r/news/.rss", category: "الاخبار" },
+            { name: "US News", url: "https://www.reddit.com/r/USNEWS/.rss", category: "الاخبار" },
+            { name: "Aliens Discussion", url: "https://www.reddit.com/r/aliens/.rss", category: "الاخبار" }
+        ];
+
+        let sources = JSON.parse(localStorage.getItem('rss_opml_sources_v4')) || DEFAULT_SOURCES;
+        let readArticleObjects = JSON.parse(localStorage.getItem('read_articles_list_v4')) || [];
+        let favoriteArticles = JSON.parse(localStorage.getItem('favorite_articles_list_v4')) || [];
+        
+        let currentFeedMode = 'unread';
+        let activeTimers = {};
+        let observer = null;
+
+        function saveSources() { localStorage.setItem('rss_opml_sources_v4', JSON.stringify(sources)); }
+
+        function openSidebar() {
+            renderSidebarCategories();
+            document.getElementById('sidebar').classList.remove('translate-x-full');
+            document.getElementById('sidebar-overlay').classList.remove('hidden');
+        }
+
+        function closeSidebar() {
+            document.getElementById('sidebar').classList.add('translate-x-full');
+            document.getElementById('sidebar-overlay').classList.add('hidden');
+        }
+
+        function renderSidebarCategories() {
+            const container = document.getElementById('sidebar-categories');
+            container.innerHTML = '';
+
+            const grouped = {};
+            sources.forEach(s => {
+                const cat = s.category || 'عام';
+                if (!grouped[cat]) grouped[cat] = [];
+                grouped[cat].push(s);
+            });
+
+            for (const [cat, items] of Object.entries(grouped)) {
+                const catBox = document.createElement('div');
+                catBox.className = 'bg-slate-800/60 rounded-xl p-3 border border-slate-700/50 space-y-2';
+                
+                let itemsList = items.map(item => `
+                    <button onclick="loadSingleSourceFeed('${item.name.replace(/'/g, "\\'")}', '${item.url}')" class="w-full text-right text-xs text-gray-300 hover:text-white py-1 px-2 rounded-lg hover:bg-slate-700/50 flex items-center justify-between">
+                        <span class="truncate">${item.name}</span>
+                        <i class="fa-solid fa-chevron-left text-[10px] text-gray-500"></i>
+                    </button>
+                `).join('');
+
+                catBox.innerHTML = `
+                    <button onclick="loadCategoryFeed('${cat.replace(/'/g, "\\'")}')" class="w-full text-right font-bold text-xs text-[#FF4500] flex items-center justify-between pb-1 border-b border-slate-700/40">
+                        <span><i class="fa-solid fa-folder text-amber-500 ml-1"></i> ${cat} <span class="text-[10px] text-gray-400">(${items.length})</span></span>
+                        <span class="text-[10px] bg-slate-700 px-2 py-0.5 rounded-full text-gray-300">عرض الكل</span>
+                    </button>
+                    <div class="space-y-0.5 pt-1 max-h-40 overflow-y-auto no-scrollbar">${itemsList}</div>
+                `;
+                container.appendChild(catBox);
+            }
+        }
+
+        function purgeExpiredReadArticles() {
+            const TWENTY_FOUR_HOURS = 24 * 60 * 60 * 1000;
+            const now = Date.now();
+            readArticleObjects = readArticleObjects.filter(item => (now - item.timestamp) < TWENTY_FOUR_HOURS);
+            localStorage.setItem('read_articles_list_v4', JSON.stringify(readArticleObjects));
+        }
+
+        function isWithinLast24Hours(pubDateStr) {
+            if (!pubDateStr) return true;
+            const pubDate = new Date(pubDateStr).getTime();
+            if (isNaN(pubDate)) return true;
+            const now = Date.now();
+            return (now - pubDate) <= (24 * 60 * 60 * 1000);
+        }
+
+        function getTimeAgoFormatted(pubDateStr) {
+            if (!pubDateStr) return { formattedDate: 'تاريخ غير معروف', timeAgo: '' };
+            const date = new Date(pubDateStr);
+            if (isNaN(date.getTime())) return { formattedDate: 'تاريخ غير معروف', timeAgo: '' };
+
+            const now = new Date();
+            const diffMs = now - date;
+            const diffSec = Math.floor(diffMs / 1000);
+            const diffMin = Math.floor(diffSec / 60);
+            const diffHours = Math.floor(diffMin / 60);
+
+            let timeAgo = '';
+            if (diffMin < 1) {
+                timeAgo = 'منذ لحظات';
+            } else if (diffMin < 60) {
+                timeAgo = `منذ ${diffMin} دقيقة`;
+            } else {
+                timeAgo = `منذ ${diffHours} ساعة`;
+            }
+
+            const formattedDate = date.toLocaleDateString('ar-EG', {
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+            return { formattedDate, timeAgo };
+        }
+
+        /* دالة الجلب المتقدمة لحل مشكلة Reddit وجميع الروابط بشكل مباشر دون توقف */
+        async function fetchRssItems(url) {
+            try {
+                // إرسال الطلب عبر CORS Proxy لتجاوز الحجب التلقائي لروابط Reddit
+                const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(url)}`;
+                const res = await fetch(proxyUrl);
+                const xmlText = await res.text();
+
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlText, "text/xml");
+                const entries = xmlDoc.querySelectorAll("entry, item");
+
+                let parsedItems = [];
+                entries.forEach(el => {
+                    const title = el.querySelector("title")?.textContent || "";
+                    
+                    let link = "";
+                    const linkEl = el.querySelector("link");
+                    if (linkEl) {
+                        link = linkEl.getAttribute("href") || linkEl.textContent || "";
+                    }
+
+                    const pubDate = el.querySelector("updated, published, pubDate")?.textContent || "";
+                    const description = el.querySelector("content, summary, description")?.textContent || "";
+
+                    if (title && link) {
+                        parsedItems.push({ title, link, pubDate, description });
+                    }
+                });
+
+                return parsedItems;
+            } catch (err) {
+                return [];
+            }
+        }
+
+        function extractMedia(item) {
+            let htmlContent = (item.content || item.description || '');
+            let mediaHTML = '';
+
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = htmlContent;
+            
+            const imgTag = tempDiv.querySelector('img');
+            if (imgTag && imgTag.src) {
+                mediaHTML += `<div class="relative w-full max-h-56 overflow-hidden rounded-xl my-2 bg-slate-800"><img src="${imgTag.src}" loading="lazy" class="w-full h-full object-cover rounded-xl" onerror="this.parentElement.remove()" /></div>`;
+            }
+
+            return mediaHTML;
+        }
+
+        async function summarizeNews(index, rawContent, rawTitle) {
+            const container = document.getElementById(`summary-container-${index}`);
+            const btn = document.getElementById(`summary-btn-${index}`);
+
+            if (!container) return;
+
+            if (!container.classList.contains('hidden') && container.dataset.loaded === 'true') {
+                container.classList.add('hidden');
+                btn.innerHTML = `<i class="fa-solid fa-wand-magic-sparkles"></i> تلخيص`;
+                return;
+            }
+
+            container.classList.remove('hidden');
+            container.innerHTML = `<span class="text-amber-400 flex items-center gap-1 text-xs py-1"><i class="fa-solid fa-circle-notch fa-spin"></i> جاري استخراج الملخص...</span>`;
+            
+            const tmp = document.createElement("DIV");
+            tmp.innerHTML = rawContent || rawTitle;
+            let cleanText = tmp.textContent || tmp.innerText || "";
+            cleanText = cleanText.trim();
+
+            if (!cleanText || cleanText.length < 20) {
+                cleanText = rawTitle;
+            }
+
+            const truncatedText = cleanText.substring(0, 300);
+
+            container.innerHTML = `
+                <div class="bg-slate-800/80 p-2.5 rounded-xl border border-slate-700/60 text-xs leading-relaxed text-gray-200 mt-2 space-y-1">
+                    <div class="font-bold text-[#FF4500] text-[11px] flex items-center gap-1">
+                        <i class="fa-solid fa-compress"></i> ملخص الخبر:
+                    </div>
+                    <p>${truncatedText}...</p>
+                </div>
+            `;
+            container.dataset.loaded = 'true';
+            btn.innerHTML = `<i class="fa-solid fa-eye-slash"></i> إخفاء الملخص`;
+        }
+
+        async function loadAllUnreadFeed() {
+            currentFeedMode = 'unread';
+            document.getElementById('current-feed-title').innerText = 'المنشورات غير المقروءة (آخر 24 ساعة)';
+            const grid = document.getElementById('articles-grid');
+            grid.innerHTML = `<div class="text-center py-12 text-gray-500"><i class="fa-solid fa-spinner fa-spin text-2xl mb-2 text-[#FF4500]"></i><p class="text-xs">جاري تحديث الخلاصات لكافة المجموعات...</p></div>`;
+
+            purgeExpiredReadArticles();
+            let allArticles = [];
+            const readLinks = readArticleObjects.map(o => o.link);
+
+            try {
+                // تجميع البيانات بالتوازي لتحسين السرعة
+                const promises = sources.map(source => 
+                    fetchRssItems(source.url).then(items => 
+                        items.map(item => ({ ...item, sourceName: source.name }))
+                    )
+                );
+
+                const results = await Promise.all(promises);
+                results.forEach(items => { allArticles = allArticles.concat(items); });
+
+                allArticles.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+
+                const unreadItems = allArticles
+                    .filter(item => isWithinLast24Hours(item.pubDate))
+                    .filter(item => !readLinks.includes(item.link));
+                    
+                renderArticles(unreadItems, true);
+                document.getElementById('header-unread-count-badge').innerText = unreadItems.length;
+            } catch (err) {
+                grid.innerHTML = `<div class="text-center py-8 text-red-400 text-xs">تعذر تحميل الخلاصات.</div>`;
+            }
+        }
+
+        async function loadViewedFeed() {
+            currentFeedMode = 'viewed';
+            document.getElementById('current-feed-title').innerText = 'تمت المشاهدة (آخر 24 ساعة)';
+            const grid = document.getElementById('articles-grid');
+            grid.innerHTML = `<div class="text-center py-12 text-gray-500"><i class="fa-solid fa-spinner fa-spin text-2xl mb-2 text-indigo-400"></i><p class="text-xs">جاري جلب المشاهدات...</p></div>`;
+
+            purgeExpiredReadArticles();
+            const activeViewedLinks = readArticleObjects.map(o => o.link);
+
+            if (activeViewedLinks.length === 0) {
+                grid.innerHTML = `<div class="text-center py-12 text-gray-500 text-xs">لا توجد خلاصات تمت مشاهدتها في الـ 24 ساعة الماضية.</div>`;
+                return;
+            }
+
+            let viewedArticles = [];
+            try {
+                const promises = sources.map(source => 
+                    fetchRssItems(source.url).then(items => 
+                        items.filter(item => activeViewedLinks.includes(item.link)).map(item => ({ ...item, sourceName: source.name }))
+                    )
+                );
+
+                const results = await Promise.all(promises);
+                results.forEach(items => { viewedArticles = viewedArticles.concat(items); });
+
+                const uniqueViewed = Array.from(new Set(viewedArticles.map(a => a.link))).map(link => viewedArticles.find(a => a.link === link));
+                uniqueViewed.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+
+                renderArticles(uniqueViewed.filter(item => isWithinLast24Hours(item.pubDate)), false);
+            } catch (err) {
+                grid.innerHTML = `<div class="text-center py-8 text-red-400 text-xs">حدث خطأ أثناء تحميل السجل.</div>`;
+            }
+        }
+
+        async function loadCategoryFeed(catName) {
+            closeSidebar();
+            currentFeedMode = 'category';
+            document.getElementById('current-feed-title').innerText = `مجموعة: ${catName}`;
+            const grid = document.getElementById('articles-grid');
+            grid.innerHTML = `<div class="text-center py-12 text-gray-500"><i class="fa-solid fa-spinner fa-spin text-2xl mb-2 text-[#FF4500]"></i><p class="text-xs">جاري جلب المنشورات...</p></div>`;
+
+            const catSources = sources.filter(s => (s.category || 'عام') === catName);
+            let catArticles = [];
+            purgeExpiredReadArticles();
+            const readLinks = readArticleObjects.map(o => o.link);
+
+            try {
+                const promises = catSources.map(source => 
+                    fetchRssItems(source.url).then(items => 
+                        items.map(item => ({ ...item, sourceName: source.name }))
+                    )
+                );
+
+                const results = await Promise.all(promises);
+                results.forEach(items => { catArticles = catArticles.concat(items); });
+
+                catArticles.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+
+                const filtered = catArticles
+                    .filter(item => isWithinLast24Hours(item.pubDate))
+                    .filter(item => !readLinks.includes(item.link));
+
+                renderArticles(filtered, true);
+            } catch (err) { grid.innerHTML = `<div class="text-center py-8 text-red-400 text-xs">تعذر جلب الأخبار.</div>`; }
+        }
+
+        async function loadSingleSourceFeed(sourceName, url) {
+            closeSidebar();
+            currentFeedMode = 'source';
+            document.getElementById('current-feed-title').innerText = sourceName;
+            const grid = document.getElementById('articles-grid');
+            grid.innerHTML = `<div class="text-center py-12 text-gray-500"><i class="fa-solid fa-spinner fa-spin text-2xl mb-2 text-[#FF4500]"></i><p class="text-xs">جاري التحميل...</p></div>`;
+
+            purgeExpiredReadArticles();
+            const readLinks = readArticleObjects.map(o => o.link);
+
+            try {
+                const items = await fetchRssItems(url);
+                items.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+
+                const unread = items
+                    .filter(item => isWithinLast24Hours(item.pubDate))
+                    .filter(item => !readLinks.includes(item.link))
+                    .map(item => ({ ...item, sourceName }));
+                renderArticles(unread, true);
+            } catch (err) { grid.innerHTML = `<div class="text-center py-8 text-red-400 text-xs">حدث خطأ بالتحميل.</div>`; }
+        }
+
+        function loadFavoritesFeed() {
+            currentFeedMode = 'favorites';
+            document.getElementById('current-feed-title').innerText = 'المنشورات المفضلة';
+            const grid = document.getElementById('articles-grid');
+
+            if (favoriteArticles.length === 0) {
+                grid.innerHTML = `<div class="text-center py-12 text-gray-500 text-xs">لا توجد عناصر بالمفضلة.</div>`;
+                return;
+            }
+
+            renderArticles(favoriteArticles, false);
+        }
+
+        function renderArticles(articles, enableTimer = true) {
+            const grid = document.getElementById('articles-grid');
+            grid.innerHTML = '';
+            
+            Object.values(activeTimers).forEach(t => clearInterval(t.interval));
+            activeTimers = {};
+            if (observer) observer.disconnect();
+
+            if (articles.length === 0) {
+                grid.innerHTML = `<div class="text-center py-12 text-gray-500 text-xs">لا توجد خلاصات لعرضها خلال الـ 24 ساعة الماضية.</div>`;
+                return;
+            }
+
+            if (enableTimer && currentFeedMode !== 'viewed' && currentFeedMode !== 'favorites') {
+                observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const cardId = entry.target.id;
+                            const link = entry.target.dataset.link;
+                            const index = entry.target.dataset.index;
+                            
+                            if (!activeTimers[cardId]) {
+                                startIndividualTimer(index, link, cardId);
+                            }
+                        }
+                    });
+                }, { threshold: 0.4 });
+            }
+
+            articles.slice(0, 100).forEach((item, index) => {
+                const isFav = favoriteArticles.some(f => f.link === item.link);
+                const isEven = index % 2 === 0;
+                const cardId = `article-card-${index}`;
+
+                const { formattedDate, timeAgo } = getTimeAgoFormatted(item.pubDate);
+                const mediaHTML = extractMedia(item);
+
+                const card = document.createElement('article');
+                card.id = cardId;
+                card.dataset.link = item.link;
+                card.dataset.index = index;
+                card.className = `${isEven ? 'bg-black text-white border-slate-900' : 'bg-slate-900 text-gray-100 border-slate-800'} p-4 rounded-2xl border space-y-2 shadow-sm transition-all duration-300 relative`;
+
+                const contentData = (item.description || item.content || '').replace(/"/g, '&quot;');
+                const safeTitleData = (item.title || '').replace(/"/g, '&quot;');
+
+                card.innerHTML = `
+                    <div class="flex items-center justify-between text-[10px] text-gray-400">
+                        <span class="text-[#FF4500] font-bold"><i class="fa-brands fa-reddit-alien"></i> ${item.sourceName || 'مصدر'}</span>
+                        <div class="flex items-center gap-2">
+                            <span id="badge-status-${index}" class="text-[9px] bg-slate-800 text-gray-400 border border-slate-700 px-2 py-0.5 rounded-full font-semibold">
+                                جديد
+                            </span>
+                            <button onclick="toggleFavorite('${item.link}', '${safeTitleData.replace(/'/g, "\\'")}', this)" class="${isFav ? 'text-amber-400' : 'text-gray-500'}">
+                                <i class="fa-solid fa-star"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-sm leading-snug">${item.title}</h3>
+
+                    ${mediaHTML}
+
+                    <div class="flex items-center gap-2 text-[10px] text-gray-400 pt-0.5">
+                        <span><i class="fa-regular fa-clock"></i> ${timeAgo}</span>
+                        <span>•</span>
+                        <span>${formattedDate}</span>
+                    </div>
+
+                    <div id="summary-container-${index}" class="hidden"></div>
+
+                    <div class="flex items-center justify-between pt-2 text-[11px] border-t border-slate-800/60 mt-2">
+                        <button id="summary-btn-${index}" onclick="summarizeNews(${index}, &quot;${contentData}&quot;, &quot;${safeTitleData}&quot;)" class="text-amber-400 font-bold bg-amber-400/10 hover:bg-amber-400/20 px-2.5 py-1 rounded-lg transition active:scale-95 flex items-center gap-1.5">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> تلخيص
+                        </button>
+
+                        <a href="${item.link}" target="_blank" onclick="markAsReadImmediately('${item.link}', '${cardId}')" class="text-[#FF4500] font-bold flex items-center gap-1">
+                            قراءة المنشور <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                        </a>
+                    </div>
+                `;
+                grid.appendChild(card);
+
+                if (observer) {
+                    observer.observe(card);
+                }
+            });
+        }
+
+        function formatTime(seconds) {
+            const m = Math.floor(seconds / 60);
+            const s = seconds % 60;
+            return `${m}:${s < 10 ? '0' : ''}${s}`;
+        }
+
+        function startIndividualTimer(index, link, cardId) {
+            let secondsLeft = 300;
+            const badge = document.getElementById(`badge-status-${index}`);
+
+            if (badge) {
+                badge.className = "text-[9px] bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full font-semibold";
+                badge.innerText = `مشاهدة (${formatTime(secondsLeft)})`;
+            }
+
+            const intervalId = setInterval(() => {
+                secondsLeft--;
+                if (badge && secondsLeft > 0) {
+                    badge.innerText = `مشاهدة (${formatTime(secondsLeft)})`;
+                }
+                if (secondsLeft <= 0) {
+                    clearInterval(intervalId);
+                    markAsReadAndHide(link, cardId, badge);
+                }
+            }, 1000);
+
+            activeTimers[cardId] = { interval: intervalId };
+        }
+
+        function markAsReadAndHide(link, cardId, badgeEl) {
+            if (!readArticleObjects.some(o => o.link === link)) {
+                readArticleObjects.push({ link, timestamp: Date.now() });
+                localStorage.setItem('read_articles_list_v4', JSON.stringify(readArticleObjects));
+            }
+
+            if (badgeEl) {
+                badgeEl.className = "text-[9px] bg-indigo-500/20 text-indigo-400 border border-indigo-500/30 px-2 py-0.5 rounded-full font-semibold";
+                badgeEl.innerText = "تمت القراءة";
+            }
+
+            if (currentFeedMode === 'unread' || currentFeedMode === 'category' || currentFeedMode === 'source') {
+                const card = document.getElementById(cardId);
+                if (card) {
+                    card.classList.add('fade-out-card');
+                    setTimeout(() => {
+                        card.remove();
+                        const badgeHeader = document.getElementById('header-unread-count-badge');
+                        let currentCount = parseInt(badgeHeader.innerText) || 0;
+                        if (currentCount > 0) badgeHeader.innerText = currentCount - 1;
+                    }, 500);
+                }
+            }
+        }
+
+        function markAsReadImmediately(link, cardId) {
+            if (activeTimers[cardId]) {
+                clearInterval(activeTimers[cardId].interval);
+            }
+            markAsReadAndHide(link, cardId, null);
+        }
+
+        function toggleFavorite(link, title, btn) {
+            const idx = favoriteArticles.findIndex(a => a.link === link);
+            if (idx > -1) {
+                favoriteArticles.splice(idx, 1);
+                btn.className = "text-gray-500";
+            } else {
+                favoriteArticles.push({ link, title });
+                btn.className = "text-amber-400";
+            }
+            localStorage.setItem('favorite_articles_list_v4', JSON.stringify(favoriteArticles));
+        }
+
+        function addSource(e) {
+            e.preventDefault();
+            let name = document.getElementById('source-name').value.trim() || 'مصدر جديد';
+            const url = document.getElementById('source-url').value.trim();
+            let category = document.getElementById('source-category').value.trim() || 'عام';
+
+            sources.push({ name, url, category });
+            saveSources();
+            closeModal();
+            loadAllUnreadFeed();
+            e.target.reset();
+        }
+
+        function openModal() { document.getElementById('add-modal').classList.remove('hidden'); document.getElementById('add-modal').classList.add('flex'); }
+        function closeModal() { document.getElementById('add-modal').classList.add('hidden'); document.getElementById('add-modal').classList.remove('flex'); }
+        function toggleLiveWidget() { document.getElementById('live-widget').classList.toggle('hidden'); }
+
+        function initLiveStream() {
+            const video = document.getElementById('live-stream-player');
+            const streamUrl = 'https://live.alarabiya.net/alarabiya/live/playlist.m3u8';
+            if (Hls.isSupported()) {
+                const hls = new Hls();
+                hls.loadSource(streamUrl);
+                hls.attachMedia(video);
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = streamUrl;
+            }
+        }
+
+        window.onload = function() {
+            loadAllUnreadFeed();
+            initLiveStream();
+        };
+    </script>
+</body>
+</html>
