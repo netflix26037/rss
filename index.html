@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDDIT بالعربي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class' }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+        body { 
+            font-family: 'Cairo', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        @keyframes flash-green { 0% { background-color: rgba(16, 185, 129, 0.4); } 100% { background-color: transparent; } }
+        @keyframes flash-red { 0% { background-color: rgba(239, 68, 68, 0.4); } 100% { background-color: transparent; } }
+        .price-up { animation: flash-green 0.8s ease-out; }
+        .price-down { animation: flash-red 0.8s ease-out; }
+
+        .ticker-scroll::-webkit-scrollbar { display: none; }
+        .ticker-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col select-none">
+
+    <!-- شريط أسعار الأسهم والعملات المباشر -->
+    <div class="bg-slate-950 text-white text-xs py-2 px-4 border-b border-slate-800 flex items-center justify-between sticky top-0 z-50">
+        <div class="flex items-center gap-2 shrink-0 pl-3 border-l border-slate-800">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            </span>
+            <span class="font-bold text-gray-400 text-xs">مباشر</span>
+        </div>
+        
+        <div class="ticker-scroll flex items-center gap-4 overflow-x-auto whitespace-nowrap scroll-smooth flex-grow py-0.5 px-3">
+            <div id="box-BRENT" class="flex items-center gap-1.5 font-mono px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs">
+                <span class="font-bold text-amber-500"><i class="fa-solid fa-droplet"></i> BRENT</span>
+                <span id="price-BRENT" class="text-gray-200 font-bold">--.--</span>
+            </div>
+            <div id="box-GME" class="flex items-center gap-1.5 font-mono px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs">
+                <span class="font-bold text-amber-400">GME</span>
+                <span id="price-GME" class="text-gray-200 font-bold">--.--</span>
+            </div>
+            <div id="box-OPEN" class="flex items-center gap-1.5 font-mono px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs">
+                <span class="font-bold text-amber-400">OPEN</span>
+                <span id="price-OPEN" class="text-gray-200 font-bold">--.--</span>
+            </div>
+            <div id="box-BTCD" class="flex items-center gap-1.5 font-mono px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs">
+                <span class="font-bold text-purple-400">BTC.D</span>
+                <span id="price-BTCD" class="text-gray-200 font-bold">--.--%</span>
+            </div>
+            <div id="box-BTC" class="flex items-center gap-1.5 font-mono px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs">
+                <span class="font-bold text-cyan-400">BTC</span>
+                <span id="price-BTC" class="text-gray-200 font-bold">--.--</span>
+            </div>
+            <div id="box-DOGE" class="flex items-center gap-1.5 font-mono px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs">
+                <span class="font-bold text-cyan-400">DOGE</span>
+                <span id="price-DOGE" class="text-gray-200 font-bold">--.--</span>
+            </div>
+            <div id="box-SUI" class="flex items-center gap-1.5 font-mono px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs">
+                <span class="font-bold text-cyan-400">SUI</span>
+                <span id="price-SUI" class="text-gray-200 font-bold">--.--</span>
+            </div>
+            <div id="box-PYTH" class="flex items-center gap-1.5 font-mono px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs">
+                <span class="font-bold text-cyan-400">PYTH</span>
+                <span id="price-PYTH" class="text-gray-200 font-bold">--.--</span>
+            </div>
+            <div id="box-HBAR" class="flex items-center gap-1.5 font-mono px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs">
+                <span class="font-bold text-cyan-400">HBAR</span>
+                <span id="price-[#FF4500]">--.--</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- الهيدر الرئيسي -->
+    <header class="bg-gray-800 border-b border-gray-700 px-6 py-3 sticky top-[37px] z-40 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <button onclick="toggleSidebar()" class="text-gray-300 text-xl p-2 hover:bg-gray-700 rounded-lg transition">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="bg-[#FF4500] text-white p-2 rounded-xl flex items-center justify-center shadow-lg">
+                    <i class="fa-brands fa-reddit-alien text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold leading-tight">REDDIT بالعربي</h1>
+                    <div class="flex items-center gap-2">
+                        <span id="digital-clock" class="text-xs font-mono text-gray-400 font-semibold">00:00:00</span>
+                        <span class="text-xs text-gray-500">•</span>
+                        <span class="text-xs text-emerald-400 font-bold">
+                            <span id="header-unread-count-val">...</span> غير مقروء
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- أزرار التحكم للتصفح السريع على الـ PC -->
+            <div class="hidden md:flex items-center gap-2">
+                <button onclick="loadAllUnreadFeed()" class="bg-gray-700/60 hover:bg-gray-700 text-gray-200 px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition">
+                    <i class="fa-solid fa-envelope-open-text text-emerald-400"></i> غير مقروء
+                </button>
+                <button onclick="loadFavoritesFeed()" class="bg-gray-700/60 hover:bg-gray-700 text-gray-200 px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition">
+                    <i class="fa-solid fa-star text-amber-400"></i> المفضلة
+                </button>
+                <button onclick="loadViewedFeed()" class="bg-gray-700/60 hover:bg-gray-700 text-gray-200 px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition">
+                    <i class="fa-solid fa-eye text-indigo-400"></i> المشاهدة
+                </button>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <button onclick="toggleLiveWidget()" class="bg-red-600/20 text-red-400 hover:bg-red-600/30 border border-red-500/30 px-3 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition">
+                    <i class="fa-solid fa-tv"></i> <span class="hidden sm:inline">البث المباشر</span>
+                </button>
+                <button onclick="openModal()" class="bg-[#FF4500] hover:bg-[#e03d00] text-white px-3.5 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 shadow-md transition">
+                    <i class="fa-solid fa-plus"></i> <span class="hidden sm:inline">إضافة مصدر</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية (Sidebar Drawer) -->
+    <div id="sidebar-drawer" class="fixed inset-0 bg-black/70 z-50 hidden justify-center items-center md:items-start md:pt-20 transition-opacity">
+        <div class="bg-gray-800 rounded-2xl w-full max-w-xl max-h-[80vh] flex flex-col p-5 overflow-hidden border border-gray-700 shadow-2xl mx-4">
+            <div class="flex justify-between items-center mb-4 pb-3 border-b border-gray-700">
+                <h2 class="text-base font-bold text-gray-200 flex items-center gap-2">
+                    <i class="fa-solid fa-bars text-[#FF4500]"></i> القائمة والأقسام
+                </h2>
+                <button onclick="toggleSidebar()" class="text-gray-400 hover:text-white p-1 text-xl"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="overflow-y-auto space-y-4 pr-1" id="drawer-content">
+                <div class="pt-1">
+                    <div class="flex gap-2">
+                        <button onclick="openXModal(); toggleSidebar();" class="flex-1 bg-black border border-gray-700 hover:bg-gray-900 text-white p-2.5 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition">
+                            <i class="fa-brands fa-x-twitter"></i> إضافة X
+                        </button>
+                        <button onclick="exportData()" class="bg-emerald-800/40 hover:bg-emerald-800/60 text-emerald-300 border border-emerald-700/50 p-2.5 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition">
+                            <i class="fa-solid fa-file-export"></i> تصدير
+                        </button>
+                        <label class="bg-amber-800/40 hover:bg-amber-800/60 text-amber-300 border border-amber-700/50 p-2.5 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 cursor-pointer transition">
+                            <i class="fa-solid fa-file-import"></i> استيراد
+                            <input type="file" accept=".json" onchange="importData(event)" class="hidden">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="text-xs font-bold text-gray-400 pt-2 border-t border-gray-700">مجموعات RSS حسب التخصص</div>
+                <div id="sources-container" class="space-y-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- المحتوى الرئيسي للموقع -->
+    <main class="max-w-7xl mx-auto px-4 py-6 flex-grow w-full">
+        <div class="flex justify-between items-center mb-5 pb-2 border-b border-gray-800">
+            <h2 id="current-feed-title" class="text-base font-bold text-gray-200 truncate flex items-center gap-2">
+                <i class="fa-solid fa-newspaper text-[#FF4500]"></i> أحدث المنشورات
+            </h2>
+        </div>
+        
+        <!-- Grid متعدد الأعمدة -->
+        <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <div class="col-span-full text-center py-24 text-gray-500 bg-gray-800/40 rounded-2xl border border-gray-800">
+                <i class="fa-brands fa-reddit text-5xl mb-3 text-[#FF4500] animate-pulse"></i>
+                <p class="text-sm font-medium">جاري تحميل الخلاصات...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- شريط تنقل سفلي للموبايل -->
+    <nav class="md:hidden fixed bottom-0 inset-x-0 bg-gray-800/95 backdrop-blur-md border-t border-gray-700 z-40 py-2">
+        <div class="flex justify-around items-center">
+            <button onclick="loadAllUnreadFeed()" class="flex flex-col items-center gap-1 text-gray-400 hover:text-emerald-400 relative">
+                <div class="relative">
+                    <i class="fa-solid fa-envelope-open-text text-base"></i>
+                    <span id="nav-unread-badge" class="absolute -top-1.5 -right-3.5 bg-emerald-500 text-gray-950 text-[9px] px-1 font-extrabold rounded-full min-w-[16px] text-center">0</span>
+                </div>
+                <span class="text-[10px]">الغير مقروء</span>
+            </button>
+
+            <button onclick="loadFavoritesFeed()" class="flex flex-col items-center gap-1 text-gray-400 hover:text-amber-400 relative">
+                <div class="relative">
+                    <i class="fa-solid fa-star text-base"></i>
+                    <span id="nav-fav-badge" class="absolute -top-1.5 -right-3.5 bg-amber-500 text-gray-950 text-[9px] px-1 font-extrabold rounded-full min-w-[16px] text-center">0</span>
+                </div>
+                <span class="text-[10px]">المفضلة</span>
+            </button>
+
+            <button onclick="toggleSidebar()" class="flex flex-col items-center gap-1 text-[#FF4500]">
+                <div class="bg-[#FF4500]/10 p-1.5 rounded-full border border-[#FF4500]/30">
+                    <i class="fa-solid fa-bars text-base"></i>
+                </div>
+                <span class="text-[10px] font-bold">المصادر</span>
+            </button>
+
+            <button onclick="loadViewedFeed()" class="flex flex-col items-center gap-1 text-gray-400 hover:text-indigo-400 relative">
+                <div class="relative">
+                    <i class="fa-solid fa-eye text-base"></i>
+                    <span id="nav-viewed-badge" class="absolute -top-1.5 -right-3.5 bg-indigo-500 text-white text-[9px] px-1 font-extrabold rounded-full min-w-[16px] text-center">0</span>
+                </div>
+                <span class="text-[10px]">المشاهدة</span>
+            </button>
+
+            <button onclick="openModal()" class="flex flex-col items-center gap-1 text-gray-400 hover:text-white">
+                <i class="fa-solid fa-plus text-base"></i>
+                <span class="text-[10px]">إضافة</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- نافذة البث المباشر -->
+    <div id="live-widget" class="fixed bottom-4 left-4 z-50 w-full max-w-sm bg-gray-800 border border-gray-700 rounded-2xl shadow-2xl overflow-hidden hidden">
+        <div class="bg-slate-950 text-white px-4 py-2 flex justify-between items-center text-xs font-bold border-b border-gray-700">
+            <span class="flex items-center gap-2 text-xs">
+                <span class="h-2 w-2 rounded-full bg-red-600 animate-pulse"></span>
+                العربية - بث حي
+            </span>
+            <button onclick="toggleLiveWidget()" class="text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-sm"></i></button>
+        </div>
+        <div id="live-widget-body" class="relative w-full aspect-video bg-black">
+            <video id="live-stream-player" controls autoplay muted playsinline class="w-full h-full object-cover"></video>
+        </div>
+    </div>
+
+    <!-- Modals النوافذ المنبثقة -->
+    <div id="add-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+        <div class="bg-gray-800 text-gray-100 w-full max-w-md rounded-2xl p-6 border border-gray-700 shadow-2xl">
+            <h3 class="text-base font-bold mb-4">إضافة خلاصة RSS جديدة</h3>
+            <form onsubmit="addSource(event)">
+                <div class="space-y-3 mb-5">
+                    <input type="text" id="source-name" placeholder="اسم المصدر (اختياري)" class="w-full px-3.5 py-2.5 bg-gray-900 border border-gray-700 rounded-xl text-xs focus:outline-none focus:border-[#FF4500]">
+                    <input type="url" id="source-url" required placeholder="رابط الـ RSS" class="w-full px-3.5 py-2.5 bg-gray-900 border border-gray-700 rounded-xl text-xs focus:outline-none focus:border-[#FF4500]">
+                    <input type="text" id="source-category" placeholder="المجموعة / التخصص" class="w-full px-3.5 py-2.5 bg-gray-900 border border-gray-700 rounded-xl text-xs focus:outline-none focus:border-[#FF4500]">
+                </div>
+                <div class="flex gap-2">
+                    <button type="button" onclick="closeModal()" class="flex-1 bg-gray-700 hover:bg-gray-600 py-2.5 rounded-xl text-xs font-semibold transition">إلغاء</button>
+                    <button type="submit" class="flex-1 bg-[#FF4500] hover:bg-[#e03d00] text-white py-2.5 rounded-xl text-xs font-semibold transition">إضافة</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="add-x-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+        <div class="bg-gray-800 text-gray-100 w-full max-w-md rounded-2xl p-6 border border-gray-700 shadow-2xl">
+            <div class="flex items-center gap-2 mb-4">
+                <i class="fa-brands fa-x-twitter text-xl"></i>
+                <h3 class="text-base font-bold">متابعة حساب X (تويتر)</h3>
+            </div>
+            <form onsubmit="addXAccount(event)">
+                <div class="mb-5">
+                    <div class="relative">
+                        <span class="absolute right-3.5 top-2.5 text-gray-400 font-bold text-xs">@</span>
+                        <input type="text" id="x-username" required placeholder="اسم المستخدم" class="w-full pr-8 pl-3.5 py-2.5 bg-gray-900 border border-gray-700 rounded-xl text-xs focus:outline-none focus:border-white">
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <button type="button" onclick="closeXModal()" class="flex-1 bg-gray-700 hover:bg-gray-600 py-2.5 rounded-xl text-xs font-semibold transition">إلغاء</button>
+                    <button type="submit" class="flex-1 bg-black hover:bg-gray-900 text-white border border-gray-700 py-2.5 rounded-xl text-xs font-semibold transition">متابعة</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // المصادر الافتراضية المدمجة لضمان عمل الصفحة دائماً
+        const DEFAULT_SOURCES = [
+            { name: 'The Onion', url: 'https://www.theonion.com/rss', category: 'أخبار وسياق عام' },
+            { name: 'r/WallStreetBets', url: 'https://www.reddit.com/r/wallstreetbets/.rss', category: 'الاسهم' },
+            { name: 'r/Options', url: 'https://www.reddit.com/r/options/.rss', category: 'الاسهم' },
+            { name: 'r/Stocks', url: 'https://www.reddit.com/r/stocks/.rss', category: 'الاسهم' },
+            { name: 'r/CryptoCurrency', url: 'https://www.reddit.com/r/CryptoCurrency/.rss', category: 'العملات الرقمية' },
+            { name: 'r/Bitcoin', url: 'https://www.reddit.com/r/Bitcoin/.rss', category: 'العملات الرقمية' },
+            { name: 'r/Technology', url: 'https://www.reddit.com/r/technology/.rss', category: 'تقنية وتكنولوجيا' },
+            { name: 'r/WorldNews', url: 'https://www.reddit.com/r/worldnews/.rss', category: 'أخبار وسياق عام' }
+        ];
+
+        const CURRENT_VERSION = "v1.1";
+        let scrollObserver = null;
+
+        function toggleSidebar() {
+            const drawer = document.getElementById('sidebar-drawer');
+            drawer.classList.toggle('hidden');
+            drawer.classList.toggle('flex');
+        }
+
+        async function getInitialSources() {
+            const saved = localStorage.getItem('rss_sources_app');
+
+            if (saved) {
+                try {
+                    const parsed = JSON.parse(saved);
+                    if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+                } catch (e) {}
+            }
+
+            try {
+                const res = await fetch('./feeds.json');
+                if (res.ok) {
+                    const feeds = await res.json();
+                    if (Array.isArray(feeds) && feeds.length > 0) {
+                        localStorage.setItem('rss_sources_app', JSON.stringify(feeds));
+                        return feeds;
+                    }
+                }
+            } catch (err) {}
+
+            localStorage.setItem('rss_sources_app', JSON.stringify(DEFAULT_SOURCES));
+            return DEFAULT_SOURCES;
+        }
+
+        let sources = [];
+        let pendingReadLinks = JSON.parse(localStorage.getItem('pending_read_session')) || [];
+        let viewedArticlesList = JSON.parse(localStorage.getItem('read_articles_list_v2')) || [];
+        let permanentlyReadHistory = JSON.parse(localStorage.getItem('permanently_read_history')) || [];
+        let favoriteArticles = JSON.parse(localStorage.getItem('favorite_articles_list')) || [];
+
+        function saveSources() {
+            localStorage.setItem('rss_sources_app', JSON.stringify(sources));
+        }
+
+        function extractMedia(item) {
+            let media = { image: null, video: null };
+            if (item.enclosure && item.enclosure.link) {
+                const type = item.enclosure.type || '';
+                if (type.includes('image') || item.enclosure.link.match(/\.(jpg|jpeg|png|gif|webp)$/i)) {
+                    media.image = item.enclosure.link;
+                } else if (type.includes('video') || item.enclosure.link.match(/\.(mp4|webm|ogg)$/i)) {
+                    media.video = item.enclosure.link;
+                }
+            }
+
+            const htmlString = (item.content || item.description || '');
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(htmlString, 'text/html');
+
+            if (!media.image) {
+                const img = doc.querySelector('img');
+                if (img && img.src && !img.src.includes('preview.redd.it/award_images')) {
+                    media.image = img.src;
+                }
+            }
+
+            if (!media.video) {
+                const video = doc.querySelector('video source, video');
+                if (video && video.src) {
+                    media.video = video.src;
+                }
+            }
+
+            if (!media.image && item.thumbnail && item.thumbnail.startsWith('http')) {
+                media.image = item.thumbnail;
+            }
+
+            return media;
+        }
+
+        function startDigitalClock() {
+            function updateClock() {
+                const now = new Date();
+                const clockEl = document.getElementById('digital-clock');
+                if (clockEl) clockEl.innerText = now.toTimeString().split(' ')[0];
+            }
+            updateClock();
+            setInterval(updateClock, 1000);
+        }
+
+        function formatDateTimeAndAgo(dateString) {
+            if (!dateString) return { formattedDate: '', timeAgo: '' };
+            const date = new Date(dateString);
+            if (isNaN(date.getTime())) return { formattedDate: '', timeAgo: '' };
+
+            const formattedDate = date.toLocaleString('ar-EG', { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+            const seconds = Math.floor((new Date() - date) / 1000);
+            let timeAgo = '';
+
+            if (seconds < 60) timeAgo = 'منذ لحظات';
+            else if (seconds < 3600) timeAgo = `منذ ${Math.floor(seconds / 60)} دقيقة`;
+            else if (seconds < 86400) timeAgo = `منذ ${Math.floor(seconds / 3600)} ساعة`;
+            else timeAgo = `منذ ${Math.floor(seconds / 86400)} يوم`;
+
+            return { formattedDate, timeAgo };
+        }
+
+        function initLiveStream() {
+            const video = document.getElementById('live-stream-player');
+            const streamUrl = 'https://live.alarabiya.net/alarabiya/live/playlist.m3u8';
+            
+            if (typeof Hls !== 'undefined' && Hls.isSupported()) {
+                const hls = new Hls({ enableWorker: true, lowLatencyMode: true });
+                hls.loadSource(streamUrl);
+                hls.attachMedia(video);
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = streamUrl;
+            }
+        }
+
+        function toggleLiveWidget() { document.getElementById('live-widget').classList.toggle('hidden'); }
+
+        const pricesHistory = {};
+
+        function updatePriceUI(symbol, newPrice, isPercentage = false) {
+            const priceEl = document.getElementById(`price-${symbol}`);
+            const boxEl = document.getElementById(`box-${symbol}`);
+
+            if (!priceEl || !boxEl) return;
+
+            const parsedPrice = parseFloat(newPrice);
+            let formattedPrice = isPercentage ? `${parsedPrice.toFixed(2)}%` : (parsedPrice < 1 ? `$${parsedPrice.toFixed(4)}` : `$${parsedPrice.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`);
+
+            if (pricesHistory[symbol] && pricesHistory[symbol] !== parsedPrice) {
+                boxEl.classList.remove('price-up', 'price-down');
+                void boxEl.offsetWidth;
+                boxEl.classList.add(parsedPrice > pricesHistory[symbol] ? 'price-up' : 'price-down');
+            }
+
+            pricesHistory[symbol] = parsedPrice;
+            priceEl.innerText = formattedPrice;
+        }
+
+        function initCryptoSockets() {
+            const symbols = ['btcusdt', 'dogeusdt', 'suiusdt', 'pythusdt', 'hbarusdt'];
+            const streams = symbols.map(s => `${s}@ticker`).join('/');
+            const ws = new WebSocket(`wss://stream.binance.com:9443/ws/${streams}`);
+
+            ws.onmessage = (event) => {
+                const data = JSON.parse(event.data);
+                if (data && data.s && data.c) {
+                    const cleanSymbol = data.s.replace('USDT', '');
+                    updatePriceUI(cleanSymbol, data.c);
+                }
+            };
+        }
+
+        async function translateText(text) {
+            if (!text || text.trim() === '') return '';
+            try {
+                const res = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ar&dt=t&q=${encodeURIComponent(text.substring(0, 1000))}`);
+                const data = await res.json();
+                return data[0].map(x => x[0]).join('');
+            } catch (e) { return text; }
+        }
+
+        function getAllKnownReadLinks() {
+            return Array.from(new Set([
+                ...viewedArticlesList.map(o => o.link),
+                ...permanentlyReadHistory,
+                ...pendingReadLinks
+            ]));
+        }
+
+        function updateAllBadges() {
+            const favBadge = document.getElementById('nav-fav-badge');
+            if (favBadge) favBadge.innerText = favoriteArticles.length;
+
+            const viewedBadge = document.getElementById('nav-viewed-badge');
+            if (viewedBadge) viewedBadge.innerText = viewedArticlesList.length;
+        }
+
+        function toggleFavorite(link, title, desc, category, sourceName, pubDate, media, element) {
+            const index = favoriteArticles.findIndex(a => a.link === link);
+            if (index > -1) {
+                favoriteArticles.splice(index, 1);
+                if (element) {
+                    element.innerHTML = '<i class="fa-regular fa-star"></i>';
+                    element.classList.remove('text-amber-500');
+                    element.classList.add('text-gray-400');
+                }
+            } else {
+                favoriteArticles.push({ link, title, desc, category, sourceName, pubDate, media });
+                if (element) {
+                    element.innerHTML = '<i class="fa-solid fa-star"></i>';
+                    element.classList.remove('text-gray-400');
+                    element.classList.add('text-amber-500');
+                }
+            }
+            localStorage.setItem('favorite_articles_list', JSON.stringify(favoriteArticles));
+            updateAllBadges();
+        }
+
+        async function renderSources() {
+            const container = document.getElementById('sources-container');
+            container.innerHTML = '';
+
+            if (!sources || sources.length === 0) { sources = DEFAULT_SOURCES; saveSources(); }
+            
+            const grouped = {};
+            sources.forEach((s, idx) => {
+                const cat = s.category || 'عام';
+                if (!grouped[cat]) grouped[cat] = [];
+                grouped[cat].push({ ...s, idx });
+            });
+
+            for (const [cat, items] of Object.entries(grouped)) {
+                const groupDiv = document.createElement('div');
+                groupDiv.className = 'space-y-1 bg-gray-900/60 p-3 rounded-xl border border-gray-700/60';
+                groupDiv.innerHTML = `
+                    <div class="flex items-center justify-between pb-1.5 border-b border-gray-700">
+                        <button onclick="loadCategoryFeed('${cat.replace(/'/g, "\\'")}'); toggleSidebar();" class="text-xs font-bold text-[#FF4500] hover:underline flex items-center gap-1.5">
+                            <i class="fa-solid fa-folder-open text-amber-500"></i> ${cat}
+                        </button>
+                    </div>
+                    <ul class="space-y-1.5 pt-2"></ul>
+                `;
+                
+                const ul = groupDiv.querySelector('ul');
+                items.forEach(item => {
+                    const li = document.createElement('li');
+                    let iconHTML = item.url.includes('nitter') ? '<i class="fa-brands fa-x-twitter text-xs ml-1"></i>' : '';
+                    li.innerHTML = `
+                        <div class="flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-gray-800/80 hover:bg-gray-700/80 text-xs transition">
+                            <button onclick="loadTranslatedFeed('${item.name.replace(/'/g, "\\'")}', '${item.url}', '${cat.replace(/'/g, "\\'")}'); toggleSidebar();" class="text-right flex-grow font-medium truncate flex items-center">${iconHTML}${item.name}</button>
+                            <button onclick="deleteSource(${item.idx})" class="text-red-400 hover:text-red-300 p-1"><i class="fa-solid fa-trash text-[10px]"></i></button>
+                        </div>
+                    `;
+                    ul.appendChild(li);
+                });
+                container.appendChild(groupDiv);
+            }
+        }
+
+        async function loadAllUnreadFeed() {
+            document.getElementById('current-feed-title').innerText = `جميع المنشورات غير المقروءة`;
+            const grid = document.getElementById('articles-grid');
+            grid.innerHTML = `<div class="col-span-full text-center py-20 text-gray-400"><i class="fa-solid fa-spinner fa-spin text-3xl mb-3 text-emerald-500"></i><p class="text-xs">جاري جلب الخلاصات...</p></div>`;
+
+            let allArticles = [];
+            const readLinks = getAllKnownReadLinks();
+
+            try {
+                for (let source of sources) {
+                    try {
+                        const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(source.url)}`);
+                        const data = await res.json();
+                        if (data.status === 'ok') {
+                            allArticles = allArticles.concat(data.items.map(item => ({ ...item, sourceName: source.name, category: source.category || 'عام', media: extractMedia(item) })));
+                        }
+                    } catch (e) {}
+                }
+                const unreadItems = allArticles.filter(item => !readLinks.includes(item.link));
+                renderArticlesGrid(unreadItems, 'الغير مقروء');
+            } catch (err) { grid.innerHTML = `<div class="col-span-full text-center py-10 text-red-400 text-xs">خطأ في التحميل.</div>`; }
+        }
+
+        function addSource(e) {
+            e.preventDefault();
+            let name = document.getElementById('source-name').value.trim();
+            const url = document.getElementById('source-url').value.trim();
+            let category = document.getElementById('source-category').value.trim() || 'عام';
+
+            if (!name) {
+                const redditMatch = url.match(/\/r\/([a-zA-Z0-9_]+)/i);
+                name = redditMatch ? `r/${redditMatch[1]}` : 'مصدر جديد';
+            }
+
+            sources.push({ name, url, category });
+            saveSources();
+            renderSources();
+            closeModal();
+            e.target.reset();
+        }
+
+        function deleteSource(idx) {
+            sources.splice(idx, 1);
+            saveSources();
+            renderSources();
+        }
+
+        async function loadTranslatedFeed(title, url, category) {
+            document.getElementById('current-feed-title').innerText = title;
+            const grid = document.getElementById('articles-grid');
+            grid.innerHTML = `<div class="col-span-full text-center py-20 text-gray-400"><i class="fa-solid fa-wand-magic-sparkles fa-spin text-3xl mb-3 text-[#FF4500]"></i><p class="text-xs">جاري الترجمة...</p></div>`;
+
+            try {
+                const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(url)}`);
+                const data = await res.json();
+                if (data.status === 'ok') {
+                    renderArticlesGrid(data.items.map(item => ({ ...item, sourceName: title, media: extractMedia(item) })), category);
+                }
+            } catch (err) { grid.innerHTML = `<div class="col-span-full text-center py-10 text-red-400 text-xs">حدث خطأ في التحميل.</div>`; }
+        }
+
+        async function loadCategoryFeed(category) {
+            document.getElementById('current-feed-title').innerText = category;
+            const grid = document.getElementById('articles-grid');
+            grid.innerHTML = `<div class="col-span-full text-center py-20 text-gray-400"><i class="fa-solid fa-spinner fa-spin text-3xl mb-3 text-[#FF4500]"></i><p class="text-xs">جاري التحميل...</p></div>`;
+
+            const catSources = sources.filter(s => (s.category || 'عام') === category);
+            let allArticles = [];
+
+            try {
+                for (let source of catSources) {
+                    try {
+                        const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(source.url)}`);
+                        const data = await res.json();
+                        if (data.status === 'ok') {
+                            allArticles = allArticles.concat(data.items.map(item => ({ ...item, sourceName: source.name, media: extractMedia(item) })));
+                        }
+                    } catch(e) {}
+                }
+                renderArticlesGrid(allArticles, category);
+            } catch (err) { grid.innerHTML = `<div class="col-span-full text-center py-10 text-red-400 text-xs">حدث خطأ في التحميل.</div>`; }
+        }
+
+        async function renderArticlesGrid(articles, category) {
+            const grid = document.getElementById('articles-grid');
+            grid.innerHTML = '';
+
+            if(!articles || articles.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-20 text-gray-500">لا توجد منشورات حالياً</div>`;
+                return;
+            }
+
+            const articlePromises = articles.map(async (item) => {
+                const cleanDesc = item.description ? item.description.replace(/<[^>]*>?/gm, '').trim() : '';
+                const [transTitle, transDesc] = await Promise.all([translateText(item.title), translateText(cleanDesc)]);
+                return { title: transTitle, desc: transDesc, link: item.link, pubDate: item.pubDate, sourceName: item.sourceName || 'Reddit', media: item.media || extractMedia(item) };
+            });
+
+            const translatedArticles = await Promise.all(articlePromises);
+
+            translatedArticles.forEach((item, index) => {
+                const card = document.createElement('article');
+                card.className = `bg-gray-800/80 hover:bg-gray-800 border border-gray-700/70 hover:border-gray-600 p-4 rounded-2xl flex flex-col justify-between shadow-sm transition duration-200 relative group`;
+
+                let mediaHTML = '';
+                if (item.media && item.media.image) {
+                    mediaHTML = `<div class="my-2.5 overflow-hidden rounded-xl bg-black border border-gray-700"><img src="${item.media.image}" alt="صورة" class="w-full h-48 object-cover" loading="lazy" onerror="this.style.display='none'"></div>`;
+                }
+
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-[10px] font-bold bg-[#FF4500]/10 text-[#FF4500] border border-[#FF4500]/20">
+                                ${item.sourceName}
+                            </span>
+                        </div>
+                        <h3 class="font-bold text-gray-100 text-sm leading-snug mb-2">${item.title}</h3>
+                        ${mediaHTML}
+                        <p class="text-gray-300 text-xs line-clamp-3 mb-3 leading-relaxed">${item.desc}</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 border-t border-gray-700/60 mt-2">
+                        <a href="${item.link}" target="_blank" class="bg-[#FF4500] hover:bg-[#e03d00] text-white px-3.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition shadow">
+                            الرابط <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function openModal() { document.getElementById('add-modal').classList.remove('hidden'); document.getElementById('add-modal').classList.add('flex'); }
+        function closeModal() { document.getElementById('add-modal').classList.add('hidden'); document.getElementById('add-modal').classList.remove('flex'); }
+
+        window.onload = async function() {
+            startDigitalClock();
+            sources = await getInitialSources();
+            renderSources();
+            initCryptoSockets();
+            initLiveStream();
+            loadAllUnreadFeed();
+        };
+    </script>
+</body>
+</html>
