@@ -1,1 +1,14 @@
-
+[
+  {
+    "id": 1,
+    "title": "أخبار التكنولوجيا",
+    "url": "https://example.com/rss.xml",
+    "category": "تقنية"
+  },
+  {
+    "id": 2,
+    "title": "أخبار الاقتصاد",
+    "url": "https://example.com/economy.xml",
+    "category": "اقتصاد"
+  }
+]
