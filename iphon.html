@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    
+    <!-- إعدادات تطبيق الويب الخاص بـ iOS (PWA / Web App) -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="iphon">
+    
+    <title>iphon - خلاصات REDDIT & X</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class' }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+        
+        body { 
+            font-family: 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        /* تحسينات الآيفون والمناطق الآمنة Safe Area */
+        .pt-safe { padding-top: max(1rem, env(safe-area-inset-top)); }
+        .pb-safe { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
+        .pb-safe-nav { padding-bottom: max(4.5rem, calc(4rem + env(safe-area-inset-bottom))); }
+
+        /* تخصيص شريط التمرير للآيفون */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        @keyframes flash-green { 0% { background-color: rgba(16, 185, 129, 0.4); } 100% { background-color: transparent; } }
+        @keyframes flash-red { 0% { background-color: rgba(239, 68, 68, 0.4); } 100% { background-color: transparent; } }
+        .price-up { animation: flash-green 0.8s ease-out; }
+        .price-down { animation: flash-red 0.8s ease-out; }
+    </style>
+</head>
+<body class="bg-slate-950 text-gray-100 min-h-screen flex flex-col pb-safe-nav antialiased">
+
+    <!-- الشريط العلوي والتمرير المباشر - مراعاة المنطقة الآمنة للآيفون -->
+    <header class="bg-slate-900/90 backdrop-blur-md border-b border-slate-800 sticky top-0 z-40 pt-safe">
+        <!-- شريط أسعار العملات والأسهم -->
+        <div class="px-4 py-2 flex items-center justify-between border-b border-slate-800/60 text-xs">
+            <div class="flex items-center gap-1.5 shrink-0 pl-2 border-l border-slate-800">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span class="font-bold text-gray-400 text-[10px]">مباشر:</span>
+            </div>
+            
+            <div class="no-scrollbar flex items-center gap-3 overflow-x-auto whitespace-nowrap px-2 flex-grow font-mono text-[11px]">
+                <div id="box-BRENT" class="flex items-center gap-1"><span class="text-amber-500 font-bold">BRENT</span> <span id="price-BRENT">--.--</span></div>
+                <div id="box-BTC" class="flex items-center gap-1"><span class="text-cyan-400 font-bold">BTC</span> <span id="price-BTC">--.--</span></div>
+                <div id="box-BTCD" class="flex items-center gap-1"><span class="text-purple-400 font-bold">BTC.D</span> <span id="price-BTCD">--.--%</span></div>
+                <div id="box-GME" class="flex items-center gap-1"><span class="text-amber-400 font-bold">GME</span> <span id="price-GME">--.--</span></div>
+            </div>
+        </div>
+
+        <!-- الهيدر الرئيسي -->
+        <div class="px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="bg-[#FF4500] text-white p-2 rounded-xl shadow-md">
+                    <i class="fa-brands fa-reddit-alien text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-base font-bold leading-none">iphon</h1>
+                    <span class="text-[10px] text-[#FF4500] font-semibold">تطبيق الأخبار السريع</span>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <span id="header-unread-count-badge" class="bg-emerald-600 text-white text-[11px] px-2 py-0.5 rounded-full font-bold">
+                    ...
+                </span>
+                <button onclick="toggleLiveWidget()" class="bg-red-600 text-white p-2 rounded-xl text-xs active:scale-95 transition">
+                    <i class="fa-solid fa-tv"></i>
+                </button>
+                <button onclick="openModal()" class="bg-[#FF4500] text-white p-2 rounded-xl text-xs active:scale-95 transition">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي للموبايل -->
+    <main class="px-4 py-4 space-y-4 flex-grow">
+        <h2 id="current-feed-title" class="text-base font-bold text-gray-200">المنشورات غير المقروءة</h2>
+        
+        <div id="articles-grid" class="space-y-3">
+            <div class="text-center py-16 text-gray-500 bg-slate-900/50 rounded-2xl border border-slate-800">
+                <i class="fa-solid fa-spinner fa-spin text-2xl mb-2 text-[#FF4500]"></i>
+                <p class="text-xs">جاري تحميل الخلاصات...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- شريط التنقل السفلي المخصص للآيفون (iPhone Bottom Bar) -->
+    <nav class="fixed bottom-0 inset-x-0 bg-slate-900/95 backdrop-blur-lg border-t border-slate-800/80 z-50 px-4 py-2 flex justify-around items-center text-gray-400 pb-safe">
+        <button onclick="loadAllUnreadFeed()" class="flex flex-col items-center gap-1 active:text-[#FF4500] text-xs font-semibold">
+            <i class="fa-solid fa-envelope-open-text text-lg text-emerald-500"></i>
+            <span class="text-[10px]">الغير مقروء</span>
+        </button>
+
+        <button onclick="loadFavoritesFeed()" class="flex flex-col items-center gap-1 active:text-[#FF4500] text-xs font-semibold">
+            <i class="fa-solid fa-star text-lg text-amber-500"></i>
+            <span class="text-[10px]">المفضلة</span>
+        </button>
+
+        <button onclick="openXModal()" class="flex flex-col items-center gap-1 active:text-[#FF4500] text-xs font-semibold">
+            <i class="fa-brands fa-x-twitter text-lg text-white"></i>
+            <span class="text-[10px]">حساب X</span>
+        </button>
+
+        <button onclick="loadViewedFeed()" class="flex flex-col items-center gap-1 active:text-[#FF4500] text-xs font-semibold">
+            <i class="fa-solid fa-eye text-lg text-indigo-400"></i>
+            <span class="text-[10px]">المشاهدة</span>
+        </button>
+    </nav>
+
+    <!-- نافذة البث المباشر مصممة للموبايل -->
+    <div id="live-widget" class="fixed top-16 inset-x-4 z-50 bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden hidden">
+        <div class="bg-slate-950 px-3 py-2 flex justify-between items-center text-xs font-bold border-b border-slate-800">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle text-red-600 text-[8px] animate-pulse"></i> قناة العربية مباشر</span>
+            <button onclick="toggleLiveWidget()" class="text-gray-400 p-1"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="relative w-full aspect-video bg-black">
+            <video id="live-stream-player" controls autoplay muted playsinline class="w-full h-full object-cover"></video>
+        </div>
+    </div>
+
+    <!-- نافذة إضافة مصدر RSS -->
+    <div id="add-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+        <div class="bg-slate-900 text-gray-100 w-full max-w-sm rounded-2xl border border-slate-800 p-5 space-y-4">
+            <h3 class="text-base font-bold">إضافة مصدر جديد</h3>
+            <form onsubmit="addSource(event)" class="space-y-3">
+                <input type="text" id="source-name" placeholder="اسم المصدر (اختياري)" class="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-xl text-xs focus:outline-none focus:border-[#FF4500]">
+                <input type="url" id="source-url" required placeholder="رابط الـ RSS" class="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-xl text-xs focus:outline-none focus:border-[#FF4500]">
+                <div class="flex justify-end gap-2 pt-2">
+                    <button type="button" onclick="closeModal()" class="px-4 py-2 bg-slate-800 rounded-xl text-xs">إلغاء</button>
+                    <button type="submit" class="px-4 py-2 bg-[#FF4500] text-white rounded-xl text-xs font-bold">إضافة</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- نافذة إضافة حساب X -->
+    <div id="add-x-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+        <div class="bg-slate-900 text-gray-100 w-full max-w-sm rounded-2xl border border-slate-800 p-5 space-y-4">
+            <h3 class="text-base font-bold">متابعة حساب X</h3>
+            <form onsubmit="addXAccount(event)" class="space-y-3">
+                <input type="text" id="x-username" required placeholder="اسم المستخدم (مثال: ElonMusk)" class="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-xl text-xs focus:outline-none focus:border-white">
+                <div class="flex justify-end gap-2 pt-2">
+                    <button type="button" onclick="closeXModal()" class="px-4 py-2 bg-slate-800 rounded-xl text-xs">إلغاء</button>
+                    <button type="submit" class="px-4 py-2 bg-white text-black font-bold rounded-xl text-xs">متابعة</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const DEFAULT_SOURCES = [
+            { name: 'The Onion', url: 'https://www.theonion.com/rss', category: 'أخبار وسياق عام' },
+            { name: 'r/WallStreetBets', url: 'https://www.reddit.com/r/wallstreetbets/.rss', category: 'أسواق واقتصاد' },
+            { name: 'r/Technology', url: 'https://www.reddit.com/r/technology/.rss', category: 'تقنية وتكنولوجيا' }
+        ];
+
+        let sources = JSON.parse(localStorage.getItem('rss_sources_app')) || DEFAULT_SOURCES;
+        let readArticleObjects = JSON.parse(localStorage.getItem('read_articles_list_v2')) || [];
+        let favoriteArticles = JSON.parse(localStorage.getItem('favorite_articles_list')) || [];
+
+        function saveSources() { localStorage.setItem('rss_sources_app', JSON.stringify(sources)); }
+
+        async function translateText(text) {
+            if (!text) return '';
+            try {
+                const res = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ar&dt=t&q=${encodeURIComponent(text.substring(0, 500))}`);
+                const data = await res.json();
+                return data[0].map(x => x[0]).join('');
+            } catch (e) { return text; }
+        }
+
+        async function loadAllUnreadFeed() {
+            const grid = document.getElementById('articles-grid');
+            grid.innerHTML = `<div class="text-center py-12 text-gray-500"><i class="fa-solid fa-spinner fa-spin text-2xl mb-2 text-[#FF4500]"></i><p class="text-xs">جاري تحديث الأخبار...</p></div>`;
+
+            let allArticles = [];
+            const readLinks = readArticleObjects.map(o => o.link);
+
+            try {
+                for (let source of sources) {
+                    const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(source.url)}`);
+                    const data = await res.json();
+                    if (data.status === 'ok') {
+                        allArticles = allArticles.concat(data.items.map(item => ({ ...item, sourceName: source.name })));
+                    }
+                }
+                const unreadItems = allArticles.filter(item => !readLinks.includes(item.link));
+                renderArticles(unreadItems);
+                document.getElementById('header-unread-count-badge').innerText = unreadItems.length;
+            } catch (err) {
+                grid.innerHTML = `<div class="text-center py-8 text-red-400 text-xs">تعذر تحميل الأخبار.</div>`;
+            }
+        }
+
+        async function renderArticles(articles) {
+            const grid = document.getElementById('articles-grid');
+            grid.innerHTML = '';
+
+            if (articles.length === 0) {
+                grid.innerHTML = `<div class="text-center py-12 text-gray-500 text-xs">لا توجد منشورات جديدة.</div>`;
+                return;
+            }
+
+            for (let [index, item] of articles.slice(0, 20).entries()) {
+                const transTitle = await translateText(item.title);
+                const isFav = favoriteArticles.some(f => f.link === item.link);
+                const isEven = index % 2 === 0;
+
+                const card = document.createElement('article');
+                card.className = `${isEven ? 'bg-black text-white border-slate-900' : 'bg-slate-900 text-gray-100 border-slate-800'} p-4 rounded-2xl border space-y-2 shadow-sm`;
+
+                card.innerHTML = `
+                    <div class="flex items-center justify-between text-[10px] text-gray-400">
+                        <span class="text-[#FF4500] font-bold"><i class="fa-brands fa-reddit-alien"></i> ${item.sourceName}</span>
+                        <button onclick="toggleFavorite('${item.link}', '${transTitle.replace(/'/g, "\\'")}', this)" class="${isFav ? 'text-amber-400' : 'text-gray-500'}">
+                            <i class="fa-solid fa-star"></i>
+                        </button>
+                    </div>
+                    <h3 class="font-bold text-sm leading-snug">${transTitle}</h3>
+                    <div class="flex items-center justify-between pt-2 text-[11px]">
+                        <a href="${item.link}" target="_blank" onclick="markRead('${item.link}')" class="text-[#FF4500] font-bold">
+                            قراءة الخبر <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                        </a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            }
+        }
+
+        function markRead(link) {
+            if (!readArticleObjects.some(o => o.link === link)) {
+                readArticleObjects.push({ link, timestamp: Date.now() });
+                localStorage.setItem('read_articles_list_v2', JSON.stringify(readArticleObjects));
+            }
+        }
+
+        function toggleFavorite(link, title, btn) {
+            const idx = favoriteArticles.findIndex(a => a.link === link);
+            if (idx > -1) {
+                favoriteArticles.splice(idx, 1);
+                btn.className = "text-gray-500";
+            } else {
+                favoriteArticles.push({ link, title });
+                btn.className = "text-amber-400";
+            }
+            localStorage.setItem('favorite_articles_list', JSON.stringify(favoriteArticles));
+        }
+
+        function openModal() { document.getElementById('add-modal').classList.remove('hidden'); document.getElementById('add-modal').classList.add('flex'); }
+        function closeModal() { document.getElementById('add-modal').classList.add('hidden'); document.getElementById('add-modal').classList.remove('flex'); }
+        function openXModal() { document.getElementById('add-x-modal').classList.remove('hidden'); document.getElementById('add-x-modal').classList.add('flex'); }
+        function closeXModal() { document.getElementById('add-x-modal').classList.add('hidden'); document.getElementById('add-x-modal').classList.remove('flex'); }
+        function toggleLiveWidget() { document.getElementById('live-widget').classList.toggle('hidden'); }
+
+        function initLiveStream() {
+            const video = document.getElementById('live-stream-player');
+            const streamUrl = 'https://live.alarabiya.net/alarabiya/live/playlist.m3u8';
+            if (Hls.isSupported()) {
+                const hls = new Hls();
+                hls.loadSource(streamUrl);
+                hls.attachMedia(video);
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = streamUrl;
+            }
+        }
+
+        window.onload = function() {
+            loadAllUnreadFeed();
+            initLiveStream();
+        };
+    </script>
+</body>
+</html>
