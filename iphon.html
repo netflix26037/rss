@@ -6,9 +6,9 @@
     
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="iphon">
+    <meta name="apple-mobile-web-app-title" content="ريديت">
     
-    <title>iphon - خلاصات REDDIT & X</title>
+    <title>REDDIT - خلاصات الأخبار</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -92,7 +92,7 @@
                         <i class="fa-brands fa-reddit-alien text-base"></i>
                     </div>
                     <div>
-                        <h1 class="text-sm font-bold leading-none">iphon</h1>
+                        <h1 class="text-sm font-bold leading-none">REDDIT</h1>
                         <span class="text-[9px] text-[#FF4500] font-semibold">تطبيق الخلاصات السريع</span>
                     </div>
                 </div>
@@ -407,7 +407,7 @@
                             }
                         }
                     });
-                }, { threshold: 0.5 }); // يجب أن يظهر 50% من كارت الخبر على الشاشة
+                }, { threshold: 0.4 });
             }
 
             for (let [index, item] of articles.slice(0, 25).entries()) {
@@ -450,20 +450,27 @@
             }
         }
 
-        /* بدء العداد المنفصل للخبر الفردي عند المرور عليه ورؤيته */
+        /* تنسيق ثواني العد التنازلي بصيغة دقائق:ثواني (مثال 4:59) */
+        function formatTime(seconds) {
+            const m = Math.floor(seconds / 60);
+            const s = seconds % 60;
+            return `${m}:${s < 10 ? '0' : ''}${s}`;
+        }
+
+        /* بدء العداد المنفصل (5 دقائق = 300 ثانية) عند رؤية الخبر */
         function startIndividualTimer(index, link, cardId) {
-            let secondsLeft = 15;
+            let secondsLeft = 300; // 5 دقائق
             const badge = document.getElementById(`badge-status-${index}`);
 
             if (badge) {
                 badge.className = "text-[9px] bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full font-semibold";
-                badge.innerText = `مشاهدة (${secondsLeft}ث)`;
+                badge.innerText = `مشاهدة (${formatTime(secondsLeft)})`;
             }
 
             const intervalId = setInterval(() => {
                 secondsLeft--;
                 if (badge && secondsLeft > 0) {
-                    badge.innerText = `مشاهدة (${secondsLeft}ث)`;
+                    badge.innerText = `مشاهدة (${formatTime(secondsLeft)})`;
                 }
                 if (secondsLeft <= 0) {
                     clearInterval(intervalId);
