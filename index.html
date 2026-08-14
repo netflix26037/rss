@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDDIT بالعربي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class' }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+        body { 
+            font-family: 'Cairo', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .ticker-scroll::-webkit-scrollbar { display: none; }
+        .ticker-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col select-none">
+
+    <!-- شريط أسعار العملات والأسهم المباشر -->
+    <div class="bg-slate-950 text-white text-xs py-2 px-4 border-b border-slate-800 flex items-center justify-between sticky top-0 z-50">
+        <div class="flex items-center gap-2 shrink-0 pl-3 border-l border-slate-800">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            </span>
+            <span class="font-bold text-gray-400 text-xs">مباشر</span>
+        </div>
+        
+        <div class="ticker-scroll flex items-center gap-4 overflow-x-auto whitespace-nowrap scroll-smooth flex-grow py-0.5 px-3">
+            <div id="box-BRENT" class="flex items-center gap-1.5 font-mono px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs">
+                <span class="font-bold text-amber-500"><i class="fa-solid fa-droplet"></i> BRENT</span>
+                <span id="price-BRENT" class="text-gray-200 font-bold">--.--</span>
+            </div>
+            <div id="box-BTC" class="flex items-center gap-1.5 font-mono px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs">
+                <span class="font-bold text-cyan-400">BTC</span>
+                <span id="price-BTC" class="text-gray-200 font-bold">--.--</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- الهيدر الرئيسي -->
+    <header class="bg-gray-800 border-b border-gray-700 px-6 py-3 sticky top-[37px] z-40 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <button onclick="toggleSidebar()" class="text-gray-300 text-xl p-2 hover:bg-gray-700 rounded-lg transition">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="bg-[#FF4500] text-white p-2 rounded-xl flex items-center justify-center shadow-lg">
+                    <i class="fa-brands fa-reddit-alien text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold leading-tight">REDDIT بالعربي</h1>
+                    <div class="flex items-center gap-2">
+                        <span id="digital-clock" class="text-xs font-mono text-gray-400 font-semibold">00:00:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <button onclick="reloadFeedsFromFile()" class="bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition">
+                    <i class="fa-solid fa-rotate"></i> تحديث من feeds.json
+                </button>
+                <button onclick="openModal()" class="bg-[#FF4500] hover:bg-[#e03d00] text-white px-3.5 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 shadow-md transition">
+                    <i class="fa-solid fa-plus"></i> <span class="hidden sm:inline">إضافة مصدر</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية (Sidebar Drawer) -->
+    <div id="sidebar-drawer" class="fixed inset-0 bg-black/70 z-50 hidden justify-center items-center md:items-start md:pt-20 transition-opacity">
+        <div class="bg-gray-800 rounded-2xl w-full max-w-xl max-h-[80vh] flex flex-col p-5 overflow-hidden border border-gray-700 shadow-2xl mx-4">
+            <div class="flex justify-between items-center mb-4 pb-3 border-b border-gray-700">
+                <h2 class="text-base font-bold text-gray-200 flex items-center gap-2">
+                    <i class="fa-solid fa-bars text-[#FF4500]"></i> المصادر والأقسام (feeds.json)
+                </h2>
+                <button onclick="toggleSidebar()" class="text-gray-400 hover:text-white p-1 text-xl"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="overflow-y-auto space-y-4 pr-1" id="drawer-content">
+                <div id="sources-container" class="space-y-3">
+                    <p class="text-xs text-gray-400 text-center py-4">جاري قراءة ملف feeds.json...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- المحتوى الرئيسي للموقع -->
+    <main class="max-w-7xl mx-auto px-4 py-6 flex-grow w-full">
+        <div class="flex justify-between items-center mb-5 pb-2 border-b border-gray-800">
+            <h2 id="current-feed-title" class="text-base font-bold text-gray-200 truncate flex items-center gap-2">
+                <i class="fa-solid fa-newspaper text-[#FF4500]"></i> أحدث المنشورات
+            </h2>
+        </div>
+        
+        <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <div class="col-span-full text-center py-24 text-gray-500 bg-gray-800/40 rounded-2xl border border-gray-800">
+                <i class="fa-brands fa-reddit text-5xl mb-3 text-[#FF4500] animate-pulse"></i>
+                <p class="text-sm font-medium">اختر مصدراً من القائمة أو انتظر جلب الخلاصات...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal إضافة مصدر جديد -->
+    <div id="add-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+        <div class="bg-gray-800 text-gray-100 w-full max-w-md rounded-2xl p-6 border border-gray-700 shadow-2xl">
+            <h3 class="text-base font-bold mb-4">إضافة خلاصة RSS جديدة</h3>
+            <form onsubmit="addSource(event)">
+                <div class="space-y-3 mb-5">
+                    <input type="text" id="source-name" placeholder="اسم المصدر" class="w-full px-3.5 py-2.5 bg-gray-900 border border-gray-700 rounded-xl text-xs focus:outline-none focus:border-[#FF4500]">
+                    <input type="url" id="source-url" required placeholder="رابط الـ RSS" class="w-full px-3.5 py-2.5 bg-gray-900 border border-gray-700 rounded-xl text-xs focus:outline-none focus:border-[#FF4500]">
+                    <input type="text" id="source-category" placeholder="المجموعة" class="w-full px-3.5 py-2.5 bg-gray-900 border border-gray-700 rounded-xl text-xs focus:outline-none focus:border-[#FF4500]">
+                </div>
+                <div class="flex gap-2">
+                    <button type="button" onclick="closeModal()" class="flex-1 bg-gray-700 hover:bg-gray-600 py-2.5 rounded-xl text-xs font-semibold transition">إلغاء</button>
+                    <button type="submit" class="flex-1 bg-[#FF4500] hover:bg-[#e03d00] text-white py-2.5 rounded-xl text-xs font-semibold transition">إضافة</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let sources = [];
+
+        function toggleSidebar() {
+            const drawer = document.getElementById('sidebar-drawer');
+            drawer.classList.toggle('hidden');
+            drawer.classList.toggle('flex');
+        }
+
+        // دالة لاستخراج وسائط الصور والفيديو من محتوى الخلاصة
+        function extractMedia(item) {
+            let media = { image: null, video: null };
+            
+            // 1. التحقق من وسوم enclosure المباشرة
+            if (item.enclosure && item.enclosure.link) {
+                const type = item.enclosure.type || '';
+                if (type.includes('image') || item.enclosure.link.match(/\.(jpg|jpeg|png|gif|webp)$/i)) {
+                    media.image = item.enclosure.link;
+                } else if (type.includes('video') || item.enclosure.link.match(/\.(mp4|webm|ogg)$/i)) {
+                    media.video = item.enclosure.link;
+                }
+            }
+
+            // 2. تحليل محتوى الـ HTML للبحث عن صور أو فيديوهات ضمن الوصف
+            const htmlString = (item.content || item.description || '');
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(htmlString, 'text/html');
+
+            if (!media.image) {
+                const img = doc.querySelector('img');
+                if (img && img.src && !img.src.includes('preview.redd.it/award_images')) {
+                    media.image = img.src;
+                }
+            }
+
+            if (!media.video) {
+                const video = doc.querySelector('video source, video');
+                if (video && video.src) {
+                    media.video = video.src;
+                }
+            }
+
+            // 3. التحقق من حقل thumbnail المباشر
+            if (!media.image && item.thumbnail && item.thumbnail.startsWith('http')) {
+                media.image = item.thumbnail;
+            }
+
+            return media;
+        }
+
+        async function fetchFeedsJSON() {
+            try {
+                const response = await fetch('./feeds.json?t=' + new Date().getTime());
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const data = await response.json();
+                
+                if (Array.isArray(data) && data.length > 0) {
+                    sources = data;
+                    localStorage.setItem('rss_sources_app', JSON.stringify(data));
+                    return data;
+                }
+            } catch (err) {
+                console.warn("لم يتم التمكن من تحميل feeds.json محلياً، استخدام البيانات المخزنة:", err);
+            }
+
+            const localData = localStorage.getItem('rss_sources_app');
+            if (localData) {
+                try {
+                    return JSON.parse(localData);
+                } catch(e) {}
+            }
+            return [];
+        }
+
+        async function reloadFeedsFromFile() {
+            const container = document.getElementById('sources-container');
+            container.innerHTML = '<p class="text-xs text-amber-400 text-center py-4">جاري إعادة جلب feeds.json...</p>';
+            sources = await fetchFeedsJSON();
+            renderSources();
+            if (sources.length > 0) {
+                loadAllUnreadFeed();
+            }
+        }
+
+        function saveSources() {
+            localStorage.setItem('rss_sources_app', JSON.stringify(sources));
+        }
+
+        async function translateText(text) {
+            if (!text || text.trim() === '') return '';
+            try {
+                const res = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ar&dt=t&q=${encodeURIComponent(text.substring(0, 1000))}`);
+                const data = await res.json();
+                return data[0].map(x => x[0]).join('');
+            } catch (e) { return text; }
+        }
+
+        function renderSources() {
+            const container = document.getElementById('sources-container');
+            container.innerHTML = '';
+
+            if (!sources || sources.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-6">
+                        <p class="text-xs text-red-400 mb-2">لم يتم العثور على مصادر داخل feeds.json</p>
+                    </div>`;
+                return;
+            }
+
+            const grouped = {};
+            sources.forEach((s, idx) => {
+                const cat = s.category || 'عام';
+                if (!grouped[cat]) grouped[cat] = [];
+                grouped[cat].push({ ...s, idx });
+            });
+
+            for (const [cat, items] of Object.entries(grouped)) {
+                const groupDiv = document.createElement('div');
+                groupDiv.className = 'space-y-1 bg-gray-900/60 p-3 rounded-xl border border-gray-700/60';
+                groupDiv.innerHTML = `
+                    <div class="flex items-center justify-between pb-1.5 border-b border-gray-700">
+                        <button onclick="loadCategoryFeed('${cat.replace(/'/g, "\\'")}'); toggleSidebar();" class="text-xs font-bold text-[#FF4500] hover:underline flex items-center gap-1.5">
+                            <i class="fa-solid fa-folder-open text-amber-500"></i> ${cat}
+                        </button>
+                    </div>
+                    <ul class="space-y-1.5 pt-2"></ul>
+                `;
+                
+                const ul = groupDiv.querySelector('ul');
+                items.forEach(item => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                        <div class="flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-gray-800/80 hover:bg-gray-700/80 text-xs transition">
+                            <button onclick="loadFeed('${item.name.replace(/'/g, "\\'")}', '${item.url}'); toggleSidebar();" class="text-right flex-grow font-medium truncate flex items-center">
+                                <i class="fa-solid fa-rss text-[10px] text-gray-400 ml-1.5"></i>${item.name}
+                            </button>
+                            <button onclick="deleteSource(${item.idx})" class="text-red-400 hover:text-red-300 p-1"><i class="fa-solid fa-trash text-[10px]"></i></button>
+                        </div>
+                    `;
+                    ul.appendChild(li);
+                });
+                container.appendChild(groupDiv);
+            }
+        }
+
+        async function loadFeed(title, url) {
+            document.getElementById('current-feed-title').innerText = title;
+            const grid = document.getElementById('articles-grid');
+            grid.innerHTML = `<div class="col-span-full text-center py-20 text-gray-400"><i class="fa-solid fa-spinner fa-spin text-3xl mb-3 text-[#FF4500]"></i><p class="text-xs">جاري تحميل وتجميل الخلاصة...</p></div>`;
+
+            try {
+                const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(url)}`);
+                const data = await res.json();
+                if (data.status === 'ok') {
+                    renderArticlesGrid(data.items.map(item => ({ ...item, sourceName: title, media: extractMedia(item) })));
+                } else {
+                    grid.innerHTML = `<div class="col-span-full text-center py-10 text-amber-400 text-xs">تعذر جلب البيانات من المصدر.</div>`;
+                }
+            } catch (err) { grid.innerHTML = `<div class="col-span-full text-center py-10 text-red-400 text-xs">حدث خطأ أثناء تحميل الخلاصة.</div>`; }
+        }
+
+        async function loadCategoryFeed(category) {
+            document.getElementById('current-feed-title').innerText = category;
+            const grid = document.getElementById('articles-grid');
+            grid.innerHTML = `<div class="col-span-full text-center py-20 text-gray-400"><i class="fa-solid fa-spinner fa-spin text-3xl mb-3 text-[#FF4500]"></i><p class="text-xs">جاري التحميل...</p></div>`;
+
+            const catSources = sources.filter(s => (s.category || 'عام') === category);
+            let allArticles = [];
+
+            for (let source of catSources) {
+                try {
+                    const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(source.url)}`);
+                    const data = await res.json();
+                    if (data.status === 'ok') {
+                        allArticles = allArticles.concat(data.items.map(item => ({ ...item, sourceName: source.name, media: extractMedia(item) })));
+                    }
+                } catch(e) {}
+            }
+            renderArticlesGrid(allArticles);
+        }
+
+        async function loadAllUnreadFeed() {
+            if (!sources || sources.length === 0) return;
+            loadCategoryFeed(sources[0].category || 'عام');
+        }
+
+        async function renderArticlesGrid(articles) {
+            const grid = document.getElementById('articles-grid');
+            grid.innerHTML = '';
+
+            if(!articles || articles.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-20 text-gray-500">لا توجد منشورات حالياً</div>`;
+                return;
+            }
+
+            for (let item of articles) {
+                const cleanDesc = item.description ? item.description.replace(/<[^>]*>?/gm, '').trim() : '';
+                const transTitle = await translateText(item.title);
+                const transDesc = await translateText(cleanDesc);
+
+                // بناء HTML للصور والفيديوهات عند توفرها
+                let mediaHTML = '';
+                if (item.media) {
+                    if (item.media.video) {
+                        mediaHTML = `
+                            <div class="my-2.5 overflow-hidden rounded-xl bg-black border border-gray-700">
+                                <video controls class="w-full max-h-64 object-cover" preload="metadata">
+                                    <source src="${item.media.video}">
+                                    متصفحك لا يدعم تشغيل الفيديو.
+                                </video>
+                            </div>`;
+                    } else if (item.media.image) {
+                        mediaHTML = `
+                            <div class="my-2.5 overflow-hidden rounded-xl bg-black border border-gray-700">
+                                <img src="${item.media.image}" alt="صورة المنشور" class="w-full h-48 object-cover hover:scale-105 transition duration-300" loading="lazy" onerror="this.style.display='none'">
+                            </div>`;
+                    }
+                }
+
+                const card = document.createElement('article');
+                card.className = `bg-gray-800/80 hover:bg-gray-800 border border-gray-700/70 hover:border-gray-600 p-4 rounded-2xl flex flex-col justify-between shadow-sm transition duration-200`;
+
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-[10px] font-bold bg-[#FF4500]/10 text-[#FF4500] border border-[#FF4500]/20">
+                                ${item.sourceName || 'Reddit'}
+                            </span>
+                        </div>
+                        <h3 class="font-bold text-gray-100 text-sm leading-snug mb-2">${transTitle}</h3>
+                        ${mediaHTML}
+                        <p class="text-gray-300 text-xs line-clamp-3 mb-3 leading-relaxed">${transDesc}</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 border-t border-gray-700/60 mt-2">
+                        <a href="${item.link}" target="_blank" class="bg-[#FF4500] hover:bg-[#e03d00] text-white px-3.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition shadow">
+                            الرابط <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            }
+        }
+
+        function addSource(e) {
+            e.preventDefault();
+            const name = document.getElementById('source-name').value.trim() || 'مصدر جديد';
+            const url = document.getElementById('source-url').value.trim();
+            const category = document.getElementById('source-category').value.trim() || 'عام';
+
+            sources.push({ name, url, category });
+            saveSources();
+            renderSources();
+            closeModal();
+            e.target.reset();
+        }
+
+        function deleteSource(idx) {
+            sources.splice(idx, 1);
+            saveSources();
+            renderSources();
+        }
+
+        function openModal() { document.getElementById('add-modal').classList.remove('hidden'); document.getElementById('add-modal').classList.add('flex'); }
+        function closeModal() { document.getElementById('add-modal').classList.add('hidden'); document.getElementById('add-modal').classList.remove('flex'); }
+
+        function startClock() {
+            setInterval(() => {
+                const el = document.getElementById('digital-clock');
+                if (el) el.innerText = new Date().toTimeString().split(' ')[0];
+            }, 1000);
+        }
+
+        window.onload = async function() {
+            startClock();
+            sources = await fetchFeedsJSON();
+            renderSources();
+            if (sources.length > 0) {
+                loadAllUnreadFeed();
+            }
+        };
+    </script>
+</body>
+</html>
