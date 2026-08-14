@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="ريديت">
+    
+    <title>REDDIT - خلاصات الأخبار</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class' }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+        
+        body { 
+            font-family: 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .pt-safe { padding-top: max(1rem, env(safe-area-inset-top)); }
+        .pb-safe { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
+        .pb-safe-nav { padding-bottom: max(4.5rem, calc(4rem + env(safe-area-inset-bottom))); }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .sidebar-slide { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .fade-out-card { transition: opacity 0.5s ease, transform 0.5s ease; opacity: 0; transform: translateY(-10px); }
+    </style>
+</head>
+<body class="bg-slate-950 text-gray-100 min-h-screen flex flex-col pb-safe-nav antialiased">
+
+    <!-- القائمة الجانبية (Sidebar) للمجموعات والتصنيفات -->
+    <div id="sidebar-overlay" onclick="closeSidebar()" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+    <aside id="sidebar" class="fixed top-0 right-0 bottom-0 w-4/5 max-w-xs bg-slate-900 border-l border-slate-800 z-50 transform translate-x-full sidebar-slide flex flex-col pt-safe pb-safe px-4">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800 mb-4">
+            <h2 class="font-bold text-sm text-[#FF4500] flex items-center gap-2">
+                <i class="fa-solid fa-layer-group"></i> التصنيفات والمجموعات
+            </h2>
+            <button onclick="closeSidebar()" class="text-gray-400 p-1 active:scale-95">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+        </div>
+
+        <div id="sidebar-categories" class="flex-grow overflow-y-auto space-y-3 no-scrollbar"></div>
+
+        <div class="pt-4 border-t border-slate-800 space-y-2 text-xs">
+            <button onclick="openModal(); closeSidebar();" class="w-full py-2 bg-[#FF4500] text-white font-bold rounded-xl flex items-center justify-center gap-2">
+                <i class="fa-solid fa-plus"></i> إضافة مصدر جديد
+            </button>
+        </div>
+    </aside>
+
+    <!-- الشريط العلوي الرئيسي -->
+    <header class="bg-slate-900/90 backdrop-blur-md border-b border-slate-800 sticky top-0 z-40 pt-safe">
+        <!-- شريط الأسعار -->
+        <div class="px-4 py-1.5 flex items-center justify-between border-b border-slate-800/60 text-xs">
+            <div class="flex items-center gap-1.5 shrink-0 pl-2 border-l border-slate-800">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span class="font-bold text-gray-400 text-[10px]">مباشر:</span>
+            </div>
+            
+            <div class="no-scrollbar flex items-center gap-3 overflow-x-auto whitespace-nowrap px-2 flex-grow font-mono text-[11px]">
+                <div id="box-BRENT" class="flex items-center gap-1"><span class="text-amber-500 font-bold">BRENT</span> <span id="price-BRENT">--.--</span></div>
+                <div id="box-BTC" class="flex items-center gap-1"><span class="text-cyan-400 font-bold">BTC</span> <span id="price-BTC">--.--</span></div>
+                <div id="box-BTCD" class="flex items-center gap-1"><span class="text-purple-400 font-bold">BTC.D</span> <span id="price-BTCD">--.--%</span></div>
+                <div id="box-GME" class="flex items-center gap-1"><span class="text-amber-400 font-bold">GME</span> <span id="price-GME">--.--</span></div>
+            </div>
+        </div>
+
+        <!-- الهيدر السفلي -->
+        <div class="px-4 py-2.5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <button onclick="openSidebar()" class="text-gray-200 text-lg p-1.5 rounded-xl bg-slate-800 active:scale-95 transition">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="flex items-center gap-2">
+                    <div class="bg-[#FF4500] text-white p-1.5 rounded-xl">
+                        <i class="fa-brands fa-reddit-alien text-base"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-sm font-bold leading-none">REDDIT</h1>
+                        <span class="text-[9px] text-[#FF4500] font-semibold">تطبيق الخلاصات السريع</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <span id="header-unread-count-badge" class="bg-emerald-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold">
+                    0
+                </span>
+                <button onclick="toggleLiveWidget()" class="bg-red-600 text-white p-1.5 rounded-xl text-xs active:scale-95 transition">
+                    <i class="fa-solid fa-tv"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="px-4 py-4 space-y-3 flex-grow">
+        <div class="flex items-center justify-between">
+            <h2 id="current-feed-title" class="text-sm font-bold text-gray-200">المنشورات غير المقروءة (آخر 24 ساعة)</h2>
+        </div>
+        
+        <div id="articles-grid" class="space-y-3">
+            <div class="text-center py-16 text-gray-500 bg-slate-900/50 rounded-2xl border border-slate-800">
+                <i class="fa-solid fa-spinner fa-spin text-2xl mb-2 text-[#FF4500]"></i>
+                <p class="text-xs">جاري تحميل الخلاصات...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- شريط التنقل السفلي -->
+    <nav class="fixed bottom-0 inset-x-0 bg-slate-900/95 backdrop-blur-lg border-t border-slate-800/80 z-40 px-4 py-2 flex justify-around items-center text-gray-400 pb-safe">
+        <button onclick="loadAllUnreadFeed()" class="flex flex-col items-center gap-1 active:text-[#FF4500] text-xs font-semibold">
+            <i class="fa-solid fa-envelope-open-text text-base text-emerald-500"></i>
+            <span class="text-[10px]">الغير مقروء</span>
+        </button>
+
+        <button onclick="loadViewedFeed()" class="flex flex-col items-center gap-1 active:text-[#FF4500] text-xs font-semibold">
+            <i class="fa-solid fa-eye text-base text-indigo-400"></i>
+            <span class="text-[10px]">تمت المشاهدة (24س)</span>
+        </button>
+
+        <button onclick="loadFavoritesFeed()" class="flex flex-col items-center gap-1 active:text-[#FF4500] text-xs font-semibold">
+            <i class="fa-solid fa-star text-base text-amber-500"></i>
+            <span class="text-[10px]">المفضلة</span>
+        </button>
+
+        <button onclick="openXModal()" class="flex flex-col items-center gap-1 active:text-[#FF4500] text-xs font-semibold">
+            <i class="fa-brands fa-x-twitter text-base text-white"></i>
+            <span class="text-[10px]">حساب X</span>
+        </button>
+    </nav>
+
+    <!-- نافذة البث المباشر -->
+    <div id="live-widget" class="fixed top-16 inset-x-4 z-50 bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden hidden">
+        <div class="bg-slate-950 px-3 py-2 flex justify-between items-center text-xs font-bold border-b border-slate-800">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle text-red-600 text-[8px] animate-pulse"></i> قناة العربية مباشر</span>
+            <button onclick="toggleLiveWidget()" class="text-gray-400 p-1"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="relative w-full aspect-video bg-black">
+            <video id="live-stream-player" controls autoplay muted playsinline class="w-full h-full object-cover"></video>
+        </div>
+    </div>
+
+    <!-- نافذة إضافة مصدر RSS -->
+    <div id="add-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+        <div class="bg-slate-900 text-gray-100 w-full max-w-sm rounded-2xl border border-slate-800 p-5 space-y-4">
+            <h3 class="text-base font-bold">إضافة مصدر جديد</h3>
+            <form onsubmit="addSource(event)" class="space-y-3">
+                <input type="text" id="source-name" placeholder="اسم المصدر (اختياري)" class="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-xl text-xs focus:outline-none focus:border-[#FF4500]">
+                <input type="url" id="source-url" required placeholder="رابط الـ RSS" class="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-xl text-xs focus:outline-none focus:border-[#FF4500]">
+                <input type="text" id="source-category" placeholder="التصنيف (اختياري)" class="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-xl text-xs focus:outline-none focus:border-[#FF4500]">
+                <div class="flex justify-end gap-2 pt-2">
+                    <button type="button" onclick="closeModal()" class="px-4 py-2 bg-slate-800 rounded-xl text-xs">إلغاء</button>
+                    <button type="submit" class="px-4 py-2 bg-[#FF4500] text-white rounded-xl text-xs font-bold">إضافة</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- نافذة إضافة حساب X -->
+    <div id="add-x-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+        <div class="bg-slate-900 text-gray-100 w-full max-w-sm rounded-2xl border border-slate-800 p-5 space-y-4">
+            <h3 class="text-base font-bold">متابعة حساب X</h3>
+            <form onsubmit="addXAccount(event)" class="space-y-3">
+                <input type="text" id="x-username" required placeholder="اسم المستخدم (مثال: ElonMusk)" class="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-xl text-xs focus:outline-none focus:border-white">
+                <div class="flex justify-end gap-2 pt-2">
+                    <button type="button" onclick="closeXModal()" class="px-4 py-2 bg-slate-800 rounded-xl text-xs">إلغاء</button>
+                    <button type="submit" class="px-4 py-2 bg-white text-black font-bold rounded-xl text-xs">متابعة</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const DEFAULT_SOURCES = [
+            { name: 'The Onion', url: 'https://www.theonion.com/rss', category: 'أخبار وسياق عام' },
+            { name: 'r/WallStreetBets', url: 'https://www.reddit.com/r/wallstreetbets/.rss', category: 'أسواق واقتصاد' },
+            { name: 'r/Technology', url: 'https://www.reddit.com/r/technology/.rss', category: 'تقنية وتكنولوجيا' }
+        ];
+
+        let sources = JSON.parse(localStorage.getItem('rss_sources_app')) || DEFAULT_SOURCES;
+        let readArticleObjects = JSON.parse(localStorage.getItem('read_articles_list_v2')) || [];
+        let favoriteArticles = JSON.parse(localStorage.getItem('favorite_articles_list')) || [];
+        
+        let currentFeedMode = 'unread';
+        let activeTimers = {};
+        let observer = null;
+
+        function saveSources() { localStorage.setItem('rss_sources_app', JSON.stringify(sources)); }
+
+        function openSidebar() {
+            renderSidebarCategories();
+            document.getElementById('sidebar').classList.remove('translate-x-full');
+            document.getElementById('sidebar-overlay').classList.remove('hidden');
+        }
+
+        function closeSidebar() {
+            document.getElementById('sidebar').classList.add('translate-x-full');
+            document.getElementById('sidebar-overlay').classList.add('hidden');
+        }
+
+        function renderSidebarCategories() {
+            const container = document.getElementById('sidebar-categories');
+            container.innerHTML = '';
+
+            const grouped = {};
+            sources.forEach(s => {
+                const cat = s.category || 'عام';
+                if (!grouped[cat]) grouped[cat] = [];
+                grouped[cat].push(s);
+            });
+
+            for (const [cat, items] of Object.entries(grouped)) {
+                const catBox = document.createElement('div');
+                catBox.className = 'bg-slate-800/60 rounded-xl p-3 border border-slate-700/50 space-y-2';
+                
+                let itemsList = items.map(item => `
+                    <button onclick="loadSingleSourceFeed('${item.name.replace(/'/g, "\\'")}', '${item.url}')" class="w-full text-right text-xs text-gray-300 hover:text-white py-1 px-2 rounded-lg hover:bg-slate-700/50 flex items-center justify-between">
+                        <span class="truncate">${item.name}</span>
+                        <i class="fa-solid fa-chevron-left text-[10px] text-gray-500"></i>
+                    </button>
+                `).join('');
+
+                catBox.innerHTML = `
+                    <button onclick="loadCategoryFeed('${cat.replace(/'/g, "\\'")}')" class="w-full text-right font-bold text-xs text-[#FF4500] flex items-center justify-between pb-1 border-b border-slate-700/40">
+                        <span><i class="fa-solid fa-folder text-amber-500 ml-1"></i> ${cat}</span>
+                        <span class="text-[10px] bg-slate-700 px-2 py-0.5 rounded-full text-gray-300">عرض الكل</span>
+                    </button>
+                    <div class="space-y-0.5 pt-1">${itemsList}</div>
+                `;
+                container.appendChild(catBox);
+            }
+        }
+
+        function purgeExpiredReadArticles() {
+            const TWENTY_FOUR_HOURS = 24 * 60 * 60 * 1000;
+            const now = Date.now();
+            readArticleObjects = readArticleObjects.filter(item => (now - item.timestamp) < TWENTY_FOUR_HOURS);
+            localStorage.setItem('read_articles_list_v2', JSON.stringify(readArticleObjects));
+        }
+
+        /* حساب الوقت المنقضي وتصنيف الـ 24 ساعة */
+        function isWithinLast24Hours(pubDateStr) {
+            if (!pubDateStr) return true;
+            const pubDate = new Date(pubDateStr).getTime();
+            if (isNaN(pubDate)) return true;
+            const now = Date.now();
+            return (now - pubDate) <= (24 * 60 * 60 * 1000);
+        }
+
+        function getTimeAgoFormatted(pubDateStr) {
+            if (!pubDateStr) return { formattedDate: 'تاريخ غير معروف', timeAgo: '' };
+            const date = new Date(pubDateStr);
+            if (isNaN(date.getTime())) return { formattedDate: 'تاريخ غير معروف', timeAgo: '' };
+
+            const now = new Date();
+            const diffMs = now - date;
+            const diffSec = Math.floor(diffMs / 1000);
+            const diffMin = Math.floor(diffSec / 60);
+            const diffHours = Math.floor(diffMin / 60);
+
+            let timeAgo = '';
+            if (diffMin < 1) {
+                timeAgo = 'منذ لحظات';
+            } else if (diffMin < 60) {
+                timeAgo = `منذ ${diffMin} دقيقة`;
+            } else {
+                timeAgo = `منذ ${diffHours} ساعة`;
+            }
+
+            const formattedDate = date.toLocaleDateString('ar-EG', {
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+            return { formattedDate, timeAgo };
+        }
+
+        /* جلب العناصر من رابط الـ RSS بحد أقصى مرتفع (50 عنصر للحصول على الـ 24 ساعة كلياً) */
+        async function fetchRssItems(url) {
+            try {
+                const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(url)}&count=50`);
+                const data = await res.json();
+                return data.status === 'ok' ? data.items : [];
+            } catch (e) {
+                return [];
+            }
+        }
+
+        /* استخراج عناصر الوسائط (الصور والفيديوهات) من تفاصيل الخبر */
+        function extractMedia(item) {
+            let htmlContent = (item.content || item.description || '');
+            let mediaHTML = '';
+
+            if (item.enclosure && item.enclosure.type && item.enclosure.type.includes('video')) {
+                mediaHTML += `<video controls class="w-full max-h-60 rounded-xl my-2 object-cover bg-black" src="${item.enclosure.link}"></video>`;
+            } else {
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = htmlContent;
+                
+                const iframe = tempDiv.querySelector('iframe');
+                if (iframe && iframe.src) {
+                    mediaHTML += `<div class="relative w-full aspect-video rounded-xl overflow-hidden my-2"><iframe src="${iframe.src}" class="absolute inset-0 w-full h-full border-0" allowfullscreen></iframe></div>`;
+                } else {
+                    const videoTag = tempDiv.querySelector('video');
+                    if (videoTag) {
+                        mediaHTML += `<video controls class="w-full max-h-60 rounded-xl my-2 object-cover bg-black" src="${videoTag.src || videoTag.querySelector('source')?.src}"></video>`;
+                    }
+                }
+            }
+
+            let imgSrc = '';
+            if (item.thumbnail) {
+                imgSrc = item.thumbnail;
+            } else if (item.enclosure && item.enclosure.link && (item.enclosure.type?.includes('image') || item.enclosure.link.match(/\.(jpeg|jpg|gif|png|webp)/i))) {
+                imgSrc = item.enclosure.link;
+            } else {
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = htmlContent;
+                const imgTag = tempDiv.querySelector('img');
+                if (imgTag && imgTag.src) {
+                    imgSrc = imgTag.src;
+                }
+            }
+
+            if (imgSrc && !mediaHTML.includes('<video') && !mediaHTML.includes('<iframe')) {
+                mediaHTML += `<div class="relative w-full max-h-56 overflow-hidden rounded-xl my-2 bg-slate-800"><img src="${imgSrc}" loading="lazy" class="w-full h-full object-cover rounded-xl hover:scale-105 transition duration-300" onerror="this.parentElement.remove()" /></div>`;
+            }
+
+            return mediaHTML;
+        }
+
+        async function translateText(text) {
+            if (!text) return '';
+            try {
+                const res = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ar&dt=t&q=${encodeURIComponent(text.substring(0, 500))}`);
+                const data = await res.json();
+                return data[0].map(x => x[0]).join('');
+            } catch (e) { return text; }
+        }
+
+        /* دالة التلخيص وتوليد النص المختصر للخبر داخل الصفحة */
+        async function summarizeNews(index, rawContent, rawTitle) {
+            const container = document.getElementById(`summary-container-${index}`);
+            const btn = document.getElementById(`summary-btn-${index}`);
+
+            if (!container) return;
+
+            if (!container.classList.contains('hidden') && container.dataset.loaded === 'true') {
+                container.classList.add('hidden');
+                btn.innerHTML = `<i class="fa-solid fa-wand-magic-sparkles"></i> تلخيص`;
+                return;
+            }
+
+            container.classList.remove('hidden');
+            container.innerHTML = `<span class="text-amber-400 flex items-center gap-1 text-xs py-1"><i class="fa-solid fa-circle-notch fa-spin"></i> جاري استخراج وتلخيص الخبر...</span>`;
+            
+            const tmp = document.createElement("DIV");
+            tmp.innerHTML = rawContent || rawTitle;
+            let cleanText = tmp.textContent || tmp.innerText || "";
+            cleanText = cleanText.trim();
+
+            if (!cleanText || cleanText.length < 20) {
+                cleanText = rawTitle;
+            }
+
+            const truncatedText = cleanText.substring(0, 300);
+            const translatedSummary = await translateText(truncatedText);
+
+            container.innerHTML = `
+                <div class="bg-slate-800/80 p-2.5 rounded-xl border border-slate-700/60 text-xs leading-relaxed text-gray-200 mt-2 space-y-1">
+                    <div class="font-bold text-[#FF4500] text-[11px] flex items-center gap-1">
+                        <i class="fa-solid fa-compress"></i> ملخص الخبر:
+                    </div>
+                    <p>${translatedSummary}</p>
+                </div>
+            `;
+            container.dataset.loaded = 'true';
+            btn.innerHTML = `<i class="fa-solid fa-eye-slash"></i> إخفاء الملخص`;
+        }
+
+        async function loadAllUnreadFeed() {
+            currentFeedMode = 'unread';
+            document.getElementById('current-feed-title').innerText = 'المنشورات غير المقروءة (آخر 24 ساعة)';
+            const grid = document.getElementById('articles-grid');
+            grid.innerHTML = `<div class="text-center py-12 text-gray-500"><i class="fa-solid fa-spinner fa-spin text-2xl mb-2 text-[#FF4500]"></i><p class="text-xs">جاري تحديث الأخبار...</p></div>`;
+
+            purgeExpiredReadArticles();
+            let allArticles = [];
+            const readLinks = readArticleObjects.map(o => o.link);
+
+            try {
+                for (let source of sources) {
+                    const items = await fetchRssItems(source.url);
+                    allArticles = allArticles.concat(items.map(item => ({ ...item, sourceName: source.name })));
+                }
+
+                // ترتيب الأخبار من الأحدث للأقدم
+                allArticles.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+
+                const unreadItems = allArticles
+                    .filter(item => isWithinLast24Hours(item.pubDate))
+                    .filter(item => !readLinks.includes(item.link));
+                    
+                renderArticles(unreadItems, true);
+                document.getElementById('header-unread-count-badge').innerText = unreadItems.length;
+            } catch (err) {
+                grid.innerHTML = `<div class="text-center py-8 text-red-400 text-xs">تعذر تحميل الأخبار.</div>`;
+            }
+        }
+
+        async function loadViewedFeed() {
+            currentFeedMode = 'viewed';
+            document.getElementById('current-feed-title').innerText = 'تمت المشاهدة (آخر 24 ساعة)';
+            const grid = document.getElementById('articles-grid');
+            grid.innerHTML = `<div class="text-center py-12 text-gray-500"><i class="fa-solid fa-spinner fa-spin text-2xl mb-2 text-indigo-400"></i><p class="text-xs">جاري جلب المشاهدات...</p></div>`;
+
+            purgeExpiredReadArticles();
+            const activeViewedLinks = readArticleObjects.map(o => o.link);
+
+            if (activeViewedLinks.length === 0) {
+                grid.innerHTML = `<div class="text-center py-12 text-gray-500 text-xs">لا توجد خلاصات تمت مشاهدتها في الـ 24 ساعة الماضية.</div>`;
+                return;
+            }
+
+            let viewedArticles = [];
+            try {
+                for (let source of sources) {
+                    const items = await fetchRssItems(source.url);
+                    viewedArticles = viewedArticles.concat(items.filter(item => activeViewedLinks.includes(item.link)).map(item => ({ ...item, sourceName: source.name })));
+                }
+                const uniqueViewed = Array.from(new Set(viewedArticles.map(a => a.link))).map(link => viewedArticles.find(a => a.link === link));
+                uniqueViewed.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+
+                renderArticles(uniqueViewed.filter(item => isWithinLast24Hours(item.pubDate)), false);
+            } catch (err) {
+                grid.innerHTML = `<div class="text-center py-8 text-red-400 text-xs">حدث خطأ أثناء تحميل السجل.</div>`;
+            }
+        }
+
+        async function loadCategoryFeed(catName) {
+            closeSidebar();
+            currentFeedMode = 'category';
+            document.getElementById('current-feed-title').innerText = `مجموعة: ${catName} (آخر 24 ساعة)`;
+            const grid = document.getElementById('articles-grid');
+            grid.innerHTML = `<div class="text-center py-12 text-gray-500"><i class="fa-solid fa-spinner fa-spin text-2xl mb-2 text-[#FF4500]"></i><p class="text-xs">جاري الجلب...</p></div>`;
+
+            const catSources = sources.filter(s => (s.category || 'عام') === catName);
+            let catArticles = [];
+            purgeExpiredReadArticles();
+            const readLinks = readArticleObjects.map(o => o.link);
+
+            try {
+                for (let source of catSources) {
+                    const items = await fetchRssItems(source.url);
+                    catArticles = catArticles.concat(items.map(item => ({ ...item, sourceName: source.name })));
+                }
+
+                catArticles.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+
+                const filtered = catArticles
+                    .filter(item => isWithinLast24Hours(item.pubDate))
+                    .filter(item => !readLinks.includes(item.link));
+
+                renderArticles(filtered, true);
+            } catch (err) { grid.innerHTML = `<div class="text-center py-8 text-red-400 text-xs">تعذر جلب الأخبار.</div>`; }
+        }
+
+        async function loadSingleSourceFeed(sourceName, url) {
+            closeSidebar();
+            currentFeedMode = 'source';
+            document.getElementById('current-feed-title').innerText = sourceName;
+            const grid = document.getElementById('articles-grid');
+            grid.innerHTML = `<div class="text-center py-12 text-gray-500"><i class="fa-solid fa-spinner fa-spin text-2xl mb-2 text-[#FF4500]"></i><p class="text-xs">جاري التحميل...</p></div>`;
+
+            purgeExpiredReadArticles();
+            const readLinks = readArticleObjects.map(o => o.link);
+
+            try {
+                const items = await fetchRssItems(url);
+                items.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+
+                const unread = items
+                    .filter(item => isWithinLast24Hours(item.pubDate))
+                    .filter(item => !readLinks.includes(item.link))
+                    .map(item => ({ ...item, sourceName }));
+                renderArticles(unread, true);
+            } catch (err) { grid.innerHTML = `<div class="text-center py-8 text-red-400 text-xs">حدث خطأ بالتحميل.</div>`; }
+        }
+
+        function loadFavoritesFeed() {
+            currentFeedMode = 'favorites';
+            document.getElementById('current-feed-title').innerText = 'المنشورات المفضلة';
+            const grid = document.getElementById('articles-grid');
+
+            if (favoriteArticles.length === 0) {
+                grid.innerHTML = `<div class="text-center py-12 text-gray-500 text-xs">لا توجد عناصر بالمفضلة.</div>`;
+                return;
+            }
+
+            renderArticles(favoriteArticles, false);
+        }
+
+        /* عرض الخلاصات */
+        async function renderArticles(articles, enableTimer = true) {
+            const grid = document.getElementById('articles-grid');
+            grid.innerHTML = '';
+            
+            Object.values(activeTimers).forEach(t => clearInterval(t.interval));
+            activeTimers = {};
+            if (observer) observer.disconnect();
+
+            if (articles.length === 0) {
+                grid.innerHTML = `<div class="text-center py-12 text-gray-500 text-xs">لا توجد خلاصات لعرضها خلال الـ 24 ساعة الماضية.</div>`;
+                return;
+            }
+
+            if (enableTimer && currentFeedMode !== 'viewed' && currentFeedMode !== 'favorites') {
+                observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const cardId = entry.target.id;
+                            const link = entry.target.dataset.link;
+                            const index = entry.target.dataset.index;
+                            
+                            if (!activeTimers[cardId]) {
+                                startIndividualTimer(index, link, cardId);
+                            }
+                        }
+                    });
+                }, { threshold: 0.4 });
+            }
+
+            // إظهار ما يصل إلى 100 خبر مغطاة خلال اليوم
+            for (let [index, item] of articles.slice(0, 100).entries()) {
+                const transTitle = await translateText(item.title);
+                const isFav = favoriteArticles.some(f => f.link === item.link);
+                const isEven = index % 2 === 0;
+                const cardId = `article-card-${index}`;
+
+                const { formattedDate, timeAgo } = getTimeAgoFormatted(item.pubDate);
+                const mediaHTML = extractMedia(item);
+
+                const card = document.createElement('article');
+                card.id = cardId;
+                card.dataset.link = item.link;
+                card.dataset.index = index;
+                card.className = `${isEven ? 'bg-black text-white border-slate-900' : 'bg-slate-900 text-gray-100 border-slate-800'} p-4 rounded-2xl border space-y-2 shadow-sm transition-all duration-300 relative`;
+
+                const contentData = (item.description || item.content || '').replace(/"/g, '&quot;');
+                const safeTitleData = transTitle.replace(/"/g, '&quot;');
+
+                card.innerHTML = `
+                    <div class="flex items-center justify-between text-[10px] text-gray-400">
+                        <span class="text-[#FF4500] font-bold"><i class="fa-brands fa-reddit-alien"></i> ${item.sourceName || 'مصدر'}</span>
+                        <div class="flex items-center gap-2">
+                            <span id="badge-status-${index}" class="text-[9px] bg-slate-800 text-gray-400 border border-slate-700 px-2 py-0.5 rounded-full font-semibold">
+                                جديد
+                            </span>
+                            <button onclick="toggleFavorite('${item.link}', '${transTitle.replace(/'/g, "\\'")}', this)" class="${isFav ? 'text-amber-400' : 'text-gray-500'}">
+                                <i class="fa-solid fa-star"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-sm leading-snug">${transTitle}</h3>
+
+                    <!-- عرض الصور أو الفيديو إن وجدت -->
+                    ${mediaHTML}
+
+                    <!-- إدراج التاريخ والوقت المنقضي -->
+                    <div class="flex items-center gap-2 text-[10px] text-gray-400 pt-0.5">
+                        <span><i class="fa-regular fa-clock"></i> ${timeAgo}</span>
+                        <span>•</span>
+                        <span>${formattedDate}</span>
+                    </div>
+
+                    <!-- مكان عرض التلخيص -->
+                    <div id="summary-container-${index}" class="hidden"></div>
+
+                    <div class="flex items-center justify-between pt-2 text-[11px] border-t border-slate-800/60 mt-2">
+                        <button id="summary-btn-${index}" onclick="summarizeNews(${index}, &quot;${contentData}&quot;, &quot;${safeTitleData}&quot;)" class="text-amber-400 font-bold bg-amber-400/10 hover:bg-amber-400/20 px-2.5 py-1 rounded-lg transition active:scale-95 flex items-center gap-1.5">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> تلخيص
+                        </button>
+
+                        <a href="${item.link}" target="_blank" onclick="markAsReadImmediately('${item.link}', '${cardId}')" class="text-[#FF4500] font-bold flex items-center gap-1">
+                            قراءة الخبر <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                        </a>
+                    </div>
+                `;
+                grid.appendChild(card);
+
+                if (observer) {
+                    observer.observe(card);
+                }
+            }
+        }
+
+        function formatTime(seconds) {
+            const m = Math.floor(seconds / 60);
+            const s = seconds % 60;
+            return `${m}:${s < 10 ? '0' : ''}${s}`;
+        }
+
+        function startIndividualTimer(index, link, cardId) {
+            let secondsLeft = 300;
+            const badge = document.getElementById(`badge-status-${index}`);
+
+            if (badge) {
+                badge.className = "text-[9px] bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full font-semibold";
+                badge.innerText = `مشاهدة (${formatTime(secondsLeft)})`;
+            }
+
+            const intervalId = setInterval(() => {
+                secondsLeft--;
+                if (badge && secondsLeft > 0) {
+                    badge.innerText = `مشاهدة (${formatTime(secondsLeft)})`;
+                }
+                if (secondsLeft <= 0) {
+                    clearInterval(intervalId);
+                    markAsReadAndHide(link, cardId, badge);
+                }
+            }, 1000);
+
+            activeTimers[cardId] = { interval: intervalId };
+        }
+
+        function markAsReadAndHide(link, cardId, badgeEl) {
+            if (!readArticleObjects.some(o => o.link === link)) {
+                readArticleObjects.push({ link, timestamp: Date.now() });
+                localStorage.setItem('read_articles_list_v2', JSON.stringify(readArticleObjects));
+            }
+
+            if (badgeEl) {
+                badgeEl.className = "text-[9px] bg-indigo-500/20 text-indigo-400 border border-indigo-500/30 px-2 py-0.5 rounded-full font-semibold";
+                badgeEl.innerText = "تمت القراءة";
+            }
+
+            if (currentFeedMode === 'unread' || currentFeedMode === 'category' || currentFeedMode === 'source') {
+                const card = document.getElementById(cardId);
+                if (card) {
+                    card.classList.add('fade-out-card');
+                    setTimeout(() => {
+                        card.remove();
+                        const badgeHeader = document.getElementById('header-unread-count-badge');
+                        let currentCount = parseInt(badgeHeader.innerText) || 0;
+                        if (currentCount > 0) badgeHeader.innerText = currentCount - 1;
+                    }, 500);
+                }
+            }
+        }
+
+        function markAsReadImmediately(link, cardId) {
+            if (activeTimers[cardId]) {
+                clearInterval(activeTimers[cardId].interval);
+            }
+            markAsReadAndHide(link, cardId, null);
+        }
+
+        function toggleFavorite(link, title, btn) {
+            const idx = favoriteArticles.findIndex(a => a.link === link);
+            if (idx > -1) {
+                favoriteArticles.splice(idx, 1);
+                btn.className = "text-gray-500";
+            } else {
+                favoriteArticles.push({ link, title });
+                btn.className = "text-amber-400";
+            }
+            localStorage.setItem('favorite_articles_list', JSON.stringify(favoriteArticles));
+        }
+
+        function addSource(e) {
+            e.preventDefault();
+            let name = document.getElementById('source-name').value.trim() || 'مصدر جديد';
+            const url = document.getElementById('source-url').value.trim();
+            let category = document.getElementById('source-category').value.trim() || 'عام';
+
+            sources.push({ name, url, category });
+            saveSources();
+            closeModal();
+            loadAllUnreadFeed();
+            e.target.reset();
+        }
+
+        function addXAccount(e) {
+            e.preventDefault();
+            let username = document.getElementById('x-username').value.trim().replace('@', '');
+            if (!username) return;
+
+            sources.push({ name: `@${username}`, url: `https://nitter.net/${username}/rss`, category: 'حسابات X (تويتر)' });
+            saveSources();
+            closeXModal();
+            loadAllUnreadFeed();
+            e.target.reset();
+        }
+
+        function openModal() { document.getElementById('add-modal').classList.remove('hidden'); document.getElementById('add-modal').classList.add('flex'); }
+        function closeModal() { document.getElementById('add-modal').classList.hidden = true; document.getElementById('add-modal').classList.remove('flex'); }
+        function openXModal() { document.getElementById('add-x-modal').classList.remove('hidden'); document.getElementById('add-x-modal').classList.add('flex'); }
+        function closeXModal() { document.getElementById('add-x-modal').classList.add('hidden'); document.getElementById('add-x-modal').classList.remove('flex'); }
+        function toggleLiveWidget() { document.getElementById('live-widget').classList.toggle('hidden'); }
+
+        function initLiveStream() {
+            const video = document.getElementById('live-stream-player');
+            const streamUrl = 'https://live.alarabiya.net/alarabiya/live/playlist.m3u8';
+            if (Hls.isSupported()) {
+                const hls = new Hls();
+                hls.loadSource(streamUrl);
+                hls.attachMedia(video);
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = streamUrl;
+            }
+        }
+
+        window.onload = function() {
+            loadAllUnreadFeed();
+            initLiveStream();
+        };
+    </script>
+</body>
+</html>
