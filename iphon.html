@@ -257,7 +257,7 @@
 
         /* حساب الوقت المنقضي وتصنيف الـ 24 ساعة */
         function isWithinLast24Hours(pubDateStr) {
-            if (!pubDateStr) return true; // في حال عدم وجود تاريخ يتم إبرازها
+            if (!pubDateStr) return true;
             const pubDate = new Date(pubDateStr).getTime();
             if (isNaN(pubDate)) return true;
             const now = Date.now();
@@ -294,6 +294,52 @@
             return { formattedDate, timeAgo };
         }
 
+        /* استخراج عناصر الوسائط (الصور والفيديوهات) من تفاصيل الخبر */
+        function extractMedia(item) {
+            let htmlContent = (item.content || item.description || '');
+            let mediaHTML = '';
+
+            // 1. البحث عن مقاطع الفيديو أولاً
+            if (item.enclosure && item.enclosure.type && item.enclosure.type.includes('video')) {
+                mediaHTML += `<video controls class="w-full max-h-60 rounded-xl my-2 object-cover bg-black" src="${item.enclosure.link}"></video>`;
+            } else {
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = htmlContent;
+                
+                // البحث عن عناصر iframe الخاصة بالـ Video كـ Youtube أو غيره
+                const iframe = tempDiv.querySelector('iframe');
+                if (iframe && iframe.src) {
+                    mediaHTML += `<div class="relative w-full aspect-video rounded-xl overflow-hidden my-2"><iframe src="${iframe.src}" class="absolute inset-0 w-full h-full border-0" allowfullscreen></iframe></div>`;
+                } else {
+                    const videoTag = tempDiv.querySelector('video');
+                    if (videoTag) {
+                        mediaHTML += `<video controls class="w-full max-h-60 rounded-xl my-2 object-cover bg-black" src="${videoTag.src || videoTag.querySelector('source')?.src}"></video>`;
+                    }
+                }
+            }
+
+            // 2. البحث عن الصور
+            let imgSrc = '';
+            if (item.thumbnail) {
+                imgSrc = item.thumbnail;
+            } else if (item.enclosure && item.enclosure.link && (item.enclosure.type?.includes('image') || item.enclosure.link.match(/\.(jpeg|jpg|gif|png|webp)/i))) {
+                imgSrc = item.enclosure.link;
+            } else {
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = htmlContent;
+                const imgTag = tempDiv.querySelector('img');
+                if (imgTag && imgTag.src) {
+                    imgSrc = imgTag.src;
+                }
+            }
+
+            if (imgSrc && !mediaHTML.includes('<video') && !mediaHTML.includes('<iframe')) {
+                mediaHTML += `<div class="relative w-full max-h-56 overflow-hidden rounded-xl my-2 bg-slate-800"><img src="${imgSrc}" loading="lazy" class="w-full h-full object-cover rounded-xl hover:scale-105 transition duration-300" onerror="this.parentElement.remove()" /></div>`;
+            }
+
+            return mediaHTML;
+        }
+
         async function translateText(text) {
             if (!text) return '';
             try {
@@ -310,17 +356,15 @@
 
             if (!container) return;
 
-            // إذا كان التلخيص ظاهرًا يتم إخفاؤه
             if (!container.classList.contains('hidden') && container.dataset.loaded === 'true') {
                 container.classList.add('hidden');
-                btn.innerHTML = `<i class="fa-solid fa-[#FF4500] fa-wand-magic-sparkles"></i> تلخيص`;
+                btn.innerHTML = `<i class="fa-solid fa-wand-magic-sparkles"></i> تلخيص`;
                 return;
             }
 
             container.classList.remove('hidden');
-            container.innerHTML = `<span class="text-amber-400 flex items-center gap-1"><i class="fa-solid fa-circle-notch fa-spin"></i> جاري استخراج وتلخيص الخبر...</span>`;
+            container.innerHTML = `<span class="text-amber-400 flex items-center gap-1 text-xs py-1"><i class="fa-solid fa-circle-notch fa-spin"></i> جاري استخراج وتلخيص الخبر...</span>`;
             
-            // تنظيف النص من عناصر HTML
             const tmp = document.createElement("DIV");
             tmp.innerHTML = rawContent || rawTitle;
             let cleanText = tmp.textContent || tmp.innerText || "";
@@ -330,7 +374,6 @@
                 cleanText = rawTitle;
             }
 
-            // اقتطاع النص وتلخيصه وترجمته
             const truncatedText = cleanText.substring(0, 300);
             const translatedSummary = await translateText(truncatedText);
 
@@ -364,7 +407,6 @@
                         allArticles = allArticles.concat(data.items.map(item => ({ ...item, sourceName: source.name })));
                     }
                 }
-                // تصفية المنشورات للـ 24 ساعة الأخيرة فقط وغير المقروءة
                 const unreadItems = allArticles
                     .filter(item => isWithinLast24Hours(item.pubDate))
                     .filter(item => !readLinks.includes(item.link));
@@ -475,7 +517,6 @@
             const grid = document.getElementById('articles-grid');
             grid.innerHTML = '';
             
-            // إعادة ضبط المؤقتات السابقة والمراقب
             Object.values(activeTimers).forEach(t => clearInterval(t.interval));
             activeTimers = {};
             if (observer) observer.disconnect();
@@ -485,7 +526,6 @@
                 return;
             }
 
-            // إعداد مراقب الرؤية الشاشية (Intersection Observer)
             if (enableTimer && currentFeedMode !== 'viewed' && currentFeedMode !== 'favorites') {
                 observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
@@ -494,7 +534,6 @@
                             const link = entry.target.dataset.link;
                             const index = entry.target.dataset.index;
                             
-                            // بدء العداد الخاص بهذا الخبر فور ظهوره على الشاشة
                             if (!activeTimers[cardId]) {
                                 startIndividualTimer(index, link, cardId);
                             }
@@ -510,6 +549,7 @@
                 const cardId = `article-card-${index}`;
 
                 const { formattedDate, timeAgo } = getTimeAgoFormatted(item.pubDate);
+                const mediaHTML = extractMedia(item);
 
                 const card = document.createElement('article');
                 card.id = cardId;
@@ -517,7 +557,6 @@
                 card.dataset.index = index;
                 card.className = `${isEven ? 'bg-black text-white border-slate-900' : 'bg-slate-900 text-gray-100 border-slate-800'} p-4 rounded-2xl border space-y-2 shadow-sm transition-all duration-300 relative`;
 
-                // تجهيز المحتوى الخاص بالخبر لاستخدامه في التلخيص
                 const contentData = (item.description || item.content || '').replace(/"/g, '&quot;');
                 const safeTitleData = transTitle.replace(/"/g, '&quot;');
 
@@ -536,6 +575,9 @@
 
                     <h3 class="font-bold text-sm leading-snug">${transTitle}</h3>
 
+                    <!-- عرض الصور أو الفيديو إن وجدت -->
+                    ${mediaHTML}
+
                     <!-- إدراج التاريخ والوقت المنقضي -->
                     <div class="flex items-center gap-2 text-[10px] text-gray-400 pt-0.5">
                         <span><i class="fa-regular fa-clock"></i> ${timeAgo}</span>
@@ -547,7 +589,6 @@
                     <div id="summary-container-${index}" class="hidden"></div>
 
                     <div class="flex items-center justify-between pt-2 text-[11px] border-t border-slate-800/60 mt-2">
-                        <!-- زر تلخيص الخبر دون الانتقال -->
                         <button id="summary-btn-${index}" onclick="summarizeNews(${index}, &quot;${contentData}&quot;, &quot;${safeTitleData}&quot;)" class="text-amber-400 font-bold bg-amber-400/10 hover:bg-amber-400/20 px-2.5 py-1 rounded-lg transition active:scale-95 flex items-center gap-1.5">
                             <i class="fa-solid fa-wand-magic-sparkles"></i> تلخيص
                         </button>
@@ -559,23 +600,20 @@
                 `;
                 grid.appendChild(card);
 
-                // ربط البطاقة بالمراقب
                 if (observer) {
                     observer.observe(card);
                 }
             }
         }
 
-        /* تنسيق ثواني العد التنازلي بصيغة دقائق:ثواني (مثال 4:59) */
         function formatTime(seconds) {
             const m = Math.floor(seconds / 60);
             const s = seconds % 60;
             return `${m}:${s < 10 ? '0' : ''}${s}`;
         }
 
-        /* بدء العداد المنفصل (5 دقائق = 300 ثانية) عند رؤية الخبر */
         function startIndividualTimer(index, link, cardId) {
-            let secondsLeft = 300; // 5 دقائق
+            let secondsLeft = 300;
             const badge = document.getElementById(`badge-status-${index}`);
 
             if (badge) {
