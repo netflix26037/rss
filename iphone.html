@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDDIT بالعربي</title>
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: #0f1419;
+            color: #e7e9ea;
+            padding: 15px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #2f3336;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            color: #ff4500;
+            font-size: 1.8rem;
+        }
+
+        /* تنسيق عناصر الخلاصة */
+        .feed-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .feed-item {
+            background-color: #16181c;
+            border: 1px solid #2f3336;
+            border-radius: 12px;
+            padding: 15px;
+            transition: background 0.2s ease;
+        }
+
+        .feed-item:hover {
+            background-color: #1c1f23;
+        }
+
+        .feed-item a {
+            text-decoration: none;
+            color: #e7e9ea;
+        }
+
+        .feed-item h3 {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            margin-bottom: 10px;
+            color: #f7f9f9;
+        }
+
+        .feed-item h3:hover {
+            color: #1d9bf0;
+        }
+
+        .feed-item p {
+            color: #71767b;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        /* تنسيق الصور والفيديوهات داخل الخلاصة */
+        .feed-media {
+            margin-top: 10px;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .feed-media img, 
+        .feed-media video, 
+        .feed-media iframe {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>REDDIT بالعربي</h1>
+        </header>
+
+        <!-- حاوية عرض الخلاصات -->
+        <main id="feed-container" class="feed-container">
+            <!-- يتم تحميل الخلاصات هنا تلقائياً بواسطة JavaScript -->
+        </main>
+    </div>
+
+    <script>
+        // دالة استخراج الصور والوسائط من الخلاصة
+        function extractMedia(item) {
+            let mediaUrl = null;
+
+            // 1. فحص وسوم الوسائط المباشرة في XML (Enclosures & Media RSS)
+            if (item.enclosure && item.enclosure.link && item.enclosure.type && item.enclosure.type.startsWith('image')) {
+                mediaUrl = item.enclosure.link;
+            } else if (item.thumbnail) {
+                mediaUrl = item.thumbnail;
+            }
+
+            // 2. البحث داخل نص HTML عن أول صورة إذا لم تتوافر الوسوم أعلاه
+            if (!mediaUrl) {
+                const rawContent = item.content || item.description || '';
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = rawContent;
+                const img = tempDiv.querySelector('img');
+                if (img && img.src) {
+                    mediaUrl = img.src;
+                }
+            }
+
+            return mediaUrl;
+        }
+
+        // دالة عرض عنصر الخلاصة
+        function renderFeedItem(item) {
+            const itemCard = document.createElement('article');
+            itemCard.className = 'feed-item';
+
+            const rawContent = item.content || item.description || '';
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = rawContent;
+            
+            // استخراج النص الصافي بدون أوسمة HTML
+            const cleanText = tempDiv.textContent || tempDiv.innerText || '';
+            const mediaUrl = extractMedia(item);
+
+            itemCard.innerHTML = `
+                <a href="${item.link}" target="_blank" rel="noopener noreferrer">
+                    <h3>${item.title}</h3>
+                </a>
+                <p>${cleanText.substring(0, 160)}${cleanText.length > 160 ? '...' : ''}</p>
+                ${mediaUrl ? `<div class="feed-media"><img src="${mediaUrl}" alt="صورة الخبر" loading="lazy"></div>` : ''}
+            `;
+
+            return itemCard;
+        }
+
+        // مثال لجلب البيانات (ضع رابط API أو RSS الخاص بك هنا)
+        async function fetchFeeds() {
+            const container = document.getElementById('feed-container');
+            
+            /* 
+               ملاحظة: عند استخدام rss2json API لجلب خلاصة RSS:
+               const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=YOUR_RSS_URL');
+               const data = await response.json();
+               data.items.forEach(item => container.appendChild(renderFeedItem(item)));
+            */
+        }
+
+        // تشغيل الجلب عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', fetchFeeds);
+    </script>
+</body>
+</html>
