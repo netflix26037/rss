@@ -96,8 +96,8 @@ function extractMediaFromXml(xmlStr, descStr) {
 
 async function run() {
     try {
-        console.log('قراءة ملف feeds.json...');
-        const rawFeeds = fs.readFileSync('./feeds.json', 'utf8');
+        console.log('قراءة ملف feed.json...');
+        const rawFeeds = fs.readFileSync('./feed.json', 'utf8');
         const sources = JSON.parse(rawFeeds);
 
         let allArticles = [];
