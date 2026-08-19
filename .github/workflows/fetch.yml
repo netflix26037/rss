@@ -2,8 +2,8 @@ name: Update RSS Feeds
 
 on:
   schedule:
-    - cron: '0 * * * *' # يعمل كل ساعة
-  workflow_dispatch: # يتيح لك تشغيله يدوياً
+    - cron: '0 * * * *' # يتم التحديث تلقائياً كل ساعة
+  workflow_dispatch: # يتيح لك إمكانية التشغيل اليدوي من تبويب Actions
 
 jobs:
   build:
@@ -18,9 +18,8 @@ jobs:
         with:
           node-version: '18'
 
-      # --- هذه هي الخطوة المفقودة التي يجب إضافتها ---
       - name: Install Dependencies
-        run: npm install rss-parser
+        run: npm install rss-parser axios
 
       - name: Run Fetch Script
         run: node fetch-feeds.js
@@ -30,4 +29,4 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add articles.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update articles.json" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update articles.json [skip ci]" && git push)
