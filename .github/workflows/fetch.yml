@@ -1,17 +1,16 @@
-name: Auto Fetch RSS Feeds
+name: Update RSS Feeds
 
 on:
   schedule:
-    # يعمل تلقائياً كل ساعة (0 * * * *)
-    - cron: '0 * * * *'
-  workflow_dispatch: # يتيح لك تشغيله يدوياً من GitHub في أي وقت
+    - cron: '0 * * * *' # يعمل كل ساعة
+  workflow_dispatch: # يتيح لك تشغيله يدوياً
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
       - name: Setup Node.js
@@ -19,13 +18,16 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Fetch Latest Feeds
+      # --- هذه هي الخطوة المفقودة التي يجب إضافتها ---
+      - name: Install Dependencies
+        run: npm install rss-parser
+
+      - name: Run Fetch Script
         run: node fetch-feeds.js
 
-      - name: Commit and Push Updated Articles
+      - name: Commit and Push Changes
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add articles.json
-          git commit -m "Auto-update articles.json [skip ci]" || exit 0
-          git push
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update articles.json" && git push)
