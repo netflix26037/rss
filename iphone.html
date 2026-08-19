@@ -82,14 +82,14 @@
         <div class="bg-gray-800 rounded-2xl w-full max-w-xl max-h-[80vh] flex flex-col p-4 sm:p-5 overflow-hidden border border-gray-700 shadow-2xl mx-4">
             <div class="flex justify-between items-center mb-4 pb-3 border-b border-gray-700">
                 <h2 class="text-base font-bold text-gray-200 flex items-center gap-2">
-                    <i class="fa-solid fa-bars text-[#FF4500]"></i> المصادر والأقسام (feeds.json)
+                    <i class="fa-solid fa-bars text-[#FF4500]"></i> المصادر والأقسام (feed.json)
                 </h2>
                 <button onclick="toggleSidebar()" class="text-gray-400 hover:text-white p-1 text-xl"><i class="fa-solid fa-xmark"></i></button>
             </div>
 
             <div class="overflow-y-auto space-y-4 pr-1" id="drawer-content">
                 <div id="sources-container" class="space-y-3">
-                    <p class="text-xs text-gray-400 text-center py-4">جاري قراءة ملف feeds.json...</p>
+                    <p class="text-xs text-gray-400 text-center py-4">جاري قراءة ملف feed.json...</p>
                 </div>
             </div>
         </div>
@@ -204,7 +204,7 @@
 
         async function fetchFeedsJSON() {
             try {
-                const response = await fetch('./feeds.json?t=' + new Date().getTime());
+                const response = await fetch('./feed.json?t=' + new Date().getTime());
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 const data = await response.json();
                 if (Array.isArray(data) && data.length > 0) {
@@ -234,7 +234,7 @@
             const container = document.getElementById('sources-container');
             container.innerHTML = '';
             if (!sources || sources.length === 0) {
-                container.innerHTML = `<div class="text-center py-6 text-xs text-red-400">لم يتم العثور على مصادر داخل feeds.json</div>`;
+                container.innerHTML = `<div class="text-center py-6 text-xs text-red-400">لم يتم العثور على مصادر داخل feed.json</div>`;
                 return;
             }
 
