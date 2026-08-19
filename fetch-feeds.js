@@ -98,7 +98,8 @@ async function run() {
     try {
         console.log('قراءة ملف feed.json...');
         const rawFeeds = fs.readFileSync('./feed.json', 'utf8');
-        const sources = JSON.parse(rawFeeds);
+        const parsedData = JSON.parse(rawFeeds);
+        const sources = Array.isArray(parsedData) ? parsedData : (parsedData.sources || []);
 
         let allArticles = [];
 
