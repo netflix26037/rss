@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>REDDIT بالعربي - iPhone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #000000; /* نمط داكن مخصص للآيفون */
+            --card-bg: #1c1c1e;
+            --text-color: #ffffff;
+            --border-color: #2c2c2e;
+            --unread-color: #ff453a; /* أحمر نيون متوافق مع iOS */
+            --read-color: #30d158;   /* أخضر نيون متوافق مع iOS */
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 12px;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* شريط علوي مدمج ملائم لشاشات iPhone */
+        .header-bar {
+            position: sticky;
+            top: 0;
+            background: rgba(28, 28, 30, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 12px 16px;
+            border-radius: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            z-index: 1000;
+            border: 1px solid var(--border-color);
+        }
+
+        .header-bar h3 {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .counters-container {
+            display: flex;
+            gap: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .counter-box {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .icon-unread { color: var(--unread-color) !important; }
+        .icon-read { color: var(--read-color) !important; }
+
+        .feeds-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .feed-item {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 16px;
+            border: 1px solid var(--border-color);
+        }
+
+        .feed-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .feed-title {
+            margin: 0 0 8px 0;
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+
+        /* تحسين استعراض الوسائط للآيفون */
+        .feed-media {
+            margin-top: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .feed-media img, 
+        .feed-media video {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .section-title {
+            margin: 20px 0 10px 0;
+            color: #8e8e93;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-bar">
+        <h3>REDDIT بالعربي</h3>
+        <div class="counters-container">
+            <div class="counter-box">
+                <i class="fa-solid fa-circle-dot icon-unread"></i>
+                <span id="unread-count">0</span>
+            </div>
+            <div class="counter-box">
+                <i class="fa-solid fa-circle-check icon-read"></i>
+                <span id="read-count">0</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="feeds-wrapper">
+        <div class="section-title">غير مقروء</div>
+        <div id="unread-container">
+            <article class="feed-item" data-id="mob-post-1">
+                <div class="feed-header">
+                    <span class="feed-status"><i class="fa-solid fa-circle-dot icon-unread"></i></span>
+                </div>
+                <h4 class="feed-title">تحديثات واجهة التطبيق المخصصة</h4>
+                <p style="font-size: 0.95rem; color: #aeaeb2;">تم تحسين سلاسة التصفح للعرض على أجهزة iPhone...</p>
+                <div class="feed-media">
+                    <img src="https://via.placeholder.com/600x350" alt="صورة">
+                </div>
+            </article>
+        </div>
+
+        <div class="section-title">تمت القراءة</div>
+        <div id="read-container"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const unreadCountEl = document.getElementById('unread-count');
+            const readCountEl = document.getElementById('read-count');
+            const unreadContainer = document.getElementById('unread-container');
+            const readContainer = document.getElementById('read-container');
+            const items = document.querySelectorAll('.feed-item');
+
+            let readIds = JSON.parse(localStorage.getItem('readFeedIds_mobile') || '[]');
+
+            // 1. النقل الفعلي بين الأقسام يتم فقط بعد تحديث الصفحة
+            items.forEach(item => {
+                const id = item.getAttribute('data-id');
+                const statusIcon = item.querySelector('.feed-status i');
+
+                if (readIds.includes(id)) {
+                    item.classList.add('is-read');
+                    if (statusIcon) {
+                        statusIcon.className = 'fa-solid fa-circle-check icon-read';
+                    }
+                    readContainer.appendChild(item);
+                } else {
+                    item.classList.add('is-unread');
+                }
+            });
+
+            let unreadCount = document.querySelectorAll('.feed-item.is-unread').length;
+            let readCount = document.querySelectorAll('.feed-item.is-read').length;
+            unreadCountEl.textContent = unreadCount;
+            readCountEl.textContent = readCount;
+
+            // 2. مراقبة التمرير على الآيفون بنسبة ظهور 50%
+            const observerOptions = { root: null, threshold: 0.5 };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const item = entry.target;
+                        const id = item.getAttribute('data-id');
+                        const statusIcon = item.querySelector('.feed-status i');
+
+                        if (item.classList.contains('is-unread')) {
+                            item.classList.remove('is-unread');
+                            item.classList.add('is-read');
+
+                            if (statusIcon) {
+                                statusIcon.className = 'fa-solid fa-circle-check icon-read';
+                            }
+
+                            if (unreadCount > 0) unreadCount--;
+                            readCount++;
+                            unreadCountEl.textContent = unreadCount;
+                            readCountEl.textContent = readCount;
+
+                            if (id && !readIds.includes(id)) {
+                                readIds.push(id);
+                                localStorage.setItem('readFeedIds_mobile', JSON.stringify(readIds));
+                            }
+
+                            observer.unobserve(item);
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            items.forEach(item => {
+                if (item.classList.contains('is-unread')) {
+                    observer.observe(item);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

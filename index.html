@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDDIT بالعربي - سطح المكتب</title>
+    <!-- مكتبة FontAwesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --border-color: #e0e0e0;
+            --unread-color: #e74c3c; /* أحمر */
+            --read-color: #2ecc71;   /* أخضر */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* شريط العدادات العلوي */
+        .header-bar {
+            position: sticky;
+            top: 0;
+            background: var(--card-bg);
+            padding: 15px 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            z-index: 1000;
+        }
+
+        .counters-container {
+            display: flex;
+            gap: 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .counter-box {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: #f8f9fa;
+        }
+
+        /* تنسيقات الأيقونات والألوان */
+        .icon-unread { color: var(--unread-color) !important; }
+        .icon-read { color: var(--read-color) !important; }
+
+        /* حاوية الخلاصات */
+        .feeds-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* كارت الموضوع */
+        .feed-item {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            transition: transform 0.2s ease, opacity 0.3s ease;
+        }
+
+        .feed-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .feed-title {
+            margin: 0 0 10px 0;
+            font-size: 1.25rem;
+        }
+
+        /* الحفاظ على جودة وأحجام الصور والفيديوهات دون التعارض مع الأكواد */
+        .feed-media {
+            margin-top: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            max-width: 100%;
+        }
+
+        .feed-media img, 
+        .feed-media video, 
+        .feed-media iframe {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border: none;
+        }
+
+        .section-title {
+            margin: 30px 0 15px 0;
+            color: #555;
+            font-size: 1.3rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-bar">
+        <h2>REDDIT بالعربي</h2>
+        <div class="counters-container">
+            <div class="counter-box">
+                <i class="fa-solid fa-envelope-open-text icon-unread"></i>
+                <span>غير مقروء: </span>
+                <span id="unread-count">0</span>
+            </div>
+            <div class="counter-box">
+                <i class="fa-solid fa-circle-check icon-read"></i>
+                <span>تمت القراءة: </span>
+                <span id="read-count">0</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="feeds-wrapper">
+        <div class="section-title">الخلاصات غير المقروءة</div>
+        <div id="unread-container">
+            <!-- مثال لخلاصة تحتوي على صورة -->
+            <article class="feed-item" data-id="post-1">
+                <div class="feed-header">
+                    <span class="feed-status"><i class="fa-solid fa-circle-dot icon-unread"></i></span>
+                </div>
+                <h3 class="feed-title">تحديثات الأسواق المالية والتداول</h3>
+                <p>متابعة حركة الأسهم والعملات الرقمية اليوم...</p>
+                <div class="feed-media">
+                    <img src="https://via.placeholder.com/800x400" alt="صورة توضيحية">
+                </div>
+            </article>
+
+            <!-- مثال لخلاصة تحتوي على فيديو -->
+            <article class="feed-item" data-id="post-2">
+                <div class="feed-header">
+                    <span class="feed-status"><i class="fa-solid fa-circle-dot icon-unread"></i></span>
+                </div>
+                <h3 class="feed-title">تحليل أسعار النفط الخام</h3>
+                <p>شاهد التحليل الفني لأسعار النفط لهذا الأسبوع:</p>
+                <div class="feed-media">
+                    <video controls width="100%">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </article>
+        </div>
+
+        <div class="section-title">تمت القراءة</div>
+        <div id="read-container">
+            <!-- سيتم نقل العناصر إلى هنا تلقائياً فقط بعد إعادة تحميل الصفحة -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const unreadCountEl = document.getElementById('unread-count');
+            const readCountEl = document.getElementById('read-count');
+            const unreadContainer = document.getElementById('unread-container');
+            const readContainer = document.getElementById('read-container');
+            const items = document.querySelectorAll('.feed-item');
+
+            let readIds = JSON.parse(localStorage.getItem('readFeedIds') || '[]');
+
+            // 1. عند نقل/تحديث الصفحة: نقل الموضوعات المقروءة سابقاً لقسم "تمت القراءة"
+            items.forEach(item => {
+                const id = item.getAttribute('data-id');
+                const statusIcon = item.querySelector('.feed-status i');
+
+                if (readIds.includes(id)) {
+                    item.classList.add('is-read');
+                    if (statusIcon) {
+                        statusIcon.className = 'fa-solid fa-circle-check icon-read';
+                    }
+                    readContainer.appendChild(item);
+                } else {
+                    item.classList.add('is-unread');
+                }
+            });
+
+            // تحديث العدادات الأولية
+            let unreadCount = document.querySelectorAll('.feed-item.is-unread').length;
+            let readCount = document.querySelectorAll('.feed-item.is-read').length;
+            unreadCountEl.textContent = unreadCount;
+            readCountEl.textContent = readCount;
+
+            // 2. مراقبة المرور على المواضيع لتعديل العداد لحظياً
+            const observerOptions = { root: null, threshold: 0.6 };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const item = entry.target;
+                        const id = item.getAttribute('data-id');
+                        const statusIcon = item.querySelector('.feed-status i');
+
+                        if (item.classList.contains('is-unread')) {
+                            item.classList.remove('is-unread');
+                            item.classList.add('is-read');
+
+                            if (statusIcon) {
+                                statusIcon.className = 'fa-solid fa-circle-check icon-read';
+                            }
+
+                            // تحديث العدادات فوراً
+                            if (unreadCount > 0) unreadCount--;
+                            readCount++;
+                            unreadCountEl.textContent = unreadCount;
+                            readCountEl.textContent = readCount;
+
+                            // حفظ المعرف دون نقل العنصر مكانياً الآن
+                            if (id && !readIds.includes(id)) {
+                                readIds.push(id);
+                                localStorage.setItem('readFeedIds', JSON.stringify(readIds));
+                            }
+
+                            observer.unobserve(item);
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            items.forEach(item => {
+                if (item.classList.contains('is-unread')) {
+                    observer.observe(item);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
