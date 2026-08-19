@@ -1,135 +1,77 @@
 const fs = require('fs');
+const Parser = require('rss-parser');
 
-async function fetchWithTimeout(resource, options = {}) {
-    const { timeout = 8000 } = options;
-    const controller = new AbortController();
-    const id = setTimeout(() => controller.abort(), timeout);
-    try {
-        const response = await fetch(resource, {
-            ...options,
-            signal: controller.signal,
-            headers: {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-            }
-        });
-        clearTimeout(id);
-        return response;
-    } catch (error) {
-        clearTimeout(id);
-        throw error;
-    }
-}
-
-function parseFeedItems(xmlText, sourceName) {
-    const articles = [];
-    const now = new Date();
-
-    // استخراج العناصر عبر REGEX لضمان السرعة والتوافق في Node.js
-    const itemMatches = xmlText.match(/<(item|entry)[\s\S]*?<\/(item|entry)>/gi) || [];
-
-    for (const itemXml of itemMatches) {
-        const getTagContent = (tag) => {
-            const match = itemXml.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, 'i'));
-            return match ? match[1].replace(/<!\[CDATA\[([\s\S]*?)\]\]>/gi, '$1').trim() : '';
-        };
-
-        const title = getTagContent('title');
-        let link = getTagContent('link');
-
-        if (!link) {
-            const linkHrefMatch = itemXml.match(/<link[^>]*href=["']([^"']+)["']/i);
-            if (linkHrefMatch) link = linkHrefMatch[1];
-        }
-
-        const pubDateStr = getTagContent('pubDate') || getTagContent('published') || getTagContent('updated');
-        const description = getTagContent('description') || getTagContent('content') || getTagContent('summary');
-
-        const pubDate = new Date(pubDateStr);
-        const diffHours = (now - pubDate) / (1000 * 60 * 60);
-
-        // الاحتفاظ فقط بمقالات آخر 24 ساعة
-        if (isNaN(diffHours) || diffHours <= 24) {
-            const media = extractMediaFromXml(itemXml, description);
-
-            articles.push({
-                id: link || title,
-                title: title.replace(/<[^>]*>?/gm, ''),
-                link: link,
-                pubDate: pubDateStr || new Date().toISOString(),
-                description: description,
-                sourceName: sourceName,
-                media: media
-            });
-        }
-    }
-    return articles;
-}
-
-function extractMediaFromXml(xmlStr, descStr) {
-    let media = { image: null, video: null };
-
-    // فحص وسائط enclosure
-    const encMatch = xmlStr.match(/<enclosure[^>]*url=["']([^"']+)["'][^>]*type=["']([^"']+)["']/i);
-    if (encMatch) {
-        const url = encMatch[1];
-        const type = encMatch[2];
-        if (type.includes('image') || url.match(/\.(jpg|jpeg|png|gif|webp)$/i)) media.image = url;
-        if (type.includes('video') || url.match(/\.(mp4|webm|ogg)$/i)) media.video = url;
-    }
-
-    // فحص الصور داخل الوصف
-    if (!media.image) {
-        const imgMatch = descStr.match(/<img[^>]+src=["']([^"']+)["']/i);
-        if (imgMatch && !imgMatch[1].includes('preview.redd.it/award_images')) {
-            media.image = imgMatch[1];
-        }
-    }
-
-    // فحص الصور المصغرة thumbnail
-    if (!media.image) {
-        const thumbMatch = xmlStr.match(/<media:thumbnail[^>]*url=["']([^"']+)["']/i);
-        if (thumbMatch) media.image = thumbMatch[1];
-    }
-
-    return media;
-}
+// إضافة User-Agent مخصص لمنع حظر Reddit لـ GitHub Actions
+const parser = new Parser({
+  headers: {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 RedditArabicBot/1.0',
+    'Accept': 'application/rss+xml, application/xml, text/xml; q=0.1'
+  },
+  timeout: 10000
+});
 
 async function run() {
-    try {
-        console.log('قراءة ملف feed.json...');
-        const rawFeeds = fs.readFileSync('./feed.json', 'utf8');
-        const parsedData = JSON.parse(rawFeeds);
-        const sources = Array.isArray(parsedData) ? parsedData : (parsedData.sources || []);
+  try {
+    // 1. قراءة المصادر من feed.json
+    const rawFeeds = fs.readFileSync('feed.json', 'utf8');
+    const sources = JSON.parse(rawFeeds);
+    
+    let allArticles = [];
 
-        let allArticles = [];
+    console.log(`جاري جلب البيانات لـ ${sources.length} مصدر...`);
 
-        console.log(`جاري جلب الخلاصات لـ ${sources.length} مصدر...`);
+    // 2. المرور على جميع المصادر وجلب الخلاصات
+    for (const source of sources) {
+      try {
+        const feed = await parser.parseURL(source.url);
+        
+        const items = feed.items.map(item => ({
+          id: item.link || item.guid || item.title,
+          title: item.title,
+          link: item.link,
+          pubDate: item.pubDate || item.isoDate || new Date().toISOString(),
+          description: item.contentSnippet || item.content || item.summary || '',
+          sourceName: source.name,
+          media: {
+            image: extractImage(item),
+            video: null
+          }
+        }));
 
-        for (const source of sources) {
-            try {
-                const res = await fetchWithTimeout(source.url, { timeout: 7000 });
-                if (res.ok) {
-                    const xmlText = await res.text();
-                    const articles = parseFeedItems(xmlText, source.name);
-                    allArticles = allArticles.concat(articles);
-                    console.log(`✓ تم جلب: ${source.name} (${articles.length} مقال)`);
-                }
-            } catch (err) {
-                console.log(`✕ فشل جلب: ${source.name}`);
-            }
-        }
-
-        // إزالة التكرار وفرز المقالات حسب الأحدث
-        const uniqueArticles = Array.from(new Map(allArticles.map(a => [a.id, a])).values());
-        uniqueArticles.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
-
-        fs.writeFileSync('./articles.json', JSON.stringify(uniqueArticles, null, 2));
-        console.log(`تم الحفظ بنجاح! إجمالي المقالات المجمعة: ${uniqueArticles.length}`);
-
-    } catch (err) {
-        console.error('خطأ في التنفيذ:', err);
-        process.exit(1);
+        allArticles.push(...items);
+        console.log(`✓ تم جلب ${items.length} مقال من: ${source.name}`);
+      } catch (err) {
+        console.error(`✗ فشل جلب المصدر (${source.name}):`, err.message);
+      }
     }
+
+    // 3. ترتيب المقالات من الأحدث للأقدم
+    allArticles.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+
+    // 4. أهم شرط: عدم حفظ الملف إذا كانت النتيجة فارغة لتجنب مسح البيانات القديمة
+    if (allArticles.length > 0) {
+      fs.writeFileSync('articles.json', JSON.stringify(allArticles, null, 2), 'utf8');
+      console.log(`تم تحديث articles.json بنجاح! إجمالي المقالات: ${allArticles.length}`);
+    } else {
+      console.warn('تنبيه: لم يتم العثور على أي مقالات جديدة. تم إلغاء التحديث للحفاظ على البيانات القديمة.');
+    }
+
+  } catch (error) {
+    console.error('حدث خطأ رئيسي أثناء التحديث:', error);
+  }
+}
+
+// دالة استخراج الصور
+function extractImage(item) {
+  if (item.media && item.media['$'] && item.media['$'].url) {
+    return item.media['$'].url;
+  }
+  const htmlContent = item.content || item['content:encoded'] || item.summary || '';
+  const imgMatch = htmlContent.match(/<img[^>]+src=["']([^"']+)["']/i);
+  if (imgMatch && !imgMatch[1].includes('preview.redd.it/award_images')) {
+    return imgMatch[1];
+  }
+  return null;
 }
 
 run();
