@@ -398,17 +398,18 @@
         }
 
         async function loadAllSources() {
-            if (!sources || sources.length === 0) return;
             const container = document.getElementById('articles-container');
-            container.innerHTML = `<div class="text-center py-20 text-gray-400"><i class="fa-solid fa-spinner fa-spin text-3xl mb-3 text-[#FF4500]"></i><p class="text-xs">جاري تحميل جميع المصادر (24 ساعة الأخيرة)...</p></div>`;
+            container.innerHTML = `<div class="text-center py-20 text-gray-400"><i class="fa-solid fa-spinner fa-spin text-3xl mb-3 text-[#FF4500]"></i><p class="text-xs">جاري تحميل أحدث الخلاصات المجمعة...</p></div>`;
 
-            const results = await Promise.all(sources.map(source => fetchArticlesFromUrl(source.url, source.name)));
-            allFetchedArticles = [];
-            results.forEach(fetched => {
-                allFetchedArticles = allFetchedArticles.concat(fetched);
-            });
-
-            renderCurrentTab();
+            try {
+                const response = await fetch('./articles.json?t=' + new Date().getTime());
+                if (!response.ok) throw new Error('فشل جلب ملف المقالات المجمع');
+                
+                allFetchedArticles = await response.json();
+                renderCurrentTab();
+            } catch (err) {
+                container.innerHTML = `<div class="text-center py-20 text-red-400 text-xs">جاري تجهيز الخلاصات لأول مرة، يرجى الانتظار أو إعادة التحميل بعد قليل...</div>`;
+            }
         }
 
         function commitPendingReads() {
