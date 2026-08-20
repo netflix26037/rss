@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>REDDIT بالعربي - iPhone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { extend: { colors: { reddit: '#FF4500' } } }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+        body { font-family: 'Cairo', sans-serif; -webkit-tap-highlight-color: transparent; }
+    </style>
+</head>
+<body class="bg-slate-950 text-gray-100 min-h-screen flex flex-col pb-20">
+
+    <!-- شريط الأسعار الهيدر -->
+    <div class="bg-slate-900/95 border-b border-slate-800 text-[11px] py-1.5 px-3 flex items-center justify-between sticky top-0 z-50 backdrop-blur-md">
+        <div class="flex items-center gap-3">
+            <span class="font-bold text-reddit flex items-center gap-1"><i class="fa-brands fa-reddit text-sm"></i> REDDIT</span>
+            <div class="flex items-center gap-2 font-mono text-[10px]">
+                <span class="text-amber-500 font-bold">OIL: <span id="price-BRENT" class="text-gray-200">--.--</span></span>
+                <span class="text-cyan-400 font-bold">BTC: <span id="price-BTC" class="text-gray-200">--.--</span></span>
+            </div>
+        </div>
+        <span id="digital-clock" class="font-mono text-gray-400 text-[10px]">00:00</span>
+    </div>
+
+    <!-- رأس الصفحة -->
+    <div class="p-4 bg-slate-900 border-b border-slate-800 flex items-center justify-between">
+        <div>
+            <h1 class="text-base font-extrabold text-white">REDDIT <span class="text-reddit">بالعربي</span></h1>
+            <p class="text-[10px] text-gray-400">تجميع الخلاصات للأيفون</p>
+        </div>
+        <button onclick="toggleSidebar()" class="p-2 bg-slate-800 rounded-lg text-gray-300 text-xs flex items-center gap-1">
+            <i class="fa-solid fa-bars"></i> المصادر
+        </button>
+    </div>
+
+    <!-- أزرار التبديل -->
+    <div class="p-2 bg-slate-900/60 border-b border-slate-800 flex gap-1 text-xs">
+        <button onclick="switchTab('unread')" id="tab-unread" class="flex-1 py-1.5 rounded-lg font-bold bg-reddit text-white text-center">
+            غير مقروء (<span id="count-unread">0</span>)
+        </button>
+        <button onclick="switchTab('favorites')" id="tab-favorites" class="flex-1 py-1.5 rounded-lg font-bold text-gray-400 text-center">
+            المفضلة (<span id="count-favorites">0</span>)
+        </button>
+        <button onclick="switchTab('read')" id="tab-read" class="flex-1 py-1.5 rounded-lg font-bold text-gray-400 text-center">
+            المقروء (<span id="count-read">0</span>)
+        </button>
+    </div>
+
+    <!-- قائمة المصادر الجانبية (Slide-over for iPhone) -->
+    <div id="mobile-sidebar" class="fixed inset-0 bg-black/80 z-50 hidden flex justify-end">
+        <div class="w-4/5 bg-slate-900 h-full p-4 overflow-y-auto border-r border-slate-800">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-800 mb-3">
+                <h2 class="text-sm font-bold text-white"><i class="fa-solid fa-layer-group text-reddit"></i> المصادر</h2>
+                <button onclick="toggleSidebar()" class="text-gray-400 text-lg">&times;</button>
+            </div>
+            <button onclick="loadAllSources(); toggleSidebar();" class="w-full mb-3 bg-reddit text-white text-xs py-2 rounded-lg font-bold">عرض كل المصادر</button>
+            <div id="sources-container" class="space-y-2 text-xs"></div>
+        </div>
+    </div>
+
+    <!-- حاوية الأخبار -->
+    <main class="p-3 space-y-3 flex-grow" id="articles-container">
+        <div class="text-center py-12 text-xs text-gray-500">جاري جلب المنشورات...</div>
+    </main>
+
+    <script>
+        const DEFAULT_SOURCES = [
+            { name: "r/SaudiArabia", url: "https://www.reddit.com/r/SaudiArabia/.rss", category: "سعودية وأخبار" },
+            { name: "r/Arabic", url: "https://www.reddit.com/r/arabic/.rss", category: "عام" },
+            { name: "r/Technology", url: "https://www.reddit.com/r/technology/.rss", category: "تقنية" },
+            { name: "r/WorldNews", url: "https://www.reddit.com/r/worldnews/.rss", category: "أخبار عالمية" },
+            { name: "r/Options", url: "https://www.reddit.com/r/options/.rss", category: "مال وأعمال" }
+        ];
+
+        let sources = [];
+        let allFetchedArticles = [];
+        let currentTab = 'unread';
+        let readIds = new Set(JSON.parse(localStorage.getItem('app_read_ids') || '[]'));
+        let favoriteArticles = JSON.parse(localStorage.getItem('app_favorite_articles') || '[]');
+
+        async function fetchPrices() {
+            try {
+                const btc = await (await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd')).json();
+                if(btc.bitcoin) document.getElementById('price-BTC').innerText = '$' + btc.bitcoin.usd;
+                const brent = await (await fetch('https://query1.finance.yahoo.com/v8/finance/chart/BZ=F')).json();
+                const price = brent.chart.result[0].meta.regularMarketPrice;
+                if(price) document.getElementById('price-BRENT').innerText = '$' + price.toFixed(1);
+            } catch(e){}
+        }
+
+        async function fetchFeedsJSON() {
+            let combined = [...DEFAULT_SOURCES];
+            try {
+                const res = await fetch(`./feed.json?t=${Date.now()}`);
+                if (res.ok) {
+                    const data = await res.json();
+                    const parsed = Array.isArray(data) ? data : (data.sources || []);
+                    parsed.forEach(s => { if (!combined.some(i => i.url === s.url)) combined.push(s); });
+                }
+            } catch (e) {}
+            return combined;
+        }
+
+        async function fetchArticlesFromUrl(url, sourceName) {
+            let targetUrl = url.includes('reddit.com') && !url.endsWith('.rss') ? url.replace(/\/$/, '') + '/.rss' : url;
+            try {
+                const res = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`);
+                if (res.ok) return parseXMLFeed(await res.text(), sourceName);
+            } catch (e) {}
+            return [];
+        }
+
+        function parseXMLFeed(xmlText, sourceName) {
+            const xmlDoc = new DOMParser().parseFromString(xmlText, "text/xml");
+            const items = xmlDoc.querySelectorAll("item, entry");
+            const articles = [];
+            items.forEach(item => {
+                const title = item.querySelector("title") ? item.querySelector("title").textContent : "";
+                const linkEl = item.querySelector("link");
+                const link = linkEl ? (linkEl.getAttribute("href") || linkEl.textContent) : "";
+                const pubDateStr = item.querySelector("pubDate, published, updated")?.textContent || "";
+                const desc = item.querySelector("content, summary, description")?.textContent || "";
+                articles.push({ id: link || title, title, link, pubDate: pubDateStr, description: desc, sourceName });
+            });
+            return articles;
+        }
+
+        function renderSources() {
+            const container = document.getElementById('sources-container');
+            container.innerHTML = '';
+            sources.forEach(s => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-right p-2 rounded bg-slate-800 text-gray-300 hover:text-white mb-1 flex justify-between";
+                btn.innerHTML = `<span>${s.name}</span><span class="text-[10px] text-gray-500">${s.category}</span>`;
+                btn.onclick = () => { loadFeed(s.name, s.url); toggleSidebar(); };
+                container.appendChild(btn);
+            });
+        }
+
+        function toggleSidebar() {
+            document.getElementById('mobile-sidebar').classList.toggle('hidden');
+        }
+
+        async function loadFeed(name, url) {
+            const container = document.getElementById('articles-container');
+            container.innerHTML = `<div class="text-center py-10 text-xs text-gray-400"><i class="fa-solid fa-spinner fa-spin text-lg mb-2 text-reddit"></i><br>جاري التحميل...</div>`;
+            allFetchedArticles = await fetchArticlesFromUrl(url, name);
+            renderCurrentTab();
+        }
+
+        async function loadAllSources() {
+            const container = document.getElementById('articles-container');
+            container.innerHTML = `<div class="text-center py-10 text-xs text-gray-400"><i class="fa-solid fa-spinner fa-spin text-lg mb-2 text-reddit"></i><br>جاري تحديث كافة الخلاصات...</div>`;
+            allFetchedArticles = [];
+            const results = await Promise.all(sources.map(s => fetchArticlesFromUrl(s.url, s.name)));
+            results.forEach(res => { allFetchedArticles = allFetchedArticles.concat(res); });
+            renderCurrentTab();
+        }
+
+        function switchTab(tab) {
+            currentTab = tab;
+            ['unread', 'favorites', 'read'].forEach(t => {
+                const el = document.getElementById(`tab-${t}`);
+                if (t === tab) el.className = "flex-1 py-1.5 rounded-lg font-bold bg-reddit text-white text-center";
+                else el.className = "flex-1 py-1.5 rounded-lg font-bold text-gray-400 text-center";
+            });
+            renderCurrentTab();
+        }
+
+        function renderCurrentTab() {
+            const unread = allFetchedArticles.filter(a => !readIds.has(a.id));
+            const read = allFetchedArticles.filter(a => readIds.has(a.id));
+            document.getElementById('count-unread').innerText = unread.length;
+            document.getElementById('count-favorites').innerText = favoriteArticles.length;
+            document.getElementById('count-read').innerText = read.length;
+
+            let list = currentTab === 'unread' ? unread : (currentTab === 'read' ? read : favoriteArticles);
+            const container = document.getElementById('articles-container');
+            container.innerHTML = '';
+
+            if(list.length === 0) {
+                container.innerHTML = `<div class="text-center py-10 text-xs text-gray-500">لا توجد منشورات</div>`;
+                return;
+            }
+
+            list.forEach(item => {
+                const isFav = favoriteArticles.some(a => a.id === item.id);
+                const card = document.createElement('div');
+                card.className = "bg-slate-900 border border-slate-800 p-3 rounded-xl text-xs space-y-2";
+                card.innerHTML = `
+                    <div class="flex justify-between items-center text-[10px] text-gray-400">
+                        <span class="text-reddit font-bold">${item.sourceName}</span>
+                        <button onclick="toggleFav('${item.id.replace(/'/g, "\\'")}')" class="text-amber-400 text-sm">
+                            <i class="${isFav ? 'fa-solid' : 'fa-regular'} fa-star"></i>
+                        </button>
+                    </div>
+                    <h3 class="font-bold text-gray-100 text-xs leading-snug">${item.title}</h3>
+                    <div class="flex justify-between items-center pt-2 border-t border-slate-800/60">
+                        <a href="${item.link}" target="_blank" onclick="markRead('${item.id.replace(/'/g, "\\'")}')" class="text-reddit font-bold">قراءة المزيد &rarr;</a>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function markRead(id) { readIds.add(id); localStorage.setItem('app_read_ids', JSON.stringify([...readIds])); }
+        function toggleFav(id) {
+            const idx = favoriteArticles.findIndex(a => a.id === id);
+            if(idx > -1) favoriteArticles.splice(idx, 1);
+            else {
+                const item = allFetchedArticles.find(a => a.id === id);
+                if(item) favoriteArticles.push(item);
+            }
+            localStorage.setItem('app_favorite_articles', JSON.stringify(favoriteArticles));
+            renderCurrentTab();
+        }
+
+        window.onload = async function() {
+            fetchPrices();
+            setInterval(fetchPrices, 60000);
+            sources = await fetchFeedsJSON();
+            renderSources();
+            await loadAllSources();
+        };
+    </script>
+</body>
+</html>
