@@ -2,34 +2,44 @@ const fs = require('fs');
 const Parser = require('rss-parser');
 const axios = require('axios');
 
-const parser = new Parser();
+const parser = new Parser({
+  customFields: {
+    item: ['media:content', 'media:thumbnail']
+  }
+});
 
-// دالة جلب المحتوى مع التغلب على حظر Reddit
+// دالة جلب المحتوى مع تحسين مهلة الاتصال والروابط
 async function fetchFeedContent(url) {
   const headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-    'Accept': 'application/rss+xml, application/xml, text/xml, */*'
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+    'Accept': 'application/rss+xml, application/xml, text/xml, application/atom+xml, */*'
   };
 
-  // محاولة 1: جلب مباشر بـ User-Agent قوي
-  try {
-    let targetUrl = url;
-    if (targetUrl.includes('reddit.com') && !targetUrl.endsWith('.rss')) {
-      targetUrl = targetUrl.replace(/\/$/, '') + '/.rss';
+  let targetUrl = url.trim();
+  
+  // معالجة روابط Reddit بشكل أدق
+  if (targetUrl.includes('reddit.com')) {
+    targetUrl = targetUrl.replace(/\/$/, '');
+    if (!targetUrl.endsWith('.rss')) {
+      targetUrl += '/.rss';
     }
-    const response = await axios.get(targetUrl, { headers, timeout: 8000 });
-    if (response.data) return response.data;
-  } catch (e) {
-    console.warn(`محاولة الجلب المباشر فشلت لـ (${url})، جاري المحاولة عبر البروكسي...`);
   }
 
-  // محاولة 2: جلب عبر Worker Proxy في حال فشل المباشر
+  // محاولة 1: جلب مباشر بمهلة أطول (15 ثانية)
   try {
-    const proxyUrl = 'https://rss-proxy.red-108.workers.dev/?url=' + encodeURIComponent(url);
-    const response = await axios.get(proxyUrl, { timeout: 10000 });
+    const response = await axios.get(targetUrl, { headers, timeout: 15000 });
     if (response.data) return response.data;
   } catch (e) {
-    console.error(`فشل الجلب عبر البروكسي أيضاً: ${e.message}`);
+    console.warn(`⚠️ فشل الجلب المباشر لـ (${url}) [${e.message}]، جاري المحاولة عبر البروكسي...`);
+  }
+
+  // محاولة 2: جلب عبر Worker Proxy
+  try {
+    const proxyUrl = 'https://rss-proxy.red-108.workers.dev/?url=' + encodeURIComponent(targetUrl);
+    const response = await axios.get(proxyUrl, { timeout: 15000 });
+    if (response.data) return response.data;
+  } catch (e) {
+    console.error(`❌ فشل الجلب عبر البروكسي أيضاً لـ (${url}): ${e.message}`);
   }
 
   return null;
@@ -38,7 +48,7 @@ async function fetchFeedContent(url) {
 async function run() {
   try {
     if (!fs.existsSync('feed.json')) {
-      console.error('ملف feed.json غير موجود!');
+      console.error('❌ ملف feed.json غير موجود!');
       return;
     }
 
@@ -46,18 +56,23 @@ async function run() {
     const sources = JSON.parse(rawFeeds);
     let allArticles = [];
 
-    console.log(`بدء جلب الأخبار من ${sources.length} مصدر...`);
+    console.log(`🚀 بدء جلب الأخبار من ${sources.length} مصدر...`);
 
     for (const source of sources) {
+      if (!source.url) continue;
+
       try {
         const xmlData = await fetchFeedContent(source.url);
-        if (!xmlData) continue;
+        if (!xmlData) {
+          console.warn(`⚠️ تم تخطي المصدر لعدم استجابة الرابط: ${source.name}`);
+          continue;
+        }
 
         const feed = await parser.parseStringPromise(xmlData);
         
         if (feed && feed.items && feed.items.length > 0) {
           const items = feed.items.map(item => ({
-            id: item.link || item.guid || item.title,
+            id: item.guid || item.link || item.title,
             title: item.title || '',
             link: item.link || '',
             pubDate: item.pubDate || item.isoDate || new Date().toISOString(),
@@ -71,27 +86,36 @@ async function run() {
 
           allArticles.push(...items);
           console.log(`✓ تم جلب ${items.length} مقال من: ${source.name}`);
+        } else {
+          console.warn(`⚠️ لا توجد مقالات داخل الخلاصة: ${source.name}`);
         }
       } catch (err) {
-        console.error(`✗ خطأ أثناء تحليل (${source.name}):`, err.message);
+        console.error(`✗ خطأ أثناء تحليل xml لـ (${source.name}):`, err.message);
       }
     }
 
+    // ترتيب المقالات حسب التاريخ من الأحدث للأقدم
     allArticles.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
 
     if (allArticles.length > 0) {
       fs.writeFileSync('articles.json', JSON.stringify(allArticles, null, 2), 'utf8');
-      console.log(`✅ تم تحديث articles.json بنجاح! إجمالي المقالات: ${allArticles.length}`);
+      console.log(`\n✅ تم تحديث articles.json بنجاح! إجمالي المقالات المجلوبة: ${allArticles.length}`);
     } else {
-      console.warn('⚠️ لم يتم العثور على مقالات جيدة للحفظ.');
+      console.warn('⚠️ لم يتم استخراج أي مقالات من المصادر.');
     }
 
   } catch (error) {
-    console.error('خطأ عام:', error);
+    console.error('خطأ عام أثناء التشغيل:', error);
   }
 }
 
 function extractImage(item) {
+  if (item['media:content'] && item['media:content'].$ && item['media:content'].$.url) {
+    return item['media:content'].$.url;
+  }
+  if (item['media:thumbnail'] && item['media:thumbnail'].$ && item['media:thumbnail'].$.url) {
+    return item['media:thumbnail'].$.url;
+  }
   if (item.media && item.media['$'] && item.media['$'].url) {
     return item.media['$'].url;
   }
