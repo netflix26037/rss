@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDDIT بالعربي - Desktop Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class' }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+        body { 
+            font-family: 'Cairo', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #090d16; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #334155; }
+    </style>
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen flex flex-col select-none overflow-x-hidden">
+
+    <!-- شريط الأسعار المباشر -->
+    <div class="bg-slate-950 text-white text-xs py-1.5 px-6 border-b border-slate-800 flex items-center justify-between sticky top-0 z-50">
+        <div class="flex items-center gap-2 border-l border-slate-800 pl-4">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            </span>
+            <span class="font-bold text-gray-300">مباشر الأسواق</span>
+        </div>
+        
+        <div class="flex items-center gap-6 font-mono">
+            <div id="box-BRENT" class="flex items-center gap-2 px-3 py-1 rounded bg-slate-900 border border-slate-800">
+                <span class="font-bold text-amber-500"><i class="fa-solid fa-droplet text-xs"></i> BRENT:</span>
+                <span id="price-BRENT" class="text-gray-200 font-bold">--.--</span>
+            </div>
+            <div id="box-BTC" class="flex items-center gap-2 px-3 py-1 rounded bg-slate-900 border border-slate-800">
+                <span class="font-bold text-cyan-400">BITCOIN:</span>
+                <span id="price-BTC" class="text-gray-200 font-bold">--.--</span>
+            </div>
+        </div>
+
+        <div class="font-mono text-gray-400 text-xs">
+            <span id="digital-clock">00:00:00</span>
+        </div>
+    </div>
+
+    <!-- الهيدر المكتبي الرئيسي -->
+    <header class="bg-gray-900 border-b border-gray-800 px-6 py-3 sticky top-[33px] z-40 shadow-md">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="flex items-center gap-3 cursor-pointer hover:opacity-80 transition">
+                <div class="bg-[#FF4500] text-white p-2 rounded-xl">
+                    <i class="fa-brands fa-reddit-alien text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold text-white leading-tight">REDDIT بالعربي</h1>
+                    <p class="text-xs text-gray-400">لوحة المتابعة الإخبارية للشاشات الكبيرة</p>
+                </div>
+            </div>
+
+            <!-- أزرار الأقسام -->
+            <div class="flex items-center gap-2 bg-gray-950 p-1.5 rounded-xl border border-gray-800">
+                <button onclick="switchTab('unread')" id="tab-unread" class="px-4 py-1.5 rounded-lg text-xs font-bold flex items-center gap-2 bg-[#FF4500] text-white transition">
+                    <i class="fa-solid fa-envelope-open-text text-red-400"></i> غير مقروء
+                    <span id="count-unread" class="bg-red-600/80 px-2 py-0.5 rounded-full text-[10px]">0</span>
+                </button>
+                <button onclick="switchTab('favorites')" id="tab-favorites" class="px-4 py-1.5 rounded-lg text-xs font-bold flex items-center gap-2 text-gray-400 hover:text-amber-400 transition">
+                    <i class="fa-solid fa-star text-amber-400"></i> المفضلة
+                    <span id="count-favorites" class="bg-amber-500/20 text-amber-400 px-2 py-0.5 rounded-full text-[10px]">0</span>
+                </button>
+                <button onclick="switchTab('read')" id="tab-read" class="px-4 py-1.5 rounded-lg text-xs font-bold flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition">
+                    <i class="fa-solid fa-check-double text-emerald-400"></i> تمت القراءة
+                    <span id="count-read" class="bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full text-[10px]">0</span>
+                </button>
+            </div>
+
+            <span class="text-xs font-bold text-[#FF4500] bg-[#FF4500]/10 px-3.5 py-2 rounded-xl border border-[#FF4500]/20">
+                نسخة الكمبيوتر
+            </span>
+        </div>
+    </header>
+
+    <!-- الجسم الرئيسي -->
+    <div class="max-w-7xl mx-auto w-full flex-grow flex gap-6 p-6">
+        
+        <!-- القائمة الجانبية -->
+        <aside class="w-80 shrink-0 bg-gray-900 rounded-2xl border border-gray-800 p-4 h-[calc(100vh-140px)] sticky top-[100px] flex flex-col">
+            <h2 class="text-sm font-bold text-gray-200 mb-3 pb-2 border-b border-gray-800 flex items-center gap-2">
+                <i class="fa-solid fa-layer-group text-[#FF4500]"></i> مصادر الأخبار والخلاصات
+            </h2>
+            <div id="sources-container" class="overflow-y-auto space-y-3 custom-scrollbar flex-grow pr-1">
+                <p class="text-xs text-gray-500 text-center py-6">جاري تحميل المصادر...</p>
+            </div>
+        </aside>
+
+        <!-- شبكة عرض المقالات والأخبار -->
+        <main class="flex-grow">
+            <div class="flex justify-between items-center mb-4 pb-2 border-b border-gray-800">
+                <h2 id="current-feed-title" class="text-sm font-bold text-gray-200 flex items-center gap-2">
+                    <i class="fa-solid fa-newspaper text-[#FF4500]"></i> التحديثات الأخيرة
+                </h2>
+            </div>
+
+            <div id="articles-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="col-span-full text-center py-24 text-gray-500 bg-gray-900/40 rounded-2xl border border-gray-800">
+                    <i class="fa-brands fa-reddit text-5xl mb-3 text-[#FF4500] animate-pulse"></i>
+                    <p class="text-sm font-semibold">جاري جلب المنشورات من المصادر...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const translationCache = new Map();
+
+        let sources = [];
+        let allFetchedArticles = [];
+        let currentTab = 'unread';
+
+        let readIds = new Set(JSON.parse(localStorage.getItem('app_read_ids') || '[]'));
+        let favoriteArticles = JSON.parse(localStorage.getItem('app_favorite_articles') || '[]');
+        let observer = null;
+
+        async function translateAsync(text) {
+            if (!text || !text.trim()) return text;
+            if (translationCache.has(text)) return translationCache.get(text);
+            try {
+                const res = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ar&dt=t&q=${encodeURIComponent(text)}`);
+                const data = await res.json();
+                if (data && data[0]) {
+                    const translated = data[0].map(item => item[0]).join('');
+                    translationCache.set(text, translated);
+                    return translated;
+                }
+            } catch (e) {}
+            return text;
+        }
+
+        async function fetchPrices() {
+            try {
+                const btcRes = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+                const btcData = await btcRes.json();
+                if (btcData.bitcoin) {
+                    document.getElementById('price-BTC').innerText = '$' + btcData.bitcoin.usd.toLocaleString();
+                }
+            } catch (e) {}
+
+            try {
+                const brentRes = await fetch('https://query1.finance.yahoo.com/v8/finance/chart/BZ=F');
+                const brentData = await brentRes.json();
+                const price = brentData.chart.result[0].meta.regularMarketPrice;
+                if (price) {
+                    document.getElementById('price-BRENT').innerText = '$' + price.toFixed(2);
+                }
+            } catch (e) {}
+        }
+
+        async function fetchFeedsJSON() {
+            const paths = ['./feed.json', 'feed.json', '/feed.json'];
+            for (let path of paths) {
+                try {
+                    const response = await fetch(`${path}?t=${Date.now()}`);
+                    if (response.ok) {
+                        const data = await response.json();
+                        const parsedSources = Array.isArray(data) ? data : (data.sources || []);
+                        if (parsedSources.length > 0) {
+                            sources = parsedSources;
+                            localStorage.setItem('rss_sources_app', JSON.stringify(parsedSources));
+                            return parsedSources;
+                        }
+                    }
+                } catch (e) {}
+            }
+
+            const localData = localStorage.getItem('rss_sources_app');
+            if (localData) {
+                try { return JSON.parse(localData); } catch(e) {}
+            }
+            return [];
+        }
+
+        async function fetchWithTimeout(url, options = {}, timeout = 6000) {
+            const controller = new AbortController();
+            const id = setTimeout(() => controller.abort(), timeout);
+            try {
+                const response = await fetch(url, { ...options, signal: controller.signal });
+                clearTimeout(id);
+                return response;
+            } catch (e) {
+                clearTimeout(id);
+                return null;
+            }
+        }
+
+        async function fetchArticlesFromUrl(url, sourceName) {
+            try {
+                const rss2jsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(url)}`;
+                const res = await fetchWithTimeout(rss2jsonUrl);
+                if (res && res.ok) {
+                    const data = await res.json();
+                    if (data.status === 'ok' && data.items && data.items.length > 0) {
+                        return data.items.map((item, idx) => {
+                            const articleId = item.link || item.guid || (item.title + idx);
+                            return {
+                                id: articleId,
+                                title: item.title,
+                                link: item.link,
+                                pubDate: item.pubDate || new Date().toISOString(),
+                                description: item.description || '',
+                                sourceName: sourceName,
+                                media: { image: item.thumbnail || extractImageFromHTML(item.description) }
+                            };
+                        });
+                    }
+                }
+            } catch (e) {}
+
+            try {
+                const fallbackUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
+                const res = await fetchWithTimeout(fallbackUrl);
+                if (res && res.ok) {
+                    const text = await res.text();
+                    return parseXMLFeed(text, sourceName);
+                }
+            } catch (e) {}
+
+            return [];
+        }
+
+        function extractImageFromHTML(html) {
+            if (!html) return null;
+            const doc = new DOMParser().parseFromString(html, 'text/html');
+            const img = doc.querySelector('img');
+            return img ? img.src : null;
+        }
+
+        function parseXMLFeed(xmlText, sourceName) {
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(xmlText, "text/xml");
+            const items = xmlDoc.querySelectorAll("item, entry");
+            const articles = [];
+
+            items.forEach((item, index) => {
+                const titleEl = item.querySelector("title");
+                const title = titleEl ? titleEl.textContent.trim() : "";
+                
+                let link = "";
+                const linkEl = item.querySelector("link");
+                if (linkEl) {
+                    link = linkEl.getAttribute("href") || linkEl.textContent.trim() || "";
+                }
+
+                let pubDateStr = "";
+                const pubDateEl = item.querySelector("pubDate, published, updated");
+                if (pubDateEl) pubDateStr = pubDateEl.textContent.trim();
+
+                let description = "";
+                const descEl = item.querySelector("description, content, summary");
+                if (descEl) description = descEl.textContent.trim();
+
+                const articleId = link || (title ? title + index : Math.random().toString());
+
+                if (title) {
+                    articles.push({
+                        id: articleId,
+                        title: title,
+                        link: link,
+                        pubDate: pubDateStr || new Date().toISOString(),
+                        description: description,
+                        sourceName: sourceName,
+                        media: { image: extractImageFromHTML(description) }
+                    });
+                }
+            });
+
+            return articles;
+        }
+
+        function timeAgo(dateString) {
+            const date = new Date(dateString);
+            const now = new Date();
+            const seconds = Math.floor((now - date) / 1000);
+
+            if (isNaN(seconds)) return 'الآن';
+
+            let interval = Math.floor(seconds / 3600);
+            if (interval >= 1) return `منذ ${interval} ساعة`;
+            interval = Math.floor(seconds / 60);
+            if (interval >= 1) return `منذ ${interval} دقيقة`;
+            return `الآن`;
+        }
+
+        function renderSources() {
+            const container = document.getElementById('sources-container');
+            container.innerHTML = '';
+            if (!sources || sources.length === 0) {
+                container.innerHTML = `<div class="text-center py-4 text-xs text-red-400">لم يتم العثور على مصادر داخل feed.json</div>`;
+                return;
+            }
+
+            const grouped = {};
+            sources.forEach((s, idx) => {
+                const cat = s.category || 'عام';
+                if (!grouped[cat]) grouped[cat] = [];
+                grouped[cat].push({ ...s, idx });
+            });
+
+            for (const [cat, items] of Object.entries(grouped)) {
+                const groupDiv = document.createElement('div');
+                groupDiv.className = 'space-y-1 bg-gray-950/60 p-3 rounded-xl border border-gray-800/80 mb-2';
+                groupDiv.innerHTML = `
+                    <div class="flex items-center justify-between pb-1.5 border-b border-gray-800">
+                        <button onclick="loadCategoryFeed('${cat.replace(/'/g, "\\'")}')" class="text-xs font-bold text-[#FF4500] hover:underline flex items-center gap-1.5">
+                            <i class="fa-solid fa-folder-open text-amber-500"></i> ${cat}
+                        </button>
+                    </div>
+                    <ul class="space-y-1 pt-1.5"></ul>
+                `;
+                const ul = groupDiv.querySelector('ul');
+                items.forEach(item => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                        <button onclick="loadFeed('${item.name.replace(/'/g, "\\'")}', '${item.url}')" class="w-full text-right px-2.5 py-1.5 rounded-lg bg-gray-900/80 hover:bg-gray-800 text-xs text-gray-300 hover:text-white transition truncate block">
+                            ${item.name}
+                        </button>
+                    `;
+                    ul.appendChild(li);
+                });
+                container.appendChild(groupDiv);
+            }
+        }
+
+        async function loadFeed(title, url) {
+            document.getElementById('current-feed-title').innerText = title;
+            const container = document.getElementById('articles-container');
+            container.innerHTML = `<div class="col-span-full text-center py-16 text-gray-400"><i class="fa-solid fa-spinner fa-spin text-3xl mb-2 text-[#FF4500]"></i><p class="text-xs">جاري جلب القناة...</p></div>`;
+
+            allFetchedArticles = await fetchArticlesFromUrl(url, title);
+            renderCurrentTab();
+        }
+
+        async function loadCategoryFeed(category) {
+            document.getElementById('current-feed-title').innerText = category;
+            const container = document.getElementById('articles-container');
+            container.innerHTML = `<div class="col-span-full text-center py-16 text-gray-400"><i class="fa-solid fa-spinner fa-spin text-3xl mb-2 text-[#FF4500]"></i><p class="text-xs">جاري جلب القسم...</p></div>`;
+
+            const catSources = sources.filter(s => (s.category || 'عام') === category);
+            allFetchedArticles = [];
+
+            const results = await Promise.all(catSources.map(source => fetchArticlesFromUrl(source.url, source.name)));
+            results.forEach(fetched => {
+                allFetchedArticles = allFetchedArticles.concat(fetched);
+            });
+
+            allFetchedArticles.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+            renderCurrentTab();
+        }
+
+        async function loadAllSources() {
+            document.getElementById('current-feed-title').innerText = 'التحديثات الأخيرة';
+            const container = document.getElementById('articles-container');
+            container.innerHTML = `<div class="col-span-full text-center py-16 text-gray-400"><i class="fa-solid fa-spinner fa-spin text-3xl mb-2 text-[#FF4500]"></i><p class="text-xs">جاري جلب كل الخلاصات...</p></div>`;
+
+            allFetchedArticles = [];
+
+            if (sources.length > 0) {
+                const results = await Promise.all(
+                    sources.map(source => fetchArticlesFromUrl(source.url, source.name))
+                );
+                results.forEach(fetched => {
+                    allFetchedArticles = allFetchedArticles.concat(fetched);
+                });
+
+                allFetchedArticles.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+            }
+
+            renderCurrentTab();
+        }
+
+        function markAsReadHover(id) {
+            if (!readIds.has(id)) {
+                readIds.add(id);
+                localStorage.setItem('app_read_ids', JSON.stringify([...readIds]));
+                updateCounts();
+            }
+        }
+
+        function toggleFavoriteArticle(articleId, event) {
+            if(event) event.stopPropagation();
+
+            const targetArticle = allFetchedArticles.find(a => a.id === articleId) || favoriteArticles.find(a => a.id === articleId);
+            if (!targetArticle) return;
+
+            const index = favoriteArticles.findIndex(a => a.id === articleId);
+            if (index > -1) {
+                favoriteArticles.splice(index, 1);
+            } else {
+                favoriteArticles.push(targetArticle);
+            }
+            
+            localStorage.setItem('app_favorite_articles', JSON.stringify(favoriteArticles));
+            updateCounts();
+            renderCurrentTab();
+        }
+
+        function updateCounts() {
+            const unreadList = allFetchedArticles.filter(a => !readIds.has(a.id));
+            const readList = allFetchedArticles.filter(a => readIds.has(a.id));
+
+            document.getElementById('count-unread').innerText = unreadList.length;
+            document.getElementById('count-favorites').innerText = favoriteArticles.length;
+            document.getElementById('count-read').innerText = readList.length;
+        }
+
+        function switchTab(tab) {
+            currentTab = tab;
+            ['unread', 'favorites', 'read'].forEach(t => {
+                const btn = document.getElementById(`tab-${t}`);
+                if (t === tab) {
+                    btn.className = "px-4 py-1.5 rounded-lg text-xs font-bold flex items-center gap-2 bg-[#FF4500] text-white transition";
+                } else {
+                    btn.className = "px-4 py-1.5 rounded-lg text-xs font-bold flex items-center gap-2 text-gray-400 hover:text-white transition";
+                }
+            });
+            renderCurrentTab();
+        }
+
+        function renderCurrentTab() {
+            updateCounts();
+            let displayList = [];
+
+            if (currentTab === 'unread') {
+                displayList = allFetchedArticles.filter(a => !readIds.has(a.id));
+            } else if (currentTab === 'read') {
+                displayList = allFetchedArticles.filter(a => readIds.has(a.id));
+            } else if (currentTab === 'favorites') {
+                displayList = favoriteArticles;
+            }
+
+            renderArticlesContainer(displayList);
+        }
+
+        function renderArticlesContainer(articles) {
+            const container = document.getElementById('articles-container');
+            container.innerHTML = '';
+
+            if (observer) observer.disconnect();
+
+            if (!articles || articles.length === 0) {
+                container.innerHTML = `<div class="col-span-full text-center py-20 text-gray-500 bg-gray-900/30 rounded-2xl border border-gray-800 text-xs">لا توجد مواضيع في هذا القسم.</div>`;
+                return;
+            }
+
+            observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const artId = entry.target.getAttribute('data-id');
+                        if (artId) {
+                            markAsReadHover(artId);
+                            observer.unobserve(entry.target);
+                        }
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            articles.forEach((item, index) => {
+                const isFav = favoriteArticles.some(a => a.id === item.id);
+                const agoText = timeAgo(item.pubDate);
+                const cleanDesc = item.description ? item.description.replace(/<[^>]*>?/gm, '').trim() : '';
+
+                let mediaHTML = '';
+                if (item.media && item.media.image) {
+                    mediaHTML = `
+                        <div class="my-3 overflow-hidden rounded-xl bg-black/30 border border-gray-800/80">
+                            <img src="${item.media.image}" alt="Media" class="w-full max-h-[280px] object-cover hover:scale-105 transition duration-300" loading="lazy" onerror="this.style.display='none'">
+                        </div>`;
+                }
+
+                const titleId = `title-dt-${index}`;
+                const descId = `desc-dt-${index}`;
+
+                const card = document.createElement('article');
+                card.setAttribute('data-id', item.id);
+                card.className = "bg-gray-900 border border-gray-800 p-5 rounded-2xl flex flex-col justify-between hover:border-gray-700 transition shadow-sm";
+
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-bold bg-[#FF4500]/10 text-[#FF4500] border border-[#FF4500]/20">
+                                ${item.sourceName || 'Reddit'}
+                            </span>
+                            
+                            <div class="flex items-center gap-3">
+                                <span class="text-xs text-gray-400">
+                                    <i class="fa-regular fa-clock"></i> ${agoText}
+                                </span>
+                                <button onclick="toggleFavoriteArticle('${item.id.replace(/'/g, "\\'")}', event)" class="text-lg p-1 text-amber-400 hover:scale-110 transition">
+                                    <i class="${isFav ? 'fa-solid fa-star' : 'fa-regular fa-star text-gray-500'}"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <h3 id="${titleId}" class="font-bold text-base leading-snug mb-2 text-gray-100">${item.title}</h3>
+                        ${mediaHTML}
+                        <p id="${descId}" class="text-gray-300 text-xs line-clamp-3 mb-4 leading-relaxed">${cleanDesc}</p>
+                    </div>
+
+                    <div class="flex items-center justify-between pt-3 border-t border-gray-800/80">
+                        <a href="${item.link}" target="_blank" class="bg-[#FF4500] hover:bg-[#e03d00] text-white px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 transition">
+                            زيارة المصدر <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                `;
+                container.appendChild(card);
+
+                if (currentTab === 'unread') {
+                    observer.observe(card);
+                }
+
+                translateAsync(item.title).then(t => {
+                    const el = document.getElementById(titleId);
+                    if (el) el.innerText = t;
+                });
+
+                if (cleanDesc) {
+                    translateAsync(cleanDesc.substring(0, 300)).then(t => {
+                        const el = document.getElementById(descId);
+                        if (el) el.innerText = t;
+                    });
+                }
+            });
+        }
+
+        function startClock() {
+            setInterval(() => {
+                const el = document.getElementById('digital-clock');
+                if (el) el.innerText = new Date().toTimeString().split(' ')[0];
+            }, 1000);
+        }
+
+        window.onload = async function() {
+            startClock();
+            fetchPrices();
+            setInterval(fetchPrices, 60000);
+            sources = await fetchFeedsJSON();
+            renderSources();
+            if (sources.length > 0) {
+                await loadAllSources();
+            }
+        };
+    </script>
+</body>
+</html>
