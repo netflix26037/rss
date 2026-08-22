@@ -135,6 +135,45 @@
     </nav>
 
     <script>
+    <script>
+    // كود السحب للتحديث
+    let touchStartY = 0;
+    const ptrIndicator = document.getElementById('pull-to-refresh');
+
+    window.addEventListener('touchstart', e => {
+        if (window.scrollY === 0) {
+            touchStartY = e.touches[0].clientY;
+        }
+    }, { passive: true });
+
+    window.addEventListener('touchmove', e => {
+        if (window.scrollY === 0 && touchStartY > 0) {
+            const touchY = e.touches[0].clientY;
+            const diff = touchY - touchStartY;
+            if (diff > 0 && diff < 150) {
+                ptrIndicator.style.transform = `translateY(${diff - 56}px)`;
+            }
+        }
+    }, { passive: true });
+
+    window.addEventListener('touchend', e => {
+        if (window.scrollY === 0 && touchStartY > 0) {
+            const touchY = e.changedTouches[0].clientY;
+            const diff = touchY - touchStartY;
+            if (diff > 80) {
+                ptrIndicator.style.transform = 'translateY(0)';
+                setTimeout(() => {
+                    location.reload();
+                }, 400);
+            } else {
+                ptrIndicator.style.transform = 'translateY(-100%)';
+            }
+            touchStartY = 0;
+        }
+    }, { passive: true });
+
+    const translationCache = new Map();
+
         const translationCache = new Map();
 
         let sources = [];
