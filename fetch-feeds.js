@@ -2,43 +2,40 @@ const fs = require('fs');
 const Parser = require('rss-parser');
 const axios = require('axios');
 
-const USER_AGENT = 'RedditNewsDashboard/1.0.0 (by /u/RedditArabicNews)';
+// مصفوفة هويات متصفحات عشوائية لمنع كشف السكريبت
+const USER_AGENTS = [
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
+  'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/119.0',
+  'RedditNewsDashboard/1.0.0 (by /u/RedditArabicNews)'
+];
 
-const parser = new Parser({
-  headers: {
-    'User-Agent': USER_AGENT,
-    'Accept': 'application/rss+xml, application/xml, text/xml, application/atom+xml, */*'
-  },
-  timeout: 30000,
-  customFields: {
-    item: ['media:content', 'media:thumbnail']
-  }
-});
+function getRandomUserAgent() {
+  return USER_AGENTS[Math.floor(Math.random() * USER_AGENTS.length)];
+}
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-// دالة تنظيف النص من أكواد HTML قبل الترجمة
+// دالة تنظيف النص
 function cleanText(text) {
   if (!text) return '';
   return text
-    .replace(/<[^>]*>/g, '') // إزالة وسم HTML
-    .replace(/\s+/g, ' ') // إزالة المساحات الزائدة
+    .replace(/<[^>]*>/g, '')
+    .replace(/\s+/g, ' ')
     .trim();
 }
 
-// دالة الترجمة المحسنة مع معالجة الأخطاء
+// دالة الترجمة المحسنة
 async function translateText(text) {
   const cleaned = cleanText(text);
   if (!cleaned || cleaned.length === 0) return '';
-
-  // اقتطاع النص الطويل جداً لتجنب رفض الطلب
   const shortText = cleaned.substring(0, 500);
 
   try {
     const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ar&dt=t&q=${encodeURIComponent(shortText)}`;
     const response = await axios.get(url, { 
       timeout: 5000,
-      headers: { 'User-Agent': USER_AGENT }
+      headers: { 'User-Agent': getRandomUserAgent() }
     });
     
     if (response.data && response.data[0]) {
@@ -46,12 +43,12 @@ async function translateText(text) {
     }
     return cleaned;
   } catch (error) {
-    // في حال حدث حظر للترجمة نرجع النص الأصلي بدون إيقاف السكريبت
     return cleaned;
   }
 }
 
-async function fetchFeedContent(url) {
+// دالة جلب محتوى RSS مع محاولة إعادة الطلب عند الحظر (Retry mechanism)
+async function fetchFeedContent(url, retries = 2) {
   let targetUrl = url.trim();
 
   if (targetUrl.includes('reddit.com')) {
@@ -61,19 +58,28 @@ async function fetchFeedContent(url) {
     }
   }
 
-  try {
-    const response = await axios.get(targetUrl, {
-      headers: {
-        'User-Agent': USER_AGENT,
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
-      },
-      timeout: 20000
-    });
-    return response.data;
-  } catch (e) {
-    console.warn(`⚠️ فشل جلب الرابط (${targetUrl}): ${e.message}`);
-    return null;
+  for (let attempt = 1; attempt <= retries + 1; attempt++) {
+    try {
+      const response = await axios.get(targetUrl, {
+        headers: {
+          'User-Agent': getRandomUserAgent(),
+          'Accept': 'application/rss+xml, application/xml, text/xml, */*'
+        },
+        timeout: 15000
+      });
+      return response.data;
+    } catch (e) {
+      if (e.response && e.response.status === 429 && attempt <= retries) {
+        console.warn(`⏳ حظر مؤقت (429) على (${targetUrl}). إعادة المحاولة بعد 6 ثوانٍ... [محاولة ${attempt}]`);
+        await delay(6000); // الانتظار 6 ثوانٍ قبل التكرار
+      } else {
+        if (attempt === retries + 1) {
+          console.warn(`⚠️ فشل جلب الرابط (${targetUrl}): ${e.message}`);
+        }
+      }
+    }
   }
+  return null;
 }
 
 async function run() {
@@ -114,26 +120,30 @@ async function run() {
         
         if (!xmlData) {
           console.warn(`❌ تعذر استلام بيانات من: ${source.name}`);
-          await delay(800);
+          await delay(2000);
           continue;
         }
+
+        const parser = new Parser({
+          headers: { 'User-Agent': getRandomUserAgent() },
+          timeout: 15000,
+          customFields: { item: ['media:content', 'media:thumbnail'] }
+        });
 
         const feed = await parser.parseString(xmlData);
         
         if (feed && feed.items && feed.items.length > 0) {
-          // جلب أهم 4 مقالات من كل مصدر
-          const topItems = feed.items.slice(0, 4);
+          const topItems = feed.items.slice(0, 3); // أخذ أول 3 مقالات لتقليل الحمل
           const processedItems = [];
 
           for (const item of topItems) {
             const rawTitle = item.title || '';
             const rawDesc = item.contentSnippet || item.content || item.summary || '';
 
-            // ترجمة العنوان والوصف بشكل متتابع لتفادي حظر API
             const translatedTitle = await translateText(rawTitle);
-            await delay(150);
+            await delay(100);
             const translatedDesc = await translateText(rawDesc);
-            await delay(150);
+            await delay(100);
 
             processedItems.push({
               id: item.guid || item.link || item.title,
@@ -160,7 +170,9 @@ async function run() {
         console.error(`✗ خطأ أثناء تحليل RSS لـ (${source.name}):`, err.message);
       }
 
-      await delay(1000);
+      // تأخير ديناميكي عشوائي بين 2.5 إلى 4 ثوانٍ لتجاوز رادار الحظر
+      const randomWait = Math.floor(Math.random() * 1500) + 2500;
+      await delay(randomWait);
     }
 
     allArticles.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
