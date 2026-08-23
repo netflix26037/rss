@@ -4,7 +4,6 @@ const axios = require('axios');
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-// تنظيف أسطر ورسائل ريديت
 function cleanHtmlText(html) {
   if (!html) return '';
   let cleaned = html
@@ -25,7 +24,6 @@ function cleanHtmlText(html) {
   return cleaned.trim();
 }
 
-// دالة ترجمة قوية تعتمد على طلبات POST المباشرة لتجاوز حظر GitHub Actions
 async function translateText(text) {
   const cleaned = cleanHtmlText(text);
   if (!cleaned || cleaned.length < 2) return '';
@@ -57,7 +55,7 @@ async function translateText(text) {
       }
     }
   } catch (e) {
-    // في حال التعثر تعود للنص المنظف
+    // في حال الفشل يتم إرجاع النص المُنظف
   }
 
   return cleaned;
@@ -131,7 +129,6 @@ async function run() {
             const translatedDesc = await translateText(rawDesc);
             await delay(100);
 
-            // نضع النص المترجم في جميع الحقول المحتملة لتستعرضها الواجهة بغض النظر عن طريقة البرمجة
             processedItems.push({
               id: item.guid || item.link || item.title,
               title: translatedTitle || rawTitle,
