@@ -35,32 +35,18 @@ function cleanHtmlText(html) {
   return cleaned.trim();
 }
 
-// دالة الترجمة المحسنة والمدعومة بمحركين مختلفين
+// دالة الترجمة المحسنة والمدعومة بمحركين مختلفين مع طباعة التنبيهات
 async function translateText(text) {
   const cleaned = cleanHtmlText(text);
   if (!cleaned || cleaned.length < 2) return '';
 
   const textToTranslate = cleaned.substring(0, 300);
 
-  // المحاولة الأولى: MyMemory API (مباشرة ومضمونة للبيئات السحابية)
+  // 1. تجربة Google Translate أولاً
   try {
-    const myMemoryUrl = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(textToTranslate)}&langpair=en|ar`;
-    const res = await axios.get(myMemoryUrl, { timeout: 6000 });
-    if (res.data && res.data.responseData && res.data.responseData.translatedText) {
-      const result = res.data.responseData.translatedText;
-      if (result && !result.includes('MYMEMORY WARNING') && result.trim() !== textToTranslate) {
-        return result.trim();
-      }
-    }
-  } catch (e) {
-    // الانتقال للبديل عند الفشل
-  }
-
-  // المحاولة الثانية: Google Translate GTX
-  try {
-    const gtxUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ar&dt=t&q=${encodeURIComponent(textToTranslate)}`;
+    const gtxUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=ar&dt=t&q=${encodeURIComponent(textToTranslate)}`;
     const res = await axios.get(gtxUrl, {
-      timeout: 6000,
+      timeout: 5000,
       headers: { 'User-Agent': getRandomUserAgent() }
     });
     if (res.data && res.data[0]) {
@@ -70,10 +56,24 @@ async function translateText(text) {
       }
     }
   } catch (e) {
-    // إرجاع النص المنظف كخيار أخير
+    console.warn(`⚠️ فشلت ترجمة جوجل: ${e.message}`);
   }
 
-  return cleaned;
+  // 2. تجربة MyMemory كخيار احتياطي
+  try {
+    const myMemoryUrl = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(textToTranslate)}&langpair=en|ar`;
+    const res = await axios.get(myMemoryUrl, { timeout: 5000 });
+    if (res.data && res.data.responseData && res.data.responseData.translatedText) {
+      const result = res.data.responseData.translatedText;
+      if (result && !result.includes('MYMEMORY WARNING') && result.trim() !== textToTranslate) {
+        return result.trim();
+      }
+    }
+  } catch (e) {
+    console.warn(`⚠️ فشلت ترجمة MyMemory: ${e.message}`);
+  }
+
+  return cleaned; // إرجاع النص المنظف إذا فشلت المحاولتان
 }
 
 async function fetchFeedContent(url, retries = 3) {
