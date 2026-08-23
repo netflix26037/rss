@@ -1,9 +1,9 @@
 const fs = require('fs');
 const Parser = require('rss-parser');
 const axios = require('axios');
-const translate = require('@iamtraction/google-translate');
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
 function cleanAndExtractText(html) {
   if (!html) return '';
@@ -26,22 +26,48 @@ function cleanAndExtractText(html) {
   return cleaned.trim();
 }
 
-// دالة الترجمة باستخدام المكتبة المخصصة لتجاوز الحظر
 async function translateText(text) {
   if (!text || text.length < 2) return '';
-
-  const textToTranslate = text.substring(0, 300);
-
-  try {
-    const res = await translate(textToTranslate, { to: 'ar' });
-    if (res && res.text && res.text.trim().length > 0) {
-      return res.text.trim();
-    }
-  } catch (e) {
-    console.warn(`⚠️ تعذر ترجمة النص: ${e.message}`);
+  if (!GROQ_API_KEY) {
+    console.warn('⚠️ GROQ_API_KEY غير معرف في GitHub Secrets!');
+    return text;
   }
 
-  return textToTranslate;
+  const shortText = text.substring(0, 400);
+
+  try {
+    const response = await axios.post(
+      'https://api.groq.com/openai/v1/chat/completions',
+      {
+        model: 'llama-3.1-8b-instant',
+        messages: [
+          {
+            role: 'system',
+            content: 'You are a professional translator. Translate the given text accurately to Arabic. Output ONLY the Arabic translation, with no explanation or extra quotes.'
+          },
+          {
+            role: 'user',
+            content: shortText
+          }
+        ],
+        temperature: 0.2
+      },
+      {
+        headers: {
+          'Authorization': `Bearer ${GROQ_API_KEY}`,
+          'Content-Type': 'application/json'
+        },
+        timeout: 10000
+      }
+    );
+
+    const result = response.data?.choices?.[0]?.message?.content?.trim();
+    if (result) return result;
+  } catch (e) {
+    console.error(`❌ خطأ أثناء الترجمة عبر Groq: ${e.message}`);
+  }
+
+  return shortText;
 }
 
 async function fetchFeedContent(url, retries = 2) {
@@ -82,7 +108,7 @@ async function run() {
     const sources = JSON.parse(rawFeeds);
 
     let allArticles = [];
-    console.log(`🚀 بدء الجلب والترجمة المباشرة...`);
+    console.log(`🚀 بدء جلب وترجمة العناوين والمواضيع عبر Groq API...`);
 
     for (const source of sources) {
       if (!source.url) continue;
@@ -99,18 +125,16 @@ async function run() {
         const feed = await parser.parseString(xmlData);
         
         if (feed && feed.items && feed.items.length > 0) {
-          const topItems = feed.items.slice(0, 5);
+          const topItems = feed.items.slice(0, 10);
           const processedItems = [];
 
           for (const item of topItems) {
             const rawTitle = item.title || '';
             const rawDesc = cleanAndExtractText(item.contentSnippet || item.content || item.summary || '');
 
-            // 1. ترجمة العنوان
             const translatedTitle = await translateText(rawTitle);
-            await delay(200);
+            await delay(100);
 
-            // 2. ترجمة الخلاصة أو توليد خلاصة مترجمة
             let finalArabicDesc = '';
             if (rawDesc && rawDesc.length > 5) {
               finalArabicDesc = await translateText(rawDesc);
@@ -118,7 +142,7 @@ async function run() {
               finalArabicDesc = `آخر الأخبار والتحديثات حول "${translatedTitle || rawTitle}" من مجتمع ${source.name}.`;
             }
 
-            await delay(200);
+            await delay(100);
 
             processedItems.push({
               id: item.guid || item.link || item.title,
@@ -146,14 +170,14 @@ async function run() {
         console.error(`✗ خطأ في (${source.name}):`, err.message);
       }
 
-      await delay(1500);
+      await delay(500);
     }
 
     allArticles.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
 
     if (allArticles.length > 0) {
       fs.writeFileSync('articles.json', JSON.stringify(allArticles, null, 2), 'utf8');
-      console.log(`\n✅ تم حفظ المقالات والخلاصات المترجمة في articles.json`);
+      console.log(`\n✅ تم حفظ جميع المقالات والخلاصات المترجمة بنجاح في articles.json`);
     }
 
   } catch (error) {
