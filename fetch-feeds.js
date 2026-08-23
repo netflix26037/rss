@@ -2,12 +2,11 @@ const fs = require('fs');
 const Parser = require('rss-parser');
 const axios = require('axios');
 
-// مصفوفة هويات متصفحات عشوائية لمنع كشف السكريبت
+// هويات متصفحات عشوائية حديثة
 const USER_AGENTS = [
-  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
-  'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/119.0',
-  'RedditNewsDashboard/1.0.0 (by /u/RedditArabicNews)'
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'Mozilla/5.0 (X11; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0'
 ];
 
 function getRandomUserAgent() {
@@ -16,20 +15,15 @@ function getRandomUserAgent() {
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-// دالة تنظيف النص
 function cleanText(text) {
   if (!text) return '';
-  return text
-    .replace(/<[^>]*>/g, '')
-    .replace(/\s+/g, ' ')
-    .trim();
+  return text.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
 }
 
-// دالة الترجمة المحسنة
 async function translateText(text) {
   const cleaned = cleanText(text);
-  if (!cleaned || cleaned.length === 0) return '';
-  const shortText = cleaned.substring(0, 500);
+  if (!cleaned) return '';
+  const shortText = cleaned.substring(0, 400);
 
   try {
     const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ar&dt=t&q=${encodeURIComponent(shortText)}`;
@@ -47,8 +41,7 @@ async function translateText(text) {
   }
 }
 
-// دالة جلب محتوى RSS مع محاولة إعادة الطلب عند الحظر (Retry mechanism)
-async function fetchFeedContent(url, retries = 2) {
+async function fetchFeedContent(url, retries = 3) {
   let targetUrl = url.trim();
 
   if (targetUrl.includes('reddit.com')) {
@@ -58,22 +51,26 @@ async function fetchFeedContent(url, retries = 2) {
     }
   }
 
-  for (let attempt = 1; attempt <= retries + 1; attempt++) {
+  for (let attempt = 1; attempt <= retries; attempt++) {
     try {
       const response = await axios.get(targetUrl, {
         headers: {
           'User-Agent': getRandomUserAgent(),
-          'Accept': 'application/rss+xml, application/xml, text/xml, */*'
+          'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+          'Accept-Language': 'en-US,en;q=0.9',
+          'Cache-Control': 'no-cache'
         },
-        timeout: 15000
+        timeout: 20000
       });
       return response.data;
     } catch (e) {
-      if (e.response && e.response.status === 429 && attempt <= retries) {
-        console.warn(`⏳ حظر مؤقت (429) على (${targetUrl}). إعادة المحاولة بعد 6 ثوانٍ... [محاولة ${attempt}]`);
-        await delay(6000); // الانتظار 6 ثوانٍ قبل التكرار
+      if (e.response && e.response.status === 429) {
+        // زيادة مدة الانتظار تصاعدياً مع كل محاولة (10 ثوانٍ، ثم 15، ثم 20)
+        const waitTime = attempt * 10000;
+        console.warn(`⏳ حظر 429 على (${targetUrl}). انتظار ${waitTime / 1000} ثوانٍ... [محاولة ${attempt}/${retries}]`);
+        await delay(waitTime);
       } else {
-        if (attempt === retries + 1) {
+        if (attempt === retries) {
           console.warn(`⚠️ فشل جلب الرابط (${targetUrl}): ${e.message}`);
         }
       }
@@ -96,13 +93,11 @@ async function run() {
 
       if (Array.isArray(parsedData)) {
         sources = parsedData;
-      } else if (parsedData.sources && Array.isArray(parsedData.sources)) {
+      } else if (parsedData.sources) {
         sources = parsedData.sources;
-      } else if (parsedData.feeds && Array.isArray(parsedData.feeds)) {
-        sources = parsedData.feeds;
       }
     } catch (parseError) {
-      console.error('❌ خطأ في تنسيق ملف feed.json!');
+      console.error('❌ خطأ في ملف feed.json!');
       return;
     }
 
@@ -110,17 +105,14 @@ async function run() {
     console.log(`🚀 بدء جلب الأخبار وترجمتها من إجمالي (${sources.length}) مصدر...`);
 
     for (const source of sources) {
-      if (!source.url) {
-        console.warn(`⚠️ تم تخطي عنصر بدون رابط url: ${source.name || 'بدون اسم'}`);
-        continue;
-      }
+      if (!source.url) continue;
 
       try {
         const xmlData = await fetchFeedContent(source.url);
         
         if (!xmlData) {
           console.warn(`❌ تعذر استلام بيانات من: ${source.name}`);
-          await delay(2000);
+          await delay(3000);
           continue;
         }
 
@@ -133,7 +125,7 @@ async function run() {
         const feed = await parser.parseString(xmlData);
         
         if (feed && feed.items && feed.items.length > 0) {
-          const topItems = feed.items.slice(0, 3); // أخذ أول 3 مقالات لتقليل الحمل
+          const topItems = feed.items.slice(0, 3);
           const processedItems = [];
 
           for (const item of topItems) {
@@ -141,9 +133,9 @@ async function run() {
             const rawDesc = item.contentSnippet || item.content || item.summary || '';
 
             const translatedTitle = await translateText(rawTitle);
-            await delay(100);
+            await delay(120);
             const translatedDesc = await translateText(rawDesc);
-            await delay(100);
+            await delay(120);
 
             processedItems.push({
               id: item.guid || item.link || item.title,
@@ -162,48 +154,35 @@ async function run() {
           }
 
           allArticles.push(...processedItems);
-          console.log(`✓ [نجاح وترجمة] تم جلب وحفظ ${processedItems.length} مقال من: ${source.name}`);
-        } else {
-          console.warn(`⚠️ المصدر لا يحتوي على أي مقالات حالياً: ${source.name}`);
+          console.log(`✓ [نجاح وترجمة] تم جلب ${processedItems.length} مقال من: ${source.name}`);
         }
       } catch (err) {
-        console.error(`✗ خطأ أثناء تحليل RSS لـ (${source.name}):`, err.message);
+        console.error(`✗ خطأ في (${source.name}):`, err.message);
       }
 
-      // تأخير ديناميكي عشوائي بين 2.5 إلى 4 ثوانٍ لتجاوز رادار الحظر
-      const randomWait = Math.floor(Math.random() * 1500) + 2500;
-      await delay(randomWait);
+      // انتظر 4 ثوانٍ كاملة بين كل مصدر لضمان عدم تجاوز قيود Reddit
+      await delay(4000);
     }
 
     allArticles.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
 
     if (allArticles.length > 0) {
       fs.writeFileSync('articles.json', JSON.stringify(allArticles, null, 2), 'utf8');
-      console.log(`\n✅ تم الحفظ بنجاح! إجمالي المقالات المترجمة في articles.json: ${allArticles.length}`);
-    } else {
-      console.error('\n❌ لم يتم الوصول لأي مقال من جميع المصادر المذكورة.');
+      console.log(`\n✅ تم الحفظ بنجاح! إجمالي المقالات المترجمة: ${allArticles.length}`);
     }
 
   } catch (error) {
-    console.error('خطأ عام في السكربت:', error);
+    console.error('خطأ عام:', error);
   }
 }
 
 function extractImage(item) {
-  if (item['media:content'] && item['media:content'].$ && item['media:content'].$.url) {
-    return item['media:content'].$.url;
-  }
-  if (item['media:thumbnail'] && item['media:thumbnail'].$ && item['media:thumbnail'].$.url) {
-    return item['media:thumbnail'].$.url;
-  }
-  if (item.media && item.media['$'] && item.media['$'].url) {
-    return item.media['$'].url;
-  }
+  if (item['media:content'] && item['media:content'].$ && item['media:content'].$.url) return item['media:content'].$.url;
+  if (item['media:thumbnail'] && item['media:thumbnail'].$ && item['media:thumbnail'].$.url) return item['media:thumbnail'].$.url;
+  if (item.media && item.media['$'] && item.media['$'].url) return item.media['$'].url;
   const htmlContent = item.content || item['content:encoded'] || item.summary || '';
   const imgMatch = htmlContent.match(/<img[^>]+src=["']([^"']+)["']/i);
-  if (imgMatch && !imgMatch[1].includes('preview.redd.it/award_images')) {
-    return imgMatch[1];
-  }
+  if (imgMatch && !imgMatch[1].includes('preview.redd.it/award_images')) return imgMatch[1];
   return null;
 }
 
