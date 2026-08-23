@@ -1,35 +1,37 @@
-name: Update RSS Feeds
+name: Fetch and Translate Feeds
 
 on:
   schedule:
-    - cron: '0 * * * *' # تشغيل تلقائي كل ساعة
-  workflow_dispatch: # إمكانية التشغيل اليدوي
+    # تشغيل تلقائي كل ساعة
+    - cron: '0 * * * *'
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 15 # إعطاء مهلة كافية لعملية الترجمة كاملة
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
 
       - name: Install Dependencies
-        run: |
-          npm init -y
-          npm install rss-parser axios
+        run: npm install
 
-      - name: Run Fetch Script
+      - name: Fetch and Process Feeds
         run: node fetch-feeds.js
 
-      - name: Commit and Push Changes
+      - name: Commit and Push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add articles.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update articles.json [skip ci]" && git push)
+          git commit -m "Update articles.json [skip ci]" || exit 0
+          git pull --rebase origin main
+          git push origin main
