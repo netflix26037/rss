@@ -5,7 +5,6 @@ const axios = require('axios');
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
-// النماذج النشطة في Groq مرتبة حسب الأفضلية للترجمة
 const GROQ_MODELS = [
   'openai/gpt-oss-20b',
   'qwen/qwen3.6-27b',
@@ -33,51 +32,62 @@ function cleanAndExtractText(html) {
   return cleaned.trim();
 }
 
-async function translateText(text) {
+async function translateText(text, maxRetries = 3) {
   if (!text || text.length < 2) return '';
   if (!GROQ_API_KEY) {
     console.warn('⚠️ GROQ_API_KEY غير معرف في GitHub Secrets!');
     return text;
   }
 
-  const shortText = text.substring(0, 400);
+  const shortText = text.substring(0, 300);
 
   for (const modelName of GROQ_MODELS) {
-    try {
-      const response = await axios.post(
-        'https://api.groq.com/openai/v1/chat/completions',
-        {
-          model: modelName,
-          messages: [
-            {
-              role: 'system',
-              content: 'You are a professional translator. Translate the given text accurately to Arabic. Output ONLY the Arabic translation, with no explanation or extra quotes.'
-            },
-            {
-              role: 'user',
-              content: shortText
-            }
-          ],
-          temperature: 0.2
-        },
-        {
-          headers: {
-            'Authorization': `Bearer ${GROQ_API_KEY}`,
-            'Content-Type': 'application/json'
+    for (let attempt = 1; attempt <= maxRetries; attempt++) {
+      try {
+        const response = await axios.post(
+          'https://api.groq.com/openai/v1/chat/completions',
+          {
+            model: modelName,
+            messages: [
+              {
+                role: 'system',
+                content: 'You are a professional translator. Translate the given text accurately to Arabic. Output ONLY the Arabic translation, with no explanation or extra quotes.'
+              },
+              {
+                role: 'user',
+                content: shortText
+              }
+            ],
+            temperature: 0.2
           },
-          timeout: 10000
-        }
-      );
+          {
+            headers: {
+              'Authorization': `Bearer ${GROQ_API_KEY}`,
+              'Content-Type': 'application/json'
+            },
+            timeout: 12000
+          }
+        );
 
-      const result = response.data?.choices?.[0]?.message?.content?.trim();
-      if (result) return result;
-    } catch (e) {
-      const errorMsg = e.response?.data?.error?.message || e.message;
-      if (errorMsg.includes('decommissioned') || errorMsg.includes('does not exist') || errorMsg.includes('access')) {
-        continue;
+        const result = response.data?.choices?.[0]?.message?.content?.trim();
+        if (result) return result;
+      } catch (e) {
+        const errorMsg = e.response?.data?.error?.message || e.message;
+
+        // إذا تجاوزت حد الطلبات (Rate limit)، انتظر قليلاً وأعد المحاولة
+        if (errorMsg.includes('Rate limit') || e.response?.status === 429) {
+          const waitTime = attempt * 3000;
+          await delay(waitTime);
+          continue;
+        }
+
+        if (errorMsg.includes('decommissioned') || errorMsg.includes('does not exist') || errorMsg.includes('access')) {
+          break; // انتقل للنموذج التالي
+        }
+
+        console.error(`❌ خطأ أثناء الترجمة (${modelName}): ${errorMsg}`);
+        break;
       }
-      console.error(`❌ خطأ أثناء الترجمة (${modelName}): ${errorMsg}`);
-      break;
     }
   }
 
@@ -147,7 +157,7 @@ async function run() {
             const rawDesc = cleanAndExtractText(item.contentSnippet || item.content || item.summary || '');
 
             const translatedTitle = await translateText(rawTitle);
-            await delay(100);
+            await delay(1200); // زيادة التأخير بين الطلبات لتجنب تجاوز الحد
 
             let finalArabicDesc = '';
             if (rawDesc && rawDesc.length > 5) {
@@ -156,7 +166,7 @@ async function run() {
               finalArabicDesc = `آخر الأخبار والتحديثات حول "${translatedTitle || rawTitle}" من مجتمع ${source.name}.`;
             }
 
-            await delay(100);
+            await delay(1200);
 
             processedItems.push({
               id: item.guid || item.link || item.title,
@@ -184,7 +194,7 @@ async function run() {
         console.error(`✗ خطأ في (${source.name}):`, err.message);
       }
 
-      await delay(500);
+      await delay(1500);
     }
 
     allArticles.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
