@@ -5,10 +5,11 @@ const axios = require('axios');
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
+// النماذج المعتمدة والرسمية من Groq
 const GROQ_MODELS = [
-  'openai/gpt-oss-20b',
-  'qwen/qwen3.6-27b',
-  'openai/gpt-oss-120b'
+  'llama-3.3-70b-versatile',
+  'llama-3.1-8b-instant',
+  'mixtral-8x7b-32768'
 ];
 
 function cleanAndExtractText(html) {
@@ -32,7 +33,7 @@ function cleanAndExtractText(html) {
   return cleaned.trim();
 }
 
-async function translateText(text, maxRetries = 3) {
+async function translateText(text, maxRetries = 2) {
   if (!text || text.length < 2) return '';
   if (!GROQ_API_KEY) {
     console.warn('⚠️ GROQ_API_KEY غير معرف في GitHub Secrets!');
@@ -65,7 +66,7 @@ async function translateText(text, maxRetries = 3) {
               'Authorization': `Bearer ${GROQ_API_KEY}`,
               'Content-Type': 'application/json'
             },
-            timeout: 12000
+            timeout: 10000
           }
         );
 
@@ -74,18 +75,16 @@ async function translateText(text, maxRetries = 3) {
       } catch (e) {
         const errorMsg = e.response?.data?.error?.message || e.message;
 
-        // إذا تجاوزت حد الطلبات (Rate limit)، انتظر قليلاً وأعد المحاولة
         if (errorMsg.includes('Rate limit') || e.response?.status === 429) {
-          const waitTime = attempt * 3000;
-          await delay(waitTime);
+          await delay(2000);
           continue;
         }
 
-        if (errorMsg.includes('decommissioned') || errorMsg.includes('does not exist') || errorMsg.includes('access')) {
-          break; // انتقل للنموذج التالي
+        if (errorMsg.includes('Invalid API Key') || e.response?.status === 401) {
+          console.error(`❌ خطأ مفتاح API غير صحيح: تأكد من إضافته في GitHub Secrets باسم GROQ_API_KEY`);
+          return shortText;
         }
 
-        console.error(`❌ خطأ أثناء الترجمة (${modelName}): ${errorMsg}`);
         break;
       }
     }
@@ -123,13 +122,28 @@ async function fetchFeedContent(url, retries = 2) {
 
 async function run() {
   try {
-    if (!fs.existsSync('feed.json')) {
-      console.error('❌ خطأ: ملف feed.json غير موجود!');
+    let rawFeeds = '[]';
+    if (fs.existsSync('feed.json')) {
+      rawFeeds = fs.readFileSync('feed.json', 'utf8');
+    } else if (fs.existsSync('sources.json')) {
+      rawFeeds = fs.readFileSync('sources.json', 'utf8');
+    } else {
+      console.error('❌ خطأ: لم يتم العثور على ملف التغذية (feed.json)!');
       return;
     }
 
-    const rawFeeds = fs.readFileSync('feed.json', 'utf8');
-    const sources = JSON.parse(rawFeeds);
+    let sources = [];
+    try {
+      sources = JSON.parse(rawFeeds);
+    } catch (e) {
+      console.error('❌ خطأ في تنسيق JSON الخاص بمصادر التغذية.');
+      return;
+    }
+
+    // إذا كان feed.json يحتوي مقالات مسبقة وليس مصادر روابط
+    if (!Array.isArray(sources) || (sources.length > 0 && !sources[0].url)) {
+      console.log('ℹ️ feed.json يحتوي بيانات مقالات جاهزة، سيتم معالجتها واستمرار العمل.');
+    }
 
     let allArticles = [];
     console.log(`🚀 بدء جلب وترجمة العناوين والمواضيع عبر Groq API...`);
@@ -157,16 +171,16 @@ async function run() {
             const rawDesc = cleanAndExtractText(item.contentSnippet || item.content || item.summary || '');
 
             const translatedTitle = await translateText(rawTitle);
-            await delay(1200); // زيادة التأخير بين الطلبات لتجنب تجاوز الحد
+            await delay(800);
 
             let finalArabicDesc = '';
             if (rawDesc && rawDesc.length > 5) {
               finalArabicDesc = await translateText(rawDesc);
             } else {
-              finalArabicDesc = `آخر الأخبار والتحديثات حول "${translatedTitle || rawTitle}" من مجتمع ${source.name}.`;
+              finalArabicDesc = `آخر الأخبار والتحديثات حول "${translatedTitle || rawTitle}" من مجتمع ${source.name || 'الخبر'}.`;
             }
 
-            await delay(1200);
+            await delay(800);
 
             processedItems.push({
               id: item.guid || item.link || item.title,
@@ -178,7 +192,7 @@ async function run() {
               description: finalArabicDesc,
               arabicDescription: finalArabicDesc,
               originalDescription: rawDesc || rawTitle,
-              sourceName: source.name,
+              sourceName: source.name || 'عام',
               category: source.category || 'عام',
               media: {
                 image: extractImage(item),
@@ -188,24 +202,27 @@ async function run() {
           }
 
           allArticles.push(...processedItems);
-          console.log(`✓ تم جلب وترجمة (${processedItems.length}) مقال من: ${source.name}`);
+          console.log(`✓ تم جلب وترجمة (${processedItems.length}) مقال من: ${source.name || source.url}`);
         }
       } catch (err) {
-        console.error(`✗ خطأ في (${source.name}):`, err.message);
+        console.error(`✗ خطأ في (${source.name || source.url}):`, err.message);
       }
 
-      await delay(1500);
+      await delay(1000);
     }
 
     allArticles.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
 
     if (allArticles.length > 0) {
       fs.writeFileSync('articles.json', JSON.stringify(allArticles, null, 2), 'utf8');
-      console.log(`\n✅ تم حفظ جميع المقالات والخلاصات المترجمة بنجاح في articles.json`);
+      fs.writeFileSync('feed.json', JSON.stringify(allArticles, null, 2), 'utf8');
+      console.log(`\n✅ تم حفظ جميع المقالات المترجمة بنجاح في articles.json و feed.json`);
+    } else {
+      console.warn('⚠️ لم يتم جلب مقالات جديدة.');
     }
 
   } catch (error) {
-    console.error('خطأ عام:', error);
+    console.error('خطأ عام أثناء التشغيل:', error);
   }
 }
 
