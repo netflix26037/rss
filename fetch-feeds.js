@@ -1,10 +1,10 @@
 const fs = require('fs');
 const Parser = require('rss-parser');
 const axios = require('axios');
+const translate = require('@iamtraction/google-translate');
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-// 1. تنظيف النصوص وتجريدها من HTML ومخلفات ريديت
 function cleanAndExtractText(html) {
   if (!html) return '';
   
@@ -18,7 +18,6 @@ function cleanAndExtractText(html) {
     .replace(/\s+/g, ' ')
     .trim();
 
-  // إزالة التواقيع والأزرار التلقائية من ريديت
   cleaned = cleaned.replace(/submitted by\s+\/u\/\S+/gi, '');
   cleaned = cleaned.replace(/to\s+r\/\S+/gi, '');
   cleaned = cleaned.replace(/\[link\]/gi, '');
@@ -27,38 +26,19 @@ function cleanAndExtractText(html) {
   return cleaned.trim();
 }
 
-// 2. دالة الترجمة المباشرة مع معالجة الأخطاء
+// دالة الترجمة باستخدام المكتبة المخصصة لتجاوز الحظر
 async function translateText(text) {
   if (!text || text.length < 2) return '';
 
-  const textToTranslate = text.substring(0, 350);
+  const textToTranslate = text.substring(0, 300);
 
   try {
-    const res = await axios({
-      method: 'post',
-      url: 'https://translate.googleapis.com/translate_a/single',
-      params: {
-        client: 'gtx',
-        sl: 'auto',
-        tl: 'ar',
-        dt: 't',
-        q: textToTranslate
-      },
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-      timeout: 6000
-    });
-
-    if (res.data && res.data[0]) {
-      const translated = res.data[0].map(item => item[0]).join('');
-      if (translated && translated.trim().length > 0) {
-        return translated.trim();
-      }
+    const res = await translate(textToTranslate, { to: 'ar' });
+    if (res && res.text && res.text.trim().length > 0) {
+      return res.text.trim();
     }
   } catch (e) {
-    // في حال تعثر الترجمة نرجع النص الأصلي
+    console.warn(`⚠️ تعذر ترجمة النص: ${e.message}`);
   }
 
   return textToTranslate;
@@ -102,7 +82,7 @@ async function run() {
     const sources = JSON.parse(rawFeeds);
 
     let allArticles = [];
-    console.log(`🚀 بدء جلب وترجمة العناوين والخلاصات...`);
+    console.log(`🚀 بدء الجلب والترجمة المباشرة...`);
 
     for (const source of sources) {
       if (!source.url) continue;
@@ -128,20 +108,17 @@ async function run() {
 
             // 1. ترجمة العنوان
             const translatedTitle = await translateText(rawTitle);
-            await delay(150);
+            await delay(200);
 
-            // 2. معالجة وترجمة الخلاصة
+            // 2. ترجمة الخلاصة أو توليد خلاصة مترجمة
             let finalArabicDesc = '';
-
             if (rawDesc && rawDesc.length > 5) {
-              // إذا كان هناك نص وصف حقيقي يقوم بفرزه وترجمته
               finalArabicDesc = await translateText(rawDesc);
             } else {
-              // إذا كانت الخلاصة فارغة (منشور صورة/رابط)، ننشئ خلاصة مترجمة بالاعتماد على العنوان والمصدر
-              finalArabicDesc = `آخر التحديثات والأخبار حول "${translatedTitle || rawTitle}" عبر مجتمع ${source.name}.`;
+              finalArabicDesc = `آخر الأخبار والتحديثات حول "${translatedTitle || rawTitle}" من مجتمع ${source.name}.`;
             }
 
-            await delay(150);
+            await delay(200);
 
             processedItems.push({
               id: item.guid || item.link || item.title,
@@ -163,7 +140,7 @@ async function run() {
           }
 
           allArticles.push(...processedItems);
-          console.log(`✓ تم جلب وترجمة (${processedItems.length}) مقال وخلاصة من: ${source.name}`);
+          console.log(`✓ تم جلب وترجمة (${processedItems.length}) مقال من: ${source.name}`);
         }
       } catch (err) {
         console.error(`✗ خطأ في (${source.name}):`, err.message);
@@ -176,7 +153,7 @@ async function run() {
 
     if (allArticles.length > 0) {
       fs.writeFileSync('articles.json', JSON.stringify(allArticles, null, 2), 'utf8');
-      console.log(`\n✅ اكتملت العملية! تم حفظ المقالات والخلاصات المترجمة في articles.json`);
+      console.log(`\n✅ تم حفظ المقالات والخلاصات المترجمة في articles.json`);
     }
 
   } catch (error) {
