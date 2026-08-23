@@ -17,6 +17,40 @@
     }
   },
   {
+    "id": "https://www.reddit.com/r/btc/comments/1vw89eh/money/",
+    "title": "MoneY",
+    "arabicTitle": "MoneY",
+    "originalTitle": "MoneY",
+    "link": "https://www.reddit.com/r/btc/comments/1vw89eh/money/",
+    "pubDate": "2026-08-23T14:12:23.000Z",
+    "description": "Looked over u/usernameeeeee12 update from an hour back and followed along. Everything went well, and the balance updated fine.",
+    "arabicDescription": "Looked over u/usernameeeeee12 update from an hour back and followed along. Everything went well, and the balance updated fine.",
+    "originalDescription": "Looked over u/usernameeeeee12 update from an hour back and followed along. Everything went well, and the balance updated fine.",
+    "sourceName": "العملات الرقمية - مجموعة 3",
+    "category": "كريبتو",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/sui/comments/1vw87o9/wanbridges_sui_routes_are_back_quick_breakdown_of/",
+    "title": "WanBridge's SUI routes are back, quick breakdown of how the CCTP side actually works",
+    "arabicTitle": "WanBridge's SUI routes are back, quick breakdown of how the CCTP side actually works",
+    "originalTitle": "WanBridge's SUI routes are back, quick breakdown of how the CCTP side actually works",
+    "link": "https://www.reddit.com/r/sui/comments/1vw87o9/wanbridges_sui_routes_are_back_quick_breakdown_of/",
+    "pubDate": "2026-08-23T14:10:18.000Z",
+    "description": "WanBridge restored all its SUI routes on Aug 20 after wrapping up a security review of the integration. Since a few people in here have asked how bridging USDC into SUI actually works under the hood, figured I'd break it down. Wanchain uses Circle's CCTP for USDC specifically, which works differently from most bridges you're used to. Native USDC gets burned on the source chain (say, Ethereum or Ar",
+    "arabicDescription": "WanBridge restored all its SUI routes on Aug 20 after wrapping up a security review of the integration. Since a few people in here have asked how bridging USDC into SUI actually works under the hood, figured I'd break it down. Wanchain uses Circle's CCTP for USDC specifically, which works differently from most bridges you're used to. Native USDC gets burned on the source chain (say, Ethereum or Ar",
+    "originalDescription": "WanBridge restored all its SUI routes on Aug 20 after wrapping up a security review of the integration. Since a few people in here have asked how bridging USDC into SUI actually works under the hood, figured I'd break it down. Wanchain uses Circle's CCTP for USDC specifically, which works differently from most bridges you're used to. Native USDC gets burned on the source chain (say, Ethereum or Arbitrum). Circle's attestation service signs off on that burn. Native USDC then gets minted on SUI, the same asset, not a wrapped version. The advantage over the older lock and mint model is that there's no synthetic token sitting in a pool somewhere. You're always holding real, Circle issued USDC on both ends. Wanchain's been building out CCTP coverage chain by chain since 2023 (Ethereum, Avalanche, Arbitrum, Optimism, Base), and SUI is the newest addition to get full route support back. Bridge: bridge.wanchain.org",
+    "sourceName": "العملات الرقمية - مجموعة 3",
+    "category": "كريبتو",
+    "media": {
+      "image": "https://preview.redd.it/92n2j2qvs4lh1.jpeg?width=640&crop=smart&auto=webp&s=2d8bd8600902df1ee312ad290c83d4e7751be31b",
+      "video": null
+    }
+  },
+  {
     "id": "https://www.reddit.com/r/PoursTea/comments/1vw7efu/far_right_activist_and_pardoned_january_6th/",
     "title": "Far right activist and pardoned January 6th rioter Jake Lang arrested in Minneapolis.",
     "arabicTitle": "Far right activist and pardoned January 6th rioter Jake Lang arrested in Minneapolis.",
@@ -34,36 +68,36 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/EU_Economics/comments/1vw70hy/germany_plans_a_12b_missile_program_to_deter_putin/",
-    "title": "Germany plans a €12B missile program to deter Putin",
-    "arabicTitle": "Germany plans a €12B missile program to deter Putin",
-    "originalTitle": "Germany plans a €12B missile program to deter Putin",
-    "link": "https://www.reddit.com/r/EU_Economics/comments/1vw70hy/germany_plans_a_12b_missile_program_to_deter_putin/",
-    "pubDate": "2026-08-23T13:19:06.000Z",
-    "description": "آخر الأخبار والتحديثات حول \"Germany plans a €12B missile program to deter Putin\" من مجتمع الاقتصاد والنفط والأسواق.",
-    "arabicDescription": "آخر الأخبار والتحديثات حول \"Germany plans a €12B missile program to deter Putin\" من مجتمع الاقتصاد والنفط والأسواق.",
-    "originalDescription": "Germany plans a €12B missile program to deter Putin",
-    "sourceName": "الاقتصاد والنفط والأسواق",
-    "category": "الاقتصاد",
+    "id": "https://www.reddit.com/r/sui/comments/1vw7572/sui_interax_scanner/",
+    "title": "Sui INTERAX Scanner",
+    "arabicTitle": "Sui INTERAX Scanner",
+    "originalTitle": "Sui INTERAX Scanner",
+    "link": "https://www.reddit.com/r/sui/comments/1vw7572/sui_interax_scanner/",
+    "pubDate": "2026-08-23T13:24:53.000Z",
+    "description": "آخر الأخبار والتحديثات حول \"Sui INTERAX Scanner\" من مجتمع العملات الرقمية - مجموعة 3.",
+    "arabicDescription": "آخر الأخبار والتحديثات حول \"Sui INTERAX Scanner\" من مجتمع العملات الرقمية - مجموعة 3.",
+    "originalDescription": "Sui INTERAX Scanner",
+    "sourceName": "العملات الرقمية - مجموعة 3",
+    "category": "كريبتو",
     "media": {
-      "image": "https://external-preview.redd.it/KV_1-TsPyM3JliG5Rv8mThamDzC84qlmgzQ30Hkj6wU.jpeg?width=640&crop=smart&auto=webp&s=c19882ea3c93378f94bbda2a23a5e2e1dcbeb0a5",
+      "image": "https://external-preview.redd.it/4ggp4Wavszutv-0QHMneATEFC6ZuO078tCnquHsU4Uk.jpeg?width=320&crop=smart&auto=webp&s=eb4fd22593a872ff13cae1aa2cd0f9df770f57af",
       "video": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/Economics/comments/1vw6wca/how_trumps_tariffs_work_to_redistribute_wealth_up/",
-    "title": "How Trump's tariffs work to redistribute wealth up the food chain | U.S. president's tariffs have transferred billions from working Americans to big corporations and the rich",
-    "arabicTitle": "How Trump's tariffs work to redistribute wealth up the food chain | U.S. president's tariffs have transferred billions from working Americans to big corporations and the rich",
-    "originalTitle": "How Trump's tariffs work to redistribute wealth up the food chain | U.S. president's tariffs have transferred billions from working Americans to big corporations and the rich",
-    "link": "https://www.reddit.com/r/Economics/comments/1vw6wca/how_trumps_tariffs_work_to_redistribute_wealth_up/",
-    "pubDate": "2026-08-23T13:14:02.000Z",
-    "description": "آخر الأخبار والتحديثات حول \"How Trump's tariffs work to redistribute wealth up the food chain | U.S. president's tariffs have transferred billions from working Americans to big corporations and the rich\" من مجتمع الاقتصاد والنفط والأسواق.",
-    "arabicDescription": "آخر الأخبار والتحديثات حول \"How Trump's tariffs work to redistribute wealth up the food chain | U.S. president's tariffs have transferred billions from working Americans to big corporations and the rich\" من مجتمع الاقتصاد والنفط والأسواق.",
-    "originalDescription": "How Trump's tariffs work to redistribute wealth up the food chain | U.S. president's tariffs have transferred billions from working Americans to big corporations and the rich",
-    "sourceName": "الاقتصاد والنفط والأسواق",
-    "category": "الاقتصاد",
+    "id": "https://www.reddit.com/r/sui/comments/1vw74tj/sui_interax_scanner/",
+    "title": "Sui INTERAX Scanner",
+    "arabicTitle": "Sui INTERAX Scanner",
+    "originalTitle": "Sui INTERAX Scanner",
+    "link": "https://www.reddit.com/r/sui/comments/1vw74tj/sui_interax_scanner/",
+    "pubDate": "2026-08-23T13:24:27.000Z",
+    "description": "🚨 Exciting news! My application, Sui INTERAX Scanner, is officially LIVE and submitted to the $100K Emergent Builder Fest and the Sui Foundation Directory! 🚀🔥 I built this platform to solve the single biggest bottleneck holding back corporate and institutional crypto adoption: strict regulatory compliance. What does it do?Sui INTERAX Scanner is an AI-driven Forensic Compliance platform running ",
+    "arabicDescription": "🚨 Exciting news! My application, Sui INTERAX Scanner, is officially LIVE and submitted to the $100K Emergent Builder Fest and the Sui Foundation Directory! 🚀🔥 I built this platform to solve the single biggest bottleneck holding back corporate and institutional crypto adoption: strict regulatory compliance. What does it do?Sui INTERAX Scanner is an AI-driven Forensic Compliance platform running ",
+    "originalDescription": "🚨 Exciting news! My application, Sui INTERAX Scanner, is officially LIVE and submitted to the $100K Emergent Builder Fest and the Sui Foundation Directory! 🚀🔥 I built this platform to solve the single biggest bottleneck holding back corporate and institutional crypto adoption: strict regulatory compliance. What does it do?Sui INTERAX Scanner is an AI-driven Forensic Compliance platform running live on the Sui Mainnet. With just one tap, it automatically scans complex on-chain transaction data and translates multi-hop asset routing into an immutable, court-ready 'Proces-Verbaal' forensic report (PDF) Key Features: Multi-Jurisdictional AI: Automatically applies European MiCA/Wwft rules or US SEC guidelines and Form 1099-DA cost-basis data fields depending on the case. Mobile-Native Wallet Connection: Seamlessly integrated with Surf Wallet standards and zkLogin parameters. Cryptographic Proof: Every generated report features a deterministic SHA-256 evidence hash bundle to prove the data is completely untampered. No PowerPoint slides here I built a fully functional B2B SaaS prototype running live on the blockchain. 🌐🏆 👉Check out my submission here and drop a vote if you like real utility: https://app.emergent.sh/.../813c68c7-c503-487f-bf0f... #suit #SuiNetwork #Emergent #BuildersContest #AI #Blockchain #CryptoCompliance #MiCA #Web3 #Solobuilder #Hashi",
+    "sourceName": "العملات الرقمية - مجموعة 3",
+    "category": "كريبتو",
     "media": {
-      "image": null,
+      "image": "https://external-preview.redd.it/4ggp4Wavszutv-0QHMneATEFC6ZuO078tCnquHsU4Uk.jpeg?width=320&crop=smart&auto=webp&s=eb4fd22593a872ff13cae1aa2cd0f9df770f57af",
       "video": null
     }
   },
@@ -102,36 +136,53 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/EconomyCharts/comments/1vw58wb/harvard_tuition_vs_usa_inflation_150_from_1900/",
-    "title": "Harvard Tuition vs USA Inflation ($150 from 1900)",
-    "arabicTitle": "Harvard Tuition vs USA Inflation ($150 from 1900)",
-    "originalTitle": "Harvard Tuition vs USA Inflation ($150 from 1900)",
-    "link": "https://www.reddit.com/r/EconomyCharts/comments/1vw58wb/harvard_tuition_vs_usa_inflation_150_from_1900/",
-    "pubDate": "2026-08-23T11:55:43.000Z",
-    "description": "آخر الأخبار والتحديثات حول \"Harvard Tuition vs USA Inflation ($150 from 1900)\" من مجتمع الاقتصاد والنفط والأسواق.",
-    "arabicDescription": "آخر الأخبار والتحديثات حول \"Harvard Tuition vs USA Inflation ($150 from 1900)\" من مجتمع الاقتصاد والنفط والأسواق.",
-    "originalDescription": "Harvard Tuition vs USA Inflation ($150 from 1900)",
-    "sourceName": "الاقتصاد والنفط والأسواق",
-    "category": "الاقتصاد",
+    "id": "https://www.reddit.com/r/dogecoin/comments/1vw3zh6/manbeardoge_is_finally_gone/",
+    "title": "Manbeardoge is finally gone",
+    "arabicTitle": "Manbeardoge is finally gone",
+    "originalTitle": "Manbeardoge is finally gone",
+    "link": "https://www.reddit.com/r/dogecoin/comments/1vw3zh6/manbeardoge_is_finally_gone/",
+    "pubDate": "2026-08-23T10:48:10.000Z",
+    "description": "آخر الأخبار والتحديثات حول \"Manbeardoge is finally gone\" من مجتمع العملات الرقمية - مجموعة 3.",
+    "arabicDescription": "آخر الأخبار والتحديثات حول \"Manbeardoge is finally gone\" من مجتمع العملات الرقمية - مجموعة 3.",
+    "originalDescription": "Manbeardoge is finally gone",
+    "sourceName": "العملات الرقمية - مجموعة 3",
+    "category": "كريبتو",
     "media": {
-      "image": "https://preview.redd.it/zfxhd0x954lh1.jpeg?width=640&crop=smart&auto=webp&s=aefe209e284f65ab22c42fd281bce3db6604a645",
+      "image": "https://preview.redd.it/tdi2dqdyt3lh1.jpeg?width=640&crop=smart&auto=webp&s=c3e6072ca9a68e269978993a4f7e786a1a5c4910",
       "video": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/economy/comments/1vw3xmw/some_americans_dont_believe_all_people_are/",
-    "title": "Some Americans don’t believe all people are created equal. Their movement is going mainstream, this author says",
-    "arabicTitle": "Some Americans don’t believe all people are created equal. Their movement is going mainstream, this author says",
-    "originalTitle": "Some Americans don’t believe all people are created equal. Their movement is going mainstream, this author says",
-    "link": "https://www.reddit.com/r/economy/comments/1vw3xmw/some_americans_dont_believe_all_people_are/",
-    "pubDate": "2026-08-23T10:45:23.000Z",
-    "description": "آخر الأخبار والتحديثات حول \"Some Americans don’t believe all people are created equal. Their movement is going mainstream, this author says\" من مجتمع الاقتصاد والنفط والأسواق.",
-    "arabicDescription": "آخر الأخبار والتحديثات حول \"Some Americans don’t believe all people are created equal. Their movement is going mainstream, this author says\" من مجتمع الاقتصاد والنفط والأسواق.",
-    "originalDescription": "Some Americans don’t believe all people are created equal. Their movement is going mainstream, this author says",
-    "sourceName": "الاقتصاد والنفط والأسواق",
-    "category": "الاقتصاد",
+    "id": "https://www.reddit.com/r/CryptoCurrency/comments/1vvzlz5/that_house_fund_disappeared_real_quick/",
+    "title": "That house fund disappeared real quick",
+    "arabicTitle": "That house fund disappeared real quick",
+    "originalTitle": "That house fund disappeared real quick",
+    "link": "https://www.reddit.com/r/CryptoCurrency/comments/1vvzlz5/that_house_fund_disappeared_real_quick/",
+    "pubDate": "2026-08-23T06:34:49.000Z",
+    "description": "آخر الأخبار والتحديثات حول \"That house fund disappeared real quick\" من مجتمع العملات الرقمية - مجموعة 3.",
+    "arabicDescription": "آخر الأخبار والتحديثات حول \"That house fund disappeared real quick\" من مجتمع العملات الرقمية - مجموعة 3.",
+    "originalDescription": "That house fund disappeared real quick",
+    "sourceName": "العملات الرقمية - مجموعة 3",
+    "category": "كريبتو",
     "media": {
-      "image": "https://external-preview.redd.it/7hMlXa_rNKw59c4UZB5-N_00b-ecYknLI-cY3gHcXiM.jpeg?width=640&crop=smart&auto=webp&s=e3730e0c033ab9712cdbfbb6abe898713a20e100",
+      "image": "https://preview.redd.it/697oc4wik2lh1.jpeg?width=320&crop=smart&auto=webp&s=018a1f92a9532880413c90e07dd38fa97398129b",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/dogecoin/comments/1vvz9y3/posting_until_doge_hits_1_day_122/",
+    "title": "Posting until DOGE hits $1 - day 122",
+    "arabicTitle": "Posting until DOGE hits $1 - day 122",
+    "originalTitle": "Posting until DOGE hits $1 - day 122",
+    "link": "https://www.reddit.com/r/dogecoin/comments/1vvz9y3/posting_until_doge_hits_1_day_122/",
+    "pubDate": "2026-08-23T06:15:41.000Z",
+    "description": "آخر الأخبار والتحديثات حول \"Posting until DOGE hits $1 - day 122\" من مجتمع العملات الرقمية - مجموعة 3.",
+    "arabicDescription": "آخر الأخبار والتحديثات حول \"Posting until DOGE hits $1 - day 122\" من مجتمع العملات الرقمية - مجموعة 3.",
+    "originalDescription": "Posting until DOGE hits $1 - day 122",
+    "sourceName": "العملات الرقمية - مجموعة 3",
+    "category": "كريبتو",
+    "media": {
+      "image": null,
       "video": null
     }
   },
@@ -153,36 +204,19 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/NoFilterFinance/comments/1vvxomb/at_a_time_when_the_billionaire_class_has_never/",
-    "title": "At a time when the billionaire class has never ever had it so good, a new poll finds that 67% of Americans believe the wealthy are not paying their fair share of taxes. And they’re right. Congress: Listen to the American people. Tax billionaire wealth.",
-    "arabicTitle": "At a time when the billionaire class has never ever had it so good, a new poll finds that 67% of Americans believe the wealthy are not paying their fair share of taxes. And they’re right. Congress: Listen to the American people. Tax billionaire wealth.",
-    "originalTitle": "At a time when the billionaire class has never ever had it so good, a new poll finds that 67% of Americans believe the wealthy are not paying their fair share of taxes. And they’re right. Congress: Listen to the American people. Tax billionaire wealth.",
-    "link": "https://www.reddit.com/r/NoFilterFinance/comments/1vvxomb/at_a_time_when_the_billionaire_class_has_never/",
-    "pubDate": "2026-08-23T04:47:12.000Z",
-    "description": "آخر الأخبار والتحديثات حول \"At a time when the billionaire class has never ever had it so good, a new poll finds that 67% of Americans believe the wealthy are not paying their fair share of taxes. And they’re right. Congress: Listen to the American people. Tax billionaire wealth.\" من مجتمع الاقتصاد والنفط والأسواق.",
-    "arabicDescription": "آخر الأخبار والتحديثات حول \"At a time when the billionaire class has never ever had it so good, a new poll finds that 67% of Americans believe the wealthy are not paying their fair share of taxes. And they’re right. Congress: Listen to the American people. Tax billionaire wealth.\" من مجتمع الاقتصاد والنفط والأسواق.",
-    "originalDescription": "At a time when the billionaire class has never ever had it so good, a new poll finds that 67% of Americans believe the wealthy are not paying their fair share of taxes. And they’re right. Congress: Listen to the American people. Tax billionaire wealth.",
-    "sourceName": "الاقتصاد والنفط والأسواق",
-    "category": "الاقتصاد",
+    "id": "https://www.reddit.com/r/sui/comments/1vvte11/suis_deepbook/",
+    "title": "SUI’s DeepBook",
+    "arabicTitle": "SUI’s DeepBook",
+    "originalTitle": "SUI’s DeepBook",
+    "link": "https://www.reddit.com/r/sui/comments/1vvte11/suis_deepbook/",
+    "pubDate": "2026-08-23T01:08:07.000Z",
+    "description": "Constructive commentary provided by Blub builder. It is refreshing to see an independent SUI project provide such candor. Healthy discourse, specifically from Mysten Labs welcome.",
+    "arabicDescription": "Constructive commentary provided by Blub builder. It is refreshing to see an independent SUI project provide such candor. Healthy discourse, specifically from Mysten Labs welcome.",
+    "originalDescription": "Constructive commentary provided by Blub builder. It is refreshing to see an independent SUI project provide such candor. Healthy discourse, specifically from Mysten Labs welcome.",
+    "sourceName": "العملات الرقمية - مجموعة 3",
+    "category": "كريبتو",
     "media": {
-      "image": "https://preview.redd.it/fn8rr8lk12lh1.jpeg?width=640&crop=smart&auto=webp&s=216b944cb4dcce55ac5263acd6d9e6fb536071ec",
-      "video": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/oil/comments/1vvr1xs/oil_importer_china_wont_aid_trump_economic/",
-    "title": "Oil importer China won't aid Trump economic warfare against Iran - Asia Times",
-    "arabicTitle": "Oil importer China won't aid Trump economic warfare against Iran - Asia Times",
-    "originalTitle": "Oil importer China won't aid Trump economic warfare against Iran - Asia Times",
-    "link": "https://www.reddit.com/r/oil/comments/1vvr1xs/oil_importer_china_wont_aid_trump_economic/",
-    "pubDate": "2026-08-22T23:20:44.000Z",
-    "description": "آخر الأخبار والتحديثات حول \"Oil importer China won't aid Trump economic warfare against Iran - Asia Times\" من مجتمع الاقتصاد والنفط والأسواق.",
-    "arabicDescription": "آخر الأخبار والتحديثات حول \"Oil importer China won't aid Trump economic warfare against Iran - Asia Times\" من مجتمع الاقتصاد والنفط والأسواق.",
-    "originalDescription": "Oil importer China won't aid Trump economic warfare against Iran - Asia Times",
-    "sourceName": "الاقتصاد والنفط والأسواق",
-    "category": "الاقتصاد",
-    "media": {
-      "image": "https://external-preview.redd.it/kosglnpP5aW_hylugx7wloFca12rgx-spf8quCRQ9w0.jpeg?width=640&crop=smart&auto=webp&s=2f4b4d60777aa82834954f3a1b68c2daea8eb234",
+      "image": "https://preview.redd.it/6bh3dwihy0lh1.jpg?width=140&height=140&crop=1:1,smart&auto=webp&s=b2b8d1be8c522d9e768c878459d0754797408e7d",
       "video": null
     }
   },
@@ -238,23 +272,6 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/inflation/comments/1vvlmmo/the_new_golden_age_trump_promised/",
-    "title": "the \"New Golden Age\" trump promised",
-    "arabicTitle": "the \"New Golden Age\" trump promised",
-    "originalTitle": "the \"New Golden Age\" trump promised",
-    "link": "https://www.reddit.com/r/inflation/comments/1vvlmmo/the_new_golden_age_trump_promised/",
-    "pubDate": "2026-08-22T19:33:02.000Z",
-    "description": "آخر الأخبار والتحديثات حول \"the \"New Golden Age\" trump promised\" من مجتمع الاقتصاد والنفط والأسواق.",
-    "arabicDescription": "آخر الأخبار والتحديثات حول \"the \"New Golden Age\" trump promised\" من مجتمع الاقتصاد والنفط والأسواق.",
-    "originalDescription": "the \"New Golden Age\" trump promised",
-    "sourceName": "الاقتصاد والنفط والأسواق",
-    "category": "الاقتصاد",
-    "media": {
-      "image": null,
-      "video": null
-    }
-  },
-  {
     "id": "https://www.reddit.com/r/PoursTea/comments/1vvlha9/both_sides_should_agree_that_this_is_needed/",
     "title": "Both sides should agree that this is needed.",
     "arabicTitle": "Both sides should agree that this is needed.",
@@ -272,19 +289,19 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/oil/comments/1vvjzw6/iran_directly_rejects_axiostrumps_claim_of_16/",
-    "title": "Iran directly rejects Axios/Trump's claim of 16 million barrels of oil exiting the Strait last night",
-    "arabicTitle": "Iran directly rejects Axios/Trump's claim of 16 million barrels of oil exiting the Strait last night",
-    "originalTitle": "Iran directly rejects Axios/Trump's claim of 16 million barrels of oil exiting the Strait last night",
-    "link": "https://www.reddit.com/r/oil/comments/1vvjzw6/iran_directly_rejects_axiostrumps_claim_of_16/",
-    "pubDate": "2026-08-22T18:29:59.000Z",
-    "description": "https://x.com/hormuzletter/status/2091225564762009813?s=46",
-    "arabicDescription": "https://x.com/hormuzletter/status/2091225564762009813?s=46",
-    "originalDescription": "https://x.com/hormuzletter/status/2091225564762009813?s=46",
-    "sourceName": "الاقتصاد والنفط والأسواق",
-    "category": "الاقتصاد",
+    "id": "https://www.reddit.com/r/litecoin/comments/1vvj2jo/ltc_47/",
+    "title": "LTC 4.7",
+    "arabicTitle": "LTC 4.7",
+    "originalTitle": "LTC 4.7",
+    "link": "https://www.reddit.com/r/litecoin/comments/1vvj2jo/ltc_47/",
+    "pubDate": "2026-08-22T17:54:14.000Z",
+    "description": "Almost here. Finish line to 100LTC",
+    "arabicDescription": "Almost here. Finish line to 100LTC",
+    "originalDescription": "Almost here. Finish line to 100LTC",
+    "sourceName": "العملات الرقمية - مجموعة 3",
+    "category": "كريبتو",
     "media": {
-      "image": "https://preview.redd.it/ndgj5i8gzykh1.jpeg?width=640&crop=smart&auto=webp&s=fedb4df3655a4702b381b598e2adf4fbb0c534d4",
+      "image": null,
       "video": null
     }
   },
@@ -323,23 +340,6 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/oil/comments/1vvbt31/iran_says_the_world_accepts_that_it_has_defeated/",
-    "title": "Iran says the world accepts that it has defeated the US | AP News",
-    "arabicTitle": "Iran says the world accepts that it has defeated the US | AP News",
-    "originalTitle": "Iran says the world accepts that it has defeated the US | AP News",
-    "link": "https://www.reddit.com/r/oil/comments/1vvbt31/iran_says_the_world_accepts_that_it_has_defeated/",
-    "pubDate": "2026-08-22T12:59:24.000Z",
-    "description": "آخر الأخبار والتحديثات حول \"Iran says the world accepts that it has defeated the US | AP News\" من مجتمع الاقتصاد والنفط والأسواق.",
-    "arabicDescription": "آخر الأخبار والتحديثات حول \"Iran says the world accepts that it has defeated the US | AP News\" من مجتمع الاقتصاد والنفط والأسواق.",
-    "originalDescription": "Iran says the world accepts that it has defeated the US | AP News",
-    "sourceName": "الاقتصاد والنفط والأسواق",
-    "category": "الاقتصاد",
-    "media": {
-      "image": "https://external-preview.redd.it/ZINNQTJZ9bhz76SdzTZDAA7l93y-bgtb8_1xjEartOU.jpeg?width=640&crop=smart&auto=webp&s=73c82517bf079cd9f8d2b01e259a7b030611954f",
-      "video": null
-    }
-  },
-  {
     "id": "https://www.reddit.com/r/Cruise/comments/1vv80u5/genting_dream_cruise_experience/",
     "title": "Genting Dream cruise experience",
     "arabicTitle": "Genting Dream cruise experience",
@@ -353,6 +353,23 @@
     "category": "عام",
     "media": {
       "image": "https://preview.redd.it/3dbbxl83dwkh1.jpg?width=140&height=105&auto=webp&s=df37b5b31d55f80dca8270bf0ad835cc3bb6ad51",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/xlm/comments/1vuu7mf/consider_the_motive_behind_this_news_blurb/",
+    "title": "Consider the Motive Behind this News Blurb",
+    "arabicTitle": "Consider the Motive Behind this News Blurb",
+    "originalTitle": "Consider the Motive Behind this News Blurb",
+    "link": "https://www.reddit.com/r/xlm/comments/1vuu7mf/consider_the_motive_behind_this_news_blurb/",
+    "pubDate": "2026-08-21T22:07:47.000Z",
+    "description": "Eyes open friends. Enjoy the weekend 🥂",
+    "arabicDescription": "Eyes open friends. Enjoy the weekend 🥂",
+    "originalDescription": "Eyes open friends. Enjoy the weekend 🥂",
+    "sourceName": "العملات الرقمية - مجموعة 3",
+    "category": "كريبتو",
+    "media": {
+      "image": "https://preview.redd.it/sxylh9iexskh1.jpeg?width=640&crop=smart&auto=webp&s=a9dc73e72db4089b6fca2c223f47fde20199636d",
       "video": null
     }
   },
@@ -489,23 +506,6 @@
     "category": "الاخبار",
     "media": {
       "image": null,
-      "video": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/OilPrices/comments/1vt7uxq/trump_announces_economic_warfare_on_iran/",
-    "title": "Trump announces 'economic warfare' on Iran, threatens ‘tremendous’ consequences for its backers",
-    "arabicTitle": "Trump announces 'economic warfare' on Iran, threatens ‘tremendous’ consequences for its backers",
-    "originalTitle": "Trump announces 'economic warfare' on Iran, threatens ‘tremendous’ consequences for its backers",
-    "link": "https://www.reddit.com/r/OilPrices/comments/1vt7uxq/trump_announces_economic_warfare_on_iran/",
-    "pubDate": "2026-08-20T03:15:17.000Z",
-    "description": "آخر الأخبار والتحديثات حول \"Trump announces 'economic warfare' on Iran, threatens ‘tremendous’ consequences for its backers\" من مجتمع الاقتصاد والنفط والأسواق.",
-    "arabicDescription": "آخر الأخبار والتحديثات حول \"Trump announces 'economic warfare' on Iran, threatens ‘tremendous’ consequences for its backers\" من مجتمع الاقتصاد والنفط والأسواق.",
-    "originalDescription": "Trump announces 'economic warfare' on Iran, threatens ‘tremendous’ consequences for its backers",
-    "sourceName": "الاقتصاد والنفط والأسواق",
-    "category": "الاقتصاد",
-    "media": {
-      "image": "https://external-preview.redd.it/bj8LdvuKN6ZMOnWKKuS4zHs8L9-_468ojOI61DONSlU.jpeg?width=640&crop=smart&auto=webp&s=ffd93257101bfd400bfa1bfec0949c52e9c9b2b7",
       "video": null
     }
   }
