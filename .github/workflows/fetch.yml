@@ -21,9 +21,11 @@ jobs:
           node-version: '20'
 
       - name: Install Dependencies
-        run: npm install rss-parser axios @iamtraction/google-translate
+        run: npm install rss-parser axios
 
       - name: Fetch and Process Feeds
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: node fetch-feeds.js
 
       - name: Commit and Push changes
