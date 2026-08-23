@@ -13,7 +13,7 @@ function getRandomUserAgent() {
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-// تنظيف HTML واستخراج النص الصافي فقط
+// تنظيف النصوص المعقدة وإزالة مخلفات ريديت
 function cleanHtmlText(html) {
   if (!html) return '';
   let cleaned = html
@@ -26,36 +26,51 @@ function cleanHtmlText(html) {
     .replace(/\s+/g, ' ')
     .trim();
 
-  // إزالة روابط Reddit المفصلة في نهاية النصوص
+  // تنظيف أسطر الملاحظات الخاصة بريديت
   cleaned = cleaned.replace(/submitted by\s+\/u\/\S+/gi, '');
-  cleaned = cleaned.replace(/\[link\]\s+\[comments\]/gi, '');
+  cleaned = cleaned.replace(/to\s+r\/\S+/gi, '');
+  cleaned = cleaned.replace(/\[link\]/gi, '');
+  cleaned = cleaned.replace(/\[comments\]/gi, '');
   
   return cleaned.trim();
 }
 
-// دالة ترجمة مضمونة مع دعم المحاولات
-async function translateToArabic(text) {
+// دالة الترجمة المحسنة والمدعومة بمحركين مختلفين
+async function translateText(text) {
   const cleaned = cleanHtmlText(text);
-  if (!cleaned || cleaned.length < 3) return '';
-  
-  // اقتطاع النص المناسب للترجمة السريعة
-  const textToTranslate = cleaned.substring(0, 400);
+  if (!cleaned || cleaned.length < 2) return '';
 
+  const textToTranslate = cleaned.substring(0, 300);
+
+  // المحاولة الأولى: MyMemory API (مباشرة ومضمونة للبيئات السحابية)
   try {
-    const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ar&dt=t&q=${encodeURIComponent(textToTranslate)}`;
-    const response = await axios.get(url, { 
-      timeout: 8000,
+    const myMemoryUrl = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(textToTranslate)}&langpair=en|ar`;
+    const res = await axios.get(myMemoryUrl, { timeout: 6000 });
+    if (res.data && res.data.responseData && res.data.responseData.translatedText) {
+      const result = res.data.responseData.translatedText;
+      if (result && !result.includes('MYMEMORY WARNING') && result.trim() !== textToTranslate) {
+        return result.trim();
+      }
+    }
+  } catch (e) {
+    // الانتقال للبديل عند الفشل
+  }
+
+  // المحاولة الثانية: Google Translate GTX
+  try {
+    const gtxUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ar&dt=t&q=${encodeURIComponent(textToTranslate)}`;
+    const res = await axios.get(gtxUrl, {
+      timeout: 6000,
       headers: { 'User-Agent': getRandomUserAgent() }
     });
-    
-    if (response.data && response.data[0]) {
-      const translated = response.data[0].map(item => item[0]).join('');
+    if (res.data && res.data[0]) {
+      const translated = res.data[0].map(item => item[0]).join('');
       if (translated && translated.trim().length > 0) {
         return translated.trim();
       }
     }
-  } catch (error) {
-    // فشل مؤقت في المحرك الأول
+  } catch (e) {
+    // إرجاع النص المنظف كخيار أخير
   }
 
   return cleaned;
@@ -83,12 +98,11 @@ async function fetchFeedContent(url, retries = 3) {
       return response.data;
     } catch (e) {
       if (e.response && e.response.status === 429) {
-        const waitTime = attempt * 8000;
-        console.warn(`⏳ انتظار ${waitTime / 1000} ثوانٍ لتجاوز الحظر... [محاولة ${attempt}/${retries}]`);
+        const waitTime = attempt * 6000;
         await delay(waitTime);
       } else {
         if (attempt === retries) {
-          console.warn(`⚠️ تعذر جلب الرابط (${targetUrl}): ${e.message}`);
+          console.warn(`⚠️ فشل جلب الرابط (${targetUrl}): ${e.message}`);
         }
       }
     }
@@ -107,7 +121,7 @@ async function run() {
     const sources = JSON.parse(rawFeeds);
 
     let allArticles = [];
-    console.log(`🚀 بدء جلب وتأكيد ترجمة العناوين والمواضيع من (${sources.length} مجموعات)...`);
+    console.log(`🚀 بدء جلب الأخبار وترجمتها عبر المحرك المزدوج...`);
 
     for (const source of sources) {
       if (!source.url) continue;
@@ -116,7 +130,7 @@ async function run() {
         const xmlData = await fetchFeedContent(source.url);
         
         if (!xmlData) {
-          await delay(2000);
+          await delay(1500);
           continue;
         }
 
@@ -136,13 +150,11 @@ async function run() {
             const rawTitle = item.title || '';
             const rawDesc = item.contentSnippet || item.content || item.summary || '';
 
-            // ترجمة العنوان
-            const translatedTitle = await translateToArabic(rawTitle);
-            await delay(150);
-
-            // ترجمة الموضوع/الخلاصة
-            const translatedDesc = await translateToArabic(rawDesc);
-            await delay(150);
+            // ترجمة العنوان والموضوع
+            const translatedTitle = await translateText(rawTitle);
+            await delay(100);
+            const translatedDesc = await translateText(rawDesc);
+            await delay(100);
 
             processedItems.push({
               id: item.guid || item.link || item.title,
@@ -161,20 +173,20 @@ async function run() {
           }
 
           allArticles.push(...processedItems);
-          console.log(`✓ [ترجمة كاملة] تم جلب وترجمة ${processedItems.length} مقال من: ${source.name}`);
+          console.log(`✓ [ترجمة ناجحة] تم جلب ${processedItems.length} مقال من: ${source.name}`);
         }
       } catch (err) {
         console.error(`✗ خطأ في مجموعة (${source.name}):`, err.message);
       }
 
-      await delay(4000);
+      await delay(3000);
     }
 
     allArticles.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
 
     if (allArticles.length > 0) {
       fs.writeFileSync('articles.json', JSON.stringify(allArticles, null, 2), 'utf8');
-      console.log(`\n✅ اكتملت العملية! تم حفظ ${allArticles.length} مقال مترجم بالكامل في articles.json`);
+      console.log(`\n✅ تم الحفظ! تم إنتاج ${allArticles.length} مقال مترجم في articles.json`);
     }
 
   } catch (error) {
