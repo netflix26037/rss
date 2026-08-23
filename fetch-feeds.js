@@ -4,7 +4,8 @@ const axios = require('axios');
 
 const USER_AGENTS = [
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
-  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  'Mozilla/5.0 (X11; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0'
 ];
 
 function getRandomUserAgent() {
@@ -13,7 +14,6 @@ function getRandomUserAgent() {
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-// تنظيف وتجهيز النصوص المعقدة للترجمة
 function cleanHtmlText(html) {
   if (!html) return '';
   return html
@@ -27,12 +27,10 @@ function cleanHtmlText(html) {
     .trim();
 }
 
-// دالة الترجمة إلى العربية المحسنة
 async function translateToArabic(text) {
   const cleaned = cleanHtmlText(text);
   if (!cleaned || cleaned.length === 0) return '';
   
-  // اقتطاع النص الطويل جداً لتفادي الرفض
   const textToTranslate = cleaned.substring(0, 350);
 
   try {
@@ -67,15 +65,16 @@ async function fetchFeedContent(url, retries = 3) {
       const response = await axios.get(targetUrl, {
         headers: {
           'User-Agent': getRandomUserAgent(),
-          'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+          'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+          'Accept-Language': 'en-US,en;q=0.9'
         },
         timeout: 20000
       });
       return response.data;
     } catch (e) {
       if (e.response && e.response.status === 429) {
-        const waitTime = attempt * 4000;
-        console.warn(`⏳ حظر 429 مؤقت. انتظار ${waitTime / 1000} ثوانٍ... [محاولة ${attempt}/${retries}]`);
+        const waitTime = attempt * 12000; // انتظار 12 ثم 24 ثانية لتجاوز الحظر
+        console.warn(`⏳ حظر 429 مؤقت على مجموعة. انتظار ${waitTime / 1000} ثانية... [محاولة ${attempt}/${retries}]`);
         await delay(waitTime);
       } else {
         if (attempt === retries) {
@@ -98,7 +97,7 @@ async function run() {
     const sources = JSON.parse(rawFeeds);
 
     let allArticles = [];
-    console.log(`🚀 بدء جلب الأخبار وترجمة (العناوين والخلاصات) من (${sources.length} مجموعات)...`);
+    console.log(`🚀 بدء جلب الأخبار من (${sources.length} مجموعات مدمجة موزعة)...`);
 
     for (const source of sources) {
       if (!source.url) continue;
@@ -108,7 +107,7 @@ async function run() {
         
         if (!xmlData) {
           console.warn(`❌ تعذر استلام بيانات من مجموعة: ${source.name}`);
-          await delay(1500);
+          await delay(4000);
           continue;
         }
 
@@ -121,18 +120,17 @@ async function run() {
         const feed = await parser.parseString(xmlData);
         
         if (feed && feed.items && feed.items.length > 0) {
-          const topItems = feed.items.slice(0, 12);
+          const topItems = feed.items.slice(0, 10);
           const processedItems = [];
 
           for (const item of topItems) {
             const rawTitle = item.title || '';
             const rawDesc = item.contentSnippet || item.content || item.summary || '';
 
-            // ترجمة العنوان والخلاصة بالتتابع
             const translatedTitle = await translateToArabic(rawTitle);
-            await delay(100);
+            await delay(80);
             const translatedDesc = await translateToArabic(rawDesc);
-            await delay(100);
+            await delay(80);
 
             processedItems.push({
               id: item.guid || item.link || item.title,
@@ -151,20 +149,21 @@ async function run() {
           }
 
           allArticles.push(...processedItems);
-          console.log(`✓ [نجاح وترجمة كاملة] تم جلب وحفظ ${processedItems.length} مقال من مجموعة: ${source.name}`);
+          console.log(`✓ [نجاح] تم جلب وحفظ ${processedItems.length} مقال من مجموعة: ${source.name}`);
         }
       } catch (err) {
         console.error(`✗ خطأ في مجموعة (${source.name}):`, err.message);
       }
 
-      await delay(1500);
+      // تأخير 6 ثوانٍ بين كل مجموعة لتجنب اكتشاف الطلبات
+      await delay(6000);
     }
 
     allArticles.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
 
     if (allArticles.length > 0) {
       fs.writeFileSync('articles.json', JSON.stringify(allArticles, null, 2), 'utf8');
-      console.log(`\n✅ تم الحفظ بنجاح! إجمالي المقالات المترجمة بالعنوان والخلاصة: ${allArticles.length}`);
+      console.log(`\n✅ تم الحفظ بنجاح! إجمالي المقالات في articles.json: ${allArticles.length}`);
     }
 
   } catch (error) {
