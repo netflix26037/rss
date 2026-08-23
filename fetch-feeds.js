@@ -5,13 +5,11 @@ const axios = require('axios');
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
-// قائمة بالنماذج المتاحة في Groq مرتبة حسب الأفضلية
+// النماذج النشطة في Groq مرتبة حسب الأفضلية للترجمة
 const GROQ_MODELS = [
-  'llama-3.1-8b-instant',
-  'llama3-8b-8192',
-  'mixtral-8x7b-32768',
-  'llama-3.3-70b-versatile',
-  'gemma2-9b-it'
+  'openai/gpt-oss-20b',
+  'qwen/qwen3.6-27b',
+  'openai/gpt-oss-120b'
 ];
 
 function cleanAndExtractText(html) {
@@ -44,7 +42,6 @@ async function translateText(text) {
 
   const shortText = text.substring(0, 400);
 
-  // تجربة النماذج المتاحة واحداً تلو الآخر في حال وجود أي مشكلة في أحدهم
   for (const modelName of GROQ_MODELS) {
     try {
       const response = await axios.post(
@@ -75,9 +72,8 @@ async function translateText(text) {
       const result = response.data?.choices?.[0]?.message?.content?.trim();
       if (result) return result;
     } catch (e) {
-      // إذا كان الخطأ بسبب اسم النموذج، يجرب النموذج التالي في القائمة
       const errorMsg = e.response?.data?.error?.message || e.message;
-      if (errorMsg.includes('does not exist') || errorMsg.includes('access')) {
+      if (errorMsg.includes('decommissioned') || errorMsg.includes('does not exist') || errorMsg.includes('access')) {
         continue;
       }
       console.error(`❌ خطأ أثناء الترجمة (${modelName}): ${errorMsg}`);
