@@ -1,15 +1,421 @@
 [
   {
+    "id": "https://www.reddit.com/r/EMJX/comments/1vw2ll9/realistic_expections_of_news/",
+    "title": "Realistic expections of news",
+    "originalTitle": "Realistic expections of news",
+    "link": "https://www.reddit.com/r/EMJX/comments/1vw2ll9/realistic_expections_of_news/",
+    "pubDate": "2026-08-23T09:28:17.000Z",
+    "description": "I've been thinking about this for a while. Obviously as a business they can't just hype and pump the stock. Eric has said he can't release certain information. So what can they release realistically that will increase the price other than official filings and earnings releases? Is there anything crypto related that they could release in the near term? Can they even announce capital investment with EMJX, or is that restricted to quarterly filings? submitted by /u/Famous-Recognition-4 to r/EMJX [link] [comments]",
+    "sourceName": "أسهم البيني وول ستريت - مجموعة 3",
+    "category": "الاسهم",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/EU_Economics/comments/1vw1dpx/six_eu_countries_call_for_a_tax_on_oil_companies/",
+    "title": "Six EU countries call for a tax on oil companies’ windfall profits: Italia is among them The initiative is said to have been launched by the German Finance Minister, Lars Klingbeil",
+    "originalTitle": "Six EU countries call for a tax on oil companies’ windfall profits: Italia is among them The initiative is said to have been launched by the German Finance Minister, Lars Klingbeil",
+    "link": "https://www.reddit.com/r/EU_Economics/comments/1vw1dpx/six_eu_countries_call_for_a_tax_on_oil_companies/",
+    "pubDate": "2026-08-23T08:16:45.000Z",
+    "description": "Six EU countries call for a tax on oil companies’ windfall profits: Italia is among them The initiative is said to have been launched by the German Finance Minister, Lars Klingbeil Source: https://en.ilsole24ore.com/art/six-eu-countries-are-calling-for-a-windfall-tax-on-oil-companies-including-italia-AJshsKs submitted by /u/Full-Discussion3745 to r/EU_Economics [link] [comments]",
+    "sourceName": "الاقتصاد والنفط والأسواق",
+    "category": "الاقتصاد",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/biotech_stocks/comments/1vvzqva/building_a_biotech_dd_checklist_phase_ii_ai_slop/",
+    "title": "Building a Biotech DD checklist - PHASE II (AI slop warning)",
+    "originalTitle": "Building a Biotech DD checklist - PHASE II (AI slop warning)",
+    "link": "https://www.reddit.com/r/biotech_stocks/comments/1vvzqva/building_a_biotech_dd_checklist_phase_ii_ai_slop/",
+    "pubDate": "2026-08-23T06:42:30.000Z",
+    "description": "I see a lot of new faces coming in since Moderna blew up and I thought I should share my Due Diligence checklists. I have one for Phase II and another for Phase III. I don't do Phase I because of reasons. Don't get nervous. I plug a LOT of data and variables into a Skills.md file which I use across two separate AI models to both run reports and then confirm reports. It takes a while but the text output can and will seem like AI slop. The point is to have a checklist. I'm sharing mine. Before I do, let me offer up some of what I've found to be best AI biotech best practices... I limit my DD to a top 10 set of questions because there are way too many tickers out there. Don't use Gemini. At least not yet. It will go off of outdated data from its training days and you'll be very sorry. Gemini will get better but it's not there right now. Do use ChatGPT set on Sol High. I've found it to be the best at getting actual non-hallucinated answers. A lot of people prefer Claude and that's fine if you can afford Fable tokens. If not, you're likely better off with ChatGPT or even the latest Grok. You will need to pay for AI to get the real answers and research you seek. Sorry. You need to learn how to set up skills within whichever AI bot you choose. You can turn the following 10 question due diligence Phase II checklist into a skills.md file and call it with a ticker that you want to pursue. You must always take whatever results you get from AI and run those results through another AI to confirm what you have is real. For instance, take the ChatGPT Sol high results and plug them into Claude Opus and ask the following question: \"I think there may be at least one, if not two, mistakes in the following due diligence. FIND THEM and tell me whey they're incorrect.\" That will almost always uncover at least one or two mistakes which you will either take back to the original (or third) AI or you can always, you know, do real due diligence and find the actual answers. Your due diligence and a checklist is table stakes to get into a ticker. It is NOT the same checklist you'll use to determine whether it's time to get OUT of a ticker. UNDERSTAND THIS. Entry and exit are two different things. Your thesis may break for reasons that you didn't foresee. One thing I've done - that I'm not sharing here yet - is my scanning skills.md that goes through all of my holdings each day to determine whether anything fundamental has broken. Entry is easy'ish. Exit is hard. Always. With that out of the way, you can copy/paste the following into your AI along with a ticker you're considering (make sure they're in or on the verge of Phase II trials) and see whether or not the following AI slop can make your ENTRY point a bit more informed. Good luck! AI SLOP: GIVE ME THE PHASE II CHECKLIST... Phase II is where the question changes from “can the science translate?” to “is the human signal real, reproducible, and strong enough to justify a pivotal program?” At this stage, human data should dominate the diligence. Preclinical evidence still matters, but it should no longer be used to explain away weak clinical results. Use three classifications: GATE — failure can invalidate the investment thesis. MAJOR DISCOUNT — does not necessarily kill the program, but materially reduces what you should pay. VALUATION INPUT — affects probability-adjusted upside and downside. 1. Is the drug demonstrably biologically active in humans? — GATE Look for a coherent translational chain: dose → exposure → target engagement → biological effect → clinical effect Evaluate human PK, pharmacodynamics, tissue penetration, target engagement, biomarkers, dose-response, and evidence that the proposed mechanism is actually occurring in patients. The more directly the company can demonstrate mechanism in humans, the less you need to rely on animal biology. Red flag: management responds to weak human efficacy by returning repeatedly to preclinical models or mechanistic theory. 2. How large and credible is the efficacy signal versus the correct comparator? — GATE Effect size and comparator quality must be evaluated together. For randomized trials, examine: treatment versus control performance absolute and relative effect size confidence intervals response durability subgroup consistency missing data and censoring investigator versus central review For single-arm studies, historical controls must match the treated population in: disease severity prior lines of therapy refractory status biomarker status age and performance status geography assessment methodology scan or evaluation schedule supportive care calendar period and evolving standard of care A 40% response rate is meaningless until you know whether comparable patients normally achieve 5%, 20%, or 35%. Red flags: the company emphasizes responder subsets while avoiding all-comers data; repeatedly changes the historical comparator; or compares against a population materially easier to treat than the study population. 3. Is the endpoint clinically meaningful and suitable for a pivotal program? — GATE Determine whether the Phase II endpoint: measures something patients or regulators care about is validated or well accepted is objective where possible can be reproduced in Phase III has a credible relationship to eventual clinical benefit has been discussed with regulators Distinguish a true surrogate endpoint from a biomarker that merely changes. Review ClinicalTrials.gov history for endpoint changes after enrollment began. Red flag: the primary endpoint changes after meaningful enrollment without a convincing scientific or regulatory explanation, especially if the new endpoint favors the emerging data. 4. Is the selected dose actually the right dose? — GATE Phase III dose selection should be evidence-based, not inherited from the highest tolerated dose. Evaluate: exposure-response dose-response target saturation efficacy by dose toxicity by dose dose reductions interruptions discontinuations duration of exposure interpatient PK variability Ask whether a lower dose preserves efficacy with better tolerability, or whether higher exposure produces additional benefit. Red flag: the company enters pivotal development while still uncertain which dose provides the optimal benefit-risk profile. 5. Is the safety profile acceptable at the exposure required for efficacy? — GATE / MAJOR DISCOUNT Focus on whether patients can remain on treatment long enough to benefit. Examine: treatment-related serious adverse events deaths discontinuations dose reductions interruptions cumulative toxicity organ-specific toxicity class-specific risks monitoring burden interactions with standard-of-care therapy Safety must be judged relative to disease severity and available alternatives. Red flag: efficacy depends on exposure that produces frequent dose reductions, discontinuations, or cumulative toxicity. 6. How much Phase II effect degradation can the pivotal program tolerate? — GATE Assume the Phase II point estimate is too optimistic. Model what happens if efficacy deteriorates by: 10% 20% 30% 40% Stress-test: smaller true treatment effect worse control-arm performance broader Phase III population additional geographies less experienced sites more heterogeneous patients lower adherence more missing data The strongest Phase II programs do not require Phase III to reproduce an unusually favorable early result exactly. Red flag: a modest reduction in effect size makes the proposed pivotal study statistically unlikely to succeed. 7. Can the Phase II product be bridged cleanly into Phase III and commercial manufacturing? — GATE / MAJOR DISCOUNT Determine whether the product used in Phase II is materially representative of what will be used in Phase III and ultimately sold commercially. Ask about changes in: manufacturing site scale formulation device or delivery system raw materials cell line purification analytical methods release specifications storage stability container closure For biologics, cell therapies, gene therapies, and complex products, assess the comparability package carefully. For small molecules, determine whether formulation changes alter exposure. Red flag: Phase III will use materially different product and a substantial comparability or bridging package remains unresolved. 8. Has FDA agreed with the pivotal-development strategy? — GATE Determine what regulators have actually agreed to regarding: indication patient population dose endpoint control group statistical analysis trial size duration safety database accelerated versus traditional approval confirmatory requirements manufacturing expectations Distinguish: “FDA provided feedback” from: “FDA agreed that this program could support registration if successful.” Review actual regulatory disclosures rather than relying solely on management characterization. Red flag: the company is preparing an expensive pivotal program while major questions about endpoint, population, dose, or registration strategy remain unsettled. 9. Can the company enter Phase III from a position of financial strength? — MAJOR DISCOUNT The key Phase II financing question is not simply whether cash lasts until Phase III. Ask: Can management start or negotiate Phase III on its own terms, or must it raise or partner from weakness? Evaluate: current cash quarterly burn cost to complete Phase II cost to prepare Phase III manufacturing commitments debt milestones warrants converts ATM capacity fully diluted shares Then assess strategic leverage: Can the company fund initial Phase III work independently? Is the Phase II package strong enough to attract competitive partnering interest? Must the company accept whatever terms are available? Is a highly dilutive raise unavoidable immediately after data? Red flag: the company must finance or partner regardless of the quality of the Phase II result and has insufficient cash to create negotiating leverage. 10. Does today's valuation compensate you for the probability of pivotal success? — VALUATION INPUT Build a probability-adjusted value rather than simply assigning a successful drug a peak-sales multiple. Model: probability Phase II signal is real probability Phase III succeeds probability of approval dilution before approval partnership economics royalties milestones remaining patent life regulatory exclusivity addressable population pricing reimbursement competition manufacturing cost likely strategic value At minimum model: Strong Phase III success Marginal or mixed Phase III result Pivotal failure The investment question is not: “Is the Phase II data exciting?” It is: “After allowing for regression to the mean, regulatory risk, manufacturing risk, financing, and dilution, does today's enterprise value still leave asymmetric upside?” Phase II decision rule Before investing, you should be able to say: “The drug is demonstrably active in humans, the efficacy signal is large relative to the correct comparator, the dose and endpoint are defensible, the result can deteriorate meaningfully and still support Phase III success, the commercial product can be manufactured comparably, regulators support the pivotal path, and the company has enough leverage to finance or partner the next stage without destroying shareholder value.” If several of those statements require optimistic assumptions, the Phase II program is not yet de-risked enough to deserve a Phase III-style valuation. submitted by /u/Emotional-Breath-838 to r/biotech_stocks [link] [comments]",
+    "sourceName": "أسهم البيني وول ستريت - مجموعة 3",
+    "category": "الاسهم",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/CryptoCurrency/comments/1vvzlz5/that_house_fund_disappeared_real_quick/",
+    "title": "That house fund disappeared real quick",
+    "originalTitle": "That house fund disappeared real quick",
+    "link": "https://www.reddit.com/r/CryptoCurrency/comments/1vvzlz5/that_house_fund_disappeared_real_quick/",
+    "pubDate": "2026-08-23T06:34:49.000Z",
+    "description": "submitted by /u/TheoremWhisperer to r/CryptoCurrency [link] [comments]",
+    "sourceName": "العملات الرقمية والشبكات - مجموعة 2",
+    "category": "كريبتو",
+    "media": {
+      "image": "https://preview.redd.it/697oc4wik2lh1.jpeg?width=320&crop=smart&auto=webp&s=018a1f92a9532880413c90e07dd38fa97398129b",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/PoursTea/comments/1vvy4fz/when_money_talks_democracy_listens/",
+    "title": "When money talks, democracy listens",
+    "originalTitle": "When money talks, democracy listens",
+    "link": "https://www.reddit.com/r/PoursTea/comments/1vvy4fz/when_money_talks_democracy_listens/",
+    "pubDate": "2026-08-23T05:10:50.000Z",
+    "description": "submitted by /u/voyd-oy to r/PoursTea [link] [comments]",
+    "sourceName": "عام وسفر",
+    "category": "عام",
+    "media": {
+      "image": "https://preview.redd.it/892utves52lh1.jpeg?width=640&crop=smart&auto=webp&s=7c95ac25e0aea44d630710e7ee9ee130da39a3f8",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/USNEWS/comments/1vvx12z/colorado_family_facing_300000_in_medical_debt/",
+    "title": "Colorado family facing $300,000 in medical debt after K-9 officer attacks toddler, maims her father",
+    "originalTitle": "Colorado family facing $300,000 in medical debt after K-9 officer attacks toddler, maims her father",
+    "link": "https://www.reddit.com/r/USNEWS/comments/1vvx12z/colorado_family_facing_300000_in_medical_debt/",
+    "pubDate": "2026-08-23T04:11:39.000Z",
+    "description": "submitted by /u/Dan_Fan20 to r/USNEWS [link] [comments]",
+    "sourceName": "الأخبار والأحداث العالمية",
+    "category": "الاخبار",
+    "media": {
+      "image": "https://external-preview.redd.it/7zpkUIgerT3svawtBmim4R5i6WXXt6fpvb5J8-K6pGE.jpeg?width=640&crop=smart&auto=webp&s=f82e3f2d2b9c239b1810866b92bd9270b7e724cd",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/10xPennyStocks/comments/1vvvzze/australian_vanadium_limited_asx/",
+    "title": "Australian Vanadium Limited ASX",
+    "originalTitle": "Australian Vanadium Limited ASX",
+    "link": "https://www.reddit.com/r/10xPennyStocks/comments/1vvvzze/australian_vanadium_limited_asx/",
+    "pubDate": "2026-08-23T03:18:35.000Z",
+    "description": "ASX:AVL !DYOR! Approaching the pointy end of a very long stick of approvals and red tape. EPA, Finance, FID, Off-takes/ MOU just around the corner + more. MC: 60m $150m Kalgoorlie Boulder VBESS favourites - Shortlisting due this week MOU Alcoa already announced (IMO they’re just waiting to announce EPA & FID then they’ll sign off-takes for batteries for their refineries but they can’t do that at present due to asx rules) Partnered with Sumitomo Electric for Kalgoorlie VBESS (If/ when won, could open the doors to a greater partnership for other developments) If you pay any attention to the news, Lithium needs an alternative for safer applications & for longer duration energy storage & Vanadium is that solution. - There is no such thing as AI development without Date Centres - There can be no data centres without long life, hard batteries that can handle their work load & power fluctuations - Vanadium RFBS is that solution. No fire hazards. 25 year life. 90%+ recyclable after that life term. It is not just to do with energy storage, Vanadium can be used in a massive array of applications; Steel, Batteries, Defence etc. Vanadium is lithiums better looking cousin that no one knows about and by the time everyone does, you’re too late. Absolute bargain at these levels. The world is moving towards recognising vanadium and with the shortages across the world, AVL are in an incredible position to be sector leaders especially here in Australia. Demand for V will eventually out weigh supply and the price will rocket. Recent close price: 18c currently -ATH $2.50 (pre consolidation was 10c) - 52 week high 38c before the war kicked off and the whole market got oversold - VRFB help towards a greener future - Tier 1 Vanadium Deposit about to come to fruition. AVL operate the whole pipeline from digging, processing & creating. Low V prices won’t hinder their progress as there is no middle man, they’ve confirmed this in a recent interview. DYOR and I’m sure you’ll have the same opinion as me. I want to hear yours! Comment below let’s start a discussion. submitted by /u/Interesting_Wall5768 to r/10xPennyStocks [link] [comments]",
+    "sourceName": "أسهم البيني وول ستريت - مجموعة 3",
+    "category": "الاسهم",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/economy/comments/1vvvvf6/jd_vance_on_canada_theyre_doing_terribly/",
+    "title": "JD Vance on Canada: “They’re doing terribly”",
+    "originalTitle": "JD Vance on Canada: “They’re doing terribly”",
+    "link": "https://www.reddit.com/r/economy/comments/1vvvvf6/jd_vance_on_canada_theyre_doing_terribly/",
+    "pubDate": "2026-08-23T03:12:21.000Z",
+    "description": "submitted by /u/ExotiquePlayboy to r/economy [link] [comments]",
+    "sourceName": "الاقتصاد والنفط والأسواق",
+    "category": "الاقتصاد",
+    "media": {
+      "image": "https://external-preview.redd.it/ZnlhMXUzaWxrMWxoMZNDxfxRpabfOIM6A5slimXO_q0EHKPHkqSvqhrcMmXj.jpeg?width=640&crop=smart&auto=webp&s=d9303d51bf7d48a78ed6fc5d8612bfeeb3714cb2",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/Hedera/comments/1vvvup8/swift_hedera_at_sibos_2026_the_connection_nobody/",
+    "title": "SWIFT + Hedera at SIBOS 2026 - The Connection Nobody Is Talking About",
+    "originalTitle": "SWIFT + Hedera at SIBOS 2026 - The Connection Nobody Is Talking About",
+    "link": "https://www.reddit.com/r/Hedera/comments/1vvvup8/swift_hedera_at_sibos_2026_the_connection_nobody/",
+    "pubDate": "2026-08-23T03:11:19.000Z",
+    "description": "In this video I speak about why I think a Swift and Hedera partnership announcement will happen at Sibos 2026 submitted by /u/CNENCryptoNews to r/Hedera [link] [comments]",
+    "sourceName": "العملات الرقمية والشبكات - مجموعة 2",
+    "category": "كريبتو",
+    "media": {
+      "image": "https://external-preview.redd.it/9UOE1kl9aPEdGJCu0Q1lQTfCSB8WS3oKZlkcIuHlNW0.jpeg?width=320&crop=smart&auto=webp&s=8b6fd0a88806f097d28c8e94d1703e6766ec7f29",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/BusinessTodayNews/comments/1vvvr68/should_the_killing_of_livestock_be_treated_as/",
+    "title": "Should the killing of livestock be treated as property theft, animal cruelty, or both?",
+    "originalTitle": "Should the killing of livestock be treated as property theft, animal cruelty, or both?",
+    "link": "https://www.reddit.com/r/BusinessTodayNews/comments/1vvvr68/should_the_killing_of_livestock_be_treated_as/",
+    "pubDate": "2026-08-23T03:06:17.000Z",
+    "description": "submitted by /u/Crafty-Health6320 to r/BusinessTodayNews [link] [comments]",
+    "sourceName": "الاقتصاد والنفط والأسواق",
+    "category": "الاقتصاد",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/IranWarReport/comments/1vvv0d2/personnel_inside_usuk_base_in_iraq_recount/",
+    "title": "Personnel inside US-UK base in Iraq recount intercepting multiple drones and missiles in a single day during the Iran war",
+    "originalTitle": "Personnel inside US-UK base in Iraq recount intercepting multiple drones and missiles in a single day during the Iran war",
+    "link": "https://www.reddit.com/r/IranWarReport/comments/1vvv0d2/personnel_inside_usuk_base_in_iraq_recount/",
+    "pubDate": "2026-08-23T02:28:19.000Z",
+    "description": "submitted by /u/ILikeGazSweet to r/IranWarReport [link] [comments]",
+    "sourceName": "الأخبار والأحداث العالمية",
+    "category": "الاخبار",
+    "media": {
+      "image": "https://external-preview.redd.it/NmkyMTljdmtjMWxoMb-nWHF7LTeeC5QO__b1Ikw0WD7nmmMSh3XbqqXDHUh9.png?width=640&crop=smart&auto=webp&s=32091fd526fac70a46215254413dc6c7a0e9768d",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/BoredPandaHQ/comments/1vvtnj4/what_message_do_you_think_sarasota_county_voters/",
+    "title": "What message do you think Sarasota County voters sent by rejecting Republican-backed candidates?",
+    "originalTitle": "What message do you think Sarasota County voters sent by rejecting Republican-backed candidates?",
+    "link": "https://www.reddit.com/r/BoredPandaHQ/comments/1vvtnj4/what_message_do_you_think_sarasota_county_voters/",
+    "pubDate": "2026-08-23T01:21:00.000Z",
+    "description": "Florida's Sarasota County voters have flipped their school board, ending years of conservative control and rejecting the culture-war fights that dominated the district. Progressive candidates Megan Tennimon and Beth Mayberry each won their races by more than 10 percentage points against candidates endorsed by the Republican Party. Alongside sitting members Tom Edwards and Liz Barker, they now give progressive officials commanding control over the five-member board for at least the next two years. A third seat, representing District 1, is headed to a runoff between Heidi Brandt, endorsed by the Republican Party of Sarasota County, and Jimmy Glover, backed by the Sarasota County Democratic Party. Teresa DeWitt, a former Moms for Liberty activist who also ran for the seat, likely split the conservative vote with Brandt. The new board inherits serious financial strain. The district is grappling with the end of special COVID-19 funding, slowing student enrollment, and a growing state voucher program that has redirected public school dollars into private school scholarships. As a result, Sarasota County Schools is set to eliminate 180 instructional positions and 79 classified jobs this school year, sowing anxiety among teachers. Money flowed toward the progressive campaigns. Glover, Tennimon, and Mayberry all outraised their opponents, with Glover pulling in $135,946, Tennimon $55,044, and Mayberry $78,670 as of August 13, the most recent reporting deadline. Mayberry, a retired math teacher, made school funding central to her campaign, warning against cuts to arts programming in public schools. Her win, alongside Tennimon's, ends the conservative bloc's hold on a board that had shaped years of policy fights in the district. submitted by /u/BoredPandaOfficial to r/BoredPandaHQ [link] [comments]",
+    "sourceName": "الاقتصاد والنفط والأسواق",
+    "category": "الاقتصاد",
+    "media": {
+      "image": "https://preview.redd.it/mivq31rn1xkh1.jpeg?width=640&crop=smart&auto=webp&s=fded2aed1c00c77beead85ce57feb5e3ea187a14",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/worldnews/comments/1vvtmxa/off_the_charts_el_niño_is_already_the_strongest/",
+    "title": "‘Off the charts’ El Niño is already the strongest since records began",
+    "originalTitle": "‘Off the charts’ El Niño is already the strongest since records began",
+    "link": "https://www.reddit.com/r/worldnews/comments/1vvtmxa/off_the_charts_el_niño_is_already_the_strongest/",
+    "pubDate": "2026-08-23T01:20:10.000Z",
+    "description": "submitted by /u/RollSafer to r/worldnews [link] [comments]",
+    "sourceName": "الأخبار والأحداث العالمية",
+    "category": "الاخبار",
+    "media": {
+      "image": "https://external-preview.redd.it/556B1cYmCh7zO7czwlie7dp2fqmRZll6k4uSCVaPZcY.jpeg?width=640&crop=smart&auto=webp&s=d355b01db1a45b693938a6929d47e7b41a95394b",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/sui/comments/1vvte11/suis_deepbook/",
+    "title": "SUI’s DeepBook",
+    "originalTitle": "SUI’s DeepBook",
+    "link": "https://www.reddit.com/r/sui/comments/1vvte11/suis_deepbook/",
+    "pubDate": "2026-08-23T01:08:07.000Z",
+    "description": "Constructive commentary provided by Blub builder. It is refreshing to see an independent SUI project provide such candor. Healthy discourse, specifically from Mysten Labs welcome. submitted by /u/FutureC19 to r/sui [link] [comments]",
+    "sourceName": "العملات الرقمية والشبكات - مجموعة 2",
+    "category": "كريبتو",
+    "media": {
+      "image": "https://preview.redd.it/6bh3dwihy0lh1.jpg?width=140&height=140&crop=1:1,smart&auto=webp&s=b2b8d1be8c522d9e768c878459d0754797408e7d",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/iran/comments/1vvtbcd/what_are_the_current_prices_for_new_and_used/",
+    "title": "What are the current prices for new and used shipping containers in Iran? (20ft / 40ft)",
+    "originalTitle": "What are the current prices for new and used shipping containers in Iran? (20ft / 40ft)",
+    "link": "https://www.reddit.com/r/iran/comments/1vvtbcd/what_are_the_current_prices_for_new_and_used/",
+    "pubDate": "2026-08-23T01:04:30.000Z",
+    "description": "Hi everyone! I’m researching the current container market in Iran and would really appreciate some local information. What are the current prices for new and used shipping containers in Iran? I’m interested in: 20ft standard 40ft standard 40ft High Cube I’m looking for actual local market prices, preferably in USD or Iranian toman/riyal. I’m also interested in: new vs. used prices; approximate condition/year for used containers; containers that are no longer suitable for international shipping but are still structurally sound. Are there any Iranian websites, Telegram channels, Instagram pages, or online marketplaces where containers are advertised for sale? And what Persian search terms should I use to find these listings? Thanks! Any current prices, links or local recommendations would be very helpful. submitted by /u/AlternativeTiger685 to r/iran [link] [comments]",
+    "sourceName": "الأخبار والأحداث العالمية",
+    "category": "الاخبار",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/opendoor/comments/1vvt42g/open_daily_discussion_august_23_2026/",
+    "title": "OPEN Daily Discussion - August 23, 2026",
+    "originalTitle": "OPEN Daily Discussion - August 23, 2026",
+    "link": "https://www.reddit.com/r/opendoor/comments/1vvt42g/open_daily_discussion_august_23_2026/",
+    "pubDate": "2026-08-23T00:55:06.000Z",
+    "description": "✅Memes, ✅hype, ✅positions, ✅premarket, ✅plays, ✅current drama, ect... Let's see it here! A good rule of thumb. If the data you're sharing will be different in the next hour, it's great for the daily discussion. It's not post material. Kaz Official Tracker: https://accountable.opendoor.com/ (updates on Tuesday) Until Earnings, don't forget to ask and vote on questions: https://www.reddit.com/r/opendoor/comments/1v3t5dj/opendoor_open_for_questions_q2_earnings/ submitted by /u/AutoModerator to r/opendoor [link] [comments]",
+    "sourceName": "أسهم البيني وول ستريت - مجموعة 3",
+    "category": "الاسهم",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/PoursTea/comments/1vvsuhf/i_dont_think_people_should_be_taking_medical/",
+    "title": "\"I don't think people should be taking medical advice from me\"--RFK Jr.",
+    "originalTitle": "\"I don't think people should be taking medical advice from me\"--RFK Jr.",
+    "link": "https://www.reddit.com/r/PoursTea/comments/1vvsuhf/i_dont_think_people_should_be_taking_medical/",
+    "pubDate": "2026-08-23T00:42:11.000Z",
+    "description": "Sorry, my apologies, I had to repost because autocorrect changed 'taking' to 'talking' and I didn't catch it. I'm a tad OCD. (I sure wish we could edit posts) submitted by /u/Veshaad to r/PoursTea [link] [comments]",
+    "sourceName": "عام وسفر",
+    "category": "عام",
+    "media": {
+      "image": "https://preview.redd.it/wt4c7szut0lh1.jpeg?width=640&crop=smart&auto=webp&s=173f22fd29d555cba8e5c833231ac5e736c3f3a5",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/dogecoin/comments/1vvsfrw/a_perfect_10_incoming/",
+    "title": "A perfect 10, incoming",
+    "originalTitle": "A perfect 10, incoming",
+    "link": "https://www.reddit.com/r/dogecoin/comments/1vvsfrw/a_perfect_10_incoming/",
+    "pubDate": "2026-08-23T00:23:07.000Z",
+    "description": "submitted by /u/BanAccount8 to r/dogecoin [link] [comments]",
+    "sourceName": "العملات الرقمية والشبكات - مجموعة 2",
+    "category": "كريبتو",
+    "media": {
+      "image": "https://preview.redd.it/s6hc6kggq0lh1.jpeg?width=640&crop=smart&auto=webp&s=69f744340f72cdd6121f6b0faa1b0b063cdc2ddc",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/ethtrader/comments/1vvrxi7/daily_general_discussion_august_23_2026_utc1/",
+    "title": "Daily General Discussion - August 23, 2026 (UTC+1)",
+    "originalTitle": "Daily General Discussion - August 23, 2026 (UTC+1)",
+    "link": "https://www.reddit.com/r/ethtrader/comments/1vvrxi7/daily_general_discussion_august_23_2026_utc1/",
+    "pubDate": "2026-08-23T00:00:33.000Z",
+    "description": "Welcome to r/ethtrader's Daily General Discussion thread! Use this space to discuss anything about DeFi, crypto, macroeconomics, and all things Ethereum. Please follow the subreddit rules when posting in this thread. Keep discussions constructive, relevant, and free of spam. What are your moves? Got a market insight? Share it. Making a bold trade? Let's hear it. It doesn't matter if you're here to learn, chill, debate, or talk about the world of Ethereum - this thread is open to everyone. Useful links: Discord X/Twitter Wiki FAQ submitted by /u/AutoModerator to r/ethtrader [link] [comments]",
+    "sourceName": "العملات الرقمية والشبكات - مجموعة 2",
+    "category": "كريبتو",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/business/comments/1vvqpky/disney_celebrates_blockbuster_2026_by_kicking/",
+    "title": "Disney celebrates blockbuster 2026 by kicking employees' spouses off healthcare plans",
+    "originalTitle": "Disney celebrates blockbuster 2026 by kicking employees' spouses off healthcare plans",
+    "link": "https://www.reddit.com/r/business/comments/1vvqpky/disney_celebrates_blockbuster_2026_by_kicking/",
+    "pubDate": "2026-08-22T23:05:39.000Z",
+    "description": "submitted by /u/esporx to r/business [link] [comments]",
+    "sourceName": "الاقتصاد والنفط والأسواق",
+    "category": "الاقتصاد",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/news/comments/1vvq1di/exabercrombie_fitch_ceo_is_mentally_fit_for_sex/",
+    "title": "Ex-Abercrombie & Fitch CEO is mentally fit for sex trafficking trial, judge says",
+    "originalTitle": "Ex-Abercrombie & Fitch CEO is mentally fit for sex trafficking trial, judge says",
+    "link": "https://www.reddit.com/r/news/comments/1vvq1di/exabercrombie_fitch_ceo_is_mentally_fit_for_sex/",
+    "pubDate": "2026-08-22T22:35:30.000Z",
+    "description": "submitted by /u/omgfakeusername to r/news [link] [comments]",
+    "sourceName": "الأخبار والأحداث العالمية",
+    "category": "الاخبار",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/wallstreetbets2/comments/1vvpwl2/daily_gains_prayer_turned_into_a_song/",
+    "title": "Daily gains prayer turned into a song",
+    "originalTitle": "Daily gains prayer turned into a song",
+    "link": "https://www.reddit.com/r/wallstreetbets2/comments/1vvpwl2/daily_gains_prayer_turned_into_a_song/",
+    "pubDate": "2026-08-22T22:29:37.000Z",
+    "description": "Our father, who art in heaven, hallow be thy gains. Thy calls come, they will be done, on Earth as it is in heaven. Give us this day and our daily gains, and forgive those who pumped with us. Lead us away from short sellers and deliver us from evil. Amen submitted by /u/OGPeakyblinders to r/wallstreetbets2 [link] [comments]",
+    "sourceName": "أسهم البيني وول ستريت - مجموعة 3",
+    "category": "الاسهم",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/politics/comments/1vvpvau/mitch_mcconnells_eerie_senate_video_shows_him/",
+    "title": "Mitch McConnell’s ‘Eerie’ Senate Video Shows Him Barely Moving for Hours Just 10 Days Before Hospitalisation",
+    "originalTitle": "Mitch McConnell’s ‘Eerie’ Senate Video Shows Him Barely Moving for Hours Just 10 Days Before Hospitalisation",
+    "link": "https://www.reddit.com/r/politics/comments/1vvpvau/mitch_mcconnells_eerie_senate_video_shows_him/",
+    "pubDate": "2026-08-22T22:27:59.000Z",
+    "description": "submitted by /u/plz-let-me-in to r/politics [link] [comments]",
+    "sourceName": "الأخبار والأحداث العالمية",
+    "category": "الاخبار",
+    "media": {
+      "image": "https://external-preview.redd.it/iXxJNLRpfETcHZiEBX8OTR9Vt8Rp2F34gfuk8W1Whic.jpeg?width=640&crop=smart&auto=webp&s=639baa13a2baceec12f840a37c3edd702dc924fc",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/NoFilterFinance/comments/1vvpi7y/anyone_still_watching_the_news/",
+    "title": "Anyone still watching the news?",
+    "originalTitle": "Anyone still watching the news?",
+    "link": "https://www.reddit.com/r/NoFilterFinance/comments/1vvpi7y/anyone_still_watching_the_news/",
+    "pubDate": "2026-08-22T22:12:16.000Z",
+    "description": "Just saw this and it rings so hard! I normally tell people that the Mainstream Media is essentially just billionaire news, designed to present information that billionaires like to hear or tell everyone the things that billionaires want everyone else to believe so nobody sees reality for what it is. This seems like the most concise way though to present the concept in a way that helps people eacape feom the political debate distraction tactics and realize that enshitification is what you get when the majority of people are stuck in distraction-land and unable to organize together to fight back economically against the billionaire owned corporate take-over of everything. The opposite of economic enshitification that we are experiencing is everyone buying products and services from their neighbors instead of from companies that suck money out of our neighborhoods. Let's make that happen shall we? If you see this and disagree. Please tell me where I can go to watch the mainstream media channel that advocates for the rights and perspectives of the disenfranchised, the poor, those who went bankrupt due to medical bills. I'd love to hear your take. submitted by /u/anjudan to r/NoFilterFinance [link] [comments]",
+    "sourceName": "الاقتصاد والنفط والأسواق",
+    "category": "الاقتصاد",
+    "media": {
+      "image": "https://preview.redd.it/7onwfcnvzxkh1.png?width=640&crop=smart&auto=webp&s=6cbff23057e397dd7e49dd4d28958d6c0463f69f",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/PoursTea/comments/1vvp9gu/this_still_rings_true_21_years_later/",
+    "title": "This still rings true 21 years later.",
+    "originalTitle": "This still rings true 21 years later.",
+    "link": "https://www.reddit.com/r/PoursTea/comments/1vvp9gu/this_still_rings_true_21_years_later/",
+    "pubDate": "2026-08-22T22:01:36.000Z",
+    "description": "submitted by /u/Veshaad to r/PoursTea [link] [comments]",
+    "sourceName": "عام وسفر",
+    "category": "عام",
+    "media": {
+      "image": "https://preview.redd.it/yz7l92k710lh1.jpeg?width=640&crop=smart&auto=webp&s=9b938e19c9e1043ad0d6d1cfee728043cc030890",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/inthenews/comments/1vvoj53/trump_moves_to_strip_american_bar_association_of/",
+    "title": "Trump Moves to Strip American Bar Association of Its Power",
+    "originalTitle": "Trump Moves to Strip American Bar Association of Its Power",
+    "link": "https://www.reddit.com/r/inthenews/comments/1vvoj53/trump_moves_to_strip_american_bar_association_of/",
+    "pubDate": "2026-08-22T21:30:13.000Z",
+    "description": "submitted by /u/Minifig81 to r/inthenews [link] [comments]",
+    "sourceName": "الأخبار والأحداث العالمية",
+    "category": "الاخبار",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
     "id": "https://www.reddit.com/r/PoursTea/comments/1vvo7x8/did_carl_sagan_call_it_or_what/",
     "title": "Did Carl Sagan Call It or What?",
     "originalTitle": "Did Carl Sagan Call It or What?",
     "link": "https://www.reddit.com/r/PoursTea/comments/1vvo7x8/did_carl_sagan_call_it_or_what/",
     "pubDate": "2026-08-22T21:16:53.000Z",
-    "description": "The Demon-Haunted World: Science as a Candle in the Dark\n    submitted by    /u/Fast_Adhesiveness528  \n [link]   [comments]",
-    "sourceName": "PoursTea",
+    "description": "The Demon-Haunted World: Science as a Candle in the Dark submitted by /u/Fast_Adhesiveness528 to r/PoursTea [link] [comments]",
+    "sourceName": "عام وسفر",
     "category": "عام",
     "media": {
       "image": "https://preview.redd.it/hikczyyxszkh1.jpeg?width=640&crop=smart&auto=webp&s=32c08e1b506874601619d6c486724ac06fb06910",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/Cruise/comments/1vvo7fx/uncruise_alaska_wild_and_woolly/",
+    "title": "UnCruise Alaska Wild and Woolly",
+    "originalTitle": "UnCruise Alaska Wild and Woolly",
+    "link": "https://www.reddit.com/r/Cruise/comments/1vvo7fx/uncruise_alaska_wild_and_woolly/",
+    "pubDate": "2026-08-22T21:16:19.000Z",
+    "description": "8/8-8/16 2026 My wife 75 and I 70, just returned from a fantastic, adventure UnCruise out of Juneau . I can’t say enough good things about it. We were fortunate to have great weather 60-70f and no rain. We saw whales several days from the ship. We kayaked right up to sea lions and seals. Our skiff rides took us within a half mile to glaciers. So close you hear the crash of the glacier calving and feel the waves. We went on a strenuous bushwhack up to a breathtaking view. My wife saw the Northern Lights while I slept 🤷‍♂️ The crew were all great. Young people traveling and living a great life. They were all about serving and taking care of the passengers. The ship the Legacy has room for 80 guests, small enough to get close to the shore. Happy Hour every day before dinner. The food was excellent. Breakfast, lunch and dinner was sit down in main dining room. Always choice of meat , fish or vegetables or combination of all three. The highlight was all you could eat Dungeness crab. We made several good friends. The ages ranged from young to old with several families traveling together. There were activities for most fitness levels. Each day there were several choices. This was our second UnCruise. First was to Hawaii. It won’t be our last. If you’re looking for casinos, huge buffets of mediocre food and loud music this is not for you, but if you’re looking for something different try UnCruise. submitted by /u/Goodvida99 to r/Cruise [link] [comments]",
+    "sourceName": "عام وسفر",
+    "category": "عام",
+    "media": {
+      "image": "https://preview.redd.it/l794ix34tzkh1.jpg?width=140&height=140&crop=1:1,smart&auto=webp&s=3fe57426fedcc88d5a7734a7279d425eda61ac7b",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/PoursTea/comments/1vvo6im/they_had_to_make_up_a_whole_imaginary_scenario_to/",
+    "title": "They had to make up a whole imaginary scenario to sidestep what happened in reality.",
+    "originalTitle": "They had to make up a whole imaginary scenario to sidestep what happened in reality.",
+    "link": "https://www.reddit.com/r/PoursTea/comments/1vvo6im/they_had_to_make_up_a_whole_imaginary_scenario_to/",
+    "pubDate": "2026-08-22T21:15:18.000Z",
+    "description": "submitted by /u/Gurugod123 to r/PoursTea [link] [comments]",
+    "sourceName": "عام وسفر",
+    "category": "عام",
+    "media": {
+      "image": "https://preview.redd.it/aorzbzxxszkh1.jpeg?width=640&crop=smart&auto=webp&s=d77d65bd9f02fd5d000d51756830343bcb222bb5",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/politics/comments/1vvnzsx/trump_ill_be_impeached_if_i_lose_the_midterms/",
+    "title": "Trump: I’ll be impeached if I lose the midterms",
+    "originalTitle": "Trump: I’ll be impeached if I lose the midterms",
+    "link": "https://www.reddit.com/r/politics/comments/1vvnzsx/trump_ill_be_impeached_if_i_lose_the_midterms/",
+    "pubDate": "2026-08-22T21:07:27.000Z",
+    "description": "submitted by /u/plz-let-me-in to r/politics [link] [comments]",
+    "sourceName": "الأخبار والأحداث العالمية",
+    "category": "الاخبار",
+    "media": {
+      "image": "https://external-preview.redd.it/uEUeHdvR_2Kcy4yAnLDO64dILL8YnHjtBXYehL-AKgA.jpeg?width=640&crop=smart&auto=webp&s=b993c474b38c93c634a58d24c01bbb17ba43b7d4",
       "video": null
     }
   },
@@ -19,11 +425,81 @@
     "originalTitle": "Amazing! NYC gets better every day!",
     "link": "https://www.reddit.com/r/PoursTea/comments/1vvnw9r/amazing_nyc_gets_better_every_day/",
     "pubDate": "2026-08-22T21:03:29.000Z",
-    "description": "submitted by    /u/FizzyAcidBird  \n [link]   [comments]",
-    "sourceName": "PoursTea",
+    "description": "submitted by /u/FizzyAcidBird to r/PoursTea [link] [comments]",
+    "sourceName": "عام وسفر",
     "category": "عام",
     "media": {
       "image": "https://preview.redd.it/wodng19uqzkh1.jpeg?width=640&crop=smart&auto=webp&s=7b7dce33b84d659271d8aa5bc8fee6dda1d49af5",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/nanocurrency/comments/1vvnu1q/hodlgamefun_trustless_token_economy_on_top_of_nano/",
+    "title": "HodlGame.Fun: Trustless Token Economy on Top of Nano",
+    "originalTitle": "HodlGame.Fun: Trustless Token Economy on Top of Nano",
+    "link": "https://www.reddit.com/r/nanocurrency/comments/1vvnu1q/hodlgamefun_trustless_token_economy_on_top_of_nano/",
+    "pubDate": "2026-08-22T21:00:58.000Z",
+    "description": "Launch Tokens, Trading , Staking , instant on top of Nano The idea was to do this on Solana , the network asked me to pay 300$ , which then enforced me to stop working on it think and rebuilt it to be on Nano https://preview.redd.it/emukggzmrzkh1.png?width=1078&format=png&auto=webp&s=24a160f46fe1294c5d60383019799ed011ab0043 Funds move wallet-to-wallet or stay in your wallet as collateral. Nobody can rug, freeze, or seize your money because nobody else holds it. Creators are strictly hard-capped at 5% Rewards for holders. Staking pays holders rewards. Idea : Those who Unstaking costs a 20% exit tax: 5% burned, 15% paid to everyone still staked. Link ⭐ https://www.hodlgame.fun/ X https://x.com/HodlGameFun https://github.com/dhyabi2/hodlgame How it works with Nano???!! 👇 https://github.com/dhyabi2/hodlgame/blob/main/nano/docs/HOW-IT-WORKS.md 100% Open Source -> 🫶 support me by buying HodlGame Token https://www.hodlgame.fun/#t=b56f256ff88bf377468c1dabda1b9a9e submitted by /u/Aldhyabi to r/nanocurrency [link] [comments]",
+    "sourceName": "العملات الرقمية والشبكات - مجموعة 2",
+    "category": "كريبتو",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/100xpennystock/comments/1vvnpjr/some_thoughts_on_current_and_future_valuation_on/",
+    "title": "Some thoughts on current and future valuation on HITI NASDAQ",
+    "originalTitle": "Some thoughts on current and future valuation on HITI NASDAQ",
+    "link": "https://www.reddit.com/r/100xpennystock/comments/1vvnpjr/some_thoughts_on_current_and_future_valuation_on/",
+    "pubDate": "2026-08-22T20:55:59.000Z",
+    "description": "submitted by /u/WilliamBlack97AI to r/100xpennystock [link] [comments]",
+    "sourceName": "أسهم البيني وول ستريت - مجموعة 3",
+    "category": "الاسهم",
+    "media": {
+      "image": "https://preview.redd.it/wxznyvz6tokh1.png?width=140&height=23&auto=webp&s=998973ab80c8e40a4022909987301433f73364c6",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/aliens/comments/1vvnhck/boomers_still_dont_believe_in_aliens_while_gen_z/",
+    "title": "Boomers Still Don't Believe in Aliens, While Gen Z Thinks the Government Is Lying About UFO News",
+    "originalTitle": "Boomers Still Don't Believe in Aliens, While Gen Z Thinks the Government Is Lying About UFO News",
+    "link": "https://www.reddit.com/r/aliens/comments/1vvnhck/boomers_still_dont_believe_in_aliens_while_gen_z/",
+    "pubDate": "2026-08-22T20:46:33.000Z",
+    "description": "submitted by /u/Montrel_PH to r/aliens [link] [comments]",
+    "sourceName": "الأخبار والأحداث العالمية",
+    "category": "الاخبار",
+    "media": {
+      "image": "https://external-preview.redd.it/jVZq6G_JDdERu2QtmulaUHYrprn-DKP0vpr9NKizMcY.jpeg?width=640&crop=smart&auto=webp&s=33ba35e2d39b7d5dfe8cd69abe36be33d9d96918",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/wallstreetbets/comments/1vvnfpl/warren_buffett_in_the_retirement_home_watching/",
+    "title": "Warren Buffett in the retirement home watching Berkshire Hathaway gamble the $400B cash pile he spent the last 3 years building",
+    "originalTitle": "Warren Buffett in the retirement home watching Berkshire Hathaway gamble the $400B cash pile he spent the last 3 years building",
+    "link": "https://www.reddit.com/r/wallstreetbets/comments/1vvnfpl/warren_buffett_in_the_retirement_home_watching/",
+    "pubDate": "2026-08-22T20:44:44.000Z",
+    "description": "submitted by /u/Kervandos to r/wallstreetbets [link] [comments]",
+    "sourceName": "أسهم البيني وول ستريت - مجموعة 3",
+    "category": "الاسهم",
+    "media": {
+      "image": "https://external-preview.redd.it/bW4xYW02cGZuemtoMST_Q7f6eJsdUF-Hf0-NTK8RB_Na80zPIn94l_oA3dw6.jpeg?width=640&crop=smart&auto=webp&s=e45541b8bda56eb8f8c92cab3ac7ab9d4eb0ef10",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/inflation/comments/1vvlmmo/the_new_golden_age_trump_promised/",
+    "title": "the \"New Golden Age\" trump promised",
+    "originalTitle": "the \"New Golden Age\" trump promised",
+    "link": "https://www.reddit.com/r/inflation/comments/1vvlmmo/the_new_golden_age_trump_promised/",
+    "pubDate": "2026-08-22T19:33:02.000Z",
+    "description": "submitted by /u/Conscious-Quarter423 to r/inflation [link] [comments]",
+    "sourceName": "الاقتصاد والنفط والأسواق",
+    "category": "الاقتصاد",
+    "media": {
+      "image": null,
       "video": null
     }
   },
@@ -33,11 +509,67 @@
     "originalTitle": "Both sides should agree that this is needed.",
     "link": "https://www.reddit.com/r/PoursTea/comments/1vvlha9/both_sides_should_agree_that_this_is_needed/",
     "pubDate": "2026-08-22T19:26:59.000Z",
-    "description": "submitted by    /u/Veshaad  \n [link]   [comments]",
-    "sourceName": "PoursTea",
+    "description": "submitted by /u/Veshaad to r/PoursTea [link] [comments]",
+    "sourceName": "عام وسفر",
     "category": "عام",
     "media": {
       "image": "https://preview.redd.it/digv7zim9zkh1.jpeg?width=640&crop=smart&auto=webp&s=93f0ee8b7c43a95de5e3e7c6d6b83507c187caab",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/inthenews/comments/1vvk2r5/trump_suggests_he_can_use_the_military_on_bond/",
+    "title": "Trump Suggests He Can Use the Military on Bond Markets: ‘If We Have To Use That, We Will’",
+    "originalTitle": "Trump Suggests He Can Use the Military on Bond Markets: ‘If We Have To Use That, We Will’",
+    "link": "https://www.reddit.com/r/inthenews/comments/1vvk2r5/trump_suggests_he_can_use_the_military_on_bond/",
+    "pubDate": "2026-08-22T18:32:52.000Z",
+    "description": "submitted by /u/Majano57 to r/inthenews [link] [comments]",
+    "sourceName": "الأخبار والأحداث العالمية",
+    "category": "الاخبار",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/Economics/comments/1vvjjf3/mark_carney_says_canada_is_now_at_war_with_us/",
+    "title": "Mark Carney says Canada is now ‘at war’ with US over trade",
+    "originalTitle": "Mark Carney says Canada is now ‘at war’ with US over trade",
+    "link": "https://www.reddit.com/r/Economics/comments/1vvjjf3/mark_carney_says_canada_is_now_at_war_with_us/",
+    "pubDate": "2026-08-22T18:12:02.000Z",
+    "description": "submitted by /u/unconventionalbook to r/Economics [link] [comments]",
+    "sourceName": "الاقتصاد والنفط والأسواق",
+    "category": "الاقتصاد",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/10xPennyStocks/comments/1vvjaom/i_got_1500_i_need_to_double_it_the_most_possible/",
+    "title": "I got 1500$ I need to double it the most possible in the next 8 days",
+    "originalTitle": "I got 1500$ I need to double it the most possible in the next 8 days",
+    "link": "https://www.reddit.com/r/10xPennyStocks/comments/1vvjaom/i_got_1500_i_need_to_double_it_the_most_possible/",
+    "pubDate": "2026-08-22T18:02:41.000Z",
+    "description": "which stocks are you buying next week ? submitted by /u/stocksnoobie0 to r/10xPennyStocks [link] [comments]",
+    "sourceName": "أسهم البيني وول ستريت - مجموعة 3",
+    "category": "الاسهم",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/litecoin/comments/1vvj2jo/ltc_47/",
+    "title": "LTC 4.7",
+    "originalTitle": "LTC 4.7",
+    "link": "https://www.reddit.com/r/litecoin/comments/1vvj2jo/ltc_47/",
+    "pubDate": "2026-08-22T17:54:14.000Z",
+    "description": "Almost here. Finish line to 100LTC submitted by /u/PlaneConstruction999 to r/litecoin [link] [comments]",
+    "sourceName": "العملات الرقمية والشبكات - مجموعة 2",
+    "category": "كريبتو",
+    "media": {
+      "image": null,
       "video": null
     }
   },
@@ -47,11 +579,95 @@
     "originalTitle": "Canadian Premiere On Trade Negotiations With Trump: “You can’t get a good deal with a bad person.”",
     "link": "https://www.reddit.com/r/PoursTea/comments/1vvh7y4/canadian_premiere_on_trade_negotiations_with/",
     "pubDate": "2026-08-22T16:42:22.000Z",
-    "description": "Read the source article here: https://www.ctvnews.ca/winnipeg/article/manitoba-premier-questions-reliability-of-trade-deal-with-erratic-trump/\n    submitted by    /u/T_Shurt  \n [link]   [comments]",
-    "sourceName": "PoursTea",
+    "description": "Read the source article here: https://www.ctvnews.ca/winnipeg/article/manitoba-premier-questions-reliability-of-trade-deal-with-erratic-trump/ submitted by /u/T_Shurt to r/PoursTea [link] [comments]",
+    "sourceName": "عام وسفر",
     "category": "عام",
     "media": {
       "image": "https://external-preview.redd.it/czU0eHB0ejdneWtoMZt_PksBMSiQo4lsnJSJfnnfO-rFAXFWuvvWDIXIPCcm.jpeg?width=640&crop=smart&auto=webp&s=dad3d20870a98a345555e0228eabf4c7821fdbeb",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/PoursTea/comments/1vvgzs1/truly_revolutionary_ideas/",
+    "title": "Truly revolutionary ideas.",
+    "originalTitle": "Truly revolutionary ideas.",
+    "link": "https://www.reddit.com/r/PoursTea/comments/1vvgzs1/truly_revolutionary_ideas/",
+    "pubDate": "2026-08-22T16:33:19.000Z",
+    "description": "If El-Sayed or Mamdani being Muslim bothers people, but Mehmet Oz being one does not, the issue isn't religion. submitted by /u/Veshaad to r/PoursTea [link] [comments]",
+    "sourceName": "عام وسفر",
+    "category": "عام",
+    "media": {
+      "image": "https://preview.redd.it/iyuyxb3neykh1.jpeg?width=320&crop=smart&auto=webp&s=16b38c5fa08ccc3566ebdf3106eedd186ec80093",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/inthenews/comments/1vvfzqv/trump_hates_the_troops_the_troops_are_taking/",
+    "title": "Trump Hates the Troops. The Troops Are Taking Notice | The administration is desperately trying to spin the hopeless war in Iran as a success, but our service members and their families are telling a different story.",
+    "originalTitle": "Trump Hates the Troops. The Troops Are Taking Notice | The administration is desperately trying to spin the hopeless war in Iran as a success, but our service members and their families are telling a different story.",
+    "link": "https://www.reddit.com/r/inthenews/comments/1vvfzqv/trump_hates_the_troops_the_troops_are_taking/",
+    "pubDate": "2026-08-22T15:53:44.000Z",
+    "description": "submitted by /u/FreeHugs23 to r/inthenews [link] [comments]",
+    "sourceName": "الأخبار والأحداث العالمية",
+    "category": "الاخبار",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/EconomyCharts/comments/1vvf5h1/us_dollar_index_dxy_falls_below_200day_moving/",
+    "title": "U.S. Dollar Index DXY falls below 200-Day moving average for the first time in more than 3 months",
+    "originalTitle": "U.S. Dollar Index DXY falls below 200-Day moving average for the first time in more than 3 months",
+    "link": "https://www.reddit.com/r/EconomyCharts/comments/1vvf5h1/us_dollar_index_dxy_falls_below_200day_moving/",
+    "pubDate": "2026-08-22T15:19:44.000Z",
+    "description": "submitted by /u/RobertBartus to r/EconomyCharts [link] [comments]",
+    "sourceName": "الاقتصاد والنفط والأسواق",
+    "category": "الاقتصاد",
+    "media": {
+      "image": "https://preview.redd.it/jvgwufei1ykh1.png?width=640&crop=smart&auto=webp&s=93804ba5d1b0f2139bfe89a9135dfac91b1addba",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/PoursTea/comments/1vvec6n/yep_cant_fix_stupid_especially_maga_level_stupid/",
+    "title": "Yep. Can’t fix stupid, especially Maga level stupid.",
+    "originalTitle": "Yep. Can’t fix stupid, especially Maga level stupid.",
+    "link": "https://www.reddit.com/r/PoursTea/comments/1vvec6n/yep_cant_fix_stupid_especially_maga_level_stupid/",
+    "pubDate": "2026-08-22T14:47:05.000Z",
+    "description": "submitted by /u/No_Cow5624 to r/PoursTea [link] [comments]",
+    "sourceName": "عام وسفر",
+    "category": "عام",
+    "media": {
+      "image": "https://preview.redd.it/8j7u2qtovxkh1.jpeg?width=640&crop=smart&auto=webp&s=7277939e2a7516a37e4acd1c2e3b726d803ed258",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/GME/comments/1vvdn6s/let_the_console_cycle_begin/",
+    "title": "LET THE CONSOLE CYCLE BEGIN!🏴‍☠️🎮📀👾",
+    "originalTitle": "LET THE CONSOLE CYCLE BEGIN!🏴‍☠️🎮📀👾",
+    "link": "https://www.reddit.com/r/GME/comments/1vvdn6s/let_the_console_cycle_begin/",
+    "pubDate": "2026-08-22T14:18:01.000Z",
+    "description": "submitted by /u/Number_1_w_Fries to r/GME [link] [comments]",
+    "sourceName": "أسهم البيني وول ستريت - مجموعة 3",
+    "category": "الاسهم",
+    "media": {
+      "image": "https://external-preview.redd.it/M2Zydmo4b2hxeGtoMfu3GiO_7LfMfaDUxAxJlrNsskL8iT1mpp6Ctn1savRs.jpeg?width=640&crop=smart&auto=webp&s=16d87b58f56824623a94de667f2248a2298f7ebf",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/btc/comments/1vvd526/me_looking_down_at_the_buyers_of_the_bull_trap/",
+    "title": "Me looking down at the buyers of the bull trap before it heads down to 50k.",
+    "originalTitle": "Me looking down at the buyers of the bull trap before it heads down to 50k.",
+    "link": "https://www.reddit.com/r/btc/comments/1vvd526/me_looking_down_at_the_buyers_of_the_bull_trap/",
+    "pubDate": "2026-08-22T13:57:10.000Z",
+    "description": "submitted by /u/WonderfulWorld3326 to r/btc [link] [comments]",
+    "sourceName": "العملات الرقمية والشبكات - مجموعة 2",
+    "category": "كريبتو",
+    "media": {
+      "image": "https://preview.redd.it/wjn6ne1smxkh1.png?width=640&crop=smart&auto=webp&s=37814129ee100a4fc1586baba0e1bdc733d83744",
       "video": null
     }
   },
@@ -61,11 +677,95 @@
     "originalTitle": "Luigi Mangione Pleads Guilty",
     "link": "https://theonion.com/luigi-mangione-pleads-guilty/",
     "pubDate": "Sat, 22 Aug 2026 13:00:00 +0000",
-    "description": "Luigi Mangione pleaded guilty to federal stalking charges in the 2024 killing of UnitedHealthcare CEO Brian Thompson, facing a maximum sentence of life in prison. What do you think?\nThe post Luigi Mangione Pleads Guilty appeared first on The Onion.",
-    "sourceName": "The Onion",
+    "description": "Luigi Mangione pleaded guilty to federal stalking charges in the 2024 killing of UnitedHealthcare CEO Brian Thompson, facing a maximum sentence of life in prison. What do you think? The post Luigi Mangione Pleads Guilty appeared first on The Onion.",
+    "sourceName": "The Onion News",
     "category": "الاخبار",
     "media": {
       "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/oil/comments/1vvbt31/iran_says_the_world_accepts_that_it_has_defeated/",
+    "title": "Iran says the world accepts that it has defeated the US | AP News",
+    "originalTitle": "Iran says the world accepts that it has defeated the US | AP News",
+    "link": "https://www.reddit.com/r/oil/comments/1vvbt31/iran_says_the_world_accepts_that_it_has_defeated/",
+    "pubDate": "2026-08-22T12:59:24.000Z",
+    "description": "submitted by /u/Opster79two to r/oil [link] [comments]",
+    "sourceName": "الاقتصاد والنفط والأسواق",
+    "category": "الاقتصاد",
+    "media": {
+      "image": "https://external-preview.redd.it/ZINNQTJZ9bhz76SdzTZDAA7l93y-bgtb8_1xjEartOU.jpeg?width=640&crop=smart&auto=webp&s=73c82517bf079cd9f8d2b01e259a7b030611954f",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/bondmarket/comments/1vvbg1e/gold_really_said_ill_take_that_reserveasset_spot/",
+    "title": "Gold really said: “I’ll take that reserve-asset spot back.”",
+    "originalTitle": "Gold really said: “I’ll take that reserve-asset spot back.”",
+    "link": "https://www.reddit.com/r/bondmarket/comments/1vvbg1e/gold_really_said_ill_take_that_reserveasset_spot/",
+    "pubDate": "2026-08-22T12:42:22.000Z",
+    "description": "submitted by /u/webabybears to r/bondmarket [link] [comments]",
+    "sourceName": "الاقتصاد والنفط والأسواق",
+    "category": "الاقتصاد",
+    "media": {
+      "image": "https://preview.redd.it/mvlkjbrf9xkh1.jpeg?width=640&crop=smart&auto=webp&s=4db04631edb573f782a676cde2feddb97b17e9a6",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/weedstocks/comments/1vv9n5s/green_thumb_opens_its_24th_florida_location_rise/",
+    "title": "Green Thumb Opens Its 24th Florida Location, RISE Dispensary Port St. Lucie, on August 22",
+    "originalTitle": "Green Thumb Opens Its 24th Florida Location, RISE Dispensary Port St. Lucie, on August 22",
+    "link": "https://www.reddit.com/r/weedstocks/comments/1vv9n5s/green_thumb_opens_its_24th_florida_location_rise/",
+    "pubDate": "2026-08-22T11:12:54.000Z",
+    "description": "submitted by /u/MatrixOrigin to r/weedstocks [link] [comments]",
+    "sourceName": "أسهم البيني وول ستريت - مجموعة 3",
+    "category": "الاسهم",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/Cruise/comments/1vv80u5/genting_dream_cruise_experience/",
+    "title": "Genting Dream cruise experience",
+    "originalTitle": "Genting Dream cruise experience",
+    "link": "https://www.reddit.com/r/Cruise/comments/1vv80u5/genting_dream_cruise_experience/",
+    "pubDate": "2026-08-22T09:43:30.000Z",
+    "description": "I recently went on a 4D3N cruise on board StarDream Cruises's Genting Dream (150,000 GT) (Singapore > Penang, Malaysia > Melaka, Malaysia > Singapore). This was my first time on a cruise ship after the pandemic (I have previously cruised on RC's Mariner of the Seas and on Genting Dream once). A bit of context on cruises here in Southeast Asia: Since we are in the tropics, there aren't summer and winter holiday seasons. Hence, Genting Dream operates year-round in the region with different kinds of passengers in different months. August is considered an off-peak season in Singapore and Malaysia but there are a lot of tourists coming from East Asia (China, Japan, South Korea) as East Asian schools are on summer breaks. When I took this cruise in Aug, more than half of the passengers were elderly folks from Singapore, Malaysia, and Indonesia (Indonesian Chinese) (you can't really tell them apart) cruising to gamble in the ship's casino, then there was a group of hundreds of people from an Indian tractor company on board for a corporate retreat, followed by Mainland Chinese families on holidays. I have read comments about GD being overly focussed on casinos, and there is some truth to it -- Genting Group (GD's operator) runs the only casino in Malaysia and one of the two casinos in Singapore. GD's main casino spans 3 decks amidships (the ship has 19 decks, passenger facilities are from deck 4 to deck 19) and there is also a high-limit casino located in the ship's The Palace zone. The Palace is sort of a \"ship-within-a-ship\" luxury travel class with their own exclusive areas within the ship. The Palace spans 4 decks and on my cruise, most of The Palace passengers are casino high-rollers. In terms of food, GD serves mostly Chinese and Western food and also has a Halal and Jain section in their main buffet -- 42% of Southeast Asian population is Muslim and the cruise line seems very interested in tapping into this market, hence the Halal food; A lot of Indians from India travel to Singapore for cruise, hence the cruise is also catering to them. Note: do take this \"Western food\" term lightly. It's like how Chinese people react to Americans calling orange chicken a \"Chinese food\". In terms of entertainment on board, there are nightly shows in the theatre (most of the performers are Europeans) and there are 3 bands/musical groups performing either English or Chinese songs in two of the ship's bars. There is also an open space called \"The Lobby\" where games are held once or twice per day and there are other programmes such as origami-folding sessions and cooking shows. submitted by /u/earth_wanderer1235 to r/Cruise [link] [comments]",
+    "sourceName": "عام وسفر",
+    "category": "عام",
+    "media": {
+      "image": "https://preview.redd.it/3dbbxl83dwkh1.jpg?width=140&height=105&auto=webp&s=df37b5b31d55f80dca8270bf0ad835cc3bb6ad51",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/OfficialTrumpCoin/comments/1vv3dzn/is_that_a_typo/",
+    "title": "Is that a typo???🚀🚀",
+    "originalTitle": "Is that a typo???🚀🚀",
+    "link": "https://www.reddit.com/r/OfficialTrumpCoin/comments/1vv3dzn/is_that_a_typo/",
+    "pubDate": "2026-08-22T05:17:03.000Z",
+    "description": "Just sold my last 50 coins and now we rip? If you're still in it to win it congrats. #neverselleverything submitted by /u/BenjaminDavid87 to r/OfficialTrumpCoin [link] [comments]",
+    "sourceName": "العملات الرقمية والشبكات - مجموعة 2",
+    "category": "كريبتو",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/xlm/comments/1vuu7mf/consider_the_motive_behind_this_news_blurb/",
+    "title": "Consider the Motive Behind this News Blurb",
+    "originalTitle": "Consider the Motive Behind this News Blurb",
+    "link": "https://www.reddit.com/r/xlm/comments/1vuu7mf/consider_the_motive_behind_this_news_blurb/",
+    "pubDate": "2026-08-21T22:07:47.000Z",
+    "description": "Eyes open friends. Enjoy the weekend 🥂 submitted by /u/SargeMaximus to r/xlm [link] [comments]",
+    "sourceName": "العملات الرقمية والشبكات - مجموعة 2",
+    "category": "كريبتو",
+    "media": {
+      "image": "https://preview.redd.it/sxylh9iexskh1.jpeg?width=640&crop=smart&auto=webp&s=a9dc73e72db4089b6fca2c223f47fde20199636d",
       "video": null
     }
   },
@@ -75,8 +775,8 @@
     "originalTitle": "Pros And Cons Of Wearing Shorts In The Office",
     "link": "https://theonion.com/pros-and-cons-of-wearing-shorts-in-the-office/",
     "pubDate": "Fri, 21 Aug 2026 16:33:25 +0000",
-    "description": "Whether shorts are office-appropriate attire has ignited an online debate. The Onion examines the pros and cons of wearing shorts in the office. PRO New scapegoat for bad quarter Good to have full range of movement while sitting stationary for eight hours A well-aired cog is a productive cog Ready to attend barbecue at a […]\nThe post Pros And Cons Of Wearing Shorts In The Office appeared first on The Onion.",
-    "sourceName": "The Onion",
+    "description": "Whether shorts are office-appropriate attire has ignited an online debate. The Onion examines the pros and cons of wearing shorts in the office. PRO New scapegoat for bad quarter Good to have full range of movement while sitting stationary for eight hours A well-aired cog is a productive cog Ready to attend barbecue at a […] The post Pros And Cons Of Wearing Shorts In The Office appeared first on The Onion.",
+    "sourceName": "The Onion News",
     "category": "الاخبار",
     "media": {
       "image": null,
@@ -89,8 +789,8 @@
     "originalTitle": "David Attenborough Admits To Exaggerating Wonder Of Seals",
     "link": "https://theonion.com/david-attenborough-admits-to-exaggerating-wonder-of-seals/",
     "pubDate": "Fri, 21 Aug 2026 16:09:45 +0000",
-    "description": "LONDON—Acknowledging that the sea mammals were far from being “awe-inspiring, beautiful creatures or a splendor of nature,” an embarrassed David Attenborough finally admitted this week to exaggerating the wonder of seals. “While I did several monologues in voiceover claiming that sea lions have a quiet majesty, they are actually just stinky, slippery wet dogs with […]\nThe post David Attenborough Admits To Exaggerating Wonder Of Seals appeared first on The Onion.",
-    "sourceName": "The Onion",
+    "description": "LONDON—Acknowledging that the sea mammals were far from being “awe-inspiring, beautiful creatures or a splendor of nature,” an embarrassed David Attenborough finally admitted this week to exaggerating the wonder of seals. “While I did several monologues in voiceover claiming that sea lions have a quiet majesty, they are actually just stinky, slippery wet dogs with […] The post David Attenborough Admits To Exaggerating Wonder Of Seals appeared first on The Onion.",
+    "sourceName": "The Onion News",
     "category": "الاخبار",
     "media": {
       "image": null,
@@ -104,7 +804,7 @@
     "link": "https://theonion.com/men-overly-bored/",
     "pubDate": "Fri, 21 Aug 2026 16:09:32 +0000",
     "description": "The post Men Overly Bored appeared first on The Onion.",
-    "sourceName": "The Onion",
+    "sourceName": "The Onion News",
     "category": "الاخبار",
     "media": {
       "image": null,
@@ -117,8 +817,8 @@
     "originalTitle": "White House Doctor Claims President Has Always Been Face Drawn Onto Cantaloupe",
     "link": "https://theonion.com/white-house-doctor-claims-president-has-always-been-face-drawn-onto-cantaloupe/",
     "pubDate": "Fri, 21 Aug 2026 16:06:23 +0000",
-    "description": "WASHINGTON—Dismissing public concern about the president’s health as baseless speculation, Capt. Sean Barbabella, the director of the White House Medical Unit, announced at a press conference Friday that Donald Trump has always been a face drawn onto a cantaloupe. “If you go back and look at his presidential portrait, he’s always had two dots as […]\nThe post White House Doctor Claims President Has Always Been Face Drawn Onto Cantaloupe appeared first on The Onion.",
-    "sourceName": "The Onion",
+    "description": "WASHINGTON—Dismissing public concern about the president’s health as baseless speculation, Capt. Sean Barbabella, the director of the White House Medical Unit, announced at a press conference Friday that Donald Trump has always been a face drawn onto a cantaloupe. “If you go back and look at his presidential portrait, he’s always had two dots as […] The post White House Doctor Claims President Has Always Been Face Drawn Onto Cantaloupe appeared first on The Onion.",
+    "sourceName": "The Onion News",
     "category": "الاخبار",
     "media": {
       "image": null,
@@ -126,97 +826,13 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/WaterStocks/comments/1v8bmxb/what_to_look_for_in_water_stock_earnings/",
-    "title": "What to Look for in Water Stock Earnings",
-    "originalTitle": "What to Look for in Water Stock Earnings",
-    "link": "https://www.reddit.com/r/WaterStocks/comments/1v8bmxb/what_to_look_for_in_water_stock_earnings/",
-    "pubDate": "2026-07-27T20:07:42.000Z",
-    "description": "The biggest earnings in the water sector are tomorrow with - Xylem, Pentair, Ecolab, and Veralto all set to report. \n Here's what to look for: https://www.linkedin.com/pulse/what-look-water-stock-earnings-michael-rizzo-7mufe/?trackingId=W%2BWLa%2BZPR06d68COSU%2FU2A%3D%3D\n    submitted by    /u/CoffeeonMarket  \n [link]   [comments]",
-    "sourceName": "Water Stocks",
-    "category": "الاسهم",
-    "media": {
-      "image": "https://preview.redd.it/4w62blk6xtfh1.jpeg?width=640&crop=smart&auto=webp&s=5224baea2cd71081e993ffe3febc68b8c82ba984",
-      "video": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/PoursTea/comments/1ux4yrm/seconds_before_disaster/",
-    "title": "Seconds before disaster",
-    "originalTitle": "Seconds before disaster",
-    "link": "https://www.reddit.com/r/PoursTea/comments/1ux4yrm/seconds_before_disaster/",
-    "pubDate": "2026-07-15T12:50:41.000Z",
-    "description": "submitted by    /u/ShojoSalsa  \n [link]   [comments]",
-    "sourceName": "PoursTea",
-    "category": "عام",
-    "media": {
-      "image": "https://preview.redd.it/lqkovlq94edh1.jpeg?width=640&crop=smart&auto=webp&s=92a9c0023001e52b423b81d0c4bfb0734acaa999",
-      "video": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/CryptoCommunityAfric/comments/1u2wjvq/bitcoin_selloff_deepens_as_spacex_hype_sucks_cash/",
-    "title": "Bitcoin Sell-off Deepens As SpaceX Hype Sucks Cash Out",
-    "originalTitle": "Bitcoin Sell-off Deepens As SpaceX Hype Sucks Cash Out",
-    "link": "https://www.reddit.com/r/CryptoCommunityAfric/comments/1u2wjvq/bitcoin_selloff_deepens_as_spacex_hype_sucks_cash/",
-    "pubDate": "2026-06-11T11:36:27.000Z",
-    "description": "submitted by    /u/Omn1Crypto  \n [link]   [comments]",
-    "sourceName": "CryptoCommunityAfric",
-    "category": "كريبتو",
-    "media": {
-      "image": "https://external-preview.redd.it/zdWItAxE3ap2lJZ0YiGcneKeu58zj4QKhOiteUbyAts.jpeg?width=640&crop=smart&auto=webp&s=0eb8960b95afb8f57b251ae6c55f9c506b110945",
-      "video": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/WaterStocks/comments/1tmu7sg/opportunity_in_the_big_four_water_stocks/",
-    "title": "Opportunity in the Big Four Water Stocks?",
-    "originalTitle": "Opportunity in the Big Four Water Stocks?",
-    "link": "https://www.reddit.com/r/WaterStocks/comments/1tmu7sg/opportunity_in_the_big_four_water_stocks/",
-    "pubDate": "2026-05-25T01:18:18.000Z",
-    "description": "The Big Four Water Technology Stocks have significantly underperformed the market this year. Did this create an investment opportunity?\n    submitted by    /u/CoffeeonMarket  \n [link]   [comments]",
-    "sourceName": "Water Stocks",
-    "category": "الاسهم",
-    "media": {
-      "image": "https://external-preview.redd.it/hD9R-_wmn14CG8qpgMOJMH3LOrDlH697xI23JmneBkQ.jpeg?width=640&crop=smart&auto=webp&s=0957ee755520d309f6610fb42c094b382edbb790",
-      "video": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/CryptoCommunityAfric/comments/1ti32xd/hnocoin_thoughts/",
-    "title": "HNOCOIN thoughts?",
-    "originalTitle": "HNOCOIN thoughts?",
-    "link": "https://www.reddit.com/r/CryptoCommunityAfric/comments/1ti32xd/hnocoin_thoughts/",
-    "pubDate": "2026-05-19T22:48:06.000Z",
-    "description": "submitted by    /u/HugeGrindingCow  \n [link]   [comments]",
-    "sourceName": "CryptoCommunityAfric",
-    "category": "كريبتو",
-    "media": {
-      "image": null,
-      "video": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/CryptoCommunityAfric/comments/1tgpzfe/new_tether_has_invested_in_lemfi_a/",
-    "title": "🚨NEW: Tether has invested in LemFi, a Y-Combinator-backed fintech founded in 2021.",
-    "originalTitle": "🚨NEW: Tether has invested in LemFi, a Y-Combinator-backed fintech founded in 2021.",
-    "link": "https://www.reddit.com/r/CryptoCommunityAfric/comments/1tgpzfe/new_tether_has_invested_in_lemfi_a/",
-    "pubDate": "2026-05-18T15:26:07.000Z",
-    "description": "The company did not disclose the investment size, but said it plans to help LemFi use $USDT as a settlement layer across Africa and Asia.\n    submitted by    /u/rl_rae_bobo  \n [link]   [comments]",
-    "sourceName": "CryptoCommunityAfric",
-    "category": "كريبتو",
-    "media": {
-      "image": "https://preview.redd.it/6pmb3ef4zw1h1.jpeg?width=640&crop=smart&auto=webp&s=ffe96caed69212594860d95a339c5d6cd41f6d83",
-      "video": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/WaterStocks/comments/1rydgva/the_other_barrel_investing_in_water_in_the/",
-    "title": "The Other Barrel: Investing in Water in the Oilfield",
-    "originalTitle": "The Other Barrel: Investing in Water in the Oilfield",
-    "link": "https://www.reddit.com/r/WaterStocks/comments/1rydgva/the_other_barrel_investing_in_water_in_the/",
-    "pubDate": "2026-03-19T21:46:06.000Z",
-    "description": "In today’s oil landscape, each barrel of oil produced can generate multiple barrels of water. That water must be gathered, transported, treated, recycled, or disposed of. And as production scales—particularly in the Permian Basin—water is no longer a side issue, it’s becoming a core constraint\n    submitted by    /u/CoffeeonMarket  \n [link]   [comments]",
-    "sourceName": "Water Stocks",
+    "id": "https://www.reddit.com/r/WebullPennyStocks/comments/1vugpm6/getting_dump_despite_a_good_q2/",
+    "title": "Getting dump despite a good Q2",
+    "originalTitle": "Getting dump despite a good Q2",
+    "link": "https://www.reddit.com/r/WebullPennyStocks/comments/1vugpm6/getting_dump_despite_a_good_q2/",
+    "pubDate": "2026-08-21T13:40:57.000Z",
+    "description": "submitted by /u/Illustrious-Lack4206 to r/WebullPennyStocks [link] [comments]",
+    "sourceName": "أسهم البيني وول ستريت - مجموعة 3",
     "category": "الاسهم",
     "media": {
       "image": null,
@@ -224,55 +840,167 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/CryptoCommunityAfric/comments/1rfhruc/dip_watch_michael_saylor_strategy_just_posted/",
-    "title": "Dip Watch: Michael Saylor Strategy just posted that he needs \"A BIGGER ORANGE BAG\" What does that signal ?",
-    "originalTitle": "Dip Watch: Michael Saylor Strategy just posted that he needs \"A BIGGER ORANGE BAG\" What does that signal ?",
-    "link": "https://www.reddit.com/r/CryptoCommunityAfric/comments/1rfhruc/dip_watch_michael_saylor_strategy_just_posted/",
-    "pubDate": "2026-02-26T18:14:57.000Z",
-    "description": "submitted by    /u/Acceptable_Post1  \n [link]   [comments]",
-    "sourceName": "CryptoCommunityAfric",
+    "id": "https://theonion.com/?p=1851705903",
+    "title": "Karaoke Outing Paints Heartbreaking Picture Of Friend Practicing Morrissey Impression Alone",
+    "originalTitle": "Karaoke Outing Paints Heartbreaking Picture Of Friend Practicing Morrissey Impression Alone",
+    "link": "https://theonion.com/karaoke-outing-paints-heartbreaking-picture-of-friend-practicing-morrissey-impression-alone/",
+    "pubDate": "Fri, 21 Aug 2026 13:00:00 +0000",
+    "description": "RENO, NV—Wincing as he sang in a baritone voice with a slight British accent, local woman Mary Lowe reportedly felt immense pity at a karaoke outing Thursday after she imagined her friend Matthew Brown working on his Morrissey impression alone at home. “Oh no, I can picture him practicing it all by himself in his […] The post Karaoke Outing Paints Heartbreaking Picture Of Friend Practicing Morrissey Impression Alone appeared first on The Onion.",
+    "sourceName": "The Onion News",
+    "category": "الاخبار",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://theonion.com/?p=1851706066",
+    "title": "Mark Zuckerberg’s Yacht Fails To Respond To Maritime Distress Call",
+    "originalTitle": "Mark Zuckerberg’s Yacht Fails To Respond To Maritime Distress Call",
+    "link": "https://theonion.com/mark-zuckerbergs-yacht-fails-to-respond-to-maritime-distress-call/",
+    "pubDate": "Fri, 21 Aug 2026 13:00:00 +0000",
+    "description": "After a megayacht owned by Mark Zuckerberg failed to respond to a distress signal from a skiff that had run out of fuel, a spokesperson for the centibillionaire claimed his crew did not hear the call for help. What do you think? The post Mark Zuckerberg’s Yacht Fails To Respond To Maritime Distress Call appeared first on The Onion.",
+    "sourceName": "The Onion News",
+    "category": "الاخبار",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://theonion.com/?p=1851706202",
+    "title": "Every Commercial On ESPN Past Midnight Just Straight-Up Telling Viewers They Have Prostate Cancer",
+    "originalTitle": "Every Commercial On ESPN Past Midnight Just Straight-Up Telling Viewers They Have Prostate Cancer",
+    "link": "https://theonion.com/every-commercial-on-espn-past-midnight-just-straight-up-telling-viewers-they-have-prostate-cancer/",
+    "pubDate": "Fri, 21 Aug 2026 13:00:00 +0000",
+    "description": "The post Every Commercial On ESPN Past Midnight Just Straight-Up Telling Viewers They Have Prostate Cancer appeared first on The Onion.",
+    "sourceName": "The Onion News",
+    "category": "الاخبار",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/tokenomics/comments/1vu7hqn/which_companies_having_skyrocketing_token_costs/",
+    "title": "Which companies having skyrocketing token costs???",
+    "originalTitle": "Which companies having skyrocketing token costs???",
+    "link": "https://www.reddit.com/r/tokenomics/comments/1vu7hqn/which_companies_having_skyrocketing_token_costs/",
+    "pubDate": "2026-08-21T05:40:55.000Z",
+    "description": "Everyone is in the news how they consumed annual AI token budget in a few months (E.g., Uber). But is that really true beyond tech companies? Tech companies, I get it. AI tokens used for coding is their main business. But the rest (e.g., manufacturing, energy, distributors, etc.) should have not token cost problems, no? submitted by /u/zamir_akimbekov to r/tokenomics [link] [comments]",
+    "sourceName": "العملات الرقمية والشبكات - مجموعة 2",
     "category": "كريبتو",
     "media": {
-      "image": "https://preview.redd.it/4lzp50q7uulg1.jpeg?width=640&crop=smart&auto=webp&s=e178364e477d17c3658d7a8bd9b22c710f596793",
+      "image": null,
       "video": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/CryptoCommunityAfric/comments/1remxei/bitcoin_is_ripping_btc_just_broke_69k_and_now/",
-    "title": "🚀 BITCOIN IS RIPPING. BTC JUST BROKE $69K AND NOW BACK ABOVE 2021 HIGH. $75,000 IS HAPPENING TODAY ??",
-    "originalTitle": "🚀 BITCOIN IS RIPPING. BTC JUST BROKE $69K AND NOW BACK ABOVE 2021 HIGH. $75,000 IS HAPPENING TODAY ??",
-    "link": "https://www.reddit.com/r/CryptoCommunityAfric/comments/1remxei/bitcoin_is_ripping_btc_just_broke_69k_and_now/",
-    "pubDate": "2026-02-25T19:19:06.000Z",
-    "description": "submitted by    /u/El_precaution  \n [link]   [comments]",
-    "sourceName": "CryptoCommunityAfric",
+    "id": "https://theonion.com/?p=1851706142",
+    "title": "Boy Gets Nice Long Look At Small Of Father’s Back While He Picks Up Ping-Pong Ball",
+    "originalTitle": "Boy Gets Nice Long Look At Small Of Father’s Back While He Picks Up Ping-Pong Ball",
+    "link": "https://theonion.com/boy-gets-nice-long-look-at-small-of-fathers-back-while-he-picks-up-ping-pong-ball/",
+    "pubDate": "Thu, 20 Aug 2026 18:28:56 +0000",
+    "description": "APPLETON, WI—Wide-eyed and unusually still as he took in the unfamiliar sight before him, local 9-year-old Connor Walsh reportedly got a nice long look at the small of his father’s back Thursday while the 44-year-old bent down to retrieve a ping-pong ball that had rolled beneath a basement shelving unit. Several reports indicated that Walsh’s […] The post Boy Gets Nice Long Look At Small Of Father’s Back While He Picks Up Ping-Pong Ball appeared first on The Onion.",
+    "sourceName": "The Onion News",
+    "category": "الاخبار",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://theonion.com/?p=1851706137",
+    "title": "Tips For Getting To School Safely",
+    "originalTitle": "Tips For Getting To School Safely",
+    "link": "https://theonion.com/tips-for-getting-to-school-safely/",
+    "pubDate": "Thu, 20 Aug 2026 15:18:30 +0000",
+    "description": "School is back in session for millions of students across the country. The Onion shares tips for ensuring your child has a safe commute. Attend a different school each day to throw would-be kidnappers off your trail. Determine if your bus driver needs uppers, downers, or both. If cycling to school, disguise yourself as a […] The post Tips For Getting To School Safely appeared first on The Onion.",
+    "sourceName": "The Onion News",
+    "category": "الاخبار",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://theonion.com/?p=1851705832",
+    "title": "Dad’s Driving Directions Hinge On Where Old Shell Station Used To Be",
+    "originalTitle": "Dad’s Driving Directions Hinge On Where Old Shell Station Used To Be",
+    "link": "https://theonion.com/dads-driving-directions-hinge-on-where-old-shell-station-used-to-be/",
+    "pubDate": "Thu, 20 Aug 2026 13:00:00 +0000",
+    "description": "CHICAGO—Basing the instructions almost entirely on a mental map of his surroundings that had seemingly not been updated since 2002, local dad Kenan Volmer reportedly offered his children driving directions to their uncle’s house Thursday that hinged on where an old Shell station used to be. “So first you’re going to drive down Touhy Avenue, […] The post Dad’s Driving Directions Hinge On Where Old Shell Station Used To Be appeared first on The Onion.",
+    "sourceName": "The Onion News",
+    "category": "الاخبار",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://theonion.com/?p=1851705909",
+    "title": "Local Music Venue An Absolute Minefield Of Ex-Boyfriends",
+    "originalTitle": "Local Music Venue An Absolute Minefield Of Ex-Boyfriends",
+    "link": "https://theonion.com/local-music-venue-an-absolute-minefield-of-ex-boyfriends/",
+    "pubDate": "Thu, 20 Aug 2026 13:00:00 +0000",
+    "description": "CHICAGO—As she navigated the concert crowd with increased vigilance, local woman Penelope Frasier issued a red alert Thursday, warning that the music venue she and her friends had just entered was an absolute minefield of her ex-boyfriends. “There could be one hiding around every corner,” said Frasier, quickly peeking out from behind a support beam […] The post Local Music Venue An Absolute Minefield Of Ex-Boyfriends appeared first on The Onion.",
+    "sourceName": "The Onion News",
+    "category": "الاخبار",
+    "media": {
+      "image": null,
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/OilPrices/comments/1vt7uxq/trump_announces_economic_warfare_on_iran/",
+    "title": "Trump announces 'economic warfare' on Iran, threatens ‘tremendous’ consequences for its backers",
+    "originalTitle": "Trump announces 'economic warfare' on Iran, threatens ‘tremendous’ consequences for its backers",
+    "link": "https://www.reddit.com/r/OilPrices/comments/1vt7uxq/trump_announces_economic_warfare_on_iran/",
+    "pubDate": "2026-08-20T03:15:17.000Z",
+    "description": "submitted by /u/hereswhatworks to r/OilPrices [link] [comments]",
+    "sourceName": "الاقتصاد والنفط والأسواق",
+    "category": "الاقتصاد",
+    "media": {
+      "image": "https://external-preview.redd.it/bj8LdvuKN6ZMOnWKKuS4zHs8L9-_468ojOI61DONSlU.jpeg?width=640&crop=smart&auto=webp&s=ffd93257101bfd400bfa1bfec0949c52e9c9b2b7",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/USIranWar/comments/1vt224t/more_than_750_us_service_members_wounded_since/",
+    "title": "More than 750 US service members wounded since start of Iran War",
+    "originalTitle": "More than 750 US service members wounded since start of Iran War",
+    "link": "https://www.reddit.com/r/USIranWar/comments/1vt224t/more_than_750_us_service_members_wounded_since/",
+    "pubDate": "2026-08-19T22:59:45.000Z",
+    "description": "submitted by /u/cnn to r/USIranWar [link] [comments]",
+    "sourceName": "الأخبار والأحداث العالمية",
+    "category": "الاخبار",
+    "media": {
+      "image": "https://external-preview.redd.it/xRfBQfEMeR0vJkRmaTPLIWOUXVWR6moutYs9q20vYqQ.jpeg?width=640&crop=smart&auto=webp&s=39b10f952ddce20dcc3747b35a21e67295eccee6",
+      "video": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/CryptoCurrencyFIRE/comments/1vp3ymo/prefunded_crypto_cards_vs_direct_wallet_payments/",
+    "title": "Pre-funded crypto cards vs direct wallet payments, which is better for spending USDT?",
+    "originalTitle": "Pre-funded crypto cards vs direct wallet payments, which is better for spending USDT?",
+    "link": "https://www.reddit.com/r/CryptoCurrencyFIRE/comments/1vp3ymo/prefunded_crypto_cards_vs_direct_wallet_payments/",
+    "pubDate": "2026-08-15T14:14:18.000Z",
+    "description": "So looking at different ways to actually spend USDT day to day, and there seem to be a couple of different approaches. Some crypto cards require you to deposit funds onto the platform or fund a separate spending balance first. Pretty straightforward, but it means moving your USDT before you actually need to spend it. Then there are wallet-native options where you can keep USDT in your own wallet until you're actually making the purchase. For anyone who's tried both, which setup do you prefer for everyday spending? Does keeping USDT in your own wallet make a meaningful difference, or is a pre-funded setup more convenient in practice? submitted by /u/OkDescription5692 to r/CryptoCurrencyFIRE [link] [comments]",
+    "sourceName": "العملات الرقمية والشبكات - مجموعة 2",
     "category": "كريبتو",
     "media": {
-      "image": "https://preview.redd.it/xls9n7qfqolg1.jpeg?width=640&crop=smart&auto=webp&s=d186644d078d224b359d22046404acf328d135eb",
+      "image": null,
       "video": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/WaterStocks/comments/1r9c4ch/water_economics_is_water_the_next_rare_earth/",
-    "title": "Water Economics: Is Water the Next Rare Earth?",
-    "originalTitle": "Water Economics: Is Water the Next Rare Earth?",
-    "link": "https://www.reddit.com/r/WaterStocks/comments/1r9c4ch/water_economics_is_water_the_next_rare_earth/",
-    "pubDate": "2026-02-19T21:32:45.000Z",
-    "description": "https://preview.redd.it/upxf3wpasikg1.jpg?width=1792&format=pjpg&auto=webp&s=a7239dc78e130ba62481e820123f01451408ea75\n We’ve heard a lot recently about rare earth minerals, even copper and silver which have seen supply crunches. So here's the question: Is water next?\n https://www.linkedin.com/pulse/water-economics-next-rare-earth-michael-rizzo-mlfhc/\n    submitted by    /u/CoffeeonMarket  \n [link]   [comments]",
-    "sourceName": "Water Stocks",
-    "category": "الاسهم",
-    "media": {
-      "image": "https://preview.redd.it/upxf3wpasikg1.jpg?width=140&height=78&auto=webp&s=349110c36a6bd057a730eaafd38fc1ac04bfa646",
-      "video": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/WaterStocks/comments/1r34vt5/lqwc_subsidiary_biopipe_global_gets_purchase/",
-    "title": "LQWC Subsidiary BioPipe Global Gets Purchase Order for 25 m³/day On-Site Wastewater System — What Does This Mean for Decentralized Treatment?",
-    "originalTitle": "LQWC Subsidiary BioPipe Global Gets Purchase Order for 25 m³/day On-Site Wastewater System — What Does This Mean for Decentralized Treatment?",
-    "link": "https://www.reddit.com/r/WaterStocks/comments/1r34vt5/lqwc_subsidiary_biopipe_global_gets_purchase/",
-    "pubDate": "2026-02-12T20:43:41.000Z",
-    "description": "submitted by    /u/giantfigeater  \n [link]   [comments]",
-    "sourceName": "Water Stocks",
+    "id": "https://www.reddit.com/r/BiopharmaStocks/comments/1rvauv4/drugs_with_patent_expiry_in_q2_2026/",
+    "title": "Drugs with Patent Expiry in Q2 2026",
+    "originalTitle": "Drugs with Patent Expiry in Q2 2026",
+    "link": "https://www.reddit.com/r/BiopharmaStocks/comments/1rvauv4/drugs_with_patent_expiry_in_q2_2026/",
+    "pubDate": "2026-03-16T14:23:48.000Z",
+    "description": "Humira (Adalimumab): Broader patent protections expire at different intervals. The primary composition patent ends in 2023, but secondary patents in formulation and use extend into 2026. Biosimilar competition is expected to intensify post-2023, but some formulations could face patent barriers until mid-2026. Enbrel (Etanercept): Patent expiry around May 2026. Biosimilar development has been progressing, but regulatory pathways may slow market entry. Keytruda (Pembrolizumab): Protection expected to expire in June 2026, driven by patent estate for the active compound. Limited biosimilar options, due to complexity and regulatory considerations. Januvia (Sitagliptin): Patent extension through supplementary protections could delay generics until June 2026, though patent challenges exist. Lyrica (Pregabalin): Patent expiration aligns with June 2026, after which generic versions should become available. Zetia and Crestor: Both face patent expiry in June 2026, with patent protections ending in 2022-2023 mainly for their active ingredients. However, secondary patents could extend exclusivity into 2026. submitted by /u/drugpatentwatch to r/BiopharmaStocks [link] [comments]",
+    "sourceName": "أسهم البيني وول ستريت - مجموعة 3",
     "category": "الاسهم",
     "media": {
       "image": null,
