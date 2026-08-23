@@ -12,37 +12,62 @@
   {
     "name": "الاقتصاد والنفط والأسواق",
     "category": "الاقتصاد",
-    "url": "https://www.reddit.com/r/EconomyCharts+Economics+EU_Economics+oil+OilPrices+NoFilterFinance+inflation+economy+bondmarket+BoredPandaHQ+business+BusinessTodayNews/.rss"
+    "url": "https://www.reddit.com/r/EconomyCharts+Economics+EU_Economics+oil+OilPrices+NoFilterFinance+inflation+economy/.rss"
   },
   {
-    "name": "الأسهم والخيارات والشركات - مجموعة 1",
+    "name": "السندات والأعمال",
+    "category": "الاقتصاد",
+    "url": "https://www.reddit.com/r/bondmarket+BoredPandaHQ+business+BusinessTodayNews/.rss"
+  },
+  {
+    "name": "أسهم البيني والخيارات - مجموعة 1",
     "category": "الاسهم",
-    "url": "https://www.reddit.com/r/Optionmillionaires+Pennystock+Market_Forecasts+PennyStocksWatch+pennystocks+Penny_Stocks+MBOT_Stock+MarketPulseReport+Junior_Stocks+options+NextMoveStocks+FFIEMeltdown+hot_stocks+FFIE+epiphanystonk/.rss"
+    "url": "https://www.reddit.com/r/Optionmillionaires+Pennystock+Market_Forecasts+PennyStocksWatch+pennystocks+Penny_Stocks+MBOT_Stock+MarketPulseReport/.rss"
   },
   {
-    "name": "الأسهم والاستثمار - مجموعة 2",
+    "name": "أسهم البيني والخيارات - مجموعة 2",
     "category": "الاسهم",
-    "url": "https://www.reddit.com/r/dividends+investing+InterstellarKinetics+ADTX+energyStocks+GrowthStocks+WaterStocks+BeginnerInvesting+Amd+amcstock+wallstreetbets_wins+WallStreetbetsELITE+wallstreetbetsGER+Wallstreetsilver/.rss"
+    "url": "https://www.reddit.com/r/Junior_Stocks+options+NextMoveStocks+FFIEMeltdown+hot_stocks+FFIE+epiphanystonk+dividends/.rss"
   },
   {
-    "name": "أسهم البيني وول ستريت - مجموعة 3",
+    "name": "الاستثمار والشركات - مجموعة 3",
     "category": "الاسهم",
-    "url": "https://www.reddit.com/r/WebullPennyStocks+weedstocks+wallstreetbets2+wallstreetbets+EMJX+biotech_stocks+10xPennyStocks+100xpennystock+opendoor+GME+BiopharmaStocks/.rss"
+    "url": "https://www.reddit.com/r/investing+InterstellarKinetics+ADTX+energyStocks+GrowthStocks+WaterStocks+BeginnerInvesting+Amd/.rss"
   },
   {
-    "name": "العملات الرقمية والبلوكشين - مجموعة 1",
-    "category": "كريبتو",
-    "url": "https://www.reddit.com/r/BitcoinBeginners+bitcoin_com+CryptoMoonShots+CryptoMarkets+CryptoCurrencies+cryptocurrencymemes+Aptos+binance+ethereum+altcoin+SatoshiStreetBets+defi+RWA+RWATimes+memecoins/.rss"
+    "name": "وول ستريت وبيني - مجموعة 4",
+    "category": "الاسهم",
+    "url": "https://www.reddit.com/r/amcstock+wallstreetbets_wins+WallStreetbetsELITE+wallstreetbetsGER+Wallstreetsilver+WebullPennyStocks+weedstocks+wallstreetbets2/.rss"
   },
   {
-    "name": "العملات الرقمية والشبكات - مجموعة 2",
-    "category": "كريبتو",
-    "url": "https://www.reddit.com/r/tokenomics+Chainlink+smartcontracts+CryptoCurrency+btc+sui+dogecoin+xlm+litecoin+nanocurrency+OfficialTrumpCoin+Hedera+ethtrader+CryptoCurrencyFIRE+CryptoCurrencyMAX/.rss"
+    "name": "وول ستريت والتداول - مجموعة 5",
+    "category": "الاسهم",
+    "url": "https://www.reddit.com/r/wallstreetbets+EMJX+biotech_stocks+10xPennyStocks+100xpennystock+opendoor+GME+BiopharmaStocks/.rss"
   },
   {
-    "name": "تحليلات وحماية الكريبتو - مجموعة 3",
+    "name": "العملات الرقمية - مجموعة 1",
     "category": "كريبتو",
-    "url": "https://www.reddit.com/r/CryptoChartWatch+Crypto_General+CryptoScams+CryptoCommunityAfric+Crypto_Currency_News+BitcoinMarkets+Buttcoin+bitcoincashSV+algotrading+AltScope+XRP+ChartScout_io+cardano/.rss"
+    "url": "https://www.reddit.com/r/BitcoinBeginners+bitcoin_com+CryptoMoonShots+CryptoMarkets+CryptoCurrencies+cryptocurrencymemes+Aptos+binance/.rss"
+  },
+  {
+    "name": "العملات الرقمية - مجموعة 2",
+    "category": "كريبتو",
+    "url": "https://www.reddit.com/r/ethereum+altcoin+SatoshiStreetBets+defi+RWA+RWATimes+memecoins+tokenomics/.rss"
+  },
+  {
+    "name": "العملات الرقمية - مجموعة 3",
+    "category": "كريبتو",
+    "url": "https://www.reddit.com/r/Chainlink+smartcontracts+CryptoCurrency+btc+sui+dogecoin+xlm+litecoin/.rss"
+  },
+  {
+    "name": "العملات الرقمية - مجموعة 4",
+    "category": "كريبتو",
+    "url": "https://www.reddit.com/r/nanocurrency+OfficialTrumpCoin+Hedera+ethtrader+CryptoCurrencyFIRE+CryptoCurrencyMAX+CryptoChartWatch+Crypto_General/.rss"
+  },
+  {
+    "name": "تحليلات وحماية الكريبتو - مجموعة 5",
+    "category": "كريبتو",
+    "url": "https://www.reddit.com/r/CryptoScams+CryptoCommunityAfric+Crypto_Currency_News+BitcoinMarkets+Buttcoin+bitcoincashSV+algotrading+AltScope+XRP+ChartScout_io+cardano/.rss"
   },
   {
     "name": "الأخبار والأحداث العالمية",
@@ -53,5 +78,10 @@
     "name": "The Onion News",
     "category": "الاخبار",
     "url": "https://theonion.com/feed/"
+  },
+  {
+    "name": "The Onion Comments",
+    "category": "الاخبار",
+    "url": "https://theonion.com/comments/feed/"
   }
 ]
