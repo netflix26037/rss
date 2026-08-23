@@ -4,47 +4,43 @@ const axios = require('axios');
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-function cleanHtmlText(html) {
+// تنظيف وتجريد الوصف تماماً من أكواد HTML لضمان نجاح الترجمة
+function extractPlainText(html) {
   if (!html) return '';
+  
   let cleaned = html
-    .replace(/<!--[\s\S]*?-->/g, '')
     .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
     .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
-    .replace(/<[^>]+>/g, ' ')
+    .replace(/<a[^>]*>.*?<\/a>/gi, '') // إزالة الروابط النصية
+    .replace(/<[^>]+>/g, ' ')           // إزالة كل وسوم HTML
     .replace(/&#\d+;/g, ' ')
     .replace(/&[a-z]+;/gi, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 
+  // تنظيف نصوص ريديت التلقائية
   cleaned = cleaned.replace(/submitted by\s+\/u\/\S+/gi, '');
   cleaned = cleaned.replace(/to\s+r\/\S+/gi, '');
   cleaned = cleaned.replace(/\[link\]/gi, '');
   cleaned = cleaned.replace(/\[comments\]/gi, '');
-  
+
   return cleaned.trim();
 }
 
+// دالة الترجمة المزدوجة والمخصصة للنصوص المنظفة
 async function translateText(text) {
-  const cleaned = cleanHtmlText(text);
-  if (!cleaned || cleaned.length < 2) return '';
+  const cleanedText = extractPlainText(text);
+  if (!cleanedText || cleanedText.length < 3) return '';
 
-  const textToTranslate = cleaned.substring(0, 300);
+  const shortText = cleanedText.substring(0, 350); // تقليم النص لضمان استجابة السيرفر
 
+  // 1. المحاولة الأولى: Google GTX POST
   try {
     const res = await axios({
       method: 'post',
       url: 'https://translate.googleapis.com/translate_a/single',
-      params: {
-        client: 'gtx',
-        sl: 'auto',
-        tl: 'ar',
-        dt: 't',
-        q: textToTranslate
-      },
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
+      params: { client: 'gtx', sl: 'auto', tl: 'ar', dt: 't', q: shortText },
+      headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' },
       timeout: 5000
     });
 
@@ -55,10 +51,21 @@ async function translateText(text) {
       }
     }
   } catch (e) {
-    // في حال الفشل يتم إرجاع النص المُنظف
+    // الانتقال للمحرك البديل
   }
 
-  return cleaned;
+  // 2. المحاولة الثانية: Lingva Translate API (بديل مجاني ممتاز)
+  try {
+    const lingvaUrl = `https://lingva.ml/api/v1/auto/ar/${encodeURIComponent(shortText)}`;
+    const res = await axios.get(lingvaUrl, { timeout: 5000 });
+    if (res.data && res.data.translation) {
+      return res.data.translation.trim();
+    }
+  } catch (e) {
+    // إرجاع النص المنظف بدون ترجمة في حال فشل السيرفرين
+  }
+
+  return shortText;
 }
 
 async function fetchFeedContent(url, retries = 2) {
@@ -99,7 +106,7 @@ async function run() {
     const sources = JSON.parse(rawFeeds);
 
     let allArticles = [];
-    console.log(`🚀 بدء تنفيذ الجلب والترجمة...`);
+    console.log(`🚀 بدء جلب وترجمة العناوين والمواضيع...`);
 
     for (const source of sources) {
       if (!source.url) continue;
@@ -123,22 +130,26 @@ async function run() {
             const rawTitle = item.title || '';
             const rawDesc = item.contentSnippet || item.content || item.summary || '';
 
+            // ترجمة العنوان
             const translatedTitle = await translateText(rawTitle);
-            await delay(100);
+            await delay(150);
 
+            // ترجمة الموضوع (الوصف) بعد تنظيفه من HTML
             const translatedDesc = await translateText(rawDesc);
-            await delay(100);
+            await delay(150);
+
+            const cleanOriginalDesc = extractPlainText(rawDesc);
 
             processedItems.push({
               id: item.guid || item.link || item.title,
               title: translatedTitle || rawTitle,
-              arabicTitle: translatedTitle,
+              arabicTitle: translatedTitle || rawTitle,
               originalTitle: rawTitle,
               link: item.link || '',
               pubDate: item.pubDate || item.isoDate || new Date().toISOString(),
-              description: translatedDesc || cleanHtmlText(rawDesc),
-              arabicDescription: translatedDesc,
-              originalDescription: cleanHtmlText(rawDesc),
+              description: translatedDesc || cleanOriginalDesc,
+              arabicDescription: translatedDesc || cleanOriginalDesc,
+              originalDescription: cleanOriginalDesc,
               sourceName: source.name,
               category: source.category || 'عام',
               media: {
@@ -149,7 +160,7 @@ async function run() {
           }
 
           allArticles.push(...processedItems);
-          console.log(`✓ تم جلب وترجمة ${processedItems.length} مقال من: ${source.name}`);
+          console.log(`✓ تم جلب وترجمة (${processedItems.length}) مقال من: ${source.name}`);
         }
       } catch (err) {
         console.error(`✗ خطأ في (${source.name}):`, err.message);
@@ -162,7 +173,7 @@ async function run() {
 
     if (allArticles.length > 0) {
       fs.writeFileSync('articles.json', JSON.stringify(allArticles, null, 2), 'utf8');
-      console.log(`\n✅ تم حفظ المقالات في articles.json بنجاح.`);
+      console.log(`\n✅ تم حفظ جميع المقالات المترجمة بنجاح في articles.json`);
     }
 
   } catch (error) {
