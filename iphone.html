@@ -219,16 +219,20 @@
             }
         }
 
-        async function fetchArticlesFromUrl(url, sourceName) {
-            try {
-                const rss2jsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(url)}`;
-                const res = await fetchWithTimeout(rss2jsonUrl);
-                if (res && res.ok) {
-                    const data = await res.json();
-                    if (data.status === 'ok' && data.items && data.items.length > 0) {
-                        return data.items.map((item, idx) => {
-                            const articleId = item.link || item.guid || (item.title + idx);
-                            return {
+       async function fetchArticlesFromUrl(url, sourceName) {
+    try {
+        // الطلب عبر خادم Vercel الخاص بك
+        const vercelProxyUrl = `/api/rss?url=${encodeURIComponent(url)}`;
+        const res = await fetchWithTimeout(vercelProxyUrl);
+        if (res && res.ok) {
+            const text = await res.text();
+            return parseXMLFeed(text, sourceName);
+        }
+    } catch (e) {
+        console.error('حدث خطأ أثناء جلب الخلاصة:', e);
+    }
+    return [];
+}
                                 id: articleId,
                                 title: item.title,
                                 link: item.link,
