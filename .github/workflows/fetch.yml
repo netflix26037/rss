@@ -2,7 +2,6 @@ name: Fetch and Translate Feeds
 
 on:
   schedule:
-    # تشغيل تلقائي كل ساعة
     - cron: '0 * * * *'
   workflow_dispatch:
 
@@ -22,7 +21,7 @@ jobs:
           node-version: '20'
 
       - name: Install Dependencies
-        run: npm install
+        run: npm install rss-parser axios
 
       - name: Fetch and Process Feeds
         run: node fetch-feeds.js
