@@ -2,11 +2,9 @@ const fs = require('fs');
 const Parser = require('rss-parser');
 const axios = require('axios');
 
-// هويات متصفحات عشوائية حديثة
 const USER_AGENTS = [
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
-  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
-  'Mozilla/5.0 (X11; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0'
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'
 ];
 
 function getRandomUserAgent() {
@@ -56,18 +54,15 @@ async function fetchFeedContent(url, retries = 3) {
       const response = await axios.get(targetUrl, {
         headers: {
           'User-Agent': getRandomUserAgent(),
-          'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-          'Accept-Language': 'en-US,en;q=0.9',
-          'Cache-Control': 'no-cache'
+          'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
         },
         timeout: 20000
       });
       return response.data;
     } catch (e) {
       if (e.response && e.response.status === 429) {
-        // زيادة مدة الانتظار تصاعدياً مع كل محاولة (10 ثوانٍ، ثم 15، ثم 20)
-        const waitTime = attempt * 10000;
-        console.warn(`⏳ حظر 429 على (${targetUrl}). انتظار ${waitTime / 1000} ثوانٍ... [محاولة ${attempt}/${retries}]`);
+        const waitTime = attempt * 8000;
+        console.warn(`⏳ حظر 429 على الرابط. انتظار ${waitTime / 1000} ثوانٍ... [محاولة ${attempt}/${retries}]`);
         await delay(waitTime);
       } else {
         if (attempt === retries) {
@@ -86,23 +81,11 @@ async function run() {
       return;
     }
 
-    let sources = [];
-    try {
-      const rawFeeds = fs.readFileSync('feed.json', 'utf8');
-      const parsedData = JSON.parse(rawFeeds);
-
-      if (Array.isArray(parsedData)) {
-        sources = parsedData;
-      } else if (parsedData.sources) {
-        sources = parsedData.sources;
-      }
-    } catch (parseError) {
-      console.error('❌ خطأ في ملف feed.json!');
-      return;
-    }
+    const rawFeeds = fs.readFileSync('feed.json', 'utf8');
+    const sources = JSON.parse(rawFeeds);
 
     let allArticles = [];
-    console.log(`🚀 بدء جلب الأخبار وترجمتها من إجمالي (${sources.length}) مصدر...`);
+    console.log(`🚀 بدء جلب الأخبار من المصادر المدمجة (${sources.length} مجموعات)...`);
 
     for (const source of sources) {
       if (!source.url) continue;
@@ -111,7 +94,7 @@ async function run() {
         const xmlData = await fetchFeedContent(source.url);
         
         if (!xmlData) {
-          console.warn(`❌ تعذر استلام بيانات من: ${source.name}`);
+          console.warn(`❌ تعذر استلام بيانات من مجموعة: ${source.name}`);
           await delay(3000);
           continue;
         }
@@ -125,7 +108,8 @@ async function run() {
         const feed = await parser.parseString(xmlData);
         
         if (feed && feed.items && feed.items.length > 0) {
-          const topItems = feed.items.slice(0, 3);
+          // أخذ أول 15 مقالاً مميزاً من المجموعات المدمجة
+          const topItems = feed.items.slice(0, 15);
           const processedItems = [];
 
           for (const item of topItems) {
@@ -133,9 +117,9 @@ async function run() {
             const rawDesc = item.contentSnippet || item.content || item.summary || '';
 
             const translatedTitle = await translateText(rawTitle);
-            await delay(120);
+            await delay(100);
             const translatedDesc = await translateText(rawDesc);
-            await delay(120);
+            await delay(100);
 
             processedItems.push({
               id: item.guid || item.link || item.title,
@@ -154,21 +138,20 @@ async function run() {
           }
 
           allArticles.push(...processedItems);
-          console.log(`✓ [نجاح وترجمة] تم جلب ${processedItems.length} مقال من: ${source.name}`);
+          console.log(`✓ [نجاح] تم جلب وترجمة ${processedItems.length} مقال من مجموعة: ${source.name}`);
         }
       } catch (err) {
-        console.error(`✗ خطأ في (${source.name}):`, err.message);
+        console.error(`✗ خطأ في مجموعة (${source.name}):`, err.message);
       }
 
-      // انتظر 4 ثوانٍ كاملة بين كل مصدر لضمان عدم تجاوز قيود Reddit
-      await delay(4000);
+      await delay(3000);
     }
 
     allArticles.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
 
     if (allArticles.length > 0) {
       fs.writeFileSync('articles.json', JSON.stringify(allArticles, null, 2), 'utf8');
-      console.log(`\n✅ تم الحفظ بنجاح! إجمالي المقالات المترجمة: ${allArticles.length}`);
+      console.log(`\n✅ تم الحفظ بنجاح! إجمالي المقالات المترجمة في articles.json: ${allArticles.length}`);
     }
 
   } catch (error) {
