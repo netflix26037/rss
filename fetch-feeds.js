@@ -39,7 +39,7 @@ async function translateText(text) {
     const response = await axios.post(
       'https://api.groq.com/openai/v1/chat/completions',
       {
-        model: 'llama-3.1-8b-instant',
+        model: 'llama-3.3-70b-versatile',
         messages: [
           {
             role: 'system',
@@ -64,7 +64,7 @@ async function translateText(text) {
     const result = response.data?.choices?.[0]?.message?.content?.trim();
     if (result) return result;
   } catch (e) {
-    console.error(`❌ خطأ أثناء الترجمة عبر Groq: ${e.message}`);
+    console.error(`❌ خطأ أثناء الترجمة عبر Groq: ${e.response?.data?.error?.message || e.message}`);
   }
 
   return shortText;
