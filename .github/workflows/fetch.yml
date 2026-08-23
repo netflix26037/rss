@@ -21,7 +21,7 @@ jobs:
           node-version: '20'
 
       - name: Install Dependencies
-        run: npm install rss-parser axios
+        run: npm install rss-parser axios @vitalets/google-translate-api
 
       - name: Fetch and Process Feeds
         run: node fetch-feeds.js
