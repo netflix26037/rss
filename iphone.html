@@ -97,7 +97,7 @@
         <div id="articles-container" class="flex flex-col gap-3">
             <div class="text-center py-16 text-gray-500 bg-gray-900/50 rounded-xl border border-gray-800">
                 <i class="fa-brands fa-reddit text-4xl mb-2 text-[#FF4500] animate-pulse"></i>
-                <p class="text-xs font-medium">جاري جلب وترجمة الأخبار عبر Groq...</p>
+                <p class="text-xs font-medium">جاري جلب الأخبار...</p>
             </div>
         </div>
     </main>
@@ -132,8 +132,7 @@
     </nav>
 
     <script>
-        const GROQ_API_KEY = "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
-"; // ضع مفتاح Groq هنا
+        const GROQ_API_KEY = "YOUR_GROQ_API_KEY"; // ضع مفتاح Groq الخاص بك هنا
 
         let sources = [];
         let allFetchedArticles = [];
@@ -143,11 +142,9 @@
         let favoriteArticles = JSON.parse(localStorage.getItem('app_favorite_articles') || '[]');
         let observer = null;
 
-        // دالة الترجمة المحسّنة مع تجاوز قيود CORS عبر البروكسي المباشر
         async function translateArticlesBatch(articles) {
             if (!articles || articles.length === 0) return articles;
-            if (!GROQ_API_KEY || GROQ_API_KEY === "YOUR_GROQ_API_KEY" || GROQ_API_KEY === "") {
-                console.warn("Groq API Key missing");
+            if (!GROQ_API_KEY || GROQ_API_KEY === "YOUR_GROQ_API_KEY" || GROQ_API_KEY.trim() === "") {
                 return articles;
             }
 
@@ -157,14 +154,14 @@
                 desc: a.description
             }));
 
-            const prompt = `Translate the titles and descriptions to Arabic. Return ONLY a valid JSON object with key "items" containing array of objects with id, title, desc. Data: ${JSON.stringify(payload)}`;
+            const prompt = `Translate title and desc to Arabic. Return ONLY JSON format {"items": [{"id": 0, "title": "...", "desc": "..."}]}. Input: ${JSON.stringify(payload)}`;
 
-            // التمهيد باستخدام وسيط CORS لتجاوز حظر Safari/Chrome
-            const targetUrl = "https://api.groq.com/openai/v1/chat/completions";
-            const proxyUrl = "https://corsproxy.io/?" + encodeURIComponent(targetUrl);
+            // مهلة زمنية 4 ثوان للترجمة حتى لا تتأخر الصفحة إذا تعثرت الشبكة
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 4000);
 
             try {
-                const response = await fetch(proxyUrl, {
+                const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
                     method: "POST",
                     headers: {
                         "Authorization": `Bearer ${GROQ_API_KEY}`,
@@ -175,15 +172,18 @@
                         response_format: { type: "json_object" },
                         messages: [{ role: "user", content: prompt }],
                         temperature: 0.1
-                    })
+                    }),
+                    signal: controller.signal
                 });
+
+                clearTimeout(timeoutId);
 
                 if (response.ok) {
                     const data = await response.json();
                     const content = data.choices?.[0]?.message?.content;
                     if (content) {
                         const parsed = JSON.parse(content);
-                        const list = parsed.items || parsed.articles || parsed.data || (Array.isArray(parsed) ? parsed : null);
+                        const list = parsed.items || parsed.articles || (Array.isArray(parsed) ? parsed : null);
                         
                         if (list && Array.isArray(list)) {
                             list.forEach(item => {
@@ -194,11 +194,9 @@
                             });
                         }
                     }
-                } else {
-                    console.error("Groq Response Error:", response.status, await response.text());
                 }
             } catch (e) {
-                console.error("Groq Connection Error:", e);
+                console.warn("Groq Translation skipped:", e.name === 'AbortError' ? 'Timeout' : e);
             }
             return articles;
         }
@@ -341,7 +339,6 @@
                             };
                         });
 
-                        // ترجمة أول 5 منشورات بسرعة استجابة عالية
                         const articlesToTranslate = rawArticles.slice(0, 5);
                         const translated = await translateArticlesBatch(articlesToTranslate);
                         return [...translated, ...rawArticles.slice(5)];
@@ -355,7 +352,7 @@
         async function loadFeed(title, url) {
             document.getElementById('current-feed-title').innerText = title;
             const container = document.getElementById('articles-container');
-            container.innerHTML = `<div class="text-center py-12 text-gray-400"><i class="fa-solid fa-spinner fa-spin text-2xl mb-2 text-[#FF4500]"></i><p class="text-xs">جاري الترجمة والتحميل...</p></div>`;
+            container.innerHTML = `<div class="text-center py-12 text-gray-400"><i class="fa-solid fa-spinner fa-spin text-2xl mb-2 text-[#FF4500]"></i><p class="text-xs">جاري التحميل والترجمة...</p></div>`;
 
             allFetchedArticles = await fetchArticlesFromUrl(url, title);
             renderCurrentTab();
@@ -364,7 +361,7 @@
         async function loadCategoryFeed(category) {
             document.getElementById('current-feed-title').innerText = category;
             const container = document.getElementById('articles-container');
-            container.innerHTML = `<div class="text-center py-12 text-gray-400"><i class="fa-solid fa-spinner fa-spin text-2xl mb-2 text-[#FF4500]"></i><p class="text-xs">جاري ترجمة القسم...</p></div>`;
+            container.innerHTML = `<div class="text-center py-12 text-gray-400"><i class="fa-solid fa-spinner fa-spin text-2xl mb-2 text-[#FF4500]"></i><p class="text-xs">جاري تحميل القسم...</p></div>`;
 
             let combined = [];
             const filtered = sources.filter(s => (s.category || s.group || 'عام') === category);
@@ -380,10 +377,10 @@
         async function loadAllSources() {
             document.getElementById('current-feed-title').innerText = 'التحديثات الأخيرة';
             const container = document.getElementById('articles-container');
-            container.innerHTML = `<div class="text-center py-12 text-gray-400"><i class="fa-solid fa-spinner fa-spin text-2xl mb-2 text-[#FF4500]"></i><p class="text-xs">جاري جلب وترجمة الأخبار عبر الذكاء الاصطناعي...</p></div>`;
+            container.innerHTML = `<div class="text-center py-12 text-gray-400"><i class="fa-solid fa-spinner fa-spin text-2xl mb-2 text-[#FF4500]"></i><p class="text-xs">جاري جلب وترجمة الأخبار...</p></div>`;
 
             let combined = [];
-            const targetSources = sources.slice(0, 2);
+            const targetSources = sources.slice(0, 3);
 
             for (const source of targetSources) {
                 const articles = await fetchArticlesFromUrl(source.url || source.link, source.name || source.title);
