@@ -5,6 +5,15 @@ const axios = require('axios');
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
+// قائمة بالنماذج المتاحة في Groq مرتبة حسب الأفضلية
+const GROQ_MODELS = [
+  'llama-3.1-8b-instant',
+  'llama3-8b-8192',
+  'mixtral-8x7b-32768',
+  'llama-3.3-70b-versatile',
+  'gemma2-9b-it'
+];
+
 function cleanAndExtractText(html) {
   if (!html) return '';
   
@@ -35,36 +44,45 @@ async function translateText(text) {
 
   const shortText = text.substring(0, 400);
 
-  try {
-    const response = await axios.post(
-      'https://api.groq.com/openai/v1/chat/completions',
-      {
-        model: 'llama-3.1-8b-instant',
-        messages: [
-          {
-            role: 'system',
-            content: 'You are a professional translator. Translate the given text accurately to Arabic. Output ONLY the Arabic translation, with no explanation or extra quotes.'
-          },
-          {
-            role: 'user',
-            content: shortText
-          }
-        ],
-        temperature: 0.2
-      },
-      {
-        headers: {
-          'Authorization': `Bearer ${GROQ_API_KEY}`,
-          'Content-Type': 'application/json'
+  // تجربة النماذج المتاحة واحداً تلو الآخر في حال وجود أي مشكلة في أحدهم
+  for (const modelName of GROQ_MODELS) {
+    try {
+      const response = await axios.post(
+        'https://api.groq.com/openai/v1/chat/completions',
+        {
+          model: modelName,
+          messages: [
+            {
+              role: 'system',
+              content: 'You are a professional translator. Translate the given text accurately to Arabic. Output ONLY the Arabic translation, with no explanation or extra quotes.'
+            },
+            {
+              role: 'user',
+              content: shortText
+            }
+          ],
+          temperature: 0.2
         },
-        timeout: 10000
-      }
-    );
+        {
+          headers: {
+            'Authorization': `Bearer ${GROQ_API_KEY}`,
+            'Content-Type': 'application/json'
+          },
+          timeout: 10000
+        }
+      );
 
-    const result = response.data?.choices?.[0]?.message?.content?.trim();
-    if (result) return result;
-  } catch (e) {
-    console.error(`❌ خطأ أثناء الترجمة عبر Groq: ${e.response?.data?.error?.message || e.message}`);
+      const result = response.data?.choices?.[0]?.message?.content?.trim();
+      if (result) return result;
+    } catch (e) {
+      // إذا كان الخطأ بسبب اسم النموذج، يجرب النموذج التالي في القائمة
+      const errorMsg = e.response?.data?.error?.message || e.message;
+      if (errorMsg.includes('does not exist') || errorMsg.includes('access')) {
+        continue;
+      }
+      console.error(`❌ خطأ أثناء الترجمة (${modelName}): ${errorMsg}`);
+      break;
+    }
   }
 
   return shortText;
