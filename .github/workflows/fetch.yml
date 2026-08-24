@@ -2,7 +2,7 @@ name: Update News Feed
 
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '0 */2 * * *' # تم تعديل التوقيت ليعمل كل ساعتين لتجنب استهلاك حدود Reddit و GitHub
   workflow_dispatch:
   push:
     branches:
