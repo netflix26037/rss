@@ -1,70 +1,154 @@
 [
   {
-    "id": "https://www.reddit.com/r/CryptoScams/comments/1vwvkmd/cryptocurrency_scam/",
-    "title": "Cryptocurrency scam",
-    "arabicTitle": "احتيال العملة المشفرة",
-    "description": "Two weeks ago I joined Royal Pips on Telegram, looking for signals to trade gold; honestly the signals worked well, the worst moment was when I contacted the admin to join the VIP group, I ended up with less than $1000 because of that person, the worst part is that he still uses the same number and writes to me for more money, and he uses centralized accounts to move the money haha\n    submitted by    /u/Anderand7    to    r/CryptoScams  \n [link]   [comments]",
-    "arabicDescription": "قبل أسبوعين، انضممت إلى Royal Pips على Telegram، بحثًا عن إشارات لتداول الذهب؛ بصراحة الإشارات عملت بشكل جيد، أسوأ لحظة كانت عندما اتصلت بالمسؤول للانضمام إلى مجموعة VIP، وانتهى بي الأمر بأقل من 1000 دولار بسبب ذلك الشخص، العامل الأكثر أهمية",
-    "link": "https://www.reddit.com/r/CryptoScams/comments/1vwvkmd/cryptocurrency_scam/",
-    "sourceName": "مجموعة ريديت (7)",
+    "id": "https://www.reddit.com/r/binance/comments/1vwz9zj/does_ai_benefit_more_from_crypto_or_is_it_the/",
+    "title": "Does AI benefit more from crypto, or is it the other way around?",
+    "arabicTitle": "هل يستفيد الذكاء الاصطناعي أكثر من العملات المشفرة أم أن الأمر على العكس من ذلك؟",
+    "description": "We keep hearing about the combination of AI and crypto, but what happens if we look at it from both sides?\n What does AI actually gain from crypto? And what does crypto gain from AI?\n Is there a point where one becomes genuinely useful to the other, or are we just forcing two big narratives together?\n What’s your take?\n    submitted by    /u/minicUnique    to    r/binance  \n [link]   [comments]",
+    "arabicDescription": "نحن نسمع باستمرار عن الجمع بين الذكاء الاصطناعي والعملات المشفرة، ولكن ماذا يحدث إذا نظرنا إليه من كلا الجانبين؟ ما الذي يكسبه الذكاء الاصطناعي فعليًا من العملات المشفرة؟ وماذا يستفيد التشفير من الذكاء الاصطناعي؟ هل هناك نقطة يصبح فيها أحدهما مفيدًا حقًا للآخر، أو",
+    "link": "https://www.reddit.com/r/binance/comments/1vwz9zj/does_ai_benefit_more_from_crypto_or_is_it_the/",
+    "sourceName": "مجموعة ريديت (5)",
     "category": "مُدمج",
-    "pubDate": "2026-08-24T07:11:25.000Z",
+    "pubDate": "2026-08-24T10:46:00.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/wallstreetbetsGER/comments/1vwuebw/kleiner_wutköder_am_morgen/",
-    "title": "Kleiner Wutköder am Morgen?",
-    "arabicTitle": "Kleiner Wutköder am Morgen?",
-    "description": "submitted by    /u/Hebelmeister123    to    r/wallstreetbetsGER  \n [link]   [comments]",
-    "arabicDescription": "submitted by /u/Hebelmeister123 to r/wallstreetbetsGER [link] [comments]",
-    "link": "https://www.reddit.com/r/wallstreetbetsGER/comments/1vwuebw/kleiner_wutköder_am_morgen/",
+    "id": "https://www.reddit.com/r/defi/comments/1vwxs7z/this_hyperliquid_wallet_shows_585m_in_weekly_pnl/",
+    "title": "This Hyperliquid wallet shows +$5.85M in weekly PnL. Its recent realized profit was only $1.55M. What explains the gap?",
+    "arabicTitle": "تُظهر محفظة Hyperliquid هذه +5.85 مليون دولار في الأرباح والخسائر الأسبوعية. وبلغت أرباحها المحققة مؤخرًا 1.55 مليون دولار فقط. ما الذي يفسر الفجوة؟",
+    "description": "I found a Hyperliquid wallet showing +$5.85M in 7D PnL, but its recent activity tells a less obvious story.\n The latest 1,845 visible fills covered the observed seven-day window. Every fill was reducing or closing a long, with roughly $1.55M in realized PnL.\n At the snapshot, the wallet still held nine perpetual positions:\n • All nine were long\n • $1.81M in total position value\n • $652K in unrealized PnL\n • $448K in account value\n • Only $6.3K withdrawable\n ZEC alone contributed about $422K of the remaining unrealized profit.\n My guess is that much of the $5.85M weekly change came from older long positions recovering during the rebound, rather than new trades opened during the week. The wallet then realized part of that recovery and kept the rest running.\n What looks like nine different positions is also mostly one trade: altcoins continue higher.\n The wallet was right about the rebound. But the path included roughly $214K in displayed accumulated funding costs, and the remaining book is still heavily exposed to one market regime.\n Would you call this conviction that survived a drawdown, or an expensive long book that finally got the recovery it needed?\n  \nAddress:0xe2823659be02e0f48a4660e4da008b5e1abfdf29\n Snapshot: August 24, 2026, 15:01 SGT. \n  \nDisclosure: I work on HyperTrend, where we analyze public Hyperliquid wallet behavior. Data comes from HyperTrend and public Hyperliquid sources and may have changed after the snapshot.\n Not financial or copy-trading advice.\n    submitted by    /u/HyperTrend_HL    to    r/defi  \n [link]   [comments]",
+    "arabicDescription": "لقد وجدت محفظة Hyperliquid تظهر +5.85 مليون دولار في 7D PnL، لكن نشاطها الأخير يحكي قصة أقل وضوحًا. غطت آخر 1845 عملية تعبئة مرئية نافذة الأيام السبعة المرصودة. كانت كل عملية تعبئة تخفض أو تغلق صفقة شراء، مع تحقيق ما يقرب من 1.55 مليون دولار",
+    "link": "https://www.reddit.com/r/defi/comments/1vwxs7z/this_hyperliquid_wallet_shows_585m_in_weekly_pnl/",
+    "sourceName": "مجموعة ريديت (5)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-24T09:23:25.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/wallstreetbetsGER/comments/1vwxemf/hatte_otto_recht/",
+    "title": "Hatte Otto recht?",
+    "arabicTitle": "Hatte Otto recht?",
+    "description": "submitted by    /u/Far-Personality-4598    to    r/wallstreetbetsGER  \n [link]   [comments]",
+    "arabicDescription": "submitted by /u/Far-Personality-4598 to r/wallstreetbetsGER [link] [comments]",
+    "link": "https://www.reddit.com/r/wallstreetbetsGER/comments/1vwxemf/hatte_otto_recht/",
     "sourceName": "مجتمعي",
     "category": "عام",
-    "pubDate": "2026-08-24T06:02:59.000Z",
+    "pubDate": "2026-08-24T09:01:24.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/nanocurrency/comments/1vwt9gf/general_info_and_weekly_discussion/",
-    "title": "General Info and Weekly Discussion",
-    "arabicTitle": "معلومات عامة ومناقشة أسبوعية",
-    "description": "Welcome to Nano!\n This post is meant for things that are relevant but do not justify their own post. For example, debates, issues, simple questions, memes or similar.\n We normally recommend using our Discord server for quicker answers but using this post is fine if you don't have/want Discord. Note that the official English Telegram channel for nano is @ nanocurrency.\n It's common that users have the same questions. So please, before making a new thread, make some research and look for similar questions. You will often find a comprehensive answer to your question has already been given! Please also check the official nano forum linked below.\n What is Nano?\n A fee-less, instant, decentralized and eco-friendly digital currency meant for peer-to-peer payments. Ticker is XNO and currency symbol Ӿ.\n Please check out r/nanocurrencybeginners or the Beginners Guide to Nano blog\n Where can I get some and try it out?\n  \nNano can be purchased at various Exchanges. More info in this guide or on the main site\n It can also be obtained for free in faucets or other services\n  \nWhere to store Nano?\n  \nThere are several wallets to choose from found in this guide or listed here\n The most simple form is the Nano seed which unlocks your accounts. Make sure to keep a safe backup of it, or you will risk losing your funds!\n Nano is supported on the hardware wallet Ledger Nano S and X. Refer to the Full Guide\n More about Nano security\n  \nTrade / Price Talk Neighbour Communities\n  \nr/nanotrade\n  \nMore Information\n  \nMain Site - nano.org\n Nano Hub - Explore the Nano ecosystem\n Detailed documentation and protocol guide\n Frequently Asked Questions\n Blog posts\n More quick links at the top and sidebar (menu on the mobile app)\n  \nRules:\n  \nBe respectful of one another. Follow the golden rule of friendliness\n No trolling or shilling\n No begging, bragging or illegal activities\n  \n   submitted by    /u/NanoMod  \n [link]   [comments]",
-    "arabicDescription": "مرحبا بكم في نانو! هذا المنشور مخصص للأشياء ذات الصلة ولكنها لا تبرر منشورها. على سبيل المثال، مناظرات أو قضايا أو أسئلة بسيطة أو ميمز أو ما شابه ذلك. نوصي عادةً باستخدام خادم Discord الخاص بنا للحصول على إجابات أسرع ولكن باستخدام هذا po",
-    "link": "https://www.reddit.com/r/nanocurrency/comments/1vwt9gf/general_info_and_weekly_discussion/",
-    "sourceName": "nanocurrency",
-    "category": "كريبتو",
-    "pubDate": "2026-08-24T05:00:08.000Z",
+    "id": "https://www.reddit.com/r/hot_stocks/comments/1vwxb3z/nvo_stock_analysis_aug_24/",
+    "title": "🔍 NVO - Stock analysis Aug 24",
+    "arabicTitle": "🔍 NVO - تحليل الأسهم 24 أغسطس",
+    "description": "submitted by    /u/Routine_Bat6675  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/Routine_Bat6675 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/hot_stocks/comments/1vwxb3z/nvo_stock_analysis_aug_24/",
+    "sourceName": "hot_stocks",
+    "category": "الاسهم",
+    "pubDate": "2026-08-24T08:55:52.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/Wallstreetsilver/comments/1vwsy8m/do_you_realize/",
-    "title": "Do you realize?",
-    "arabicTitle": "هل تدرك؟",
-    "description": "Since 1980, the M2 money supply increased 15 fold.\n The US national debt increased 46 fold.\n The S&P 500 increased 72 fold.\n The NASDAQ composite increased 177 fold.\n Even gold went up 5 fold.\n Silver? Its price is up by 40% (and until October last year this number was negative...).\n Do you realize how cheap it is? Do you realize how many dollars are sloshing around, looking for something to invest in? Do you realize why it is perfectly reasonable to expect the price of silver to catch up with the money supply? Do you realize how ludicrous it is to expect it to fall below its 1980 high? Do you realize why a silver price of $500 or more is within reach?\n It's basic arithmetic.\n    submitted by    /u/mementoil    to    r/Wallstreetsilver  \n [link]   [comments]",
-    "arabicDescription": "منذ عام 1980، زاد المعروض النقدي M2 بمقدار 15 ضعفًا. وزاد الدين القومي الأمريكي 46 ضعفا. ارتفع مؤشر S&P 500 بمقدار 72 ضعفًا. ارتفع مؤشر ناسداك المركب بمقدار 177 مرة. حتى الذهب ارتفع 5 أضعاف. فضي؟ سعره يصل بنسبة 40٪ (وحتى أكتوبر من العام الماضي ر",
-    "link": "https://www.reddit.com/r/Wallstreetsilver/comments/1vwsy8m/do_you_realize/",
-    "sourceName": "مجموعة ريديت (4)",
+    "id": "https://www.reddit.com/r/EconomyCharts/comments/1vwx1qo/us_has_just_41_days_of_crude_oil_inventory_left/",
+    "title": "U.S. has just 41 days of crude oil inventory left, the lowest level in half a century",
+    "arabicTitle": "لم يتبق لدى الولايات المتحدة سوى 41 يومًا من مخزون النفط الخام، وهو أدنى مستوى له منذ نصف قرن",
+    "description": "submitted by    /u/RobertBartus    to    r/EconomyCharts  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/RobertBartus إلى r/EconomyCharts [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/EconomyCharts/comments/1vwx1qo/us_has_just_41_days_of_crude_oil_inventory_left/",
+    "sourceName": "مجموعة ريديت (1)",
     "category": "مُدمج",
-    "pubDate": "2026-08-24T04:42:40.000Z",
+    "pubDate": "2026-08-24T08:40:07.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/CryptoChartWatch/comments/1vwsia7/is_it_me_or_does_it_look_like_its_going_to_hit/",
-    "title": "Is it me or does it look like it’s going to hit the fan tomorrow?",
-    "arabicTitle": "هل أنا أم يبدو أنه سيضرب المروحة غدًا؟",
-    "description": "I’ve read the run was mainly institutional buying. May be the case since 77k keeps getting tested and won’t break. If so, this chart looks like something’s about to happen when the NYSE opens tomorrow!\n    submitted by    /u/jongolfpro    to    r/CryptoChartWatch  \n [link]   [comments]",
-    "arabicDescription": "لقد قرأت أن السباق كان في الأساس شراءًا مؤسسيًا. قد يكون هذا هو الحال نظرًا لأن 77 ألفًا يستمر في الاختبار ولن ينكسر. إذا كان الأمر كذلك، فإن هذا الرسم البياني يبدو وكأن شيئًا ما على وشك الحدوث عندما تفتح بورصة نيويورك غدًا! تم تقديمه بواسطة /u/jongolfpro إلى r/CryptoChartWatch",
-    "link": "https://www.reddit.com/r/CryptoChartWatch/comments/1vwsia7/is_it_me_or_does_it_look_like_its_going_to_hit/",
-    "sourceName": "مجموعة ريديت (7)",
+    "id": "https://www.reddit.com/r/inflation/comments/1vww52l/fox_news_interrupted_as_viewers_slam_donald/",
+    "title": "Fox News interrupted as viewers slam Donald Trump's 'idiotic' Canada tariff",
+    "arabicTitle": "Fox News interrupted as viewers slam Donald Trump's 'idiotic' Canada tariff",
+    "description": "submitted by    /u/TheMirrorUS    to    r/inflation  \n [link]   [comments]",
+    "arabicDescription": "submitted by /u/TheMirrorUS to r/inflation [link] [comments]",
+    "link": "https://www.reddit.com/r/inflation/comments/1vww52l/fox_news_interrupted_as_viewers_slam_donald/",
+    "sourceName": "مجتمعي",
+    "category": "عام",
+    "pubDate": "2026-08-24T07:45:06.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/inflation/comments/1vww52l/fox_news_interrupted_as_viewers_slam_donald/",
+    "title": "Fox News interrupted as viewers slam Donald Trump's 'idiotic' Canada tariff",
+    "arabicTitle": "توقفت قناة فوكس نيوز عندما انتقد المشاهدون التعريفة الجمركية الكندية \"الغبية\" التي فرضها دونالد ترامب",
+    "description": "submitted by    /u/TheMirrorUS    to    r/inflation  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/TheMirrorUS إلى r/inflation [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/inflation/comments/1vww52l/fox_news_interrupted_as_viewers_slam_donald/",
+    "sourceName": "مجموعة ريديت (1)",
     "category": "مُدمج",
-    "pubDate": "2026-08-24T04:18:22.000Z",
+    "pubDate": "2026-08-24T07:45:06.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/ValueInvesting/comments/1vwuuay/my_date_thought_investing_was_a_painfully_slow/",
+    "title": "My Date Thought Investing Was a Painfully Slow Way to Make Money",
+    "arabicTitle": "My Date Thought Investing Was a Painfully Slow Way to Make Money",
+    "description": "Went on a casual date (first in a long time) and the person I had drinks with said she thought investing was a painfully slow way to make money. When told that the S&P 500 historically averages about 10% a year in gains and that you could double your money in 7.2 years, she said: “That’s it?”\n At first, I thought, that’s statistically better than 90% of fund managers out there, who underperform the S&P and 10% a year isn’t terrible (it sure beats bonds!). FWIW, I CAGR much higher, but still think it’s okay for someone making passive income and growing wealth long-term.\n Then, on my drive back home, I thought about what she said and yeah….it does seem kinda pathetic in some ways. I can see why college kids or just anyone looking to make a decent chunk of money would want to gamble instead (maybe w/ options or go into momentum meme stocks w/ leverage). Investing is most satisfying for those who already have a decent amount of money ($100,000+). And, even then, it’d take you 1 full year - on average - to make just $10,000 in $VOO.\n I know what people will say: investing is for growing wealth and passive income (not a main source of it). Get a good job, live below your means, and invest. Then, 25+ years later, you’ll have a lot of money. This hospital nurse I was having dinner/drinks with said she’d rather go to Vegas and take a few thousand dollars to gamble and try to double her money that SAME weekend than wait a full YEAR to make $200.\n LOL.\n I guess this was the first time I realized how non-investors sometimes view investing. It seems pathetic and too slow-paced for them.\n    submitted by    /u/solodav    to    r/ValueInvesting  \n [link]   [comments]",
+    "arabicDescription": "Went on a casual date (first in a long time) and the person I had drinks with said she thought investing was a painfully slow way to make money. When told that the S&P 500 historically averages about 10% a year in gains and that you could double your",
+    "link": "https://www.reddit.com/r/ValueInvesting/comments/1vwuuay/my_date_thought_investing_was_a_painfully_slow/",
+    "sourceName": "مجتمعي",
+    "category": "عام",
+    "pubDate": "2026-08-24T06:28:23.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/defi/comments/1vwujfn/sec_chair_clarity_act_should_be_the_priority/",
+    "title": "SEC Chair: CLARITY Act Should Be the Priority 🇺🇸",
+    "arabicTitle": "رئيس هيئة الأوراق المالية والبورصة: يجب أن يكون قانون CLARITY هو الأولوية 🇺🇸",
+    "description": "At today’s White House crypto meeting, SEC Chair Paul Atkins called on Congress to send the CLARITY Act to President Trump for his signature, saying the SEC is doing everything it can to support the process.\n That's a strong signal from U.S. regulators.\n The message is becoming increasingly clear: regulatory clarity is no longer optional if the U.S. wants to lead the digital asset industry.\n Now the question is-how quickly can Congress get it done?\n We'd say September, or it gets rolled over next year.\n    submitted by    /u/cSigmaFinance    to    r/defi  \n [link]   [comments]",
+    "arabicDescription": "في اجتماع العملات المشفرة بالبيت الأبيض اليوم، دعا رئيس هيئة الأوراق المالية والبورصات، بول أتكينز، الكونجرس إلى إرسال قانون CLARITY إلى الرئيس ترامب لتوقيعه، قائلًا إن هيئة الأوراق المالية والبورصة تبذل كل ما في وسعها لدعم العملية. هذه إشارة قوية من الجهة التنظيمية الأمريكية",
+    "link": "https://www.reddit.com/r/defi/comments/1vwujfn/sec_chair_clarity_act_should_be_the_priority/",
+    "sourceName": "مجموعة ريديت (5)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-24T06:11:10.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/EU_Economics/comments/1vwtj8t/new_euwide_product_repair_rules_come_into_force/",
+    "title": "New EU-wide product repair rules come into force today",
+    "arabicTitle": "تدخل قواعد إصلاح المنتجات الجديدة على مستوى الاتحاد الأوروبي حيز التنفيذ اليوم",
+    "description": "submitted by    /u/Full-Discussion3745    to    r/EU_Economics  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/Full-Discussion3745 إلى r/EU_Economics [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/EU_Economics/comments/1vwtj8t/new_euwide_product_repair_rules_come_into_force/",
+    "sourceName": "مجموعة ريديت (1)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-24T05:14:27.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/ethereum/comments/1vwtakt/daily_general_discussion_august_24_2026/",
+    "title": "Daily General Discussion August 24, 2026",
+    "arabicTitle": "المناقشة العامة اليومية 24 أغسطس 2026",
+    "description": "Welcome to the Daily General Discussion on r/ethereum\n https://imgur.com/3y7vezP\n Bookmarking this link will always bring you to the current daily: https://old.reddit.com/r/ethereum/about/sticky/?num=2\n Please use this thread to discuss Ethereum topics, news, events, and even price!\n Price discussion posted elsewhere in the subreddit will continue to be removed.\n As always, be constructive. - Subreddit Rules\n Want to stake? Learn more at r/ethstaker\n Community Links\n  \nEthereum Jobs, Twitter\n \nEVMavericks YouTube, Discord, Doots Podcast\n \n Calendar: https://dailydoots.com/events/\n    submitted by    /u/EthereumDailyThread    to    r/ethereum  \n [link]   [comments]",
+    "arabicDescription": "مرحبًا بك في المناقشة العامة اليومية على r/ethereum https://imgur.com/3y7vezP سيؤدي وضع إشارة مرجعية على هذا الرابط إلى نقلك دائمًا إلى الأحداث اليومية الحالية: https://old.reddit.com/r/ethereum/about/sticky/?num=2 يرجى استخدام هذا الموضوع لمناقشة موضوعات Ethereum،",
+    "link": "https://www.reddit.com/r/ethereum/comments/1vwtakt/daily_general_discussion_august_24_2026/",
+    "sourceName": "مجموعة ريديت (5)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-24T05:01:29.000Z",
     "media": {
       "image": null
     }
@@ -84,29 +168,43 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/BitcoinMarkets/comments/1vws69e/daily_discussion_monday_august_24_2026/",
-    "title": "[Daily Discussion] - Monday, August 24, 2026",
-    "arabicTitle": "[المناقشة اليومية] - الإثنين 24 أغسطس 2026",
-    "description": "Thread topics include, but are not limited to:\n  \nGeneral discussion related to the day's events\n Technical analysis, trading ideas & strategies\n Quick questions that do not warrant a separate post\n  \nThread guidelines:\n  \nBe excellent to each other.\n Do not make posts outside of the daily thread for the topics mentioned above.\n  \n⚡Tip Fellow Redditors over the Lightning Network⚡\n  \nSend sats as tips using lntipbot to show appreciation for good content.\n Instructions and more information.\n  \n   submitted by    /u/AutoModerator    to    r/BitcoinMarkets  \n [link]   [comments]",
-    "arabicDescription": "تتضمن موضوعات الموضوع، على سبيل المثال لا الحصر: مناقشة عامة تتعلق بأحداث اليوم التحليل الفني وأفكار واستراتيجيات التداول أسئلة سريعة لا تتطلب مشاركة منفصلة إرشادات الموضوع: كن ممتازًا مع بعضكما البعض. لا تجعل",
-    "link": "https://www.reddit.com/r/BitcoinMarkets/comments/1vws69e/daily_discussion_monday_august_24_2026/",
-    "sourceName": "مجموعة ريديت (7)",
+    "id": "https://www.reddit.com/r/bitcoin_com/comments/1vwrwbz/everyones_crediting_the_sec_and_the_white_house/",
+    "title": "Everyone's crediting the SEC and the White House crypto summit for Bitcoin's 25% rally to nearly $80K. They're wrong.",
+    "arabicTitle": "ينسب الجميع الفضل إلى لجنة الأوراق المالية والبورصات وقمة العملات المشفرة في البيت الأبيض في ارتفاع عملة البيتكوين بنسبة 25٪ إلى ما يقرب من 80 ألف دولار. إنهم مخطئون.",
+    "description": "It was a boring Treasury bond mechanic that almost nobody's talking about, and understanding it tells you exactly how fragile this rally is. Bitcoin ripped roughly 25% in a matter of days, from the mid-$60Ks to nearly $80,000, triggering a record short squeeze. The popular explanations are the SEC's new crypto rules and the big White House crypto summit that happened the same week. Both of those are real events, but neither is what actually moved the price. The real cause matters because it tells you how durable this move is.\n The actual trigger: Treasury Secretary Bessent doubled the size of the government's long-term bond buyback program, from $2 billion to $4 billion.\n Here's why a bond-market plumbing adjustment lit a fire under Bitcoin. Long-term Treasury yields had been sitting at 19-year highs, which is brutal for every risk asset, because when you can earn a fat, safe yield on government bonds, nobody wants to hold volatile stuff that pays nothing. When the Treasury steps in and buys back more long-term bonds, it pushes bond prices up and yields down. Lower long-term yields ease financial conditions across the entire system. Suddenly the risk-free alternative got less attractive, money started looking for higher-return assets again, and Bitcoin, sitting in an oversold, over-shorted position, was primed to explode. The short squeeze did the rest, forcing bearish traders to buy back in and accelerating the move.\n Analysts were careful to note this is not QE. The Treasury isn't printing money, it's restructuring the maturity of existing debt. But the effect on risk appetite rhymes with QE enough that markets treated it the same way. Easier conditions, yields off their highs, risk-on.\n If you think Bitcoin rallied because Washington is suddenly friendly to crypto, you'll hold this move for the wrong reasons and get caught when it reverses. The SEC rules and the summit are slow-burn structural positives that'll matter over years. They did not cause this. This was a liquidity event, driven by a Treasury mechanic aimed at the bond market, that Bitcoin happened to benefit from because it was oversold and crowded with shorts. That's a fundamentally more fragile foundation than \"institutions are adopting crypto.\"\n The same mechanism that pumped it can un-pump it. If long-term yields climb back to their highs, if the Treasury pulls back the buyback expansion, if the bond market decides it doesn't like the fiscal picture, the liquidity tailwind that drove this reverses and Bitcoin gives back the gains just as fast as it took them. A rally built on a bond-buyback tweak lives and dies by the bond market, not by anything happening in crypto.\n The bullish long-term read actually survives this, and it's the ironic part: Bitcoin surging the instant the government intervened to suppress yields and ease conditions is a textbook demonstration of exactly why the asset exists. It's a real-time monetary-debasement barometer. The government blinks on the debt, and the debasement hedge rips. That's the thesis working as designed. But that's a story about what Bitcoin IS, not a reason this specific 25% candle is safe to chase.\n So enjoy the green, but be honest about what caused it. This wasn't adoption. It was macro plumbing, and macro plumbing is exactly the kind of thing that giveth and taketh away in the same quarter. The people treating $80K as confirmation that the bull market is back because of regulation are reading the right chart with the wrong caption.\n    submitted by    /u/Bcom_Mod    to    r/bitcoin_com  \n [link]   [comments]",
+    "arabicDescription": "لقد كانت آلية سندات الخزانة مملة ولم يتحدث عنها أحد تقريبًا، وفهمها يخبرك بالضبط بمدى هشاشة هذا الارتفاع. ارتفعت قيمة عملة البيتكوين بنسبة 25% تقريبًا في غضون أيام، من منتصف 60 ألف دولار إلى ما يقرب من 80 ألف دولار، مما أدى إلى ارتفاع قياسي",
+    "link": "https://www.reddit.com/r/bitcoin_com/comments/1vwrwbz/everyones_crediting_the_sec_and_the_white_house/",
+    "sourceName": "مجموعة ريديت (5)",
     "category": "مُدمج",
-    "pubDate": "2026-08-24T04:01:16.000Z",
+    "pubDate": "2026-08-24T03:47:33.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/Economics/comments/1vwpnxr/trump_made_more_than_1000_trades_in_june_totaling/",
-    "title": "Trump made more than 1,000 trades in June totaling millions, financial disclosures reveal",
-    "arabicTitle": "Trump made more than 1,000 trades in June totaling millions, financial disclosures reveal",
-    "description": "submitted by    /u/MoneyLibrarian9032    to    r/Economics  \n [link]   [comments]",
-    "arabicDescription": "submitted by /u/MoneyLibrarian9032 to r/Economics [link] [comments]",
-    "link": "https://www.reddit.com/r/Economics/comments/1vwpnxr/trump_made_more_than_1000_trades_in_june_totaling/",
-    "sourceName": "مجتمعي",
-    "category": "عام",
-    "pubDate": "2026-08-24T01:58:32.000Z",
+    "id": "https://www.reddit.com/r/economy/comments/1vwre7r/a_true_statement/",
+    "title": "A true statement.",
+    "arabicTitle": "بيان صحيح.",
+    "description": "submitted by    /u/TomTTrain    to    r/economy  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/TomTTrain إلى r/economy [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/economy/comments/1vwre7r/a_true_statement/",
+    "sourceName": "مجموعة ريديت (1)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-24T03:21:46.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/cryptocurrencymemes/comments/1vwpj2a/charlie_munger_in_a_trap_house/",
+    "title": "Charlie Munger in a Trap House",
+    "arabicTitle": "تشارلي مونجر في منزل الفخ",
+    "description": "submitted by    /u/Project_Demosthenes_    to    r/cryptocurrencymemes  \n [link]   [comments]",
+    "arabicDescription": "تم الإرسال بواسطة /u/Project_Demosthenes_ إلى r/cryptocurrencymemes [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/cryptocurrencymemes/comments/1vwpj2a/charlie_munger_in_a_trap_house/",
+    "sourceName": "مجموعة ريديت (5)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-24T01:52:02.000Z",
     "media": {
       "image": null
     }
@@ -126,127 +224,15 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/wallstreetbets/comments/1vwovao/1000000_full_porting_spcx_and_mstr/",
-    "title": "$1,000,000 - Full Porting $SPCX and $MSTR",
-    "arabicTitle": "$1,000,000 - Full Porting $SPCX and $MSTR",
-    "description": "Yes, I max margin. Wish me luck bulls.\n    submitted by    /u/Dull_Fly_7443    to    r/wallstreetbets  \n [link]   [comments]",
-    "arabicDescription": "Yes, I max margin. Wish me luck bulls. submitted by /u/Dull_Fly_7443 to r/wallstreetbets [link] [comments]",
-    "link": "https://www.reddit.com/r/wallstreetbets/comments/1vwovao/1000000_full_porting_spcx_and_mstr/",
-    "sourceName": "مجتمعي",
-    "category": "عام",
-    "pubDate": "2026-08-24T01:20:39.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/wallstreetbets/comments/1vwovao/1000000_full_porting_spcx_and_mstr/",
-    "title": "$1,000,000 - Full Porting $SPCX and $MSTR",
-    "arabicTitle": "1,000,000 دولار - النقل الكامل لـ $SPCX و$MSTR",
-    "description": "Yes, I max margin. Wish me luck bulls.\n    submitted by    /u/Dull_Fly_7443    to    r/wallstreetbets  \n [link]   [comments]",
-    "arabicDescription": "نعم، أنا الحد الأقصى للهامش. تمنى لي الحظ الثيران. تم الإرسال بواسطة /u/Dull_Fly_7443 إلى r/wallstreetbets [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/wallstreetbets/comments/1vwovao/1000000_full_porting_spcx_and_mstr/",
-    "sourceName": "مجموعة ريديت (4)",
+    "id": "https://www.reddit.com/r/PoursTea/comments/1vwm8m7/mitch_and_his_team_of_handlers_have_some/",
+    "title": "Mitch and his team of handlers have some explaining to do",
+    "arabicTitle": "لدى ميتش وفريقه من المعالجين بعض الشرح للقيام به",
+    "description": "Ten days before Mitch McConnell disappeared from public view, the longtime Kentucky Republican appeared on the Senate floor during an overnight voting session, looking extremely frail and barely moving for hours. On June 4, 2026, McConnell remained seated for much of the proceedings, with an aide helping him move around the chamber. Video from the Senate floor showed him largely motionless while senators debated and voted. The timing has drawn renewed scrutiny because the Senate was considering a roughly $70 billion Republican package to fund immigration enforcement, including Immigration and Customs Enforcement and Border Patrol, through the end of President Donald Trump’s term. McConnell stayed through the marathon session as Republicans pushed the legislation forward, despite his visibly limited mobility. Ten days later, on June 14, McConnell was hospitalized after falling at his Washington-area home and briefly losing consciousness. He later developed pneumonia and spent weeks in rehabilitation. His prolonged absence has intensified questions about his health, his ability to carry out his Senate responsibilities and how much Republican leadership knew about his condition. The footage raises a serious transparency question: why was a visibly impaired senator participating in crucial votes while the public received so little information about his condition? For critics, the episode highlights a broader concern about Republican leadership putting political priorities, including Trump’s agenda, ahead of accountability to voters. \n    submitted by    /u/McDowdy    to    r/PoursTea  \n [link]   [comments]",
+    "arabicDescription": "قبل عشرة أيام من اختفاء ميتش ماكونيل عن الأنظار، ظهر الجمهوري من ولاية كنتاكي لفترة طويلة في قاعة مجلس الشيوخ خلال جلسة تصويت ليلية، وبدا ضعيفًا للغاية وبالكاد يتحرك لساعات. في 4 يونيو 2026، بقي ماكونيل في منصبه",
+    "link": "https://www.reddit.com/r/PoursTea/comments/1vwm8m7/mitch_and_his_team_of_handlers_have_some/",
+    "sourceName": "مجموعة ريديت (1)",
     "category": "مُدمج",
-    "pubDate": "2026-08-24T01:20:39.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/biotech_stocks/comments/1vwomys/cuvl_clinuvel_profitable_peptide_biotech_226m_ev/",
-    "title": "CUVL (Clinuvel) - profitable peptide biotech, $226m EV, Phase 3 readout in less than 100 days. Cashed up, no debt.",
-    "arabicTitle": "CUVL (Clinuvel) - تكنولوجيا حيوية الببتيد المربحة، 226 مليون دولار أمريكي، قراءات المرحلة 3 في أقل من 100 يوم. صرفت، لا دين.",
-    "description": "New Nasdaq listing that almost nobody over here has looked at yet. It only started trading on the Nasdaq Global Select Market on 20 July 2026, so it has basically zero US coverage despite being profitable for nine straight years.\n Short version: $226m enterprise value for a business that did $26m of net profit last year at a 34% net margin, a Phase 3 readout in December on an indication the company sizes at $4.5b, and a peptide delivery platform sitting underneath it that isn't in the price at all.\n The numbers\n Most biotech DD is a pre-revenue company burning cash into a binary. This isn't that. Clinuvel sells SCENESSE (afamelanotide), a melanocortin peptide implant, for EPP (erythropoietic protoporphyria), and has been profitable for nine consecutive years.\n  \nPrice $7.80, market cap ~$393m\n Cash $167m, zero debt, 21st consecutive year with no borrowings\n EV ~$226m\n Cash per share $3.31, so 42% of the share price is cash\n FY25: revenue $75.5m, pre-tax profit $37.0m, net profit $26.0m\n Net margin 34%, gross margin north of 90%\n Revenue CAGR 21% over 5 years, 35% over 9\n 8 consecutive dividends, entirely self funded, no raise, no dilution ever\n  \nThat's roughly 9.7x EV/net profit and about 17x earnings, for a >90% gross margin pharma compounding revenue at 20%+ with 42% of the market cap in cash.\n Strip the cash out and you're paying about $4.49 a share for the operating business. Everything below is what you get on top of that.\n Vitiligo --> the major catalyst\n CUV105 is the Phase 3 in vitiligo, running the same peptide that's already approved and generating revenue in EPP. Company's own US market model:\n  \n1% US prevalence = 3,295,000 people\n 25% eligible (Fitzpatrick IV-VI) = 823,750\n 40% meeting body-surface-area criteria = 329,500\n 20% actively seeking treatment = 65,900\n 9% penetration in years 1-2 = 5,931 patients\n  \nTotal addressable market: $4.5b. Years 1-2 revenue from those ~6,000 patients: $490-570m.\n Against a $226m EV. Years 1-2 vitiligo revenue alone would be 2.2 to 2.5x the entire current enterprise value, and roughly 7x total FY25 group revenue. From six thousand patients.\n Also worth noting what it isn't. The competing approaches in vitiligo are immune suppression. This is a melanocortin peptide working through the pigmentation pathway itself, which is a different safety conversation for a chronic, lifelong condition. Their North American team has been pushing exactly that line at AAD for two years running.\n Two things I think are underappreciated:\n 1. The trial is fully recruited. Over 200 patients enrolled, target hit. Recruitment risk is gone. This is a readout waiting to happen, not a trial still trying to fill sites.\n 2. The commercial build is already done. This is the bit that changes the shape of the ramp. 190 trained and accredited treatment centres, a 20 person national distribution team, NB-UVB systems, and the reimbursement pathway for extensive vitiligo have all been stood up in parallel with the trial. A positive readout doesn't kick off a two year commercial build. The channel already exists.\n Worth remembering they already know how to sell an ultra-orphan peptide therapy through specialist centres with reimbursement. Same playbook they ran for EPP, into a market orders of magnitude larger.\n Why December is the inflection\n Topline guided for December 2026. Roughly 100 days from now.\n Right now the market prices this as an EPP company with a big cash pile. On a positive readout it reprices as a company with a multi hundred million dollar dermatology franchise ahead of it and the salesforce already hired.\n Nearer term: FY26 full year results land in the next few days (27-28 August, with an investor webinar the same evening). Ninth consecutive profitable year, ninth dividend, and possibly a tightening of the December guidance to a specific window. A firmer date is usually what starts pulling attention in.\n Then regulatory filings through 2027, into a market where the infrastructure is already standing.\n Scale\n Not going to pretend to model this precisely, but on the midpoint of $530m of years 1-2 revenue across 50.4m shares, even at margins well below the 34% the company already runs at, you get earnings per share that are a multiple of the current price. The share count is the thing people underrate here. 50 million shares is tiny for a Nasdaq listing. Any material revenue lands very concentrated per share.\n For reference, analyst targets on it sit in the $12 to $16.50 range against $7.80 today.\n The delivery platform, which is the part nobody is pricing\n Vitiligo is the catalyst. This is the reason it could be a much bigger company in five years.\n Peptides are the hottest category in US pharma right now. GLP-1s dragged the class into the mainstream and the policy environment has swung hard behind it: the FDA has been unwinding the 2023 restrictions on compounded peptides, and in July an FDA advisory panel voted to ease restrictions on most of the seven it reviewed. Grand View has the US peptide therapeutics market at roughly $65b in 2024 heading toward $160b by 2030, a 14.7% CAGR.\n Clinuvel has been working on melanocortins since long before any of that was fashionable, and what they've quietly been building is the piece the whole category actually struggles with: delivery.\n VLRX-L is their in-house controlled-release liquid injectable peptide platform, developed at VALLAURIX, their Singapore research centre. The point of it is flexible, reproducible controlled release. You adjust injection volume to titrate the dose, which means you can tailor to body weight and treat paediatric and adolescent patients rather than just adults. That's a genuinely hard problem in peptide delivery and it's often the difference between a drug that works and a drug patients stay on.\n Where it's up to, per the 12 August update:\n  \nFour candidate formulations went into a preclinical study to confirm the in vitro work\n One showed a superior release profile across the target delivery window, with lower peak plasma levels and drug still detectable across the period\n That candidate is now being refined, with a further preclinical study scheduled for early Q1 2027\n Manufacturing scale-up is already being scoped\n  \nThat last point is the tell. You don't scope manufacturing scale-up on something you think is going nowhere.\n The infrastructure behind it is real money. In December 2025 they announced an expansion of VALLAURIX backed by the Singapore Economic Development Board, up to S$30m over five years to 2030, roughly doubling the centre's footprint and adding specialist staff specifically to accelerate long-acting delivery platforms. R&D is now over 50 people under CSO Dr Dennis Wright. This is a decade-plus program in peptide chemistry, polymer science and delivery system design, funded out of operating cash flow while the company still posts a profit every half.\n The strategic logic: initial focus is melanocortins, their own compounds. But the company has been explicit that VLRX-L and the other platforms under development at VALLAURIX could deliver other peptides too. If it validates in vivo, this stops being a formulation for one drug and becomes a platform, applicable to third party peptides, licensable, partnerable. In a category heading toward $160b where almost every player has a delivery problem, owning controlled-release technology is a different kind of asset to owning one drug.\n They also have the credibility to make that claim, which most platform stories don't. SCENESSE is already a controlled-release peptide product, commercially approved and shipping across five jurisdictions for years. They aren't theorising about sustained-release peptide delivery. They've done it, at commercial scale, through multiple regulators.\n None of this is in a $226m EV. The market is pricing one drug and some cash.\n The rest of the free pipeline\n Also carrying zero value at the current price:\n  \nNEURACTHEL (ACTH) for neurological and endocrinological indications\n PRENUMBRA for stroke, expanding toward Parkinson's\n DNA repair and polychromatic photoprotection in PhotoCosmetics\n EPP label expansion and new geographies (Health Canada approval came through recently)\n  \nEvery one of those runs off the same melanocortin peptide science base and the same delivery work underneath it.\n My view\n The existing EPP business plus $167m of cash covers most of the current share price on its own. Which means the December vitiligo readout is close to a free call option attached to a profitable, dividend paying, debt free company growing revenue 20% a year. And underneath that you get a peptide delivery platform, funded and progressing, in the hottest category in US pharma, for nothing.\n You very rarely get a binary catalyst where the downside is backstopped by a real operating business and 42% of the market cap in cash. And because it only listed on Nasdaq a month ago, most US screens haven't even picked it up yet.\n    submitted by    /u/Fun-Time4064    to    r/biotech_stocks  \n [link]   [comments]",
-    "arabicDescription": "قائمة ناسداك الجديدة التي لم ينظر إليها أحد تقريبًا هنا حتى الآن. لقد بدأت التداول في Nasdaq Global Select Market فقط في 20 يوليو 2026، لذلك فهي تتمتع بتغطية أمريكية صفرية على الرغم من كونها مربحة لمدة تسع سنوات متتالية. النسخة القصيرة: 226 مليون دولار",
-    "link": "https://www.reddit.com/r/biotech_stocks/comments/1vwomys/cuvl_clinuvel_profitable_peptide_biotech_226m_ev/",
-    "sourceName": "مجموعة ريديت (4)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T01:09:54.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/10xPennyStocks/comments/1vwodo0/the_important_rest_of_the_story_you_need_to_know/",
-    "title": "The important \"rest of the story\" you need to know regarding NRx Pharmaceuticals (NRXP) and the anticipated upcoming ANDA approval for preservative-free IV ketamine",
-    "arabicTitle": "\"بقية القصة\" المهمة التي تحتاج إلى معرفتها فيما يتعلق بشركة NRx Pharmaceuticals (NRXP) وموافقة ANDA المرتقبة على الكيتامين الوريدي الخالي من المواد الحافظة",
-    "description": "A glitch within Reddit omitted/deleted an important subsection of a prior post re NRXP's ANDA. Below is an important piece of information as to why the ANDA could be approved any day now.\n The one remaining item identified by an FDA reviewer, which prevented an approval at the June 29 PDUFA meeting was the alleged potential for the luer lock vial tip to malfunction.\n  \nNRx's manufacturer of the luer lock vial, has already manufactured 11.9M vials with no incidents of failure.\n Those vials were produced for 3 already approved FDA drugs.\n NRx had 7 preproduction runs of luer lock vials, for a total of 3500 vials, with no issues.\n NRx already included substantial relevant documentation about this subject in their ANDA.\n The result of the FDA PDUFA meeting was a requirement for NRx to submit an attestation from the manufacturer that the luer lock vials which will be produced for NRx will be made in the same manner (and if I recall correctly, from the same production lines) as the 11.9M vials stated above.\n That attestation was submitted by NRx within days of the PDUFA meeting according to the Aug 10 shareholder update call. \n If you can make time, listen to at least the first 12 minutes of this call. You will be highly impressed (CEO and Chief Commercial Officer speak).\n 2nd Event listed on this webpage: Events | NRx Pharmaceuticals, Inc.\n \n  \nThe FDA acknowledged that due to not having any other Major Deficiency and the ongoing ketamine shortage, they would address the attestation submission with priority.\n Now that it's been about 3 weeks since the manufacturer attestation was submitted by NRx, I believe it likely that approval is coming \"any day now\" (time will tell if that will be this coming week or two weeks from now, or longer).\n    submitted by    /u/stockratic    to    r/10xPennyStocks  \n [link]   [comments]",
-    "arabicDescription": "أدى خلل في Reddit إلى حذف/حذف قسم فرعي مهم من منشور سابق يتعلق بـ ANDA الخاص بـ NRXP. فيما يلي معلومات مهمة حول سبب الموافقة على ANDA في أي يوم الآن. العنصر الوحيد المتبقي الذي حدده أحد مراجعي إدارة الأغذية والعقاقير (FDA) والذي pr",
-    "link": "https://www.reddit.com/r/10xPennyStocks/comments/1vwodo0/the_important_rest_of_the_story_you_need_to_know/",
-    "sourceName": "مجموعة ريديت (4)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T00:58:04.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/opendoor/comments/1vwnxmi/poll_50_stock_price_ish_50_billion_market_cap/",
-    "title": "Poll - $50 Stock Price (ish 50 billion market cap)",
-    "arabicTitle": "استطلاع - سعر السهم 50 دولارًا (القيمة السوقية 50 مليار دولار)",
-    "description": "I saw a lot of discussion on timing, so I was curious the subs expectations. I chose August assuming we’d see Q2 numbers.\n I also get that share count will not stay static at those numbers, so my math is imprecise. My emphasis is on stock price for the survey.\n As tempting as it was to put $82 or $400, I thought I’d “ground” the question at $50.\n View Poll\n    submitted by    /u/piroteck    to    r/opendoor  \n [link]   [comments]",
-    "arabicDescription": "لقد رأيت الكثير من النقاش حول التوقيت، لذلك كنت مهتمًا بتوقعات الغواصات. لقد اخترت شهر أغسطس على افتراض أننا سنرى أرقام الربع الثاني. لقد أدركت أيضًا أن عدد المشاركات لن يبقى ثابتًا عند هذه الأرقام، لذا فإن حساباتي غير دقيقة. تركيزي هو على سعر السهم ل",
-    "link": "https://www.reddit.com/r/opendoor/comments/1vwnxmi/poll_50_stock_price_ish_50_billion_market_cap/",
-    "sourceName": "مجموعة ريديت (4)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T00:37:10.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/GME/comments/1vwntzt/i_like_it_retro/",
-    "title": "I Like it Retro…🏴‍☠️👾🎮",
-    "arabicTitle": "أنا أحب ذلك الرجعية…🏴‍☠️👾🎮",
-    "description": "submitted by    /u/Number_1_w_Fries    to    r/GME  \n [link]   [comments]",
-    "arabicDescription": "تم الإرسال بواسطة /u/Number_1_w_Fries إلى r/GME [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/GME/comments/1vwntzt/i_like_it_retro/",
-    "sourceName": "مجموعة ريديت (4)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T00:32:25.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/Market_Forecasts/comments/1vwnoud/weekly_market_wrap_august_1721_2026/",
-    "title": "# Weekly Market Wrap — August 17–21, 2026",
-    "arabicTitle": "# Weekly Market Wrap — August 17–21, 2026",
-    "description": "*Humble Trader | Gemini Trading* *慢慢買。分批佈局。讓時間站在你這邊。🙏 — Buy slowly. Stage your positions. Let time work for you.* This week's wrap covers six threads: the $SPX/$QQQ close and next week's setup, the macro calendar into Jackson Hole, Treasury's expanded buyback program, the White House crypto summit and the CLARITY Act, my Intel options trade, and — new this week — a deeper look at two bearish undercurrents: widening AI-infrastructure credit spreads and the U.S. debt clock crossing $40 trillion. **[NOT FINANCIAL ADVICE. DYOR.]** --- ## 1. $SPX and $QQQ: Weekly Close Review & Outlook | Index | Friday Close | Weekly Change | 50-day MA | 200-day MA | StochRSI(14) | |---|---|---|---|---|---| | $SPX | 7,674.37 | +0.43% | 7,541.05 | 7,095.73 | 0.166 (not overbought) | | $QQQ | 713.44 | +0.35% | 713.35 (sitting right on it) | 651.74 | 0.119 (not overbought) | This week was a \"new high, then digest\" pattern. $SPX printed a weekly high of 7,816.70 on 8/17 — very close to its all-time high — before pulling back roughly 1.8% to close at 7,674.37, still holding above the Bollinger midline and the 50-day MA. That's a healthy consolidation, not a trend break. $QQQ closed at 713.44, parked almost exactly on its 50-day MA — a genuine tug-of-war line: hold it next week and tech has more room to run; lose it and expect broader profit-taking. CMF(20) on both indices is mildly negative, meaning no strong net inflows — the market is essentially waiting on earnings and Jackson Hole before committing. ### Earnings' Impact: the Standout Was $NBIS Nebius (NBIS) reported Q2 on 8/12: revenue of $582.3M, up **454% year-over-year**, AI cloud revenue of $574.9M, and an annualized run-rate that pushed past $3B, with management raising its year-end contracted-power target to 5GW. The stock jumped over 15% on the print and had rallied as much as **51.3%** over the trailing 30 days — arguably the single most eye-catching earnings surprise of this AI-infrastructure reporting season, and further confirmation that AI cloud/compute demand remains hot and supply remains tight. Worth flagging: on 8/19, NBIS announced plans to raise $4.5–5.0B via convertible notes to fund further capex, and the stock dropped over 13% in a single day. The market is clearly pricing \"quality of the beat\" and \"aggressive, leverage-funded capex\" as two separate things — a great quarter doesn't insulate a stock from re-rating once dilution and balance-sheet risk enter the picture. Net read: earnings impact on the index level was \"pockets of brilliance, broadly neutral.\" AI cloud/compute names largely beat, supporting $QQQ's growth-stock weighting, but financing and leverage concerns triggered \"sell-the-news\" pressure in individual names — which is exactly why the index is chopping at highs instead of breaking out cleanly. ### Next Week's Setup (8/24–8/28) This is one of the most consequential earnings weeks of the quarter. **NVIDIA reports after the close on 8/26** — the single biggest catalyst for AI/semis and $QQQ direction for weeks to come. The same week brings Salesforce, CrowdStrike, Snowflake, Marvell, Workday, Autodesk, Best Buy, and Dollar General, giving a cross-section read on both enterprise spend and consumer demand. Layer on Wednesday's Core PCE and Q2 GDP second estimate, plus Jackson Hole kicking off Thursday (see Section 2), and next week is a genuine collision of earnings, macro data, and central-bank signaling. Position sizing discipline matters more than usual here. --- ## 2. Macro Recap & Jackson Hole Preview ### This Week's Data - **Canada July CPI**: +3.0% y/y, above both the prior 2.8% and consensus 2.9% — a modest inflation re-acceleration. - **U.S. July Building Permits**: 1.443M, beating the 1.37M forecast. **Housing Starts**: 1.239M — below the prior 1.415M but still ahead of the 1.35M consensus. Housing data leaned mildly positive. - **8/19 FOMC Minutes** (from the 7/29 meeting): the standout detail was **three dissents** — three regional Fed presidents (Hammack, Kashkari, Logan) argued the Committee should have hiked rather than held. That's the first cluster of hawkish dissents this large since September 2016, and it signals real internal disagreement over whether the Fed has already paused too long. ### Next Week's Focus: Jackson Hole (8/27–8/29) The Kansas City Fed's annual symposium runs 8/27–8/29 at Jackson Lake Lodge, Wyoming, with roughly 120 central bankers from 70+ countries attending this year under the theme \"Financial Innovation: Implications for Payments and Policy.\" The market's real focus is new Fed Chair **Kevin Warsh's** keynote — his first Jackson Hole address since taking office on 5/22 — scheduled for **Friday, 8/28 at 10:00am ET**. This is his fullest opportunity yet to communicate directly with markets. **What's different this year:** the market isn't primarily asking \"when does the Fed cut?\" — it's asking \"might the Fed hike?\" The July 29 FOMC held rates at 3.50%–3.75%, but produced three rare hawkish dissents, and the June dot plot showed 9 of 18 officials expecting at least one more hike before year-end. Warsh has deliberately minimized forward guidance since taking office, emphasizing the Fed is \"not bound by market pricing,\" and has signaled the Jackson Hole speech will focus on \"long-run structural questions\" rather than near-term policy path. That deliberate vagueness actually raises the information value of the speech — any deviation from a studiously neutral tone could move both equities and Treasuries sharply, echoing Powell's 2022 \"pain\" speech, after which the Dow fell 3% in a single session. The timing is unusually dense: this speech lands roughly 19 days before the September 15–16 FOMC decision, and only about 36 hours after NVIDIA's earnings — making next week the most information-dense stretch of \"corporate results + central bank policy\" this quarter. For $SPX and $QQQ, a hawkish tilt from Warsh (any hint that a hike isn't off the table, or that cuts are pushed out) would likely hit valuation-sensitive tech harder than the broader index; a neutral-to-dovish tone would support continued high-level consolidation and another attempt at recent highs. ### Other Key Data Next Week - **8/26 (Wed):** Core PCE (July), Durable Goods Orders, Q2 GDP second estimate, Personal Income & Spending — the Fed's preferred inflation gauge, landing right before the Jackson Hole speech. - **8/28 (Fri):** Canada Q2 GDP, and the preliminary annual Non-Farm Payrolls benchmark revision — the last comparable revision came in at -911K, so markets will be watching for another sizable downward surprise, which would directly shape rate-path expectations. --- ## 3. Treasury Secretary Bessent: Expanded Bond Buybacks On Wednesday (8/19), the Treasury announced it would **at least double** the size of its liquidity-support buyback operations for 10–30 year bonds — from a $2B cap per operation to $4B — effective 9/9 through 11/4. Long-end yields initially fell on the news (10-year down ~5.7bps to 4.647%, 30-year down 9bps to 5.196%), and equity futures ticked up. The relief lasted exactly one day: yields reversed on Thursday, erasing the move. Bessent then publicly reiterated that **\"buybacks could be bigger than the $4B per issue we announced,\"** arguing current yield levels \"don't reflect the fundamentals\" and that Treasury has a \"large policy toolbox.\" **Impact on equities:** - **Short-term positive signal, limited real effect.** Buybacks are fundamentally a market-making tool to improve liquidity in 30-year bonds, not a direct lever on yields. Against roughly $32T+ in publicly held Treasury debt, a $4B-per-operation buyback is small — Evercore ISI's Krishna Guha called it a \"weaker version of Operation Twist,\" more signal than substance. - **For growth stocks ($QQQ):** if long-end yields do come down on the back of buybacks, that's a marginal tailwind for high-multiple, capex-heavy AI names via lower discount rates. But a one-day fade — as happened this week — suggests underlying concerns about deficits (national debt now past $40T) and supply pressure haven't actually been resolved. - **Watch for:** Bessent has also previewed a broader \"fiscal consolidation\" plan, to be reviewed jointly with OMB Director Russ Vought, covering both revenue and spending. That could matter more than the buyback size itself — worth tracking closely next week. **Bottom line:** if 30-year yields stay pinned above 5%, expect continued valuation pressure on high-P/E growth names. If the buyback program genuinely scales up and succeeds in pulling long-end rates lower, it's a plausible near-term catalyst for a $QQQ bounce. --- ## 4. White House Crypto Summit, the CLARITY Act, and Bitcoin's Weekly Surge ### Summit Recap (Wednesday, 8/19) President Trump hosted a crypto summit at the White House, with regulators (SEC Chair Paul Atkins, CFTC Acting Chair Mike Selig), industry leaders (Coinbase's Brian Armstrong, Ripple's Brad Garlinghouse, Robinhood's Vlad Tenev, plus Kraken, Gemini, Chainlink), and traditional finance (NYSE Chairman Jeffrey Sprecher, plus Nasdaq, CME Group, and DTCC representatives) in attendance. Three themes dominated: 1. **A U.S. crypto strategic reserve** — Trump said publicly the administration is considering purchasing \"sizable amounts\" of bitcoin and other crypto assets, framed around maintaining U.S. leadership in bitcoin, AI, and prediction markets. 2. **Clarifying SEC/CFTC jurisdiction** — industry pushed to end \"regulation by enforcement,\" and both agency heads publicly backed a framework putting most spot crypto under CFTC oversight (as digital commodities), with SEC retaining authority over securities-classified tokens. 3. **TradFi/on-chain convergence** — NYSE, Nasdaq, and CME discussed tokenization, clearing mechanisms, and paths for banks to enter crypto custody. ### Implications for the CLARITY Act The Digital Asset Market Clarity Act passed the House by a wide margin in 2025 but has been stalled in the Senate. This summit gave it real momentum: Trump directly pressured Congress to pass a \"fair version\" of the bill, and having both the SEC and CFTC chairs publicly endorse the same jurisdictional split resolves much of the inter-agency turf conflict that had been slowing things down. The Senate's **procedural cloture vote is scheduled for September 15** and requires 60 votes to clear. The White House also signaled a parallel track: even if the Senate stalls, the SEC and CFTC are prepared to issue guidance or \"safe harbor\" provisions on their own authority — partly a hedge, partly pressure on Congress to avoid administrative rules and future legislation conflicting with each other. ### Bitcoin This Week Bitcoin closed Friday at $77,975.30, up 6.82% on the day, with volume and CMF(20) both spiking to recent highs (0.606) — a clean technical break above the prior swing high of $76,426 (upper Bollinger Band), with StochRSI pinned at 1.0 (strong momentum, but chase-risk is elevated). The trailing one-month gain is roughly 20%, with the White House summit's policy signals (reserve discussion, regulatory clarity) among the key catalysts. **A gap worth flagging:** this rally is running ahead of the actual event — the Senate cloture vote doesn't happen until September 15, and needs 60 votes to pass. If the vote underperforms expectations (insufficient votes, further delay), don't rule out a \"sell the news\" reaction. Conversely, a clean pass — or interim safe-harbor measures from regulators before then — could fuel a second leg higher for crypto and adjacent names (brokers, custody providers, mining stocks). For the broader index, crypto policy clarity hasn't yet had a systemic impact on $SPX/$QQQ, but if bitcoin keeps strengthening and pulls in more retail/institutional flow, watch for a possible rotation effect away from traditional growth names. --- ## 5. Intel Insider Buying + the \"Jade Lizard\" Options Play ### The Trade Setup: Intel CEO Buys Over $10M in Stock Per an SEC Form 4 filed 8/14, Intel CEO Lip-Bu Tan purchased 105,263 shares through a family trust on 8/11 at $95.00/share — roughly $10.0M — bringing the trust's total to 1,314,669 shares. Including 16,471 shares held directly and 500 in a 401(k), Tan's total beneficial ownership sits around 1.33M shares. This purchase came right after Intel closed an equity raise that was upsized from $15B to $20B, priced at the same $95/share. Market read: a strong confidence signal from the CEO on the foundry turnaround and AI roadmap — buying more after the stock is already up over 160% year-to-date is a relatively unusual move. Intel's Q2 revenue came in at $16.13B (+25% y/y) with adjusted EPS of $0.42, both ahead of estimates. ### My Position: Jade Lizard on INTC | Action | Instrument | Expiry | Fill | |---|---|---|---| | Buy stock (BTO) | INTC | — | $91.70 | | Buy call (BTO) | INTC $100 Call | 9/18/2026 | $3.40 | | Sell call (STO) | INTC $97.5 Call | 9/18/2026 | $4.45 | | Sell put (STO) | INTC $80 Put | 9/18/2026 | $1.97 | ### What Is a Jade Lizard? A Jade Lizard combines a short out-of-the-money put with a short call spread (bear call spread), collecting two premiums to build a wide profit zone. The core design rule: **if the total premium collected is greater than or equal to the width of the call spread, there is theoretically no additional risk to the upside** — because even a full max-loss on the call spread is already covered by the credit received. If the stock finishes between the short put strike and the short call strike at expiration, you keep the entire premium. The main risk sits on the downside: a sharp decline exposes the short put to losses that mirror simply owning the stock outright. **What's different about this particular setup:** unlike a textbook, options-only Jade Lizard, this trade also carries a long stock position (BTO INTC @ $91.70), effectively creating a \"stock + Jade Lizard overlay\" — an enhanced covered-call structure: - The $97.5/$100 call spread (net credit $1.05, width $2.5) replaces a naked short covered call, capping max upside loss to the spread width rather than exposing the position to an uncapped short call. - The additional $80 short put ($1.97 credit) adds an extra income stream on top of the stock and covered-call structure — essentially a bet that INTC won't meaningfully break below $80 by expiration. - Combined premium is $3.02 ($1.05 + $1.97), which exceeds the $2.5 call spread width — satisfying the classic \"no additional upside risk\" condition on the options portion. But because stock is also held, actual upside beyond $97.5 is capped between the call spread payoff and stock gains, so there's still real opportunity cost above that strike. **Risk note:** the maximum downside here is effectively \"long stock + an additional short put\" — double exposure. If INTC drops sharply and breaks below $80 before 9/18, the stock position takes a mark-to-market loss and the short put may get assigned, forcing purchase of an equivalent number of additional shares at $80 — doubling downside exposure. This setup suits someone moderately bullish on the name medium-term who is also willing to add on a deep pullback. As always: **this is a personal trade log and educational strategy breakdown, not investment advice — please do your own research (DYOR).** --- ## 6. Bearish Watch List: Widening AI Credit Spreads + the $40 Trillion Debt Milestone ### 6.1 AI-Infrastructure Credit Default Swap Spreads Are Widening in Sync One signal worth flagging this week: 5-year CDS spreads on several large-cap tech and AI-infrastructure names are climbing together. A CDS spread reflects how much the market is pricing in default risk — the higher it goes, the more the market is worried about a company's credit quality and cost of financing. One important read-the-chart caveat: the axes are **not shared**. CoreWeave (CRWV) is plotted on a left axis running 0–900+, while every other name uses a right axis capped near 200. CoreWeave's spread of 798.895bps is an order of magnitude above everything else on the chart — that's no longer investment-grade-style pricing, it's approaching high-yield territory, and it reflects real market skepticism about a business model built on borrowing heavily against long-term compute contracts to fund data-center buildouts. **Reading the tiers:** - **Oracle (219.545)** — unusually elevated for a legacy tech name, tracking the rise in debt issued to fund AI-cloud/OpenAI-related capacity commitments. Its spread has moved almost in lockstep with CRWV, suggesting the market is grouping both into the same \"leveraged AI-infrastructure bet\" bucket. - **SPCX (172.125)** — also elevated and volatile, consistent with SpaceX being pre-IPO (less balance-sheet transparency) and carrying massive capex commitments (Starship, Starlink). - **Meta (93.460)** — sits in the middle; also building data centers aggressively, but with a comparatively healthier cash flow and balance sheet profile. - **Google, Microsoft, Amazon (47–61bps)** — the lowest and most stable spreads, the \"cash cow\" mega-caps the market believes can fund AI capex from free cash flow rather than debt. - **NVDA / AVGO (circled)** — spreads that started very low have begun ticking up together — a reasonable read is that the market is starting to price capex-cycle credit risk into the upstream chip/networking suppliers too, particularly relevant for Broadcom given its growing custom ASIC/networking capital commitments. **Why this matters for $SPX/$QQQ:** credit spreads are a leading indicator for equities — when default-risk premiums widen in fixed income, it usually shows up there before it shows up in equity multiples, especially for high-P/E, negative-free-cash-flow AI infrastructure names. Right now the highly leveraged names (CRWV, ORCL, SPCX) show clear divergence, and the \"shovel sellers\" upstream (NVDA, AVGO) are showing early sympathetic moves. Worth watching next week — continued widening rather than reversal would be an early warning sign that the AI capex narrative is cooling. ### 6.2 The $40 Trillion Debt Milestone — and the Treasury \"Buying Its Own Debt\" to Steady the Market The Treasury's latest Daily Treasury Statement confirms total outstanding federal debt crossed **$40.047 trillion** as of 8/18 — roughly $32.27T publicly held, $7.78T intragovernmental. That's only about five months since the last milestone ($39T, this past March), indicating the pace of borrowing is accelerating. **The interest burden is striking:** - Trailing 12-month interest expense has surpassed **$1 trillion**; fiscal-year-to-date interest spending totals roughly $1.17T. - Net interest (after intragovernmental offsets) was roughly $970B for FY2025 and is set to cross $1T in FY2026, **now exceeding both the defense budget and Medicare individually**, making it the federal government's second-largest spending category after Social Security. - Per the latest CBO projections, absent fiscal reform, debt-to-GDP — currently around 100–101% — is projected to reach **120% by 2036** and **175% by 2056** (30 years out), more than triple the 50-year historical average of roughly 51%. **Treasury buybacks are not QE — the distinction matters:** | | Treasury Buybacks | Fed Repo / QE | |---|---|---| | Decision-maker | Fiscal authority (Treasury) | Central bank (FOMC) | | Policy type | Debt management tool | Monetary policy | | Funding source | Existing cash / debt restructuring | Expands the Fed's own balance sheet | | Core goal | Market functioning, liquidity, borrowing-cost control | Manage the economy/inflation, inject liquidity | | Lever | — | Controls \"quantity\" (vs. rate cuts controlling \"price\") | Put simply: rate cuts make borrowing cheaper; buybacks make sure there's someone willing to lend. Treasury's expanded operation (a doubled $4B cap on long-bond buybacks starting 9/9) is really about stepping in as a \"super buyer\" to relieve liquidity strain in the 30-year bond market and cap a yield spike that briefly hit 5.33% — the highest since 2007 — not about injecting systemic liquidity the way Fed QE does. Its scale and impact are far smaller. **Combined bearish read:** this week's two threads — ① synchronized widening in AI-infrastructure credit spreads (ORCL, CRWV, SPCX, and now upstream NVDA/AVGO), and ② the $40T debt milestone with net interest now exceeding defense and Medicare — are really two faces of the same macro story: **the AI capex boom is being financed substantially through debt (corporate and sovereign alike), and both the credit market and the Treasury market are starting to price in doubts about how sustainable that borrowing spree really is.** If 30-year yields stay pinned above 5%, expect rising financing costs across the board, especially for leveraged AI-infrastructure names — a \"higher rates → wider credit spreads → valuation pressure\" negative loop. Treasury's buyback program can relieve short-term liquidity stress, but as we saw this week, the relief lasted exactly one day — it hasn't resolved the underlying supply/demand imbalance. For $SPX/$QQQ investors, this is a third thread to track next week, alongside earnings and Jackson Hole. --- *This wrap draws on publicly available data — StockCharts, CNBC, Bloomberg, SEC filings, Earnings Whispers, the U.S. Treasury's Daily Treasury Statement, and CBO's Budget and Economic Outlook — for educational and discussion purposes only. Nothing here is investment advice; past performance doesn't guarantee future results. Please do your own research.* **[NOT FINANCIAL ADVICE. DYOR.]** --- **Humble Trader | Gemini Trading** 慢慢買。分批佈局。讓時間站在你這邊。🙏 X: [@robot2trade1](https://x.com/robot2trade1) / [@gemini_edge](https://x.com/gemini_edge) · Substack: [@robot2trade](https://substack.com/@robot2trade) · Reddit: [r/TradeVerseNetwork](https://www.reddit.com/r/TradeVerseNetwork) · Bluesky: [robot2trade.bsky.social](https://bsky.app/profile/robot2trade.bsky.social) · LinkedIn: [rob-trade](https://www.linkedin.com/in/rob-trade-6bab1934/) · Facebook: Gemini Trading Group · Truth Social: [@robot2trade](https://truthsocial.com/@robot2trade) \n    submitted by    /u/robot2trade  \n [link]   [comments]",
-    "arabicDescription": "*Humble Trader | Gemini Trading* *慢慢買。分批佈局。讓時間站在你這邊。🙏 — Buy slowly. Stage your positions. Let time work for you.* This week's wrap covers six threads: the $SPX/$QQQ close and next week's setup, the macro calendar into Jackson Hole, Treasury's expand",
-    "link": "https://www.reddit.com/r/Market_Forecasts/comments/1vwnoud/weekly_market_wrap_august_1721_2026/",
-    "sourceName": "Market_Forecasts",
-    "category": "الاسهم",
-    "pubDate": "2026-08-24T00:25:44.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/Hedera/comments/1vwmu3z/hedera_ecosystem_explained_how_everything/",
-    "title": "HEDERA ECOSYSTEM EXPLAINED - How Everything Connects. Risks and Opportunities (itsbrandond full video)",
-    "arabicTitle": "شرح النظام البيئي هيديرا - كيف يرتبط كل شيء. المخاطر والفرص (فيديو كامل)",
-    "description": "i am very privileged to have worked in the hedera ecosystem for 5+ years. from the smallest retail teams to the largest orgs. i have seen it all.\n there are great people here. there are also risks to keep in mind. the REAL POWER is in the hands of the HOLDERS.\n everything needs HBAR. without holders, the entire thing stops.\n there is also MASSIVE OPPORTUNITY ready to be seized. but we have limited time and resources. we lose good people each day.\n we need GC use cases. we need retail activity to attract enterprises. we need HBAR to be an attractive speculative asset so the orgs can stay operating.\n when it’s all working, it’s beautiful. so let’s GET IT WORKING!\n i do see a lot of questions and i thought it would be helpful to outline the ecosystem as best i can. no fluff. no sprinkles. no FUD. just the best info i can.\n hopefully it’s helpful 🙏\n i know i give the subreddit a hard time but i am really impressed and optimistic with the energy here.\n appreciate you all!\n    submitted by    /u/itsbrandond    to    r/Hedera  \n [link]   [comments]",
-    "arabicDescription": "يشرفني جدًا أن أعمل في نظام Hedera البيئي لأكثر من 5 سنوات. من أصغر فرق البيع بالتجزئة إلى أكبر المؤسسات. لقد رأيت كل شيء. هناك أناس عظماء هنا. هناك أيضًا مخاطر يجب وضعها في الاعتبار. القوة الحقيقية في أيدي",
-    "link": "https://www.reddit.com/r/Hedera/comments/1vwmu3z/hedera_ecosystem_explained_how_everything/",
-    "sourceName": "مجموعة ريديت (7)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-23T23:48:04.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/100xpennystock/comments/1vwm8n6/what_are_we_gonna_go_up_to_by_september/",
-    "title": "What are we gonna go up to by September?",
-    "arabicTitle": "ما الذي سنفعله بحلول سبتمبر؟",
-    "description": "submitted by    /u/ConclusionKind3142    to    r/100xpennystock  \n [link]   [comments]",
-    "arabicDescription": "تم الإرسال بواسطة /u/ConclusionKind3142 إلى r/100xpennystock [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/100xpennystock/comments/1vwm8n6/what_are_we_gonna_go_up_to_by_september/",
-    "sourceName": "مجموعة ريديت (4)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-23T23:21:23.000Z",
+    "pubDate": "2026-08-23T23:21:21.000Z",
     "media": {
       "image": null
     }
@@ -280,29 +266,71 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/Buttcoin/comments/1vwizbi/theyre_back_to_not_your_keys_not_your_crypto/",
-    "title": "They're back to \"not your keys, not your crypto\".",
-    "arabicTitle": "لقد عادوا إلى \"ليس مفاتيحك، وليس تشفيرك\".",
-    "description": "submitted by    /u/folteroy    to    r/Buttcoin  \n [link]   [comments]",
-    "arabicDescription": "تم الإرسال بواسطة /u/folteroy إلى r/Buttcoin [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/Buttcoin/comments/1vwizbi/theyre_back_to_not_your_keys_not_your_crypto/",
-    "sourceName": "مجموعة ريديت (7)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-23T21:05:00.000Z",
+    "id": "https://www.reddit.com/r/Economics/comments/1vwkxa0/ground_beef_prices_are_soaring_trumps_fix_has_us/",
+    "title": "Ground beef prices are soaring. Trump’s fix has U.S. ranchers worried",
+    "arabicTitle": "Ground beef prices are soaring. Trump’s fix has U.S. ranchers worried",
+    "description": "submitted by    /u/_fastcompany    to    r/Economics  \n [link]   [comments]",
+    "arabicDescription": "submitted by /u/_fastcompany to r/Economics [link] [comments]",
+    "link": "https://www.reddit.com/r/Economics/comments/1vwkxa0/ground_beef_prices_are_soaring_trumps_fix_has_us/",
+    "sourceName": "مجتمعي",
+    "category": "عام",
+    "pubDate": "2026-08-23T22:25:11.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/bitcoincashSV/comments/1vwhtqe/teranode_a_test_that_reached_79_billion/",
-    "title": "Teranode: A Test That Reached 79 Billion Transactions a Second - @BSVCasey -- X",
-    "arabicTitle": "Teranode: اختبار وصل إلى 79 مليار معاملة في الثانية - @BSVCasey - X",
-    "description": "submitted by    /u/Knockout_SS    to    r/bitcoincashSV  \n [link]   [comments]",
-    "arabicDescription": "تم الإرسال بواسطة /u/Knockout_SS إلى r/bitcoincashSV [رابط] [تعليقات]",
-    "link": "https://www.reddit.com/r/bitcoincashSV/comments/1vwhtqe/teranode_a_test_that_reached_79_billion/",
-    "sourceName": "مجموعة ريديت (7)",
+    "id": "https://www.reddit.com/r/Economics/comments/1vwkxa0/ground_beef_prices_are_soaring_trumps_fix_has_us/",
+    "title": "Ground beef prices are soaring. Trump’s fix has U.S. ranchers worried",
+    "arabicTitle": "أسعار اللحم المفروم ترتفع. أثار إصلاح ترامب قلق مربي الماشية في الولايات المتحدة",
+    "description": "submitted by    /u/_fastcompany    to    r/Economics  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/_fastcompany إلى r/Economics [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/Economics/comments/1vwkxa0/ground_beef_prices_are_soaring_trumps_fix_has_us/",
+    "sourceName": "مجموعة ريديت (1)",
     "category": "مُدمج",
-    "pubDate": "2026-08-23T20:19:44.000Z",
+    "pubDate": "2026-08-23T22:25:11.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/Cruise/comments/1vwkwnv/crushing_now_above_the_arctic_circle/",
+    "title": "Crushing now above the arctic circle",
+    "arabicTitle": "سحق الآن فوق الدائرة القطبية الشمالية",
+    "description": "We are a half mile above the arctic circle. We are traveling to different ports in Iceland. Took this sunset above the arctic circle having left Akureyri \n    submitted by    /u/dylan3883    to    r/Cruise  \n [link]   [comments]",
+    "arabicDescription": "نحن على بعد نصف ميل فوق الدائرة القطبية الشمالية. نحن نسافر إلى موانئ مختلفة في أيسلندا. التقطت هذه الصورة لغروب الشمس فوق الدائرة القطبية الشمالية بعد مغادرة أكوريري، أرسلها /u/dylan3883 إلى r/Cruise [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/Cruise/comments/1vwkwnv/crushing_now_above_the_arctic_circle/",
+    "sourceName": "مجموعة ريديت (1)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-23T22:24:29.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/oil/comments/1vwkw1k/where_the_united_states_imports_from/",
+    "title": "Where the United States imports from",
+    "arabicTitle": "من أين تستورد الولايات المتحدة",
+    "description": "submitted by    /u/TSHRED56    to    r/oil  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/TSHRED56 إلى r/oil [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/oil/comments/1vwkw1k/where_the_united_states_imports_from/",
+    "sourceName": "مجموعة ريديت (1)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-23T22:23:47.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/CryptoMoonShots/comments/1vwktdt/building_an_onchain_economy_where_ai_agents_can/",
+    "title": "Building an on-chain economy where AI agents can earn, transact and build reputation on Solana",
+    "arabicTitle": "بناء اقتصاد متصل بالسلسلة حيث يمكن لوكلاء الذكاء الاصطناعي كسب المال والتعامل وبناء السمعة على Solana",
+    "description": "AI agents are getting increasingly capable, but there’s still a missing piece:\n How do autonomous agents actually participate in an economy?\n That’s what we’re trying to explore with SolAgents.\n We’re building infrastructure on Solana that gives AI agents an economic layer — allowing agents to discover each other, transact, build reputation and provide services without relying entirely on centralized intermediaries.\n Some of the infrastructure we’ve built includes:\n On-chain agent registration — agents establish an identifiable presence within the ecosystem.\n Agent sentiment scoring — agents can develop measurable trust and reputation signals based on activity and ecosystem data.\n On-chain USDC escrow payments — payments for agent-to-agent or human-to-agent work can be locked in escrow and released when the agreed work is completed.\n Agentic marketplace — agents can offer services and interact economically with humans or other agents.\n Agent tokenization — registered agents can launch their own SPL token directly through the platform.\n Bonding-curve trading — agent tokens can establish an early market before graduating to broader liquidity.\n Wallet-owned agents — users maintain control of their wallets and private keys.\n The part we find most interesting isn’t necessarily tokenization.\n It’s what happens when agents can establish reputation, negotiate work, receive payment and settle transactions with other agents autonomously.\n Imagine an agent discovering another agent for a task, checking its sentiment/reputation score, agreeing on a price, locking USDC into an on-chain escrow contract and releasing payment after successful delivery.\n No traditional payment processor.\n No platform custody.\n Just agents coordinating economically through on-chain infrastructure.\n We’re still early, and there’s a lot we want to improve.\n But we think the bigger question is worth exploring:\n If millions of autonomous agents eventually operate online, what does their native economy look like?\n Would love feedback from people building at the intersection of AI, crypto and autonomous systems.\n SolAgents — solagents.dev\n    submitted by    /u/Straight-Diamond-248    to    r/CryptoMoonShots  \n [link]   [comments]",
+    "arabicDescription": "تزداد قدرات عملاء الذكاء الاصطناعي بشكل متزايد، ولكن لا تزال هناك قطعة مفقودة: كيف يشارك العملاء المستقلون فعليًا في الاقتصاد؟ هذا ما نحاول استكشافه مع SolAgents. نحن نبني بنية تحتية على Solana توفر وكيل الذكاء الاصطناعي",
+    "link": "https://www.reddit.com/r/CryptoMoonShots/comments/1vwktdt/building_an_onchain_economy_where_ai_agents_can/",
+    "sourceName": "مجموعة ريديت (5)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-23T22:20:40.000Z",
     "media": {
       "image": null
     }
@@ -322,29 +350,15 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/inflation/comments/1vwdyxp/recalls_dont_stop_sales/",
-    "title": "Recalls don't stop sales?\"",
-    "arabicTitle": "Recalls don't stop sales?\"",
-    "description": "submitted by    /u/LuckyBastard001    to    r/inflation  \n [link]   [comments]",
-    "arabicDescription": "submitted by /u/LuckyBastard001 to r/inflation [link] [comments]",
-    "link": "https://www.reddit.com/r/inflation/comments/1vwdyxp/recalls_dont_stop_sales/",
-    "sourceName": "مجتمعي",
-    "category": "عام",
-    "pubDate": "2026-08-23T17:54:15.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/ethtrader/comments/1vwdww2/when_crypto_goes_too_well_for_3_days_in_a_row/",
-    "title": "When Crypto Goes Too Well For 3 Days in a Row",
-    "arabicTitle": "عندما تسير الأمور على ما يرام في مجال العملات المشفرة لمدة 3 أيام متتالية",
-    "description": "Source: https://x.com/CryptoTony__/status/2091524861160288666\n    submitted by    /u/kirtash93    to    r/ethtrader  \n [link]   [comments]",
-    "arabicDescription": "المصدر: https://x.com/CryptoTony__/status/2091524861160288666 تم الإرسال بواسطة /u/kirtash93 إلى r/ethtrader [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/ethtrader/comments/1vwdww2/when_crypto_goes_too_well_for_3_days_in_a_row/",
-    "sourceName": "مجموعة ريديت (7)",
+    "id": "https://www.reddit.com/r/CryptoMarkets/comments/1vwfbcj/the_btc_breakout_was_a_treasury_liquidity_event/",
+    "title": "The BTC breakout was a Treasury liquidity event, not a crypto event — and the funding data says it's not a crowded long yet",
+    "arabicTitle": "كان اختراق BTC حدثًا يتعلق بسيولة الخزانة، وليس حدثًا للعملات المشفرة - وتشير بيانات التمويل إلى أن الأمر لم يكن مزدحمًا لفترة طويلة بعد",
+    "description": "Quick reconstruction of the week, because the sequencing matters more than the price action:\n Aug 18 — SEC proposes \"Regulation Crypto Assets,\" easing disclosure requirements for certain offerings.\n Aug 19 — Treasury announces long-dated bond buybacks at least double in size, $2B to $4B+ per operation. Yields drop.\n Aug 20 — BTC breaks the six-week range, tops $71K. Roughly $3B of shorts liquidated in 24h, largest since 2021. Spot BTC ETFs take $606M.\n Aug 21-22 — BTC settles around $77.3K, +22.7% on the week. ETH ~$2,360. XRP +39%. Fear and Greed 72.\n Two of the three catalysts are policy, and policy can be withdrawn. The buyback expansion is the load-bearing one — it's a real change in dollar liquidity, and it's why this looked more like a macro risk-asset repricing than a crypto narrative pump.\n The part I think is being misread: everyone is calling a top off the Greed reading. But perp funding is only running about +4.7% annualised on the month, and the trailing week cooled to +3.8% — roughly half the long-run +8.4% average. After a +22% week you'd expect funding to be screaming. It isn't.\n That implies this leg was driven by spot and ETF flow rather than leveraged longs piling in. Which is a genuinely different risk profile than a squeeze top: fewer forced sellers stacked up on the way down, but also much less short fuel left on the way up. The 24h liquidation tape has already flipped two-sided (~$858M longs vs ~$816M shorts), so the easy direction is gone.\n What I'm watching rather than predicting:\n - Whether ETF inflows keep printing $200M+ days now the squeeze fuel is spent\n - Whether funding actually normalises upward, which is when the crowded-long argument becomes real\n - Dominance. Alt gains so far look like beta off a BTC breakout, not rotation — the tell would be dominance breaking down while BTC goes sideways.\n Curious what the bear case is beyond \"it went up too fast.\" Anyone still short, what's the thesis?\n    submitted by    /u/Civil-Mine-4168    to    r/CryptoMarkets  \n [link]   [comments]",
+    "arabicDescription": "إعادة بناء سريعة للأسبوع، لأن التسلسل يهم أكثر من حركة السعر: 18 أغسطس - تقترح هيئة الأوراق المالية والبورصات \"تنظيم الأصول المشفرة\"، مما يخفف متطلبات الإفصاح لبعض العروض. 19 أغسطس - أعلنت وزارة الخزانة عن عمليات إعادة شراء السندات طويلة الأجل",
+    "link": "https://www.reddit.com/r/CryptoMarkets/comments/1vwfbcj/the_btc_breakout_was_a_treasury_liquidity_event/",
+    "sourceName": "مجموعة ريديت (5)",
     "category": "مُدمج",
-    "pubDate": "2026-08-23T17:52:10.000Z",
+    "pubDate": "2026-08-23T18:43:45.000Z",
     "media": {
       "image": null
     }
@@ -364,29 +378,57 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/Market_Forecasts/comments/1vwbk1q/weekly_market_wrap_august_1721_2026/",
-    "title": "# Weekly Market Wrap — August 17–21, 2026",
-    "arabicTitle": "# Weekly Market Wrap — August 17–21, 2026",
-    "description": "submitted by    /u/robot2trade  \n [link]   [comments]",
-    "arabicDescription": "submitted by /u/robot2trade [link] [comments]",
-    "link": "https://www.reddit.com/r/Market_Forecasts/comments/1vwbk1q/weekly_market_wrap_august_1721_2026/",
-    "sourceName": "Market_Forecasts",
-    "category": "الاسهم",
-    "pubDate": "2026-08-23T16:22:02.000Z",
+    "id": "https://www.reddit.com/r/CryptoMoonShots/comments/1vwdjjd/potential_moonshot_coin_zkp_zeroknoledgeprinter/",
+    "title": "Potential Moonshot Coin $ZKP (ZeroKnoledgePrinter) Staking Memecoin 100x Opportunity",
+    "arabicTitle": "عملة Moonshot المحتملة $ZKP (ZeroKnoledgePrinter) فرصة تخزين Memecoin 100x",
+    "description": "I think I may have found one of the more interesting microcaps on PulseChain.\n I've been watching PulseChain lately and seeing a lot of tokens pump after the short term opportunity has already passed. So I've been looking for something early, rather than trying to chase whatever is already running.\n I came across Zero Knowledge Printer (ZKP), and the more I looked into it, the more interesting the risk/reward started to look.\n Disclaimer: I'm not telling anyone to buy this. This is simply a project I found interesting and I'm sharing my research so people can decide for themselves. ZKP is an extremely high-risk microcap, so do your own research before putting any money into it.\n ZKP is currently sitting around an $80K market cap with roughly $12K of liquidity while the chart goes sideways. When ever I see a chart that goes sideways for 2 months or longer in a positive environment I keep track of it, because odds are it'll start tracking upwards.\n At this valuation, ZKP doesn't need to become a major cryptocurrency for an early position to potentially see a substantial return.\n For perspective:\n $250K market cap - 3x\n $500K - 6x\n $1M - 13x\n $5M - 63x\n Obviously, those numbers are not predictions. They're simply showing how asymmetric the math can become when you're dealing with a $80K microcap.\n The staking mechanism is also very interesting.\n ZKP has a 5% transaction tax, and the system uses that mechanism to acquire ProveX (PRVX) for ZKP stakers.\n So instead of creating more ZKP and handing it out as rewards, trading activity is used to generate the reward asset.\n That's really good because it prevents inflation of the asset you are investing in while maintaining high yield. maintaining high yields for long periods of time are always a good way to pull in users long term. Most projects that do this don't have a true sustainability mindset and bleed out before they get started, so this is fantastic for ZKP.\n More ZKP volume - more PRVX purchased - more potential staking rewards.\n Because the rewards aren't simply paid by continuously printing more ZKP, the model has the potential to be considerably more sustainable than the typical \"APY farm\" that offers ridiculous yields until the token collapses.\n If roughly 70–90% of the current ~$80K market cap is staked, you're looking at approximately $56K–$72K worth of ZKP being staked.\n Using the 5% reward allocation as a simplified model, here's approximately what different levels of daily trading volume could represent:\n $1K/day - ~25–33% APR\n $2.5K/day - ~64–82% APR\n $5K/day - ~127–164% APR\n $10K/day - ~254–328% APR\n These are estimates, not guaranteed APYs. The actual number changes depending on how much ZKP is staked, ZKP's price, PRVX's price, trading volume, and the exact mechanics of the contracts.\n But this is the part I find fascinating:\n ZKP is currently doing only around $100/day in volume while Pulsechain is starting to pump else where.\n If the project remains stable and if Pulsechain keeps pumping then it's only a matter of time before this project starts climbing and then a potential massive pump could occur down the line.\n The current volume is nowhere near what the system could theoretically support.\n If ZKP ever developed even modest daily volume—say $5K–$10K/day—the potential reward generation could look dramatically different from today.\n And $10K/day isn't an enormous amount of volume in crypto.\n There's another piece I think is worth watching.\n The ecosystem isn't just ZKP.\n OMEGA has a mechanism that directs a portion of its trading volume toward burning ZKP.\n That means there are potentially two different forces working in ZKP's favor:\n Trading volume - PRVX rewards for stakers\n OMEGA activity - ZKP burns\n So theoretically:\n More ecosystem activity = more rewards + more ZKP burned.\n That's a much more interesting proposition to me than simply buying a random low-cap token and hoping somebody else comes along to pump it.\n It has a good base and the chart is primed, this is one of the biggest reasons I'm paying attention right now.\n ZKP went through a massive speculative run earlier this year, followed by a long decline.\n But after that decline, the chart has spent roughly the last month or two moving sideways around the current ~$0.00008 area. It very much looks like the massive selloff already happened.\n I'm not saying the bottom is guaranteed, but if this sideways movement eventually develops into a genuine accumulation range, the risk/reward could become very interesting at this market cap.\n The thing I'd want to see next is:\n Higher lows - increasing volume - breakout - successful retest.\n If that happens while PRVX continues performing well and the PulseChain ecosystem starts getting more attention, ZKP could potentially have a pretty interesting setup.\n ZKP doesn't need to reach some ridiculous $1 billion market cap for this to be extremely profitable.\n Even a move from:\n $80K - $500K\n would already be roughly a 6x\n $80K - $1M would be roughly a 13x\n $80K - $5M would be roughly a 63x\n Of course, the opposite is also true.\n At this liquidity level, ZKP could fall dramatically, and getting out of a large position could be difficult.\n But if PulseChain keeps doing well, the upside could be extremely asymmetric.\n I'm personally going to keep watching ZKP and PRVX.\n    submitted by    /u/Anonymous8242    to    r/CryptoMoonShots  \n [link]   [comments]",
+    "arabicDescription": "أعتقد أنني ربما وجدت واحدة من الأغطية الصغيرة الأكثر إثارة للاهتمام على PulseChain. لقد كنت أشاهد PulseChain مؤخرًا ورأيت الكثير من الرموز المميزة تضخ بعد انتهاء الفرصة قصيرة المدى بالفعل. لذلك كنت أبحث عن شيء في وقت مبكر، وليس ر",
+    "link": "https://www.reddit.com/r/CryptoMoonShots/comments/1vwdjjd/potential_moonshot_coin_zkp_zeroknoledgeprinter/",
+    "sourceName": "مجموعة ريديت (5)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-23T17:37:57.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/Market_Forecasts/comments/1vwb8nk/为什么中国日本和英国在减少他们的国债持有量国债回购对债券市场的影响是什么/",
-    "title": "为什么中国、日本和英国在减少他们的国债持有量——国债回购对债券市场的影响是什么",
-    "arabicTitle": "为什么中国、日本和英国在减少他们的国债持有量——国债回购对债券市场的影响是什么",
-    "description": "submitted by    /u/Wangchaiww  \n [link]   [comments]",
-    "arabicDescription": "submitted by /u/Wangchaiww [link] [comments]",
-    "link": "https://www.reddit.com/r/Market_Forecasts/comments/1vwb8nk/为什么中国日本和英国在减少他们的国债持有量国债回购对债券市场的影响是什么/",
-    "sourceName": "Market_Forecasts",
+    "id": "https://www.reddit.com/r/hot_stocks/comments/1vwbz3c/adbe_stock_analysis_aug_23/",
+    "title": "🔍 ADBE - Stock analysis Aug 23",
+    "arabicTitle": "🔍 ADBE - تحليل الأسهم 23 أغسطس",
+    "description": "submitted by    /u/Routine_Bat6675  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/Routine_Bat6675 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/hot_stocks/comments/1vwbz3c/adbe_stock_analysis_aug_23/",
+    "sourceName": "hot_stocks",
     "category": "الاسهم",
-    "pubDate": "2026-08-23T16:10:09.000Z",
+    "pubDate": "2026-08-23T16:37:50.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/bondmarket/comments/1vwb642/chat_do_you_see_no_conflict_of_interest/",
+    "title": "Chat, do you see “no conflict of interest”?",
+    "arabicTitle": "الدردشة، هل ترى \"لا يوجد تضارب في المصالح\"؟",
+    "description": "submitted by    /u/webabybears    to    r/bondmarket  \n [link]   [comments]",
+    "arabicDescription": "تم تقديمه بواسطة /u/webabybears إلى r/bondmarket [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/bondmarket/comments/1vwb642/chat_do_you_see_no_conflict_of_interest/",
+    "sourceName": "مجموعة ريديت (1)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-23T16:07:19.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/BoredPandaHQ/comments/1vw9fsh/so_damm_true/",
+    "title": "So Damm true ……",
+    "arabicTitle": "حتى الدام صحيح ……",
+    "description": "submitted by    /u/ComplexWrangler1346    to    r/BoredPandaHQ  \n [link]   [comments]",
+    "arabicDescription": "تم الإرسال بواسطة /u/ComplexWrangler1346 إلى r/BoredPandaHQ [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/BoredPandaHQ/comments/1vw9fsh/so_damm_true/",
+    "sourceName": "مجموعة ريديت (1)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-23T15:00:25.000Z",
     "media": {
       "image": null
     }
@@ -406,113 +448,57 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/CryptoCurrencyFIRE/comments/1vw6hv2/avoid_cryptocom_at_all_costs/",
-    "title": "AVOID Crypto.com AT ALL COSTS!",
-    "arabicTitle": "تجنب Crypto.com بأي ثمن!",
-    "description": "Hi\n I’ve spoken to customer support numerous times but can’t seem to get someone to look at my case properly. \n I recently had some phishing emails and unrecognised log in so I locked my account. After several attempts with live chat, I finally got someone to unlock my account and change my details over to my wife’s email. \n I can now log into the normal crypto app but cannot log in to the exchange app, which is where I hold all my funds. \n I was asked to do the following steps:\n Please try the following steps to check if the issue continues after each step:\n Clear your cache and cookies\n Update your browser\n Try using incognito mode\n Check the enabled extensions\n Try a different web browser\n Turn off ad blockers\n Increase or decrease the size of the browsing window.\n Try using the Exchange App or another device\n If the issue continues after trying all of the above, contact us again and provide us with the following:\n When did the issue first occur?\n Provide a screenshot/video recording of the issue\n When was the last time it worked?\n Which I have now done, but still don’t work. I’ve tried on 2 different phones and 2 different browsers on my computer. \n I’ve contacted their support 4 times and been ignored after a back and forth chat for 1-2 days a time. When they don’t know what to do, they just close the chat. \n I’ve now spoke to complaints for 1-2 days and the exact same thing. The complaints people at least said;\n “As per this, the reason for why you cannot access your account is due to the security process of securing your account.”\n But then ignored me again after this… \n So they basically told me my accounts still locked and ignored me 😂 it’s diabolical how bad it is. I have 30k trapped with them…\n Please can you let me know what the next steps are?\n    submitted by    /u/LowFrosting8602    to    r/CryptoCurrencyFIRE  \n [link]   [comments]",
-    "arabicDescription": "مرحبًا، لقد تحدثت إلى دعم العملاء عدة مرات ولكن يبدو أنني لا أتمكن من إقناع شخص ما بالنظر في حالتي بشكل صحيح. لقد تلقيت مؤخرًا بعض رسائل البريد الإلكتروني التصيدية وسجلت دخولًا غير معروف، لذا قمت بإغلاق حسابي. وبعد عدة محاولات من خلال الدردشة المباشرة، حصلت أخيرًا على بعض منها",
-    "link": "https://www.reddit.com/r/CryptoCurrencyFIRE/comments/1vw6hv2/avoid_cryptocom_at_all_costs/",
-    "sourceName": "مجموعة ريديت (7)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-23T12:56:01.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/Crypto_Currency_News/comments/1vw560w/bitcoins_attention_economy_is_broken/",
-    "title": "Bitcoin’s Attention Economy Is Broken.",
-    "arabicTitle": "اقتصاد الاهتمام في البيتكوين معطل.",
-    "description": "submitted by    /u/sylsau    to    r/Crypto_Currency_News  \n [link]   [comments]",
-    "arabicDescription": "تم الإرسال بواسطة /u/sylsau إلى r/Crypto_Currency_News [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/Crypto_Currency_News/comments/1vw560w/bitcoins_attention_economy_is_broken/",
-    "sourceName": "مجموعة ريديت (7)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-23T11:51:25.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/weedstocks/comments/1vw323z/daily_discussion_thread_august_23_2026/",
-    "title": "Daily Discussion Thread - August 23, 2026",
-    "arabicTitle": "موضوع المناقشة اليومية - 23 أغسطس 2026",
-    "description": "Welcome to the r/weedstocks Daily Discussion Thread!\n  \nNew to Reddit? Read This.\n New to r/weedstocks? Read This\n Want to start trading? Read This.\n Use the search bar before asking any question. All questions that can be answered by these resources may be removed.\n  \nLooking for research resources about which company to invest in? Please refer to our sidebar -- specifically our featured Investing References to help you in your research process.\n This thread is intended for the community to talk about whichever company with others in a casual manner. \n Unrelated discussion will always be removed (as per rule #3). Reddit is full of various other communities, and while we understand cross-discussion, unrelated topics should be discussed in their appropriate subreddits.\n Please remember proper reddiquette when participating in the conversation. As always, rule #1 \"be kind and respectful\" will be strictly enforced here to prevent any uncivil discussion and personal attacks.\n    submitted by    /u/AutoModerator    to    r/weedstocks  \n [link]   [comments]",
-    "arabicDescription": "مرحبًا بك في موضوع المناقشة اليومية لـ r/weedstocks! هل أنت جديد في رديت؟ اقرأ هذا. جديد على ص / الأعشاب؟ اقرأ هذا هل تريد أن تبدأ التداول؟ اقرأ هذا. استخدم شريط البحث قبل طرح أي سؤال. جميع الأسئلة التي يمكن أن تجيب عليها هذه الموارد ب",
-    "link": "https://www.reddit.com/r/weedstocks/comments/1vw323z/daily_discussion_thread_august_23_2026/",
-    "sourceName": "مجموعة ريديت (4)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-23T09:55:07.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/EMJX/comments/1vw2ll9/realistic_expections_of_news/",
-    "title": "Realistic expections of news",
-    "arabicTitle": "توقعات واقعية للأخبار",
-    "description": "I've been thinking about this for a while. Obviously as a business they can't just hype and pump the stock. Eric has said he can't release certain information. \n So what can they release realistically that will increase the price other than official filings and earnings releases? \n Is there anything crypto related that they could release in the near term? \n Can they even announce capital investment with EMJX, or is that restricted to quarterly filings?\n    submitted by    /u/Famous-Recognition-4    to    r/EMJX  \n [link]   [comments]",
-    "arabicDescription": "لقد كنت أفكر في هذا لفترة من الوقت. من الواضح أنهم كعمل تجاري لا يمكنهم مجرد الضجيج وضخ الأسهم. قال إريك إنه لا يستطيع نشر معلومات معينة. إذن ما الذي يمكنهم إطلاقه بشكل واقعي من شأنه أن يزيد السعر غير الرسمي",
-    "link": "https://www.reddit.com/r/EMJX/comments/1vw2ll9/realistic_expections_of_news/",
-    "sourceName": "مجموعة ريديت (4)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-23T09:28:17.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/wallstreetbets2/comments/1vvpwl2/daily_gains_prayer_turned_into_a_song/",
-    "title": "Daily gains prayer turned into a song",
-    "arabicTitle": "تحولت صلاة المكاسب اليومية إلى أغنية",
-    "description": "Our father, who art in heaven, hallow be thy gains. \n Thy calls come, they will be done, on Earth as it is in heaven. \n Give us this day and our daily gains, and forgive those who pumped with us. \n Lead us away from short sellers and deliver us from evil. \n Amen\n    submitted by    /u/OGPeakyblinders    to    r/wallstreetbets2  \n [link]   [comments]",
-    "arabicDescription": "أبانا الذي في السموات، ليتقدس مكاسبك. دعواتك تأتي، ستتم، على الأرض كما في السماء. أعطنا هذا اليوم ومكاسبنا اليومية، واغفر لمن ضخ معنا. أبعدنا عن الباعة القصيرين ونجنا من الشرير.",
-    "link": "https://www.reddit.com/r/wallstreetbets2/comments/1vvpwl2/daily_gains_prayer_turned_into_a_song/",
-    "sourceName": "مجموعة ريديت (4)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-22T22:29:37.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/nanocurrency/comments/1vvfwiz/update_on_ӿchat_the_nanopowered_x_public_beta_is/",
-    "title": "Update on ӾChat (the Nano-powered X): public beta is live — emoji reactions, multi-image posts, rich articles, and it runs in your browser now",
-    "arabicTitle": "تحديث على Chat (X الذي يعمل بتقنية Nano): أصبح الإصدار التجريبي العام مباشرًا - تفاعلات الرموز التعبيرية، ومنشورات متعددة الصور، ومقالات غنية، ويتم تشغيله في متصفحك الآن",
-    "description": "Quick update for everyone who saw my earlier posts about **ӾChat** — the censorship-free X/Twitter built on Nano (your account *is* a keypair, posts are signed events on plural relays, and the app finds those relays by **scanning the XNO ledger** — no hardcoded server). Thanks to everyone who tried it and gave feedback last time; a lot of it went straight into this release.\n **Big news: it's now in public beta.** 🎉 And you can try the whole thing in your browser — no install:\n 👉 https://xchat-alpha-node.fly.dev/chat/\n **What's shipped since my last post**\n - 😀 **Emoji reactions on posts** — react with 👍❤️😂😮😢🙏, tap to change or remove.\n - 🖼️ **Multi-image posts** — up to 4 photos, X-style grid + a swipeable full-screen gallery.\n - 📝 **Rich long-form articles** for channels — headings, tables, callouts, alignment, colour — rendered as native widgets (no JavaScript, no remote fetches, so reading one can't leak your IP).\n - ✏️ **Edit & delete** posts and DMs; 🔒 **disappearing photos** in E2E DMs.\n - 🔗 **@-mentions, pinned posts, follower/following lists, trending, hidden words**, and a **Report** flow.\n - ↩️ **Undo a tip** you sent by mistake (before it settles on-chain).\n - 🌐 **A browser web client** at any node's `/chat` — the same app, no app store.\n - Plus a self-hosted **relay mesh** so someone behind NAT can run a relay with no third-party tunnel (there's a new whitepaper section on it).\n **Reminder of why it's on Nano:** the ledger is for *settlement, never transport or storage*. XNO is touched only to settle a tip or let a relay announce its address — both feeless. A billion posts cost zero ledger growth, and tips are real, non-custodial, signed on your phone.\n **Links**\n - 🌐 Try in browser: https://xchat-alpha-node.fly.dev/chat/\n - 📱 Android APK + checksum: https://xchat-alpha-node.fly.dev/\n - 💻 Source (all of it, open): https://github.com/stefanbx/xchat-alpha\n - 📄 Whitepaper (now with the relay-mesh section): https://github.com/stefanbx/xchat-alpha/blob/master/docs/WHITEPAPER.md\n **Still honest about the caveats** (it's a beta, on mainnet)\n - Small-scale for now: one hosted node + a couple of relays — expect rough edges.\n - **Back up your seed** — it's the only recovery. In a browser the seed lives in browser storage (weaker than the phone keystore), so treat a browser account as disposable and use the Android app for anything you care about.\n - No global search / recommendation engine yet — reach is still your follow graph. That's next on the list.\n As always, feedback very welcome — especially from anyone who pokes at the on-ledger discovery (§4 of the whitepaper). What would you want to see before calling it 1.0?\n    submitted by    /u/PlatypusNo7411  \n [link]   [comments]",
-    "arabicDescription": "تحديث سريع لكل من شاهد منشوراتي السابقة حول الدردشة** — X/Twitter الخالي من الرقابة والمبني على Nano (حسابك *هو* زوج مفاتيح، والمشاركات عبارة عن أحداث موقعة على مرحلات متعددة، ويعثر التطبيق على تلك المرحلات عن طريق **مسح دفتر الأستاذ XNO** — n",
-    "link": "https://www.reddit.com/r/nanocurrency/comments/1vvfwiz/update_on_ӿchat_the_nanopowered_x_public_beta_is/",
-    "sourceName": "nanocurrency",
-    "category": "كريبتو",
-    "pubDate": "2026-08-22T15:50:10.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/Market_Forecasts/comments/1vvfsvp/week_in_review_three_retailers_beat_one_missed/",
-    "title": "Week in Review: Three retailers beat, one missed, and the one that missed was the one that mattered",
-    "arabicTitle": "Week in Review: Three retailers beat, one missed, and the one that missed was the one that mattered",
-    "description": "submitted by    /u/Tradeview_Markets  \n [link]   [comments]",
-    "arabicDescription": "submitted by /u/Tradeview_Markets [link] [comments]",
-    "link": "https://www.reddit.com/r/Market_Forecasts/comments/1vvfsvp/week_in_review_three_retailers_beat_one_missed/",
-    "sourceName": "Market_Forecasts",
+    "id": "https://www.reddit.com/r/hot_stocks/comments/1vw1zdf/lly_stock_analysis_aug_23/",
+    "title": "🔍 LLY - Stock analysis Aug 23",
+    "arabicTitle": "🔍 LLY - تحليل الأسهم 23 أغسطس",
+    "description": "submitted by    /u/Routine_Bat6675  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/Routine_Bat6675 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/hot_stocks/comments/1vw1zdf/lly_stock_analysis_aug_23/",
+    "sourceName": "hot_stocks",
     "category": "الاسهم",
-    "pubDate": "2026-08-22T15:46:06.000Z",
+    "pubDate": "2026-08-23T08:52:15.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/Market_Forecasts/comments/1vvbxkr/oil_is_back_above_90_gold_broke_4600_and_the_ai/",
-    "title": "Oil is back above $90, gold broke $4,600, and the AI trade finally met the bond market",
-    "arabicTitle": "Oil is back above $90, gold broke $4,600, and the AI trade finally met the bond market",
-    "description": "submitted by    /u/Curious_Otter_145  \n [link]   [comments]",
-    "arabicDescription": "submitted by /u/Curious_Otter_145 [link] [comments]",
-    "link": "https://www.reddit.com/r/Market_Forecasts/comments/1vvbxkr/oil_is_back_above_90_gold_broke_4600_and_the_ai/",
-    "sourceName": "Market_Forecasts",
+    "id": "https://www.reddit.com/r/hot_stocks/comments/1vvqyj1/atlassian_nasdaq_team_great_fundamentals_but_the/",
+    "title": "Atlassian (NASDAQ: TEAM) : Great Fundamentals — But the Chart Flashing \"Overbought) in the Near Term",
+    "arabicTitle": "Atlassian (NASDAQ: TEAM): أساسيات رائعة - لكن الرسم البياني يومض \"في منطقة ذروة الشراء\" على المدى القريب",
+    "description": "submitted by    /u/BuenoMuch  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/BuenoMuch [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/hot_stocks/comments/1vvqyj1/atlassian_nasdaq_team_great_fundamentals_but_the/",
+    "sourceName": "hot_stocks",
     "category": "الاسهم",
-    "pubDate": "2026-08-22T13:04:36.000Z",
+    "pubDate": "2026-08-22T23:16:32.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/hot_stocks/comments/1vvh570/hood_stock_analysis_aug_22/",
+    "title": "🔍 HOOD - Stock analysis Aug 22",
+    "arabicTitle": "🔍 هود - تحليل الأسهم 22 أغسطس",
+    "description": "submitted by    /u/Routine_Bat6675  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/Routine_Bat6675 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/hot_stocks/comments/1vvh570/hood_stock_analysis_aug_22/",
+    "sourceName": "hot_stocks",
+    "category": "الاسهم",
+    "pubDate": "2026-08-22T16:39:17.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/hot_stocks/comments/1vve07x/reddit_is_arguing_about_tesla_again_273_mentions/",
+    "title": "Reddit is arguing about Tesla again: 273 mentions today, against 102 yesterday",
+    "arabicTitle": "يتجادل Reddit حول Tesla مرة أخرى: 273 إشارة اليوم، مقابل 102 بالأمس",
+    "description": "submitted by    /u/Reasonable-Hold-1079  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/Reasonable-Hold-1079 [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/hot_stocks/comments/1vve07x/reddit_is_arguing_about_tesla_again_273_mentions/",
+    "sourceName": "hot_stocks",
+    "category": "الاسهم",
+    "pubDate": "2026-08-22T14:33:06.000Z",
     "media": {
       "image": null
     }
@@ -532,29 +518,85 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/Market_Forecasts/comments/1vv720m/pce_gdp_and_jackson_hole_set_up_a_big_macro_week/",
-    "title": "PCE, GDP and Jackson Hole Set Up a Big Macro Week",
-    "arabicTitle": "PCE, GDP and Jackson Hole Set Up a Big Macro Week",
-    "description": "submitted by    /u/DukascopyBank  \n [link]   [comments]",
-    "arabicDescription": "submitted by /u/DukascopyBank [link] [comments]",
-    "link": "https://www.reddit.com/r/Market_Forecasts/comments/1vv720m/pce_gdp_and_jackson_hole_set_up_a_big_macro_week/",
-    "sourceName": "Market_Forecasts",
+    "id": "https://www.reddit.com/r/hot_stocks/comments/1vvb3ml/top_daily_stocks_aug_22/",
+    "title": "🚨 TOP DAILY STOCKS - Aug 22",
+    "arabicTitle": "🚨 أعلى الأسهم اليومية - 22 أغسطس",
+    "description": "submitted by    /u/Routine_Bat6675  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/Routine_Bat6675 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/hot_stocks/comments/1vvb3ml/top_daily_stocks_aug_22/",
+    "sourceName": "hot_stocks",
     "category": "الاسهم",
-    "pubDate": "2026-08-22T08:46:44.000Z",
+    "pubDate": "2026-08-22T12:25:42.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/nanocurrency/comments/1vv1ima/nano_coin_push_anyone_in/",
-    "title": "Nano Coin Push: Anyone In? 🚀",
-    "arabicTitle": "دفع عملة النانو: هل يوجد أحد؟ 🚀",
-    "description": "Looking to Join a Nano Community Push? 🚀\n I’m planning to participate in a community-driven effort to increase visibility and adoption of Nano (XNO), with a long-term target of $250.\n 💰 Contribution: $99\n 🎯 Target: Nano 250\n 🤝 Goal: Coordinate with others who are independently interested in supporting Nano and increasing awareness.\n If anyone is already planning something similar, please let me know. I’d be happy to join and coordinate with the community.\n No pressure at all—just looking to connect with others who share the same interest in Nano. 💚\n Nano donation address:\n nano_39g7bbdxbmitmgykrcid6i8zd45ppyooqueb4zgoiykuxqw9fb61dq989rt3\n Please do your own research and only contribute what you’re comfortable with.\n #Nano #XNO #NanoCurrency #Crypto #Cryptocurrency\n    submitted by    /u/Impressive-Elk1146  \n [link]   [comments]",
-    "arabicDescription": "هل تتطلع إلى الانضمام إلى مجتمع Nano؟ 🚀 أخطط للمشاركة في جهد يحركه المجتمع لزيادة ظهور واعتماد Nano (XNO)، بهدف طويل المدى قدره 250 دولارًا. 💰 المساهمة: 99 دولارًا 🎯 الهدف: نانو 250 🤝 الهدف: التنسيق مع o",
-    "link": "https://www.reddit.com/r/nanocurrency/comments/1vv1ima/nano_coin_push_anyone_in/",
-    "sourceName": "nanocurrency",
-    "category": "كريبتو",
-    "pubDate": "2026-08-22T03:40:48.000Z",
+    "id": "https://www.reddit.com/r/hot_stocks/comments/1vv7xnl/pltr_stock_analysis_aug_22/",
+    "title": "🔍 PLTR - Stock analysis Aug 22",
+    "arabicTitle": "🔍 PLTR - تحليل الأسهم 22 أغسطس",
+    "description": "submitted by    /u/Routine_Bat6675  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/Routine_Bat6675 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/hot_stocks/comments/1vv7xnl/pltr_stock_analysis_aug_22/",
+    "sourceName": "hot_stocks",
+    "category": "الاسهم",
+    "pubDate": "2026-08-22T09:38:19.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/hot_stocks/comments/1vuxosw/nasdaq_cosm_micro_cap_ticker_on_watch_with_news/",
+    "title": "Nasdaq: COSM micro cap ticker on watch with news and active buyback!",
+    "arabicTitle": "ناسداك: مؤشر COSM الصغير تحت المراقبة مع الأخبار وإعادة الشراء النشطة!",
+    "description": "submitted by    /u/MrFaUsT7  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/MrFaUsT7 [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/hot_stocks/comments/1vuxosw/nasdaq_cosm_micro_cap_ticker_on_watch_with_news/",
+    "sourceName": "hot_stocks",
+    "category": "الاسهم",
+    "pubDate": "2026-08-22T00:37:19.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/hot_stocks/comments/1vut5vc/adp_stock_analysis_aug_21/",
+    "title": "🔍 ADP - Stock analysis Aug 21",
+    "arabicTitle": "🔍 ADP - تحليل الأسهم 21 أغسطس",
+    "description": "submitted by    /u/Routine_Bat6675  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/Routine_Bat6675 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/hot_stocks/comments/1vut5vc/adp_stock_analysis_aug_21/",
+    "sourceName": "hot_stocks",
+    "category": "الاسهم",
+    "pubDate": "2026-08-21T21:25:46.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vur68f/treasury_secretary_bessent_says_we_can_grow_our/",
+    "title": "Treasury Secretary Bessent says \"we can grow our way out\" of $40 trillion US national debt with tariffs and economic growth.",
+    "arabicTitle": "يقول وزير الخزانة بيسنت: \"يمكننا أن نخرج طريقنا للخروج\" من الدين القومي الأمريكي البالغ 40 تريليون دولار من خلال التعريفات الجمركية والنمو الاقتصادي.",
+    "description": "submitted by    /u/NecessaryGrowth2  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/NecessaryGrowth2 [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vur68f/treasury_secretary_bessent_says_we_can_grow_our/",
+    "sourceName": "MarketPulseReport",
+    "category": "الاسهم",
+    "pubDate": "2026-08-21T20:08:20.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/Junior_Stocks/comments/1vumtye/why_the_next_uranium_market_squeeze_is_closer/",
+    "title": "Why the Next Uranium Market Squeeze Is Closer Than Wall Street Thinks",
+    "arabicTitle": "لماذا يعتبر الضغط القادم على سوق اليورانيوم أقرب مما تعتقد وول ستريت؟",
+    "description": "Original Article: https://www.juniorstocks.com/why-the-next-uranium-market-squeeze-is-closer-than-wall-street-thinks\n Financial markets have a knack for mistaking temporary quiet for structural calm.\n While generalist investors obsess over daily tech swings or oil inventory statistics, the global nuclear fuel supply chain is quietly coiling like a high-tension spring.\n With uranium spot prices pressing against key resistance near $90 per pound, an intriguing mechanical disconnect has settled over the market: the primary physical buyer on paper is sound asleep, creating a setup that could surprise unprepared traders.\n That mechanism belongs to the Sprott Physical Uranium Trust (TSX: U.UN | OTCQX: SRUUF), an entity designed to accumulate physical yellowcake and hold it in perpetuity. Under its governing charter, the fund cannot issue new equity via its At-The-Market facility whenever its market price trades at a discount to Net Asset Value. When equity sentiment drags and the trust trades at a discount, its buying engine temporarily shuts off. The physical spot market is left entirely to bilateral transactions between utilities, intermediaries, and producers, removing what is historically the market's most aggressive marginal bidder.\n As John Ciampaglia, Chief Executive Officer of fund manager Sprott Inc. (NYSE: SII / TSX: SII), has observed, short-term market noise routinely pushes retail investors to the sidelines while the underlying structural deficit continues to build. The trust does not engage in speculative timing or market calls, but its transition from a discount back to a net asset value premium historically serves as an explosive financial catalyst. Once the discount closes, the fund reactivates its capital-raising machinery to mop up secondary physical inventory in a market that is already illiquid.\n While short-term traders focus on daily spot price movements, reactor operators operate on decade-long horizons. Grant Isaac, President and Chief Operating Officer of Cameco Corporation (NYSE: CCJ | TSX: CCO), emphasizes that power utilities rarely rely on the spot market for operational survival. Instead, the true price discovery occurs in long-term bilateral contract negotiations away from public order books. With utilities quietly locking in future deliverable supply at triple-digit pricing to ensure energy security, the spot market represents only a small window into broader industry realities.\n This divergence between physical demand and equity valuation creates a high-conviction setup for sector insiders. Brandon Munro, Executive Chairman of Bannerman Energy Ltd. (ASX: BMN), notes that when physical prices grind upward independent of equity flows, the eventual return of institutional capital forces a rapid repricing. Once public funds catch up and restore physical trusts to a premium, renewed spot purchasing frays utility nerves and puts immediate pressure on producers needing spot material for contract fulfillment.\n On the supply side, major global producers such as NAC Kazatomprom JSC (LSE: KAP | AIX: KAP) continue to navigate operational hurdles and chemical supply chain shortages, limiting their ability to rapidly scale production. Guy Keller, Portfolio Manager at Tribeca Investment Partners, points out that discretionary spot sellers routinely run out of physical material once prices break through psychological resistance thresholds. When secondary float dries up and institutional vehicles re-enter the market with active capital facilities, the resulting supply squeeze can unfold with remarkable speed.\n Sources\n  \nSprott Asset Management Fund Analysis and Executive Statements from John Ciampaglia, Sprott Inc. (NYSE: SII / TSX: SII)\n Cameco Corporation Executive Commentary and Market Contracting Reports from Grant Isaac, Cameco Corporation (NYSE: CCJ / TSX: CCO)\n Bannerman Energy Corporate Market Insights from Brandon Munro, Bannerman Energy Ltd. (ASX: BMN)\n Tribeca Investment Partners Resource Fund Analysis from Guy Keller, Tribeca Investment Partners\n  \nDisclaimer\n Neither the author of this article nor JuniorStocks holds equity, stock options, or any other financial positions in Sprott Physical Uranium Trust (TSX: U.UN; OTCQX: SRUUF), Sprott Inc. (NYSE: SII; TSX: SII), Cameco Corporation (NYSE: CCJ; TSX: CCO), Bannerman Energy Ltd. (ASX: BMN), NAC Kazatomprom JSC (LSE: KAP; AIX: KAP), or any other companies mentioned in this publication. This content is published by JuniorStocks strictly for informational purposes, was prepared independently without company compensation, and utilized AI assistance for text editing, formatting, and generating accompanying media. While global nuclear energy adoption and the uranium market represent a compelling frontier in the broader energy transition, this article does not constitute investment or financial advice. Investors are strongly advised to conduct their own thorough, independent due diligence and consult with a qualified financial professional before making any investment decisions.\n    submitted by    /u/JuniorStocksCom  \n [link]   [comments]",
+    "arabicDescription": "المقال الأصلي: https://www.juniorstocks.com/why-the-next-uranium-market-squeeze-is- Closer-than-wall-street-thinks تتمتع الأسواق المالية بموهبة الخلط بين الهدوء المؤقت والهدوء الهيكلي. في حين أن المستثمرين العموميين مهووسون بالتكنولوجيا اليومية",
+    "link": "https://www.reddit.com/r/Junior_Stocks/comments/1vumtye/why_the_next_uranium_market_squeeze_is_closer/",
+    "sourceName": "Junior_Stocks",
+    "category": "الاسهم",
+    "pubDate": "2026-08-21T17:28:45.000Z",
     "media": {
       "image": null
     }
@@ -602,6 +644,20 @@
     }
   },
   {
+    "id": "https://www.reddit.com/r/Junior_Stocks/comments/1vukl6v/drilling_underway_at_greenheart_golds_tosso_creek/",
+    "title": "Drilling Underway at Greenheart Gold's Tosso Creek Project After 13% Market Surge",
+    "arabicTitle": "تجري أعمال الحفر في مشروع Tosso Creek التابع لشركة Greenheart Gold بعد ارتفاع السوق بنسبة 13%",
+    "description": "Original Article: https://www.juniorstocks.com/drilling-underway-at-greenheart-gold-s-tosso-creek-project-after-13-market-surge\n Suriname’s Guiana Shield is proving once again that scraping the surface is merely the prologue. \n Greenheart Gold Inc. (TSXV: GHRT | OTCQX: GHRTF) has officially mobilized rigs for an initial 2,000-meter diamond drilling program at its flagship Tosso Creek Project, sparking immediate market interest as shares surged 13.33% on heightened volume.\n The campaign marks a critical pivot from surface trenching to testing whether the broad zones of surface gold mineralization extend into deep-seated continuity.\n The core rig is currently turning at the central-western Walaba target before swinging east to the newly identified Swalanga target, located roughly one kilometer away. Recent trenching set the stage for this program with standout surface intercepts, including 56.0 meters grading 0.97 grams per tonne (g/t) gold at Swalanga. Over at Walaba, trenching uncovered 7.0 meters at 4.57 g/t gold, including a higher-grade shoot of 4.0 meters at 7.89 g/t gold, alongside a broader interval of 52.0 meters grading 0.77 g/t gold. These high-grade pockets embedded within wider mineralized corridors suggest strong structural preparation underground.\n Geologically, Tosso Creek sits along the southern end of the Paramaka Formation, a regionally extensive metavolcanic and metasedimentary sequence renowned for hosting major gold systems, including the nearby Sara Kreek gold fields. The team guiding this campaign is equally familiar with striking gold in the region. Led by President and CEO Justin van der Toorn, Greenheart's executive crew consists of former exploration leaders from Reunion Gold, the team credited with discovering the multi-million-ounce Oko West deposit in neighboring Guyana.\n While the rigs punch down into Walaba and Swalanga, exploratory work across the broader property continues to feed the pipeline.\n Early-stage trenching at the Maconia target to the north has wrapped up with assay results pending, while mapping continues at the Sevil target along a prospective contact zone between granitoid intrusions and volcano-sedimentary rocks.\n For investors eyeing organic discovery stories, Greenheart Gold Inc. (TSXV: GHRT) is providing a textbook display of methodical exploration, turning surface geochemical anomalies into high-priority drill targets.\n Source\n Newsfile Corp press release, issued August 20, 2026.\n Disclaimer\n Neither the author of this article nor JuniorStocks holds equity, stock options, or any other financial positions in Greenheart Gold Inc. (TSXV: GHRT; OTCQX: GHRTF) or any other companies mentioned in this publication. This content is published by JuniorStocks strictly for informational purposes, was prepared independently without company compensation, and utilized AI assistance for text editing, formatting, and generating accompanying media. While gold exploration in Suriname’s Guiana Shield represents a compelling frontier in the resource sector, this article does not constitute investment or financial advice. Investors are strongly advised to conduct their own thorough, independent due diligence and consult with a qualified financial professional before making any investment decisions.\n    submitted by    /u/JuniorStocksCom  \n [link]   [comments]",
+    "arabicDescription": "المقال الأصلي: https://www.juniorstocks.com/drilling-underway-at-greenheart-gold-s-tosso-creek-project-after-13-market-surge يثبت فريق Guiana Shield في سورينام مرة أخرى أن كشط السطح هو مجرد مقدمة. شركة جرين هارت جولد (TSX",
+    "link": "https://www.reddit.com/r/Junior_Stocks/comments/1vukl6v/drilling_underway_at_greenheart_golds_tosso_creek/",
+    "sourceName": "Junior_Stocks",
+    "category": "الاسهم",
+    "pubDate": "2026-08-21T16:07:11.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
     "id": "https://theonion.com/?p=1851705923",
     "title": "White House Doctor Claims President Has Always Been Face Drawn Onto Cantaloupe",
     "arabicTitle": "طبيب البيت الأبيض يدعي أن الرئيس كان دائمًا منجذبًا إلى الشمام",
@@ -616,15 +672,15 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/Market_Forecasts/comments/1vuikcq/silvers_bull_case_is_strong/",
-    "title": "Silver's Bull Case Is Strong",
-    "arabicTitle": "Silver's Bull Case Is Strong",
-    "description": "Bessent's attempt to calm bond markets boosted silver. Traders prepare for the printing press by buying precious metals and crypto.\n Treasury yields are rising despite Treasury's effort to push them lower, but silver traders do not care. Instead, they focus on the long-term bullish case for silver.\n Supported by Treasury's actions, silver has a good chance to climb above $72 and move towards $83.\n    submitted by    /u/GothamsTrader  \n [link]   [comments]",
-    "arabicDescription": "Bessent's attempt to calm bond markets boosted silver. Traders prepare for the printing press by buying precious metals and crypto. Treasury yields are rising despite Treasury's effort to push them lower, but silver traders do not care. Instead, they",
-    "link": "https://www.reddit.com/r/Market_Forecasts/comments/1vuikcq/silvers_bull_case_is_strong/",
-    "sourceName": "Market_Forecasts",
+    "id": "https://www.reddit.com/r/Junior_Stocks/comments/1vuk8ja/target_2030_how_the_white_house_plans_to_turn/",
+    "title": "Target 2030: How the White House Plans to Turn American Space Launching into a Daily Routine",
+    "arabicTitle": "الهدف 2030: كيف يخطط البيت الأبيض لتحويل إطلاق الفضاء الأمريكي إلى روتين يومي",
+    "description": "Original Article: https://www.juniorstocks.com/target-2030-how-the-white-house-plans-to-turn-american-space-launching-into-a-daily-routine\n Washington is officially putting the pedal to the metal in the commercial space race. President Donald J. Trump signed a National Security Presidential Memorandum establishing an ambitious national goal to achieve more than 1,000 commercial space launches and reentries from American soil every year by 2030. The executive action overhauls federal space policy by repealing outdated transportation guidelines in favor of a commercial-first framework designed to eliminate regulatory red tape and unleash private aerospace capacity.\n Reaching four-figure annual launch numbers in under five years represents a massive operational leap from the roughly 180 launches conducted nationwide in 2025. To close that gap, federal agencies under the coordination of White House Office of Science and Technology Policy Director Michael Kratsios are tasked with systematically clearing administrative bottlenecks. The directive orders the Department of Transportation and the Federal Aviation Administration to accelerate environmental reviews, carve out priority airspace corridors for launch operations, and modernize range scheduling systems. Furthermore, the Secretaries of Transportation, Interior, War, and the NASA Administrator must identify new federal lands suitable for commercial spaceports within 90 days.\n Crucially for private aerospace executives, the directive explicitly prohibits government entities from developing or operating space transportation systems that compete with domestic commercial providers unless required by public safety or national security. White House Office of Science and Technology Policy Director Michael Kratsios noted that the commercial-first policy directly positions the nation to lead the next era of discovery while supporting Moon base developments by 2030. NASA Administrator Jared Isaacman welcomed the directive, emphasizing that modernizing commercial access to space aligns federal exploration targets directly with scalable private infrastructure.\n This aggressive shift in policy creates significant momentum across the launch and satellite supply chain. Industry powerhouse SpaceX stands at the center of this launch expansion, accompanied by responsive launch providers Rocket Lab USA, Inc. (NASDAQ: RKLB) and Firefly Aerospace Inc. (NASDAQ: FLY), both of which are expanding medium-lift operational cadences. Lunar lander developer Intuitive Machines, Inc. (NASDAQ: LUNR) is poised to benefit as NASA relies more heavily on commercial payload services for cislunar missions.\n Beyond rocket builders, the policy opens massive throughput for orbital infrastructure and satellite constellation operators. Space hardware makers such as Redwire Corporation (NYSE: RDW) and commercial space station builder Voyager Technologies, Inc. (NYSE: VOYG) are positioned to supply essential power, docking, and manufacturing components. Simultaneously, high-density satellite operators including direct-to-cell pioneer AST SpaceMobile, Inc. (NASDAQ: ASTS), alongside Earth observation firms Planet Labs PBC (NYSE: PL) and BlackSky Technology Inc. (NYSE: BKSY), stand to gain from lower launch bottlenecks and faster fleet replenishment cycles.\n By designating private launch pads as critical national economic infrastructure, the administration is making a definitive bet that free-market competition will secure long-term orbital dominance. If regulatory agencies can match the pace of private industry, the roar of rocket engines along American coastlines may soon become a daily routine.\n Sources\n  \nThe White House, \"Fact Sheet: President Donald J. Trump Launches the Golden Age of Space Transportation,\" August 20, 2026. https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-launches-the-golden-age-of-space-transportation/\n White House Office of Science and Technology Policy (OSTP), Public Statements by OSTP Director Michael Kratsios and NASA Administrator Jared Isaacman on Space Transportation Policy and Executive Directives.\n U.S. Department of Transportation, Federal Aviation Administration, and NASA Joint Policy Guidelines on Commercial Space Integration and Range Scheduling Modernization.\n  \nDisclaimer\n Neither the author of this article nor JuniorStocks holds equity, stock options, or any other financial positions in Rocket Lab USA, Inc. (NASDAQ: RKLB), Firefly Aerospace Inc. (NASDAQ: FLY), Intuitive Machines, Inc. (NASDAQ: LUNR), Redwire Corporation (NYSE: RDW), Voyager Technologies, Inc. (NYSE: VOYG), AST SpaceMobile, Inc. (NASDAQ: ASTS), Planet Labs PBC (NYSE: PL), BlackSky Technology Inc. (NYSE: BKSY), SpaceX, or any other companies mentioned in this publication. This content is published by JuniorStocks strictly for informational purposes, was prepared independently without company compensation, and utilized AI assistance for research, text editing, and formatting. While the expansion of commercial space transportation and domestic orbital infrastructure represents a compelling secular growth market, this article does not constitute investment or financial advice. Investors are strongly advised to conduct their own thorough, independent due diligence and consult with a qualified financial professional before making any investment decisions.\n    submitted by    /u/JuniorStocksCom  \n [link]   [comments]",
+    "arabicDescription": "المقال الأصلي: https://www.juniorstocks.com/target-2030-how-the-white-house-plans-to-turn-american-space-launching-into-a-daily-routine واشنطن تضع الدواسة رسميًا في سباق الفضاء التجاري. الرئيس دونالد جيه ترامب",
+    "link": "https://www.reddit.com/r/Junior_Stocks/comments/1vuk8ja/target_2030_how_the_white_house_plans_to_turn/",
+    "sourceName": "Junior_Stocks",
     "category": "الاسهم",
-    "pubDate": "2026-08-21T14:53:08.000Z",
+    "pubDate": "2026-08-21T15:54:20.000Z",
     "media": {
       "image": null
     }
@@ -672,34 +728,6 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/Market_Forecasts/comments/1vuevlm/markets/",
-    "title": "MARKETS",
-    "arabicTitle": "MARKETS",
-    "description": "📉 MARKETS: Global stocks are heading for their biggest weekly decline since mid-July as high oil prices and rising bond yields pressure investors.\n    submitted by    /u/newsworldlcd  \n [link]   [comments]",
-    "arabicDescription": "📉 MARKETS: Global stocks are heading for their biggest weekly decline since mid-July as high oil prices and rising bond yields pressure investors. submitted by /u/newsworldlcd [link] [comments]",
-    "link": "https://www.reddit.com/r/Market_Forecasts/comments/1vuevlm/markets/",
-    "sourceName": "Market_Forecasts",
-    "category": "الاسهم",
-    "pubDate": "2026-08-21T12:23:16.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/Market_Forecasts/comments/1vubp6y/dxy_into_the_70s_with_haste/",
-    "title": "DXY into the 70's with haste.",
-    "arabicTitle": "DXY into the 70's with haste.",
-    "description": "submitted by    /u/marciesherrie  \n [link]   [comments]",
-    "arabicDescription": "submitted by /u/marciesherrie [link] [comments]",
-    "link": "https://www.reddit.com/r/Market_Forecasts/comments/1vubp6y/dxy_into_the_70s_with_haste/",
-    "sourceName": "Market_Forecasts",
-    "category": "الاسهم",
-    "pubDate": "2026-08-21T09:44:35.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
     "id": "https://theonion.com/?p=1851706142",
     "title": "Boy Gets Nice Long Look At Small Of Father’s Back While He Picks Up Ping-Pong Ball",
     "arabicTitle": "الصبي يلقي نظرة طويلة لطيفة على ظهر والده بينما يلتقط كرة بينج بونج",
@@ -714,127 +742,239 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/Market_Forecasts/comments/1vtpifo/credit_downgrade_of_us_goverment/",
-    "title": "Credit downgrade of us goverment",
-    "arabicTitle": "Credit downgrade of us goverment",
-    "description": "It’s going to happen within 2 months. Today’s bond spike is the guarantor. Printing your way out of this is not possible. The rearranging of deck chairs on the titanic will not work. moody’s and s&p are not going to sit on their hands long. Expect treasuries to really run out of control when the downgrade happens.\n    submitted by    /u/ih8cakeday  \n [link]   [comments]",
-    "arabicDescription": "It’s going to happen within 2 months. Today’s bond spike is the guarantor. Printing your way out of this is not possible. The rearranging of deck chairs on the titanic will not work. moody’s and s&p are not going to sit on their hands long. Expect tr",
-    "link": "https://www.reddit.com/r/Market_Forecasts/comments/1vtpifo/credit_downgrade_of_us_goverment/",
-    "sourceName": "Market_Forecasts",
+    "id": "https://www.reddit.com/r/Junior_Stocks/comments/1vtp7ns/trump_administration_cuts_a_500m_check_to/",
+    "title": "Trump Administration Cuts a $500M Check to Supercharge America’s Battery Minerals",
+    "arabicTitle": "إدارة ترامب تخفض شيكًا بقيمة 500 مليون دولار لتعزيز معادن البطاريات الأمريكية",
+    "description": "Original Article: https://www.juniorstocks.com/trump-administration-cuts-a-500-m-check-to-supercharge-america-s-battery-minerals\n Washington is placing a $500 million wager on the periodic table.\n The U.S. Department of Energy is cutting grant checks to seven domestic companies building critical lithium, cobalt, and next-generation battery projects. The move marks the latest push by the Trump administration to transform the nation into an energy and minerals superpower while loosening China’s tight grip on the processing market. Ongoing geopolitical strain, including the conflict with Iran, has injected fresh urgency into fortifying the defense industrial base and replenishing depleted weapons stockpiles.\n Selected from hundreds of applicants under the Battery Materials Processing and Battery Manufacturing programs, the awardees represent the highest-return opportunities across key areas of the supply chain, according to Energy Department assistant secretary Audrey Robertson. Taking center stage is Lilac Solutions, which landed $100 million to build a direct lithium extraction facility on Utah’s Great Salt Lake. Backed by German automaker BMW (ETR: BMW), Lilac Solutions aims to be online by 2028 with an annual output of 5,000 metric tons of lithium carbonate. The project joins earlier federal investments in domestic lithium developers like ioneer (NASDAQ: IONR), Standard Lithium (NYSE American: SLI), and Lithium Americas (NYSE: LAC).\n Cobalt is getting its own domestic lifeline as Jervois secures $100 million to construct the nation’s sole refining facility in Idaho. Despite being taken private following market turbulence, Jervois remains vital for military hardware, defense electronics, and commercial batteries, with future potential to process deep-sea nodules. On the recycling front, Nth Cycle, backed by commodities trader Trafigura, snagged $100 million for a facility dedicated to processing mineral-rich battery scrap known as black mass. While the administration recently blocked exports of black mass to keep critical materials onshore, officials stress that building home-grown processing infrastructure is the real long-term objective.\n Rounding out the half-billion-dollar allocation are three $50 million grants for specialized component production. Princeton NuEnergy will expand cathode reprocessing, Arcanum Ventures is set to produce essential chemicals for battery electrolytes, and Coreshell Technologies is advancing silicon anodes to replace industry-standard graphite. Together, these capital injections aim to construct a fully domestic battery ecosystem from raw brine to recycled scrap.\n Source:\n Reuters | August 20, 2026\n Disclaimer\n Neither the author of this article nor JuniorStocks holds equity, stock options, or any other financial positions in Lilac Solutions, BMW (ETR: BMW), ioneer (NASDAQ: IONR), Standard Lithium (NYSE American: SLI), Lithium Americas (NYSE: LAC), Jervois, Nth Cycle, Trafigura, Princeton NuEnergy, Arcanum Ventures, Coreshell Technologies, or any other companies mentioned in this publication. This content is published by JuniorStocks strictly for informational purposes, was prepared independently without company compensation, and utilized AI assistance for text editing, formatting, and drafting. While domestic critical minerals and battery supply chain projects represent a compelling growth sector, this article does not constitute investment or financial advice. Investors are strongly advised to conduct their own thorough, independent due diligence and consult with a qualified financial professional before making any investment decisions.\n    submitted by    /u/JuniorStocksCom  \n [link]   [comments]",
+    "arabicDescription": "المقال الأصلي: https://www.juniorstocks.com/trump-administration-cuts-a-500-m-check-to-supercharge-america-s-battery-minerals تضع واشنطن رهانًا بقيمة 500 مليون دولار على الجدول الدوري. تقوم وزارة الطاقة الأمريكية بتخفيض شيكات المنح",
+    "link": "https://www.reddit.com/r/Junior_Stocks/comments/1vtp7ns/trump_administration_cuts_a_500m_check_to/",
+    "sourceName": "Junior_Stocks",
     "category": "الاسهم",
-    "pubDate": "2026-08-20T17:11:33.000Z",
+    "pubDate": "2026-08-20T17:00:44.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/nanocurrency/comments/1vt9pej/registro_de_desarrollo_actualización_de_nanflix/",
-    "title": "[Registro de desarrollo] Actualización de NanFlix MVP: ¡Cliente de torrents P2P WebTorrent completo con soporte para microacuerdos Nano ($XNO) y PWA! 🎬⚡",
-    "arabicTitle": "[سجل التطوير] تحديث NanFlix MVP: عميل تورنت P2P WebTorrent كامل مع دعم Nano ($XNO) واتفاقات PWA الدقيقة! 🎬⚡",
-    "description": "submitted by    /u/kasunakasuragi  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/kasunakasuragi [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/nanocurrency/comments/1vt9pej/registro_de_desarrollo_actualización_de_nanflix/",
-    "sourceName": "nanocurrency",
-    "category": "كريبتو",
-    "pubDate": "2026-08-20T04:47:46.000Z",
+    "id": "https://www.reddit.com/r/Junior_Stocks/comments/1vtokm6/equinox_gold_receives_key_blm_approval_for/",
+    "title": "Equinox Gold Receives Key BLM Approval for Nevada’s South Railroad Project",
+    "arabicTitle": "حصلت Equinox Gold على موافقة BLM الرئيسية لمشروع السكك الحديدية الجنوبية في نيفادا",
+    "description": "Original Article: https://www.juniorstocks.com/equinox-gold-receives-key-blm-approval-for-nevada-s-south-railroad-project\n Bureaucratic wheels rarely turn quickly, but when federal regulators cleared the runway for Nevada’s South Railroad project, Equinox Gold Corp. (TSX: EQX | NYSE American: EQX) officially signaled that its expansion engine is firing on all cylinders.\n The U.S. Bureau of Land Management issued a positive Record of Decision for the property under the federal FAST-41 framework, effectively wrapping up the environmental review process and kicking off early construction works.\n The regulatory greenlight unlocks the next key development phase for an open-pit heap-leach mine engineered to generate an average of 130,000 ounces of gold annually over its initial five years.\n Backed by a $395 million capital expenditure budget, the operation is aiming for its first gold pour in 2028. Equinox Gold President Jason Simpson highlighted that the Nevada asset serves as the first major organic step toward adding 800,000 annual ounces to the company's production profile.\n This permitting win lands just weeks after the miner finalized its transformative business combination with Orla Mining Ltd. (TSX: OLA | NYSE American: ORLA). The all-stock transaction forged an $18.5 billion enterprise, establishing the combined firm as Canada’s second-largest gold producer behind Agnico Eagle Mines Limited (TSX: AEM | NYSE: AEM). Operating six active mines across the Americas with an annual output of 1.1 million ounces, the platform commands the cash flow and operational balance sheet required to fund its project pipeline organically.\n The corporate roadmap from 1.1 million to nearly 1.9 million ounces now rests on methodical execution across North America.\n With South Railroad permitted and Valentine Phase 2 moving forward, regulatory attention shifts to California, where a Record of Decision for Castle Mountain is expected in December. Corporate momentum is matched by executive skin in the game: on August 12, founder and Chairman Emeritus Ross Beaty acquired 600,000 shares on the open market for roughly C$9.7 million, a multi-million-dollar vote of confidence that asset scale and permitting velocity will translate directly into market re-rating.\n Sources\n  \nGlobeNewswire, \"Equinox Gold Receives Positive Record of Decision for South Railroad\" (August 17, 2026)\n GlobeNewswire, \"Equinox Gold and Orla Mining Complete Business Combination, Creating North America's New Senior Gold Producer\" (July 31, 2026)\n Mining Frontier, \"Equinox Gold Wins Approval for South Railroad Project\" (August 17, 2026).\n  \nDisclaimer\n Neither the author of this article nor JuniorStocks holds equity, stock options, or any other financial positions in Equinox Gold Corp. (TSX: EQX; NYSE American: EQX), Orla Mining Ltd. (TSX: OLA; NYSE American: ORLA), Agnico Eagle Mines Limited (TSX: AEM; NYSE: AEM), or any other companies mentioned in this publication. This content is published by JuniorStocks strictly for informational purposes, was prepared independently without company compensation, and utilized AI assistance for text editing, formatting, and generating accompanying media. While gold sector consolidation and project permitting milestones represent compelling developments in the mining space, this article does not constitute investment or financial advice. Investors are strongly advised to conduct their own thorough, independent due diligence and consult with a qualified financial professional before making any investment decisions.\n    submitted by    /u/JuniorStocksCom  \n [link]   [comments]",
+    "arabicDescription": "المقال الأصلي: https://www.juniorstocks.com/equinox-gold-receives-key-blm-approval-for-nevada-s-south-railroad-project نادرًا ما تدور العجلات البيروقراطية بسرعة، ولكن عندما قام المنظمون الفيدراليون بتطهير المدرج لمشروع السكك الحديدية الجنوبية في نيفادا، Equ",
+    "link": "https://www.reddit.com/r/Junior_Stocks/comments/1vtokm6/equinox_gold_receives_key_blm_approval_for/",
+    "sourceName": "Junior_Stocks",
+    "category": "الاسهم",
+    "pubDate": "2026-08-20T16:37:42.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/nanocurrency/comments/1vre25m/public_review_draft_conventions_for_building/",
-    "title": "[public review] Draft conventions for building applications on top of Nano",
-    "arabicTitle": "[مراجعة عامة] مسودة اتفاقيات لبناء التطبيقات على رأس النانو",
-    "description": "I’ve been working on an effort to document open, practical conventions for building applications on top of Nano - covering what I think are \"missing puzzle pieces\" within the community, notes on payment integration, formalization of technical decisions made along the way,\n and I’m now opening the current drafts for public technical review:\n The OpenRai Initiative Standards (ORIS) repository\n Of the set of drafts so far, I personally think are most broadly useful are:\n ORIS-007 - Nano Application-Level Metadata, Correlation, and Signaling Patterns\n ORIS-008 - Reliable Nano Payment Integration\n ORIS-001 - Nano Off-chain Message Signing (NOMS)\n ORIS-006 - Nano CAIP Identifiers\n The repository also includes more specialized payment-interface and NanoNyms formalities...\n DISCLAIMER: These documents do not claim authority, and they do not become normative merely by being written down. They are open proposals for discussion and review, not official Nano protocol specifications.\n Even at this stage, formalizing these conventions has proved valuable in agentic AI development and design. It gives humans and agents a precise shared reference, exposes ambiguities early, and makes implementation decisions easier to review.\n I am particularly interested in feedback from other people who maintain wallets, SDKs, payment services, RPC providers, or other Nano applications:\n  \nDo they describe existing Nano behavior correctly?\n Are important edge cases missing?\n Where might two competent implementers interpret the text differently?\n Do you have some nagging itch you think ought to be considered for inclusion?\n  \nKeep buidling!@\n    submitted by    /u/cbrunnkvist  \n [link]   [comments]",
-    "arabicDescription": "لقد بذلت جهدًا لتوثيق اتفاقيات مفتوحة وعملية لبناء التطبيقات فوق Nano - والتي تغطي ما أعتقد أنه \"قطع اللغز المفقودة\" داخل المجتمع، وملاحظات حول تكامل الدفع، وإضفاء الطابع الرسمي على القرار الفني",
-    "link": "https://www.reddit.com/r/nanocurrency/comments/1vre25m/public_review_draft_conventions_for_building/",
-    "sourceName": "nanocurrency",
-    "category": "كريبتو",
-    "pubDate": "2026-08-18T03:42:22.000Z",
+    "id": "https://www.reddit.com/r/Junior_Stocks/comments/1vtmsxt/did_moderna_and_merck_just_change_the_future_of/",
+    "title": "Did Moderna and Merck Just Change the Future of Cancer Treatment Forever?",
+    "arabicTitle": "هل غيّرت شركتا موديرنا وميرك مستقبل علاج السرطان إلى الأبد؟",
+    "description": "Original Article: https://www.juniorstocks.com/did-moderna-and-merck-just-change-the-future-of-cancer-treatment-forever\n Science fiction officially lost another round to medical reality.\n Biotechnology pioneer Moderna Inc. (NASDAQ: MRNA) and pharmaceutical giant Merck & Co., Inc. (NYSE: MRK) just turned the speculative promise of personalized cancer vaccines into undeniable late-stage clinical proof.\n Topline results from their landmark Phase 3 INTerpath-001 trial demonstrated that intismeran autogene, an individualized mRNA neoantigen therapy custom-tailored to a patient's specific tumor DNA, significantly improved recurrence-free survival when combined with Keytruda.\n The readout marks a monumental breakthrough for oncology, representing the world's first successful Phase 3 trial for an individualized mRNA-based cancer treatment. Designed to instruct a patient's immune system to hunt down up to 34 unique mutational targets, intismeran paired with Keytruda met both its primary endpoint of recurrence-free survival and a key secondary endpoint of distant metastasis-free survival in patients with high-risk, resected stage IIB through IV melanoma. Chief Executive Officer Stéphane Bancel noted that turning an aspirational custom therapy into a clinical reality marks a pivotal paradigm shift for cancer care.\n Wall Street responded with immediate enthusiasm, sending shares of Moderna Inc. (NASDAQ: MRNA) surging as analysts rapidly re-evaluated the commercial potential of the company's broader mRNA pipeline. The late-stage win adds to a period of heightened market interest for the biopharma firm. Financial intelligence provider Quiver Quantitative previously highlighted political stock disclosures surrounding the company ahead of a unanimous advisory panel endorsement from federal regulators for mFLUSIVA, Moderna’s investigational mRNA flu vaccine for adults aged 50 and older.\n Looking ahead, Moderna Inc. (NASDAQ: MRNA) and Merck & Co., Inc. (NYSE: MRK) plan to present detailed trial data at an upcoming global medical congress while preparing regulatory submissions to seek accelerated approval. If granted, the combination could establish a new standard of care in adjuvant skin cancer treatment and unlock an expansive frontier for mRNA therapies across multiple solid tumor types.\n Sources\n  \nMerck and Moderna Phase 3 INTerpath-001 Trial Results, BioSpace\n Merck and Moderna Personalized Cancer Vaccine Phase 3 Data, Fierce Biotech\n MSD and Moderna Skin Cancer Vaccine Scores Historic Win, Pharmaphorum\n Moderna Financial Disclosures and Regulatory Tracking, Quiver Quantitative\n  \nDisclaimer\n Neither the author of this article nor JuniorStocks.com holds equity, stock options, or any other financial positions in Moderna Inc. (NASDAQ: MRNA), Merck & Co., Inc. (NYSE: MRK), or any other companies mentioned in this publication. This content is published by JuniorStocks.com strictly for informational purposes, was prepared independently without company compensation, and utilized AI assistance for text editing, research, formatting, and generating accompanying media. While personalized mRNA oncology represents a compelling new frontier in biopharmaceuticals, this article does not constitute investment or financial advice. Investors are strongly advised to conduct their own thorough, independent due diligence and consult with a qualified financial professional before making any investment decisions.\n    submitted by    /u/JuniorStocksCom  \n [link]   [comments]",
+    "arabicDescription": "المقال الأصلي: https://www.juniorstocks.com/did-moderna-and-merck-just-change-the-future-of-cancer- treatment-forever خسر الخيال العلمي رسميًا جولة أخرى أمام الواقع الطبي. شركة Moderna Inc. الرائدة في مجال التكنولوجيا الحيوية (NASDAQ: MRNA) وشركة الأدوية",
+    "link": "https://www.reddit.com/r/Junior_Stocks/comments/1vtmsxt/did_moderna_and_merck_just_change_the_future_of/",
+    "sourceName": "Junior_Stocks",
+    "category": "الاسهم",
+    "pubDate": "2026-08-20T15:33:32.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/nanocurrency/comments/1vqitnd/general_info_and_weekly_discussion/",
-    "title": "General Info and Weekly Discussion",
-    "arabicTitle": "معلومات عامة ومناقشة أسبوعية",
-    "description": "Welcome to Nano!\n This post is meant for things that are relevant but do not justify their own post. For example, debates, issues, simple questions, memes or similar.\n We normally recommend using our Discord server for quicker answers but using this post is fine if you don't have/want Discord. Note that the official English Telegram channel for nano is @ nanocurrency.\n It's common that users have the same questions. So please, before making a new thread, make some research and look for similar questions. You will often find a comprehensive answer to your question has already been given! Please also check the official nano forum linked below.\n What is Nano?\n A fee-less, instant, decentralized and eco-friendly digital currency meant for peer-to-peer payments. Ticker is XNO and currency symbol Ӿ.\n Please check out r/nanocurrencybeginners or the Beginners Guide to Nano blog\n Where can I get some and try it out?\n  \nNano can be purchased at various Exchanges. More info in this guide or on the main site\n It can also be obtained for free in faucets or other services\n  \nWhere to store Nano?\n  \nThere are several wallets to choose from found in this guide or listed here\n The most simple form is the Nano seed which unlocks your accounts. Make sure to keep a safe backup of it, or you will risk losing your funds!\n Nano is supported on the hardware wallet Ledger Nano S and X. Refer to the Full Guide\n More about Nano security\n  \nTrade / Price Talk Neighbour Communities\n  \nr/nanotrade\n  \nMore Information\n  \nMain Site - nano.org\n Nano Hub - Explore the Nano ecosystem\n Detailed documentation and protocol guide\n Frequently Asked Questions\n Blog posts\n More quick links at the top and sidebar (menu on the mobile app)\n  \nRules:\n  \nBe respectful of one another. Follow the golden rule of friendliness\n No trolling or shilling\n No begging, bragging or illegal activities\n  \n   submitted by    /u/NanoMod  \n [link]   [comments]",
-    "arabicDescription": "مرحبا بكم في نانو! هذا المنشور مخصص للأشياء ذات الصلة ولكنها لا تبرر منشورها. على سبيل المثال، مناظرات أو قضايا أو أسئلة بسيطة أو ميمز أو ما شابه ذلك. نوصي عادةً باستخدام خادم Discord الخاص بنا للحصول على إجابات أسرع ولكن باستخدام هذا po",
-    "link": "https://www.reddit.com/r/nanocurrency/comments/1vqitnd/general_info_and_weekly_discussion/",
-    "sourceName": "nanocurrency",
-    "category": "كريبتو",
-    "pubDate": "2026-08-17T05:00:13.000Z",
+    "id": "https://www.reddit.com/r/Junior_Stocks/comments/1vsrn3l/us_antimony_authorizes_100_million_share_buyback/",
+    "title": "US Antimony Authorizes $100 Million Share Buyback to Counter Market Discount",
+    "arabicTitle": "الأنتيمون الأمريكي يسمح بإعادة شراء أسهم بقيمة 100 مليون دولار لمواجهة خصم السوق",
+    "description": "Original Article: https://www.juniorstocks.com/us-antimony-authorizes-100-million-share-buyback-to-counter-market-discount\n When Wall Street hands a critical minerals producer a steep discount, executive suites rarely take it lying down.\n United States Antimony Corporation (NYSE: UAMY) is drawing a firm line in the sand, authorizing a massive $100 million share repurchase program to reclaim control of its market narrative after recent share price turbulence.\n The decision, approved by unanimous board consent, gives management the green light to buy back outstanding common stock across open-market transactions, privately negotiated deals, and Rule 10b5-1 trading plans.\n The authorization carries no fixed expiration date and places no obligation on United States Antimony Corporation (NYSE: UAMY) to acquire a set number of shares, granting the firm's Finance Committee complete discretion under SEC Rule 10b-18 guidelines. The aggressive signal of insider confidence follows an extensive internal evaluation of operational assets spanning the United States, Canada, and Mexico. Chairman and Chief Executive Officer Gary C. Evans made the company’s stance clear following the board’s review, noting that after a thorough review of current activities and future potential, the board determined by unanimous consent that the stock was deemed to be undervalued and decided to implement the share repurchase program immediately.\n This corporate buyback arrives as a direct counterpunch to recent equity headwinds. Shares of United States Antimony Corporation (NYSE: UAMY) faced selling pressure following second-quarter earnings, where top-line revenue reached $7.9 million and full-year 2026 revenue guidance was recalibrated to between $60 million and $75 million from a prior target of $125 million. Management attributed the short-term slowdown to delayed contract deliveries with the Defense Logistics Agency alongside temporary price weakness in antimony. Institutional coverage, however, remains constructive on long-term fundamentals. H.C. Wainwright & Co. analyst Heiko Ihle recently adjusted his price target to $9.25 while maintaining a Buy rating, highlighting that discounted trading levels fail to reflect the company's underlying critical mineral reserves.\n Operating as the sole fully integrated antimony producer outside China and Russia, United States Antimony Corporation (NYSE: UAMY) holds a central position in Western supply chain security. Facilities in Montana and Mexico process raw ore into antimony oxide for flame retardants, antimony metal for storage batteries, and antimony trisulfide for military ammunition primers. Complementing its metallurgical operations, the enterprise mines industrial minerals through its Bear River Zeolite operations in Idaho for environmental filtration, while securing primary feedstock through expanded mining claims across Alaska, Montana, and Ontario.\n This capital allocation strategy mirrors a growing sentiment across the critical materials landscape, where natural resource firms are leveraging balance sheets during temporary commodity pullbacks. Sector peer Almonty Industries (NASDAQ: ALM) recently pursued a similar capital return effort to shore up equity value. By backing its strategic vision with up to $100 million in capital allocation, United States Antimony Corporation (NYSE: UAMY) is making a clear bet that market prices will eventually align with the long-term value of North American mineral independence.\n Sources\n  \nUnited States Antimony Corporation (NYSE: UAMY) Press Release and SEC Form 8-K Disclosure (August 19, 2026)\n Investing.com Market Coverage & Financial Analysis (August 19, 2026)\n H.C. Wainwright & Co. Equity Research Reports\n  \nDisclaimer\n Neither the author of this article nor JuniorStocks holds equity, stock options, or any other financial positions in United States Antimony Corporation (NYSE: UAMY), Almonty Industries (TSX: AII), or any other companies mentioned in this publication. This content is published by JuniorStocks strictly for informational purposes, was prepared independently without company compensation, and utilized AI assistance for text editing, formatting, and generating accompanying media. While critical minerals and North American supply chain developments represent an evolving sector, this article does not constitute investment or financial advice. Investors are strongly advised to conduct their own thorough, independent due diligence and consult with a qualified financial professional before making any investment decisions.\n    submitted by    /u/JuniorStocksCom  \n [link]   [comments]",
+    "arabicDescription": "المقال الأصلي: https://www.juniorstocks.com/us-antimony-authorizes-100-million-share-buyback-to-counter-market-discount عندما تمنح وول ستريت خصمًا كبيرًا لأحد منتجي المعادن المهمين، نادرًا ما تقبله الأجنحة التنفيذية. الولايات المتحدة",
+    "link": "https://www.reddit.com/r/Junior_Stocks/comments/1vsrn3l/us_antimony_authorizes_100_million_share_buyback/",
+    "sourceName": "Junior_Stocks",
+    "category": "الاسهم",
+    "pubDate": "2026-08-19T16:38:04.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/nanocurrency/comments/1vqfhrz/announcing_nano_snapshot_swarm_beta_communityrun/",
-    "title": "Announcing Nano Snapshot Swarm beta: community-run BitTorrent ledger snapshots",
-    "arabicTitle": "الإعلان عن الإصدار التجريبي من Nano Snapshot Swarm: لقطات دفتر الأستاذ BitTorrent التي يديرها المجتمع",
-    "description": "https://nano-snapshots.openrai.org\n Background\n The goal is to evaluate an independently operated BitTorrent distribution path for (reasonably-) up-to-date Nano ledger snapshots.\n The project continuously publishes a signed pointer to the current snapshot and provides a shrink-wrapped mirror client. Run it once for a single download, or leave it online to automatically discover updates, download the missing deltas, and contribute back by seeding the latest snapshot for other users.\n How it works (three components)\n  \nPublisher: An single automated publisher distributes a signed Mainline DHT BitTorrent BEP-46 Mutable Item. \n Mirrors: (just BEP-46 aware bittorrent clients, really) poll the DHT pointer every now and then. When a newer snapshot is published, it resolves the new .torrent, rechecks existing data, downloads the missing delta, and continues on to seed the updated snapshot. Anyone can contribute.\n Regular downloads: You can also use Deluge, Transmission, or another regular BitTorrent client with the most current .torrent or magnet: for a one-time download. Those clients typically do not permanently follow the signed DHT update pointer; if permanent seeding is desired, use the provided mirror client.\n  \nThis is a community-run beta and is not currently an official Nano Foundation or nano.org service. Nano Snapshot Swarm is also the first public project from The OpenRai Initiative.\n ❣️ Please report operational feedback, especially around reliability, restart recovery, peer discovery, and bandwidth.\n    submitted by    /u/cbrunnkvist  \n [link]   [comments]",
-    "arabicDescription": "https://nano-snapshots.openrai.org الخلفية الهدف هو تقييم مسار توزيع BitTorrent يتم تشغيله بشكل مستقل للحصول على لقطات لدفتر الأستاذ Nano المحدثة (بشكل معقول). ينشر المشروع بشكل مستمر مؤشرًا موقّعًا إلى اللقطات الحالية",
-    "link": "https://www.reddit.com/r/nanocurrency/comments/1vqfhrz/announcing_nano_snapshot_swarm_beta_communityrun/",
-    "sourceName": "nanocurrency",
-    "category": "كريبتو",
-    "pubDate": "2026-08-17T02:13:10.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/nanocurrency/comments/1vq51fr/volver_el_sitio_web_oficial_software_libre/",
-    "title": "Volver el sitio web oficial software libre",
-    "arabicTitle": "العودة إلى الموقع الرسمي البرمجيات الحرة",
-    "description": "Recientemente los administradores del sitio web «oficial» de Nano decidieron de un cañonazo quitar todas las traducciones a otros idiomas, sin previo aviso.\n No solo son problemáticas estas acciones, sino también demuestras una falta de profesionalidad y buena fe. La calidad del sitio web es pésima y contiene códigos de rastreo, que consideramos intolerables para una criptomoneda que defiende ser ecológica y eficiente. En concreto nos referimos al siguiente código JavaScript ofuscado:\n <!-- Google Tag Manager --> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=vO5boTQEhTbWp-L5bNclUw&gtm_preview=env-1&gtm_cookies_win=x';f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-T422X4Q');</script> <!-- End Google Tag Manager -->\n Sin embargo, existen más instancias de este tipo de problemas.\n    submitted by    /u/jorgesumle  \n [link]   [comments]",
-    "arabicDescription": "في الآونة الأخيرة، قرر مديرو موقع Nano \"الرسمي\" فجأة إزالة جميع الترجمات إلى لغات أخرى، دون إشعار مسبق. لا تمثل هذه الإجراءات مشكلة فحسب، بل إنها تظهر أيضًا الافتقار إلى الاحترافية.",
-    "link": "https://www.reddit.com/r/nanocurrency/comments/1vq51fr/volver_el_sitio_web_oficial_software_libre/",
-    "sourceName": "nanocurrency",
-    "category": "كريبتو",
-    "pubDate": "2026-08-16T18:44:05.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/nanocurrency/comments/1vphcb9/beyond_currency_my_top_3_applications_of_the/",
-    "title": "Beyond Currency: My top 3 applications of the Block-Lattice or Hashgraph",
-    "arabicTitle": "ما وراء العملة: أفضل 3 تطبيقات لدي لـ Block-Lattice أو Hashgraph",
-    "description": "It's partially paywalled but I'll go ahead and spoil the list because I do appreciate feedback esp if those more well versed in Protocol might have a different ranking or idea of if there is non-monetary utility in Nodes.\n #3 Power Substations - Layer 2 Fault Communication\n #2 EV Charging Networks - Power Distribution\n #1 Drone Swarms - Formation Control\n Let me know your thoughts\n    submitted by    /u/yuppienetwork1996  \n [link]   [comments]",
-    "arabicDescription": "إنه محمي جزئيًا بنظام حظر الاشتراك غير المدفوع ولكنني سأمضي قدمًا وأفسد القائمة لأنني أقدر التعليقات خاصة إذا كان أولئك الذين هم أكثر دراية بالبروتوكول قد يكون لديهم تصنيف أو فكرة مختلفة عما إذا كانت هناك فائدة غير نقدية في العقد. #3 محطات الطاقة الفرعية - الطبقة",
-    "link": "https://www.reddit.com/r/nanocurrency/comments/1vphcb9/beyond_currency_my_top_3_applications_of_the/",
-    "sourceName": "nanocurrency",
-    "category": "كريبتو",
-    "pubDate": "2026-08-15T23:28:51.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/nanocurrency/comments/1vn2txc/feelessmoney_faq_mostly_for_beginner/",
-    "title": "feeless.money FAQ mostly for Beginner",
-    "arabicTitle": "الأسئلة الشائعة الخاصة بـfeless.money في الغالب للمبتدئين",
-    "description": "I need to make a decision this month about feeless.money and BTC-EDU.bot.\n Both projects are functional and solve a real problem. The feedback from people who actually use them — especially beginners — is consistently very positive.\n The problem is not the product. It is reach.\n Whenever I promote the projects myself, usage increases strongly and I receive very positive feedback. But once I stop promoting them, the traffic and usage drop back to almost zero.\n I have invested a lot of time building and maintaining these projects and have been paying the ongoing infrastructure and subscription costs myself. Until now, I was willing to do that because I believe both projects are useful.\n But I now need to generate income from my work. I cannot continue running non-profit projects indefinitely while paying the costs myself.\n So this month I have to decide whether to reduce the costs and eventually shut them down, or whether there is a realistic way to make them sustainable.\n I’m not asking for donations.\n I’m asking the communities around these projects:\n Is there a way to create enough reach, users, partners, support or revenue to justify keeping them alive?\n If you have a concrete idea, can help with distribution, want to partner, or see a business model I’m missing, I’d genuinely like to hear it.\n I would much rather keep useful tools alive than shut them down simply because nobody knows they exist.\n    submitted by    /u/Inevitable-List1289  \n [link]   [comments]",
-    "arabicDescription": "أحتاج إلى اتخاذ قرار هذا الشهر بشأنfeless.money وBTC-EDU.bot. كلا المشروعين وظيفيان ويحلان مشكلة حقيقية. ردود الفعل من الأشخاص الذين يستخدمونها فعليًا - وخاصة المبتدئين - دائمًا ما تكون إيجابية للغاية. المشكلة ليست كذلك",
-    "link": "https://www.reddit.com/r/nanocurrency/comments/1vn2txc/feelessmoney_faq_mostly_for_beginner/",
-    "sourceName": "nanocurrency",
-    "category": "كريبتو",
-    "pubDate": "2026-08-13T06:29:09.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/CryptoCurrencyMAX/comments/1uxgy6v/bch_block_959751/",
-    "title": "BCH Block # 959751",
-    "arabicTitle": "كتلة غرفة تبادل معلومات السلامة الأحيائية رقم 959751",
-    "description": "submitted by    /u/sudoanonymous1    to    r/CryptoCurrencyMAX  \n [link]   [comments]",
-    "arabicDescription": "تم الإرسال بواسطة /u/sudoanonymous1 إلى r/CryptoCurrencyMAX [رابط] [تعليقات]",
-    "link": "https://www.reddit.com/r/CryptoCurrencyMAX/comments/1uxgy6v/bch_block_959751/",
-    "sourceName": "مجموعة ريديت (7)",
+    "id": "https://www.reddit.com/r/Aptos/comments/1vs90nj/spot_is_now_live_on_decibel/",
+    "title": "Spot is now live on Decibel!",
+    "arabicTitle": "Spot أصبح الآن مباشرًا على ديسيبل!",
+    "description": "Users can trade or hold spot assets, use eligible spot as collateral where supported, or hedge with perps — all from one account. \n The fully onchain trading engine, built on Aptos. Starting with BTC + APT. Trade now! \n https://x.com/DecibelTrade/status/2089888729259442411\n    submitted by    /u/aptoscion    to    r/Aptos  \n [link]   [comments]",
+    "arabicDescription": "يمكن للمستخدمين تداول الأصول الفورية أو الاحتفاظ بها، أو استخدام النقطة المؤهلة كضمان عندما يكون ذلك مدعومًا، أو التحوط باستخدام الأشخاص الآخرين - كل ذلك من حساب واحد. محرك التداول onchain بالكامل، المبني على Aptos. بدءًا من BTC + APT. تداول الآن! https://x.com/DecibelTrade/status/",
+    "link": "https://www.reddit.com/r/Aptos/comments/1vs90nj/spot_is_now_live_on_decibel/",
+    "sourceName": "مجموعة ريديت (5)",
     "category": "مُدمج",
-    "pubDate": "2026-07-15T20:09:47.000Z",
+    "pubDate": "2026-08-19T01:59:44.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vs1wed/just_in_sec_officially_proposes_new_rules_to/",
+    "title": "JUST IN: 🇺🇸 SEC officially proposes new rules to create clear regulatory framework for crypto.",
+    "arabicTitle": "فقط في: 🇺🇸 تقترح هيئة الأوراق المالية والبورصة (SEC) رسميًا قواعد جديدة لإنشاء إطار تنظيمي واضح للعملات المشفرة.",
+    "description": "submitted by    /u/NecessaryGrowth2  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/NecessaryGrowth2 [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vs1wed/just_in_sec_officially_proposes_new_rules_to/",
+    "sourceName": "MarketPulseReport",
+    "category": "الاسهم",
+    "pubDate": "2026-08-18T21:01:30.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/Junior_Stocks/comments/1vru9pm/leadership_torch_pass_at_k92_mining_medilek_to/",
+    "title": "Leadership Torch Pass at K92 Mining: Medilek to Succeed Lewins as CEO",
+    "arabicTitle": "بطاقة شعلة القيادة في شركة K92 Mining: ميديليك سيخلف لوينز في منصب الرئيس التنفيذي",
+    "description": "Original Article: https://www.juniorstocks.com/leadership-torch-pass-at-k92-mining-medilek-to-succeed-lewins-as-ceo\n Passing the baton while running at full speed is a rare art in corporate management, but K92 Mining Inc. (TSX: KNT | OTCQX: KNTNF) is attempting to execute it flawlessly.\n The Vancouver-headquartered miner has mapped out an orderly succession plan elevating current President and Chief Operating Officer David Medilek to Chief Executive Officer and Director, effective October 1, 2026. Outgoing CEO John Lewins, who has steered the gold, copper, and silver producer for nearly a decade, will transition to Non-Executive Chair, while current Board Chair Anne Giardini moves into the Lead Director role to maintain independent oversight.\n The executive shift comes as the company's flagship Kainantu Gold Mine in Papua New Guinea operates from a position of distinct strength. Under Lewins' decade-long guidance since 2016, Kainantu evolved from an ambitious mine restart into a high-margin mid-tier producer, earning industry accolades including the 2021 PDAC Thayer Lindsley Award for the Kora North discovery. Medilek, who joined the company in 2019, brings a potent mix of engineering grit and capital markets literacy to the corner office.\n His resume includes time as a precious metals equity research analyst at Macquarie Group Limited (ASX: MQG), a mining investment banker with Cormark Securities Inc., and an underground mining engineer at Barrick Gold Corporation (NYSE: B).\n From an operational standpoint, the corporate handover arrives on remarkably stable footing. The miner's new 1.2 million-tonne-per-annum process plant has been fully operational and performing better than design since December 2025, with 98% of Stage 3 Expansion growth capital spent or committed strictly on budget as of June 30, 2026. Lewins will remain heavily engaged in regional affairs, retaining his leadership role with the Papua New Guinea Chamber of Resources and Energy and guiding local social initiatives through the Kainantu Foundation.\n The internal promotion strategy extends across the rest of the executive suite. Vice President of Projects & Engineering Chris Kinver, a veteran who previously managed underground operations for OceanaGold Corporation (TSX: OGC), BHP Group (ASX: BHP), and Barrick Gold Corporation (NYSE: B), takes over as Chief Operating Officer on October 1, 2026. Meanwhile, Susan Scheepers, who brings two decades of human resources leadership across Aurelia Metals (ASX: AMI), Geopacific Resources (ASX: GPR), and St Barbara Limited (ASX: SBM), officially assumed the Vice President of Human Resources post on August 1, 2026.\n Source\n K92 Mining Inc. News Release (Issued August 17, 2026 via GlobeNewswire)\n Disclaimer\n Neither the author of this article nor JuniorStocks holds equity, stock options, or any other financial positions in K92 Mining Inc. (TSX: KNT; OTCQX: KNTNF) or any other companies mentioned in this publication. This content is published by JuniorStocks strictly for informational purposes, was prepared independently without company compensation, and utilized AI assistance for text editing, formatting, and generating accompanying media. While K92 Mining’s Kainantu expansion and exploration potential in Papua New Guinea represent a compelling development in the precious metals sector, this article does not constitute investment or financial advice. Investors are strongly advised to conduct their own thorough, independent due diligence and consult with a qualified financial professional before making any investment decisions.\n    submitted by    /u/JuniorStocksCom  \n [link]   [comments]",
+    "arabicDescription": "المقال الأصلي: https://www.juniorstocks.com/leadership-torch-pass-at-k92-mining-medilek-to-succeed-lewins-as-ceo يعد تمرير العصا أثناء الركض بأقصى سرعة فنًا نادرًا في إدارة الشركات، لكن شركة K92 Mining Inc. (TSX: KNT | OTCQX: KNTNF) هي فن نادر.",
+    "link": "https://www.reddit.com/r/Junior_Stocks/comments/1vru9pm/leadership_torch_pass_at_k92_mining_medilek_to/",
+    "sourceName": "Junior_Stocks",
+    "category": "الاسهم",
+    "pubDate": "2026-08-18T16:31:30.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/Junior_Stocks/comments/1vqzcej/nexgen_energy_targets_1_billion_capital_push_as/",
+    "title": "NexGen Energy Targets $1 Billion Capital Push as BHP Circles Saskatchewan Uranium",
+    "arabicTitle": "تستهدف شركة NexGen Energy دفعة رأسمالية بقيمة مليار دولار أمريكي مع قيام BHP بتدوير ساسكاتشوان لليورانيوم",
+    "description": "Original Article: https://www.juniorstocks.com/nex-gen-energy-targets-1-billion-capital-push-as-bhp-circles-saskatchewan-uranium\n Breaking ground on a massive high-grade uranium mine in northern Saskatchewan is bound to stir up conversation, but when the world's largest mining conglomerate pulls up a chair to compare notes, Wall Street takes notice.\n NexGen Energy (TSX: NXE | NYSE: NXE) officially put its first shovel in the dirt at the flagship Rook I project in the Athabasca Basin, embarking on an ambitious quest to raise $1 billion in capital over the next nine months. With global energy demand going haywire thanks to an AI data center building boom and post-war energy security pushes, the timing could not be sharper.\n NexGen Energy Chief Executive Officer Leigh Curyer revealed that the company maintains an open technical dialogue and talks regularly with BHP Group (ASX: BHP) regarding the Rook I development. While no formal joint venture or equity purchase has been finalized, the Australian mining Goliath has been quietly stacking adjacent land holdings in the Athabasca Basin while constructing its massive Jansen potash facility nearby. Freshly minted CEO Brandon Craig, who stepped into the top spot at BHP Group on July 1, is reportedly taking a close look at expanding the firm's nuclear fuel portfolio, even if finding target assets with sufficient scale remains a tall order.\n The hunt for $1 billion in fresh project capital will see NexGen Energy cast a wide net across debt facilities, customer prepayment agreements with utility providers, and potential direct equity stakes. Aiming for full commercial production by 2030, Rook I sits atop the world-renowned Arrow deposit, widely considered one of the highest-grade unmined uranium resources on the planet. Naturally, that quality has sent valuations soaring. NexGen Energy saw its market capitalization double over the past year to C$9.68 billion, leading some analysts to wonder if a total corporate takeover might prove too pricey for suitors, leaving project-level equity partnerships as the most realistic play.\n Saskatchewan’s Athabasca region is rapidly becoming the undisputed capital of the nuclear renaissance. Established heavyweights like Cameco Corporation (TSX: CCO | NYSE: CCJ) and state-backed Orano Mining hold major positions alongside peer developers like Denison Mines Corp. (TSX: DML | NYSE American: DNN) and Paladin Energy Ltd. (ASX: PDN), who are also advancing new mine construction. Brokerage researchers at Canaccord Genuity Group Inc. (TSX: CF) project global uranium demand could triple by 2035 compared to 2025 levels. Meanwhile, sector analysts at Cantor Fitzgerald have long praised the high-grade profile of the underlying Arrow deposit. Even Canadian investor Kevin O'Leary joined the festivities, serving as master of ceremonies for the groundbreaking and calling the project a landmark energy story.\n As tech giants scramble for unyielding baseload power to run their neural networks, the battle for tier-one atomic fuel is moving from quiet boardrooms directly to the Saskatchewan wilderness. Whether BHP Group (ASX: BHP) decides to write a massive check or simply keep watching from the adjacent lot, the race to power the future is officially underway.\n Source\n  \nInformation adapted from Reuters reporting published August 17, 2026 (by Divya Rajagopal and Melanie Burton) and public market data regarding NexGen Energy Ltd. (TSX: NXE) and the Rook I project in the Athabasca Basin, Saskatchewan.\n  \nDisclaimer\n Neither the author of this article nor JuniorStocks holds equity, stock options, or any other financial positions in NexGen Energy Ltd. (TSX: NXE), BHP Group (ASX: BHP), Cameco Corporation (TSX: CCO), Denison Mines Corp. (TSX: DML), Paladin Energy Ltd. (ASX: PDN), or any other companies mentioned in this publication. This content is published by JuniorStocks strictly for informational purposes, was prepared independently without company compensation, and utilized AI assistance for text editing, formatting, and content preparation. While uranium mining in Saskatchewan’s Athabasca Basin and the nuclear energy sector represent a compelling frontier, this article does not constitute investment or financial advice. Investors are strongly advised to conduct their own thorough, independent due diligence and consult with a qualified financial professional before making any investment decisions.\n    submitted by    /u/JuniorStocksCom  \n [link]   [comments]",
+    "arabicDescription": "المقال الأصلي: https://www.juniorstocks.com/nex-gen-energy-targets-1-billion-capital-push-as-bhp-circles-saskatchewan-uranium لا بد أن يؤدي البدء في منجم ضخم لليورانيوم عالي الجودة في شمال ساسكاتشوان إلى إثارة المحادثة، ولكن عندما",
+    "link": "https://www.reddit.com/r/Junior_Stocks/comments/1vqzcej/nexgen_energy_targets_1_billion_capital_push_as/",
+    "sourceName": "Junior_Stocks",
+    "category": "الاسهم",
+    "pubDate": "2026-08-17T17:48:02.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/Junior_Stocks/comments/1vqwokc/almonty_industries_authorizes_300_million_share/",
+    "title": "Almonty Industries Authorizes $300 Million Share Buyback Program",
+    "arabicTitle": "شركة Almonty Industries تسمح ببرنامج إعادة شراء الأسهم بقيمة 300 مليون دولار",
+    "description": "Original Article: https://www.juniorstocks.com/almonty-industries-authorizes-300-million-share-buyback-program\n When market pricing fails to mirror real-world asset values, corporate executives can either wait for Wall Street to wake up or write a massive check to bet on themselves.\n Almonty Industries Inc. (NASDAQ: ALM) is choosing the latter.\n The critical minerals producer announced that its board of directors has authorized a share repurchase program permitting the business to buy back up to US$300,000,000 of its own common shares over the next three years.\n The 2026 Share Repurchase Program allows Almonty Industries buy back up to 14,400,000 common shares, representing approximately five percent of the company’s outstanding equity as of August 14, 2026. Scheduled to launch on August 24, 2026, and run through August 24, 2029, purchases will take place on the open market via the Nasdaq and alternative trading platforms under Rule 10b-18 safe harbor provisions. To maintain buying power during internal corporate blackout periods, the company may also deploy automated Rule 10b5-1 broker trading plans.\n At the heart of the decision sits what executive leadership views as a glaring disconnect between standard equity pricing and the strategic value of non-Chinese critical minerals. Chairman, President, and Chief Executive Officer Lewis Black noted that public trading levels fail to capture the true value of the company's assets, particularly as Western governments and defense manufacturers actively rebuild critical material supply lines around reliable, non-Chinese sources.\n That valuation gap looks even starker against the operational backdrop of the company's flagship Sangdong Tungsten Mine in South Korea. Recognized historically as one of the world's largest and highest-grade tungsten deposits outside of China, Sangdong is advancing toward full production capacity, positioning Almonty Industries as a primary supplier to Western defense and technology supply chains. Combined with active operations in Portugal and additional developmental projects in Spain and the United States, management views its own equity as one of the most compelling investments available at current market prices.\n The capital allocation strategy comes from a position of expanding financial momentum. In its Q2 2026 financial release, Almonty Industries Inc. (NASDAQ: ALM) posted revenue of $43.0 million alongside a net income swing to $181.8 million, underpinned by rising global tungsten prices and expanding long-term supply agreements. By putting $300 million on the table, leadership sends an unmistakable signal to the market: if Wall Street hesitates to price critical supply assets at a premium, the company will happily buy them back itself.\n Sources\n  \nPress Release: Almonty Industries Inc. Announces New Share Repurchase Program of Up to US$300,000,000 (August 17, 2026).\n Financial Report & Market Analysis: Investing.com News — Almonty Approves $300M Share Buyback Program / Stock Rally Driver (August 17, 2026).\n Company Earnings Release: Almonty Industries Inc. Reports Second Quarter 2026 Financial Results (August 11, 2026).\n  \nDisclaimer\n Neither the author of this article nor JuniorStocks holds equity, stock options, or any other financial positions in Almonty Industries Inc. (NASDAQ: ALM) or any other companies mentioned in this publication. This content is published by JuniorStocks strictly for informational purposes, was prepared independently without company compensation, and utilized AI assistance for text editing, formatting, and content generation. While critical minerals and non-Chinese tungsten production represent a strategic frontier in global supply chain security, this article does not constitute investment or financial advice. Investors are strongly advised to conduct their own thorough, independent due diligence and consult with a qualified financial professional before making any investment decisions.\n    submitted by    /u/JuniorStocksCom  \n [link]   [comments]",
+    "arabicDescription": "المقال الأصلي: https://www.juniorstocks.com/almonty-industries-authorizes-300-million-share-buyback-program عندما يفشل تسعير السوق في عكس قيم الأصول في العالم الحقيقي، يمكن للمسؤولين التنفيذيين في الشركات إما الانتظار حتى تستيقظ وول ستريت أو كتابة تقرير",
+    "link": "https://www.reddit.com/r/Junior_Stocks/comments/1vqwokc/almonty_industries_authorizes_300_million_share/",
+    "sourceName": "Junior_Stocks",
+    "category": "الاسهم",
+    "pubDate": "2026-08-17T16:19:06.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vp5n9h/just_in_president_trump_says_he_will_soon_declare/",
+    "title": "JUST IN: 🇺🇸 President Trump says he will soon declare the Strait of Hormuz \"territory of the United States.\"",
+    "arabicTitle": "فقط في: 🇺🇸 يقول الرئيس ترامب إنه سيعلن قريبًا أن مضيق هرمز \"منطقة تابعة للولايات المتحدة\".",
+    "description": "submitted by    /u/NecessaryGrowth2  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/NecessaryGrowth2 [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vp5n9h/just_in_president_trump_says_he_will_soon_declare/",
+    "sourceName": "MarketPulseReport",
+    "category": "الاسهم",
+    "pubDate": "2026-08-15T15:25:04.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vorfxu/how_do_you_connect_macro_headlines_to_the_assets/",
+    "title": "How do you connect macro headlines to the assets actually exposed to them?",
+    "arabicTitle": "كيف يمكنك ربط العناوين الكلية بالأصول المعرضة لها بالفعل؟",
+    "description": "A headline is only the starting point. The useful work is tracing the chain: event → rates, currencies, or commodities → sectors → equities.\n I opened Market Insights Community for people who enjoy that research process: market pulse, macro, sector rotation, commodities, global events, and evidence-based discussion. It is a research and discussion space—not trade alerts or financial advice.\n Discord: https://discord.gg/XbW5sAgNUC\n    submitted by    /u/the-commons  \n [link]   [comments]",
+    "arabicDescription": "العنوان هو مجرد نقطة البداية. والعمل المفيد هو تتبع السلسلة: الأحداث ← الأسعار، أو العملات، أو السلع ← القطاعات ← الأسهم. لقد فتحت مجتمع Market Insights Community للأشخاص الذين يستمتعون بعملية البحث هذه: نبض السوق، الكلي، القطاع",
+    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vorfxu/how_do_you_connect_macro_headlines_to_the_assets/",
+    "sourceName": "MarketPulseReport",
+    "category": "الاسهم",
+    "pubDate": "2026-08-15T03:00:59.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1voowr9/nvidia_following_the_pattern/",
+    "title": "NVIDIA following the pattern",
+    "arabicTitle": "NVIDIA تتبع النمط",
+    "description": "Is NVIDIA following the pattern where its stock price rises leading up to earnings and then drops after the earnings report?\n It’s been nothing but this pattern for the last few quarters, hasn’t it?\n    submitted by    /u/PrimaryResolve641  \n [link]   [comments]",
+    "arabicDescription": "هل تتبع NVIDIA النمط الذي يرتفع فيه سعر سهمها مما يؤدي إلى الأرباح ثم ينخفض ​​بعد تقرير الأرباح؟ لم يكن الأمر سوى هذا النمط خلال الأرباع القليلة الماضية، أليس كذلك؟ مقدم من /u/PrimaryResolve641 [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1voowr9/nvidia_following_the_pattern/",
+    "sourceName": "MarketPulseReport",
+    "category": "الاسهم",
+    "pubDate": "2026-08-15T00:58:50.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1voj1ed/the_markets_are_rigged_why_the_next_crash_is/",
+    "title": "🚨The Markets Are Rigged: Why the Next Crash is Coming",
+    "arabicTitle": "🚨الأسواق مزورة: لماذا سيأتي الانهيار التالي",
+    "description": "submitted by    /u/Trends-Journal  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/Trends-Journal [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1voj1ed/the_markets_are_rigged_why_the_next_crash_is/",
+    "sourceName": "MarketPulseReport",
+    "category": "الاسهم",
+    "pubDate": "2026-08-14T20:46:39.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vncqie/the_ai_buildout_is_now_showing_in_every_gov_data/",
+    "title": "the AI buildout is now showing in every gov data. are we still bearish?",
+    "arabicTitle": "يظهر الآن تصميم الذكاء الاصطناعي في كل البيانات الحكومية. هل ما زلنا هبوطيين؟",
+    "description": "the same tables put electric power and specialty transformers at an all-time high\n    submitted by    /u/convexpayoff  \n [link]   [comments]",
+    "arabicDescription": "نفس الجداول تضع الطاقة الكهربائية والمحولات المتخصصة في أعلى مستوياتها على الإطلاق المقدمة من /u/convexpayoff [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vncqie/the_ai_buildout_is_now_showing_in_every_gov_data/",
+    "sourceName": "MarketPulseReport",
+    "category": "الاسهم",
+    "pubDate": "2026-08-13T14:45:28.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vmeova/riot_signed_a_91b_20year_lease_with_an_unnamed/",
+    "title": "Riot signed a $9.1B, 20-year lease with an unnamed frontier AI lab, some reports quoted it to be Anthropic and it names bitcoin sales as the funding source for the equity",
+    "arabicTitle": "وقعت شركة Riot عقد إيجار بقيمة 9.1 مليار دولار لمدة 20 عامًا مع مختبر ذكاء اصطناعي حدودي لم يذكر اسمه، وذكرت بعض التقارير أنه أنثروبيكي وذكرت مبيعات البيتكوين كمصدر تمويل للأسهم",
+    "description": "Riot Platforms $RIOT filed an 8-K on Aug 10 saying it has \"executed a data center lease with a leading frontier AI lab for 191 MW of critical IT capacity\" at its Rockdale, Texas campus. the 20-year initial term carries $9.1 billion of contract revenue, and $16.1 billion if the tenant takes both five-year extensions. \n https://preview.redd.it/z7xppmr48yih1.png?width=1208&format=png&auto=webp&s=2e3f7cca97e76ffe9cc9d65a17d03f3cd6f81217\n    submitted by    /u/convexpayoff  \n [link]   [comments]",
+    "arabicDescription": "قدمت شركة Riot Platforms $RIOT مذكرة 8-K في 10 أغسطس قائلة إنها \"نفذت عقد إيجار لمركز بيانات مع مختبر رائد للذكاء الاصطناعي على الحدود بسعة 191 ميجاوات من سعة تكنولوجيا المعلومات الحيوية\" في حرمها الجامعي في روكديل بولاية تكساس. تحمل المدة الأولية البالغة 20 عامًا 9.1 مليار دولار من إيرادات العقود",
+    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vmeova/riot_signed_a_91b_20year_lease_with_an_unnamed/",
+    "sourceName": "MarketPulseReport",
+    "category": "الاسهم",
+    "pubDate": "2026-08-12T13:49:12.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vlqk6j/deadline_to_submit_claims_on_the_wm_technology/",
+    "title": "Deadline to Submit Claims on the WM Technology ($MAPS) $7.5M Settlement is October 30, 2026",
+    "arabicTitle": "الموعد النهائي لتقديم المطالبات بشأن تسوية WM Technology ($MAPS) بقيمة 7.5 مليون دولار أمريكي هو 30 أكتوبر 2026",
+    "description": "Hey guys, if you missed it, WM Technology settled $7.5M with investors over claims that it inflated its monthly active user numbers and misled investors about user growth. The deadline to file a claim is October 30, 2026.\n In a nutshell, WM counted users from pop-under ads as active users even when they didn’t actually engage with the platform. In 2022, the company disclosed concerns about its MAU reporting, and $MAPS fell more than 25%.\n Investors now have until October 30, 2026 to submit a claim and get payment.\n If you invested in $MAPS at the time, you can check your eligibility and file a claim here\n Anyone here invested in $MAPS back then? How much were your losses?\n https://preview.redd.it/pcfzonuhmsih1.jpg?width=2340&format=pjpg&auto=webp&s=93d4f34474680d498210d15171e8131806c193ef\n    submitted by    /u/JuniorCharge4571  \n [link]   [comments]",
+    "arabicDescription": "مرحبًا يا شباب، إذا فاتكم الأمر، قامت شركة WM Technology بتسوية مبلغ 7.5 مليون دولار مع المستثمرين بسبب مزاعم بأنها قامت بتضخيم أعداد المستخدمين النشطين شهريًا وضللت المستثمرين بشأن نمو المستخدمين. الموعد النهائي لتقديم المطالبة هو 30 أكتوبر 2026. باختصار، أحصتنا WM",
+    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vlqk6j/deadline_to_submit_claims_on_the_wm_technology/",
+    "sourceName": "MarketPulseReport",
+    "category": "الاسهم",
+    "pubDate": "2026-08-11T18:58:52.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vl0crc/why_cant_the_world_escape_the_us_dollar/",
+    "title": "Why can’t the world escape the US dollar?",
+    "arabicTitle": "لماذا لا يستطيع العالم الهروب من الدولار الأمريكي؟",
+    "description": "Why can’t the world escape the US dollar?\n Despite de-dollarization efforts, BRICS, and China’s growing influence, the dollar still dominates global trade and finance.\n What do you think is the biggest obstacle to replacing the dollar?\n Curious to hear different perspectives.\n https://youtu.be/DE5XamAbG9o\n    submitted by    /u/Emergency-Bag-6760  \n [link]   [comments]",
+    "arabicDescription": "لماذا لا يستطيع العالم الهروب من الدولار الأمريكي؟ وعلى الرغم من جهود التخلص من الدولرة، ومجموعة البريكس، ونفوذ الصين المتزايد، لا يزال الدولار يهيمن على التجارة والتمويل العالميين. ما هو برأيك العائق الأكبر أمام استبدال الدولار؟ فضولي لسماع",
+    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vl0crc/why_cant_the_world_escape_the_us_dollar/",
+    "sourceName": "MarketPulseReport",
+    "category": "الاسهم",
+    "pubDate": "2026-08-10T23:05:28.000Z",
     "media": {
       "image": null
     }
