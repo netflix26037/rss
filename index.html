@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>REDDIT بالعربي - iPhone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class' }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+        body { 
+            font-family: 'Cairo', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .ticker-scroll::-webkit-scrollbar { display: none; }
+        .ticker-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+    </style>
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen flex flex-col select-none pb-20">
+
+    <!-- شريط الأسعار المباشر -->
+    <div class="bg-slate-950 text-white text-[10px] py-1 px-3 border-b border-slate-800 flex items-center justify-between sticky top-0 z-50">
+        <div class="flex items-center gap-1.5 shrink-0 pl-2 border-l border-slate-800">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span class="font-bold text-gray-400">مباشر</span>
+        </div>
+        
+        <div class="ticker-scroll flex items-center gap-3 overflow-x-auto whitespace-nowrap scroll-smooth flex-grow py-0.5 px-2">
+            <div id="box-BRENT" class="flex items-center gap-1 font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800">
+                <span class="font-bold text-amber-500"><i class="fa-solid fa-droplet text-[9px]"></i> BRENT</span>
+                <span id="price-BRENT" class="text-gray-200 font-bold">--.--</span>
+            </div>
+            <div id="box-BTC" class="flex items-center gap-1 font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800">
+                <span class="font-bold text-cyan-400">BTC</span>
+                <span id="price-BTC" class="text-gray-200 font-bold">--.--</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- الهيدر العلوي -->
+    <header class="bg-gray-900/95 border-b border-gray-800 px-4 py-2.5 sticky top-[25px] z-40 backdrop-blur-md">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <button onclick="toggleSidebar()" class="text-gray-300 text-lg p-1.5 hover:bg-gray-800 rounded-lg active:scale-95 transition">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="flex items-center gap-2 cursor-pointer active:opacity-80 transition">
+                    <div class="bg-[#FF4500] text-white p-1.5 rounded-lg">
+                        <i class="fa-brands fa-reddit-alien text-lg"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-sm font-bold text-white leading-none">REDDIT بالعربي</h1>
+                        <span id="digital-clock" class="text-[10px] font-mono text-gray-400">00:00:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <span class="text-[11px] font-bold text-[#FF4500] bg-[#FF4500]/10 px-2.5 py-1 rounded-lg border border-[#FF4500]/20">
+                نسخة الايفون
+            </span>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية -->
+    <div id="sidebar-drawer" class="fixed inset-0 bg-black/80 z-50 hidden justify-center items-end sm:items-center transition-opacity">
+        <div class="bg-gray-900 rounded-t-2xl sm:rounded-2xl w-full max-w-lg max-h-[80vh] flex flex-col p-4 overflow-hidden border border-gray-800 shadow-2xl">
+            <div class="flex justify-between items-center mb-3 pb-2 border-b border-gray-800">
+                <h2 class="text-sm font-bold text-gray-200 flex items-center gap-2">
+                    <i class="fa-solid fa-bars text-[#FF4500]"></i> المصادر والأقسام
+                </h2>
+                <button onclick="toggleSidebar()" class="text-gray-400 p-1 text-lg"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="overflow-y-auto space-y-3 pr-1" id="drawer-content">
+                <div id="sources-container" class="space-y-2">
+                    <p class="text-xs text-gray-400 text-center py-4">جاري تحميل المصادر...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="px-3 py-4 flex-grow w-full max-w-md mx-auto">
+        <div class="flex justify-between items-center mb-4 pb-2 border-b border-gray-800">
+            <h2 id="current-feed-title" class="text-xs font-bold text-gray-200 truncate flex items-center gap-1.5">
+                <i class="fa-solid fa-newspaper text-[#FF4500]"></i> التحديثات الأخيرة
+            </h2>
+        </div>
+        
+        <div id="articles-container" class="flex flex-col gap-3">
+            <div class="text-center py-16 text-gray-500 bg-gray-900/50 rounded-xl border border-gray-800">
+                <i class="fa-brands fa-reddit text-4xl mb-2 text-[#FF4500] animate-pulse"></i>
+                <p class="text-xs font-medium">جاري جلب المنشورات...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- شريط التنقل السفلي -->
+    <nav class="fixed bottom-0 inset-x-0 bg-gray-900/95 border-t border-gray-800 backdrop-blur-lg z-50 pb-safe">
+        <div class="flex items-center justify-around py-2 max-w-md mx-auto text-xs font-bold">
+            <button onclick="switchTab('unread')" id="tab-unread" class="flex flex-col items-center gap-1 text-[#FF4500] transition active:scale-95">
+                <div class="relative">
+                    <i class="fa-solid fa-envelope-open-text text-lg text-red-500"></i>
+                    <span id="count-unread" class="absolute -top-1.5 -right-3 bg-red-600 text-white text-[9px] px-1.5 py-0.2 rounded-full min-w-[16px] text-center">0</span>
+                </div>
+                <span class="text-[10px]">غير مقروء</span>
+            </button>
+
+            <button onclick="switchTab('favorites')" id="tab-favorites" class="flex flex-col items-center gap-1 text-gray-400 transition active:scale-95">
+                <div class="relative">
+                    <i class="fa-solid fa-star text-lg text-amber-400"></i>
+                    <span id="count-favorites" class="absolute -top-1.5 -right-3 bg-amber-500 text-black text-[9px] px-1.5 py-0.2 rounded-full min-w-[16px] text-center">0</span>
+                </div>
+                <span class="text-[10px]">المفضلة</span>
+            </button>
+
+            <button onclick="switchTab('read')" id="tab-read" class="flex flex-col items-center gap-1 text-gray-400 transition active:scale-95">
+                <div class="relative">
+                    <i class="fa-solid fa-check-double text-lg text-emerald-500"></i>
+                    <span id="count-read" class="absolute -top-1.5 -right-3 bg-emerald-500 text-white text-[9px] px-1.5 py-0.2 rounded-full min-w-[16px] text-center">0</span>
+                </div>
+                <span class="text-[10px]">تمت القراءة</span>
+            </button>
+        </div>
+    </nav>
+
+    <script>
+        let sources = [];
+        let allFetchedArticles = [];
+        let currentTab = 'unread';
+
+        let readIds = new Set(JSON.parse(localStorage.getItem('app_read_ids') || '[]'));
+        let favoriteArticles = JSON.parse(localStorage.getItem('app_favorite_articles') || '[]');
+        let observer = null;
+
+        const translationCache = new Map();
+        const translationQueue = [];
+        let isTranslating = false;
+
+        function toggleSidebar() {
+            const drawer = document.getElementById('sidebar-drawer');
+            drawer.classList.toggle('hidden');
+            drawer.classList.toggle('flex');
+        }
+
+        function cleanText(raw) {
+            if (!raw) return '';
+            let txt = document.createElement("textarea");
+            txt.innerHTML = raw;
+            let decoded = txt.value;
+            return decoded.replace(/<[^>]*>?/gm, '').replace(/\s+/g, ' ').trim();
+        }
+
+        // نظام الطابور (Queue) لتجنب حظر الـ API
+        function queueTranslation(text, elementId) {
+            if (!text) return;
+            translationQueue.push({ text, elementId });
+            processTranslationQueue();
+        }
+
+        async function processTranslationQueue() {
+            if (isTranslating || translationQueue.length === 0) return;
+            isTranslating = true;
+
+            const { text, elementId } = translationQueue.shift();
+            
+            try {
+                let translated = translationCache.get(text);
+                
+                if (!translated) {
+                    // استخدام Proxy لتخطي الـ CORS
+                    const gUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ar&dt=t&q=${encodeURIComponent(text)}`;
+                    const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(gUrl)}`;
+                    
+                    const res = await fetch(proxyUrl);
+                    if (res.ok) {
+                        const data = await res.json();
+                        if (data && data[0]) {
+                            translated = data[0].map(x => x[0]).join('');
+                            translationCache.set(text, translated);
+                        }
+                    }
+                }
+
+                if (translated) {
+                    const el = document.getElementById(elementId);
+                    if (el) {
+                        el.innerText = translated;
+                        // تغيير لون الخط ليدل على انتهاء الترجمة
+                        el.classList.remove('opacity-70'); 
+                    }
+                }
+            } catch (e) {
+                console.error("Translation blocked or failed, retrying later.");
+            }
+
+            // تأخير 600 جزء من الثانية بين كل طلب وطلب لتجنب الـ Rate Limit
+            setTimeout(() => {
+                isTranslating = false;
+                processTranslationQueue();
+            }, 600);
+        }
+
+        async function fetchPrices() {
+            try {
+                const btcRes = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+                const btcData = await btcRes.json();
+                if (btcData.bitcoin) {
+                    document.getElementById('price-BTC').innerText = '$' + btcData.bitcoin.usd.toLocaleString();
+                }
+            } catch (e) {}
+
+            try {
+                const brentRes = await fetch('https://query1.finance.yahoo.com/v8/finance/chart/BZ=F');
+                const brentData = await brentRes.json();
+                const price = brentData.chart.result[0].meta.regularMarketPrice;
+                if (price) {
+                    document.getElementById('price-BRENT').innerText = '$' + price.toFixed(2);
+                }
+            } catch (e) {}
+        }
+
+        async function fetchDirectData() {
+            const paths = ['feed.json', './feed.json', '/feed.json'];
+            for (let path of paths) {
+                try {
+                    const response = await fetch(`${path}?nocache=${Date.now()}`);
+                    if (response.ok) {
+                        const data = await response.json();
+                        let rawArticles = [];
+                        if (Array.isArray(data)) rawArticles = data;
+                        else if (data.articles && Array.isArray(data.articles)) rawArticles = data.articles;
+                        else if (data.items && Array.isArray(data.items)) rawArticles = data.items;
+
+                        if (rawArticles.length > 0) {
+                            return rawArticles.map((art, idx) => ({
+                                id: art.id || art.link || art.guid || `art-${idx}-${Date.now()}`,
+                                arabicTitle: art.arabicTitle || '',
+                                title: art.title || art.originalTitle || '',
+                                arabicDescription: art.arabicDescription || '',
+                                description: art.description || art.originalDescription || '',
+                                link: art.link || '#',
+                                sourceName: art.sourceName || 'Reddit',
+                                pubDate: art.pubDate || new Date().toISOString(),
+                                media: art.media || { image: art.image || null }
+                            }));
+                        }
+                    }
+                } catch (e) {}
+            }
+            return [];
+        }
+
+        async function fetchSourcesJSON() {
+            try {
+                const response = await fetch(`./sources.json?nocache=${Date.now()}`);
+                if (response.ok) return await response.json();
+            } catch(e) {}
+            return [];
+        }
+
+        function timeAgo(dateString) {
+            const date = new Date(dateString);
+            const now = new Date();
+            const seconds = Math.floor((now - date) / 1000);
+
+            if (isNaN(seconds)) return 'الآن';
+
+            let interval = Math.floor(seconds / 3600);
+            if (interval >= 1) return `منذ ${interval} س`;
+            interval = Math.floor(seconds / 60);
+            if (interval >= 1) return `منذ ${interval} د`;
+            return `الآن`;
+        }
+
+        function renderSources() {
+            const container = document.getElementById('sources-container');
+            container.innerHTML = '';
+            if (!sources || sources.length === 0) {
+                container.innerHTML = `<div class="text-center py-4 text-xs text-gray-400">جميع المصادر متاحة في القائمة الرئيسية</div>`;
+                return;
+            }
+
+            const grouped = {};
+            sources.forEach((s, idx) => {
+                const cat = s.category || 'عام';
+                if (!grouped[cat]) grouped[cat] = [];
+                grouped[cat].push({ ...s, idx });
+            });
+
+            for (const [cat, items] of Object.entries(grouped)) {
+                const groupDiv = document.createElement('div');
+                groupDiv.className = 'space-y-1 bg-gray-950 p-2.5 rounded-xl border border-gray-800';
+                groupDiv.innerHTML = `
+                    <div class="flex items-center justify-between pb-1 border-b border-gray-800">
+                        <button onclick="filterByCategory('${cat.replace(/'/g, "\\'")}'); toggleSidebar();" class="text-xs font-bold text-[#FF4500] flex items-center gap-1">
+                            <i class="fa-solid fa-folder-open text-amber-500"></i> ${cat}
+                        </button>
+                    </div>
+                    <ul class="space-y-1 pt-1.5"></ul>
+                `;
+                const ul = groupDiv.querySelector('ul');
+                items.forEach(item => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                        <div class="flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-gray-900 text-xs">
+                            <button onclick="filterBySource('${item.name.replace(/'/g, "\\'")}'); toggleSidebar();" class="text-right flex-grow truncate">
+                                ${item.name}
+                            </button>
+                        </div>
+                    `;
+                    ul.appendChild(li);
+                });
+                container.appendChild(groupDiv);
+            }
+        }
+
+        function filterBySource(sourceName) {
+            document.getElementById('current-feed-title').innerText = sourceName;
+            const filtered = allFetchedArticles.filter(a => a.sourceName === sourceName);
+            renderArticlesContainer(filtered);
+        }
+
+        function filterByCategory(category) {
+            document.getElementById('current-feed-title').innerText = category;
+            const filtered = allFetchedArticles.filter(a => a.category === category);
+            renderArticlesContainer(filtered);
+        }
+
+        function markAsReadHover(id) {
+            if (!readIds.has(id)) {
+                readIds.add(id);
+                localStorage.setItem('app_read_ids', JSON.stringify([...readIds]));
+                updateCounts();
+            }
+        }
+
+        function toggleFavoriteArticle(articleId, event) {
+            if(event) event.stopPropagation();
+
+            const targetArticle = allFetchedArticles.find(a => a.id === articleId) || favoriteArticles.find(a => a.id === articleId);
+            if (!targetArticle) return;
+
+            const index = favoriteArticles.findIndex(a => a.id === articleId);
+            if (index > -1) {
+                favoriteArticles.splice(index, 1);
+            } else {
+                favoriteArticles.push(targetArticle);
+            }
+            
+            localStorage.setItem('app_favorite_articles', JSON.stringify(favoriteArticles));
+            updateCounts();
+            renderCurrentTab();
+        }
+
+        function updateCounts() {
+            const unreadList = allFetchedArticles.filter(a => !readIds.has(a.id));
+            const readList = allFetchedArticles.filter(a => readIds.has(a.id));
+
+            document.getElementById('count-unread').innerText = unreadList.length;
+            document.getElementById('count-favorites').innerText = favoriteArticles.length;
+            document.getElementById('count-read').innerText = readList.length;
+        }
+
+        function switchTab(tab) {
+            currentTab = tab;
+            ['unread', 'favorites', 'read'].forEach(t => {
+                const btn = document.getElementById(`tab-${t}`);
+                if (t === tab) {
+                    btn.className = "flex flex-col items-center gap-1 text-[#FF4500] transition active:scale-95";
+                } else {
+                    btn.className = "flex flex-col items-center gap-1 text-gray-400 transition active:scale-95";
+                }
+            });
+            renderCurrentTab();
+        }
+
+        function renderCurrentTab() {
+            updateCounts();
+            let displayList = [];
+
+            if (currentTab === 'unread') {
+                displayList = allFetchedArticles.filter(a => !readIds.has(a.id));
+            } else if (currentTab === 'read') {
+                displayList = allFetchedArticles.filter(a => readIds.has(a.id));
+            } else if (currentTab === 'favorites') {
+                displayList = favoriteArticles;
+            }
+
+            renderArticlesContainer(displayList);
+        }
+
+        function renderArticlesContainer(articles) {
+            const container = document.getElementById('articles-container');
+            container.innerHTML = '';
+
+            // مسح الطابور القديم إذا انتقل المستخدم لصفحة أخرى
+            translationQueue.length = 0; 
+            isTranslating = false;
+
+            if (observer) observer.disconnect();
+
+            if (!articles || articles.length === 0) {
+                container.innerHTML = `<div class="text-center py-16 text-gray-500 bg-gray-900/30 rounded-xl border border-gray-800 text-xs">لا توجد مواضيع في هذا القسم حالياً.</div>`;
+                return;
+            }
+
+            observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const artId = entry.target.getAttribute('data-id');
+                        if (artId) {
+                            markAsReadHover(artId);
+                            observer.unobserve(entry.target);
+                        }
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            articles.forEach((item, index) => {
+                const isFav = favoriteArticles.some(a => a.id === item.id);
+                const agoText = timeAgo(item.pubDate);
+
+                const rawTitle = item.arabicTitle || item.title || '';
+                const rawDesc = item.arabicDescription || item.description || '';
+                
+                const initialTitle = cleanText(rawTitle);
+                const initialDesc = cleanText(rawDesc);
+
+                let mediaHTML = '';
+                if (item.media && item.media.image) {
+                    mediaHTML = `
+                        <div class="my-2 overflow-hidden rounded-lg bg-black/20 border border-gray-800">
+                            <img src="${item.media.image}" alt="Media" class="w-full max-h-[250px] object-cover" loading="lazy" onerror="this.style.display='none'">
+                        </div>`;
+                }
+
+                const titleId = `title-${index}`;
+                const descId = `desc-${index}`;
+
+                const isWhite = index % 2 === 1;
+                const bgClasses = isWhite ? "bg-white text-gray-900 border-gray-300" : "bg-black text-gray-100 border-gray-800";
+                const titleColor = isWhite ? "text-gray-900" : "text-gray-100";
+                const descColor = isWhite ? "text-gray-700" : "text-gray-300";
+                const clockColor = isWhite ? "text-gray-500" : "text-gray-400";
+                const borderDivider = isWhite ? "border-gray-200" : "border-gray-800/80";
+
+                const card = document.createElement('article');
+                card.setAttribute('data-id', item.id);
+                card.className = `w-full ${bgClasses} border p-4 rounded-xl flex flex-col justify-between relative shadow-sm`;
+
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-[#FF4500]/10 text-[#FF4500] border border-[#FF4500]/20">
+                                ${item.sourceName || 'Reddit'}
+                            </span>
+                            
+                            <div class="flex items-center gap-3">
+                                <span class="text-[10px] ${clockColor}">
+                                    <i class="fa-regular fa-clock"></i> ${agoText}
+                                </span>
+                                <button onclick="toggleFavoriteArticle('${item.id.replace(/'/g, "\\'")}', event)" class="text-lg p-1 text-amber-400 active:scale-125 transition">
+                                    <i class="${isFav ? 'fa-solid fa-star' : 'fa-regular fa-star text-gray-400'}"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <h3 id="${titleId}" class="font-bold text-sm leading-snug mb-1.5 opacity-70 ${titleColor}">${initialTitle}</h3>
+                        ${mediaHTML}
+                        <p id="${descId}" class="${descColor} text-xs line-clamp-3 mb-3 leading-relaxed opacity-70">${initialDesc}</p>
+                    </div>
+
+                    <div class="flex items-center justify-between pt-2 border-t ${borderDivider} mt-1">
+                        <a href="${item.link}" target="_blank" class="bg-[#FF4500] text-white px-3 py-1.5 rounded-lg text-[11px] font-semibold flex items-center gap-1.5 transition">
+                            زيارة المصدر <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                        </a>
+                    </div>
+                `;
+                container.appendChild(card);
+
+                if (currentTab === 'unread') {
+                    observer.observe(card);
+                }
+
+                // إرسال العناوين والتفاصيل إلى طابور الترجمة بهدوء
+                if (!item.arabicTitle && initialTitle) {
+                    queueTranslation(initialTitle, titleId);
+                }
+
+                if (!item.arabicDescription && initialDesc) {
+                    queueTranslation(initialDesc, descId);
+                }
+            });
+        }
+
+        function startClock() {
+            setInterval(() => {
+                const el = document.getElementById('digital-clock');
+                if (el) el.innerText = new Date().toTimeString().split(' ')[0];
+            }, 1000);
+        }
+
+        window.onload = async function() {
+            startClock();
+            fetchPrices();
+            setInterval(fetchPrices, 60000);
+
+            sources = await fetchSourcesJSON();
+            renderSources();
+
+            allFetchedArticles = await fetchDirectData();
+            renderCurrentTab();
+        };
+    </script>
+</body>
+</html>
