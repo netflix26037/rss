@@ -27,7 +27,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          if [ -f package.json ]; then npm install; fi
+          npm install rss-parser axios node-fetch
 
       - name: Run Fetch Script
         run: |
