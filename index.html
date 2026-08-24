@@ -182,34 +182,27 @@
             const el = document.getElementById(elementId);
             
             try {
-                // تقليم النص للحفاظ على الاستجابة السريعة
                 const queryText = text.substring(0, 300);
-                const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(queryText)}&langpair=en|ar`;
+                const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ar&dt=t&q=${encodeURIComponent(queryText)}`;
 
                 const res = await fetch(url);
                 if (res.ok) {
                     const data = await res.json();
-                    if (data && data.responseData && data.responseData.translatedText) {
-                        const translated = data.responseData.translatedText;
+                    if (data && data[0]) {
+                        const translated = data[0].map(item => item[0]).join('');
                         translationCache.set(text, translated);
-                        if (el) {
-                            el.innerText = translated;
-                            el.classList.remove('opacity-70', 'animate-pulse');
-                        }
+                        if (el) el.innerText = translated;
                     }
-                } else if (el) {
-                    el.classList.remove('opacity-70', 'animate-pulse');
                 }
             } catch (error) {
-                if (el) {
-                    el.classList.remove('opacity-70', 'animate-pulse');
-                }
+                // الحفاظ على النص في حالة الخطأ
+            } finally {
+                if (el) el.classList.remove('opacity-70', 'animate-pulse');
+                setTimeout(() => {
+                    isTranslating = false;
+                    processTranslationQueue();
+                }, 200);
             }
-
-            setTimeout(() => {
-                isTranslating = false;
-                processTranslationQueue();
-            }, 300);
         }
 
         async function fetchPrices() {
@@ -252,6 +245,7 @@
                                 description: art.description || art.originalDescription || '',
                                 link: art.link || '#',
                                 sourceName: art.sourceName || 'Reddit',
+                                category: art.category || 'عام',
                                 pubDate: art.pubDate || new Date().toISOString(),
                                 media: art.media || { image: art.image || null }
                             }));
@@ -431,11 +425,14 @@
                 const isFav = favoriteArticles.some(a => a.id === item.id);
                 const agoText = timeAgo(item.pubDate);
 
-                const rawTitle = item.arabicTitle || item.title || '';
-                const rawDesc = item.arabicDescription || item.description || '';
-                
-                const initialTitle = cleanText(rawTitle);
-                const initialDesc = cleanText(rawDesc);
+                const hasArabicTitle = Boolean(item.arabicTitle && item.arabicTitle.trim());
+                const hasArabicDesc = Boolean(item.arabicDescription && item.arabicDescription.trim());
+
+                const initialTitle = cleanText(hasArabicTitle ? item.arabicTitle : item.title);
+                const initialDesc = cleanText(hasArabicDesc ? item.arabicDescription : item.description);
+
+                const titleLoadingClass = !hasArabicTitle ? 'opacity-70 animate-pulse' : '';
+                const descLoadingClass = !hasArabicDesc ? 'opacity-70 animate-pulse' : '';
 
                 let mediaHTML = '';
                 if (item.media && item.media.image) {
@@ -476,9 +473,9 @@
                             </div>
                         </div>
 
-                        <h3 id="${titleId}" class="font-bold text-sm leading-snug mb-1.5 opacity-70 animate-pulse ${titleColor}">${initialTitle}</h3>
+                        <h3 id="${titleId}" class="font-bold text-sm leading-snug mb-1.5 ${titleLoadingClass} ${titleColor}">${initialTitle}</h3>
                         ${mediaHTML}
-                        <p id="${descId}" class="${descColor} text-xs line-clamp-3 mb-3 leading-relaxed opacity-70 animate-pulse">${initialDesc}</p>
+                        <p id="${descId}" class="${descColor} text-xs line-clamp-3 mb-3 leading-relaxed ${descLoadingClass}">${initialDesc}</p>
                     </div>
 
                     <div class="flex items-center justify-between pt-2 border-t ${borderDivider} mt-1">
@@ -493,11 +490,11 @@
                     observer.observe(card);
                 }
 
-                if (!item.arabicTitle && initialTitle) {
+                if (!hasArabicTitle && initialTitle) {
                     queueTranslation(initialTitle, titleId);
                 }
 
-                if (!item.arabicDescription && initialDesc) {
+                if (!hasArabicDesc && initialDesc) {
                     queueTranslation(initialDesc, descId);
                 }
             });
