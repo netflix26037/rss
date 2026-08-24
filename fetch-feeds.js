@@ -19,7 +19,7 @@ async function translateText(text) {
             return response.data[0].map(item => item[0]).join('');
         }
     } catch (e) {
-        // العودة للنص الأصلي عند التعثر
+        // العودة للنص الأصلي عند التعثر مؤقتاً لضمان عدم توقف السكربت
     }
     return cleanText;
 }
@@ -46,7 +46,6 @@ function groupRedditSources(sources) {
     const nonRedditSources = [];
 
     sources.forEach(src => {
-        // التحقق من روابط رديت العادية لتجميعها، واستثناء الروابط المخصصة مثل Multireddits أو المواقع الخارجية مثل The Onion لتتم معاملتها بشكل مستقل
         const match = src.url.match(/reddit\.com\/r\/([^/]+)\/\.rss/i);
         if (match && match[1]) {
             redditSubreddits.push(match[1]);
@@ -93,7 +92,8 @@ async function run() {
             const xmlData = await fetchXmlWithFallback(source.url);
             const feed = await parser.parseString(xmlData);
 
-            const items = (feed.items || []).slice(0, 4);
+            // تم رفع العدد هنا إلى 10 مقالات لكل مصدر لضمان تدفق ممتاز مع الحفاظ على استقرار الأداء
+            const items = (feed.items || []).slice(0, 10);
 
             for (const item of items) {
                 const rawTitle = item.title || '';
@@ -105,9 +105,9 @@ async function run() {
                 else if (item.enclosure && item.enclosure.url) imageUrl = item.enclosure.url;
 
                 const arabicTitle = await translateText(rawTitle);
-                await sleep(100);
+                await sleep(150); // فاصل زمني آمن للترجمة
                 const arabicDescription = await translateText(rawDesc);
-                await sleep(100);
+                await sleep(150); // فاصل زمني آمن للترجمة
 
                 allArticles.push({
                     id: item.guid || item.link || `id-${Math.random()}`,
@@ -123,7 +123,7 @@ async function run() {
                 });
             }
 
-            await sleep(2000);
+            await sleep(2000); // مهلة بين المصادر لتجنب ضغط الخوادم
 
         } catch (err) {
             console.log(`تخطي المصدر ${source.name}: (سبب: ${err.message})`);
