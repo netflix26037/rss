@@ -4,7 +4,7 @@ on:
   schedule:
     # تشغيل تلقائي كل 15 دقيقة
     - cron: '*/15 * * * *'
-  workflow_dispatch: # تسمح بالتجديد اليدوي من زر Actions
+  workflow_dispatch: # تشغيل يدوي من زر Actions
   push:
     branches:
       - main
@@ -37,8 +37,15 @@ jobs:
 
       - name: Run Script
         run: |
-          # قم بتعديل هذا السطر باسم السكريبت الخاص بك (مثلاً: python generate_feed.py)
           python main.py
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: feed-data
+          path: |
+            feed.json
+            sources.json
 
       - name: Commit and Push Updated Feed
         run: |
