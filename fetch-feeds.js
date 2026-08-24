@@ -7,7 +7,6 @@ const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 WebDashboard/2.0';
 
-// دالة الترجمة السريعة
 async function translateText(text) {
     if (!text || !text.trim()) return '';
     const cleanText = text.replace(/<[^>]*>?/gm, '').replace(/\s+/g, ' ').trim().substring(0, 250);
@@ -25,7 +24,6 @@ async function translateText(text) {
     return cleanText;
 }
 
-// دالة جلب RSS مع محاولة استخدام Proximity Proxy عند حظر 429
 async function fetchXmlWithFallback(rawUrl) {
     try {
         const res = await axios.get(rawUrl, {
@@ -35,7 +33,6 @@ async function fetchXmlWithFallback(rawUrl) {
         return res.data;
     } catch (err) {
         if (err.response && err.response.status === 429) {
-            // تجربة الجلب عبر وكيل مفتوح في حال الحظر
             const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(rawUrl)}`;
             const proxyRes = await axios.get(proxyUrl, { timeout: 10000 });
             return proxyRes.data;
@@ -44,13 +41,13 @@ async function fetchXmlWithFallback(rawUrl) {
     }
 }
 
-// دالة تحويل قائمة sources إلى مجموعات مدمجة (Multi-subreddits)
 function groupRedditSources(sources) {
     const redditSubreddits = [];
     const nonRedditSources = [];
 
     sources.forEach(src => {
-        const match = src.url.match(/reddit\.com\/r\/([^/]+)/i);
+        // التحقق من روابط رديت العادية لتجميعها، واستثناء الروابط المخصصة مثل Multireddits أو المواقع الخارجية مثل The Onion لتتم معاملتها بشكل مستقل
+        const match = src.url.match(/reddit\.com\/r\/([^/]+)\/\.rss/i);
         if (match && match[1]) {
             redditSubreddits.push(match[1]);
         } else {
@@ -59,8 +56,6 @@ function groupRedditSources(sources) {
     });
 
     const groupedSources = [...nonRedditSources];
-
-    // تقسيم المجتمعات إلى مجموعات (كل مجموعة تحتوي 12 مجتمعاً)
     const CHUNK_SIZE = 12;
     for (let i = 0; i < redditSubreddits.length; i += CHUNK_SIZE) {
         const chunk = redditSubreddits.slice(i, i + CHUNK_SIZE);
@@ -87,7 +82,6 @@ async function run() {
         ];
     }
 
-    // دمج الـ 110 مصدر إلى مجموعات قليلة لتفادي حظر 429
     const sources = groupRedditSources(rawSources);
     console.log(`تم تقليص الطلبات من ${rawSources.length} إلى ${sources.length} طلباً مدمجاً لتفادي الحظر.`);
 
@@ -129,7 +123,6 @@ async function run() {
                 });
             }
 
-            // مهلة ثانيتين بين كل مجموعة وأخرى
             await sleep(2000);
 
         } catch (err) {
