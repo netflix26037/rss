@@ -2,7 +2,6 @@ name: Update News Feed
 
 on:
   schedule:
-    # تشغيل تلقائي كل 15 دقيقة
     - cron: '*/15 * * * *'
   workflow_dispatch:
   push:
@@ -27,7 +26,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          npm install rss-parser axios node-fetch
+          npm install rss-parser axios
 
       - name: Run Fetch Script
         run: |
@@ -37,6 +36,6 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add feed.json articles.json sources.json || true
+          git add feed.json sources.json || true
           git commit -m "Auto-update feed.json [skip ci]" || echo "No changes to commit"
           git push
