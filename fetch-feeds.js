@@ -1,222 +1,94 @@
-const fs = require('fs');
 const Parser = require('rss-parser');
 const axios = require('axios');
+const fs = require('fs');
 
-const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
-const GROQ_API_KEY = process.env.GROQ_API_KEY;
-
-const GROQ_MODELS = [
-  'openai/gpt-oss-20b',
-  'qwen/qwen3.6-27b',
-  'openai/gpt-oss-120b'
-];
-
-function cleanAndExtractText(html) {
-  if (!html) return '';
-  
-  let cleaned = html
-    .replace(/<!--[\s\S]*?-->/g, '')
-    .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
-    .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/&#\d+;/g, ' ')
-    .replace(/&[a-z]+;/gi, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
-
-  cleaned = cleaned.replace(/submitted by\s+\/u\/\S+/gi, '');
-  cleaned = cleaned.replace(/to\s+r\/\S+/gi, '');
-  cleaned = cleaned.replace(/\[link\]/gi, '');
-  cleaned = cleaned.replace(/\[comments\]/gi, '');
-
-  return cleaned.trim();
-}
-
-async function translateText(text, maxRetries = 3) {
-  if (!text || text.length < 2) return '';
-  if (!GROQ_API_KEY) {
-    console.warn('⚠️ GROQ_API_KEY غير معرف في GitHub Secrets!');
-    return text;
-  }
-
-  const shortText = text.substring(0, 300);
-
-  for (const modelName of GROQ_MODELS) {
-    for (let attempt = 1; attempt <= maxRetries; attempt++) {
-      try {
-        const response = await axios.post(
-          'https://api.groq.com/openai/v1/chat/completions',
-          {
-            model: modelName,
-            messages: [
-              {
-                role: 'system',
-                content: 'You are a professional translator. Translate the given text accurately to Arabic. Output ONLY the Arabic translation, with no explanation or extra quotes.'
-              },
-              {
-                role: 'user',
-                content: shortText
-              }
-            ],
-            temperature: 0.2
-          },
-          {
-            headers: {
-              'Authorization': `Bearer ${GROQ_API_KEY}`,
-              'Content-Type': 'application/json'
-            },
-            timeout: 12000
-          }
-        );
-
-        const result = response.data?.choices?.[0]?.message?.content?.trim();
-        if (result) return result;
-      } catch (e) {
-        const errorMsg = e.response?.data?.error?.message || e.message;
-
-        // إذا تجاوزت حد الطلبات (Rate limit)، انتظر قليلاً وأعد المحاولة
-        if (errorMsg.includes('Rate limit') || e.response?.status === 429) {
-          const waitTime = attempt * 3000;
-          await delay(waitTime);
-          continue;
-        }
-
-        if (errorMsg.includes('decommissioned') || errorMsg.includes('does not exist') || errorMsg.includes('access')) {
-          break; // انتقل للنموذج التالي
-        }
-
-        console.error(`❌ خطأ أثناء الترجمة (${modelName}): ${errorMsg}`);
-        break;
-      }
+const parser = new Parser({
+    customFields: {
+        item: ['media:content', 'media:thumbnail', 'enclosure']
     }
-  }
+});
 
-  return shortText;
-}
+// دالة ترجمة مستقرة لا تحظرها السيرفرات
+async function translateText(text) {
+    if (!text || !text.trim()) return '';
+    
+    // تنظيف النص
+    const cleanText = text.replace(/<[^>]*>?/gm, '').replace(/\s+/g, ' ').trim().substring(0, 300);
+    if (!cleanText) return '';
 
-async function fetchFeedContent(url, retries = 2) {
-  let targetUrl = url.trim();
-
-  if (targetUrl.includes('reddit.com')) {
-    targetUrl = targetUrl.replace(/\/$/, '');
-    if (!targetUrl.endsWith('.rss')) {
-      targetUrl += '/.rss';
-    }
-  }
-
-  for (let attempt = 1; attempt <= retries; attempt++) {
     try {
-      const response = await axios.get(targetUrl, {
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-        },
-        timeout: 15000
-      });
-      return response.data;
-    } catch (e) {
-      if (attempt === retries) return null;
-      await delay(2000);
+        const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ar&dt=t&q=${encodeURIComponent(cleanText)}`;
+        const response = await axios.get(url, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
+            },
+            timeout: 5000
+        });
+        
+        if (response.data && response.data[0]) {
+            return response.data[0].map(item => item[0]).join('');
+        }
+    } catch (error) {
+        console.log(`تعثرت ترجمة جزيئية: ${cleanText.substring(0, 20)}`);
     }
-  }
-  return null;
+    return cleanText;
 }
 
 async function run() {
-  try {
-    if (!fs.existsSync('feed.json')) {
-      console.error('❌ خطأ: ملف feed.json غير موجود!');
-      return;
+    let sources = [];
+    try {
+        const sourcesData = fs.readFileSync('./sources.json', 'utf8');
+        sources = JSON.parse(sourcesData);
+    } catch (e) {
+        console.log('استخدام القائمة الافتراضية للمصادر...');
+        sources = [
+            { name: 'Reddit WorldNews', url: 'https://www.reddit.com/r/worldnews/.rss', category: 'أخبار' },
+            { name: 'Reddit Technology', url: 'https://www.reddit.com/r/technology/.rss', category: 'تقنية' }
+        ];
     }
 
-    const rawFeeds = fs.readFileSync('feed.json', 'utf8');
-    const sources = JSON.parse(rawFeeds);
-
     let allArticles = [];
-    console.log(`🚀 بدء جلب وترجمة العناوين والمواضيع عبر Groq API...`);
 
     for (const source of sources) {
-      if (!source.url) continue;
+        try {
+            console.log(`جاري جلب وترجمة: ${source.name}...`);
+            const feed = await parser.parseURL(source.url);
+            const items = feed.items.slice(0, 8); // أفضل 8 مقالات لسرعة التنفيذ
 
-      try {
-        const xmlData = await fetchFeedContent(source.url);
-        if (!xmlData) continue;
+            for (const item of items) {
+                const rawTitle = item.title || '';
+                const rawDesc = item.contentSnippet || item.content || item.summary || '';
 
-        const parser = new Parser({
-          timeout: 10000,
-          customFields: { item: ['media:content', 'media:thumbnail'] }
-        });
+                let imageUrl = null;
+                if (item['media:content'] && item['media:content'].$.url) imageUrl = item['media:content'].$.url;
+                else if (item['media:thumbnail'] && item['media:thumbnail'].$.url) imageUrl = item['media:thumbnail'].$.url;
+                else if (item.enclosure && item.enclosure.url) imageUrl = item.enclosure.url;
 
-        const feed = await parser.parseString(xmlData);
-        
-        if (feed && feed.items && feed.items.length > 0) {
-          const topItems = feed.items.slice(0, 10);
-          const processedItems = [];
+                // ترجمة العنوان والوصف هنا على السيرفر
+                const arabicTitle = await translateText(rawTitle);
+                const arabicDescription = await translateText(rawDesc);
 
-          for (const item of topItems) {
-            const rawTitle = item.title || '';
-            const rawDesc = cleanAndExtractText(item.contentSnippet || item.content || item.summary || '');
-
-            const translatedTitle = await translateText(rawTitle);
-            await delay(1200); // زيادة التأخير بين الطلبات لتجنب تجاوز الحد
-
-            let finalArabicDesc = '';
-            if (rawDesc && rawDesc.length > 5) {
-              finalArabicDesc = await translateText(rawDesc);
-            } else {
-              finalArabicDesc = `آخر الأخبار والتحديثات حول "${translatedTitle || rawTitle}" من مجتمع ${source.name}.`;
+                allArticles.push({
+                    id: item.guid || item.link || `id-${Math.random()}`,
+                    title: rawTitle,
+                    arabicTitle: arabicTitle || rawTitle,
+                    description: rawDesc,
+                    arabicDescription: arabicDescription || rawDesc,
+                    link: item.link || '#',
+                    sourceName: source.name,
+                    category: source.category || 'عام',
+                    pubDate: item.pubDate || item.isoDate || new Date().toISOString(),
+                    media: { image: imageUrl }
+                });
             }
-
-            await delay(1200);
-
-            processedItems.push({
-              id: item.guid || item.link || item.title,
-              title: translatedTitle || rawTitle,
-              arabicTitle: translatedTitle || rawTitle,
-              originalTitle: rawTitle,
-              link: item.link || '',
-              pubDate: item.pubDate || item.isoDate || new Date().toISOString(),
-              description: finalArabicDesc,
-              arabicDescription: finalArabicDesc,
-              originalDescription: rawDesc || rawTitle,
-              sourceName: source.name,
-              category: source.category || 'عام',
-              media: {
-                image: extractImage(item),
-                video: null
-              }
-            });
-          }
-
-          allArticles.push(...processedItems);
-          console.log(`✓ تم جلب وترجمة (${processedItems.length}) مقال من: ${source.name}`);
+        } catch (err) {
+            console.log(`خطأ في جلب ${source.name}:`, err.message);
         }
-      } catch (err) {
-        console.error(`✗ خطأ في (${source.name}):`, err.message);
-      }
-
-      await delay(1500);
     }
 
     allArticles.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
-
-    if (allArticles.length > 0) {
-      fs.writeFileSync('articles.json', JSON.stringify(allArticles, null, 2), 'utf8');
-      console.log(`\n✅ تم حفظ جميع المقالات والخلاصات المترجمة بنجاح في articles.json`);
-    }
-
-  } catch (error) {
-    console.error('خطأ عام:', error);
-  }
-}
-
-function extractImage(item) {
-  if (item['media:content'] && item['media:content'].$ && item['media:content'].$.url) return item['media:content'].$.url;
-  if (item['media:thumbnail'] && item['media:thumbnail'].$ && item['media:thumbnail'].$.url) return item['media:thumbnail'].$.url;
-  if (item.media && item.media['$'] && item.media['$'].url) return item.media['$'].url;
-  const htmlContent = item.content || item['content:encoded'] || item.summary || '';
-  const imgMatch = htmlContent.match(/<img[^>]+src=["']([^"']+)["']/i);
-  if (imgMatch && !imgMatch[1].includes('preview.redd.it/award_images')) return imgMatch[1];
-  return null;
+    fs.writeFileSync('./feed.json', JSON.stringify(allArticles, null, 2), 'utf8');
+    console.log(`تم حفظ ${allArticles.length} مقالة مترجمة جاهزة في feed.json`);
 }
 
 run();
