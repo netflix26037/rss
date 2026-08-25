@@ -1,5 +1,10 @@
 [
   {
+  "name": "CryptoTradingBot",
+  "url": "https://www.reddit.com/r/CryptoTradingBot/.rss",
+  "category": "كريبتو وتقنية"
+},
+  {
   "name": "AllCryptoBets",
   "url": "https://www.reddit.com/r/AllCryptoBets/.rss",
   "category": "كريبتو"
