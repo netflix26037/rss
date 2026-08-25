@@ -1,5 +1,10 @@
 [
   {
+  "name": "singularity",
+  "url": "https://www.reddit.com/r/singularity/.rss",
+  "category": "ذكاء اصطناعي وتقنية"
+},
+  {
   "name": "CryptoTradingBot",
   "url": "https://www.reddit.com/r/CryptoTradingBot/.rss",
   "category": "كريبتو وتقنية"
