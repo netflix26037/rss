@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بالعربي — التصنيفات</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+  :root{
+    --bg:#0a0d14; --bg2:#0e131c; --card:#121722; --card-hi:#171d29;
+    --line:#232b3a; --text:#eef1f6; --muted:#8b93a3; --muted2:#5f6879;
+    --accent:#ff5a36; --accent-dim:#ff5a3622;
+    --unread:#ef4444; --read:#22c55e; --star:#f5a524;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:'IBM Plex Sans Arabic', Tahoma, sans-serif;
+    min-height:100vh;
+  }
+  .mono{font-family:'IBM Plex Mono', monospace;}
+
+  /* ---- phone shell for preview ---- */
+  .phone{ max-width:430px; margin:0 auto; min-height:100vh; background:var(--bg); position:relative; overflow-x:hidden;}
+
+  /* ---- status/ticker bar ---- */
+  .ticker{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:10px 16px; background:var(--bg2); border-bottom:1px solid var(--line);
+    font-size:12.5px;
+  }
+  .ticker .prices{display:flex; gap:8px;}
+  .chip{
+    display:flex; align-items:center; gap:5px;
+    background:var(--card); border:1px solid var(--line); border-radius:8px;
+    padding:5px 10px; font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600;
+  }
+  .chip.btc{color:#4dd6a8;}
+  .live{display:flex; align-items:center; gap:5px; color:var(--muted); font-size:12px;}
+  .dot{width:6px;height:6px;border-radius:50%;background:var(--read); box-shadow:0 0 6px var(--read);}
+
+  /* ---- header ---- */
+  .app-header{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px; border-bottom:1px solid var(--line);
+  }
+  .brand{display:flex; align-items:center; gap:10px;}
+  .brand-mark{
+    width:38px;height:38px;border-radius:10px;
+    background:linear-gradient(145deg,var(--accent),#c93f1f);
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:#fff;
+  }
+  .brand-text h1{font-size:16px; font-weight:800;}
+  .brand-text span{font-size:11px; color:var(--muted); font-family:'IBM Plex Mono',monospace;}
+  .menu-btn{width:36px;height:36px;border-radius:9px;background:var(--card);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--muted);}
+
+  /* ---- section label ---- */
+  .section-label{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:20px 16px 12px;
+  }
+  .section-label h2{font-size:17px; font-weight:800;}
+  .section-label .count{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted2);}
+
+  /* ---- category grid ---- */
+  .cat-grid{ padding:0 16px 24px; display:flex; flex-direction:column; gap:12px; }
+
+  .cat-card{
+    position:relative; overflow:hidden;
+    display:flex; align-items:center; gap:14px;
+    background:var(--card); border:1px solid var(--line); border-radius:16px;
+    padding:16px; text-decoration:none; color:inherit;
+    transition:transform .15s ease, border-color .15s ease;
+  }
+  .cat-card:active{ transform:scale(.98); }
+  .cat-card::before{
+    content:''; position:absolute; inset-inline-start:0; top:0; bottom:0; width:3px;
+    background:var(--accent-color, var(--accent));
+  }
+  .cat-icon{
+    width:48px;height:48px;border-radius:12px;flex:0 0 auto;
+    display:flex;align-items:center;justify-content:center;font-size:22px;
+    background:var(--icon-bg);
+  }
+  .cat-body{flex:1; min-width:0;}
+  .cat-body h3{font-size:15.5px; font-weight:700; margin-bottom:4px;}
+  .cat-meta{display:flex; align-items:center; gap:10px; font-size:12px; color:var(--muted);}
+  .cat-meta .sep{width:3px;height:3px;border-radius:50%;background:var(--muted2);}
+  .cat-side{display:flex; flex-direction:column; align-items:center; gap:6px; flex:0 0 auto;}
+  .unread-badge{
+    min-width:26px; height:22px; padding:0 7px; border-radius:11px;
+    background:var(--unread); color:#fff; font-family:'IBM Plex Mono',monospace;
+    font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center;
+  }
+  .unread-badge.zero{ background:var(--card-hi); color:var(--muted2); border:1px solid var(--line); }
+  .chev{color:var(--muted2); font-size:18px;}
+
+  /* ---- article page (hidden, shown via hash) ---- */
+  #catPage{ display:none; }
+  body.on-cat #catList{ display:none; }
+  body.on-cat #catPage{ display:block; }
+
+  .back-row{
+    display:flex; align-items:center; gap:10px; padding:14px 16px;
+    border-bottom:1px solid var(--line); position:sticky; top:0; background:var(--bg); z-index:5;
+  }
+  .back-btn{
+    width:34px;height:34px;border-radius:9px;background:var(--card);border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;font-size:16px; color:var(--text); text-decoration:none;
+  }
+  .back-row h2{font-size:16px; font-weight:800; flex:1;}
+  .back-row .cnt{font-size:11.5px; color:var(--muted); font-family:'IBM Plex Mono',monospace;}
+
+  .feed{ padding:14px 16px 40px; display:flex; flex-direction:column; gap:14px; }
+  .art-card{
+    background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px;
+  }
+  .art-top{ display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; }
+  .art-time{ display:flex; align-items:center; gap:6px; color:var(--muted); font-size:12px; }
+  .src-tag{
+    background:var(--accent-dim); color:var(--accent); border:1px solid #ff5a3644;
+    font-size:11.5px; font-weight:700; padding:4px 10px; border-radius:8px;
+  }
+  .art-title{ font-size:15.5px; font-weight:700; line-height:1.5; margin-bottom:8px; }
+  .art-summary{ font-size:13px; color:var(--muted); line-height:1.7; margin-bottom:12px; }
+  .art-summary .translated-tag{
+    display:inline-flex; align-items:center; gap:4px; font-size:10.5px; color:var(--muted2);
+    font-family:'IBM Plex Mono',monospace; margin-bottom:6px;
+  }
+  .art-actions{ display:flex; gap:8px; border-top:1px dashed var(--line); padding-top:12px; }
+  .visit-btn{
+    flex:1; background:var(--accent); color:#fff; text-align:center; text-decoration:none;
+    padding:10px; border-radius:10px; font-size:13px; font-weight:700;
+  }
+  .star-btn{
+    width:40px; display:flex; align-items:center; justify-content:center;
+    background:var(--card-hi); border:1px solid var(--line); border-radius:10px; color:var(--star);
+  }
+
+  /* ---- bottom nav ---- */
+  .bottom-nav{
+    position:sticky; bottom:0; display:flex; justify-content:space-around;
+    background:var(--bg2); border-top:1px solid var(--line); padding:12px 0 16px;
+  }
+  .nav-item{ display:flex; flex-direction:column; align-items:center; gap:4px; }
+  .nav-badge{
+    width:38px;height:38px;border-radius:11px; display:flex; align-items:center; justify-content:center;
+    font-size:13px; font-weight:800; font-family:'IBM Plex Mono',monospace; position:relative;
+  }
+  .nav-item.read .nav-badge{ background:#16241c; color:var(--read); }
+  .nav-item.fav .nav-badge{ background:#251d0f; color:var(--star); }
+  .nav-item.unread .nav-badge{ background:#2a1414; color:var(--unread); }
+  .nav-item span{ font-size:11.5px; color:var(--muted); }
+</style>
+</head>
+<body>
+<div class="phone">
+
+  <div class="ticker">
+    <div class="live"><span class="dot"></span>مباشر</div>
+    <div class="prices">
+      <div class="chip">BRENT <span style="color:var(--star)">--.--</span> 🛢️</div>
+      <div class="chip btc">BTC $79,160</div>
+    </div>
+  </div>
+
+  <div class="app-header">
+    <div class="menu-btn">☰</div>
+    <div class="brand">
+      <div class="brand-text" style="text-align:start">
+        <h1>بالعربي</h1>
+        <span>مصادر مصنّفة · مترجمة تلقائيًا</span>
+      </div>
+      <div class="brand-mark">ع</div>
+    </div>
+  </div>
+
+  <!-- ============ CATEGORY LIST PAGE ============ -->
+  <div id="catList">
+    <div class="section-label">
+      <h2>الأقسام</h2>
+      <span class="count">199 مصدر · 6 أقسام</span>
+    </div>
+
+    <div class="cat-grid">
+
+      <a class="cat-card" href="#crypto" style="--accent-color:#f7931a" onclick="openCat('crypto')">
+        <div class="cat-icon" style="background:#f7931a22; color:#f7931a">₿</div>
+        <div class="cat-body">
+          <h3>كريبتو</h3>
+          <div class="cat-meta"><span>36 مصدر</span><span class="sep"></span><span>آخر تحديث: الآن</span></div>
+        </div>
+        <div class="cat-side">
+          <div class="unread-badge">128</div>
+          <div class="chev">‹</div>
+        </div>
+      </a>
+
+      <a class="cat-card" href="#stocks" style="--accent-color:#4dd6a8" onclick="openCat('stocks')">
+        <div class="cat-icon" style="background:#4dd6a822; color:#4dd6a8">📈</div>
+        <div class="cat-body">
+          <h3>الأسهم</h3>
+          <div class="cat-meta"><span>33 مصدر</span><span class="sep"></span><span>آخر تحديث: قبل 4 د</span></div>
+        </div>
+        <div class="cat-side">
+          <div class="unread-badge">94</div>
+          <div class="chev">‹</div>
+        </div>
+      </a>
+
+      <a class="cat-card" href="#economy" style="--accent-color:#5b8def" onclick="openCat('economy')">
+        <div class="cat-icon" style="background:#5b8def22; color:#5b8def">📊</div>
+        <div class="cat-body">
+          <h3>الاقتصاد</h3>
+          <div class="cat-meta"><span>12 مصدر</span><span class="sep"></span><span>آخر تحديث: قبل 20 د</span></div>
+        </div>
+        <div class="cat-side">
+          <div class="unread-badge">17</div>
+          <div class="chev">‹</div>
+        </div>
+      </a>
+
+      <a class="cat-card" href="#news" style="--accent-color:#ff5a36" onclick="openCat('news')">
+        <div class="cat-icon" style="background:#ff5a3622; color:#ff5a36">📰</div>
+        <div class="cat-body">
+          <h3>الأخبار</h3>
+          <div class="cat-meta"><span>10 مصادر</span><span class="sep"></span><span>آخر تحديث: قبل 9 د</span></div>
+        </div>
+        <div class="cat-side">
+          <div class="unread-badge">41</div>
+          <div class="chev">‹</div>
+        </div>
+      </a>
+
+      <a class="cat-card" href="#travel" style="--accent-color:#c084fc" onclick="openCat('travel')">
+        <div class="cat-icon" style="background:#c084fc22; color:#c084fc">✈️</div>
+        <div class="cat-body">
+          <h3>سفر</h3>
+          <div class="cat-meta"><span>1 مصدر</span><span class="sep"></span><span>آخر تحديث: أمس</span></div>
+        </div>
+        <div class="cat-side">
+          <div class="unread-badge zero">0</div>
+          <div class="chev">‹</div>
+        </div>
+      </a>
+
+      <a class="cat-card" href="#general" style="--accent-color:#8b93a3" onclick="openCat('general')">
+        <div class="cat-icon" style="background:#8b93a322; color:#c7ccd6">🗂️</div>
+        <div class="cat-body">
+          <h3>عام</h3>
+          <div class="cat-meta"><span>107 مصادر</span><span class="sep"></span><span>آخر تحديث: قبل 1 د</span></div>
+        </div>
+        <div class="cat-side">
+          <div class="unread-badge">253</div>
+          <div class="chev">‹</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- ============ CATEGORY FEED PAGE ============ -->
+  <div id="catPage">
+    <div class="back-row">
+      <a class="back-btn" href="#" onclick="closeCat()">←</a>
+      <h2 id="catTitle">كريبتو</h2>
+      <span class="cnt" id="catCount">128 غير مقروء</span>
+    </div>
+
+    <div class="feed">
+
+      <div class="art-card">
+        <div class="art-top">
+          <span class="src-tag">Crypto Briefing</span>
+          <div class="art-time">قبل 3 س 🕐</div>
+        </div>
+        <div class="translated-tag">🌐 مترجم تلقائيًا</div>
+        <div class="art-title">مايكروسوفت تنهي مشروع مراكز البيانات تحت الماء بينما يستكشف آخرون البنية التحتية البحرية للذكاء الاصطناعي</div>
+        <div class="art-summary">التحول نحو المجموعات البرية يعكس تركيز الشركة على البنية التحتية القابلة للتوسع، بينما تبقى مراكز البيانات البحرية مسعى محدود الانتشار حتى الآن...</div>
+        <div class="art-actions">
+          <a class="visit-btn" href="#">زيارة المصدر ↗</a>
+          <div class="star-btn">☆</div>
+        </div>
+      </div>
+
+      <div class="art-card">
+        <div class="art-top">
+          <span class="src-tag">Crypto Briefing</span>
+          <div class="art-time">قبل 3 س 🕐</div>
+        </div>
+        <div class="translated-tag">🌐 مترجم تلقائيًا</div>
+        <div class="art-title">LayerZero تكشف عن منصة ATLAS للمطورين، والشبكة التجريبية قادمة قريبًا</div>
+        <div class="art-summary">يمكن لمنصة ATLAS أن تُحدث نقلة في التمويل العالمي عبر تمكين بنية تداول لامركزية سلسة، ما قد يعيد تشكيل ديناميكيات السوق...</div>
+        <div class="art-actions">
+          <a class="visit-btn" href="#">زيارة المصدر ↗</a>
+          <div class="star-btn">☆</div>
+        </div>
+      </div>
+
+      <div class="art-card">
+        <div class="art-top">
+          <span class="src-tag">r/CryptoCurrency</span>
+          <div class="art-time">قبل 5 س 🕐</div>
+        </div>
+        <div class="translated-tag">🌐 مترجم تلقائيًا</div>
+        <div class="art-title">نقاش المجتمع: هل بيتكوين مستعد لاختراق مستوى 82 ألف دولار هذا الأسبوع؟</div>
+        <div class="art-summary">تباينت آراء المتداولين بين متفائل يرى الزخم داعمًا لاستمرار الصعود، وحذر يشير إلى ضعف حجم التداول مقارنة بالمستويات السابقة...</div>
+        <div class="art-actions">
+          <a class="visit-btn" href="#">زيارة المصدر ↗</a>
+          <div class="star-btn">☆</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="bottom-nav">
+    <div class="nav-item read"><div class="nav-badge">45</div><span>تمت القراءة</span></div>
+    <div class="nav-item fav"><div class="nav-badge">0</div><span>المفضلة</span></div>
+    <div class="nav-item unread"><div class="nav-badge">414</div><span>غير مقروء</span></div>
+  </div>
+
+</div>
+
+<script>
+  const catData = {
+    crypto:  { title: 'كريبتو',   unread: 128 },
+    stocks:  { title: 'الأسهم',    unread: 94 },
+    economy: { title: 'الاقتصاد',  unread: 17 },
+    news:    { title: 'الأخبار',   unread: 41 },
+    travel:  { title: 'سفر',       unread: 0 },
+    general: { title: 'عام',       unread: 253 },
+  };
+
+  function openCat(key){
+    const d = catData[key];
+    document.getElementById('catTitle').textContent = d.title;
+    document.getElementById('catCount').textContent = d.unread + ' غير مقروء';
+    document.body.classList.add('on-cat');
+    window.scrollTo(0,0);
+  }
+  function closeCat(){
+    document.body.classList.remove('on-cat');
+    history.replaceState(null, '', '#');
+  }
+</script>
+</body>
+</html>
