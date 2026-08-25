@@ -1,5 +1,10 @@
 [
   {
+  "name": "numerai",
+  "url": "https://www.reddit.com/r/numerai/.rss",
+  "category": "ذكاء اصطناعي وتداول"
+},
+  {
   "name": "MoneroMining",
   "url": "https://www.reddit.com/r/MoneroMining/.rss",
   "category": "كريبتو وتقنية"
