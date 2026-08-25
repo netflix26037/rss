@@ -1,0 +1,997 @@
+[
+  {
+    "name": "PoursTea",
+    "url": "https://www.reddit.com/r/PoursTea/.rss",
+    "category": "عام"
+  },
+  {
+    "name": "مجتمعي",
+    "url": "https://www.reddit.com/user/strictdog2350/m/mjtmy/.rss",
+    "category": "عام"
+  },
+  {
+    "name": "Reddit | Cruise",
+    "url": "https://www.reddit.com/r/Cruise/.rss",
+    "category": "سفر"
+  },
+  {
+    "name": "EconomyCharts",
+    "url": "https://www.reddit.com/r/EconomyCharts/.rss",
+    "category": "الاقتصاد"
+  },
+  {
+    "name": "The Dismal Science",
+    "url": "https://www.reddit.com/r/Economics/.rss",
+    "category": "الاقتصاد"
+  },
+  {
+    "name": "EU_Economics",
+    "url": "https://www.reddit.com/r/EU_Economics/.rss",
+    "category": "الاقتصاد"
+  },
+  {
+    "name": "Oil, gas, and other products",
+    "url": "https://www.reddit.com/r/oil/.rss",
+    "category": "الاقتصاد"
+  },
+  {
+    "name": "OilPrices",
+    "url": "https://www.reddit.com/r/OilPrices/.rss",
+    "category": "الاقتصاد"
+  },
+  {
+    "name": "NoFilterFinance",
+    "url": "https://www.reddit.com/r/NoFilterFinance/.rss",
+    "category": "الاقتصاد"
+  },
+  {
+    "name": "Economic Inflation",
+    "url": "https://www.reddit.com/r/inflation/.rss",
+    "category": "الاقتصاد"
+  },
+  {
+    "name": "Economy",
+    "url": "https://www.reddit.com/r/economy/.rss",
+    "category": "الاقتصاد"
+  },
+  {
+    "name": "bondmarket",
+    "url": "https://www.reddit.com/r/bondmarket/.rss",
+    "category": "الاقتصاد"
+  },
+  {
+    "name": "BoredPandaHQ",
+    "url": "https://www.reddit.com/r/BoredPandaHQ/.rss",
+    "category": "الاقتصاد"
+  },
+  {
+    "name": "business",
+    "url": "https://www.reddit.com/r/business/.rss",
+    "category": "الاقتصاد"
+  },
+  {
+    "name": "BusinessTodayNews",
+    "url": "https://www.reddit.com/r/BusinessTodayNews/.rss",
+    "category": "الاقتصاد"
+  },
+  {
+    "name": "Stock Options",
+    "url": "https://www.reddit.com/r/Optionmillionaires/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "Penny Stocks",
+    "url": "https://www.reddit.com/r/Pennystock/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "Market_Forecasts",
+    "url": "https://www.reddit.com/r/Market_Forecasts/new/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "PennyStocks on Watch",
+    "url": "https://www.reddit.com/r/PennyStocksWatch/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "pennystocks",
+    "url": "https://www.reddit.com/r/pennystocks/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "MBOT_Stock",
+    "url": "https://www.reddit.com/r/MBOT_Stock/new/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "MarketPulseReport",
+    "url": "https://www.reddit.com/r/MarketPulseReport/new/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "Junior_Stocks",
+    "url": "https://www.reddit.com/r/Junior_Stocks/new/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "Options",
+    "url": "https://www.reddit.com/r/options/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "NextMoveStocks",
+    "url": "https://www.reddit.com/r/NextMoveStocks/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "FFIEMeltdown",
+    "url": "https://www.reddit.com/r/FFIEMeltdown/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "hot_stocks",
+    "url": "https://www.reddit.com/r/hot_stocks/new/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "FFIE",
+    "url": "https://www.reddit.com/r/FFIE/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "epiphanystonk",
+    "url": "https://www.reddit.com/r/epiphanystonk/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "Stock Dividends",
+    "url": "https://www.reddit.com/r/dividends/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "investing",
+    "url": "https://www.reddit.com/r/investing/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "InterstellarKinetics",
+    "url": "https://www.reddit.com/r/InterstellarKinetics/new/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "ADTX",
+    "url": "https://www.reddit.com/r/ADTX/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "GrowthStocks",
+    "url": "https://www.reddit.com/r/GrowthStocks/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "BeginnerInvesting",
+    "url": "https://www.reddit.com/r/BeginnerInvesting/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "AMD Subreddit",
+    "url": "https://www.reddit.com/r/Amd/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "amcstock",
+    "url": "https://www.reddit.com/r/amcstock/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "wallstreetbets_wins",
+    "url": "https://www.reddit.com/r/wallstreetbets_wins/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "WallStreetbetsELITE",
+    "url": "https://www.reddit.com/r/WallStreetbetsELITE/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "wallstreetbetsGER",
+    "url": "https://www.reddit.com/r/wallstreetbetsGER/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "Wall Street Silver",
+    "url": "https://www.reddit.com/r/Wallstreetsilver/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "wallstreetbets",
+    "url": "https://www.reddit.com/r/wallstreetbets/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "EMJX",
+    "url": "https://www.reddit.com/r/EMJX/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "Biotech & Pharma Stock",
+    "url": "https://www.reddit.com/r/biotech_stocks/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "10xPennyStocks",
+    "url": "https://www.reddit.com/r/10xPennyStocks/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "100xpennystock",
+    "url": "https://www.reddit.com/r/100xpennystock/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "Opendoor",
+    "url": "https://www.reddit.com/r/opendoor/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "GameStop Stock",
+    "url": "https://www.reddit.com/r/GME/.rss",
+    "category": "الاسهم"
+  },
+  {
+    "name": "Bitcoin for Beginners",
+    "url": "https://www.reddit.com/r/BitcoinBeginners/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "bitcoin_com",
+    "url": "https://www.reddit.com/r/bitcoin_com/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "CryptoMoonShots",
+    "url": "https://www.reddit.com/r/CryptoMoonShots/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "CryptoMarkets",
+    "url": "https://www.reddit.com/r/CryptoMarkets/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "CryptoCurrency Memes",
+    "url": "https://www.reddit.com/r/cryptocurrencymemes/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "Aptos Cryptocurrency",
+    "url": "https://www.reddit.com/r/Aptos/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "Binance",
+    "url": "https://www.reddit.com/r/binance/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "Ethereum",
+    "url": "https://www.reddit.com/r/ethereum/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "DeFi",
+    "url": "https://www.reddit.com/r/defi/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "RWA - Real World Asset Tokenization",
+    "url": "https://www.reddit.com/r/RWA/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "RWATimes",
+    "url": "https://www.reddit.com/r/RWATimes/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "Memecoins",
+    "url": "https://www.reddit.com/r/memecoins/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "Chainlink",
+    "url": "https://www.reddit.com/r/Chainlink/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "CryptoCurrency",
+    "url": "https://www.reddit.com/r/CryptoCurrency/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "Bitcoin Discussion",
+    "url": "https://www.reddit.com/r/btc/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "Sui",
+    "url": "https://www.reddit.com/r/sui/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "dogecoin",
+    "url": "https://www.reddit.com/r/dogecoin/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "Stellar XLM Lumens Trading",
+    "url": "https://www.reddit.com/r/xlm/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "litecoin",
+    "url": "https://www.reddit.com/r/litecoin/new/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "nanocurrency",
+    "url": "https://www.reddit.com/r/nanocurrency/new/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "memecoins (new)",
+    "url": "https://www.reddit.com/r/memecoins/new/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "OfficialTrumpCoin",
+    "url": "https://www.reddit.com/r/OfficialTrumpCoin/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "Hedera (HBAR)",
+    "url": "https://www.reddit.com/r/Hedera/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "ethtrader",
+    "url": "https://www.reddit.com/r/ethtrader/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "CryptoCurrencyFIRE",
+    "url": "https://www.reddit.com/r/CryptoCurrencyFIRE/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "CryptoChartWatch",
+    "url": "https://www.reddit.com/r/CryptoChartWatch/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "Crypto General",
+    "url": "https://www.reddit.com/r/Crypto_General/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "CryptoScams",
+    "url": "https://www.reddit.com/r/CryptoScams/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "Crypto Currency News Updates",
+    "url": "https://www.reddit.com/r/Crypto_Currency_News/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "BitcoinMarkets",
+    "url": "https://www.reddit.com/r/BitcoinMarkets/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "Buttcoin",
+    "url": "https://www.reddit.com/r/Buttcoin/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "algotrading",
+    "url": "https://www.reddit.com/r/algotrading/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "AltScope",
+    "url": "https://www.reddit.com/r/AltScope/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "XRP",
+    "url": "https://www.reddit.com/r/XRP/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "ChartScout_io",
+    "url": "https://www.reddit.com/r/ChartScout_io/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "Cardano",
+    "url": "https://www.reddit.com/r/cardano/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "The Onion Comments",
+    "url": "https://theonion.com/comments/feed/",
+    "category": "الاخبار"
+  },
+  {
+    "name": "The Onion",
+    "url": "https://theonion.com/feed/",
+    "category": "الاخبار"
+  },
+  {
+    "name": "USIranWar",
+    "url": "https://www.reddit.com/r/USIranWar/.rss",
+    "category": "الاخبار"
+  },
+  {
+    "name": "IranWarReport",
+    "url": "https://www.reddit.com/r/IranWarReport/.rss",
+    "category": "الاخبار"
+  },
+  {
+    "name": "Iran",
+    "url": "https://www.reddit.com/r/iran/.rss",
+    "category": "الاخبار"
+  },
+  {
+    "name": "Politics",
+    "url": "https://www.reddit.com/r/politics/.rss",
+    "category": "الاخبار"
+  },
+  {
+    "name": "inthenews",
+    "url": "https://www.reddit.com/r/inthenews/.rss",
+    "category": "الاخبار"
+  },
+  {
+    "name": "World News",
+    "url": "https://www.reddit.com/r/worldnews/.rss",
+    "category": "الاخبار"
+  },
+  {
+    "name": "US and International News",
+    "url": "https://www.reddit.com/r/news/.rss",
+    "category": "الاخبار"
+  },
+  {
+    "name": "USNEWS",
+    "url": "https://www.reddit.com/r/USNEWS/.rss",
+    "category": "الاخبار"
+  },
+  {
+    "name": "dogecoin - Google News",
+    "url": "https://news.google.com/news/rss/search/section/q/dogecoin/dogecoin?hl=en&gl=US",
+    "category": "عام"
+  },
+  {
+    "name": "Altcoins – Bitcoin News",
+    "url": "https://news.bitcoin.com/category/altcoins/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Bitcoin | The Guardian",
+    "url": "https://www.theguardian.com/technology/bitcoin/rss",
+    "category": "عام"
+  },
+  {
+    "name": "CriptoTendencias – Noticias sobre Criptomonedas, Bitcoin y Blockchain",
+    "url": "https://www.criptotendencias.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Coindoo – Bitcoin & Altcoin News and Reviews",
+    "url": "https://coindoo.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Bitcoin News, Bitcoins Kaufen, Bitcoin Kurs, Mining uvm. | BTC-Echo",
+    "url": "https://www.btc-echo.de/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Bitcoin News, Analysis & Features by Coin Spectator",
+    "url": "https://www.coinspectator.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Diario Bitcoin",
+    "url": "https://www.diariobitcoin.com/index.php/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Kraken Bitcoin Exchange",
+    "url": "http://blog.kraken.com/rss",
+    "category": "عام"
+  },
+  {
+    "name": "Inside Bitcoins | Bitcoin news | Price | Bitcoin Conferences",
+    "url": "https://insidebitcoins.com/feed",
+    "category": "عام"
+  },
+  {
+    "name": "Bitcoin Magazine Podcast - Bitcoin Magazine: Bitcoin News, Articles, Charts, and Guides",
+    "url": "https://bitcoinmagazine.com/.rss/full/tags/bitcoin-magazine-podcast",
+    "category": "عام"
+  },
+  {
+    "name": "bitcoin - Google News",
+    "url": "https://news.google.com/news/rss/search/section/q/bitcoin/bitcoin?hl=en&gl=US",
+    "category": "عام"
+  },
+  {
+    "name": "Bitcoinist.com",
+    "url": "https://bitcoinist.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "The Bitcoin News - Decentralised Bitcoin and Crypto News",
+    "url": "https://thebitcoinnews.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Bitcoin Network, News, Charts, Guides & Analysis",
+    "url": "https://www.livebitcoinnews.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "BTC-ECHO Invest | Bitcoin, Aktien & Finanzen",
+    "url": "https://btc-echo-invest.podigee.io/feed/mp3",
+    "category": "عام"
+  },
+  {
+    "name": "BTC-ECHO | Bitcoin News & Tutorials",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrBObJKg_1DVmQxjnkhSbwQ",
+    "category": "عام"
+  },
+  {
+    "name": "Yahoo News - Top Stories",
+    "url": "https://rss.news.yahoo.com/rss/topstories",
+    "category": "عام"
+  },
+  {
+    "name": "FOXNews.com",
+    "url": "https://feeds.feedburner.com/foxnews/latest",
+    "category": "عام"
+  },
+  {
+    "name": "NBC News Top Stories",
+    "url": "https://feeds.nbcnews.com/nbcnews/public/news",
+    "category": "عام"
+  },
+  {
+    "name": "ABC News: Top Stories",
+    "url": "https://feeds.abcnews.com/abcnews/topstories",
+    "category": "عام"
+  },
+  {
+    "name": "The New York Times",
+    "url": "https://www.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+    "category": "عام"
+  },
+  {
+    "name": "Ethereum Development and DApps",
+    "url": "https://www.reddit.com/r/ethdev/.rss",
+    "category": "عام"
+  },
+  {
+    "name": "Crypto.com Coin - CRO",
+    "url": "https://www.reddit.com/r/cro/.rss",
+    "category": "عام"
+  },
+  {
+    "name": "Bitcoin Canadian Subreddit",
+    "url": "https://www.reddit.com/r/BitcoinCA/.rss",
+    "category": "عام"
+  },
+  {
+    "name": "Crypto.com",
+    "url": "https://www.reddit.com/r/Crypto_com/.rss",
+    "category": "عام"
+  },
+  {
+    "name": "Clever Comebacks",
+    "url": "https://www.reddit.com/r/clevercomebacks/.rss",
+    "category": "عام"
+  },
+  {
+    "name": "SpaceXBets",
+    "url": "https://www.reddit.com/r/SpaceXBets/.rss",
+    "category": "عام"
+  },
+  {
+    "name": "AmanCrypto",
+    "url": "https://www.reddit.com/r/AmanCrypto/.rss",
+    "category": "عام"
+  },
+  {
+    "name": "sp500",
+    "url": "https://www.reddit.com/r/sp500/.rss",
+    "category": "عام"
+  },
+  {
+    "name": "cryptogon.com",
+    "url": "https://cryptogon.com/?feed=rss2",
+    "category": "عام"
+  },
+  {
+    "name": "Ethereum Research - Latest topics",
+    "url": "https://ethresear.ch/latest.rss",
+    "category": "عام"
+  },
+  {
+    "name": "Kraken",
+    "url": "https://blog.kraken.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "The Defiant",
+    "url": "https://thedefiant.io/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Bitcoin.fr",
+    "url": "https://bitcoin.fr/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Cryptocurrency News",
+    "url": "https://www.investing.com/rss/news_301.rss",
+    "category": "عام"
+  },
+  {
+    "name": "NFT Plazas",
+    "url": "https://nftplazas.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Etherscan Blog - Medium",
+    "url": "https://medium.com/feed/etherscan-blog",
+    "category": "عام"
+  },
+  {
+    "name": "CRYPTO TIMES",
+    "url": "https://crypto-times.jp/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Unchained: Big Ideas From The Worlds Of Blockchain And Fintech",
+    "url": "http://unchained.forbes.libsynpro.com/rss",
+    "category": "عام"
+  },
+  {
+    "name": "Deribit Blog",
+    "url": "https://blog.deribit.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Cypherpunk Cogitations",
+    "url": "https://blog.lopp.net/rss/",
+    "category": "عام"
+  },
+  {
+    "name": "Electric Coin Company",
+    "url": "https://electriccoin.co/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Cointribune",
+    "url": "https://www.cointribune.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "a16z Podcast",
+    "url": "https://feeds.simplecast.com/JGE3yC0V",
+    "category": "عام"
+  },
+  {
+    "name": "Bitcoin Optech",
+    "url": "https://bitcoinops.org/feed.xml",
+    "category": "عام"
+  },
+  {
+    "name": "Bitcoin Magazine: Bitcoin News, Articles, Charts, and Guides",
+    "url": "https://bitcoinmagazine.com/.rss/full/",
+    "category": "عام"
+  },
+  {
+    "name": "Cryptocurrency| Finance Magnates",
+    "url": "https://www.financemagnates.com/cryptocurrency/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Crypto Briefing",
+    "url": "https://cryptobriefing.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Bitcoin News",
+    "url": "https://news.bitcoin.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "CoinDesk",
+    "url": "https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml",
+    "category": "عام"
+  },
+  {
+    "name": "The Merkle",
+    "url": "https://themerkle.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Coin Bureau",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCqK_GSMbpiV8spgD3ZGloSw",
+    "category": "عام"
+  },
+  {
+    "name": "Crypto Daily",
+    "url": "https://cryptodaily.co.uk/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Cryptonews",
+    "url": "https://fr.cryptonews.com/news/feed",
+    "category": "عام"
+  },
+  {
+    "name": "CRIPTO TENDENCIA",
+    "url": "https://criptotendencia.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "cryptocurrency – TechCrunch",
+    "url": "https://techcrunch.com/tag/cryptocurrency/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "web3 weekly",
+    "url": "https://a16zcrypto.substack.com/feed",
+    "category": "عام"
+  },
+  {
+    "name": "The Daily Hodl",
+    "url": "https://dailyhodl.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "99 Bitcoins",
+    "url": "https://99bitcoins.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Chainlink",
+    "url": "https://blog.chain.link/rss/",
+    "category": "عام"
+  },
+  {
+    "name": "CryptoPotato",
+    "url": "https://cryptopotato.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Not Boring by Packy McCormick",
+    "url": "https://www.notboring.co/feed",
+    "category": "عام"
+  },
+  {
+    "name": "Cosmos Blog - Medium",
+    "url": "https://blog.cosmos.network/feed",
+    "category": "عام"
+  },
+  {
+    "name": "blockchain - Google News",
+    "url": "https://news.google.com/news/rss/search/section/q/blockchain/blockchain?hl=en&gl=US",
+    "category": "عام"
+  },
+  {
+    "name": "Bitfinex blog",
+    "url": "https://blog.bitfinex.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Crypto News on Seeking Alpha",
+    "url": "https://seekingalpha.com/news/crypto/feed",
+    "category": "عام"
+  },
+  {
+    "name": "Chainalysis",
+    "url": "https://blog.chainalysis.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Noticias en Cointelegraph.com",
+    "url": "https://es.cointelegraph.com/rss",
+    "category": "عام"
+  },
+  {
+    "name": "NEWSBTC",
+    "url": "https://newsbtc.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "BeInCrypto",
+    "url": "https://beincrypto.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Freedom to Tinker",
+    "url": "https://freedom-to-tinker.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Multicoin Capital",
+    "url": "https://multicoin.capital/rss.xml",
+    "category": "عام"
+  },
+  {
+    "name": "PYMNTS.com » PYMNTS.com",
+    "url": "https://www.pymnts.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "BitMEX Blog",
+    "url": "https://blog.bitmex.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "ChainFeeds精选",
+    "url": "https://www.chainfeeds.xyz/rss",
+    "category": "عام"
+  },
+  {
+    "name": "Cryptonaute",
+    "url": "https://cryptonaute.fr/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "BlockTempo動區動趨",
+    "url": "https://www.blocktempo.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Social Media Examiner",
+    "url": "https://www.socialmediaexaminer.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Blockworks",
+    "url": "https://blockworks.co/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "CoinDesk Japan",
+    "url": "https://www.coindeskjapan.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "NEWSBTC",
+    "url": "https://www.newsbtc.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "The Block",
+    "url": "https://www.theblockcrypto.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "TechCrunch » fintech",
+    "url": "https://techcrunch.com/tag/fintech/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "CriptoNoticias – Bitcoin, Blockchain y criptomonedas",
+    "url": "https://www.criptonoticias.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Decrypt",
+    "url": "https://decrypt.co/feed",
+    "category": "عام"
+  },
+  {
+    "name": "Journal du Coin",
+    "url": "https://journalducoin.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Ethereum Blog",
+    "url": "https://blog.ethereum.org/feed.xml",
+    "category": "عام"
+  },
+  {
+    "name": "Messari Crypto News Feed",
+    "url": "https://messari.io/rss",
+    "category": "عام"
+  },
+  {
+    "name": "Qualys Blog",
+    "url": "https://blog.qualys.com/feed",
+    "category": "عام"
+  },
+  {
+    "name": "Cryptonews",
+    "url": "https://cryptonews.com/news/feed",
+    "category": "عام"
+  },
+  {
+    "name": "仮想通貨ニュースサイト-CoinPost",
+    "url": "https://coinpost.jp/?feed=rss2",
+    "category": "عام"
+  },
+  {
+    "name": "Cryptoast",
+    "url": "https://cryptoast.fr/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Citation Needed",
+    "url": "https://www.citationneeded.news/rss/",
+    "category": "عام"
+  },
+  {
+    "name": "Bitcoinist.net",
+    "url": "https://bitcoinist.net/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "A Few Thoughts on Cryptographic Engineering",
+    "url": "https://blog.cryptographyengineering.com/feeds/posts/default",
+    "category": "عام"
+  },
+  {
+    "name": "Decrypt Media",
+    "url": "https://decryptmedia.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "CryptoSlate",
+    "url": "https://cryptoslate.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Cointelegraph.com News",
+    "url": "https://cointelegraph.com/rss",
+    "category": "عام"
+  },
+  {
+    "name": "bitcoin OR blockchain OR cryptocurrency - Google News",
+    "url": "https://news.google.com/news/rss/search/section/q/bitcoin%20OR%20blockchain%20OR%20cryptocurrency/bitcoin%20OR%20blockchain%20OR%20cryptocurrency?hl=en&gl=US",
+    "category": "عام"
+  },
+  {
+    "name": "A Few Thoughts on Cryptographic Engineering",
+    "url": "https://blog.cryptographyengineering.com/feed/",
+    "category": "عام"
+  },
+  {
+    "name": "Coinjournal",
+    "url": "https://feeds.feedburner.com/coinjournal",
+    "category": "عام"
+  },
+  {
+    "name": "Bitcoin",
+    "url": "https://www.reddit.com/r/Bitcoin/.rss",
+    "category": "عام"
+  },
+  {
+    "name": "Artificial Intelligence",
+    "url": "https://www.reddit.com/r/artificial/.rss",
+    "category": "عام"
+  },
+  {
+    "name": "WallstreetWhales",
+    "url": "https://www.reddit.com/r/WallstreetWhales/.rss",
+    "category": "عام"
+  }
+]
