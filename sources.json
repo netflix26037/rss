@@ -1,5 +1,10 @@
 [
   {
+  "name": "pepecoin",
+  "url": "https://www.reddit.com/r/pepecoin/.rss",
+  "category": "كريبتو"
+},
+  {
   "name": "cryptocurrencyscams",
   "url": "https://www.reddit.com/r/cryptocurrencyscams/.rss",
   "category": "كريبتو"
