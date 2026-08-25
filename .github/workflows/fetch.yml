@@ -2,7 +2,7 @@ name: Update News Feed
 
 on:
   schedule:
-    - cron: '0 */2 * * *' # تم تعديل التوقيت ليعمل كل ساعتين لتجنب استهلاك حدود Reddit و GitHub
+    - cron: '0 */2 * * *'
   workflow_dispatch:
   push:
     branches:
@@ -36,6 +36,10 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          
+          # إعداد السحب الآمن مع دمج التغييرات لتجنب خطأ الرفض
+          git pull origin main --rebase || true
+          
           git add feed.json sources.json || true
           git commit -m "Auto-update feed.json [skip ci]" || echo "No changes to commit"
-          git push
+          git push origin main
