@@ -1,19 +1,5 @@
 [
   {
-    "id": "https://www.reddit.com/r/defi/comments/1vxnyz7/how_do_we_let_an_ai_use_a_wallet_without_giving/",
-    "title": "How do we let an AI use a wallet without giving the AI unrestricted control?",
-    "arabicTitle": "كيف نسمح للذكاء الاصطناعي باستخدام المحفظة دون منح الذكاء الاصطناعي تحكمًا غير مقيد؟",
-    "description": "We are seeing the involvement of agents into finances . Where we have seen AiFi word coming into play . \n Ai agents are getting much better at reasoning and making decisions. \n So the question is What happens when an AI agents needs to execute a transaction on chain? \n We don't necessarily want the agent to have unrestricted permission to: \n 1) Move unlimited funds \n 2) interact with arbitrary contracts\n 3) Execute transaction outside it's intended purpose\n So we are exploring an architecture where the AI agents doesn't directly control Blockchain.\n Instead : \n AI Agents ->Policy/Execution layer->Blockchain \n The agent request an action . The execution layer checks wheather everything is according to policy then checks and execute . \n We're building this idea as Agaemon - essentially an execution/control layer designed to sit between AI agents and on chain execution. \n Iam curious. \n I'm curious what people building AI agents , wallets , defi protocols and on chain infrastructure think. \n Are we seeing this future of agents as financial layer .\n Iam curious hearing your views on this.\n    submitted by    /u/ChargeDry    to    r/defi  \n [link]   [comments]",
-    "arabicDescription": "نحن نشهد تورط وكلاء في الشؤون المالية. حيث رأينا كلمة AiFi تدخل حيز التنفيذ. يتحسن عملاء الذكاء الاصطناعي كثيرًا في التفكير واتخاذ القرارات. لذا فإن السؤال هو ماذا يحدث عندما يحتاج وكلاء الذكاء الاصطناعي إلى تنفيذ معاملة ما",
-    "link": "https://www.reddit.com/r/defi/comments/1vxnyz7/how_do_we_let_an_ai_use_a_wallet_without_giving/",
-    "sourceName": "مجموعة ريديت (5)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-25T03:02:16.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
     "id": "https://www.reddit.com/r/CryptoCurrency/comments/1vxncvq/to_the_moon/",
     "title": "To the moon!",
     "arabicTitle": "To the moon!",
@@ -42,15 +28,15 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/economy/comments/1vxmuin/why_is_the_republican_party_considered_fiscally/",
-    "title": "Why is the Republican Party considered fiscally conservative?",
-    "arabicTitle": "لماذا يعتبر الحزب الجمهوري محافظا ماليا؟",
-    "description": "submitted by    /u/Vivid_Anywhere8988    to    r/economy  \n [link]   [comments]",
-    "arabicDescription": "تم الإرسال بواسطة /u/Vivid_Anywhere8988 إلى r/economy [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/economy/comments/1vxmuin/why_is_the_republican_party_considered_fiscally/",
-    "sourceName": "مجموعة ريديت (1)",
+    "id": "https://www.reddit.com/r/opendoor/comments/1vxl5yx/open_daily_discussion_august_25_2026/",
+    "title": "OPEN Daily Discussion - August 25, 2026",
+    "arabicTitle": "مناقشة يومية مفتوحة - 25 أغسطس 2026",
+    "description": "✅Memes, ✅hype, ✅positions, ✅premarket, ✅plays, ✅current drama, ect... Let's see it here! \n A good rule of thumb. If the data you're sharing will be different in the next hour, it's great for the daily discussion. It's not post material.\n Kaz Official Tracker: https://accountable.opendoor.com/ (updates on Tuesday)\n Until Earnings, don't forget to ask and vote on questions: https://www.reddit.com/r/opendoor/comments/1v3t5dj/opendoor_open_for_questions_q2_earnings/\n    submitted by    /u/AutoModerator    to    r/opendoor  \n [link]   [comments]",
+    "arabicDescription": "✅Memes، ✅ضجيج، ✅مواقف، ✅ما قبل البيع، ✅مسرحيات، ✅دراما حالية، إلخ... دعونا نرى ذلك هنا! قاعدة جيدة إذا كانت البيانات التي تشاركها ستكون مختلفة في الساعة التالية، فهذا أمر رائع للمناقشة اليومية. انها ليست مادة ما بعد. كاز الرسمية ت",
+    "link": "https://www.reddit.com/r/opendoor/comments/1vxl5yx/open_daily_discussion_august_25_2026/",
+    "sourceName": "مجموعة ريديت (4)",
     "category": "مُدمج",
-    "pubDate": "2026-08-25T02:10:12.000Z",
+    "pubDate": "2026-08-25T00:55:30.000Z",
     "media": {
       "image": null
     }
@@ -70,15 +56,29 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/bitcoin_com/comments/1vxl1kh/financial_repression_is_the_new_bull_case_for/",
-    "title": "\"Financial repression\" is the new bull case for Bitcoin: the government isn't trying to help you. It's quietly deciding that savers should lose, and Bitcoin is the exit.",
-    "arabicTitle": "\"القمع المالي\" هو الحجة الصاعدة الجديدة لبيتكوين: الحكومة لا تحاول مساعدتك. إنها تقرر بهدوء أن المدخرين يجب أن يخسروا، والبيتكوين هو المخرج.",
-    "description": "The term getting thrown around by Bitcoin bulls this week is \"financial repression,\" and unlike most crypto buzzwords it actually describes something real and specific.\n Long-term Treasury yields hit 5.3%, near a two-decade high. The government has $40 trillion in debt it needs to refinance, and it cannot afford those rates. So the Treasury steps in with expanded bond buybacks to force long-term yields back down. That's the move that just rocketed Bitcoin 24% in a week.\n Financial repression is the name for what's actually happening underneath: the state deliberately holding interest rates below the rate of inflation so that the real value of its debt quietly erodes over time. It's not a crisis, it's a policy. And the people who pay for it are anyone holding cash, bonds, or savings, because they earn less than inflation and lose purchasing power every year without ever seeing a single dramatic headline. It's a wealth transfer from savers to the government, executed so slowly most people never notice.\n When the government's actual, revealed policy is to make holding your national currency a guaranteed slow loss, an asset that a) can't be debased, b) can't be yield-suppressed by a central bank, and c) sits entirely outside the system doing the repressing, becomes genuinely rational to own. Not as a gamble. As a defense.\n The uncomfortable part for maxis is that this same logic pumped stocks and gold too. Financial repression lifts all hard and scarce assets, not just Bitcoin, because they're all exits from the same trap. So \"Bitcoin wins because of debasement\" is really \"everything that isn't cash wins,\" and BTC has to compete with gold and equities for that flow rather than having the thesis to itself.\n But the core point stands and it's darkly clarifying: the buyback rally everyone cheered isn't the government helping markets. It's the government telling you, in the language of bond auctions, that it has decided savers should lose slowly so it doesn't have to lose fast. Bitcoin is one of the few opt-outs. That's not hopium. That's just reading what they're actually doing.\n    submitted by    /u/Bcom_Mod    to    r/bitcoin_com  \n [link]   [comments]",
-    "arabicDescription": "المصطلح الذي يطرحه المضاربون على صعود البيتكوين هذا الأسبوع هو \"القمع المالي\"، وعلى عكس معظم الكلمات الطنانة الخاصة بالعملات المشفرة، فهو في الواقع يصف شيئًا حقيقيًا ومحددًا. وبلغت عائدات سندات الخزانة طويلة الأجل 5.3%، بالقرب من أعلى مستوى لها منذ عقدين. الحكومة لديها 4 دولارات",
-    "link": "https://www.reddit.com/r/bitcoin_com/comments/1vxl1kh/financial_repression_is_the_new_bull_case_for/",
-    "sourceName": "مجموعة ريديت (5)",
+    "id": "https://www.reddit.com/r/Wallstreetsilver/comments/1vxl0kn/to_da_moon/",
+    "title": "To da moon 🌚",
+    "arabicTitle": "إلى دا القمر 🌚",
+    "description": "submitted by    /u/MooOOOoskin    to    r/Wallstreetsilver  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/MooOOOOskin إلى r/Wallstreetsilver [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/Wallstreetsilver/comments/1vxl0kn/to_da_moon/",
+    "sourceName": "مجموعة ريديت (4)",
     "category": "مُدمج",
-    "pubDate": "2026-08-25T00:50:05.000Z",
+    "pubDate": "2026-08-25T00:48:52.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/USNEWS/comments/1vxkniw/canadian_official_tells_trump_to_kiss_my_a_amid/",
+    "title": "Canadian official tells Trump to 'kiss my a--' amid ongoing tariff dispute",
+    "arabicTitle": "مسؤول كندي يطلب من ترامب أن “يقبلني –” وسط النزاع المستمر حول الرسوم الجمركية",
+    "description": "submitted by    /u/TheMirrorUS    to    r/USNEWS  \n [link]   [comments]",
+    "arabicDescription": "أرسله /u/TheMirrorUS إلى r/USNEWS [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/USNEWS/comments/1vxkniw/canadian_official_tells_trump_to_kiss_my_a_amid/",
+    "sourceName": "مجموعة ريديت (9)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-25T00:33:01.000Z",
     "media": {
       "image": null
     }
@@ -98,15 +98,15 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/Cruise/comments/1vxj7ic/has_anyone_ever_been_stopped_for_their_clothing/",
-    "title": "Has anyone ever been stopped for their clothing?",
-    "arabicTitle": "هل تم إيقاف أي شخص من قبل بسبب ملابسه؟",
-    "description": "For example; I have been told that certain Caribbean islands do not allow camouflage as it is restricted to military use. \n I have also been told that you should not wear the complementary robe outside your cabin unless you are going to or from the spa. \n Have you actually seen anyone being asked to change? \n    submitted by    /u/OldPolishProverb    to    r/Cruise  \n [link]   [comments]",
-    "arabicDescription": "على سبيل المثال؛ لقد قيل لي أن بعض جزر الكاريبي لا تسمح بالتمويه لأنه يقتصر على الاستخدام العسكري. لقد قيل لي أيضًا أنه لا ينبغي عليك ارتداء الرداء التكميلي خارج مقصورتك إلا إذا كنت ذاهبًا إلى المنتجع الصحي أو منه",
-    "link": "https://www.reddit.com/r/Cruise/comments/1vxj7ic/has_anyone_ever_been_stopped_for_their_clothing/",
-    "sourceName": "مجموعة ريديت (1)",
+    "id": "https://www.reddit.com/r/GME/comments/1vxiqn9/another_day_another_victory_in_the_battle_of_18/",
+    "title": "Another day, another victory in the battle of $18. LFG apes!! 🚀🚀",
+    "arabicTitle": "يوم آخر، انتصار آخر في معركة الـ 18 دولارًا. قرود LFG!! 🚀🚀",
+    "description": "submitted by    /u/LV426acheron    to    r/GME  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/LV426acheron إلى r/GME [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/GME/comments/1vxiqn9/another_day_another_victory_in_the_battle_of_18/",
+    "sourceName": "مجموعة ريديت (4)",
     "category": "مُدمج",
-    "pubDate": "2026-08-24T23:31:59.000Z",
+    "pubDate": "2026-08-24T23:12:34.000Z",
     "media": {
       "image": null
     }
@@ -126,15 +126,29 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/oil/comments/1vxi498/iran_has_just_struck_an_oil_tanker_in_the_strait/",
-    "title": "Iran has just struck an oil tanker in the Strait of Hormuz US-backed southern corridor, while transiting under US escort, causing damage to the engine room and fully disabling the vessel, per UKMTO.",
-    "arabicTitle": "لقد ضربت إيران للتو ناقلة نفط في مضيق هرمز، الممر الجنوبي المدعوم من الولايات المتحدة، أثناء عبورها تحت حراسة أمريكية، مما تسبب في تلف غرفة المحرك وتعطيل السفينة بالكامل، وفقًا لـ UKMTO.",
-    "description": "https://x.com/hormuzletter/status/2092018978507850092?s=46\n    submitted by    /u/Waste-Explanation-76    to    r/oil  \n [link]   [comments]",
-    "arabicDescription": "https://x.com/hormuzletter/status/2092018978507850092?s=46 مقدم بواسطة /u/Waste-Explanation-76 إلى r/oil [رابط] [تعليقات]",
-    "link": "https://www.reddit.com/r/oil/comments/1vxi498/iran_has_just_struck_an_oil_tanker_in_the_strait/",
-    "sourceName": "مجموعة ريديت (1)",
+    "id": "https://www.reddit.com/r/wallstreetbets/comments/1vxilt1/wendys_ceo_says_food_quality_hasnt_been_chains/",
+    "title": "Wendy's CEO Says Food Quality Hasn’t Been Chain’s Top Priority—Vows Changes",
+    "arabicTitle": "الرئيس التنفيذي لشركة Wendy يقول إن جودة الغذاء لم تكن الأولوية القصوى لسلسلة Wendy — ويتعهد بإجراء تغييرات",
+    "description": "submitted by    /u/Fair-Guitar    to    r/wallstreetbets  \n [link]   [comments]",
+    "arabicDescription": "تم الإرسال بواسطة /u/Fair-Guitar إلى r/wallstreetbets [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/wallstreetbets/comments/1vxilt1/wendys_ceo_says_food_quality_hasnt_been_chains/",
+    "sourceName": "مجموعة ريديت (4)",
     "category": "مُدمج",
-    "pubDate": "2026-08-24T22:47:18.000Z",
+    "pubDate": "2026-08-24T23:07:02.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/100xpennystock/comments/1vxhlr3/monday_evening_wins_with_daic/",
+    "title": "Monday evening wins with $DAIC",
+    "arabicTitle": "مساء الاثنين يفوز بـ $DAIC",
+    "description": "Today, we closed out $DAIC, going for +131.85% from this morning's entry! Anyone else catch this play?\n My community at Trading Desk caught this one for a solid green start to the week. Come join the discussion for free - you can find the link in the comments for anyone who wants to see calls like these before they play out.\n    submitted by    /u/sdbeyond20    to    r/100xpennystock  \n [link]   [comments]",
+    "arabicDescription": "اليوم، أغلقنا DAIC بقيمة +131.85% منذ دخول هذا الصباح! أي شخص آخر التقاط هذه المسرحية؟ اكتشف مجتمعي في Trading Desk هذا الأمر لبداية خضراء قوية لهذا الأسبوع. تعال وانضم إلى المناقشة مجانًا - يمكنك العثور على الرابط في",
+    "link": "https://www.reddit.com/r/100xpennystock/comments/1vxhlr3/monday_evening_wins_with_daic/",
+    "sourceName": "مجموعة ريديت (4)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-24T22:26:28.000Z",
     "media": {
       "image": null
     }
@@ -148,20 +162,6 @@
     "link": "https://www.reddit.com/r/Economics/comments/1vxh7w8/the_job_market_is_hell_young_people_are_using/",
     "sourceName": "مجتمعي",
     "category": "عام",
-    "pubDate": "2026-08-24T22:10:58.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/Economics/comments/1vxh7w8/the_job_market_is_hell_young_people_are_using/",
-    "title": "The Job Market Is Hell - Young people are using ChatGPT to write their applications; HR is using AI to read them; no one is getting hired.",
-    "arabicTitle": "سوق العمل جحيم - يستخدم الشباب ChatGPT لكتابة طلباتهم؛ يستخدم قسم الموارد البشرية الذكاء الاصطناعي لقراءتها؛ لا أحد يتم تعيينه.",
-    "description": "submitted by    /u/Super-Liberal-Girl    to    r/Economics  \n [link]   [comments]",
-    "arabicDescription": "تم تقديمه بواسطة /u/Super-Liberal-Girl إلى r/Economics [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/Economics/comments/1vxh7w8/the_job_market_is_hell_young_people_are_using/",
-    "sourceName": "مجموعة ريديت (1)",
-    "category": "مُدمج",
     "pubDate": "2026-08-24T22:10:58.000Z",
     "media": {
       "image": null
@@ -182,15 +182,57 @@
     }
   },
   {
+    "id": "https://www.reddit.com/r/aliens/comments/1vxgzyj/4chan_whistleblower/",
+    "title": "4chan whistleblower",
+    "arabicTitle": "4chan المبلغين",
+    "description": "Once again, the 4chan whistleblower was right.\n    submitted by    /u/maxizime    to    r/aliens  \n [link]   [comments]",
+    "arabicDescription": "مرة أخرى، كان المبلغ عن مخالفات 4chan على حق. مقدم من /u/maxizime إلى r/aliens [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/aliens/comments/1vxgzyj/4chan_whistleblower/",
+    "sourceName": "مجموعة ريديت (9)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-24T22:02:20.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/aliens/comments/1vxgtli/aliens_in_my_backyard/",
+    "title": "Aliens in my backyard?",
+    "arabicTitle": "كائنات فضائية في الفناء الخلفي لمنزلي؟",
+    "description": "My two year old daughter has recently started to become scared of going to sleep in her room. She says she is afraid of scary owls watching her through her window. ( We have blackout curtains on the windows). She says the scary owls find her at night and take her to the moon. She is only two years old and has not watched anything involving aliens or owls in any way. The plants right outside her bedroom window are also dead and bent. We have put up cameras and not seen anything. She told us today we need to leave this house because it’s too scary when the owls find her and take her. Has anybody had experience with this ?\n    submitted by    /u/NebulaFederal9681    to    r/aliens  \n [link]   [comments]",
+    "arabicDescription": "بدأت ابنتي البالغة من العمر عامين تخاف مؤخرًا من النوم في غرفتها. تقول إنها تخشى أن تراقبها البوم المخيفة من خلال نافذتها. (لدينا ستائر معتمة على النوافذ). تقول أن البوم المخيف يجدها في الليل",
+    "link": "https://www.reddit.com/r/aliens/comments/1vxgtli/aliens_in_my_backyard/",
+    "sourceName": "مجموعة ريديت (9)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-24T21:55:34.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
     "id": "https://theonion.com/?p=1851706293",
     "title": "BREAKING: If Harry, Meghan Going To U.K., Then Heck, Rest Of America Going With ’Em!",
     "arabicTitle": "عاجل: إذا ذهب هاري وميغان إلى المملكة المتحدة، فستذهب بقية أمريكا معهم!",
     "description": "WASHINGTON—Swarming the nation’s airports as they rushed to board any available transatlantic flight, the U.S. populace decided Monday that if Harry and Meghan were going to the U.K., the rest of America was going with ’em. “Sure, it’ll be a big adjustment, but then again, what’s the point of staying in this country if you can’t […]\nThe post BREAKING: If Harry, Meghan Going To U.K., Then Heck, Rest Of America Going With ’Em! appeared first on The Onion.",
-    "arabicDescription": "واشنطن – مع احتشاد مطارات البلاد أثناء اندفاعهم للصعود على متن أي رحلة متاحة عبر المحيط الأطلسي، قرر الشعب الأمريكي يوم الاثنين أنه إذا كان هاري وميغان سيذهبان إلى المملكة المتحدة، فإن بقية أمريكا ستذهب معهم. \"بالتأكيد، سوف تكون مساعدة كبيرة",
+    "arabicDescription": "واشنطن – مع احتشاد مطارات البلاد أثناء اندفاعهم للصعود على متن أي رحلة متاحة عبر المحيط الأطلسي، قرر الشعب الأمريكي يوم الاثنين أنه إذا كان هاري وميغان سيذهبان إلى المملكة المتحدة، فإن بقية أمريكا ستذهب معهم. \"بالتأكيد، سيكون مساعدًا كبيرًا",
     "link": "https://theonion.com/breaking-if-harry-meghan-going-to-u-k-then-heck-rest-of-america-going-with-em/",
     "sourceName": "The Onion",
     "category": "الاخبار",
     "pubDate": "Mon, 24 Aug 2026 21:31:28 +0000",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/USNEWS/comments/1vxfiq2/supreme_court_clears_the_way_for_trump_mail/",
+    "title": "Supreme Court clears the way for Trump mail voting order in advance of midterms",
+    "arabicTitle": "المحكمة العليا تمهد الطريق لأمر التصويت عبر البريد لترامب قبل الانتخابات النصفية",
+    "description": "submitted by    /u/political-snark    to    r/USNEWS  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/policy-snark إلى r/USNEWS [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/USNEWS/comments/1vxfiq2/supreme_court_clears_the_way_for_trump_mail/",
+    "sourceName": "مجموعة ريديت (9)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-24T21:06:10.000Z",
     "media": {
       "image": null
     }
@@ -224,20 +266,6 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/CryptoMarkets/comments/1vxekct/bitcoins_rally_is_becoming_a_blackrock_market_70/",
-    "title": "Bitcoin’s Rally Is Becoming a BlackRock Market: 70% of ETF Flows Came Through IBIT.",
-    "arabicTitle": "أصبح ارتفاع البيتكوين بمثابة سوق بلاك روك: 70٪ من تدفقات صناديق الاستثمار المتداولة جاءت من خلال IBIT.",
-    "description": "submitted by    /u/sylsau    to    r/CryptoMarkets  \n [link]   [comments]",
-    "arabicDescription": "تم الإرسال بواسطة /u/sylsau إلى r/CryptoMarkets [رابط] [تعليقات]",
-    "link": "https://www.reddit.com/r/CryptoMarkets/comments/1vxekct/bitcoins_rally_is_becoming_a_blackrock_market_70/",
-    "sourceName": "مجموعة ريديت (5)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T20:31:14.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
     "id": "https://www.reddit.com/r/inflation/comments/1vxebtk/what_trump_just_did_by_starting_a_trade_war_with/",
     "title": "What trump just did by starting a trade war with Canada",
     "arabicTitle": "What trump just did by starting a trade war with Canada",
@@ -252,29 +280,57 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/inflation/comments/1vxebtk/what_trump_just_did_by_starting_a_trade_war_with/",
-    "title": "What trump just did by starting a trade war with Canada",
-    "arabicTitle": "ما فعله ترامب للتو ببدء حرب تجارية مع كندا",
-    "description": "submitted by    /u/Snapdragon_4U    to    r/inflation  \n [link]   [comments]",
-    "arabicDescription": "مرسل من /u/Snapdragon_4U إلى r/inflation [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/inflation/comments/1vxebtk/what_trump_just_did_by_starting_a_trade_war_with/",
-    "sourceName": "مجموعة ريديت (1)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T20:22:35.000Z",
+    "id": "https://www.reddit.com/r/Market_Forecasts/comments/1vxebsq/the_fearless_forecast_for_august_25_2026/",
+    "title": "The Fearless Forecast for August 25, 2026",
+    "arabicTitle": "The Fearless Forecast for August 25, 2026",
+    "description": "Buyers Held the Repair — But Still Haven't Broken Free\n Monday strengthened Friday's recovery. The DJIA gained 139.98 points. Buyers successfully defended the crucial 53,200–53,250 repair zone and repeatedly traded through the forecast's 53,350–53,400 Bull Trigger. But the close below 53,450–53,500 leaves the recovery confirmed but incomplete.\n Forecast Statistics\n  \nBucket: Breakdown Repair / Recovery Consolidation\n Volatility Score: ≈ 1.31 — still elevated, but contracting\n Probabilities: SU: 34% | LU: 29% | SD: 23% | LD: 14%\n Expected Return: ≈ +0.08%\n Projected Close: 53,300–53,700\n Directional Bias: 63% Up / 37% Down\n  \nPrevious Close: 53,416.99\n RECAP: Monday's 59% Up bias was right, the DJIA closed comfortably inside the projected 53,150–53,600 range, and the critical 53,200–53,250 support held throughout the session. Buyers also cleared 53,350–53,400 and reached the forecast's 53,450–53,500 Recovery Confirmation zone. The principal shortfall was that they could not hold above that zone into the close.\n Fearless Opines: Two consecutive advancing sessions following Thursday's collapse materially improve the structure. More importantly, Monday's intraday weakness repeatedly attracted buyers rather than producing another breakdown. But 53,450–53,500 is now the decision point. Monday demonstrated that buyers can reach it; Tuesday must show they can own it. A sustained move above 53,500 would turn repair into something closer to renewed expansion. Failure there followed by a loss of 53,300 would return the DJIA to two-sided consolidation.\n Key Levels\n Bull Hold Zone: 53,350–53,400\n Bull Trigger: 53,450–53,500\n Expansion Trigger: Above 53,550\n Upside Objective: 53,650–53,725\n Immediate Support: 53,350\n Repair Warning: Below 53,300\n Major Support: 53,200–53,250\n Repair Failure: Below 53,150\n GO / REDUCE / EXIT: REDUCE, Bordering on GO Fearless remains at REDUCE, but Tuesday has a clearly defined route to GO. Hold 53,350–53,400 → reclaim 53,450–53,500 → sustain above 53,500 = GO.\n For traders Tuesday, that means tactical longs remain reasonable above 53,350, but don't chase a breakout that immediately fails. Below 53,300, reduce exposure; below 53,200, the two-day repair is materially damaged.\n Trader Takeaway; Tuesday is about 53,500. Buyers have already demonstrated that they can recover from Thursday's breakdown. Now they must demonstrate that they can escape the recovery range. Above 53,500, favor continuation toward 53,550 and then 53,650–53,725. Below 53,300, stop treating this as an emerging breakout and return to defensive trading.\n The repair has survived two sessions; a sustained break above 53,500 would finally give buyers something stronger than a rebound.\n    submitted by    /u/RPCV1968  \n [link]   [comments]",
+    "arabicDescription": "Buyers Held the Repair — But Still Haven't Broken Free Monday strengthened Friday's recovery. The DJIA gained 139.98 points. Buyers successfully defended the crucial 53,200–53,250 repair zone and repeatedly traded through the forecast's 53,350–53,400",
+    "link": "https://www.reddit.com/r/Market_Forecasts/comments/1vxebsq/the_fearless_forecast_for_august_25_2026/",
+    "sourceName": "Market_Forecasts",
+    "category": "الاسهم",
+    "pubDate": "2026-08-24T20:22:34.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/PoursTea/comments/1vxe8ul/finally_showing_them_rich_people/",
-    "title": "Finally! Showing them rich people!!!",
-    "arabicTitle": "أخيراً! تظهر لهم الأغنياء !!!",
-    "description": "submitted by    /u/FizzyAcidBird    to    r/PoursTea  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/FizzyAcidBird إلى r/PoursTea [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/PoursTea/comments/1vxe8ul/finally_showing_them_rich_people/",
-    "sourceName": "مجموعة ريديت (1)",
+    "id": "https://www.reddit.com/r/Market_Forecasts/comments/1vxdm4i/30yr_treasuries_bessent_is_reportedly_ready_to/",
+    "title": "30Yr Treasuries: Bessent Is Reportedly Ready To Use A $950 Billion Account To Push Yields Lower",
+    "arabicTitle": "30Yr Treasuries: Bessent Is Reportedly Ready To Use A $950 Billion Account To Push Yields Lower",
+    "description": "Several trading sessions after Treasury Secretary Bessent said US would boost bond buybacks, 30yr Treasury yields remain stuck above the 5.20% level. \n Recent reports indicate that Bessent plans to use the $950 billion Treasury General Account to have sufficient firepower to push yields lower. \n However, the market is not ready to buy bonds aggressively. US dollar is moving higher today, which indicates that traders do not believe that Bessent will boost bond buybacks above previously announced levels.\n There's no easy way out of the current situation for US Treasury. A smaller US budget deficit would help, but this scenario is not realistic in the near term. \n The market will likely wait for Warsh's comments in Jackson Hole on Friday before it will be ready for major moves. Anyway, the story's not over, and US Treasury will have to come up with fresh ideas to push 30yr yields away from the 5.30% level. \n    submitted by    /u/TraderFanFXE  \n [link]   [comments]",
+    "arabicDescription": "Several trading sessions after Treasury Secretary Bessent said US would boost bond buybacks, 30yr Treasury yields remain stuck above the 5.20% level. Recent reports indicate that Bessent plans to use the $950 billion Treasury General Account to have ",
+    "link": "https://www.reddit.com/r/Market_Forecasts/comments/1vxdm4i/30yr_treasuries_bessent_is_reportedly_ready_to/",
+    "sourceName": "Market_Forecasts",
+    "category": "الاسهم",
+    "pubDate": "2026-08-24T19:57:01.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/USNEWS/comments/1vxd3hr/is_the_cheap_imported_beef_trump_promised_the/",
+    "title": "Is the “Cheap” Imported Beef Trump Promised the Same Beef China Rejected as Contaminated?",
+    "arabicTitle": "هل وعد ترامب بلحوم البقر المستوردة \"الرخيصة\" وهي نفس لحوم البقر التي رفضتها الصين باعتبارها ملوثة؟",
+    "description": "submitted by    /u/rabbirobbie    to    r/USNEWS  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/rabbirobbie إلى r/USNEWS [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/USNEWS/comments/1vxd3hr/is_the_cheap_imported_beef_trump_promised_the/",
+    "sourceName": "مجموعة ريديت (9)",
     "category": "مُدمج",
-    "pubDate": "2026-08-24T20:19:38.000Z",
+    "pubDate": "2026-08-24T19:38:08.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/USNEWS/comments/1vxa5w8/cameras_ordered_to_stop_filming_presidential/",
+    "title": "Cameras ordered to stop filming presidential suite after Trump and Melania caught in tense exchange",
+    "arabicTitle": "أمرت الكاميرات بالتوقف عن تصوير الجناح الرئاسي بعد تبادل متوتر بين ترامب وميلانيا",
+    "description": "submitted by    /u/FreeHugs23    to    r/USNEWS  \n [link]   [comments]",
+    "arabicDescription": "أرسله /u/FreeHugs23 إلى r/USNEWS [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/USNEWS/comments/1vxa5w8/cameras_ordered_to_stop_filming_presidential/",
+    "sourceName": "مجموعة ريديت (9)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-24T17:56:14.000Z",
     "media": {
       "image": null
     }
@@ -294,15 +350,15 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/binance/comments/1vx9nnj/binance_froze_my_funds_and_has_been_ignoring_me/",
-    "title": "Binance Froze My Funds and Has Been Ignoring Me Since June",
-    "arabicTitle": "قامت Binance بتجميد أموالي وتتجاهلني منذ يونيو",
-    "description": "I’ve been dealing with a situation where Binance froze my funds, and since June they’ve been doing nothing but making empty promises that they’ll get back to me with an update. So far, absolutely nothing has been done.\n This is honestly the worst customer service I’ve ever experienced. And just to be clear, ALL OF THE FUNDS ARE LEGITIMATE AND LEGALLY OBTAINED. I even offered to provide them with documents and proof of the source of the funds, but I was simply ignored.\n Has anyone experienced something similar?\n    submitted by    /u/Active_Broccoli_2502    to    r/binance  \n [link]   [comments]",
-    "arabicDescription": "لقد كنت أتعامل مع موقف حيث قام Binance بتجميد أموالي، ومنذ يونيو لم يفعلوا شيئًا سوى تقديم وعود فارغة بأنهم سيعودون إليّ بتحديث. حتى الآن، لم يتم فعل أي شيء على الإطلاق. هذا هو بصراحة أسوأ العملاء",
-    "link": "https://www.reddit.com/r/binance/comments/1vx9nnj/binance_froze_my_funds_and_has_been_ignoring_me/",
-    "sourceName": "مجموعة ريديت (5)",
+    "id": "https://www.reddit.com/r/weedstocks/comments/1vx9gak/us_marijuana_smoking_at_record_high_cigarettes_at/",
+    "title": "U.S. Marijuana Smoking at Record High, Cigarettes at Low",
+    "arabicTitle": "تدخين الماريجوانا في الولايات المتحدة عند مستوى قياسي، والسجائر عند مستوى منخفض",
+    "description": "submitted by    /u/bourbonwarrior    to    r/weedstocks  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/bourbonwarrior إلى r/weedstocks [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/weedstocks/comments/1vx9gak/us_marijuana_smoking_at_record_high_cigarettes_at/",
+    "sourceName": "مجموعة ريديت (4)",
     "category": "مُدمج",
-    "pubDate": "2026-08-24T17:38:27.000Z",
+    "pubDate": "2026-08-24T17:31:16.000Z",
     "media": {
       "image": null
     }
@@ -324,7 +380,7 @@
   {
     "id": "https://theonion.com/?p=1851706281",
     "title": "Biology Teacher Disappointed Nobody Did Assigned Summer Dissecting",
-    "arabicTitle": "مدرس الأحياء يشعر بخيبة أمل لأنه لم يقم أحد بمهمة تشريح الصيف",
+    "arabicTitle": "مدرس الأحياء يشعر بخيبة أمل لم يقم أحد بتكليفه بتشريح الصيف",
     "description": "SAN MATEO, CA—Noting that the students had known about the assignment since their end-of-year dismissal back in May, Sofia Suarez, a biology teacher at Hillsdale High School, informed her class Wednesday that she was disappointed no one had done their summer dissecting. “All right, you had three months to start on your fetal pig, but it […]\nThe post Biology Teacher Disappointed Nobody Did Assigned Summer Dissecting appeared first on The Onion.",
     "arabicDescription": "سان ماتيو، كاليفورنيا - في إشارة إلى أن الطلاب كانوا على علم بالمهمة منذ فصلهم في نهاية العام في شهر مايو، أبلغت صوفيا سواريز، معلمة علم الأحياء في مدرسة هيلزديل الثانوية، فصلها يوم الأربعاء بأنها تشعر بخيبة أمل لأن أحدًا لم يقم بها",
     "link": "https://theonion.com/biology-teacher-disappointed-nobody-did-assigned-summer-dissecting/",
@@ -336,9 +392,23 @@
     }
   },
   {
+    "id": "https://www.reddit.com/r/USNEWS/comments/1vx963b/barron_trump_wait_for_us_iranian_state_tv/",
+    "title": "'Barron Trump, Wait For Us': Iranian State TV Reportedly Broadcasts Chilling Assassination Threat",
+    "arabicTitle": "\"بارون ترامب، انتظرنا\": التلفزيون الرسمي الإيراني يبث تهديدًا مروعًا بالاغتيال",
+    "description": "submitted by    /u/Brucekentbatsuper    to    r/USNEWS  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/Brucekentbatsuper إلى r/USNEWS [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/USNEWS/comments/1vx963b/barron_trump_wait_for_us_iranian_state_tv/",
+    "sourceName": "مجموعة ريديت (9)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-24T17:21:36.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
     "id": "https://theonion.com/?p=1851706277",
     "title": "Trump Makes Repeated Verbal Flubs While Performing ‘Wild Wild West’ Theme Song",
-    "arabicTitle": "ترامب يرتكب هفوات لفظية متكررة أثناء أداء أغنية \"Wild Wild West\".",
+    "arabicTitle": "ترامب يرتكب أخطاء لفظية متكررة أثناء أداء أغنية \"Wild Wild West\".",
     "description": "The post Trump Makes Repeated Verbal Flubs While Performing ‘Wild Wild West’ Theme Song appeared first on The Onion.",
     "arabicDescription": "ظهر المنشور الذي يقوم به ترامب بإهانات لفظية متكررة أثناء أداء أغنية \"Wild Wild West\" لأول مرة على The Onion.",
     "link": "https://theonion.com/trump-makes-repeated-verbal-flubs-while-performing-wild-wild-west-theme-song/",
@@ -350,99 +420,113 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/BitcoinBeginners/comments/1vx686g/i_want_to_start_investing_in_crypto/",
-    "title": "I want to start investing in crypto.",
-    "arabicTitle": "أريد أن أبدأ الاستثمار في العملات المشفرة.",
-    "description": "I want to invest in cryptocurrency, but don't know where to begin. Any advice regarding choosing the optimal platform will be appreciated. I am planning to start with bitcoin.\n    submitted by    /u/nidarshan2    to    r/BitcoinBeginners  \n [link]   [comments]",
-    "arabicDescription": "أريد الاستثمار في العملات المشفرة، لكن لا أعرف من أين أبدأ. سيكون موضع تقدير أي نصيحة بشأن اختيار النظام الأساسي الأمثل. أخطط للبدء بالبيتكوين. تم تقديمه بواسطة /u/nidarshan2 إلى r/BitcoinBeginners [رابط] [تعليقات]",
-    "link": "https://www.reddit.com/r/BitcoinBeginners/comments/1vx686g/i_want_to_start_investing_in_crypto/",
-    "sourceName": "مجموعة ريديت (5)",
+    "id": "https://www.reddit.com/r/biotech_stocks/comments/1vx88yb/zymeworks_inc_zyme_drug_approval_tomorrow/",
+    "title": "Zymeworks Inc. (ZYME) drug approval tomorrow",
+    "arabicTitle": "موافقة شركة Zymeworks Inc. (ZYME) على الأدوية غدًا",
+    "description": "How do you see tomorrow possible approval of drug for Zymeworks Inc. (ZYME)? How high is your chance that it will be approved?\n    submitted by    /u/Belaroth    to    r/biotech_stocks  \n [link]   [comments]",
+    "arabicDescription": "كيف ترى الموافقة المحتملة غدًا على دواء شركة Zymeworks Inc. (ZYME)؟ ما مدى احتمالية الموافقة عليه؟ مقدم من /u/Belaroth إلى r/biotech_stocks [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/biotech_stocks/comments/1vx88yb/zymeworks_inc_zyme_drug_approval_tomorrow/",
+    "sourceName": "مجموعة ريديت (4)",
     "category": "مُدمج",
-    "pubDate": "2026-08-24T15:36:21.000Z",
+    "pubDate": "2026-08-24T16:48:52.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/cryptocurrencymemes/comments/1vx56in/anyways_when_80k/",
-    "title": "Anyways, when $80k?",
-    "arabicTitle": "على أي حال، متى 80 ألف دولار؟",
-    "description": "submitted by    /u/ChangeNOW_Community    to    r/cryptocurrencymemes  \n [link]   [comments]",
-    "arabicDescription": "تم الإرسال بواسطة /u/ChangeNOW_Community إلى r/cryptocurrencymemes [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/cryptocurrencymemes/comments/1vx56in/anyways_when_80k/",
-    "sourceName": "مجموعة ريديت (5)",
+    "id": "https://www.reddit.com/r/USNEWS/comments/1vx6sq5/national_guard_reveal_embarrassment_around/",
+    "title": "National Guard reveal 'embarrassment' around 'abusive' DC deployment",
+    "arabicTitle": "الحرس الوطني يكشف عن \"الإحراج\" بشأن نشر العاصمة \"المسيء\"",
+    "description": "submitted by    /u/FreeHugs23    to    r/USNEWS  \n [link]   [comments]",
+    "arabicDescription": "أرسله /u/FreeHugs23 إلى r/USNEWS [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/USNEWS/comments/1vx6sq5/national_guard_reveal_embarrassment_around/",
+    "sourceName": "مجموعة ريديت (9)",
     "category": "مُدمج",
-    "pubDate": "2026-08-24T14:57:52.000Z",
+    "pubDate": "2026-08-24T15:57:25.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/cryptocurrencymemes/comments/1vx4oom/me_checking_my_bag_after_traveling_for_a_week/",
-    "title": "Me checking my bag after traveling for a week",
-    "arabicTitle": "أنا أفحص حقيبتي بعد السفر لمدة أسبوع",
-    "description": "submitted by    /u/BabyShakerDeluxe    to    r/cryptocurrencymemes  \n [link]   [comments]",
-    "arabicDescription": "تم الإرسال بواسطة /u/BabyShakerDeluxe إلى r/cryptocurrencymemes [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/cryptocurrencymemes/comments/1vx4oom/me_checking_my_bag_after_traveling_for_a_week/",
-    "sourceName": "مجموعة ريديت (5)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T14:39:13.000Z",
+    "id": "https://www.reddit.com/r/Market_Forecasts/comments/1vx66t1/six_catalysts_this_week_iran_economic_dday_warshs/",
+    "title": "Six catalysts this week: Iran \"economic D-Day,\" Warsh's Jackson Hole debut, NVDA earnings, Canada tariffs live, China NPC, and a bond auction into a rout",
+    "arabicTitle": "Six catalysts this week: Iran \"economic D-Day,\" Warsh's Jackson Hole debut, NVDA earnings, Canada tariffs live, China NPC, and a bond auction into a rout",
+    "description": "Already messy and it's Monday morning.\n Over the weekend, Treasury Secretary Bessent announced what he called \"an economic D-Day, the single greatest financial offensive ever marshalled against an adversary.\" New Iran sanctions, details expected at a press conference later today. Gold is pushing above $4,640 on the news. Crude is actually down about 2% as the market waits to see what the sanctions actually look like before pricing them in.\n Canada tariffs went into effect Saturday. 50% on roughly $20 billion of Canadian goods, wine, dairy, furniture, cement. Executive order, no Congressional approval needed. Ottawa responded with dollar-for-dollar retaliation on US exports starting September 8, and Prime Minister Carney suspended negotiations entirely. Trump is already threatening to raise them further. USMCA is in serious trouble.\n NVDA reports Wednesday after the close. Already down about 2.5% today ahead of the print. Consensus expects another blowout but guidance on datacenter capex is what matters. If Huang signals any cooling in AI infrastructure spend, the Nasdaq has a problem.\n Warsh delivers his first Jackson Hole speech Friday morning. September FOMC is 19 days later. Most fund managers expect a neutral tone. If he leans even slightly hawkish, rate hike odds reprice fast. The FOMC minutes from the July meeting already showed three dissents in favor of hiking.\n China's NPC meets Tuesday through Friday. Any fiscal stimulus signal would boost commodities and EM exposures, partially offsetting the trade war drag.\n The setup that concerns me: hawkish Warsh plus soft NVDA guidance in the same week. That hits both rate-sensitive and growth-sensitive positioning at the same time. The setup that rips: Warsh signals patience, China drops a stimulus package, NVDA beats. Either way, a lot of directional bets are going to get tested this week.\n Summarized from Seeer Financial AI daily brief.\n    submitted by    /u/BeneficialManner1840  \n [link]   [comments]",
+    "arabicDescription": "Already messy and it's Monday morning. Over the weekend, Treasury Secretary Bessent announced what he called \"an economic D-Day, the single greatest financial offensive ever marshalled against an adversary.\" New Iran sanctions, details expected at a ",
+    "link": "https://www.reddit.com/r/Market_Forecasts/comments/1vx66t1/six_catalysts_this_week_iran_economic_dday_warshs/",
+    "sourceName": "Market_Forecasts",
+    "category": "الاسهم",
+    "pubDate": "2026-08-24T15:34:56.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/EU_Economics/comments/1vx41f8/what_does_the_reality_of_german_high_tech_look/",
-    "title": "What does the reality of German High Tech Look Like?",
-    "arabicTitle": "كيف يبدو واقع التكنولوجيا العالية الألمانية؟",
-    "description": "Dresden alone is running three fabs:\n - ESMC above 10 billion euro\n - Infineon's Smart Power Fab at 5 billion\n - GlobalFoundries at 1.1 billion \n And the rest?\n - Photonic chip fab in Aachen\n - Battery research fab in Münster\n - 12 inch line in Itzehoe\n - MEMS foundry in Erfurt\n - A 1.3 billion euro insulin plant in Frankfurt\n - 750 million euro of AI data halls in the Rhein-Main region \n What stands out on the map: \n One would expect only big construction names, but that that wasn't always the case:\n - Krämmel, a firm from Bavaria, builds the Rohbau of Roche's biggest German investment\n - Gustav Epple from Stuttgart builds KETEK's cleanroom hall turnkey\n - Riedel Bau from Schweinfurt does the Rohbau for Fraunhofer's battery research fab. \n Also worth noting:\n - Tesla and PowerCo build in-house, with no GC\n - Exyte appears on 6 of the 20 projects on the map.\n - Six projects don't name a builder publicly. \n The buildout never stopped. It's just changing shape. More specialized projects. Technically harder and more challenging to manage. All of them fighting for the finite pool of talent required to build them. So Intel did leave, but other cranes are going up.\n https://lnkd.in/p/dFFUEQjQ\n    submitted by    /u/Full-Discussion3745    to    r/EU_Economics  \n [link]   [comments]",
-    "arabicDescription": "تدير مدينة دريسدن وحدها ثلاث مصانع عملاقة: - شركة ESMC بأكثر من 10 مليارات يورو - شركة Smart Power Fab التابعة لشركة Infineon بقيمة 5 مليارات - شركة GlobalFoundries بقيمة 1.1 مليار والباقي؟ - مصنع الرقائق الضوئية في آخن - مصنع أبحاث البطاريات في مونستر - خط إنتاج 12 بوصة في إيتزهو - MEM",
-    "link": "https://www.reddit.com/r/EU_Economics/comments/1vx41f8/what_does_the_reality_of_german_high_tech_look/",
-    "sourceName": "مجموعة ريديت (1)",
+    "id": "https://www.reddit.com/r/10xPennyStocks/comments/1vx5bi7/a_quick_cqx_portfolio_roll_call/",
+    "title": "A Quick $CQX Portfolio Roll Call",
+    "arabicTitle": "مكالمة سريعة لمحفظة CQX $",
+    "description": "For anyone newer to $CQX, one thing that stands out is just how much ground there is to follow across the portfolio. It’s not a single-project story each asset brings a different angle.\n Stars — porphyry Cu-Mo system with meaningful drill intercepts already on the board, giving investors something tangible to build from.\n Rip — active Cu-Mo porphyry exploration with plenty still being defined as the company continues advancing the project.\n Stellar — contiguous to Stars, with a large footprint and plenty of ground still to explore.\n Kitimat — copper-gold targets near Kitimat, with nearby infrastructure and access adding another layer to the story.\n Alpine — past-producing gold property with historical workings, giving the project a different starting point from the earlier-stage assets.\n Thane — large copper-gold land package with multiple priority targets still offering plenty to explore.\n Nekash — Idaho copper-gold porphyry project that adds U.S. exposure to the portfolio.\n Auxer — Idaho gold project and the newest addition to the $CQX portfolio in 2026.\n Put it together and you’ve got 8 projects across copper, gold and porphyry exploration, giving $CQX several different opportunities to create value without relying entirely on one asset.\n For me, that makes the next phase especially compelling to follow not just which project gets news first, but which one starts adding the most weight to the overall portfolio.\n If you were discovering $CQX today, which project would you research first and what makes it your pick?\n This is sponsored content. Investors should conduct their own due diligence and consult a qualified financial advisor before making any investment decisions.\n    submitted by    /u/MightBeneficial3302    to    r/10xPennyStocks  \n [link]   [comments]",
+    "arabicDescription": "بالنسبة لأي شخص جديد في CQX $، الشيء الوحيد الذي يبرز هو مقدار الأرض التي يجب متابعتها عبر المحفظة. إنها ليست قصة مشروع واحد، كل أصل يجلب زاوية مختلفة. النجوم - نظام Cu-Mo من الحجر السماقي مع اعتراضات حفر ذات مغزى أ",
+    "link": "https://www.reddit.com/r/10xPennyStocks/comments/1vx5bi7/a_quick_cqx_portfolio_roll_call/",
+    "sourceName": "مجموعة ريديت (4)",
     "category": "مُدمج",
-    "pubDate": "2026-08-24T14:14:49.000Z",
+    "pubDate": "2026-08-24T15:02:46.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/litecoin/comments/1vx3xvv/and_the_manipulation_games_have_started/",
-    "title": "And the manipulation games have started.",
-    "arabicTitle": "وبدأت ألعاب التلاعب.",
-    "description": "Some douchbag(s) short $20 million of LTC futures at $53 then sells $3 million of spot LTC, lowerinh the price enough to trigger stops and liquidations. The cascade takes it to $49. The short gains roughly 7.5%, or about $1.5 million. They later repurchase cheaper the spot LTC without giving all of that move back, and profit.\n And this what we are seeing in range until 55 is surpassed. Then in the next region and so on until we have an order book that's not so easily pushed around. \n One day the book will be less thin. If you were wondering why they push the narrative 'everyone hates litecoin' so much is if speculative narrative were to grow suddenly they lose a lot of money. It's not that hard to understand Litecoin is a better Bitcoin. That narrative sticks in the right people's mind and people stand to lose millions. \n What's wild is there is still probable squeeze if market makers decide to do it. 14 years of mining has some perks. \n    submitted by    /u/foulflaneur  \n [link]   [comments]",
-    "arabicDescription": "تقوم بعض الحقائب ببيع 20 مليون دولار من عقود LTC الآجلة بسعر 53 دولارًا، ثم تبيع 3 ملايين دولار من LTC الفوري، مما يخفض السعر بما يكفي لتحفيز عمليات الإيقاف والتصفية. يأخذ التتالي إلى 49 دولارًا. مكاسب قصيرة ما يقرب من 7.5٪، أو حوالي 1.5 مليون دولار. هم في وقت لاحق repu",
-    "link": "https://www.reddit.com/r/litecoin/comments/1vx3xvv/and_the_manipulation_games_have_started/",
-    "sourceName": "litecoin",
-    "category": "كريبتو",
-    "pubDate": "2026-08-24T14:10:50.000Z",
+    "id": "https://www.reddit.com/r/EMJX/comments/1vx4ra0/anyone_heard_from_investor_relations/",
+    "title": "Anyone heard from investor relations?",
+    "arabicTitle": "هل سمع أحد من علاقات المستثمرين؟",
+    "description": "Just curious if anyone has anything worth sharing. \n Also, why wasnt there news this morning on our assumed btc holdings? Eric seemed happy about his \"call\"... so why dont we know how the portfolio is doing. \n The silence from management is deafening. Have they givin up?\n    submitted by    /u/Repulsive-Plantain30    to    r/EMJX  \n [link]   [comments]",
+    "arabicDescription": "مجرد فضول إذا كان لدى أي شخص أي شيء يستحق المشاركة. أيضًا، لماذا لم تكن هناك أخبار هذا الصباح حول ممتلكاتنا المفترضة من البيتكوين؟ بدا إيريك سعيدًا بشأن \"مكالمته\"... فلماذا لا نعرف كيف تسير المحفظة. الصمت من الإدارة يصم الآذان. ها",
+    "link": "https://www.reddit.com/r/EMJX/comments/1vx4ra0/anyone_heard_from_investor_relations/",
+    "sourceName": "مجموعة ريديت (4)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-24T14:41:57.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/bondmarket/comments/1vx393z/reject_the_data_center_embrace_the_dollar_general/",
-    "title": "“Reject the data center, embrace the dollar general.”",
-    "arabicTitle": "“ارفضوا مركز البيانات، واحتضنوا الدولار بشكل عام”.",
-    "description": "submitted by    /u/webabybears    to    r/bondmarket  \n [link]   [comments]",
-    "arabicDescription": "تم تقديمه بواسطة /u/webabybears إلى r/bondmarket [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/bondmarket/comments/1vx393z/reject_the_data_center_embrace_the_dollar_general/",
-    "sourceName": "مجموعة ريديت (1)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T13:44:31.000Z",
+    "id": "https://www.reddit.com/r/Market_Forecasts/comments/1vx3ymx/the_fearless_forecast_for_august_24_2026/",
+    "title": "The Fearless Forecast for August 24, 2026",
+    "arabicTitle": "The Fearless Forecast for August 24, 2026",
+    "description": "Buyers Repaired the Breakdown\n Friday delivered the powerful rebound that Thursday's deeply stretched condition made possible. The DJIA gained 517.80 points and broke through the 53,200–53,250 Bull Recovery Confirmation zone. Importantly,the morning rally did not collapse after becoming overbought. Buyers consolidated, established higher lows, and resumed the advance during the afternoon.\n The recovery is not yet a restored uptrend. Friday recovered about three-quarters of Thursday's 697.72-point loss, but the DJIA remains below Wednesday's 53,463 close and substantially below the 53,700 area where the previous recovery failed.\n Forecast Statistics\n  \nBucket: Breakdown Repair / Countertrend Recovery\n Volatility Score: ≈ 1.43; high, but beginning to contract after Thursday's expansion\n Probabilities: SU: 31% | LU: 28% | SD: 25% | LD: 16%\n Expected Return: ≈ +0.06%\n Projected Close: 53,150–53,600\n Directional Bias: 59% Up / 41% Down\n  \nPrevious Close: 53,277.01\n RECAP: The 68% Down directional bias was decisively wrong, and the 53,277.01 close finished well above the projected 52,450–53,050 range. The forecast nevertheless got an important structural point right: Thursday had left the DJIA stretched enough for a sharp oversold rebound. The intraday updates adapted correctly. The 10:00 update identified 53,000 as the critical support test. At 10:30, Fearless said holding 53,100 while momentum cooled would set up another attack on 53,200–53,250. The DJIA subsequently cleared that zone and advanced to 53,355.92.\n Fearless Opines: Friday matters because buyers accomplished something substantially different from Wednesday. Wednesday produced a violent rally that subsequently collapsed. Friday produced a strong opening advance, survived several momentum resets, held reclaimed resistance and then pushed progressively higher into the afternoon. That is how repair begins.\n Monday's question is whether Friday created durable support above 53,200, or merely carried an oversold DJIA back into another layer of resistance. The answer should come quickly. Holding 53,200–53,250 would preserve Friday's repair and give buyers another opportunity to attack 53,350–53,450. Losing 53,200 would weaken the recovery; losing 53,100 would suggest Friday was principally a countertrend rebound.\n Key Levels\n Bull Hold Zone: 53,200–53,250\n First Bull Trigger: 53,350–53,400\n Recovery Confirmation: 53,450–53,500\n Bull Expansion: Above 53,550–53,600\n Immediate Support: 53,200–53,250\n Repair Failure Warning: Below 53,150\n Major Failure: Below 53,050–53,100\n Bear Reassertion: Below 53,000\n Thursday Low: 52,754–52,770\n GO / REDUCE / EXIT: REDUCE: Fearless remains at REDUCE, but this is a much more constructive REDUCE than Friday morning's EXIT posture. For Monday, traders no longer need to assume that every rally should be sold. Tactical longs can participate while the DJIA holds 53,200–53,250, particularly if a pullback into that area produces a higher low. Below 53,150, become defensive again. Below 53,050–53,100, Friday's repair is in serious trouble.\n Trader Takeaway: Monday should be treated as a confirmation session, not a chase session. The better information Monday will come from what happens on the first meaningful pullback. If 53,200–53,250 becomes support, Friday's rally gains credibility and 53,400 followed by 53,450–53,500 becomes the next objective. If the DJIA cannot hold 53,200, don't assume Friday changed the larger trend.\n 10:00 AM: The key development is that 53,400–53,450 has become today's battlefield. Buyers cleared 53,400; now they need to prove they can hold it. Fearless stays at REDUCE for now. The requirement for GO is becoming very specific: Hold 53,400–53,450 → reclaim 53,480–53,500 → GO. Below 53,400, stay REDUCE. Below 53,350, today's bullish evidence begins unwinding. Below 53,250, the larger repair is again in trouble.\n 10:30 AM: 53,400 is passing its first test The morning structure now looks like: 53,481 high → controlled retreat → defense around 53,380–53,400 → rebound toward 53,420. That is considerably better than an outright rejection from 53,450–53,500.\n But buyers still haven't earned GO. They need to demonstrate that the reset can produce another higher high.\n 53,450 → 53,481 → 53,500 is now the upside sequence. A clean break of 53,500 would put 53,550–53,600 directly in play.\n On the downside, 53,380–53,400 is the immediate line. Below there, 53,350 becomes important. A break below 53,350 would tell us the morning high may have been another failed recovery attempt.\n    submitted by    /u/RPCV1968  \n [link]   [comments]",
+    "arabicDescription": "Buyers Repaired the Breakdown Friday delivered the powerful rebound that Thursday's deeply stretched condition made possible. The DJIA gained 517.80 points and broke through the 53,200–53,250 Bull Recovery Confirmation zone. Importantly,the morning r",
+    "link": "https://www.reddit.com/r/Market_Forecasts/comments/1vx3ymx/the_fearless_forecast_for_august_24_2026/",
+    "sourceName": "Market_Forecasts",
+    "category": "الاسهم",
+    "pubDate": "2026-08-24T14:11:42.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/BoredPandaHQ/comments/1vx2wuc/pentagon_fires_stars_and_stripes_editors_after/",
-    "title": "Pentagon Fires Stars and Stripes Editors After Report on Hungry Sailors",
-    "arabicTitle": "البنتاغون يقيل محرري ستارز آند سترايبس بعد تقرير عن البحارة الجائعين",
-    "description": "The Pentagon fired the editor-in-chief, publisher, and a Middle East war correspondent of Stars and Stripes on August 21, ten days after the outlet reported on sailors going hungry and facing hardships aboard the USS Abraham Lincoln.\n Editor Erik Slavin said his termination notice cited an interview in which he told CBS that censorship of military news would be \"a red line.\" The firings follow a January Pentagon decision to rescind its decades-old regulation requiring editorial independence at Stars and Stripes, a March memo banning AP reprints and comics, and the April firing of the publication's internal editorial watchdog after she criticized the agency for interference.\n \"If we were turned into something other than that, if we were public relations? Yeah, that's the foxhole,\" Slavin had said.\n    submitted by    /u/BoredPandaOfficial    to    r/BoredPandaHQ  \n [link]   [comments]",
-    "arabicDescription": "قام البنتاغون بطرد رئيس التحرير والناشر ومراسل حربي في الشرق الأوسط لمجلة ستارز آند سترايبس في 21 أغسطس، بعد عشرة أيام من نشر الصحيفة تقريرًا عن البحارة الذين يعانون من الجوع ويواجهون صعوبات على متن السفينة يو إس إس أبراهام لينكولن. المحرر إريك سلاف",
-    "link": "https://www.reddit.com/r/BoredPandaHQ/comments/1vx2wuc/pentagon_fires_stars_and_stripes_editors_after/",
-    "sourceName": "مجموعة ريديت (1)",
+    "id": "https://www.reddit.com/r/USNEWS/comments/1vx2q66/barron_trump_20_now_worth_150_million_more_than/",
+    "title": "Barron Trump, 20, Now Worth $150 Million — More Than Mom, Melania — From Crypto And $39 Energy Drink",
+    "arabicTitle": "بارون ترامب، 20 عامًا، تبلغ ثروته الآن 150 مليون دولار – أكثر من أمه وميلانيا – من العملات المشفرة ومشروب الطاقة بقيمة 39 دولارًا",
+    "description": "submitted by    /u/Majano57    to    r/USNEWS  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/Majano57 إلى r/USNEWS [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/USNEWS/comments/1vx2q66/barron_trump_20_now_worth_150_million_more_than/",
+    "sourceName": "مجموعة ريديت (9)",
     "category": "مُدمج",
-    "pubDate": "2026-08-24T13:30:59.000Z",
+    "pubDate": "2026-08-24T13:23:37.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/Market_Forecasts/comments/1vx2bxy/cant_sleep/",
+    "title": "Can’t sleep",
+    "arabicTitle": "Can’t sleep",
+    "description": "Bond market anxiety raises stakes for Warsh's debut Jackson Hole speech - https://www.reuters.com/business/bond-market-anxiety-raises-stakes-warshs-debut-jackson-hole-speech-2026-08-24/\n    submitted by    /u/Ok-Pear-2490  \n [link]   [comments]",
+    "arabicDescription": "Bond market anxiety raises stakes for Warsh's debut Jackson Hole speech - https://www.reuters.com/business/bond-market-anxiety-raises-stakes-warshs-debut-jackson-hole-speech-2026-08-24/ submitted by /u/Ok-Pear-2490 [link] [comments]",
+    "link": "https://www.reddit.com/r/Market_Forecasts/comments/1vx2bxy/cant_sleep/",
+    "sourceName": "Market_Forecasts",
+    "category": "الاسهم",
+    "pubDate": "2026-08-24T13:07:29.000Z",
     "media": {
       "image": null
     }
@@ -490,113 +574,183 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/EconomyCharts/comments/1vwxzt4/us_debt_with_and_without_bush_and_trump_tax_cuts/",
-    "title": "U.S. debt with and without Bush and Trump tax cuts",
-    "arabicTitle": "ديون الولايات المتحدة مع وبدون التخفيضات الضريبية لبوش وترامب",
-    "description": "submitted by    /u/ReasonablePoetry1226    to    r/EconomyCharts  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/ReasonablePoetry1226 إلى r/EconomyCharts [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/EconomyCharts/comments/1vwxzt4/us_debt_with_and_without_bush_and_trump_tax_cuts/",
-    "sourceName": "مجموعة ريديت (1)",
+    "id": "https://www.reddit.com/r/USNEWS/comments/1vwytny/epstein_victim_claims_secret_tapes_show_donald/",
+    "title": "Epstein Victim Claims Secret Tapes Show Donald Trump in Alleged Sexual Encounters With 'Many Girls' in Court Files",
+    "arabicTitle": "ضحية إبستين تدعي أن الأشرطة السرية تظهر دونالد ترامب في لقاءات جنسية مزعومة مع \"العديد من الفتيات\" في ملفات المحكمة",
+    "description": "submitted by    /u/FreeHugs23    to    r/USNEWS  \n [link]   [comments]",
+    "arabicDescription": "أرسله /u/FreeHugs23 إلى r/USNEWS [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/USNEWS/comments/1vwytny/epstein_victim_claims_secret_tapes_show_donald/",
+    "sourceName": "مجموعة ريديت (9)",
     "category": "مُدمج",
-    "pubDate": "2026-08-24T09:35:45.000Z",
+    "pubDate": "2026-08-24T10:21:44.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/litecoin/comments/1vwu9jc/litecoin_still_alive/",
-    "title": "LITECOIN STILL ALIVE🗣️🗣️",
-    "arabicTitle": "LITECOIN لا تزال على قيد الحياة🗣️🗣️",
-    "description": "Do you trade LTC? Remember, you don't have to trade just against the dollar; you can trade directly against the asset itself to accumulate more LTC and keep your wallet full without using actual fiat currency. In other words, it's LTC buying LTC—putting that Litecoin to work. But the key is to take profits, buy a few beers and some snacks with your gains, and enjoy the analysis for your next move before it happens. Cheers! 🍺\n    submitted by    /u/JOMICCI  \n [link]   [comments]",
-    "arabicDescription": "هل تتداول LTC؟ تذكر أنه ليس عليك التداول مقابل الدولار فقط؛ يمكنك التداول مباشرة مقابل الأصل نفسه لتجميع المزيد من LTC والحفاظ على محفظتك ممتلئة دون استخدام العملة الورقية الفعلية. بمعنى آخر، إنها LTC تشتري LTC — قذفة",
-    "link": "https://www.reddit.com/r/litecoin/comments/1vwu9jc/litecoin_still_alive/",
-    "sourceName": "litecoin",
-    "category": "كريبتو",
-    "pubDate": "2026-08-24T05:55:41.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/ethereum/comments/1vwtakt/daily_general_discussion_august_24_2026/",
-    "title": "Daily General Discussion August 24, 2026",
-    "arabicTitle": "المناقشة العامة اليومية 24 أغسطس 2026",
-    "description": "Welcome to the Daily General Discussion on r/ethereum\n https://imgur.com/3y7vezP\n Bookmarking this link will always bring you to the current daily: https://old.reddit.com/r/ethereum/about/sticky/?num=2\n Please use this thread to discuss Ethereum topics, news, events, and even price!\n Price discussion posted elsewhere in the subreddit will continue to be removed.\n As always, be constructive. - Subreddit Rules\n Want to stake? Learn more at r/ethstaker\n Community Links\n  \nEthereum Jobs, Twitter\n \nEVMavericks YouTube, Discord, Doots Podcast\n \n Calendar: https://dailydoots.com/events/\n    submitted by    /u/EthereumDailyThread    to    r/ethereum  \n [link]   [comments]",
-    "arabicDescription": "مرحبًا بك في المناقشة العامة اليومية على r/ethereum https://imgur.com/3y7vezP سيؤدي وضع إشارة مرجعية على هذا الرابط إلى نقلك دائمًا إلى الأحداث اليومية الحالية: https://old.reddit.com/r/ethereum/about/sticky/?num=2 يرجى استخدام هذا الموضوع لمناقشة موضوعات Ethereum،",
-    "link": "https://www.reddit.com/r/ethereum/comments/1vwtakt/daily_general_discussion_august_24_2026/",
-    "sourceName": "مجموعة ريديت (5)",
+    "id": "https://www.reddit.com/r/Crypto_Currency_News/comments/1vww31j/payjoin_just_hit_10_bitcoin_is_quietly_attacking/",
+    "title": "Payjoin Just Hit 1.0: Bitcoin Is Quietly Attacking the Surveillance Assumptions Chain Analysis Depends On.",
+    "arabicTitle": "وصل Payjoin للتو إلى 1.0: تهاجم Bitcoin بهدوء تحليل سلسلة افتراضات المراقبة.",
+    "description": "submitted by    /u/sylsau    to    r/Crypto_Currency_News  \n [link]   [comments]",
+    "arabicDescription": "تم الإرسال بواسطة /u/sylsau إلى r/Crypto_Currency_News [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/Crypto_Currency_News/comments/1vww31j/payjoin_just_hit_10_bitcoin_is_quietly_attacking/",
+    "sourceName": "مجموعة ريديت (7)",
     "category": "مُدمج",
-    "pubDate": "2026-08-24T05:01:29.000Z",
+    "pubDate": "2026-08-24T07:41:46.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/CryptoMoonShots/comments/1vwktdt/building_an_onchain_economy_where_ai_agents_can/",
-    "title": "Building an on-chain economy where AI agents can earn, transact and build reputation on Solana",
-    "arabicTitle": "بناء اقتصاد متصل بالسلسلة حيث يمكن لوكلاء الذكاء الاصطناعي كسب المال والتعامل وبناء السمعة على Solana",
-    "description": "AI agents are getting increasingly capable, but there’s still a missing piece:\n How do autonomous agents actually participate in an economy?\n That’s what we’re trying to explore with SolAgents.\n We’re building infrastructure on Solana that gives AI agents an economic layer — allowing agents to discover each other, transact, build reputation and provide services without relying entirely on centralized intermediaries.\n Some of the infrastructure we’ve built includes:\n On-chain agent registration — agents establish an identifiable presence within the ecosystem.\n Agent sentiment scoring — agents can develop measurable trust and reputation signals based on activity and ecosystem data.\n On-chain USDC escrow payments — payments for agent-to-agent or human-to-agent work can be locked in escrow and released when the agreed work is completed.\n Agentic marketplace — agents can offer services and interact economically with humans or other agents.\n Agent tokenization — registered agents can launch their own SPL token directly through the platform.\n Bonding-curve trading — agent tokens can establish an early market before graduating to broader liquidity.\n Wallet-owned agents — users maintain control of their wallets and private keys.\n The part we find most interesting isn’t necessarily tokenization.\n It’s what happens when agents can establish reputation, negotiate work, receive payment and settle transactions with other agents autonomously.\n Imagine an agent discovering another agent for a task, checking its sentiment/reputation score, agreeing on a price, locking USDC into an on-chain escrow contract and releasing payment after successful delivery.\n No traditional payment processor.\n No platform custody.\n Just agents coordinating economically through on-chain infrastructure.\n We’re still early, and there’s a lot we want to improve.\n But we think the bigger question is worth exploring:\n If millions of autonomous agents eventually operate online, what does their native economy look like?\n Would love feedback from people building at the intersection of AI, crypto and autonomous systems.\n SolAgents — solagents.dev\n    submitted by    /u/Straight-Diamond-248    to    r/CryptoMoonShots  \n [link]   [comments]",
-    "arabicDescription": "تزداد قدرات عملاء الذكاء الاصطناعي بشكل متزايد، ولكن لا تزال هناك قطعة مفقودة: كيف يشارك العملاء المستقلون فعليًا في الاقتصاد؟ هذا ما نحاول استكشافه مع SolAgents. نحن نبني بنية تحتية على Solana توفر وكيل الذكاء الاصطناعي",
-    "link": "https://www.reddit.com/r/CryptoMoonShots/comments/1vwktdt/building_an_onchain_economy_where_ai_agents_can/",
-    "sourceName": "مجموعة ريديت (5)",
+    "id": "https://www.reddit.com/r/CryptoScams/comments/1vwvkmd/cryptocurrency_scam/",
+    "title": "Cryptocurrency scam",
+    "arabicTitle": "احتيال العملة المشفرة",
+    "description": "Two weeks ago I joined Royal Pips on Telegram, looking for signals to trade gold; honestly the signals worked well, the worst moment was when I contacted the admin to join the VIP group, I ended up with less than $1000 because of that person, the worst part is that he still uses the same number and writes to me for more money, and he uses centralized accounts to move the money haha\n    submitted by    /u/Anderand7    to    r/CryptoScams  \n [link]   [comments]",
+    "arabicDescription": "قبل أسبوعين، انضممت إلى Royal Pips على Telegram، بحثًا عن إشارات لتداول الذهب؛ بصراحة الإشارات عملت بشكل جيد، أسوأ لحظة كانت عندما اتصلت بالمسؤول للانضمام إلى مجموعة VIP، وانتهى بي الأمر بأقل من 1000 دولار بسبب ذلك الشخص، العامل الأكثر أهمية",
+    "link": "https://www.reddit.com/r/CryptoScams/comments/1vwvkmd/cryptocurrency_scam/",
+    "sourceName": "مجموعة ريديت (7)",
     "category": "مُدمج",
-    "pubDate": "2026-08-23T22:20:40.000Z",
+    "pubDate": "2026-08-24T07:11:25.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/litecoin/comments/1vwgrie/yeat_had_litecoin_at_the_top_of_his_portfolio/",
-    "title": "Yeat had Litecoin at the top of his portfolio, fully LTC portfolio actually, SUPER BULLISH!!",
-    "arabicTitle": "كان Yeat يتصدر Litecoin في محفظته، ومحفظة LTC بالكامل في الواقع، صاعد للغاية !!",
-    "description": "Billions of dollars\n    submitted by    /u/brdbrd1  \n [link]   [comments]",
-    "arabicDescription": "مليارات الدولارات مقدمة من /u/brdbrd1 [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/litecoin/comments/1vwgrie/yeat_had_litecoin_at_the_top_of_his_portfolio/",
-    "sourceName": "litecoin",
+    "id": "https://www.reddit.com/r/nanocurrency/comments/1vwt9gf/general_info_and_weekly_discussion/",
+    "title": "General Info and Weekly Discussion",
+    "arabicTitle": "معلومات عامة ومناقشة أسبوعية",
+    "description": "Welcome to Nano!\n This post is meant for things that are relevant but do not justify their own post. For example, debates, issues, simple questions, memes or similar.\n We normally recommend using our Discord server for quicker answers but using this post is fine if you don't have/want Discord. Note that the official English Telegram channel for nano is @ nanocurrency.\n It's common that users have the same questions. So please, before making a new thread, make some research and look for similar questions. You will often find a comprehensive answer to your question has already been given! Please also check the official nano forum linked below.\n What is Nano?\n A fee-less, instant, decentralized and eco-friendly digital currency meant for peer-to-peer payments. Ticker is XNO and currency symbol Ӿ.\n Please check out r/nanocurrencybeginners or the Beginners Guide to Nano blog\n Where can I get some and try it out?\n  \nNano can be purchased at various Exchanges. More info in this guide or on the main site\n It can also be obtained for free in faucets or other services\n  \nWhere to store Nano?\n  \nThere are several wallets to choose from found in this guide or listed here\n The most simple form is the Nano seed which unlocks your accounts. Make sure to keep a safe backup of it, or you will risk losing your funds!\n Nano is supported on the hardware wallet Ledger Nano S and X. Refer to the Full Guide\n More about Nano security\n  \nTrade / Price Talk Neighbour Communities\n  \nr/nanotrade\n  \nMore Information\n  \nMain Site - nano.org\n Nano Hub - Explore the Nano ecosystem\n Detailed documentation and protocol guide\n Frequently Asked Questions\n Blog posts\n More quick links at the top and sidebar (menu on the mobile app)\n  \nRules:\n  \nBe respectful of one another. Follow the golden rule of friendliness\n No trolling or shilling\n No begging, bragging or illegal activities\n  \n   submitted by    /u/NanoMod  \n [link]   [comments]",
+    "arabicDescription": "مرحبا بكم في نانو! هذا المنشور مخصص للأشياء ذات الصلة ولكنها لا تبرر منشورها. على سبيل المثال، مناظرات أو قضايا أو أسئلة بسيطة أو ميمز أو ما شابه ذلك. نوصي عادةً باستخدام خادم Discord الخاص بنا للحصول على إجابات أسرع ولكن باستخدام هذا po",
+    "link": "https://www.reddit.com/r/nanocurrency/comments/1vwt9gf/general_info_and_weekly_discussion/",
+    "sourceName": "nanocurrency",
     "category": "كريبتو",
-    "pubDate": "2026-08-23T19:39:02.000Z",
+    "pubDate": "2026-08-24T05:00:08.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/litecoin/comments/1vwczxd/will_litvm_be_interoperable_with_mweb_or_will_you/",
-    "title": "Will LitVM be interoperable with MWEB or will you only be able to peg to one of the layers at once?",
-    "arabicTitle": "هل سيكون LitVM قابلاً للتشغيل المتبادل مع MWEB أم أنك ستتمكن فقط من الارتباط بإحدى الطبقات في وقت واحد؟",
-    "description": "Question. Can you have coins both in MWEB and zkLTC?\n    submitted by    /u/Tiny_Nothing_3215  \n [link]   [comments]",
-    "arabicDescription": "سؤال. هل يمكنك الحصول على عملات معدنية في MWEB وzkLTC؟ مقدم من /u/Tiny_Nothing_3215 [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/litecoin/comments/1vwczxd/will_litvm_be_interoperable_with_mweb_or_will_you/",
-    "sourceName": "litecoin",
-    "category": "كريبتو",
-    "pubDate": "2026-08-23T17:17:14.000Z",
+    "id": "https://www.reddit.com/r/CryptoChartWatch/comments/1vwsia7/is_it_me_or_does_it_look_like_its_going_to_hit/",
+    "title": "Is it me or does it look like it’s going to hit the fan tomorrow?",
+    "arabicTitle": "هل أنا أم يبدو أنه سيضرب المروحة غدًا؟",
+    "description": "I’ve read the run was mainly institutional buying. May be the case since 77k keeps getting tested and won’t break. If so, this chart looks like something’s about to happen when the NYSE opens tomorrow!\n    submitted by    /u/jongolfpro    to    r/CryptoChartWatch  \n [link]   [comments]",
+    "arabicDescription": "لقد قرأت أن السباق كان في الأساس شراءًا مؤسسيًا. قد يكون هذا هو الحال نظرًا لأن 77 ألفًا يستمر في الاختبار ولن ينكسر. إذا كان الأمر كذلك، فإن هذا الرسم البياني يبدو وكأن شيئًا ما على وشك الحدوث عندما تفتح بورصة نيويورك غدًا! تم تقديمه بواسطة /u/jongolfpro إلى r/CryptoChartWatch",
+    "link": "https://www.reddit.com/r/CryptoChartWatch/comments/1vwsia7/is_it_me_or_does_it_look_like_its_going_to_hit/",
+    "sourceName": "مجموعة ريديت (7)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-24T04:18:22.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/litecoin/comments/1vwa0kb/if_there_were_ever_a_litecoin_mascot_battle_who/",
-    "title": "If there were ever a Litecoin mascot battle who would win?",
-    "arabicTitle": "إذا كانت هناك معركة تميمة Litecoin فمن سيفوز؟",
-    "description": "submitted by    /u/Minute-Lake-1819  \n [link]   [comments]",
-    "arabicDescription": "مقدمة من /u/Minute-Lake-1819 [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/litecoin/comments/1vwa0kb/if_there_were_ever_a_litecoin_mascot_battle_who/",
-    "sourceName": "litecoin",
-    "category": "كريبتو",
-    "pubDate": "2026-08-23T15:22:46.000Z",
+    "id": "https://www.reddit.com/r/BitcoinMarkets/comments/1vws69e/daily_discussion_monday_august_24_2026/",
+    "title": "[Daily Discussion] - Monday, August 24, 2026",
+    "arabicTitle": "[المناقشة اليومية] - الإثنين 24 أغسطس 2026",
+    "description": "Thread topics include, but are not limited to:\n  \nGeneral discussion related to the day's events\n Technical analysis, trading ideas & strategies\n Quick questions that do not warrant a separate post\n  \nThread guidelines:\n  \nBe excellent to each other.\n Do not make posts outside of the daily thread for the topics mentioned above.\n  \n⚡Tip Fellow Redditors over the Lightning Network⚡\n  \nSend sats as tips using lntipbot to show appreciation for good content.\n Instructions and more information.\n  \n   submitted by    /u/AutoModerator    to    r/BitcoinMarkets  \n [link]   [comments]",
+    "arabicDescription": "تتضمن موضوعات الموضوع، على سبيل المثال لا الحصر: مناقشة عامة تتعلق بأحداث اليوم التحليل الفني وأفكار واستراتيجيات التداول أسئلة سريعة لا تتطلب مشاركة منفصلة إرشادات الموضوع: كن ممتازًا مع بعضكما البعض. لا تجعل",
+    "link": "https://www.reddit.com/r/BitcoinMarkets/comments/1vws69e/daily_discussion_monday_august_24_2026/",
+    "sourceName": "مجموعة ريديت (7)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-24T04:01:16.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/litecoin/comments/1vw9ekq/which_electrumltc_should_i_use/",
-    "title": "Which Electrum-LTC should i use?",
-    "arabicTitle": "ما هو Electrum-LTC الذي يجب أن أستخدمه؟",
-    "description": "So it's getting a little bit confusing, litecoin.com recommend me to download Electrum-LTC from here but i also found a github repository and its website that is newer which is ltc-electrum and the website is ltc-electrum.github.io. Which should i download and use?\n    submitted by    /u/AnyCryptographer3675  \n [link]   [comments]",
-    "arabicDescription": "لذلك أصبح الأمر مربكًا بعض الشيء، يوصيني موقع litecoin.com بتنزيل Electrum-LTC من هنا، لكنني وجدت أيضًا مستودع github وموقعه الإلكتروني الأحدث وهو ltc-electrum والموقع الإلكتروني هو ltc-electrum.github.io. ماذا يجب أن أفعل",
-    "link": "https://www.reddit.com/r/litecoin/comments/1vw9ekq/which_electrumltc_should_i_use/",
-    "sourceName": "litecoin",
-    "category": "كريبتو",
-    "pubDate": "2026-08-23T14:59:12.000Z",
+    "id": "https://www.reddit.com/r/Market_Forecasts/comments/1vwnoud/weekly_market_wrap_august_1721_2026/",
+    "title": "# Weekly Market Wrap — August 17–21, 2026",
+    "arabicTitle": "# Weekly Market Wrap — August 17–21, 2026",
+    "description": "*Humble Trader | Gemini Trading* *慢慢買。分批佈局。讓時間站在你這邊。🙏 — Buy slowly. Stage your positions. Let time work for you.* This week's wrap covers six threads: the $SPX/$QQQ close and next week's setup, the macro calendar into Jackson Hole, Treasury's expanded buyback program, the White House crypto summit and the CLARITY Act, my Intel options trade, and — new this week — a deeper look at two bearish undercurrents: widening AI-infrastructure credit spreads and the U.S. debt clock crossing $40 trillion. **[NOT FINANCIAL ADVICE. DYOR.]** --- ## 1. $SPX and $QQQ: Weekly Close Review & Outlook | Index | Friday Close | Weekly Change | 50-day MA | 200-day MA | StochRSI(14) | |---|---|---|---|---|---| | $SPX | 7,674.37 | +0.43% | 7,541.05 | 7,095.73 | 0.166 (not overbought) | | $QQQ | 713.44 | +0.35% | 713.35 (sitting right on it) | 651.74 | 0.119 (not overbought) | This week was a \"new high, then digest\" pattern. $SPX printed a weekly high of 7,816.70 on 8/17 — very close to its all-time high — before pulling back roughly 1.8% to close at 7,674.37, still holding above the Bollinger midline and the 50-day MA. That's a healthy consolidation, not a trend break. $QQQ closed at 713.44, parked almost exactly on its 50-day MA — a genuine tug-of-war line: hold it next week and tech has more room to run; lose it and expect broader profit-taking. CMF(20) on both indices is mildly negative, meaning no strong net inflows — the market is essentially waiting on earnings and Jackson Hole before committing. ### Earnings' Impact: the Standout Was $NBIS Nebius (NBIS) reported Q2 on 8/12: revenue of $582.3M, up **454% year-over-year**, AI cloud revenue of $574.9M, and an annualized run-rate that pushed past $3B, with management raising its year-end contracted-power target to 5GW. The stock jumped over 15% on the print and had rallied as much as **51.3%** over the trailing 30 days — arguably the single most eye-catching earnings surprise of this AI-infrastructure reporting season, and further confirmation that AI cloud/compute demand remains hot and supply remains tight. Worth flagging: on 8/19, NBIS announced plans to raise $4.5–5.0B via convertible notes to fund further capex, and the stock dropped over 13% in a single day. The market is clearly pricing \"quality of the beat\" and \"aggressive, leverage-funded capex\" as two separate things — a great quarter doesn't insulate a stock from re-rating once dilution and balance-sheet risk enter the picture. Net read: earnings impact on the index level was \"pockets of brilliance, broadly neutral.\" AI cloud/compute names largely beat, supporting $QQQ's growth-stock weighting, but financing and leverage concerns triggered \"sell-the-news\" pressure in individual names — which is exactly why the index is chopping at highs instead of breaking out cleanly. ### Next Week's Setup (8/24–8/28) This is one of the most consequential earnings weeks of the quarter. **NVIDIA reports after the close on 8/26** — the single biggest catalyst for AI/semis and $QQQ direction for weeks to come. The same week brings Salesforce, CrowdStrike, Snowflake, Marvell, Workday, Autodesk, Best Buy, and Dollar General, giving a cross-section read on both enterprise spend and consumer demand. Layer on Wednesday's Core PCE and Q2 GDP second estimate, plus Jackson Hole kicking off Thursday (see Section 2), and next week is a genuine collision of earnings, macro data, and central-bank signaling. Position sizing discipline matters more than usual here. --- ## 2. Macro Recap & Jackson Hole Preview ### This Week's Data - **Canada July CPI**: +3.0% y/y, above both the prior 2.8% and consensus 2.9% — a modest inflation re-acceleration. - **U.S. July Building Permits**: 1.443M, beating the 1.37M forecast. **Housing Starts**: 1.239M — below the prior 1.415M but still ahead of the 1.35M consensus. Housing data leaned mildly positive. - **8/19 FOMC Minutes** (from the 7/29 meeting): the standout detail was **three dissents** — three regional Fed presidents (Hammack, Kashkari, Logan) argued the Committee should have hiked rather than held. That's the first cluster of hawkish dissents this large since September 2016, and it signals real internal disagreement over whether the Fed has already paused too long. ### Next Week's Focus: Jackson Hole (8/27–8/29) The Kansas City Fed's annual symposium runs 8/27–8/29 at Jackson Lake Lodge, Wyoming, with roughly 120 central bankers from 70+ countries attending this year under the theme \"Financial Innovation: Implications for Payments and Policy.\" The market's real focus is new Fed Chair **Kevin Warsh's** keynote — his first Jackson Hole address since taking office on 5/22 — scheduled for **Friday, 8/28 at 10:00am ET**. This is his fullest opportunity yet to communicate directly with markets. **What's different this year:** the market isn't primarily asking \"when does the Fed cut?\" — it's asking \"might the Fed hike?\" The July 29 FOMC held rates at 3.50%–3.75%, but produced three rare hawkish dissents, and the June dot plot showed 9 of 18 officials expecting at least one more hike before year-end. Warsh has deliberately minimized forward guidance since taking office, emphasizing the Fed is \"not bound by market pricing,\" and has signaled the Jackson Hole speech will focus on \"long-run structural questions\" rather than near-term policy path. That deliberate vagueness actually raises the information value of the speech — any deviation from a studiously neutral tone could move both equities and Treasuries sharply, echoing Powell's 2022 \"pain\" speech, after which the Dow fell 3% in a single session. The timing is unusually dense: this speech lands roughly 19 days before the September 15–16 FOMC decision, and only about 36 hours after NVIDIA's earnings — making next week the most information-dense stretch of \"corporate results + central bank policy\" this quarter. For $SPX and $QQQ, a hawkish tilt from Warsh (any hint that a hike isn't off the table, or that cuts are pushed out) would likely hit valuation-sensitive tech harder than the broader index; a neutral-to-dovish tone would support continued high-level consolidation and another attempt at recent highs. ### Other Key Data Next Week - **8/26 (Wed):** Core PCE (July), Durable Goods Orders, Q2 GDP second estimate, Personal Income & Spending — the Fed's preferred inflation gauge, landing right before the Jackson Hole speech. - **8/28 (Fri):** Canada Q2 GDP, and the preliminary annual Non-Farm Payrolls benchmark revision — the last comparable revision came in at -911K, so markets will be watching for another sizable downward surprise, which would directly shape rate-path expectations. --- ## 3. Treasury Secretary Bessent: Expanded Bond Buybacks On Wednesday (8/19), the Treasury announced it would **at least double** the size of its liquidity-support buyback operations for 10–30 year bonds — from a $2B cap per operation to $4B — effective 9/9 through 11/4. Long-end yields initially fell on the news (10-year down ~5.7bps to 4.647%, 30-year down 9bps to 5.196%), and equity futures ticked up. The relief lasted exactly one day: yields reversed on Thursday, erasing the move. Bessent then publicly reiterated that **\"buybacks could be bigger than the $4B per issue we announced,\"** arguing current yield levels \"don't reflect the fundamentals\" and that Treasury has a \"large policy toolbox.\" **Impact on equities:** - **Short-term positive signal, limited real effect.** Buybacks are fundamentally a market-making tool to improve liquidity in 30-year bonds, not a direct lever on yields. Against roughly $32T+ in publicly held Treasury debt, a $4B-per-operation buyback is small — Evercore ISI's Krishna Guha called it a \"weaker version of Operation Twist,\" more signal than substance. - **For growth stocks ($QQQ):** if long-end yields do come down on the back of buybacks, that's a marginal tailwind for high-multiple, capex-heavy AI names via lower discount rates. But a one-day fade — as happened this week — suggests underlying concerns about deficits (national debt now past $40T) and supply pressure haven't actually been resolved. - **Watch for:** Bessent has also previewed a broader \"fiscal consolidation\" plan, to be reviewed jointly with OMB Director Russ Vought, covering both revenue and spending. That could matter more than the buyback size itself — worth tracking closely next week. **Bottom line:** if 30-year yields stay pinned above 5%, expect continued valuation pressure on high-P/E growth names. If the buyback program genuinely scales up and succeeds in pulling long-end rates lower, it's a plausible near-term catalyst for a $QQQ bounce. --- ## 4. White House Crypto Summit, the CLARITY Act, and Bitcoin's Weekly Surge ### Summit Recap (Wednesday, 8/19) President Trump hosted a crypto summit at the White House, with regulators (SEC Chair Paul Atkins, CFTC Acting Chair Mike Selig), industry leaders (Coinbase's Brian Armstrong, Ripple's Brad Garlinghouse, Robinhood's Vlad Tenev, plus Kraken, Gemini, Chainlink), and traditional finance (NYSE Chairman Jeffrey Sprecher, plus Nasdaq, CME Group, and DTCC representatives) in attendance. Three themes dominated: 1. **A U.S. crypto strategic reserve** — Trump said publicly the administration is considering purchasing \"sizable amounts\" of bitcoin and other crypto assets, framed around maintaining U.S. leadership in bitcoin, AI, and prediction markets. 2. **Clarifying SEC/CFTC jurisdiction** — industry pushed to end \"regulation by enforcement,\" and both agency heads publicly backed a framework putting most spot crypto under CFTC oversight (as digital commodities), with SEC retaining authority over securities-classified tokens. 3. **TradFi/on-chain convergence** — NYSE, Nasdaq, and CME discussed tokenization, clearing mechanisms, and paths for banks to enter crypto custody. ### Implications for the CLARITY Act The Digital Asset Market Clarity Act passed the House by a wide margin in 2025 but has been stalled in the Senate. This summit gave it real momentum: Trump directly pressured Congress to pass a \"fair version\" of the bill, and having both the SEC and CFTC chairs publicly endorse the same jurisdictional split resolves much of the inter-agency turf conflict that had been slowing things down. The Senate's **procedural cloture vote is scheduled for September 15** and requires 60 votes to clear. The White House also signaled a parallel track: even if the Senate stalls, the SEC and CFTC are prepared to issue guidance or \"safe harbor\" provisions on their own authority — partly a hedge, partly pressure on Congress to avoid administrative rules and future legislation conflicting with each other. ### Bitcoin This Week Bitcoin closed Friday at $77,975.30, up 6.82% on the day, with volume and CMF(20) both spiking to recent highs (0.606) — a clean technical break above the prior swing high of $76,426 (upper Bollinger Band), with StochRSI pinned at 1.0 (strong momentum, but chase-risk is elevated). The trailing one-month gain is roughly 20%, with the White House summit's policy signals (reserve discussion, regulatory clarity) among the key catalysts. **A gap worth flagging:** this rally is running ahead of the actual event — the Senate cloture vote doesn't happen until September 15, and needs 60 votes to pass. If the vote underperforms expectations (insufficient votes, further delay), don't rule out a \"sell the news\" reaction. Conversely, a clean pass — or interim safe-harbor measures from regulators before then — could fuel a second leg higher for crypto and adjacent names (brokers, custody providers, mining stocks). For the broader index, crypto policy clarity hasn't yet had a systemic impact on $SPX/$QQQ, but if bitcoin keeps strengthening and pulls in more retail/institutional flow, watch for a possible rotation effect away from traditional growth names. --- ## 5. Intel Insider Buying + the \"Jade Lizard\" Options Play ### The Trade Setup: Intel CEO Buys Over $10M in Stock Per an SEC Form 4 filed 8/14, Intel CEO Lip-Bu Tan purchased 105,263 shares through a family trust on 8/11 at $95.00/share — roughly $10.0M — bringing the trust's total to 1,314,669 shares. Including 16,471 shares held directly and 500 in a 401(k), Tan's total beneficial ownership sits around 1.33M shares. This purchase came right after Intel closed an equity raise that was upsized from $15B to $20B, priced at the same $95/share. Market read: a strong confidence signal from the CEO on the foundry turnaround and AI roadmap — buying more after the stock is already up over 160% year-to-date is a relatively unusual move. Intel's Q2 revenue came in at $16.13B (+25% y/y) with adjusted EPS of $0.42, both ahead of estimates. ### My Position: Jade Lizard on INTC | Action | Instrument | Expiry | Fill | |---|---|---|---| | Buy stock (BTO) | INTC | — | $91.70 | | Buy call (BTO) | INTC $100 Call | 9/18/2026 | $3.40 | | Sell call (STO) | INTC $97.5 Call | 9/18/2026 | $4.45 | | Sell put (STO) | INTC $80 Put | 9/18/2026 | $1.97 | ### What Is a Jade Lizard? A Jade Lizard combines a short out-of-the-money put with a short call spread (bear call spread), collecting two premiums to build a wide profit zone. The core design rule: **if the total premium collected is greater than or equal to the width of the call spread, there is theoretically no additional risk to the upside** — because even a full max-loss on the call spread is already covered by the credit received. If the stock finishes between the short put strike and the short call strike at expiration, you keep the entire premium. The main risk sits on the downside: a sharp decline exposes the short put to losses that mirror simply owning the stock outright. **What's different about this particular setup:** unlike a textbook, options-only Jade Lizard, this trade also carries a long stock position (BTO INTC @ $91.70), effectively creating a \"stock + Jade Lizard overlay\" — an enhanced covered-call structure: - The $97.5/$100 call spread (net credit $1.05, width $2.5) replaces a naked short covered call, capping max upside loss to the spread width rather than exposing the position to an uncapped short call. - The additional $80 short put ($1.97 credit) adds an extra income stream on top of the stock and covered-call structure — essentially a bet that INTC won't meaningfully break below $80 by expiration. - Combined premium is $3.02 ($1.05 + $1.97), which exceeds the $2.5 call spread width — satisfying the classic \"no additional upside risk\" condition on the options portion. But because stock is also held, actual upside beyond $97.5 is capped between the call spread payoff and stock gains, so there's still real opportunity cost above that strike. **Risk note:** the maximum downside here is effectively \"long stock + an additional short put\" — double exposure. If INTC drops sharply and breaks below $80 before 9/18, the stock position takes a mark-to-market loss and the short put may get assigned, forcing purchase of an equivalent number of additional shares at $80 — doubling downside exposure. This setup suits someone moderately bullish on the name medium-term who is also willing to add on a deep pullback. As always: **this is a personal trade log and educational strategy breakdown, not investment advice — please do your own research (DYOR).** --- ## 6. Bearish Watch List: Widening AI Credit Spreads + the $40 Trillion Debt Milestone ### 6.1 AI-Infrastructure Credit Default Swap Spreads Are Widening in Sync One signal worth flagging this week: 5-year CDS spreads on several large-cap tech and AI-infrastructure names are climbing together. A CDS spread reflects how much the market is pricing in default risk — the higher it goes, the more the market is worried about a company's credit quality and cost of financing. One important read-the-chart caveat: the axes are **not shared**. CoreWeave (CRWV) is plotted on a left axis running 0–900+, while every other name uses a right axis capped near 200. CoreWeave's spread of 798.895bps is an order of magnitude above everything else on the chart — that's no longer investment-grade-style pricing, it's approaching high-yield territory, and it reflects real market skepticism about a business model built on borrowing heavily against long-term compute contracts to fund data-center buildouts. **Reading the tiers:** - **Oracle (219.545)** — unusually elevated for a legacy tech name, tracking the rise in debt issued to fund AI-cloud/OpenAI-related capacity commitments. Its spread has moved almost in lockstep with CRWV, suggesting the market is grouping both into the same \"leveraged AI-infrastructure bet\" bucket. - **SPCX (172.125)** — also elevated and volatile, consistent with SpaceX being pre-IPO (less balance-sheet transparency) and carrying massive capex commitments (Starship, Starlink). - **Meta (93.460)** — sits in the middle; also building data centers aggressively, but with a comparatively healthier cash flow and balance sheet profile. - **Google, Microsoft, Amazon (47–61bps)** — the lowest and most stable spreads, the \"cash cow\" mega-caps the market believes can fund AI capex from free cash flow rather than debt. - **NVDA / AVGO (circled)** — spreads that started very low have begun ticking up together — a reasonable read is that the market is starting to price capex-cycle credit risk into the upstream chip/networking suppliers too, particularly relevant for Broadcom given its growing custom ASIC/networking capital commitments. **Why this matters for $SPX/$QQQ:** credit spreads are a leading indicator for equities — when default-risk premiums widen in fixed income, it usually shows up there before it shows up in equity multiples, especially for high-P/E, negative-free-cash-flow AI infrastructure names. Right now the highly leveraged names (CRWV, ORCL, SPCX) show clear divergence, and the \"shovel sellers\" upstream (NVDA, AVGO) are showing early sympathetic moves. Worth watching next week — continued widening rather than reversal would be an early warning sign that the AI capex narrative is cooling. ### 6.2 The $40 Trillion Debt Milestone — and the Treasury \"Buying Its Own Debt\" to Steady the Market The Treasury's latest Daily Treasury Statement confirms total outstanding federal debt crossed **$40.047 trillion** as of 8/18 — roughly $32.27T publicly held, $7.78T intragovernmental. That's only about five months since the last milestone ($39T, this past March), indicating the pace of borrowing is accelerating. **The interest burden is striking:** - Trailing 12-month interest expense has surpassed **$1 trillion**; fiscal-year-to-date interest spending totals roughly $1.17T. - Net interest (after intragovernmental offsets) was roughly $970B for FY2025 and is set to cross $1T in FY2026, **now exceeding both the defense budget and Medicare individually**, making it the federal government's second-largest spending category after Social Security. - Per the latest CBO projections, absent fiscal reform, debt-to-GDP — currently around 100–101% — is projected to reach **120% by 2036** and **175% by 2056** (30 years out), more than triple the 50-year historical average of roughly 51%. **Treasury buybacks are not QE — the distinction matters:** | | Treasury Buybacks | Fed Repo / QE | |---|---|---| | Decision-maker | Fiscal authority (Treasury) | Central bank (FOMC) | | Policy type | Debt management tool | Monetary policy | | Funding source | Existing cash / debt restructuring | Expands the Fed's own balance sheet | | Core goal | Market functioning, liquidity, borrowing-cost control | Manage the economy/inflation, inject liquidity | | Lever | — | Controls \"quantity\" (vs. rate cuts controlling \"price\") | Put simply: rate cuts make borrowing cheaper; buybacks make sure there's someone willing to lend. Treasury's expanded operation (a doubled $4B cap on long-bond buybacks starting 9/9) is really about stepping in as a \"super buyer\" to relieve liquidity strain in the 30-year bond market and cap a yield spike that briefly hit 5.33% — the highest since 2007 — not about injecting systemic liquidity the way Fed QE does. Its scale and impact are far smaller. **Combined bearish read:** this week's two threads — ① synchronized widening in AI-infrastructure credit spreads (ORCL, CRWV, SPCX, and now upstream NVDA/AVGO), and ② the $40T debt milestone with net interest now exceeding defense and Medicare — are really two faces of the same macro story: **the AI capex boom is being financed substantially through debt (corporate and sovereign alike), and both the credit market and the Treasury market are starting to price in doubts about how sustainable that borrowing spree really is.** If 30-year yields stay pinned above 5%, expect rising financing costs across the board, especially for leveraged AI-infrastructure names — a \"higher rates → wider credit spreads → valuation pressure\" negative loop. Treasury's buyback program can relieve short-term liquidity stress, but as we saw this week, the relief lasted exactly one day — it hasn't resolved the underlying supply/demand imbalance. For $SPX/$QQQ investors, this is a third thread to track next week, alongside earnings and Jackson Hole. --- *This wrap draws on publicly available data — StockCharts, CNBC, Bloomberg, SEC filings, Earnings Whispers, the U.S. Treasury's Daily Treasury Statement, and CBO's Budget and Economic Outlook — for educational and discussion purposes only. Nothing here is investment advice; past performance doesn't guarantee future results. Please do your own research.* **[NOT FINANCIAL ADVICE. DYOR.]** --- **Humble Trader | Gemini Trading** 慢慢買。分批佈局。讓時間站在你這邊。🙏 X: [@robot2trade1](https://x.com/robot2trade1) / [@gemini_edge](https://x.com/gemini_edge) · Substack: [@robot2trade](https://substack.com/@robot2trade) · Reddit: [r/TradeVerseNetwork](https://www.reddit.com/r/TradeVerseNetwork) · Bluesky: [robot2trade.bsky.social](https://bsky.app/profile/robot2trade.bsky.social) · LinkedIn: [rob-trade](https://www.linkedin.com/in/rob-trade-6bab1934/) · Facebook: Gemini Trading Group · Truth Social: [@robot2trade](https://truthsocial.com/@robot2trade) \n    submitted by    /u/robot2trade  \n [link]   [comments]",
+    "arabicDescription": "*Humble Trader | Gemini Trading* *慢慢買。分批佈局。讓時間站在你這邊。🙏 — Buy slowly. Stage your positions. Let time work for you.* This week's wrap covers six threads: the $SPX/$QQQ close and next week's setup, the macro calendar into Jackson Hole, Treasury's expand",
+    "link": "https://www.reddit.com/r/Market_Forecasts/comments/1vwnoud/weekly_market_wrap_august_1721_2026/",
+    "sourceName": "Market_Forecasts",
+    "category": "الاسهم",
+    "pubDate": "2026-08-24T00:25:44.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/Hedera/comments/1vwmu3z/hedera_ecosystem_explained_how_everything/",
+    "title": "HEDERA ECOSYSTEM EXPLAINED - How Everything Connects. Risks and Opportunities (itsbrandond full video)",
+    "arabicTitle": "شرح النظام البيئي هيديرا - كيف يرتبط كل شيء. المخاطر والفرص (فيديو كامل)",
+    "description": "i am very privileged to have worked in the hedera ecosystem for 5+ years. from the smallest retail teams to the largest orgs. i have seen it all.\n there are great people here. there are also risks to keep in mind. the REAL POWER is in the hands of the HOLDERS.\n everything needs HBAR. without holders, the entire thing stops.\n there is also MASSIVE OPPORTUNITY ready to be seized. but we have limited time and resources. we lose good people each day.\n we need GC use cases. we need retail activity to attract enterprises. we need HBAR to be an attractive speculative asset so the orgs can stay operating.\n when it’s all working, it’s beautiful. so let’s GET IT WORKING!\n i do see a lot of questions and i thought it would be helpful to outline the ecosystem as best i can. no fluff. no sprinkles. no FUD. just the best info i can.\n hopefully it’s helpful 🙏\n i know i give the subreddit a hard time but i am really impressed and optimistic with the energy here.\n appreciate you all!\n    submitted by    /u/itsbrandond    to    r/Hedera  \n [link]   [comments]",
+    "arabicDescription": "يشرفني جدًا أن أعمل في نظام Hedera البيئي لأكثر من 5 سنوات. من أصغر فرق البيع بالتجزئة إلى أكبر المؤسسات. لقد رأيت كل شيء. هناك أناس عظماء هنا. هناك أيضًا مخاطر يجب وضعها في الاعتبار. القوة الحقيقية في أيدي",
+    "link": "https://www.reddit.com/r/Hedera/comments/1vwmu3z/hedera_ecosystem_explained_how_everything/",
+    "sourceName": "مجموعة ريديت (7)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-23T23:48:04.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/Buttcoin/comments/1vwizbi/theyre_back_to_not_your_keys_not_your_crypto/",
+    "title": "They're back to \"not your keys, not your crypto\".",
+    "arabicTitle": "لقد عادوا إلى \"ليس مفاتيحك، وليس تشفيرك\".",
+    "description": "submitted by    /u/folteroy    to    r/Buttcoin  \n [link]   [comments]",
+    "arabicDescription": "تم الإرسال بواسطة /u/folteroy إلى r/Buttcoin [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/Buttcoin/comments/1vwizbi/theyre_back_to_not_your_keys_not_your_crypto/",
+    "sourceName": "مجموعة ريديت (7)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-23T21:05:00.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/bitcoincashSV/comments/1vwhtqe/teranode_a_test_that_reached_79_billion/",
+    "title": "Teranode: A Test That Reached 79 Billion Transactions a Second - @BSVCasey -- X",
+    "arabicTitle": "Teranode: اختبار وصل إلى 79 مليار معاملة في الثانية - @BSVCasey - X",
+    "description": "submitted by    /u/Knockout_SS    to    r/bitcoincashSV  \n [link]   [comments]",
+    "arabicDescription": "تم الإرسال بواسطة /u/Knockout_SS إلى r/bitcoincashSV [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/bitcoincashSV/comments/1vwhtqe/teranode_a_test_that_reached_79_billion/",
+    "sourceName": "مجموعة ريديت (7)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-23T20:19:44.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/ethtrader/comments/1vwdww2/when_crypto_goes_too_well_for_3_days_in_a_row/",
+    "title": "When Crypto Goes Too Well For 3 Days in a Row",
+    "arabicTitle": "عندما تسير الأمور على ما يرام في مجال العملات المشفرة لمدة 3 أيام متتالية",
+    "description": "Source: https://x.com/CryptoTony__/status/2091524861160288666\n    submitted by    /u/kirtash93    to    r/ethtrader  \n [link]   [comments]",
+    "arabicDescription": "المصدر: https://x.com/CryptoTony__/status/2091524861160288666 تم الإرسال بواسطة /u/kirtash93 إلى r/ethtrader [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/ethtrader/comments/1vwdww2/when_crypto_goes_too_well_for_3_days_in_a_row/",
+    "sourceName": "مجموعة ريديت (7)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-23T17:52:10.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/Market_Forecasts/comments/1vwbk1q/weekly_market_wrap_august_1721_2026/",
+    "title": "# Weekly Market Wrap — August 17–21, 2026",
+    "arabicTitle": "# Weekly Market Wrap — August 17–21, 2026",
+    "description": "submitted by    /u/robot2trade  \n [link]   [comments]",
+    "arabicDescription": "submitted by /u/robot2trade [link] [comments]",
+    "link": "https://www.reddit.com/r/Market_Forecasts/comments/1vwbk1q/weekly_market_wrap_august_1721_2026/",
+    "sourceName": "Market_Forecasts",
+    "category": "الاسهم",
+    "pubDate": "2026-08-23T16:22:02.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/Market_Forecasts/comments/1vwb8nk/为什么中国日本和英国在减少他们的国债持有量国债回购对债券市场的影响是什么/",
+    "title": "为什么中国、日本和英国在减少他们的国债持有量——国债回购对债券市场的影响是什么",
+    "arabicTitle": "为什么中国、日本和英国在减少他们的国债持有量——国债回购对债券市场的影响是什么",
+    "description": "submitted by    /u/Wangchaiww  \n [link]   [comments]",
+    "arabicDescription": "submitted by /u/Wangchaiww [link] [comments]",
+    "link": "https://www.reddit.com/r/Market_Forecasts/comments/1vwb8nk/为什么中国日本和英国在减少他们的国债持有量国债回购对债券市场的影响是什么/",
+    "sourceName": "Market_Forecasts",
+    "category": "الاسهم",
+    "pubDate": "2026-08-23T16:10:09.000Z",
     "media": {
       "image": null
     }
@@ -616,29 +770,71 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/litecoin/comments/1vvj2jo/ltc_47/",
-    "title": "LTC 4.7",
-    "arabicTitle": "إل تي سي 4.7",
-    "description": "Almost here. Finish line to 100LTC\n    submitted by    /u/PlaneConstruction999  \n [link]   [comments]",
-    "arabicDescription": "هنا تقريبا. خط النهاية إلى 100LTC مقدم من /u/PlaneConstruction999 [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/litecoin/comments/1vvj2jo/ltc_47/",
-    "sourceName": "litecoin",
-    "category": "كريبتو",
-    "pubDate": "2026-08-22T17:54:14.000Z",
+    "id": "https://www.reddit.com/r/CryptoCurrencyFIRE/comments/1vw6hv2/avoid_cryptocom_at_all_costs/",
+    "title": "AVOID Crypto.com AT ALL COSTS!",
+    "arabicTitle": "تجنب Crypto.com بأي ثمن!",
+    "description": "Hi\n I’ve spoken to customer support numerous times but can’t seem to get someone to look at my case properly. \n I recently had some phishing emails and unrecognised log in so I locked my account. After several attempts with live chat, I finally got someone to unlock my account and change my details over to my wife’s email. \n I can now log into the normal crypto app but cannot log in to the exchange app, which is where I hold all my funds. \n I was asked to do the following steps:\n Please try the following steps to check if the issue continues after each step:\n Clear your cache and cookies\n Update your browser\n Try using incognito mode\n Check the enabled extensions\n Try a different web browser\n Turn off ad blockers\n Increase or decrease the size of the browsing window.\n Try using the Exchange App or another device\n If the issue continues after trying all of the above, contact us again and provide us with the following:\n When did the issue first occur?\n Provide a screenshot/video recording of the issue\n When was the last time it worked?\n Which I have now done, but still don’t work. I’ve tried on 2 different phones and 2 different browsers on my computer. \n I’ve contacted their support 4 times and been ignored after a back and forth chat for 1-2 days a time. When they don’t know what to do, they just close the chat. \n I’ve now spoke to complaints for 1-2 days and the exact same thing. The complaints people at least said;\n “As per this, the reason for why you cannot access your account is due to the security process of securing your account.”\n But then ignored me again after this… \n So they basically told me my accounts still locked and ignored me 😂 it’s diabolical how bad it is. I have 30k trapped with them…\n Please can you let me know what the next steps are?\n    submitted by    /u/LowFrosting8602    to    r/CryptoCurrencyFIRE  \n [link]   [comments]",
+    "arabicDescription": "مرحبًا، لقد تحدثت إلى دعم العملاء عدة مرات ولكن يبدو أنني لا أتمكن من إقناع شخص ما بالنظر في حالتي بشكل صحيح. لقد تلقيت مؤخرًا بعض رسائل البريد الإلكتروني التصيدية وسجلت دخولًا غير معروف، لذا قمت بإغلاق حسابي. وبعد عدة محاولات من خلال الدردشة المباشرة، حصلت أخيرًا على بعض منها",
+    "link": "https://www.reddit.com/r/CryptoCurrencyFIRE/comments/1vw6hv2/avoid_cryptocom_at_all_costs/",
+    "sourceName": "مجموعة ريديت (7)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-23T12:56:01.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/litecoin/comments/1vvepqn/for_charlie_lee_anything/",
-    "title": "For Charlie Lee, anything.",
-    "arabicTitle": "بالنسبة لتشارلي لي، أي شيء.",
-    "description": "Cause no one can deny…\n This love I have inside…\n And I give it all to you…\n My love, my love. My endless Litecoin loveeeee…\n    submitted by    /u/Minute-Lake-1819  \n [link]   [comments]",
-    "arabicDescription": "لأنه لا يمكن لأحد أن ينكر... هذا الحب الذي بداخلي... وأعطيه لك كله... حبي، حبي. حبي اللانهائي لعملة Litecoin... مقدم بواسطة /u/Minute-Lake-1819 [رابط] [تعليقات]",
-    "link": "https://www.reddit.com/r/litecoin/comments/1vvepqn/for_charlie_lee_anything/",
-    "sourceName": "litecoin",
+    "id": "https://www.reddit.com/r/wallstreetbets2/comments/1vvpwl2/daily_gains_prayer_turned_into_a_song/",
+    "title": "Daily gains prayer turned into a song",
+    "arabicTitle": "تحولت صلاة المكاسب اليومية إلى أغنية",
+    "description": "Our father, who art in heaven, hallow be thy gains. \n Thy calls come, they will be done, on Earth as it is in heaven. \n Give us this day and our daily gains, and forgive those who pumped with us. \n Lead us away from short sellers and deliver us from evil. \n Amen\n    submitted by    /u/OGPeakyblinders    to    r/wallstreetbets2  \n [link]   [comments]",
+    "arabicDescription": "أبانا الذي في السموات، ليتقدس مكاسبك. دعواتك تأتي، ستتم، على الأرض كما في السماء. أعطنا هذا اليوم ومكاسبنا اليومية، واغفر لمن ضخ معنا. أبعدنا عن الباعة القصيرين ونجنا من الشرير.",
+    "link": "https://www.reddit.com/r/wallstreetbets2/comments/1vvpwl2/daily_gains_prayer_turned_into_a_song/",
+    "sourceName": "مجموعة ريديت (4)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-22T22:29:37.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/nanocurrency/comments/1vvfwiz/update_on_ӿchat_the_nanopowered_x_public_beta_is/",
+    "title": "Update on ӾChat (the Nano-powered X): public beta is live — emoji reactions, multi-image posts, rich articles, and it runs in your browser now",
+    "arabicTitle": "تحديث على Chat (X الذي يعمل بتقنية Nano): أصبح الإصدار التجريبي العام مباشرًا - تفاعلات الرموز التعبيرية، ومنشورات متعددة الصور، ومقالات غنية، ويتم تشغيله في متصفحك الآن",
+    "description": "Quick update for everyone who saw my earlier posts about **ӾChat** — the censorship-free X/Twitter built on Nano (your account *is* a keypair, posts are signed events on plural relays, and the app finds those relays by **scanning the XNO ledger** — no hardcoded server). Thanks to everyone who tried it and gave feedback last time; a lot of it went straight into this release.\n **Big news: it's now in public beta.** 🎉 And you can try the whole thing in your browser — no install:\n 👉 https://xchat-alpha-node.fly.dev/chat/\n **What's shipped since my last post**\n - 😀 **Emoji reactions on posts** — react with 👍❤️😂😮😢🙏, tap to change or remove.\n - 🖼️ **Multi-image posts** — up to 4 photos, X-style grid + a swipeable full-screen gallery.\n - 📝 **Rich long-form articles** for channels — headings, tables, callouts, alignment, colour — rendered as native widgets (no JavaScript, no remote fetches, so reading one can't leak your IP).\n - ✏️ **Edit & delete** posts and DMs; 🔒 **disappearing photos** in E2E DMs.\n - 🔗 **@-mentions, pinned posts, follower/following lists, trending, hidden words**, and a **Report** flow.\n - ↩️ **Undo a tip** you sent by mistake (before it settles on-chain).\n - 🌐 **A browser web client** at any node's `/chat` — the same app, no app store.\n - Plus a self-hosted **relay mesh** so someone behind NAT can run a relay with no third-party tunnel (there's a new whitepaper section on it).\n **Reminder of why it's on Nano:** the ledger is for *settlement, never transport or storage*. XNO is touched only to settle a tip or let a relay announce its address — both feeless. A billion posts cost zero ledger growth, and tips are real, non-custodial, signed on your phone.\n **Links**\n - 🌐 Try in browser: https://xchat-alpha-node.fly.dev/chat/\n - 📱 Android APK + checksum: https://xchat-alpha-node.fly.dev/\n - 💻 Source (all of it, open): https://github.com/stefanbx/xchat-alpha\n - 📄 Whitepaper (now with the relay-mesh section): https://github.com/stefanbx/xchat-alpha/blob/master/docs/WHITEPAPER.md\n **Still honest about the caveats** (it's a beta, on mainnet)\n - Small-scale for now: one hosted node + a couple of relays — expect rough edges.\n - **Back up your seed** — it's the only recovery. In a browser the seed lives in browser storage (weaker than the phone keystore), so treat a browser account as disposable and use the Android app for anything you care about.\n - No global search / recommendation engine yet — reach is still your follow graph. That's next on the list.\n As always, feedback very welcome — especially from anyone who pokes at the on-ledger discovery (§4 of the whitepaper). What would you want to see before calling it 1.0?\n    submitted by    /u/PlatypusNo7411  \n [link]   [comments]",
+    "arabicDescription": "تحديث سريع لكل من شاهد منشوراتي السابقة حول الدردشة** — X/Twitter الخالي من الرقابة والمبني على Nano (حسابك *هو* زوج مفاتيح، والمشاركات عبارة عن أحداث موقعة على مرحلات متعددة، ويعثر التطبيق على تلك المرحلات عن طريق **مسح دفتر الأستاذ XNO** — n",
+    "link": "https://www.reddit.com/r/nanocurrency/comments/1vvfwiz/update_on_ӿchat_the_nanopowered_x_public_beta_is/",
+    "sourceName": "nanocurrency",
     "category": "كريبتو",
-    "pubDate": "2026-08-22T15:02:09.000Z",
+    "pubDate": "2026-08-22T15:50:10.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/Market_Forecasts/comments/1vvfsvp/week_in_review_three_retailers_beat_one_missed/",
+    "title": "Week in Review: Three retailers beat, one missed, and the one that missed was the one that mattered",
+    "arabicTitle": "Week in Review: Three retailers beat, one missed, and the one that missed was the one that mattered",
+    "description": "submitted by    /u/Tradeview_Markets  \n [link]   [comments]",
+    "arabicDescription": "submitted by /u/Tradeview_Markets [link] [comments]",
+    "link": "https://www.reddit.com/r/Market_Forecasts/comments/1vvfsvp/week_in_review_three_retailers_beat_one_missed/",
+    "sourceName": "Market_Forecasts",
+    "category": "الاسهم",
+    "pubDate": "2026-08-22T15:46:06.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/Market_Forecasts/comments/1vvbxkr/oil_is_back_above_90_gold_broke_4600_and_the_ai/",
+    "title": "Oil is back above $90, gold broke $4,600, and the AI trade finally met the bond market",
+    "arabicTitle": "Oil is back above $90, gold broke $4,600, and the AI trade finally met the bond market",
+    "description": "submitted by    /u/Curious_Otter_145  \n [link]   [comments]",
+    "arabicDescription": "submitted by /u/Curious_Otter_145 [link] [comments]",
+    "link": "https://www.reddit.com/r/Market_Forecasts/comments/1vvbxkr/oil_is_back_above_90_gold_broke_4600_and_the_ai/",
+    "sourceName": "Market_Forecasts",
+    "category": "الاسهم",
+    "pubDate": "2026-08-22T13:04:36.000Z",
     "media": {
       "image": null
     }
@@ -658,183 +854,127 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/litecoin/comments/1vv2yzi/i_promise_litecoin_will_reach_20b_market_cap_very/",
-    "title": "I promise Litecoin will reach $20B market cap very soon",
-    "arabicTitle": "أعدك أن Litecoin ستصل إلى القيمة السوقية البالغة 20 مليار دولار قريبًا جدًا",
-    "description": "Privacy coins are MOVING\n Litecoins offers multiple different things, all in 1 coin, MULTIPLE NARRATIVES, Litecoin is the BEST coin, this will be very LITE work💪\n    submitted by    /u/brdbrd1  \n [link]   [comments]",
-    "arabicDescription": "عملات الخصوصية تتحرك تقدم Litecoins العديد من الأشياء المختلفة، كل ذلك في عملة واحدة، روايات متعددة، Litecoin هي أفضل عملة، سيكون هذا عملاً بسيطًا للغاية 💪 مقدم من /u/brdbrd1 [رابط] [تعليقات]",
-    "link": "https://www.reddit.com/r/litecoin/comments/1vv2yzi/i_promise_litecoin_will_reach_20b_market_cap_very/",
-    "sourceName": "litecoin",
+    "id": "https://www.reddit.com/r/nanocurrency/comments/1vv1ima/nano_coin_push_anyone_in/",
+    "title": "Nano Coin Push: Anyone In? 🚀",
+    "arabicTitle": "دفع عملة النانو: هل يوجد أحد؟ 🚀",
+    "description": "Looking to Join a Nano Community Push? 🚀\n I’m planning to participate in a community-driven effort to increase visibility and adoption of Nano (XNO), with a long-term target of $250.\n 💰 Contribution: $99\n 🎯 Target: Nano 250\n 🤝 Goal: Coordinate with others who are independently interested in supporting Nano and increasing awareness.\n If anyone is already planning something similar, please let me know. I’d be happy to join and coordinate with the community.\n No pressure at all—just looking to connect with others who share the same interest in Nano. 💚\n Nano donation address:\n nano_39g7bbdxbmitmgykrcid6i8zd45ppyooqueb4zgoiykuxqw9fb61dq989rt3\n Please do your own research and only contribute what you’re comfortable with.\n #Nano #XNO #NanoCurrency #Crypto #Cryptocurrency\n    submitted by    /u/Impressive-Elk1146  \n [link]   [comments]",
+    "arabicDescription": "هل تتطلع إلى الانضمام إلى مجتمع Nano؟ 🚀 أخطط للمشاركة في جهد يحركه المجتمع لزيادة ظهور واعتماد Nano (XNO)، بهدف طويل المدى قدره 250 دولارًا. 💰 المساهمة: 99 دولارًا 🎯 الهدف: نانو 250 🤝 الهدف: التنسيق مع o",
+    "link": "https://www.reddit.com/r/nanocurrency/comments/1vv1ima/nano_coin_push_anyone_in/",
+    "sourceName": "nanocurrency",
     "category": "كريبتو",
-    "pubDate": "2026-08-22T04:55:40.000Z",
+    "pubDate": "2026-08-22T03:40:48.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vur68f/treasury_secretary_bessent_says_we_can_grow_our/",
-    "title": "Treasury Secretary Bessent says \"we can grow our way out\" of $40 trillion US national debt with tariffs and economic growth.",
-    "arabicTitle": "يقول وزير الخزانة بيسنت: \"يمكننا أن نخرج طريقنا للخروج\" من الدين القومي الأمريكي البالغ 40 تريليون دولار من خلال التعريفات الجمركية والنمو الاقتصادي.",
-    "description": "submitted by    /u/NecessaryGrowth2  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/NecessaryGrowth2 [رابط] [تعليقات]",
-    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vur68f/treasury_secretary_bessent_says_we_can_grow_our/",
-    "sourceName": "MarketPulseReport",
-    "category": "الاسهم",
-    "pubDate": "2026-08-21T20:08:20.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/litecoin/comments/1vuqryn/go_high_ltc_crossed_70_on_kucoin_and_then_went/",
-    "title": "Go High LTC crossed $70 on kucoin and then went down.",
-    "arabicTitle": "تجاوزت Go High LTC مستوى 70 دولارًا على kucoin ثم انخفضت.",
-    "description": "submitted by    /u/TableUpset6902  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/TableUpset6902 [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/litecoin/comments/1vuqryn/go_high_ltc_crossed_70_on_kucoin_and_then_went/",
-    "sourceName": "litecoin",
+    "id": "https://www.reddit.com/r/nanocurrency/comments/1vt9pej/registro_de_desarrollo_actualización_de_nanflix/",
+    "title": "[Registro de desarrollo] Actualización de NanFlix MVP: ¡Cliente de torrents P2P WebTorrent completo con soporte para microacuerdos Nano ($XNO) y PWA! 🎬⚡",
+    "arabicTitle": "[سجل التطوير] تحديث NanFlix MVP: عميل تورنت P2P WebTorrent كامل مع دعم Nano ($XNO) واتفاقات PWA الدقيقة! 🎬⚡",
+    "description": "submitted by    /u/kasunakasuragi  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/kasunakasuragi [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/nanocurrency/comments/1vt9pej/registro_de_desarrollo_actualización_de_nanflix/",
+    "sourceName": "nanocurrency",
     "category": "كريبتو",
-    "pubDate": "2026-08-21T19:53:15.000Z",
+    "pubDate": "2026-08-20T04:47:46.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/Aptos/comments/1vs90nj/spot_is_now_live_on_decibel/",
-    "title": "Spot is now live on Decibel!",
-    "arabicTitle": "Spot أصبح الآن مباشرًا على ديسيبل!",
-    "description": "Users can trade or hold spot assets, use eligible spot as collateral where supported, or hedge with perps — all from one account. \n The fully onchain trading engine, built on Aptos. Starting with BTC + APT. Trade now! \n https://x.com/DecibelTrade/status/2089888729259442411\n    submitted by    /u/aptoscion    to    r/Aptos  \n [link]   [comments]",
-    "arabicDescription": "يمكن للمستخدمين تداول الأصول الفورية أو الاحتفاظ بها، أو استخدام النقطة المؤهلة كضمان حيثما يكون ذلك مدعومًا، أو التحوط باستخدام الأشخاص الآخرين - كل ذلك من حساب واحد. محرك التداول onchain بالكامل، المبني على Aptos. بدءًا من BTC + APT. تداول الآن! https://x.com/DecibelTrade/status/",
-    "link": "https://www.reddit.com/r/Aptos/comments/1vs90nj/spot_is_now_live_on_decibel/",
-    "sourceName": "مجموعة ريديت (5)",
+    "id": "https://www.reddit.com/r/nanocurrency/comments/1vre25m/public_review_draft_conventions_for_building/",
+    "title": "[public review] Draft conventions for building applications on top of Nano",
+    "arabicTitle": "[مراجعة عامة] مسودة اتفاقيات لبناء التطبيقات على رأس النانو",
+    "description": "I’ve been working on an effort to document open, practical conventions for building applications on top of Nano - covering what I think are \"missing puzzle pieces\" within the community, notes on payment integration, formalization of technical decisions made along the way,\n and I’m now opening the current drafts for public technical review:\n The OpenRai Initiative Standards (ORIS) repository\n Of the set of drafts so far, I personally think are most broadly useful are:\n ORIS-007 - Nano Application-Level Metadata, Correlation, and Signaling Patterns\n ORIS-008 - Reliable Nano Payment Integration\n ORIS-001 - Nano Off-chain Message Signing (NOMS)\n ORIS-006 - Nano CAIP Identifiers\n The repository also includes more specialized payment-interface and NanoNyms formalities...\n DISCLAIMER: These documents do not claim authority, and they do not become normative merely by being written down. They are open proposals for discussion and review, not official Nano protocol specifications.\n Even at this stage, formalizing these conventions has proved valuable in agentic AI development and design. It gives humans and agents a precise shared reference, exposes ambiguities early, and makes implementation decisions easier to review.\n I am particularly interested in feedback from other people who maintain wallets, SDKs, payment services, RPC providers, or other Nano applications:\n  \nDo they describe existing Nano behavior correctly?\n Are important edge cases missing?\n Where might two competent implementers interpret the text differently?\n Do you have some nagging itch you think ought to be considered for inclusion?\n  \nKeep buidling!@\n    submitted by    /u/cbrunnkvist  \n [link]   [comments]",
+    "arabicDescription": "لقد بذلت جهدًا لتوثيق اتفاقيات مفتوحة وعملية لبناء التطبيقات فوق Nano - والتي تغطي ما أعتقد أنه \"قطع اللغز المفقودة\" داخل المجتمع، وملاحظات حول تكامل الدفع، وإضفاء الطابع الرسمي على القرار الفني",
+    "link": "https://www.reddit.com/r/nanocurrency/comments/1vre25m/public_review_draft_conventions_for_building/",
+    "sourceName": "nanocurrency",
+    "category": "كريبتو",
+    "pubDate": "2026-08-18T03:42:22.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/nanocurrency/comments/1vqitnd/general_info_and_weekly_discussion/",
+    "title": "General Info and Weekly Discussion",
+    "arabicTitle": "معلومات عامة ومناقشة أسبوعية",
+    "description": "Welcome to Nano!\n This post is meant for things that are relevant but do not justify their own post. For example, debates, issues, simple questions, memes or similar.\n We normally recommend using our Discord server for quicker answers but using this post is fine if you don't have/want Discord. Note that the official English Telegram channel for nano is @ nanocurrency.\n It's common that users have the same questions. So please, before making a new thread, make some research and look for similar questions. You will often find a comprehensive answer to your question has already been given! Please also check the official nano forum linked below.\n What is Nano?\n A fee-less, instant, decentralized and eco-friendly digital currency meant for peer-to-peer payments. Ticker is XNO and currency symbol Ӿ.\n Please check out r/nanocurrencybeginners or the Beginners Guide to Nano blog\n Where can I get some and try it out?\n  \nNano can be purchased at various Exchanges. More info in this guide or on the main site\n It can also be obtained for free in faucets or other services\n  \nWhere to store Nano?\n  \nThere are several wallets to choose from found in this guide or listed here\n The most simple form is the Nano seed which unlocks your accounts. Make sure to keep a safe backup of it, or you will risk losing your funds!\n Nano is supported on the hardware wallet Ledger Nano S and X. Refer to the Full Guide\n More about Nano security\n  \nTrade / Price Talk Neighbour Communities\n  \nr/nanotrade\n  \nMore Information\n  \nMain Site - nano.org\n Nano Hub - Explore the Nano ecosystem\n Detailed documentation and protocol guide\n Frequently Asked Questions\n Blog posts\n More quick links at the top and sidebar (menu on the mobile app)\n  \nRules:\n  \nBe respectful of one another. Follow the golden rule of friendliness\n No trolling or shilling\n No begging, bragging or illegal activities\n  \n   submitted by    /u/NanoMod  \n [link]   [comments]",
+    "arabicDescription": "مرحبا بكم في نانو! هذا المنشور مخصص للأشياء ذات الصلة ولكنها لا تبرر منشورها. على سبيل المثال، مناظرات أو قضايا أو أسئلة بسيطة أو ميمز أو ما شابه ذلك. نوصي عادةً باستخدام خادم Discord الخاص بنا للحصول على إجابات أسرع ولكن باستخدام هذا po",
+    "link": "https://www.reddit.com/r/nanocurrency/comments/1vqitnd/general_info_and_weekly_discussion/",
+    "sourceName": "nanocurrency",
+    "category": "كريبتو",
+    "pubDate": "2026-08-17T05:00:13.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/nanocurrency/comments/1vqfhrz/announcing_nano_snapshot_swarm_beta_communityrun/",
+    "title": "Announcing Nano Snapshot Swarm beta: community-run BitTorrent ledger snapshots",
+    "arabicTitle": "الإعلان عن الإصدار التجريبي من Nano Snapshot Swarm: لقطات دفتر الأستاذ BitTorrent التي يديرها المجتمع",
+    "description": "https://nano-snapshots.openrai.org\n Background\n The goal is to evaluate an independently operated BitTorrent distribution path for (reasonably-) up-to-date Nano ledger snapshots.\n The project continuously publishes a signed pointer to the current snapshot and provides a shrink-wrapped mirror client. Run it once for a single download, or leave it online to automatically discover updates, download the missing deltas, and contribute back by seeding the latest snapshot for other users.\n How it works (three components)\n  \nPublisher: An single automated publisher distributes a signed Mainline DHT BitTorrent BEP-46 Mutable Item. \n Mirrors: (just BEP-46 aware bittorrent clients, really) poll the DHT pointer every now and then. When a newer snapshot is published, it resolves the new .torrent, rechecks existing data, downloads the missing delta, and continues on to seed the updated snapshot. Anyone can contribute.\n Regular downloads: You can also use Deluge, Transmission, or another regular BitTorrent client with the most current .torrent or magnet: for a one-time download. Those clients typically do not permanently follow the signed DHT update pointer; if permanent seeding is desired, use the provided mirror client.\n  \nThis is a community-run beta and is not currently an official Nano Foundation or nano.org service. Nano Snapshot Swarm is also the first public project from The OpenRai Initiative.\n ❣️ Please report operational feedback, especially around reliability, restart recovery, peer discovery, and bandwidth.\n    submitted by    /u/cbrunnkvist  \n [link]   [comments]",
+    "arabicDescription": "https://nano-snapshots.openrai.org الخلفية الهدف هو تقييم مسار توزيع BitTorrent يتم تشغيله بشكل مستقل للحصول على لقطات لدفتر الأستاذ Nano المحدثة (بشكل معقول). ينشر المشروع بشكل مستمر مؤشرًا موقّعًا إلى اللقطات الحالية",
+    "link": "https://www.reddit.com/r/nanocurrency/comments/1vqfhrz/announcing_nano_snapshot_swarm_beta_communityrun/",
+    "sourceName": "nanocurrency",
+    "category": "كريبتو",
+    "pubDate": "2026-08-17T02:13:10.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/nanocurrency/comments/1vq51fr/volver_el_sitio_web_oficial_software_libre/",
+    "title": "Volver el sitio web oficial software libre",
+    "arabicTitle": "العودة إلى الموقع الرسمي البرمجيات الحرة",
+    "description": "Recientemente los administradores del sitio web «oficial» de Nano decidieron de un cañonazo quitar todas las traducciones a otros idiomas, sin previo aviso.\n No solo son problemáticas estas acciones, sino también demuestras una falta de profesionalidad y buena fe. La calidad del sitio web es pésima y contiene códigos de rastreo, que consideramos intolerables para una criptomoneda que defiende ser ecológica y eficiente. En concreto nos referimos al siguiente código JavaScript ofuscado:\n <!-- Google Tag Manager --> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=vO5boTQEhTbWp-L5bNclUw&gtm_preview=env-1&gtm_cookies_win=x';f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-T422X4Q');</script> <!-- End Google Tag Manager -->\n Sin embargo, existen más instancias de este tipo de problemas.\n    submitted by    /u/jorgesumle  \n [link]   [comments]",
+    "arabicDescription": "في الآونة الأخيرة، قرر مديرو موقع Nano \"الرسمي\" فجأة إزالة جميع الترجمات إلى لغات أخرى، دون إشعار مسبق. لا تمثل هذه الإجراءات مشكلة فحسب، بل إنها تظهر أيضًا الافتقار إلى الاحترافية.",
+    "link": "https://www.reddit.com/r/nanocurrency/comments/1vq51fr/volver_el_sitio_web_oficial_software_libre/",
+    "sourceName": "nanocurrency",
+    "category": "كريبتو",
+    "pubDate": "2026-08-16T18:44:05.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/nanocurrency/comments/1vphcb9/beyond_currency_my_top_3_applications_of_the/",
+    "title": "Beyond Currency: My top 3 applications of the Block-Lattice or Hashgraph",
+    "arabicTitle": "ما وراء العملة: أفضل 3 تطبيقات لدي لـ Block-Lattice أو Hashgraph",
+    "description": "It's partially paywalled but I'll go ahead and spoil the list because I do appreciate feedback esp if those more well versed in Protocol might have a different ranking or idea of if there is non-monetary utility in Nodes.\n #3 Power Substations - Layer 2 Fault Communication\n #2 EV Charging Networks - Power Distribution\n #1 Drone Swarms - Formation Control\n Let me know your thoughts\n    submitted by    /u/yuppienetwork1996  \n [link]   [comments]",
+    "arabicDescription": "إنه محمي جزئيًا بنظام حظر الاشتراك غير المدفوع ولكنني سأمضي قدمًا وأفسد القائمة لأنني أقدر التعليقات خاصة إذا كان أولئك الذين هم أكثر دراية بالبروتوكول قد يكون لديهم تصنيف أو فكرة مختلفة عما إذا كانت هناك فائدة غير نقدية في العقد. #3 محطات الطاقة الفرعية - الطبقة",
+    "link": "https://www.reddit.com/r/nanocurrency/comments/1vphcb9/beyond_currency_my_top_3_applications_of_the/",
+    "sourceName": "nanocurrency",
+    "category": "كريبتو",
+    "pubDate": "2026-08-15T23:28:51.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/nanocurrency/comments/1vn2txc/feelessmoney_faq_mostly_for_beginner/",
+    "title": "feeless.money FAQ mostly for Beginner",
+    "arabicTitle": "الأسئلة الشائعة الخاصة بـfeless.money في الغالب للمبتدئين",
+    "description": "I need to make a decision this month about feeless.money and BTC-EDU.bot.\n Both projects are functional and solve a real problem. The feedback from people who actually use them — especially beginners — is consistently very positive.\n The problem is not the product. It is reach.\n Whenever I promote the projects myself, usage increases strongly and I receive very positive feedback. But once I stop promoting them, the traffic and usage drop back to almost zero.\n I have invested a lot of time building and maintaining these projects and have been paying the ongoing infrastructure and subscription costs myself. Until now, I was willing to do that because I believe both projects are useful.\n But I now need to generate income from my work. I cannot continue running non-profit projects indefinitely while paying the costs myself.\n So this month I have to decide whether to reduce the costs and eventually shut them down, or whether there is a realistic way to make them sustainable.\n I’m not asking for donations.\n I’m asking the communities around these projects:\n Is there a way to create enough reach, users, partners, support or revenue to justify keeping them alive?\n If you have a concrete idea, can help with distribution, want to partner, or see a business model I’m missing, I’d genuinely like to hear it.\n I would much rather keep useful tools alive than shut them down simply because nobody knows they exist.\n    submitted by    /u/Inevitable-List1289  \n [link]   [comments]",
+    "arabicDescription": "أحتاج إلى اتخاذ قرار هذا الشهر بشأنfeless.money وBTC-EDU.bot. كلا المشروعين وظيفيان ويحلان مشكلة حقيقية. ردود الفعل من الأشخاص الذين يستخدمونها فعليًا - وخاصة المبتدئين - دائمًا ما تكون إيجابية للغاية. المشكلة ليست كذلك",
+    "link": "https://www.reddit.com/r/nanocurrency/comments/1vn2txc/feelessmoney_faq_mostly_for_beginner/",
+    "sourceName": "nanocurrency",
+    "category": "كريبتو",
+    "pubDate": "2026-08-13T06:29:09.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/CryptoCurrencyMAX/comments/1uxgy6v/bch_block_959751/",
+    "title": "BCH Block # 959751",
+    "arabicTitle": "كتلة غرفة تبادل معلومات السلامة الأحيائية رقم 959751",
+    "description": "submitted by    /u/sudoanonymous1    to    r/CryptoCurrencyMAX  \n [link]   [comments]",
+    "arabicDescription": "تم الإرسال بواسطة /u/sudoanonymous1 إلى r/CryptoCurrencyMAX [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/CryptoCurrencyMAX/comments/1uxgy6v/bch_block_959751/",
+    "sourceName": "مجموعة ريديت (7)",
     "category": "مُدمج",
-    "pubDate": "2026-08-19T01:59:44.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vs1wed/just_in_sec_officially_proposes_new_rules_to/",
-    "title": "JUST IN: 🇺🇸 SEC officially proposes new rules to create clear regulatory framework for crypto.",
-    "arabicTitle": "فقط في: 🇺🇸 تقترح هيئة الأوراق المالية والبورصة (SEC) رسميًا قواعد جديدة لإنشاء إطار تنظيمي واضح للعملات المشفرة.",
-    "description": "submitted by    /u/NecessaryGrowth2  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/NecessaryGrowth2 [رابط] [تعليقات]",
-    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vs1wed/just_in_sec_officially_proposes_new_rules_to/",
-    "sourceName": "MarketPulseReport",
-    "category": "الاسهم",
-    "pubDate": "2026-08-18T21:01:30.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vp5n9h/just_in_president_trump_says_he_will_soon_declare/",
-    "title": "JUST IN: 🇺🇸 President Trump says he will soon declare the Strait of Hormuz \"territory of the United States.\"",
-    "arabicTitle": "فقط في: 🇺🇸 يقول الرئيس ترامب إنه سيعلن قريبًا أن مضيق هرمز \"منطقة تابعة للولايات المتحدة\".",
-    "description": "submitted by    /u/NecessaryGrowth2  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/NecessaryGrowth2 [رابط] [تعليقات]",
-    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vp5n9h/just_in_president_trump_says_he_will_soon_declare/",
-    "sourceName": "MarketPulseReport",
-    "category": "الاسهم",
-    "pubDate": "2026-08-15T15:25:04.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vorfxu/how_do_you_connect_macro_headlines_to_the_assets/",
-    "title": "How do you connect macro headlines to the assets actually exposed to them?",
-    "arabicTitle": "كيف يمكنك ربط العناوين الكلية بالأصول المعرضة لها بالفعل؟",
-    "description": "A headline is only the starting point. The useful work is tracing the chain: event → rates, currencies, or commodities → sectors → equities.\n I opened Market Insights Community for people who enjoy that research process: market pulse, macro, sector rotation, commodities, global events, and evidence-based discussion. It is a research and discussion space—not trade alerts or financial advice.\n Discord: https://discord.gg/XbW5sAgNUC\n    submitted by    /u/the-commons  \n [link]   [comments]",
-    "arabicDescription": "العنوان هو مجرد نقطة البداية. والعمل المفيد هو تتبع السلسلة: الأحداث ← الأسعار، أو العملات، أو السلع ← القطاعات ← الأسهم. لقد فتحت مجتمع Market Insights Community للأشخاص الذين يستمتعون بعملية البحث هذه: نبض السوق، الكلي، القطاع",
-    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vorfxu/how_do_you_connect_macro_headlines_to_the_assets/",
-    "sourceName": "MarketPulseReport",
-    "category": "الاسهم",
-    "pubDate": "2026-08-15T03:00:59.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1voowr9/nvidia_following_the_pattern/",
-    "title": "NVIDIA following the pattern",
-    "arabicTitle": "NVIDIA تتبع النمط",
-    "description": "Is NVIDIA following the pattern where its stock price rises leading up to earnings and then drops after the earnings report?\n It’s been nothing but this pattern for the last few quarters, hasn’t it?\n    submitted by    /u/PrimaryResolve641  \n [link]   [comments]",
-    "arabicDescription": "هل تتبع NVIDIA النمط الذي يرتفع فيه سعر سهمها مما يؤدي إلى الأرباح ثم ينخفض ​​بعد تقرير الأرباح؟ لم يكن الأمر سوى هذا النمط خلال الأرباع القليلة الماضية، أليس كذلك؟ مقدم من /u/PrimaryResolve641 [رابط] [تعليقات]",
-    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1voowr9/nvidia_following_the_pattern/",
-    "sourceName": "MarketPulseReport",
-    "category": "الاسهم",
-    "pubDate": "2026-08-15T00:58:50.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1voj1ed/the_markets_are_rigged_why_the_next_crash_is/",
-    "title": "🚨The Markets Are Rigged: Why the Next Crash is Coming",
-    "arabicTitle": "🚨الأسواق مزورة: لماذا سيأتي الانهيار التالي",
-    "description": "submitted by    /u/Trends-Journal  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/Trends-Journal [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1voj1ed/the_markets_are_rigged_why_the_next_crash_is/",
-    "sourceName": "MarketPulseReport",
-    "category": "الاسهم",
-    "pubDate": "2026-08-14T20:46:39.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vncqie/the_ai_buildout_is_now_showing_in_every_gov_data/",
-    "title": "the AI buildout is now showing in every gov data. are we still bearish?",
-    "arabicTitle": "يظهر الآن تصميم الذكاء الاصطناعي في كل البيانات الحكومية. هل ما زلنا هبوطيين؟",
-    "description": "the same tables put electric power and specialty transformers at an all-time high\n    submitted by    /u/convexpayoff  \n [link]   [comments]",
-    "arabicDescription": "نفس الجداول تضع الطاقة الكهربائية والمحولات المتخصصة في أعلى مستوياتها على الإطلاق المقدمة من /u/convexpayoff [رابط] [تعليقات]",
-    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vncqie/the_ai_buildout_is_now_showing_in_every_gov_data/",
-    "sourceName": "MarketPulseReport",
-    "category": "الاسهم",
-    "pubDate": "2026-08-13T14:45:28.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vmeova/riot_signed_a_91b_20year_lease_with_an_unnamed/",
-    "title": "Riot signed a $9.1B, 20-year lease with an unnamed frontier AI lab, some reports quoted it to be Anthropic and it names bitcoin sales as the funding source for the equity",
-    "arabicTitle": "وقعت شركة Riot عقد إيجار بقيمة 9.1 مليار دولار لمدة 20 عامًا مع مختبر ذكاء اصطناعي حدودي لم يذكر اسمه، وذكرت بعض التقارير أنه أنثروبيكي وذكرت مبيعات البيتكوين كمصدر تمويل للأسهم",
-    "description": "Riot Platforms $RIOT filed an 8-K on Aug 10 saying it has \"executed a data center lease with a leading frontier AI lab for 191 MW of critical IT capacity\" at its Rockdale, Texas campus. the 20-year initial term carries $9.1 billion of contract revenue, and $16.1 billion if the tenant takes both five-year extensions. \n https://preview.redd.it/z7xppmr48yih1.png?width=1208&format=png&auto=webp&s=2e3f7cca97e76ffe9cc9d65a17d03f3cd6f81217\n    submitted by    /u/convexpayoff  \n [link]   [comments]",
-    "arabicDescription": "قدمت شركة Riot Platforms $RIOT مذكرة 8-K في 10 أغسطس قائلة إنها \"نفذت عقد إيجار لمركز بيانات مع مختبر رائد للذكاء الاصطناعي على الحدود بسعة 191 ميجاوات من سعة تكنولوجيا المعلومات الحيوية\" في حرمها الجامعي في روكديل بولاية تكساس. تحمل المدة الأولية البالغة 20 عامًا 9.1 مليار دولار من إيرادات العقود",
-    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vmeova/riot_signed_a_91b_20year_lease_with_an_unnamed/",
-    "sourceName": "MarketPulseReport",
-    "category": "الاسهم",
-    "pubDate": "2026-08-12T13:49:12.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vlqk6j/deadline_to_submit_claims_on_the_wm_technology/",
-    "title": "Deadline to Submit Claims on the WM Technology ($MAPS) $7.5M Settlement is October 30, 2026",
-    "arabicTitle": "الموعد النهائي لتقديم المطالبات بشأن تسوية WM Technology ($MAPS) بقيمة 7.5 مليون دولار أمريكي هو 30 أكتوبر 2026",
-    "description": "Hey guys, if you missed it, WM Technology settled $7.5M with investors over claims that it inflated its monthly active user numbers and misled investors about user growth. The deadline to file a claim is October 30, 2026.\n In a nutshell, WM counted users from pop-under ads as active users even when they didn’t actually engage with the platform. In 2022, the company disclosed concerns about its MAU reporting, and $MAPS fell more than 25%.\n Investors now have until October 30, 2026 to submit a claim and get payment.\n If you invested in $MAPS at the time, you can check your eligibility and file a claim here\n Anyone here invested in $MAPS back then? How much were your losses?\n https://preview.redd.it/pcfzonuhmsih1.jpg?width=2340&format=pjpg&auto=webp&s=93d4f34474680d498210d15171e8131806c193ef\n    submitted by    /u/JuniorCharge4571  \n [link]   [comments]",
-    "arabicDescription": "مرحبًا يا شباب، إذا فاتكم الأمر، قامت شركة WM Technology بتسوية مبلغ 7.5 مليون دولار مع المستثمرين بسبب مزاعم بأنها قامت بتضخيم أعداد المستخدمين النشطين شهريًا وضللت المستثمرين بشأن نمو المستخدمين. الموعد النهائي لتقديم المطالبة هو 30 أكتوبر 2026. باختصار، أحصتنا WM",
-    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vlqk6j/deadline_to_submit_claims_on_the_wm_technology/",
-    "sourceName": "MarketPulseReport",
-    "category": "الاسهم",
-    "pubDate": "2026-08-11T18:58:52.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vl0crc/why_cant_the_world_escape_the_us_dollar/",
-    "title": "Why can’t the world escape the US dollar?",
-    "arabicTitle": "لماذا لا يستطيع العالم الهروب من الدولار الأمريكي؟",
-    "description": "Why can’t the world escape the US dollar?\n Despite de-dollarization efforts, BRICS, and China’s growing influence, the dollar still dominates global trade and finance.\n What do you think is the biggest obstacle to replacing the dollar?\n Curious to hear different perspectives.\n https://youtu.be/DE5XamAbG9o\n    submitted by    /u/Emergency-Bag-6760  \n [link]   [comments]",
-    "arabicDescription": "لماذا لا يستطيع العالم الهروب من الدولار الأمريكي؟ وعلى الرغم من جهود التخلص من الدولرة، ومجموعة البريكس، ونفوذ الصين المتزايد، لا يزال الدولار يهيمن على التجارة والتمويل العالميين. ما هو برأيك العائق الأكبر أمام استبدال الدولار؟ فضولي لسماع",
-    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vl0crc/why_cant_the_world_escape_the_us_dollar/",
-    "sourceName": "MarketPulseReport",
-    "category": "الاسهم",
-    "pubDate": "2026-08-10T23:05:28.000Z",
+    "pubDate": "2026-07-15T20:09:47.000Z",
     "media": {
       "image": null
     }
