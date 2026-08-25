@@ -1,5 +1,173 @@
 [
   {
+    "id": "https://www.reddit.com/r/defi/comments/1vxnyz7/how_do_we_let_an_ai_use_a_wallet_without_giving/",
+    "title": "How do we let an AI use a wallet without giving the AI unrestricted control?",
+    "arabicTitle": "كيف نسمح للذكاء الاصطناعي باستخدام المحفظة دون منح الذكاء الاصطناعي تحكمًا غير مقيد؟",
+    "description": "We are seeing the involvement of agents into finances . Where we have seen AiFi word coming into play . \n Ai agents are getting much better at reasoning and making decisions. \n So the question is What happens when an AI agents needs to execute a transaction on chain? \n We don't necessarily want the agent to have unrestricted permission to: \n 1) Move unlimited funds \n 2) interact with arbitrary contracts\n 3) Execute transaction outside it's intended purpose\n So we are exploring an architecture where the AI agents doesn't directly control Blockchain.\n Instead : \n AI Agents ->Policy/Execution layer->Blockchain \n The agent request an action . The execution layer checks wheather everything is according to policy then checks and execute . \n We're building this idea as Agaemon - essentially an execution/control layer designed to sit between AI agents and on chain execution. \n Iam curious. \n I'm curious what people building AI agents , wallets , defi protocols and on chain infrastructure think. \n Are we seeing this future of agents as financial layer .\n Iam curious hearing your views on this.\n    submitted by    /u/ChargeDry    to    r/defi  \n [link]   [comments]",
+    "arabicDescription": "نحن نشهد تورط وكلاء في الشؤون المالية. حيث رأينا كلمة AiFi تدخل حيز التنفيذ. يتحسن عملاء الذكاء الاصطناعي كثيرًا في التفكير واتخاذ القرارات. لذا فإن السؤال هو ماذا يحدث عندما يحتاج وكلاء الذكاء الاصطناعي إلى تنفيذ معاملة ما",
+    "link": "https://www.reddit.com/r/defi/comments/1vxnyz7/how_do_we_let_an_ai_use_a_wallet_without_giving/",
+    "sourceName": "مجموعة ريديت (5)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-25T03:02:16.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/CryptoCurrency/comments/1vxncvq/to_the_moon/",
+    "title": "To the moon!",
+    "arabicTitle": "To the moon!",
+    "description": "submitted by    /u/barcode972    to    r/CryptoCurrency  \n [link]   [comments]",
+    "arabicDescription": "submitted by /u/barcode972 to r/CryptoCurrency [link] [comments]",
+    "link": "https://www.reddit.com/r/CryptoCurrency/comments/1vxncvq/to_the_moon/",
+    "sourceName": "مجتمعي",
+    "category": "عام",
+    "pubDate": "2026-08-25T02:33:37.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/WallStreetbetsELITE/comments/1vxn7d8/o_canada/",
+    "title": "O Canada",
+    "arabicTitle": "O Canada",
+    "description": "submitted by    /u/chinaski73    to    r/WallStreetbetsELITE  \n [link]   [comments]",
+    "arabicDescription": "submitted by /u/chinaski73 to r/WallStreetbetsELITE [link] [comments]",
+    "link": "https://www.reddit.com/r/WallStreetbetsELITE/comments/1vxn7d8/o_canada/",
+    "sourceName": "مجتمعي",
+    "category": "عام",
+    "pubDate": "2026-08-25T02:26:38.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/economy/comments/1vxmuin/why_is_the_republican_party_considered_fiscally/",
+    "title": "Why is the Republican Party considered fiscally conservative?",
+    "arabicTitle": "لماذا يعتبر الحزب الجمهوري محافظا ماليا؟",
+    "description": "submitted by    /u/Vivid_Anywhere8988    to    r/economy  \n [link]   [comments]",
+    "arabicDescription": "تم الإرسال بواسطة /u/Vivid_Anywhere8988 إلى r/economy [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/economy/comments/1vxmuin/why_is_the_republican_party_considered_fiscally/",
+    "sourceName": "مجموعة ريديت (1)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-25T02:10:12.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/Superstonk/comments/1vxl56w/please_lord_let_it_be_citadel/",
+    "title": "Please Lord let it be Citadel",
+    "arabicTitle": "Please Lord let it be Citadel",
+    "description": "https://www.foxbusiness.com/video/6403971110112\n    submitted by    /u/jxp497    to    r/Superstonk  \n [link]   [comments]",
+    "arabicDescription": "https://www.foxbusiness.com/video/6403971110112 submitted by /u/jxp497 to r/Superstonk [link] [comments]",
+    "link": "https://www.reddit.com/r/Superstonk/comments/1vxl56w/please_lord_let_it_be_citadel/",
+    "sourceName": "مجتمعي",
+    "category": "عام",
+    "pubDate": "2026-08-25T00:54:30.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/bitcoin_com/comments/1vxl1kh/financial_repression_is_the_new_bull_case_for/",
+    "title": "\"Financial repression\" is the new bull case for Bitcoin: the government isn't trying to help you. It's quietly deciding that savers should lose, and Bitcoin is the exit.",
+    "arabicTitle": "\"القمع المالي\" هو الحجة الصاعدة الجديدة لبيتكوين: الحكومة لا تحاول مساعدتك. إنها تقرر بهدوء أن المدخرين يجب أن يخسروا، والبيتكوين هو المخرج.",
+    "description": "The term getting thrown around by Bitcoin bulls this week is \"financial repression,\" and unlike most crypto buzzwords it actually describes something real and specific.\n Long-term Treasury yields hit 5.3%, near a two-decade high. The government has $40 trillion in debt it needs to refinance, and it cannot afford those rates. So the Treasury steps in with expanded bond buybacks to force long-term yields back down. That's the move that just rocketed Bitcoin 24% in a week.\n Financial repression is the name for what's actually happening underneath: the state deliberately holding interest rates below the rate of inflation so that the real value of its debt quietly erodes over time. It's not a crisis, it's a policy. And the people who pay for it are anyone holding cash, bonds, or savings, because they earn less than inflation and lose purchasing power every year without ever seeing a single dramatic headline. It's a wealth transfer from savers to the government, executed so slowly most people never notice.\n When the government's actual, revealed policy is to make holding your national currency a guaranteed slow loss, an asset that a) can't be debased, b) can't be yield-suppressed by a central bank, and c) sits entirely outside the system doing the repressing, becomes genuinely rational to own. Not as a gamble. As a defense.\n The uncomfortable part for maxis is that this same logic pumped stocks and gold too. Financial repression lifts all hard and scarce assets, not just Bitcoin, because they're all exits from the same trap. So \"Bitcoin wins because of debasement\" is really \"everything that isn't cash wins,\" and BTC has to compete with gold and equities for that flow rather than having the thesis to itself.\n But the core point stands and it's darkly clarifying: the buyback rally everyone cheered isn't the government helping markets. It's the government telling you, in the language of bond auctions, that it has decided savers should lose slowly so it doesn't have to lose fast. Bitcoin is one of the few opt-outs. That's not hopium. That's just reading what they're actually doing.\n    submitted by    /u/Bcom_Mod    to    r/bitcoin_com  \n [link]   [comments]",
+    "arabicDescription": "المصطلح الذي يطرحه المضاربون على صعود البيتكوين هذا الأسبوع هو \"القمع المالي\"، وعلى عكس معظم الكلمات الطنانة الخاصة بالعملات المشفرة، فهو في الواقع يصف شيئًا حقيقيًا ومحددًا. وبلغت عائدات سندات الخزانة طويلة الأجل 5.3%، بالقرب من أعلى مستوى لها منذ عقدين. الحكومة لديها 4 دولارات",
+    "link": "https://www.reddit.com/r/bitcoin_com/comments/1vxl1kh/financial_repression_is_the_new_bull_case_for/",
+    "sourceName": "مجموعة ريديت (5)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-25T00:50:05.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/dividends/comments/1vxkcl3/the_cocacola_company_ko_is_extremely_overvalued/",
+    "title": "The Coca-Cola Company (KO) is extremely overvalued",
+    "arabicTitle": "The Coca-Cola Company (KO) is extremely overvalued",
+    "description": "Some of you will read this and won’t care, this might be a buy and hold forever stock for you. But valuation is very important to long-term returns. My data tells me that when KO is this overvalued, long term returns drop to about 5% per year, from over 8% per year under a more average valuation. \n If you remember, I’ve made similar calls in the past:\n https://www.reddit.com/r/dividends/s/OaKOyMLCnS\n Price return 1 year later was -9%. But, if you had sold the day after I made that post and bought back in the first day the price dropped 10% from that point, you would have made 25% 1 year later. \n I’m ready to be told that timing the market is foolish, but this can also serve as a warning for those of you looking to buy. There are far better options out there. Sit tight and KO will be cheaper a few months from now.\n    submitted by    /u/PizzaTrader    to    r/dividends  \n [link]   [comments]",
+    "arabicDescription": "Some of you will read this and won’t care, this might be a buy and hold forever stock for you. But valuation is very important to long-term returns. My data tells me that when KO is this overvalued, long term returns drop to about 5% per year, from o",
+    "link": "https://www.reddit.com/r/dividends/comments/1vxkcl3/the_cocacola_company_ko_is_extremely_overvalued/",
+    "sourceName": "مجتمعي",
+    "category": "عام",
+    "pubDate": "2026-08-25T00:19:54.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/Cruise/comments/1vxj7ic/has_anyone_ever_been_stopped_for_their_clothing/",
+    "title": "Has anyone ever been stopped for their clothing?",
+    "arabicTitle": "هل تم إيقاف أي شخص من قبل بسبب ملابسه؟",
+    "description": "For example; I have been told that certain Caribbean islands do not allow camouflage as it is restricted to military use. \n I have also been told that you should not wear the complementary robe outside your cabin unless you are going to or from the spa. \n Have you actually seen anyone being asked to change? \n    submitted by    /u/OldPolishProverb    to    r/Cruise  \n [link]   [comments]",
+    "arabicDescription": "على سبيل المثال؛ لقد قيل لي أن بعض جزر الكاريبي لا تسمح بالتمويه لأنه يقتصر على الاستخدام العسكري. لقد قيل لي أيضًا أنه لا ينبغي عليك ارتداء الرداء التكميلي خارج مقصورتك إلا إذا كنت ذاهبًا إلى المنتجع الصحي أو منه",
+    "link": "https://www.reddit.com/r/Cruise/comments/1vxj7ic/has_anyone_ever_been_stopped_for_their_clothing/",
+    "sourceName": "مجموعة ريديت (1)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-24T23:31:59.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/wallstreetbets/comments/1vxilt1/wendys_ceo_says_food_quality_hasnt_been_chains/",
+    "title": "Wendy's CEO Says Food Quality Hasn’t Been Chain’s Top Priority—Vows Changes",
+    "arabicTitle": "Wendy's CEO Says Food Quality Hasn’t Been Chain’s Top Priority—Vows Changes",
+    "description": "submitted by    /u/Fair-Guitar    to    r/wallstreetbets  \n [link]   [comments]",
+    "arabicDescription": "submitted by /u/Fair-Guitar to r/wallstreetbets [link] [comments]",
+    "link": "https://www.reddit.com/r/wallstreetbets/comments/1vxilt1/wendys_ceo_says_food_quality_hasnt_been_chains/",
+    "sourceName": "مجتمعي",
+    "category": "عام",
+    "pubDate": "2026-08-24T23:07:02.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/oil/comments/1vxi498/iran_has_just_struck_an_oil_tanker_in_the_strait/",
+    "title": "Iran has just struck an oil tanker in the Strait of Hormuz US-backed southern corridor, while transiting under US escort, causing damage to the engine room and fully disabling the vessel, per UKMTO.",
+    "arabicTitle": "لقد ضربت إيران للتو ناقلة نفط في مضيق هرمز، الممر الجنوبي المدعوم من الولايات المتحدة، أثناء عبورها تحت حراسة أمريكية، مما تسبب في تلف غرفة المحرك وتعطيل السفينة بالكامل، وفقًا لـ UKMTO.",
+    "description": "https://x.com/hormuzletter/status/2092018978507850092?s=46\n    submitted by    /u/Waste-Explanation-76    to    r/oil  \n [link]   [comments]",
+    "arabicDescription": "https://x.com/hormuzletter/status/2092018978507850092?s=46 مقدم بواسطة /u/Waste-Explanation-76 إلى r/oil [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/oil/comments/1vxi498/iran_has_just_struck_an_oil_tanker_in_the_strait/",
+    "sourceName": "مجموعة ريديت (1)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-24T22:47:18.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/Economics/comments/1vxh7w8/the_job_market_is_hell_young_people_are_using/",
+    "title": "The Job Market Is Hell - Young people are using ChatGPT to write their applications; HR is using AI to read them; no one is getting hired.",
+    "arabicTitle": "The Job Market Is Hell - Young people are using ChatGPT to write their applications; HR is using AI to read them; no one is getting hired.",
+    "description": "submitted by    /u/Super-Liberal-Girl    to    r/Economics  \n [link]   [comments]",
+    "arabicDescription": "submitted by /u/Super-Liberal-Girl to r/Economics [link] [comments]",
+    "link": "https://www.reddit.com/r/Economics/comments/1vxh7w8/the_job_market_is_hell_young_people_are_using/",
+    "sourceName": "مجتمعي",
+    "category": "عام",
+    "pubDate": "2026-08-24T22:10:58.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/Economics/comments/1vxh7w8/the_job_market_is_hell_young_people_are_using/",
+    "title": "The Job Market Is Hell - Young people are using ChatGPT to write their applications; HR is using AI to read them; no one is getting hired.",
+    "arabicTitle": "سوق العمل جحيم - يستخدم الشباب ChatGPT لكتابة طلباتهم؛ يستخدم قسم الموارد البشرية الذكاء الاصطناعي لقراءتها؛ لا أحد يتم تعيينه.",
+    "description": "submitted by    /u/Super-Liberal-Girl    to    r/Economics  \n [link]   [comments]",
+    "arabicDescription": "تم تقديمه بواسطة /u/Super-Liberal-Girl إلى r/Economics [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/Economics/comments/1vxh7w8/the_job_market_is_hell_young_people_are_using/",
+    "sourceName": "مجموعة ريديت (1)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-24T22:10:58.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
     "id": "https://www.reddit.com/r/aliens/comments/1vxgzyj/4chan_whistleblower/",
     "title": "4chan whistleblower",
     "arabicTitle": "4chan whistleblower",
@@ -42,29 +210,15 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/wallstreetbetsGER/comments/1vxevw6/brauche_hilfe/",
-    "title": "Brauche Hilfe",
-    "arabicTitle": "Brauche Hilfe",
-    "description": "Hat das schon mal jemand bekommen? Chatti sagt, ich habe Mist gebaut. Wollte doch nur Öl long gehen 😢 Was würdet ihr machen?\n    submitted by    /u/Schnabatzo    to    r/wallstreetbetsGER  \n [link]   [comments]",
-    "arabicDescription": "Hat das schon mal jemand bekommen? Chatti sagt, ich habe Mist gebaut. Wollte doch nur Öl long gehen 😢 Was würdet ihr machen? submitted by /u/Schnabatzo to r/wallstreetbetsGER [link] [comments]",
-    "link": "https://www.reddit.com/r/wallstreetbetsGER/comments/1vxevw6/brauche_hilfe/",
+    "id": "https://www.reddit.com/r/politics/comments/1vxfg9q/supreme_court_upholds_trumps_order_to_overhaul/",
+    "title": "Supreme Court upholds Trump's order to overhaul mail-in ballots",
+    "arabicTitle": "Supreme Court upholds Trump's order to overhaul mail-in ballots",
+    "description": "submitted by    /u/wsouloa    to    r/politics  \n [link]   [comments]",
+    "arabicDescription": "submitted by /u/wsouloa to r/politics [link] [comments]",
+    "link": "https://www.reddit.com/r/politics/comments/1vxfg9q/supreme_court_upholds_trumps_order_to_overhaul/",
     "sourceName": "مجتمعي",
     "category": "عام",
-    "pubDate": "2026-08-24T20:43:08.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/nvidia/comments/1vxeqkx/lost_technology/",
-    "title": "Lost Technology",
-    "arabicTitle": "Lost Technology",
-    "description": "submitted by    /u/Gombrongler    to    r/nvidia  \n [link]   [comments]",
-    "arabicDescription": "submitted by /u/Gombrongler to r/nvidia [link] [comments]",
-    "link": "https://www.reddit.com/r/nvidia/comments/1vxeqkx/lost_technology/",
-    "sourceName": "مجتمعي",
-    "category": "عام",
-    "pubDate": "2026-08-24T20:37:43.000Z",
+    "pubDate": "2026-08-24T21:03:41.000Z",
     "media": {
       "image": null
     }
@@ -84,6 +238,34 @@
     }
   },
   {
+    "id": "https://www.reddit.com/r/inflation/comments/1vxebtk/what_trump_just_did_by_starting_a_trade_war_with/",
+    "title": "What trump just did by starting a trade war with Canada",
+    "arabicTitle": "What trump just did by starting a trade war with Canada",
+    "description": "submitted by    /u/Snapdragon_4U    to    r/inflation  \n [link]   [comments]",
+    "arabicDescription": "submitted by /u/Snapdragon_4U to r/inflation [link] [comments]",
+    "link": "https://www.reddit.com/r/inflation/comments/1vxebtk/what_trump_just_did_by_starting_a_trade_war_with/",
+    "sourceName": "مجتمعي",
+    "category": "عام",
+    "pubDate": "2026-08-24T20:22:35.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/inflation/comments/1vxebtk/what_trump_just_did_by_starting_a_trade_war_with/",
+    "title": "What trump just did by starting a trade war with Canada",
+    "arabicTitle": "ما فعله ترامب للتو ببدء حرب تجارية مع كندا",
+    "description": "submitted by    /u/Snapdragon_4U    to    r/inflation  \n [link]   [comments]",
+    "arabicDescription": "مرسل من /u/Snapdragon_4U إلى r/inflation [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/inflation/comments/1vxebtk/what_trump_just_did_by_starting_a_trade_war_with/",
+    "sourceName": "مجموعة ريديت (1)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-24T20:22:35.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
     "id": "https://www.reddit.com/r/PoursTea/comments/1vxe8ul/finally_showing_them_rich_people/",
     "title": "Finally! Showing them rich people!!!",
     "arabicTitle": "أخيراً! تظهر لهم الأغنياء !!!",
@@ -93,34 +275,6 @@
     "sourceName": "مجموعة ريديت (1)",
     "category": "مُدمج",
     "pubDate": "2026-08-24T20:19:38.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/Superstonk/comments/1vxdr2w/09317_gamestop_closing_price_1804_market_cap_808/",
-    "title": "-0.93%/17¢ • GameStop Closing Price $18.04 – Market Cap $8.08 Billion (Monday, August 24, 2026)",
-    "arabicTitle": "-0.93%/17¢ • GameStop Closing Price $18.04 – Market Cap $8.08 Billion (Monday, August 24, 2026)",
-    "description": "🟥\n Meanwhile our largest holdings are up over 2% each. 🤡\n    submitted by    /u/iamwheat    to    r/Superstonk  \n [link]   [comments]",
-    "arabicDescription": "🟥 Meanwhile our largest holdings are up over 2% each. 🤡 submitted by /u/iamwheat to r/Superstonk [link] [comments]",
-    "link": "https://www.reddit.com/r/Superstonk/comments/1vxdr2w/09317_gamestop_closing_price_1804_market_cap_808/",
-    "sourceName": "مجتمعي",
-    "category": "عام",
-    "pubDate": "2026-08-24T20:01:46.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/defi/comments/1vxc9xq/best_principal_token_pt_stablecoin_yields_20260824/",
-    "title": "Best Principal Token (PT) Stablecoin Yields (2026-08-24)",
-    "arabicTitle": "أفضل عائد للعملة المستقرة (PT) للرمز المميز (2026/08/24)",
-    "description": "Below, are the best rates you can get for 1K, 10K, and 100K USD investments on fixed term/fixed yield principal tokens (PTs).\n Almost identical opportunities as last week, with main variability occurring at 1k level with 2 opporutnities on Spectra Finance.\n Once again, the leader across all levels is sUSD3 a junior tranche that earns a higher yield by taking first loss on a private loan pool.\n 1,000 USD Investment Level Opportunities:\n  \n23.72% - sUSD3 (USDC), Ethereum, Pendle, December 16\n 17.41% - reUSDe (USDe), Ethereum, Pendle, December 9\n 16.36% - sUSG (USG), Ethereum, Spectra, September 24\n 15.06% - WUSDN (USDN), Ethereum, Spectra, January 11, 2027\n 14.21% - ONyc, Solana, Exponent, September 10\n  \n10,000 USD Investment Level Opportunities:\n  \n23.38% - sUSD3 (USDC), Ethereum, Pendle, December 16\n 17.38% - reUSDe (USDe), Ethereum, Pendle, December 9\n 14.21% - ONyc, Solana, Exponent, September 10\n 13.81% - nOPAL (USDC), Ethereum, Pendle, September 18\n 13.41% - USD3, Ethereum, Pendle, December 16\n  \n100,000 USD Investment Level Opportunities:\n  \n21.70% - sUSD3 (USDC), Ethereum, Pendle, December 16\n 17.33% - reUSDe (USDe), Ethereum, Pendle, December 9\n 14.13% - ONyc, Solana, Exponent, September 10\n 13.77% - nOPAL (USDC), Ethereum, Pendle, September 18\n 13.38% - USD3, Ethereum, Pendle, December 16\n  \n*Note: rates are calculated at time of publication and subject to change; limited to markets with > 2 weeks in duration and tokens at or above their peg. PT markets still have risk of loss from underlying stablecoin depegs.\n    submitted by    /u/stablefyi    to    r/defi  \n [link]   [comments]",
-    "arabicDescription": "فيما يلي، أفضل الأسعار التي يمكنك الحصول عليها لاستثمارات بقيمة 1 ألف و10 آلاف و100 ألف دولار أمريكي على الرموز الرئيسية ذات المدة الثابتة/العائد الثابت (PTs). فرص متطابقة تقريبًا مثل الأسبوع الماضي، مع حدوث تباين رئيسي عند مستوى 1 ألف مع فرصتين على Spectra Fin",
-    "link": "https://www.reddit.com/r/defi/comments/1vxc9xq/best_principal_token_pt_stablecoin_yields_20260824/",
-    "sourceName": "مجموعة ريديت (5)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T19:08:46.000Z",
     "media": {
       "image": null
     }
@@ -140,71 +294,15 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/economy/comments/1vx9t8o/in_2024_trump_claimed_to_have_a_concept_of_a_plan/",
-    "title": "In 2024, Trump claimed to have “a concept of a plan” to replace Obamacare and bring down health insurance costs. No plan was ever enacted, but he still sabotaged Obamacare. Now millions of Americans are paying thousands more on premiums every year. ￼",
-    "arabicTitle": "في عام 2024، ادعى ترامب أن لديه \"مفهوم خطة\" لاستبدال نظام أوباماكير وخفض تكاليف التأمين الصحي. ولم يتم إقرار أي خطة على الإطلاق، لكنه استمر في تخريب نظام أوباماكير. الآن يدفع الملايين من الأميركيين آلافًا إضافية على أقساط التأمين كل عام. ￼",
-    "description": "submitted by    /u/Conscious-Quarter423    to    r/economy  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/Conscious-Quarter423 إلى r/economy [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/economy/comments/1vx9t8o/in_2024_trump_claimed_to_have_a_concept_of_a_plan/",
-    "sourceName": "مجموعة ريديت (1)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T17:44:00.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
     "id": "https://www.reddit.com/r/binance/comments/1vx9nnj/binance_froze_my_funds_and_has_been_ignoring_me/",
     "title": "Binance Froze My Funds and Has Been Ignoring Me Since June",
     "arabicTitle": "قامت Binance بتجميد أموالي وتتجاهلني منذ يونيو",
     "description": "I’ve been dealing with a situation where Binance froze my funds, and since June they’ve been doing nothing but making empty promises that they’ll get back to me with an update. So far, absolutely nothing has been done.\n This is honestly the worst customer service I’ve ever experienced. And just to be clear, ALL OF THE FUNDS ARE LEGITIMATE AND LEGALLY OBTAINED. I even offered to provide them with documents and proof of the source of the funds, but I was simply ignored.\n Has anyone experienced something similar?\n    submitted by    /u/Active_Broccoli_2502    to    r/binance  \n [link]   [comments]",
-    "arabicDescription": "لقد كنت أتعامل مع موقف حيث قام Binance بتجميد أموالي، ومنذ شهر يونيو لم يفعلوا شيئًا سوى تقديم وعود فارغة بأنهم سيعودون إليّ بتحديث. حتى الآن، لم يتم فعل أي شيء على الإطلاق. هذا هو بصراحة أسوأ العملاء",
+    "arabicDescription": "لقد كنت أتعامل مع موقف حيث قام Binance بتجميد أموالي، ومنذ يونيو لم يفعلوا شيئًا سوى تقديم وعود فارغة بأنهم سيعودون إليّ بتحديث. حتى الآن، لم يتم فعل أي شيء على الإطلاق. هذا هو بصراحة أسوأ العملاء",
     "link": "https://www.reddit.com/r/binance/comments/1vx9nnj/binance_froze_my_funds_and_has_been_ignoring_me/",
     "sourceName": "مجموعة ريديت (5)",
     "category": "مُدمج",
     "pubDate": "2026-08-24T17:38:27.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/Economics/comments/1vx9f7b/trump_administration_announces_global_economic/",
-    "title": "Trump administration announces global economic war on Iran",
-    "arabicTitle": "Trump administration announces global economic war on Iran",
-    "description": "submitted by    /u/One-Emu-1103    to    r/Economics  \n [link]   [comments]",
-    "arabicDescription": "submitted by /u/One-Emu-1103 to r/Economics [link] [comments]",
-    "link": "https://www.reddit.com/r/Economics/comments/1vx9f7b/trump_administration_announces_global_economic/",
-    "sourceName": "مجتمعي",
-    "category": "عام",
-    "pubDate": "2026-08-24T17:30:14.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/Economics/comments/1vx9f7b/trump_administration_announces_global_economic/",
-    "title": "Trump administration announces global economic war on Iran",
-    "arabicTitle": "إدارة ترامب تعلن الحرب الاقتصادية العالمية على إيران",
-    "description": "submitted by    /u/One-Emu-1103    to    r/Economics  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/One-Emu-1103 إلى r/Economics [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/Economics/comments/1vx9f7b/trump_administration_announces_global_economic/",
-    "sourceName": "مجموعة ريديت (1)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T17:30:14.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/Junior_Stocks/comments/1vx9czg/can_atomic_eagle_unlock_116_million_pounds_of/",
-    "title": "Can Atomic Eagle Unlock 116 Million Pounds of Uranium in Post-Coup Niger?",
-    "arabicTitle": "هل يستطيع النسر الذري الحصول على 116 مليون رطل من اليورانيوم في النيجر بعد الانقلاب؟",
-    "description": "Original Article: https://www.juniorstocks.com/can-atomic-eagle-unlock-116-million-pounds-of-uranium-in-post-coup-niger\n Expropriation disputes in the global resources sector usually end in decades of bitter arbitration, but Atomic Eagle Limited (ASX: AEU) has managed to rewrite the script in West Africa. The developer has officially struck a landmark deal with the Republic of Niger to re-establish operational control over the massive Madaouela Uranium Project. The agreement formally settles a high-stakes standoff that began when Niger’s government revoked the asset's mining rights in 2024 from predecessor GoviEx Uranium Inc. (TSX-V: GXU) following a military coup.\n Instead of nursing past legal grievances, a corporate reboot paved the way for fresh diplomatic dialogue. GoviEx Uranium Inc. (TSX-V: GXU) merged with Tombador Iron (ASX: TI1) in November 2025 to form Atomic Eagle Limited (ASX: AEU), bringing in new leadership and a pragmatic approach to sovereign negotiations. Under the newly inked mining convention, the Madaouela exploitation permit will be transferred to a newly incorporated Nigerien operating subsidiary, MAMICO, with Atomic Eagle Limited (ASX: AEU) holding a controlling 60 percent stake and the State of Niger retaining 40 percent.\n The agreement trades legal crossfire for clear commercial certainty. Atomic Eagle Limited (ASX: AEU) retains full operational control while committing to staged payments of $5 million USD within 30 days of permit issuance, followed by an additional $5 million USD at the start of construction. Niger secures marketing rights for a portion of production aligned with its equity share and conditional pre-emption rights capped at half the mine's output, provided these do not disrupt binding off-take contracts secured by MAMICO. Crucially, all pending international arbitration proceedings will be formally withdrawn within seven days of signing.\n Chief Executive Officer Phil Hoskins highlighted the agreement as a transformational outcome that significantly expands the company's resource footprint alongside its flagship Muntanga asset in Zambia. Madaouela represents one of the largest undeveloped sandstone-hosted deposits in the world, holding a foreign estimate of 116.5 million pounds of triuranium octoxide, including 96.9 million pounds in Measured and Indicated resources at an average grade of 1,275 parts per million. Technical teams have already begun resource verification work to convert these legacy Canadian figures into Australasian JORC Code standards later this year, cementing the project’s position in the global nuclear supply chain.\n Sources\n Data for this article was compiled from public disclosures by Atomic Eagle Limited (ASX: AEU), official statements from the Republic of Niger Ministry of Mines, World Nuclear News, and Mining.com.au (August 2026).\n Disclaimer\n Neither the author of this article nor JuniorStocks holds equity, stock options, or any other financial positions in Atomic Eagle Limited (ASX: AEU), GoviEx Uranium Inc. (TSX-V: GXU), Tombador Iron (ASX: TI1), or any other companies mentioned in this publication. This content is published by JuniorStocks strictly for informational purposes, was prepared independently without company compensation, and utilized AI assistance for text editing, formatting, and generating accompanying media. While the global uranium sector and West Africa’s mining landscape present compelling dynamics, this article does not constitute investment or financial advice. Investors are strongly advised to conduct their own thorough, independent due diligence and consult with a qualified financial professional before making any investment decisions.\n    submitted by    /u/JuniorStocksCom  \n [link]   [comments]",
-    "arabicDescription": "المقال الأصلي: https://www.juniorstocks.com/can-atomic-eagle-unlock-116-million-pounds-of-uranium-in-post-coup-niger عادةً ما تنتهي نزاعات المصادرة في قطاع الموارد العالمية بعقود من التحكيم المرير، لكن Atomic Eagle Limited (ASX:",
-    "link": "https://www.reddit.com/r/Junior_Stocks/comments/1vx9czg/can_atomic_eagle_unlock_116_million_pounds_of/",
-    "sourceName": "Junior_Stocks",
-    "category": "الاسهم",
-    "pubDate": "2026-08-24T17:28:07.000Z",
     "media": {
       "image": null
     }
@@ -226,7 +324,7 @@
   {
     "id": "https://theonion.com/?p=1851706281",
     "title": "Biology Teacher Disappointed Nobody Did Assigned Summer Dissecting",
-    "arabicTitle": "مدرس الأحياء يشعر بخيبة أمل لم يقم أحد بتكليفه بتشريح الصيف",
+    "arabicTitle": "مدرس الأحياء يشعر بخيبة أمل لأنه لم يقم أحد بمهمة تشريح الصيف",
     "description": "SAN MATEO, CA—Noting that the students had known about the assignment since their end-of-year dismissal back in May, Sofia Suarez, a biology teacher at Hillsdale High School, informed her class Wednesday that she was disappointed no one had done their summer dissecting. “All right, you had three months to start on your fetal pig, but it […]\nThe post Biology Teacher Disappointed Nobody Did Assigned Summer Dissecting appeared first on The Onion.",
     "arabicDescription": "سان ماتيو، كاليفورنيا - في إشارة إلى أن الطلاب كانوا على علم بالمهمة منذ فصلهم في نهاية العام في شهر مايو، أبلغت صوفيا سواريز، معلمة علم الأحياء في مدرسة هيلزديل الثانوية، فصلها يوم الأربعاء بأنها تشعر بخيبة أمل لأن أحدًا لم يقم بها",
     "link": "https://theonion.com/biology-teacher-disappointed-nobody-did-assigned-summer-dissecting/",
@@ -247,118 +345,6 @@
     "sourceName": "The Onion",
     "category": "الاخبار",
     "pubDate": "Mon, 24 Aug 2026 17:17:16 +0000",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/WallStreetbetsELITE/comments/1vx90n2/ill_just_leave_this_here/",
-    "title": "I'll just leave this here.",
-    "arabicTitle": "I'll just leave this here.",
-    "description": "submitted by    /u/No-Contribution1070    to    r/WallStreetbetsELITE  \n [link]   [comments]",
-    "arabicDescription": "submitted by /u/No-Contribution1070 to r/WallStreetbetsELITE [link] [comments]",
-    "link": "https://www.reddit.com/r/WallStreetbetsELITE/comments/1vx90n2/ill_just_leave_this_here/",
-    "sourceName": "مجتمعي",
-    "category": "عام",
-    "pubDate": "2026-08-24T17:16:25.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/politics/comments/1vx8dgk/rep_al_green_files_articles_of_impeachment/",
-    "title": "Rep. Al Green files articles of impeachment against Trump again",
-    "arabicTitle": "Rep. Al Green files articles of impeachment against Trump again",
-    "description": "submitted by    /u/SportsGod3    to    r/politics  \n [link]   [comments]",
-    "arabicDescription": "submitted by /u/SportsGod3 to r/politics [link] [comments]",
-    "link": "https://www.reddit.com/r/politics/comments/1vx8dgk/rep_al_green_files_articles_of_impeachment/",
-    "sourceName": "مجتمعي",
-    "category": "عام",
-    "pubDate": "2026-08-24T16:53:28.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/StockMarket/comments/1vx7upw/trump_suggests_he_can_use_the_military_on_bond/",
-    "title": "Trump Suggests He Can Use the Military on Bond Markets: ‘If We Have To Use That, We Will’",
-    "arabicTitle": "Trump Suggests He Can Use the Military on Bond Markets: ‘If We Have To Use That, We Will’",
-    "description": "submitted by    /u/CertifiedWwDuby    to    r/StockMarket  \n [link]   [comments]",
-    "arabicDescription": "submitted by /u/CertifiedWwDuby to r/StockMarket [link] [comments]",
-    "link": "https://www.reddit.com/r/StockMarket/comments/1vx7upw/trump_suggests_he_can_use_the_military_on_bond/",
-    "sourceName": "مجتمعي",
-    "category": "عام",
-    "pubDate": "2026-08-24T16:34:42.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/inflation/comments/1vx7s17/tariffs_meet_sharp_comeback/",
-    "title": "Tariffs Meet Sharp Comeback",
-    "arabicTitle": "Tariffs Meet Sharp Comeback",
-    "description": "submitted by    /u/LuckyBastard001    to    r/inflation  \n [link]   [comments]",
-    "arabicDescription": "submitted by /u/LuckyBastard001 to r/inflation [link] [comments]",
-    "link": "https://www.reddit.com/r/inflation/comments/1vx7s17/tariffs_meet_sharp_comeback/",
-    "sourceName": "مجتمعي",
-    "category": "عام",
-    "pubDate": "2026-08-24T16:32:01.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/inflation/comments/1vx7s17/tariffs_meet_sharp_comeback/",
-    "title": "Tariffs Meet Sharp Comeback",
-    "arabicTitle": "التعريفات تلبي عودة حادة",
-    "description": "submitted by    /u/LuckyBastard001    to    r/inflation  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/LuckyBastard001 إلى r/inflation [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/inflation/comments/1vx7s17/tariffs_meet_sharp_comeback/",
-    "sourceName": "مجموعة ريديت (1)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T16:32:01.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/Junior_Stocks/comments/1vx7be9/gold_producer_agnico_eagle_acquires_1045_stake_in/",
-    "title": "Gold Producer Agnico Eagle Acquires 10.45% Stake in Radisson Mining",
-    "arabicTitle": "شركة إنتاج الذهب Agnico Eagle تستحوذ على حصة 10.45% في شركة Radisson Mining",
-    "description": "Original Article: https://www.juniorstocks.com/gold-producer-agnico-eagle-acquires-10-45-stake-in-radisson-mining\n When senior gold producers go shopping, they rarely settle for pocket change. Agnico Eagle Mines Limited (NYSE: AEM, TSX: AEM) has cut a C$57.16 million check to anchor a 10.45% strategic stake in Quebec-focused explorer Radisson Mining Resources Inc. (TSX-V: RDS).\n Under the non-brokered subscription agreement finalized on August 24, 2026, Agnico Eagle Mines Limited (NYSE: AEM, TSX: AEM) is acquiring 53,420,000 units of Radisson Mining Resources Inc. (TSX-V: RDS) at C$1.07 per unit. Each unit pairs one Class A common share with a half-warrant, with full warrants exercisable at C$1.39 over a 60-month window. Should Agnico Eagle Mines Limited (NYSE: AEM, TSX: AEM) exercise all 26,710,000 warrants, its ownership position in the junior developer expands to roughly 14.90% on a partially-diluted basis.\n The capital injection grants Radisson Mining Resources Inc. (TSX-V: RDS) the financial muscle to build the first modern underground access ramp at its flagship O'Brien Gold Project in Quebec's prolific Abitibi greenstone belt.\n Welcoming the senior producer to the cap table, Matt Manson, President and Chief Executive Officer of Radisson Mining Resources Inc. (TSX-V: RDS), highlighted the operational significance of the investment:\n  \n Manson added that while their ongoing 140,000-metre surface drill program remains fully funded from existing cash resources, this investment specifically funds the first modern underground access to help develop the project’s full potential.\n Beyond equity ownership, Agnico Eagle Mines Limited (NYSE: AEM, TSX: AEM) secures classic strategic safeguards through an investor rights agreement. The deal delivers anti-dilution participation rights and board nomination privileges, though Agnico Eagle Mines Limited (NYSE: AEM, TSX: AEM) noted it has no present intention to seat a director. Governance covenants also restrict certain property transfers, streams, or royalty encumbrances on the O'Brien project through December 31, 2028.\n Expected to close on or about September 2, 2026, subject to TSX Venture Exchange approvals, the transaction cements another high-grade asset into the long-term regional pipeline of Agnico Eagle Mines Limited (NYSE: AEM, TSX: AEM).\n Source\n  \nAgnico Eagle Mines Limited (NYSE: AEM, TSX: AEM) & Radisson Mining Resources Inc. (TSX-V: RDS) Joint Corporate Announcement (August 24, 2026).\n  \nDisclaimer\n Neither the author of this article nor JuniorStocks holds equity, stock options, or any other financial positions in Agnico Eagle Mines Limited (NYSE: AEM, TSX: AEM), Radisson Mining Resources Inc. (TSX-V: RDS), or any other companies mentioned in this publication. This content is published by JuniorStocks strictly for informational purposes, was prepared independently without company compensation, and utilized AI assistance for text editing, formatting, and structural refinement. While gold exploration and project development in Quebec's Abitibi greenstone belt represent a compelling sector of market activity, this article does not constitute investment or financial advice. Investors are strongly advised to conduct their own thorough, independent due diligence and consult with a qualified financial professional before making any investment decisions.\n    submitted by    /u/JuniorStocksCom  \n [link]   [comments]",
-    "arabicDescription": "المقال الأصلي: https://www.juniorstocks.com/gold-producer-agnico-eagle-acquires-10-45-stake-in-radisson-mining عندما يذهب كبار منتجي الذهب للتسوق، نادرًا ما يقبلون صرف النقود. قامت شركة Agnico Eagle Mines Limited (NYSE: AEM، TSX: AEM) بخفض سعر السهم",
-    "link": "https://www.reddit.com/r/Junior_Stocks/comments/1vx7be9/gold_producer_agnico_eagle_acquires_1045_stake_in/",
-    "sourceName": "Junior_Stocks",
-    "category": "الاسهم",
-    "pubDate": "2026-08-24T16:15:47.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/Cruise/comments/1vx79nb/solo_cruise/",
-    "title": "Solo Cruise?",
-    "arabicTitle": "رحلة بحرية منفردة؟",
-    "description": "Hello. I (29F) am trying to plan a trip for my 30th birthday next August. While I know its not required to, I have never had a big birthday for any of my milestone birthdays and would really like to do something big next year. A few problems I'm running into are: \n  \nI dont drink \n \nI dont gamble \n \nIm not really \"adventurous\" \n \nI've really never vacationed without my family (mom, dad and younger siblings) \n \n So planning for 30 is really hard. I think I've settled on cruise though because everything else (Vegas, roadtrip, etc) is either not my scene or I've been there done that. When planning the cruise I really wanted to do it with my family I think mainly because I've done every vacation with them...but they seem kinda \"meh\" about it and dont think they would be able to afford for all of them to go anyway. But also dont want to just go to dinner and a movie either. So now I'm thinking maybe I'll just do a cruise myself but I'm nervous because I've not only never done a vacation myself....I've never been on a cruise before. \n What are your guys thoughts on this? Should I bite the bullet and go/spoil myself? Or would it be better to go with family? Idk how cruise work so idk what's better. Someone please help 🤷‍♀️\n Thanks \n    submitted by    /u/FutureDirector97    to    r/Cruise  \n [link]   [comments]",
-    "arabicDescription": "مرحبًا. أنا (29F) أحاول التخطيط لرحلة بمناسبة عيد ميلادي الثلاثين في أغسطس المقبل. على الرغم من أنني أعلم أنه ليس من الضروري القيام بذلك، إلا أنه لم يسبق لي أن حظيت بعيد ميلاد كبير في أي من أعياد ميلادي المهمة وأود حقًا أن أفعل شيئًا كبيرًا في العام المقبل. بعض المشاكل التي أديرها",
-    "link": "https://www.reddit.com/r/Cruise/comments/1vx79nb/solo_cruise/",
-    "sourceName": "مجموعة ريديت (1)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T16:14:06.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/hot_stocks/comments/1vx6i3c/vz_stock_analysis_aug_24/",
-    "title": "🔍 VZ - Stock analysis Aug 24",
-    "arabicTitle": "🔍 VZ - تحليل الأسهم 24 أغسطس",
-    "description": "submitted by    /u/Routine_Bat6675  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/Routine_Bat6675 [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/hot_stocks/comments/1vx6i3c/vz_stock_analysis_aug_24/",
-    "sourceName": "hot_stocks",
-    "category": "الاسهم",
-    "pubDate": "2026-08-24T15:46:28.000Z",
     "media": {
       "image": null
     }
@@ -394,27 +380,13 @@
   {
     "id": "https://www.reddit.com/r/cryptocurrencymemes/comments/1vx4oom/me_checking_my_bag_after_traveling_for_a_week/",
     "title": "Me checking my bag after traveling for a week",
-    "arabicTitle": "أنا أتحقق من حقيبتي بعد السفر لمدة أسبوع",
+    "arabicTitle": "أنا أفحص حقيبتي بعد السفر لمدة أسبوع",
     "description": "submitted by    /u/BabyShakerDeluxe    to    r/cryptocurrencymemes  \n [link]   [comments]",
     "arabicDescription": "تم الإرسال بواسطة /u/BabyShakerDeluxe إلى r/cryptocurrencymemes [الرابط] [التعليقات]",
     "link": "https://www.reddit.com/r/cryptocurrencymemes/comments/1vx4oom/me_checking_my_bag_after_traveling_for_a_week/",
     "sourceName": "مجموعة ريديت (5)",
     "category": "مُدمج",
     "pubDate": "2026-08-24T14:39:13.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/hot_stocks/comments/1vx4i8y/netflix_is_suddenly_6th_in_reddit_mentions_today/",
-    "title": "Netflix is suddenly 6th in Reddit mentions today with 109, after 19 yesterday",
-    "arabicTitle": "أصبحت Netflix فجأة في المركز السادس في قائمة Reddit اليوم بـ 109، بعد 19 بالأمس",
-    "description": "submitted by    /u/Reasonable-Hold-1079  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/Reasonable-Hold-1079 [رابط] [تعليقات]",
-    "link": "https://www.reddit.com/r/hot_stocks/comments/1vx4i8y/netflix_is_suddenly_6th_in_reddit_mentions_today/",
-    "sourceName": "hot_stocks",
-    "category": "الاسهم",
-    "pubDate": "2026-08-24T14:32:32.000Z",
     "media": {
       "image": null
     }
@@ -429,6 +401,20 @@
     "sourceName": "مجموعة ريديت (1)",
     "category": "مُدمج",
     "pubDate": "2026-08-24T14:14:49.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/litecoin/comments/1vx3xvv/and_the_manipulation_games_have_started/",
+    "title": "And the manipulation games have started.",
+    "arabicTitle": "وبدأت ألعاب التلاعب.",
+    "description": "Some douchbag(s) short $20 million of LTC futures at $53 then sells $3 million of spot LTC, lowerinh the price enough to trigger stops and liquidations. The cascade takes it to $49. The short gains roughly 7.5%, or about $1.5 million. They later repurchase cheaper the spot LTC without giving all of that move back, and profit.\n And this what we are seeing in range until 55 is surpassed. Then in the next region and so on until we have an order book that's not so easily pushed around. \n One day the book will be less thin. If you were wondering why they push the narrative 'everyone hates litecoin' so much is if speculative narrative were to grow suddenly they lose a lot of money. It's not that hard to understand Litecoin is a better Bitcoin. That narrative sticks in the right people's mind and people stand to lose millions. \n What's wild is there is still probable squeeze if market makers decide to do it. 14 years of mining has some perks. \n    submitted by    /u/foulflaneur  \n [link]   [comments]",
+    "arabicDescription": "تقوم بعض الحقائب ببيع 20 مليون دولار من عقود LTC الآجلة بسعر 53 دولارًا، ثم تبيع 3 ملايين دولار من LTC الفوري، مما يخفض السعر بما يكفي لتحفيز عمليات الإيقاف والتصفية. يأخذ التتالي إلى 49 دولارًا. مكاسب قصيرة ما يقرب من 7.5٪، أو حوالي 1.5 مليون دولار. هم في وقت لاحق repu",
+    "link": "https://www.reddit.com/r/litecoin/comments/1vx3xvv/and_the_manipulation_games_have_started/",
+    "sourceName": "litecoin",
+    "category": "كريبتو",
+    "pubDate": "2026-08-24T14:10:50.000Z",
     "media": {
       "image": null
     }
@@ -452,39 +438,11 @@
     "title": "Pentagon Fires Stars and Stripes Editors After Report on Hungry Sailors",
     "arabicTitle": "البنتاغون يقيل محرري ستارز آند سترايبس بعد تقرير عن البحارة الجائعين",
     "description": "The Pentagon fired the editor-in-chief, publisher, and a Middle East war correspondent of Stars and Stripes on August 21, ten days after the outlet reported on sailors going hungry and facing hardships aboard the USS Abraham Lincoln.\n Editor Erik Slavin said his termination notice cited an interview in which he told CBS that censorship of military news would be \"a red line.\" The firings follow a January Pentagon decision to rescind its decades-old regulation requiring editorial independence at Stars and Stripes, a March memo banning AP reprints and comics, and the April firing of the publication's internal editorial watchdog after she criticized the agency for interference.\n \"If we were turned into something other than that, if we were public relations? Yeah, that's the foxhole,\" Slavin had said.\n    submitted by    /u/BoredPandaOfficial    to    r/BoredPandaHQ  \n [link]   [comments]",
-    "arabicDescription": "قام البنتاغون بطرد رئيس التحرير والناشر ومراسل حربي في الشرق الأوسط لمجلة ستارز آند سترايبس في 21 أغسطس، بعد عشرة أيام من نشر الصحيفة خبر بحارة يعانون من الجوع ويواجهون صعوبات على متن السفينة يو إس إس أبراهام لنكولن. المحرر إريك سلاف",
+    "arabicDescription": "قام البنتاغون بطرد رئيس التحرير والناشر ومراسل حربي في الشرق الأوسط لمجلة ستارز آند سترايبس في 21 أغسطس، بعد عشرة أيام من نشر الصحيفة تقريرًا عن البحارة الذين يعانون من الجوع ويواجهون صعوبات على متن السفينة يو إس إس أبراهام لينكولن. المحرر إريك سلاف",
     "link": "https://www.reddit.com/r/BoredPandaHQ/comments/1vx2wuc/pentagon_fires_stars_and_stripes_editors_after/",
     "sourceName": "مجموعة ريديت (1)",
     "category": "مُدمج",
     "pubDate": "2026-08-24T13:30:59.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/oil/comments/1vx2shh/us_has_just_41_days_of_crude_oil_inventory_left/",
-    "title": "U.S. has just 41 days of crude oil inventory left, the lowest level in half a century",
-    "arabicTitle": "لم يتبق لدى الولايات المتحدة سوى 41 يومًا من مخزون النفط الخام، وهو أدنى مستوى له منذ نصف قرن",
-    "description": "submitted by    /u/Majano57    to    r/oil  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/Majano57 إلى r/oil [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/oil/comments/1vx2shh/us_has_just_41_days_of_crude_oil_inventory_left/",
-    "sourceName": "مجموعة ريديت (1)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T13:26:16.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/hot_stocks/comments/1vx2i6x/top_daily_stocks_aug_24/",
-    "title": "🚨 TOP DAILY STOCKS - Aug 24",
-    "arabicTitle": "🚨 أعلى الأسهم اليومية - 24 أغسطس",
-    "description": "submitted by    /u/Routine_Bat6675  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/Routine_Bat6675 [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/hot_stocks/comments/1vx2i6x/top_daily_stocks_aug_24/",
-    "sourceName": "hot_stocks",
-    "category": "الاسهم",
-    "pubDate": "2026-08-24T13:14:40.000Z",
     "media": {
       "image": null
     }
@@ -532,20 +490,6 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/hot_stocks/comments/1vx17k3/todays_premarket_movers_aug_24/",
-    "title": "🚨 Today's Pre-Market Movers - Aug 24",
-    "arabicTitle": "🚨 محركات ما قبل السوق اليوم - 24 أغسطس",
-    "description": "submitted by    /u/Routine_Bat6675  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/Routine_Bat6675 [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/hot_stocks/comments/1vx17k3/todays_premarket_movers_aug_24/",
-    "sourceName": "hot_stocks",
-    "category": "الاسهم",
-    "pubDate": "2026-08-24T12:19:21.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
     "id": "https://www.reddit.com/r/EconomyCharts/comments/1vwxzt4/us_debt_with_and_without_bush_and_trump_tax_cuts/",
     "title": "U.S. debt with and without Bush and Trump tax cuts",
     "arabicTitle": "ديون الولايات المتحدة مع وبدون التخفيضات الضريبية لبوش وترامب",
@@ -560,15 +504,15 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/hot_stocks/comments/1vwxb3z/nvo_stock_analysis_aug_24/",
-    "title": "🔍 NVO - Stock analysis Aug 24",
-    "arabicTitle": "🔍 NVO - تحليل الأسهم 24 أغسطس",
-    "description": "submitted by    /u/Routine_Bat6675  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/Routine_Bat6675 [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/hot_stocks/comments/1vwxb3z/nvo_stock_analysis_aug_24/",
-    "sourceName": "hot_stocks",
-    "category": "الاسهم",
-    "pubDate": "2026-08-24T08:55:52.000Z",
+    "id": "https://www.reddit.com/r/litecoin/comments/1vwu9jc/litecoin_still_alive/",
+    "title": "LITECOIN STILL ALIVE🗣️🗣️",
+    "arabicTitle": "LITECOIN لا تزال على قيد الحياة🗣️🗣️",
+    "description": "Do you trade LTC? Remember, you don't have to trade just against the dollar; you can trade directly against the asset itself to accumulate more LTC and keep your wallet full without using actual fiat currency. In other words, it's LTC buying LTC—putting that Litecoin to work. But the key is to take profits, buy a few beers and some snacks with your gains, and enjoy the analysis for your next move before it happens. Cheers! 🍺\n    submitted by    /u/JOMICCI  \n [link]   [comments]",
+    "arabicDescription": "هل تتداول LTC؟ تذكر أنه ليس عليك التداول مقابل الدولار فقط؛ يمكنك التداول مباشرة مقابل الأصل نفسه لتجميع المزيد من LTC والحفاظ على محفظتك ممتلئة دون استخدام العملة الورقية الفعلية. بمعنى آخر، إنها LTC تشتري LTC — قذفة",
+    "link": "https://www.reddit.com/r/litecoin/comments/1vwu9jc/litecoin_still_alive/",
+    "sourceName": "litecoin",
+    "category": "كريبتو",
+    "pubDate": "2026-08-24T05:55:41.000Z",
     "media": {
       "image": null
     }
@@ -588,20 +532,6 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/bitcoin_com/comments/1vwrwbz/everyones_crediting_the_sec_and_the_white_house/",
-    "title": "Everyone's crediting the SEC and the White House crypto summit for Bitcoin's 25% rally to nearly $80K. They're wrong.",
-    "arabicTitle": "ينسب الجميع الفضل إلى لجنة الأوراق المالية والبورصات وقمة العملات المشفرة في البيت الأبيض في ارتفاع عملة البيتكوين بنسبة 25٪ إلى ما يقرب من 80 ألف دولار. إنهم مخطئون.",
-    "description": "It was a boring Treasury bond mechanic that almost nobody's talking about, and understanding it tells you exactly how fragile this rally is. Bitcoin ripped roughly 25% in a matter of days, from the mid-$60Ks to nearly $80,000, triggering a record short squeeze. The popular explanations are the SEC's new crypto rules and the big White House crypto summit that happened the same week. Both of those are real events, but neither is what actually moved the price. The real cause matters because it tells you how durable this move is.\n The actual trigger: Treasury Secretary Bessent doubled the size of the government's long-term bond buyback program, from $2 billion to $4 billion.\n Here's why a bond-market plumbing adjustment lit a fire under Bitcoin. Long-term Treasury yields had been sitting at 19-year highs, which is brutal for every risk asset, because when you can earn a fat, safe yield on government bonds, nobody wants to hold volatile stuff that pays nothing. When the Treasury steps in and buys back more long-term bonds, it pushes bond prices up and yields down. Lower long-term yields ease financial conditions across the entire system. Suddenly the risk-free alternative got less attractive, money started looking for higher-return assets again, and Bitcoin, sitting in an oversold, over-shorted position, was primed to explode. The short squeeze did the rest, forcing bearish traders to buy back in and accelerating the move.\n Analysts were careful to note this is not QE. The Treasury isn't printing money, it's restructuring the maturity of existing debt. But the effect on risk appetite rhymes with QE enough that markets treated it the same way. Easier conditions, yields off their highs, risk-on.\n If you think Bitcoin rallied because Washington is suddenly friendly to crypto, you'll hold this move for the wrong reasons and get caught when it reverses. The SEC rules and the summit are slow-burn structural positives that'll matter over years. They did not cause this. This was a liquidity event, driven by a Treasury mechanic aimed at the bond market, that Bitcoin happened to benefit from because it was oversold and crowded with shorts. That's a fundamentally more fragile foundation than \"institutions are adopting crypto.\"\n The same mechanism that pumped it can un-pump it. If long-term yields climb back to their highs, if the Treasury pulls back the buyback expansion, if the bond market decides it doesn't like the fiscal picture, the liquidity tailwind that drove this reverses and Bitcoin gives back the gains just as fast as it took them. A rally built on a bond-buyback tweak lives and dies by the bond market, not by anything happening in crypto.\n The bullish long-term read actually survives this, and it's the ironic part: Bitcoin surging the instant the government intervened to suppress yields and ease conditions is a textbook demonstration of exactly why the asset exists. It's a real-time monetary-debasement barometer. The government blinks on the debt, and the debasement hedge rips. That's the thesis working as designed. But that's a story about what Bitcoin IS, not a reason this specific 25% candle is safe to chase.\n So enjoy the green, but be honest about what caused it. This wasn't adoption. It was macro plumbing, and macro plumbing is exactly the kind of thing that giveth and taketh away in the same quarter. The people treating $80K as confirmation that the bull market is back because of regulation are reading the right chart with the wrong caption.\n    submitted by    /u/Bcom_Mod    to    r/bitcoin_com  \n [link]   [comments]",
-    "arabicDescription": "لقد كانت آلية سندات الخزانة مملة ولم يتحدث عنها أحد تقريبًا، وفهمها يخبرك بالضبط بمدى هشاشة هذا الارتفاع. ارتفعت قيمة عملة البيتكوين بنسبة 25% تقريبًا في غضون أيام، من منتصف 60 ألف دولار إلى ما يقرب من 80 ألف دولار، مما أدى إلى ارتفاع قياسي",
-    "link": "https://www.reddit.com/r/bitcoin_com/comments/1vwrwbz/everyones_crediting_the_sec_and_the_white_house/",
-    "sourceName": "مجموعة ريديت (5)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T03:47:33.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
     "id": "https://www.reddit.com/r/CryptoMoonShots/comments/1vwktdt/building_an_onchain_economy_where_ai_agents_can/",
     "title": "Building an on-chain economy where AI agents can earn, transact and build reputation on Solana",
     "arabicTitle": "بناء اقتصاد متصل بالسلسلة حيث يمكن لوكلاء الذكاء الاصطناعي كسب المال والتعامل وبناء السمعة على Solana",
@@ -616,15 +546,57 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/hot_stocks/comments/1vwbz3c/adbe_stock_analysis_aug_23/",
-    "title": "🔍 ADBE - Stock analysis Aug 23",
-    "arabicTitle": "🔍 ADBE - تحليل الأسهم 23 أغسطس",
-    "description": "submitted by    /u/Routine_Bat6675  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/Routine_Bat6675 [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/hot_stocks/comments/1vwbz3c/adbe_stock_analysis_aug_23/",
-    "sourceName": "hot_stocks",
-    "category": "الاسهم",
-    "pubDate": "2026-08-23T16:37:50.000Z",
+    "id": "https://www.reddit.com/r/litecoin/comments/1vwgrie/yeat_had_litecoin_at_the_top_of_his_portfolio/",
+    "title": "Yeat had Litecoin at the top of his portfolio, fully LTC portfolio actually, SUPER BULLISH!!",
+    "arabicTitle": "كان Yeat يتصدر Litecoin في محفظته، ومحفظة LTC بالكامل في الواقع، صاعد للغاية !!",
+    "description": "Billions of dollars\n    submitted by    /u/brdbrd1  \n [link]   [comments]",
+    "arabicDescription": "مليارات الدولارات مقدمة من /u/brdbrd1 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/litecoin/comments/1vwgrie/yeat_had_litecoin_at_the_top_of_his_portfolio/",
+    "sourceName": "litecoin",
+    "category": "كريبتو",
+    "pubDate": "2026-08-23T19:39:02.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/litecoin/comments/1vwczxd/will_litvm_be_interoperable_with_mweb_or_will_you/",
+    "title": "Will LitVM be interoperable with MWEB or will you only be able to peg to one of the layers at once?",
+    "arabicTitle": "هل سيكون LitVM قابلاً للتشغيل المتبادل مع MWEB أم أنك ستتمكن فقط من الارتباط بإحدى الطبقات في وقت واحد؟",
+    "description": "Question. Can you have coins both in MWEB and zkLTC?\n    submitted by    /u/Tiny_Nothing_3215  \n [link]   [comments]",
+    "arabicDescription": "سؤال. هل يمكنك الحصول على عملات معدنية في MWEB وzkLTC؟ مقدم من /u/Tiny_Nothing_3215 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/litecoin/comments/1vwczxd/will_litvm_be_interoperable_with_mweb_or_will_you/",
+    "sourceName": "litecoin",
+    "category": "كريبتو",
+    "pubDate": "2026-08-23T17:17:14.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/litecoin/comments/1vwa0kb/if_there_were_ever_a_litecoin_mascot_battle_who/",
+    "title": "If there were ever a Litecoin mascot battle who would win?",
+    "arabicTitle": "إذا كانت هناك معركة تميمة Litecoin فمن سيفوز؟",
+    "description": "submitted by    /u/Minute-Lake-1819  \n [link]   [comments]",
+    "arabicDescription": "مقدمة من /u/Minute-Lake-1819 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/litecoin/comments/1vwa0kb/if_there_were_ever_a_litecoin_mascot_battle_who/",
+    "sourceName": "litecoin",
+    "category": "كريبتو",
+    "pubDate": "2026-08-23T15:22:46.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/litecoin/comments/1vw9ekq/which_electrumltc_should_i_use/",
+    "title": "Which Electrum-LTC should i use?",
+    "arabicTitle": "ما هو Electrum-LTC الذي يجب أن أستخدمه؟",
+    "description": "So it's getting a little bit confusing, litecoin.com recommend me to download Electrum-LTC from here but i also found a github repository and its website that is newer which is ltc-electrum and the website is ltc-electrum.github.io. Which should i download and use?\n    submitted by    /u/AnyCryptographer3675  \n [link]   [comments]",
+    "arabicDescription": "لذلك أصبح الأمر مربكًا بعض الشيء، يوصيني موقع litecoin.com بتنزيل Electrum-LTC من هنا، لكنني وجدت أيضًا مستودع github وموقعه الإلكتروني الأحدث وهو ltc-electrum والموقع الإلكتروني هو ltc-electrum.github.io. ماذا يجب أن أفعل",
+    "link": "https://www.reddit.com/r/litecoin/comments/1vw9ekq/which_electrumltc_should_i_use/",
+    "sourceName": "litecoin",
+    "category": "كريبتو",
+    "pubDate": "2026-08-23T14:59:12.000Z",
     "media": {
       "image": null
     }
@@ -644,57 +616,29 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/hot_stocks/comments/1vw1zdf/lly_stock_analysis_aug_23/",
-    "title": "🔍 LLY - Stock analysis Aug 23",
-    "arabicTitle": "🔍 LLY - تحليل الأسهم 23 أغسطس",
-    "description": "submitted by    /u/Routine_Bat6675  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/Routine_Bat6675 [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/hot_stocks/comments/1vw1zdf/lly_stock_analysis_aug_23/",
-    "sourceName": "hot_stocks",
-    "category": "الاسهم",
-    "pubDate": "2026-08-23T08:52:15.000Z",
+    "id": "https://www.reddit.com/r/litecoin/comments/1vvj2jo/ltc_47/",
+    "title": "LTC 4.7",
+    "arabicTitle": "إل تي سي 4.7",
+    "description": "Almost here. Finish line to 100LTC\n    submitted by    /u/PlaneConstruction999  \n [link]   [comments]",
+    "arabicDescription": "هنا تقريبا. خط النهاية إلى 100LTC مقدم من /u/PlaneConstruction999 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/litecoin/comments/1vvj2jo/ltc_47/",
+    "sourceName": "litecoin",
+    "category": "كريبتو",
+    "pubDate": "2026-08-22T17:54:14.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/hot_stocks/comments/1vvqyj1/atlassian_nasdaq_team_great_fundamentals_but_the/",
-    "title": "Atlassian (NASDAQ: TEAM) : Great Fundamentals — But the Chart Flashing \"Overbought) in the Near Term",
-    "arabicTitle": "Atlassian (NASDAQ: TEAM): أساسيات رائعة - لكن الرسم البياني يومض \"في منطقة ذروة الشراء\" على المدى القريب",
-    "description": "submitted by    /u/BuenoMuch  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/BuenoMuch [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/hot_stocks/comments/1vvqyj1/atlassian_nasdaq_team_great_fundamentals_but_the/",
-    "sourceName": "hot_stocks",
-    "category": "الاسهم",
-    "pubDate": "2026-08-22T23:16:32.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/hot_stocks/comments/1vvh570/hood_stock_analysis_aug_22/",
-    "title": "🔍 HOOD - Stock analysis Aug 22",
-    "arabicTitle": "🔍 هود - تحليل الأسهم 22 أغسطس",
-    "description": "submitted by    /u/Routine_Bat6675  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/Routine_Bat6675 [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/hot_stocks/comments/1vvh570/hood_stock_analysis_aug_22/",
-    "sourceName": "hot_stocks",
-    "category": "الاسهم",
-    "pubDate": "2026-08-22T16:39:17.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/hot_stocks/comments/1vve07x/reddit_is_arguing_about_tesla_again_273_mentions/",
-    "title": "Reddit is arguing about Tesla again: 273 mentions today, against 102 yesterday",
-    "arabicTitle": "يتجادل Reddit حول Tesla مرة أخرى: 273 إشارة اليوم، مقابل 102 بالأمس",
-    "description": "submitted by    /u/Reasonable-Hold-1079  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/Reasonable-Hold-1079 [رابط] [تعليقات]",
-    "link": "https://www.reddit.com/r/hot_stocks/comments/1vve07x/reddit_is_arguing_about_tesla_again_273_mentions/",
-    "sourceName": "hot_stocks",
-    "category": "الاسهم",
-    "pubDate": "2026-08-22T14:33:06.000Z",
+    "id": "https://www.reddit.com/r/litecoin/comments/1vvepqn/for_charlie_lee_anything/",
+    "title": "For Charlie Lee, anything.",
+    "arabicTitle": "بالنسبة لتشارلي لي، أي شيء.",
+    "description": "Cause no one can deny…\n This love I have inside…\n And I give it all to you…\n My love, my love. My endless Litecoin loveeeee…\n    submitted by    /u/Minute-Lake-1819  \n [link]   [comments]",
+    "arabicDescription": "لأنه لا يمكن لأحد أن ينكر... هذا الحب الذي بداخلي... وأعطيه لك كله... حبي، حبي. حبي اللانهائي لعملة Litecoin... مقدم بواسطة /u/Minute-Lake-1819 [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/litecoin/comments/1vvepqn/for_charlie_lee_anything/",
+    "sourceName": "litecoin",
+    "category": "كريبتو",
+    "pubDate": "2026-08-22T15:02:09.000Z",
     "media": {
       "image": null
     }
@@ -714,6 +658,20 @@
     }
   },
   {
+    "id": "https://www.reddit.com/r/litecoin/comments/1vv2yzi/i_promise_litecoin_will_reach_20b_market_cap_very/",
+    "title": "I promise Litecoin will reach $20B market cap very soon",
+    "arabicTitle": "أعدك أن Litecoin ستصل إلى القيمة السوقية البالغة 20 مليار دولار قريبًا جدًا",
+    "description": "Privacy coins are MOVING\n Litecoins offers multiple different things, all in 1 coin, MULTIPLE NARRATIVES, Litecoin is the BEST coin, this will be very LITE work💪\n    submitted by    /u/brdbrd1  \n [link]   [comments]",
+    "arabicDescription": "عملات الخصوصية تتحرك تقدم Litecoins العديد من الأشياء المختلفة، كل ذلك في عملة واحدة، روايات متعددة، Litecoin هي أفضل عملة، سيكون هذا عملاً بسيطًا للغاية 💪 مقدم من /u/brdbrd1 [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/litecoin/comments/1vv2yzi/i_promise_litecoin_will_reach_20b_market_cap_very/",
+    "sourceName": "litecoin",
+    "category": "كريبتو",
+    "pubDate": "2026-08-22T04:55:40.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
     "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vur68f/treasury_secretary_bessent_says_we_can_grow_our/",
     "title": "Treasury Secretary Bessent says \"we can grow our way out\" of $40 trillion US national debt with tariffs and economic growth.",
     "arabicTitle": "يقول وزير الخزانة بيسنت: \"يمكننا أن نخرج طريقنا للخروج\" من الدين القومي الأمريكي البالغ 40 تريليون دولار من خلال التعريفات الجمركية والنمو الاقتصادي.",
@@ -728,99 +686,15 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/Junior_Stocks/comments/1vumtye/why_the_next_uranium_market_squeeze_is_closer/",
-    "title": "Why the Next Uranium Market Squeeze Is Closer Than Wall Street Thinks",
-    "arabicTitle": "لماذا يعتبر الضغط القادم على سوق اليورانيوم أقرب مما تعتقد وول ستريت؟",
-    "description": "Original Article: https://www.juniorstocks.com/why-the-next-uranium-market-squeeze-is-closer-than-wall-street-thinks\n Financial markets have a knack for mistaking temporary quiet for structural calm.\n While generalist investors obsess over daily tech swings or oil inventory statistics, the global nuclear fuel supply chain is quietly coiling like a high-tension spring.\n With uranium spot prices pressing against key resistance near $90 per pound, an intriguing mechanical disconnect has settled over the market: the primary physical buyer on paper is sound asleep, creating a setup that could surprise unprepared traders.\n That mechanism belongs to the Sprott Physical Uranium Trust (TSX: U.UN | OTCQX: SRUUF), an entity designed to accumulate physical yellowcake and hold it in perpetuity. Under its governing charter, the fund cannot issue new equity via its At-The-Market facility whenever its market price trades at a discount to Net Asset Value. When equity sentiment drags and the trust trades at a discount, its buying engine temporarily shuts off. The physical spot market is left entirely to bilateral transactions between utilities, intermediaries, and producers, removing what is historically the market's most aggressive marginal bidder.\n As John Ciampaglia, Chief Executive Officer of fund manager Sprott Inc. (NYSE: SII / TSX: SII), has observed, short-term market noise routinely pushes retail investors to the sidelines while the underlying structural deficit continues to build. The trust does not engage in speculative timing or market calls, but its transition from a discount back to a net asset value premium historically serves as an explosive financial catalyst. Once the discount closes, the fund reactivates its capital-raising machinery to mop up secondary physical inventory in a market that is already illiquid.\n While short-term traders focus on daily spot price movements, reactor operators operate on decade-long horizons. Grant Isaac, President and Chief Operating Officer of Cameco Corporation (NYSE: CCJ | TSX: CCO), emphasizes that power utilities rarely rely on the spot market for operational survival. Instead, the true price discovery occurs in long-term bilateral contract negotiations away from public order books. With utilities quietly locking in future deliverable supply at triple-digit pricing to ensure energy security, the spot market represents only a small window into broader industry realities.\n This divergence between physical demand and equity valuation creates a high-conviction setup for sector insiders. Brandon Munro, Executive Chairman of Bannerman Energy Ltd. (ASX: BMN), notes that when physical prices grind upward independent of equity flows, the eventual return of institutional capital forces a rapid repricing. Once public funds catch up and restore physical trusts to a premium, renewed spot purchasing frays utility nerves and puts immediate pressure on producers needing spot material for contract fulfillment.\n On the supply side, major global producers such as NAC Kazatomprom JSC (LSE: KAP | AIX: KAP) continue to navigate operational hurdles and chemical supply chain shortages, limiting their ability to rapidly scale production. Guy Keller, Portfolio Manager at Tribeca Investment Partners, points out that discretionary spot sellers routinely run out of physical material once prices break through psychological resistance thresholds. When secondary float dries up and institutional vehicles re-enter the market with active capital facilities, the resulting supply squeeze can unfold with remarkable speed.\n Sources\n  \nSprott Asset Management Fund Analysis and Executive Statements from John Ciampaglia, Sprott Inc. (NYSE: SII / TSX: SII)\n Cameco Corporation Executive Commentary and Market Contracting Reports from Grant Isaac, Cameco Corporation (NYSE: CCJ / TSX: CCO)\n Bannerman Energy Corporate Market Insights from Brandon Munro, Bannerman Energy Ltd. (ASX: BMN)\n Tribeca Investment Partners Resource Fund Analysis from Guy Keller, Tribeca Investment Partners\n  \nDisclaimer\n Neither the author of this article nor JuniorStocks holds equity, stock options, or any other financial positions in Sprott Physical Uranium Trust (TSX: U.UN; OTCQX: SRUUF), Sprott Inc. (NYSE: SII; TSX: SII), Cameco Corporation (NYSE: CCJ; TSX: CCO), Bannerman Energy Ltd. (ASX: BMN), NAC Kazatomprom JSC (LSE: KAP; AIX: KAP), or any other companies mentioned in this publication. This content is published by JuniorStocks strictly for informational purposes, was prepared independently without company compensation, and utilized AI assistance for text editing, formatting, and generating accompanying media. While global nuclear energy adoption and the uranium market represent a compelling frontier in the broader energy transition, this article does not constitute investment or financial advice. Investors are strongly advised to conduct their own thorough, independent due diligence and consult with a qualified financial professional before making any investment decisions.\n    submitted by    /u/JuniorStocksCom  \n [link]   [comments]",
-    "arabicDescription": "المقال الأصلي: https://www.juniorstocks.com/why-the-next-uranium-market-squeeze-is- Closer-than-wall-street-thinks تتمتع الأسواق المالية بموهبة الخلط بين الهدوء المؤقت والهدوء الهيكلي. في حين أن المستثمرين العموميين مهووسون بالتكنولوجيا اليومية",
-    "link": "https://www.reddit.com/r/Junior_Stocks/comments/1vumtye/why_the_next_uranium_market_squeeze_is_closer/",
-    "sourceName": "Junior_Stocks",
-    "category": "الاسهم",
-    "pubDate": "2026-08-21T17:28:45.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/Junior_Stocks/comments/1vukl6v/drilling_underway_at_greenheart_golds_tosso_creek/",
-    "title": "Drilling Underway at Greenheart Gold's Tosso Creek Project After 13% Market Surge",
-    "arabicTitle": "تجري أعمال الحفر في مشروع Tosso Creek التابع لشركة Greenheart Gold بعد ارتفاع السوق بنسبة 13%",
-    "description": "Original Article: https://www.juniorstocks.com/drilling-underway-at-greenheart-gold-s-tosso-creek-project-after-13-market-surge\n Suriname’s Guiana Shield is proving once again that scraping the surface is merely the prologue. \n Greenheart Gold Inc. (TSXV: GHRT | OTCQX: GHRTF) has officially mobilized rigs for an initial 2,000-meter diamond drilling program at its flagship Tosso Creek Project, sparking immediate market interest as shares surged 13.33% on heightened volume.\n The campaign marks a critical pivot from surface trenching to testing whether the broad zones of surface gold mineralization extend into deep-seated continuity.\n The core rig is currently turning at the central-western Walaba target before swinging east to the newly identified Swalanga target, located roughly one kilometer away. Recent trenching set the stage for this program with standout surface intercepts, including 56.0 meters grading 0.97 grams per tonne (g/t) gold at Swalanga. Over at Walaba, trenching uncovered 7.0 meters at 4.57 g/t gold, including a higher-grade shoot of 4.0 meters at 7.89 g/t gold, alongside a broader interval of 52.0 meters grading 0.77 g/t gold. These high-grade pockets embedded within wider mineralized corridors suggest strong structural preparation underground.\n Geologically, Tosso Creek sits along the southern end of the Paramaka Formation, a regionally extensive metavolcanic and metasedimentary sequence renowned for hosting major gold systems, including the nearby Sara Kreek gold fields. The team guiding this campaign is equally familiar with striking gold in the region. Led by President and CEO Justin van der Toorn, Greenheart's executive crew consists of former exploration leaders from Reunion Gold, the team credited with discovering the multi-million-ounce Oko West deposit in neighboring Guyana.\n While the rigs punch down into Walaba and Swalanga, exploratory work across the broader property continues to feed the pipeline.\n Early-stage trenching at the Maconia target to the north has wrapped up with assay results pending, while mapping continues at the Sevil target along a prospective contact zone between granitoid intrusions and volcano-sedimentary rocks.\n For investors eyeing organic discovery stories, Greenheart Gold Inc. (TSXV: GHRT) is providing a textbook display of methodical exploration, turning surface geochemical anomalies into high-priority drill targets.\n Source\n Newsfile Corp press release, issued August 20, 2026.\n Disclaimer\n Neither the author of this article nor JuniorStocks holds equity, stock options, or any other financial positions in Greenheart Gold Inc. (TSXV: GHRT; OTCQX: GHRTF) or any other companies mentioned in this publication. This content is published by JuniorStocks strictly for informational purposes, was prepared independently without company compensation, and utilized AI assistance for text editing, formatting, and generating accompanying media. While gold exploration in Suriname’s Guiana Shield represents a compelling frontier in the resource sector, this article does not constitute investment or financial advice. Investors are strongly advised to conduct their own thorough, independent due diligence and consult with a qualified financial professional before making any investment decisions.\n    submitted by    /u/JuniorStocksCom  \n [link]   [comments]",
-    "arabicDescription": "المقال الأصلي: https://www.juniorstocks.com/drilling-underway-at-greenheart-gold-s-tosso-creek-project-after-13-market-surge يثبت فريق Guiana Shield في سورينام مرة أخرى أن كشط السطح هو مجرد مقدمة. شركة جرين هارت جولد (TSX",
-    "link": "https://www.reddit.com/r/Junior_Stocks/comments/1vukl6v/drilling_underway_at_greenheart_golds_tosso_creek/",
-    "sourceName": "Junior_Stocks",
-    "category": "الاسهم",
-    "pubDate": "2026-08-21T16:07:11.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/Junior_Stocks/comments/1vuk8ja/target_2030_how_the_white_house_plans_to_turn/",
-    "title": "Target 2030: How the White House Plans to Turn American Space Launching into a Daily Routine",
-    "arabicTitle": "الهدف 2030: كيف يخطط البيت الأبيض لتحويل إطلاق الفضاء الأمريكي إلى روتين يومي",
-    "description": "Original Article: https://www.juniorstocks.com/target-2030-how-the-white-house-plans-to-turn-american-space-launching-into-a-daily-routine\n Washington is officially putting the pedal to the metal in the commercial space race. President Donald J. Trump signed a National Security Presidential Memorandum establishing an ambitious national goal to achieve more than 1,000 commercial space launches and reentries from American soil every year by 2030. The executive action overhauls federal space policy by repealing outdated transportation guidelines in favor of a commercial-first framework designed to eliminate regulatory red tape and unleash private aerospace capacity.\n Reaching four-figure annual launch numbers in under five years represents a massive operational leap from the roughly 180 launches conducted nationwide in 2025. To close that gap, federal agencies under the coordination of White House Office of Science and Technology Policy Director Michael Kratsios are tasked with systematically clearing administrative bottlenecks. The directive orders the Department of Transportation and the Federal Aviation Administration to accelerate environmental reviews, carve out priority airspace corridors for launch operations, and modernize range scheduling systems. Furthermore, the Secretaries of Transportation, Interior, War, and the NASA Administrator must identify new federal lands suitable for commercial spaceports within 90 days.\n Crucially for private aerospace executives, the directive explicitly prohibits government entities from developing or operating space transportation systems that compete with domestic commercial providers unless required by public safety or national security. White House Office of Science and Technology Policy Director Michael Kratsios noted that the commercial-first policy directly positions the nation to lead the next era of discovery while supporting Moon base developments by 2030. NASA Administrator Jared Isaacman welcomed the directive, emphasizing that modernizing commercial access to space aligns federal exploration targets directly with scalable private infrastructure.\n This aggressive shift in policy creates significant momentum across the launch and satellite supply chain. Industry powerhouse SpaceX stands at the center of this launch expansion, accompanied by responsive launch providers Rocket Lab USA, Inc. (NASDAQ: RKLB) and Firefly Aerospace Inc. (NASDAQ: FLY), both of which are expanding medium-lift operational cadences. Lunar lander developer Intuitive Machines, Inc. (NASDAQ: LUNR) is poised to benefit as NASA relies more heavily on commercial payload services for cislunar missions.\n Beyond rocket builders, the policy opens massive throughput for orbital infrastructure and satellite constellation operators. Space hardware makers such as Redwire Corporation (NYSE: RDW) and commercial space station builder Voyager Technologies, Inc. (NYSE: VOYG) are positioned to supply essential power, docking, and manufacturing components. Simultaneously, high-density satellite operators including direct-to-cell pioneer AST SpaceMobile, Inc. (NASDAQ: ASTS), alongside Earth observation firms Planet Labs PBC (NYSE: PL) and BlackSky Technology Inc. (NYSE: BKSY), stand to gain from lower launch bottlenecks and faster fleet replenishment cycles.\n By designating private launch pads as critical national economic infrastructure, the administration is making a definitive bet that free-market competition will secure long-term orbital dominance. If regulatory agencies can match the pace of private industry, the roar of rocket engines along American coastlines may soon become a daily routine.\n Sources\n  \nThe White House, \"Fact Sheet: President Donald J. Trump Launches the Golden Age of Space Transportation,\" August 20, 2026. https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-launches-the-golden-age-of-space-transportation/\n White House Office of Science and Technology Policy (OSTP), Public Statements by OSTP Director Michael Kratsios and NASA Administrator Jared Isaacman on Space Transportation Policy and Executive Directives.\n U.S. Department of Transportation, Federal Aviation Administration, and NASA Joint Policy Guidelines on Commercial Space Integration and Range Scheduling Modernization.\n  \nDisclaimer\n Neither the author of this article nor JuniorStocks holds equity, stock options, or any other financial positions in Rocket Lab USA, Inc. (NASDAQ: RKLB), Firefly Aerospace Inc. (NASDAQ: FLY), Intuitive Machines, Inc. (NASDAQ: LUNR), Redwire Corporation (NYSE: RDW), Voyager Technologies, Inc. (NYSE: VOYG), AST SpaceMobile, Inc. (NASDAQ: ASTS), Planet Labs PBC (NYSE: PL), BlackSky Technology Inc. (NYSE: BKSY), SpaceX, or any other companies mentioned in this publication. This content is published by JuniorStocks strictly for informational purposes, was prepared independently without company compensation, and utilized AI assistance for research, text editing, and formatting. While the expansion of commercial space transportation and domestic orbital infrastructure represents a compelling secular growth market, this article does not constitute investment or financial advice. Investors are strongly advised to conduct their own thorough, independent due diligence and consult with a qualified financial professional before making any investment decisions.\n    submitted by    /u/JuniorStocksCom  \n [link]   [comments]",
-    "arabicDescription": "المقال الأصلي: https://www.juniorstocks.com/target-2030-how-the-white-house-plans-to-turn-american-space-launching-into-a-daily-routine واشنطن تضع الدواسة رسميًا في سباق الفضاء التجاري. الرئيس دونالد جيه ترامب",
-    "link": "https://www.reddit.com/r/Junior_Stocks/comments/1vuk8ja/target_2030_how_the_white_house_plans_to_turn/",
-    "sourceName": "Junior_Stocks",
-    "category": "الاسهم",
-    "pubDate": "2026-08-21T15:54:20.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/Junior_Stocks/comments/1vtp7ns/trump_administration_cuts_a_500m_check_to/",
-    "title": "Trump Administration Cuts a $500M Check to Supercharge America’s Battery Minerals",
-    "arabicTitle": "إدارة ترامب تخفض شيكًا بقيمة 500 مليون دولار لتعزيز معادن البطاريات الأمريكية",
-    "description": "Original Article: https://www.juniorstocks.com/trump-administration-cuts-a-500-m-check-to-supercharge-america-s-battery-minerals\n Washington is placing a $500 million wager on the periodic table.\n The U.S. Department of Energy is cutting grant checks to seven domestic companies building critical lithium, cobalt, and next-generation battery projects. The move marks the latest push by the Trump administration to transform the nation into an energy and minerals superpower while loosening China’s tight grip on the processing market. Ongoing geopolitical strain, including the conflict with Iran, has injected fresh urgency into fortifying the defense industrial base and replenishing depleted weapons stockpiles.\n Selected from hundreds of applicants under the Battery Materials Processing and Battery Manufacturing programs, the awardees represent the highest-return opportunities across key areas of the supply chain, according to Energy Department assistant secretary Audrey Robertson. Taking center stage is Lilac Solutions, which landed $100 million to build a direct lithium extraction facility on Utah’s Great Salt Lake. Backed by German automaker BMW (ETR: BMW), Lilac Solutions aims to be online by 2028 with an annual output of 5,000 metric tons of lithium carbonate. The project joins earlier federal investments in domestic lithium developers like ioneer (NASDAQ: IONR), Standard Lithium (NYSE American: SLI), and Lithium Americas (NYSE: LAC).\n Cobalt is getting its own domestic lifeline as Jervois secures $100 million to construct the nation’s sole refining facility in Idaho. Despite being taken private following market turbulence, Jervois remains vital for military hardware, defense electronics, and commercial batteries, with future potential to process deep-sea nodules. On the recycling front, Nth Cycle, backed by commodities trader Trafigura, snagged $100 million for a facility dedicated to processing mineral-rich battery scrap known as black mass. While the administration recently blocked exports of black mass to keep critical materials onshore, officials stress that building home-grown processing infrastructure is the real long-term objective.\n Rounding out the half-billion-dollar allocation are three $50 million grants for specialized component production. Princeton NuEnergy will expand cathode reprocessing, Arcanum Ventures is set to produce essential chemicals for battery electrolytes, and Coreshell Technologies is advancing silicon anodes to replace industry-standard graphite. Together, these capital injections aim to construct a fully domestic battery ecosystem from raw brine to recycled scrap.\n Source:\n Reuters | August 20, 2026\n Disclaimer\n Neither the author of this article nor JuniorStocks holds equity, stock options, or any other financial positions in Lilac Solutions, BMW (ETR: BMW), ioneer (NASDAQ: IONR), Standard Lithium (NYSE American: SLI), Lithium Americas (NYSE: LAC), Jervois, Nth Cycle, Trafigura, Princeton NuEnergy, Arcanum Ventures, Coreshell Technologies, or any other companies mentioned in this publication. This content is published by JuniorStocks strictly for informational purposes, was prepared independently without company compensation, and utilized AI assistance for text editing, formatting, and drafting. While domestic critical minerals and battery supply chain projects represent a compelling growth sector, this article does not constitute investment or financial advice. Investors are strongly advised to conduct their own thorough, independent due diligence and consult with a qualified financial professional before making any investment decisions.\n    submitted by    /u/JuniorStocksCom  \n [link]   [comments]",
-    "arabicDescription": "المقال الأصلي: https://www.juniorstocks.com/trump-administration-cuts-a-500-m-check-to-supercharge-america-s-battery-minerals تضع واشنطن رهانًا بقيمة 500 مليون دولار على الجدول الدوري. تقوم وزارة الطاقة الأمريكية بتخفيض شيكات المنح",
-    "link": "https://www.reddit.com/r/Junior_Stocks/comments/1vtp7ns/trump_administration_cuts_a_500m_check_to/",
-    "sourceName": "Junior_Stocks",
-    "category": "الاسهم",
-    "pubDate": "2026-08-20T17:00:44.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/Junior_Stocks/comments/1vtokm6/equinox_gold_receives_key_blm_approval_for/",
-    "title": "Equinox Gold Receives Key BLM Approval for Nevada’s South Railroad Project",
-    "arabicTitle": "حصلت Equinox Gold على موافقة BLM الرئيسية لمشروع السكك الحديدية الجنوبية في نيفادا",
-    "description": "Original Article: https://www.juniorstocks.com/equinox-gold-receives-key-blm-approval-for-nevada-s-south-railroad-project\n Bureaucratic wheels rarely turn quickly, but when federal regulators cleared the runway for Nevada’s South Railroad project, Equinox Gold Corp. (TSX: EQX | NYSE American: EQX) officially signaled that its expansion engine is firing on all cylinders.\n The U.S. Bureau of Land Management issued a positive Record of Decision for the property under the federal FAST-41 framework, effectively wrapping up the environmental review process and kicking off early construction works.\n The regulatory greenlight unlocks the next key development phase for an open-pit heap-leach mine engineered to generate an average of 130,000 ounces of gold annually over its initial five years.\n Backed by a $395 million capital expenditure budget, the operation is aiming for its first gold pour in 2028. Equinox Gold President Jason Simpson highlighted that the Nevada asset serves as the first major organic step toward adding 800,000 annual ounces to the company's production profile.\n This permitting win lands just weeks after the miner finalized its transformative business combination with Orla Mining Ltd. (TSX: OLA | NYSE American: ORLA). The all-stock transaction forged an $18.5 billion enterprise, establishing the combined firm as Canada’s second-largest gold producer behind Agnico Eagle Mines Limited (TSX: AEM | NYSE: AEM). Operating six active mines across the Americas with an annual output of 1.1 million ounces, the platform commands the cash flow and operational balance sheet required to fund its project pipeline organically.\n The corporate roadmap from 1.1 million to nearly 1.9 million ounces now rests on methodical execution across North America.\n With South Railroad permitted and Valentine Phase 2 moving forward, regulatory attention shifts to California, where a Record of Decision for Castle Mountain is expected in December. Corporate momentum is matched by executive skin in the game: on August 12, founder and Chairman Emeritus Ross Beaty acquired 600,000 shares on the open market for roughly C$9.7 million, a multi-million-dollar vote of confidence that asset scale and permitting velocity will translate directly into market re-rating.\n Sources\n  \nGlobeNewswire, \"Equinox Gold Receives Positive Record of Decision for South Railroad\" (August 17, 2026)\n GlobeNewswire, \"Equinox Gold and Orla Mining Complete Business Combination, Creating North America's New Senior Gold Producer\" (July 31, 2026)\n Mining Frontier, \"Equinox Gold Wins Approval for South Railroad Project\" (August 17, 2026).\n  \nDisclaimer\n Neither the author of this article nor JuniorStocks holds equity, stock options, or any other financial positions in Equinox Gold Corp. (TSX: EQX; NYSE American: EQX), Orla Mining Ltd. (TSX: OLA; NYSE American: ORLA), Agnico Eagle Mines Limited (TSX: AEM; NYSE: AEM), or any other companies mentioned in this publication. This content is published by JuniorStocks strictly for informational purposes, was prepared independently without company compensation, and utilized AI assistance for text editing, formatting, and generating accompanying media. While gold sector consolidation and project permitting milestones represent compelling developments in the mining space, this article does not constitute investment or financial advice. Investors are strongly advised to conduct their own thorough, independent due diligence and consult with a qualified financial professional before making any investment decisions.\n    submitted by    /u/JuniorStocksCom  \n [link]   [comments]",
-    "arabicDescription": "المقال الأصلي: https://www.juniorstocks.com/equinox-gold-receives-key-blm-approval-for-nevada-s-south-railroad-project نادرًا ما تدور العجلات البيروقراطية بسرعة، ولكن عندما قام المنظمون الفيدراليون بتطهير المدرج لمشروع السكك الحديدية الجنوبية في نيفادا، Equ",
-    "link": "https://www.reddit.com/r/Junior_Stocks/comments/1vtokm6/equinox_gold_receives_key_blm_approval_for/",
-    "sourceName": "Junior_Stocks",
-    "category": "الاسهم",
-    "pubDate": "2026-08-20T16:37:42.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/Junior_Stocks/comments/1vtmsxt/did_moderna_and_merck_just_change_the_future_of/",
-    "title": "Did Moderna and Merck Just Change the Future of Cancer Treatment Forever?",
-    "arabicTitle": "هل غيّرت شركتا موديرنا وميرك مستقبل علاج السرطان إلى الأبد؟",
-    "description": "Original Article: https://www.juniorstocks.com/did-moderna-and-merck-just-change-the-future-of-cancer-treatment-forever\n Science fiction officially lost another round to medical reality.\n Biotechnology pioneer Moderna Inc. (NASDAQ: MRNA) and pharmaceutical giant Merck & Co., Inc. (NYSE: MRK) just turned the speculative promise of personalized cancer vaccines into undeniable late-stage clinical proof.\n Topline results from their landmark Phase 3 INTerpath-001 trial demonstrated that intismeran autogene, an individualized mRNA neoantigen therapy custom-tailored to a patient's specific tumor DNA, significantly improved recurrence-free survival when combined with Keytruda.\n The readout marks a monumental breakthrough for oncology, representing the world's first successful Phase 3 trial for an individualized mRNA-based cancer treatment. Designed to instruct a patient's immune system to hunt down up to 34 unique mutational targets, intismeran paired with Keytruda met both its primary endpoint of recurrence-free survival and a key secondary endpoint of distant metastasis-free survival in patients with high-risk, resected stage IIB through IV melanoma. Chief Executive Officer Stéphane Bancel noted that turning an aspirational custom therapy into a clinical reality marks a pivotal paradigm shift for cancer care.\n Wall Street responded with immediate enthusiasm, sending shares of Moderna Inc. (NASDAQ: MRNA) surging as analysts rapidly re-evaluated the commercial potential of the company's broader mRNA pipeline. The late-stage win adds to a period of heightened market interest for the biopharma firm. Financial intelligence provider Quiver Quantitative previously highlighted political stock disclosures surrounding the company ahead of a unanimous advisory panel endorsement from federal regulators for mFLUSIVA, Moderna’s investigational mRNA flu vaccine for adults aged 50 and older.\n Looking ahead, Moderna Inc. (NASDAQ: MRNA) and Merck & Co., Inc. (NYSE: MRK) plan to present detailed trial data at an upcoming global medical congress while preparing regulatory submissions to seek accelerated approval. If granted, the combination could establish a new standard of care in adjuvant skin cancer treatment and unlock an expansive frontier for mRNA therapies across multiple solid tumor types.\n Sources\n  \nMerck and Moderna Phase 3 INTerpath-001 Trial Results, BioSpace\n Merck and Moderna Personalized Cancer Vaccine Phase 3 Data, Fierce Biotech\n MSD and Moderna Skin Cancer Vaccine Scores Historic Win, Pharmaphorum\n Moderna Financial Disclosures and Regulatory Tracking, Quiver Quantitative\n  \nDisclaimer\n Neither the author of this article nor JuniorStocks.com holds equity, stock options, or any other financial positions in Moderna Inc. (NASDAQ: MRNA), Merck & Co., Inc. (NYSE: MRK), or any other companies mentioned in this publication. This content is published by JuniorStocks.com strictly for informational purposes, was prepared independently without company compensation, and utilized AI assistance for text editing, research, formatting, and generating accompanying media. While personalized mRNA oncology represents a compelling new frontier in biopharmaceuticals, this article does not constitute investment or financial advice. Investors are strongly advised to conduct their own thorough, independent due diligence and consult with a qualified financial professional before making any investment decisions.\n    submitted by    /u/JuniorStocksCom  \n [link]   [comments]",
-    "arabicDescription": "المقال الأصلي: https://www.juniorstocks.com/did-moderna-and-merck-just-change-the-future-of-cancer- treatment-forever خسر الخيال العلمي رسميًا جولة أخرى أمام الواقع الطبي. شركة Moderna Inc. الرائدة في مجال التكنولوجيا الحيوية (NASDAQ: MRNA) وشركة الأدوية",
-    "link": "https://www.reddit.com/r/Junior_Stocks/comments/1vtmsxt/did_moderna_and_merck_just_change_the_future_of/",
-    "sourceName": "Junior_Stocks",
-    "category": "الاسهم",
-    "pubDate": "2026-08-20T15:33:32.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/Junior_Stocks/comments/1vsrn3l/us_antimony_authorizes_100_million_share_buyback/",
-    "title": "US Antimony Authorizes $100 Million Share Buyback to Counter Market Discount",
-    "arabicTitle": "الأنتيمون الأمريكي يسمح بإعادة شراء أسهم بقيمة 100 مليون دولار لمواجهة خصم السوق",
-    "description": "Original Article: https://www.juniorstocks.com/us-antimony-authorizes-100-million-share-buyback-to-counter-market-discount\n When Wall Street hands a critical minerals producer a steep discount, executive suites rarely take it lying down.\n United States Antimony Corporation (NYSE: UAMY) is drawing a firm line in the sand, authorizing a massive $100 million share repurchase program to reclaim control of its market narrative after recent share price turbulence.\n The decision, approved by unanimous board consent, gives management the green light to buy back outstanding common stock across open-market transactions, privately negotiated deals, and Rule 10b5-1 trading plans.\n The authorization carries no fixed expiration date and places no obligation on United States Antimony Corporation (NYSE: UAMY) to acquire a set number of shares, granting the firm's Finance Committee complete discretion under SEC Rule 10b-18 guidelines. The aggressive signal of insider confidence follows an extensive internal evaluation of operational assets spanning the United States, Canada, and Mexico. Chairman and Chief Executive Officer Gary C. Evans made the company’s stance clear following the board’s review, noting that after a thorough review of current activities and future potential, the board determined by unanimous consent that the stock was deemed to be undervalued and decided to implement the share repurchase program immediately.\n This corporate buyback arrives as a direct counterpunch to recent equity headwinds. Shares of United States Antimony Corporation (NYSE: UAMY) faced selling pressure following second-quarter earnings, where top-line revenue reached $7.9 million and full-year 2026 revenue guidance was recalibrated to between $60 million and $75 million from a prior target of $125 million. Management attributed the short-term slowdown to delayed contract deliveries with the Defense Logistics Agency alongside temporary price weakness in antimony. Institutional coverage, however, remains constructive on long-term fundamentals. H.C. Wainwright & Co. analyst Heiko Ihle recently adjusted his price target to $9.25 while maintaining a Buy rating, highlighting that discounted trading levels fail to reflect the company's underlying critical mineral reserves.\n Operating as the sole fully integrated antimony producer outside China and Russia, United States Antimony Corporation (NYSE: UAMY) holds a central position in Western supply chain security. Facilities in Montana and Mexico process raw ore into antimony oxide for flame retardants, antimony metal for storage batteries, and antimony trisulfide for military ammunition primers. Complementing its metallurgical operations, the enterprise mines industrial minerals through its Bear River Zeolite operations in Idaho for environmental filtration, while securing primary feedstock through expanded mining claims across Alaska, Montana, and Ontario.\n This capital allocation strategy mirrors a growing sentiment across the critical materials landscape, where natural resource firms are leveraging balance sheets during temporary commodity pullbacks. Sector peer Almonty Industries (NASDAQ: ALM) recently pursued a similar capital return effort to shore up equity value. By backing its strategic vision with up to $100 million in capital allocation, United States Antimony Corporation (NYSE: UAMY) is making a clear bet that market prices will eventually align with the long-term value of North American mineral independence.\n Sources\n  \nUnited States Antimony Corporation (NYSE: UAMY) Press Release and SEC Form 8-K Disclosure (August 19, 2026)\n Investing.com Market Coverage & Financial Analysis (August 19, 2026)\n H.C. Wainwright & Co. Equity Research Reports\n  \nDisclaimer\n Neither the author of this article nor JuniorStocks holds equity, stock options, or any other financial positions in United States Antimony Corporation (NYSE: UAMY), Almonty Industries (TSX: AII), or any other companies mentioned in this publication. This content is published by JuniorStocks strictly for informational purposes, was prepared independently without company compensation, and utilized AI assistance for text editing, formatting, and generating accompanying media. While critical minerals and North American supply chain developments represent an evolving sector, this article does not constitute investment or financial advice. Investors are strongly advised to conduct their own thorough, independent due diligence and consult with a qualified financial professional before making any investment decisions.\n    submitted by    /u/JuniorStocksCom  \n [link]   [comments]",
-    "arabicDescription": "المقال الأصلي: https://www.juniorstocks.com/us-antimony-authorizes-100-million-share-buyback-to-counter-market-discount عندما تمنح وول ستريت خصمًا كبيرًا لأحد منتجي المعادن المهمين، نادرًا ما تقبله الأجنحة التنفيذية. الولايات المتحدة",
-    "link": "https://www.reddit.com/r/Junior_Stocks/comments/1vsrn3l/us_antimony_authorizes_100_million_share_buyback/",
-    "sourceName": "Junior_Stocks",
-    "category": "الاسهم",
-    "pubDate": "2026-08-19T16:38:04.000Z",
+    "id": "https://www.reddit.com/r/litecoin/comments/1vuqryn/go_high_ltc_crossed_70_on_kucoin_and_then_went/",
+    "title": "Go High LTC crossed $70 on kucoin and then went down.",
+    "arabicTitle": "تجاوزت Go High LTC مستوى 70 دولارًا على kucoin ثم انخفضت.",
+    "description": "submitted by    /u/TableUpset6902  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/TableUpset6902 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/litecoin/comments/1vuqryn/go_high_ltc_crossed_70_on_kucoin_and_then_went/",
+    "sourceName": "litecoin",
+    "category": "كريبتو",
+    "pubDate": "2026-08-21T19:53:15.000Z",
     "media": {
       "image": null
     }
@@ -830,7 +704,7 @@
     "title": "Spot is now live on Decibel!",
     "arabicTitle": "Spot أصبح الآن مباشرًا على ديسيبل!",
     "description": "Users can trade or hold spot assets, use eligible spot as collateral where supported, or hedge with perps — all from one account. \n The fully onchain trading engine, built on Aptos. Starting with BTC + APT. Trade now! \n https://x.com/DecibelTrade/status/2089888729259442411\n    submitted by    /u/aptoscion    to    r/Aptos  \n [link]   [comments]",
-    "arabicDescription": "يمكن للمستخدمين تداول الأصول الفورية أو الاحتفاظ بها، أو استخدام النقطة المؤهلة كضمان عندما يكون ذلك مدعومًا، أو التحوط باستخدام الأشخاص الآخرين - كل ذلك من حساب واحد. محرك التداول onchain بالكامل، المبني على Aptos. بدءًا من BTC + APT. تداول الآن! https://x.com/DecibelTrade/status/",
+    "arabicDescription": "يمكن للمستخدمين تداول الأصول الفورية أو الاحتفاظ بها، أو استخدام النقطة المؤهلة كضمان حيثما يكون ذلك مدعومًا، أو التحوط باستخدام الأشخاص الآخرين - كل ذلك من حساب واحد. محرك التداول onchain بالكامل، المبني على Aptos. بدءًا من BTC + APT. تداول الآن! https://x.com/DecibelTrade/status/",
     "link": "https://www.reddit.com/r/Aptos/comments/1vs90nj/spot_is_now_live_on_decibel/",
     "sourceName": "مجموعة ريديت (5)",
     "category": "مُدمج",
@@ -849,20 +723,6 @@
     "sourceName": "MarketPulseReport",
     "category": "الاسهم",
     "pubDate": "2026-08-18T21:01:30.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/Junior_Stocks/comments/1vru9pm/leadership_torch_pass_at_k92_mining_medilek_to/",
-    "title": "Leadership Torch Pass at K92 Mining: Medilek to Succeed Lewins as CEO",
-    "arabicTitle": "بطاقة شعلة القيادة في شركة K92 Mining: ميديليك سيخلف لوينز في منصب الرئيس التنفيذي",
-    "description": "Original Article: https://www.juniorstocks.com/leadership-torch-pass-at-k92-mining-medilek-to-succeed-lewins-as-ceo\n Passing the baton while running at full speed is a rare art in corporate management, but K92 Mining Inc. (TSX: KNT | OTCQX: KNTNF) is attempting to execute it flawlessly.\n The Vancouver-headquartered miner has mapped out an orderly succession plan elevating current President and Chief Operating Officer David Medilek to Chief Executive Officer and Director, effective October 1, 2026. Outgoing CEO John Lewins, who has steered the gold, copper, and silver producer for nearly a decade, will transition to Non-Executive Chair, while current Board Chair Anne Giardini moves into the Lead Director role to maintain independent oversight.\n The executive shift comes as the company's flagship Kainantu Gold Mine in Papua New Guinea operates from a position of distinct strength. Under Lewins' decade-long guidance since 2016, Kainantu evolved from an ambitious mine restart into a high-margin mid-tier producer, earning industry accolades including the 2021 PDAC Thayer Lindsley Award for the Kora North discovery. Medilek, who joined the company in 2019, brings a potent mix of engineering grit and capital markets literacy to the corner office.\n His resume includes time as a precious metals equity research analyst at Macquarie Group Limited (ASX: MQG), a mining investment banker with Cormark Securities Inc., and an underground mining engineer at Barrick Gold Corporation (NYSE: B).\n From an operational standpoint, the corporate handover arrives on remarkably stable footing. The miner's new 1.2 million-tonne-per-annum process plant has been fully operational and performing better than design since December 2025, with 98% of Stage 3 Expansion growth capital spent or committed strictly on budget as of June 30, 2026. Lewins will remain heavily engaged in regional affairs, retaining his leadership role with the Papua New Guinea Chamber of Resources and Energy and guiding local social initiatives through the Kainantu Foundation.\n The internal promotion strategy extends across the rest of the executive suite. Vice President of Projects & Engineering Chris Kinver, a veteran who previously managed underground operations for OceanaGold Corporation (TSX: OGC), BHP Group (ASX: BHP), and Barrick Gold Corporation (NYSE: B), takes over as Chief Operating Officer on October 1, 2026. Meanwhile, Susan Scheepers, who brings two decades of human resources leadership across Aurelia Metals (ASX: AMI), Geopacific Resources (ASX: GPR), and St Barbara Limited (ASX: SBM), officially assumed the Vice President of Human Resources post on August 1, 2026.\n Source\n K92 Mining Inc. News Release (Issued August 17, 2026 via GlobeNewswire)\n Disclaimer\n Neither the author of this article nor JuniorStocks holds equity, stock options, or any other financial positions in K92 Mining Inc. (TSX: KNT; OTCQX: KNTNF) or any other companies mentioned in this publication. This content is published by JuniorStocks strictly for informational purposes, was prepared independently without company compensation, and utilized AI assistance for text editing, formatting, and generating accompanying media. While K92 Mining’s Kainantu expansion and exploration potential in Papua New Guinea represent a compelling development in the precious metals sector, this article does not constitute investment or financial advice. Investors are strongly advised to conduct their own thorough, independent due diligence and consult with a qualified financial professional before making any investment decisions.\n    submitted by    /u/JuniorStocksCom  \n [link]   [comments]",
-    "arabicDescription": "المقال الأصلي: https://www.juniorstocks.com/leadership-torch-pass-at-k92-mining-medilek-to-succeed-lewins-as-ceo يعد تمرير العصا أثناء الركض بأقصى سرعة فنًا نادرًا في إدارة الشركات، لكن شركة K92 Mining Inc. (TSX: KNT | OTCQX: KNTNF) هي فن نادر.",
-    "link": "https://www.reddit.com/r/Junior_Stocks/comments/1vru9pm/leadership_torch_pass_at_k92_mining_medilek_to/",
-    "sourceName": "Junior_Stocks",
-    "category": "الاسهم",
-    "pubDate": "2026-08-18T16:31:30.000Z",
     "media": {
       "image": null
     }
