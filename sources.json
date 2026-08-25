@@ -464,16 +464,8 @@
     "url": "https://www.reddit.com/r/Buttcoin/.rss",
     "category": "كريبتو"
   },
-  {
-    "name": "bitcoincashSV",
-    "url": "https://www.reddit.com/r/bitcoincashSV/.rss",
-    "category": "كريبتو"
-  },
-  {
-    "name": "algotrading",
-    "url": "https://www.reddit.com/r/algotrading/.rss",
-    "category": "كريبتو"
-  },
+
+
   {
     "name": "AltScope",
     "url": "https://www.reddit.com/r/AltScope/.rss",
@@ -484,11 +476,7 @@
     "url": "https://www.reddit.com/r/XRP/.rss",
     "category": "كريبتو"
   },
-  {
-    "name": "ChartScout_io",
-    "url": "https://www.reddit.com/r/ChartScout_io/.rss",
-    "category": "كريبتو"
-  },
+ 
   {
     "name": "Cardano",
     "url": "https://www.reddit.com/r/cardano/.rss",
@@ -543,10 +531,5 @@
     "name": "USNEWS",
     "url": "https://www.reddit.com/r/USNEWS/.rss",
     "category": "الاخبار"
-  },
-  {
-    "name": "Aliens",
-    "url": "https://www.reddit.com/r/aliens/.rss",
-    "category": "الاخبار"
-  }
+  }, }
 ]
