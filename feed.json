@@ -1,5 +1,33 @@
 [
   {
+    "id": "https://www.reddit.com/r/NoFilterFinance/comments/1vxoqnv/almost_two_years_since_donald_trump_won_an/",
+    "title": "Almost two years since Donald Trump won an election pledging to slash prices and fix the US’s public finances, his Iran war and tax cuts have delivered a different outcome.",
+    "arabicTitle": "بعد مرور ما يقرب من عامين منذ فاز دونالد ترامب بالانتخابات الرئاسية وتعهد بخفض الأسعار وإصلاح المالية العامة في الولايات المتحدة، أدت حربه ضد إيران وتخفيضاته الضريبية إلى نتائج مختلفة.",
+    "description": "submitted by    /u/StrawberryFew1311    to    r/NoFilterFinance  \n [link]   [comments]",
+    "arabicDescription": "تم الإرسال بواسطة /u/StrawberryFew1311 إلى r/NoFilterFinance [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/NoFilterFinance/comments/1vxoqnv/almost_two_years_since_donald_trump_won_an/",
+    "sourceName": "مجموعة ريديت (2)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-25T03:39:38.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/defi/comments/1vxnyz7/how_do_we_let_an_ai_use_a_wallet_without_giving/",
+    "title": "How do we let an AI use a wallet without giving the AI unrestricted control?",
+    "arabicTitle": "كيف نسمح للذكاء الاصطناعي باستخدام المحفظة دون منح الذكاء الاصطناعي تحكمًا غير مقيد؟",
+    "description": "We are seeing the involvement of agents into finances . Where we have seen AiFi word coming into play . \n Ai agents are getting much better at reasoning and making decisions. \n So the question is What happens when an AI agents needs to execute a transaction on chain? \n We don't necessarily want the agent to have unrestricted permission to: \n 1) Move unlimited funds \n 2) interact with arbitrary contracts\n 3) Execute transaction outside it's intended purpose\n So we are exploring an architecture where the AI agents doesn't directly control Blockchain.\n Instead : \n AI Agents ->Policy/Execution layer->Blockchain \n The agent request an action . The execution layer checks wheather everything is according to policy then checks and execute . \n We're building this idea as Agaemon - essentially an execution/control layer designed to sit between AI agents and on chain execution. \n Iam curious. \n I'm curious what people building AI agents , wallets , defi protocols and on chain infrastructure think. \n Are we seeing this future of agents as financial layer .\n Iam curious hearing your views on this.\n    submitted by    /u/ChargeDry    to    r/defi  \n [link]   [comments]",
+    "arabicDescription": "نحن نشهد تورط وكلاء في الشؤون المالية. حيث رأينا كلمة AiFi تدخل حيز التنفيذ. يتحسن عملاء الذكاء الاصطناعي كثيرًا في التفكير واتخاذ القرارات. لذا فإن السؤال هو ماذا يحدث عندما يحتاج وكلاء الذكاء الاصطناعي إلى تنفيذ معاملة ما",
+    "link": "https://www.reddit.com/r/defi/comments/1vxnyz7/how_do_we_let_an_ai_use_a_wallet_without_giving/",
+    "sourceName": "مجموعة ريديت (7)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-25T03:02:16.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
     "id": "https://www.reddit.com/r/CryptoCurrency/comments/1vxncvq/to_the_moon/",
     "title": "To the moon!",
     "arabicTitle": "To the moon!",
@@ -42,15 +70,43 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/MBOT_Stock/comments/1vxliem/scam_medical/",
-    "title": "scam medical",
-    "arabicTitle": "احتيال الطبية",
-    "description": "It’s about to drop below $1. Hold on tight!\n    submitted by    /u/harelgaedot  \n [link]   [comments]",
-    "arabicDescription": "إنه على وشك الانخفاض إلى ما دون 1 دولار. تمسك بقوة! مقدم من /u/harelgaedot [رابط] [تعليقات]",
-    "link": "https://www.reddit.com/r/MBOT_Stock/comments/1vxliem/scam_medical/",
-    "sourceName": "MBOT_Stock",
-    "category": "الاسهم",
-    "pubDate": "2026-08-25T01:10:54.000Z",
+    "id": "https://www.reddit.com/r/memecoins/comments/1vxn34y/whered_my_money_go/",
+    "title": "Where’d my money go",
+    "arabicTitle": "أين ذهبت أموالي",
+    "description": "Hi guys I’m really new to memecoins and well i just had 76$ in here and then it all just disappeared. No clue what happened to it, no history of any transfers on my account, nothing. Does anyone know what could’ve happened?\n    submitted by    /u/DisastrousMango3483    to    r/memecoins  \n [link]   [comments]",
+    "arabicDescription": "مرحبًا يا رفاق، أنا جديد حقًا في استخدام العملات الميمية، حسنًا، لقد حصلت للتو على 76 دولارًا هنا ثم اختفى كل شيء. لا يوجد أدنى فكرة عما حدث له، ولا يوجد تاريخ لأي تحويلات على حسابي، لا شيء. هل يعرف أحد ما الذي يمكن أن يحدث؟ مقدم بواسطة /u/كارثي",
+    "link": "https://www.reddit.com/r/memecoins/comments/1vxn34y/whered_my_money_go/",
+    "sourceName": "مجموعة ريديت (7)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-25T02:21:07.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/dogecoin/comments/1vxn0ik/its_time_to_fly_dogecoin_family/",
+    "title": "Its time to fly dogecoin family 🚀",
+    "arabicTitle": "حان الوقت للطيران مع عائلة الدوجكوين 🚀",
+    "description": "submitted by    /u/rizzo49er    to    r/dogecoin  \n [link]   [comments]",
+    "arabicDescription": "تم الإرسال بواسطة /u/rizzo49er إلى r/dogecoin [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/dogecoin/comments/1vxn0ik/its_time_to_fly_dogecoin_family/",
+    "sourceName": "مجموعة ريديت (7)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-25T02:17:52.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/economy/comments/1vxmuin/why_is_the_republican_party_considered_fiscally/",
+    "title": "Why is the Republican Party considered fiscally conservative?",
+    "arabicTitle": "لماذا يعتبر الحزب الجمهوري محافظا ماليا؟",
+    "description": "submitted by    /u/Vivid_Anywhere8988    to    r/economy  \n [link]   [comments]",
+    "arabicDescription": "تم الإرسال بواسطة /u/Vivid_Anywhere8988 إلى r/economy [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/economy/comments/1vxmuin/why_is_the_republican_party_considered_fiscally/",
+    "sourceName": "مجموعة ريديت (2)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-25T02:10:12.000Z",
     "media": {
       "image": null
     }
@@ -90,23 +146,9 @@
     "description": "For example; I have been told that certain Caribbean islands do not allow camouflage as it is restricted to military use. \n I have also been told that you should not wear the complementary robe outside your cabin unless you are going to or from the spa. \n Have you actually seen anyone being asked to change? \n    submitted by    /u/OldPolishProverb    to    r/Cruise  \n [link]   [comments]",
     "arabicDescription": "على سبيل المثال؛ لقد قيل لي أن بعض جزر الكاريبي لا تسمح بالتمويه لأنه يقتصر على الاستخدام العسكري. لقد قيل لي أيضًا أنه لا ينبغي عليك ارتداء الرداء التكميلي خارج مقصورتك إلا إذا كنت ذاهبًا إلى المنتجع الصحي أو منه",
     "link": "https://www.reddit.com/r/Cruise/comments/1vxj7ic/has_anyone_ever_been_stopped_for_their_clothing/",
-    "sourceName": "مجموعة ريديت (1)",
+    "sourceName": "مجموعة ريديت (2)",
     "category": "مُدمج",
     "pubDate": "2026-08-24T23:31:59.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/LINKTrader/comments/1vxivlx/i_need_to_know/",
-    "title": "I need to know",
-    "arabicTitle": "أريد أن أعرف",
-    "description": "How often do you guys fantasize about becoming a millionaire off $LINK and proving everyone wrong? \n    submitted by    /u/Sensitive_Cold_2998    to    r/LINKTrader  \n [link]   [comments]",
-    "arabicDescription": "كم مرة تتخيلون يا رفاق أن تصبحوا مليونيرًا من خلال $LINK وتثبتون خطأ الجميع؟ تم الإرسال بواسطة /u/Sensitive_Cold_2998 إلى r/LINKTrader [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/LINKTrader/comments/1vxivlx/i_need_to_know/",
-    "sourceName": "مجموعة ريديت (1)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T23:18:19.000Z",
     "media": {
       "image": null
     }
@@ -132,23 +174,9 @@
     "description": "https://x.com/hormuzletter/status/2092018978507850092?s=46\n    submitted by    /u/Waste-Explanation-76    to    r/oil  \n [link]   [comments]",
     "arabicDescription": "https://x.com/hormuzletter/status/2092018978507850092?s=46 مقدم بواسطة /u/Waste-Explanation-76 إلى r/oil [رابط] [تعليقات]",
     "link": "https://www.reddit.com/r/oil/comments/1vxi498/iran_has_just_struck_an_oil_tanker_in_the_strait/",
-    "sourceName": "مجموعة ريديت (1)",
+    "sourceName": "مجموعة ريديت (2)",
     "category": "مُدمج",
     "pubDate": "2026-08-24T22:47:18.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/TheRaceTo10Million/comments/1vxhe7r/welcome_to_hell/",
-    "title": "Welcome to hell.",
-    "arabicTitle": "مرحبا بكم في الجحيم.",
-    "description": "$NVDA closed at $208.48, down 2.93%, before Wednesday’s earnings.\n Consensus: $91.9B revenue and $2.08 EPS. Options imply a ±6.1% move.\n AI-server prices may rise 15%+ in early 2027 as memory costs surge—bullish for revenue, but a margin risk. $200 bear / $221 bull.\n    submitted by    /u/mehmetded    to    r/TheRaceTo10Million  \n [link]   [comments]",
-    "arabicDescription": "وأغلق سهم NVDA عند 208.48 دولارًا، بانخفاض 2.93%، قبل أرباح يوم الأربعاء. الإجماع: إيرادات قدرها 91.9 مليار دولار وربحية السهم 2.08 دولار. تشير الخيارات إلى تحرك بنسبة ±6.1%. قد ترتفع أسعار خوادم الذكاء الاصطناعي بنسبة تزيد عن 15% في أوائل عام 2027 مع ارتفاع تكاليف الذاكرة، وهو ما يعد صعوديًا بالنسبة للإيرادات، ولكنه ينطوي على مخاطر هامشية. 200 دولار بي",
-    "link": "https://www.reddit.com/r/TheRaceTo10Million/comments/1vxhe7r/welcome_to_hell/",
-    "sourceName": "مجموعة ريديت (1)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T22:18:05.000Z",
     "media": {
       "image": null
     }
@@ -174,7 +202,7 @@
     "description": "submitted by    /u/Super-Liberal-Girl    to    r/Economics  \n [link]   [comments]",
     "arabicDescription": "مقدم من /u/Super-Liberal-Girl إلى r/Economics [رابط] [تعليقات]",
     "link": "https://www.reddit.com/r/Economics/comments/1vxh7w8/the_job_market_is_hell_young_people_are_using/",
-    "sourceName": "مجموعة ريديت (1)",
+    "sourceName": "مجموعة ريديت (2)",
     "category": "مُدمج",
     "pubDate": "2026-08-24T22:10:58.000Z",
     "media": {
@@ -191,20 +219,6 @@
     "sourceName": "مجتمعي",
     "category": "عام",
     "pubDate": "2026-08-24T22:02:20.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/Hedera/comments/1vxgdr6/ħ_godaddy_anchors_its_agent_name_service_to/",
-    "title": "Ħ GoDaddy anchors its Agent Name Service to Hedera. Ħ",
-    "arabicTitle": "تقوم GoDaddy بتثبيت خدمة اسم الوكيل الخاصة بها في Hedera. ح",
-    "description": "submitted by    /u/HBAR_10_DOLLARS    to    r/Hedera  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/HBAR_10_DOLLARS إلى r/Hedera [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/Hedera/comments/1vxgdr6/ħ_godaddy_anchors_its_agent_name_service_to/",
-    "sourceName": "مجموعة ريديت (7)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T21:38:39.000Z",
     "media": {
       "image": null
     }
@@ -266,6 +280,20 @@
     }
   },
   {
+    "id": "https://www.reddit.com/r/RWA/comments/1vxey2l/how_to_trade_uranium_onchain_without_cameco_or_a/",
+    "title": "how to trade uranium onchain without cameco or a mining etf",
+    "arabicTitle": "كيفية تداول اليورانيوم على السلسلة بدون كاميكو أو صندوق تعدين متداول",
+    "description": "uranium is getting huge demands and its beena while now . ai data centers needs power and nuclear is back in the talks in a serious way . microsoft signed deals . google signed deals . governments are talking about reactor and stuff and the thing that feeds all of this is uranium .\n i read most ppl are buying cameco or sportt physical uranium trust or some junior miner etf . all looks fine but all comes with the equity risk and management risks as well which has nothing to do with uranium price.\n the onchain version is also a way but is still early . uranium is not like gold or eurusd and also have thinner liquidity and the number of platforms doing this are small . \n ostium sits in the rwa category and is most likely place this shows up as the market develops . gains networks also covers a braod range of commodities tbh but uranium onchain is not yet the deep liquid market like gold or oil . the narrative is now moving faster than the infra\n what the onchain gives you access to uranium without the involvement of any mining company or etf and also without any broker.\n the trade idea is real and the power demand thing as well. the onchain infra for uranium is catching up but not there yet like the trad commodities . but the direction is clear and the ppl building rwa platforms are building toward exactly these kind of markets\n    submitted by    /u/Unable-Definition713    to    r/RWA  \n [link]   [comments]",
+    "arabicDescription": "اليورانيوم يحظى بطلبات ضخمة منذ فترة طويلة. تحتاج مراكز بيانات الذكاء الاصطناعي إلى الطاقة، وقد عادت الطاقة النووية إلى المحادثات بطريقة جادة. مايكروسوفت وقعت صفقات . جوجل وقعت صفقات. تتحدث الحكومات عن المفاعلات والأشياء والأشياء الأخرى",
+    "link": "https://www.reddit.com/r/RWA/comments/1vxey2l/how_to_trade_uranium_onchain_without_cameco_or_a/",
+    "sourceName": "مجموعة ريديت (7)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-24T20:45:20.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
     "id": "https://www.reddit.com/r/inflation/comments/1vxebtk/what_trump_just_did_by_starting_a_trade_war_with/",
     "title": "What trump just did by starting a trade war with Canada",
     "arabicTitle": "What trump just did by starting a trade war with Canada",
@@ -280,43 +308,29 @@
     }
   },
   {
+    "id": "https://www.reddit.com/r/inflation/comments/1vxebtk/what_trump_just_did_by_starting_a_trade_war_with/",
+    "title": "What trump just did by starting a trade war with Canada",
+    "arabicTitle": "ما فعله ترامب للتو ببدء حرب تجارية مع كندا",
+    "description": "submitted by    /u/Snapdragon_4U    to    r/inflation  \n [link]   [comments]",
+    "arabicDescription": "مرسل من /u/Snapdragon_4U إلى r/inflation [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/inflation/comments/1vxebtk/what_trump_just_did_by_starting_a_trade_war_with/",
+    "sourceName": "مجموعة ريديت (2)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-24T20:22:35.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
     "id": "https://www.reddit.com/r/PoursTea/comments/1vxe8ul/finally_showing_them_rich_people/",
     "title": "Finally! Showing them rich people!!!",
     "arabicTitle": "أخيراً! تظهر لهم الأغنياء !!!",
     "description": "submitted by    /u/FizzyAcidBird    to    r/PoursTea  \n [link]   [comments]",
     "arabicDescription": "مقدم من /u/FizzyAcidBird إلى r/PoursTea [الرابط] [التعليقات]",
     "link": "https://www.reddit.com/r/PoursTea/comments/1vxe8ul/finally_showing_them_rich_people/",
-    "sourceName": "مجموعة ريديت (1)",
+    "sourceName": "مجموعة ريديت (2)",
     "category": "مُدمج",
     "pubDate": "2026-08-24T20:19:38.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/CryptoCurrencyFIRE/comments/1vxcwda/saintquant_ai_trading_1000_scam/",
-    "title": "Saintquant ai trading 1000% SCAM",
-    "arabicTitle": "تداول Saintquant ai بنسبة 1000% احتيال",
-    "description": "submitted by    /u/Wonderful-Shape6951    to    r/CryptoCurrencyFIRE  \n [link]   [comments]",
-    "arabicDescription": "تم الإرسال بواسطة /u/Wonderful-Shape6951 إلى r/CryptoCurrencyFIRE [رابط] [تعليقات]",
-    "link": "https://www.reddit.com/r/CryptoCurrencyFIRE/comments/1vxcwda/saintquant_ai_trading_1000_scam/",
-    "sourceName": "مجموعة ريديت (7)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T19:30:50.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/solana/comments/1vxcha7/solana_prepares_launch_of_expanded_version_1/",
-    "title": "Solana Prepares Launch of Expanded Version 1 Transactions",
-    "arabicTitle": "سولانا يستعد لإطلاق الإصدار الموسع 1 من المعاملات",
-    "description": "Solana will introduce Version 1 transactions in the coming weeks, raising the maximum size from 1,232 to 4,096 bytes.\n Compute budgeting moves into the transaction configuration itself. \n Developers can begin local testing now, though several breaking changes require attention for readers of block and transaction data. \n https://x.com/a_milz/status/2091903273632731271\n    submitted by    /u/SolBrothers_    to    r/solana  \n [link]   [comments]",
-    "arabicDescription": "ستقدم Solana معاملات الإصدار 1 في الأسابيع المقبلة، مما يرفع الحجم الأقصى من 1,232 إلى 4,096 بايت. ينتقل حساب الميزانية إلى تكوين المعاملة نفسها. يمكن للمطورين بدء الاختبار المحلي الآن، على الرغم من حدوث العديد من الاختراقات لـ c",
-    "link": "https://www.reddit.com/r/solana/comments/1vxcha7/solana_prepares_launch_of_expanded_version_1/",
-    "sourceName": "مجموعة ريديت (1)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T19:15:44.000Z",
     "media": {
       "image": null
     }
@@ -378,29 +392,15 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/Crypto_General/comments/1vx8oi9/will_stablecoin_payments_become_as_normal_as/",
-    "title": "Will stablecoin payments become as normal as Apple Pay?",
-    "arabicTitle": "هل ستصبح مدفوعات العملات المستقرة عادية مثل Apple Pay؟",
-    "description": "Stablecoins are already easy to hold and send. The next step is making them just as easy to spend.\n If you could tap your phone and pay with USDT or USDC anywhere, would you use it?\n    submitted by    /u/OkDisaster940    to    r/Crypto_General  \n [link]   [comments]",
-    "arabicDescription": "من السهل بالفعل الاحتفاظ بالعملات المستقرة وإرسالها. والخطوة التالية هي جعلها سهلة الإنفاق. إذا كان بإمكانك النقر على هاتفك والدفع باستخدام USDT أو USDC في أي مكان، فهل ستستخدمه؟ تم الإرسال بواسطة /u/OkDisaster940 إلى r/Crypto_general [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/Crypto_General/comments/1vx8oi9/will_stablecoin_payments_become_as_normal_as/",
-    "sourceName": "مجموعة ريديت (7)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T17:04:26.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/CryptoReferrals/comments/1vx77ni/only_need_1_person_that_has_never_had_handshake/",
-    "title": "Only need 1 person that has NEVER had HANDSHAKE !! USA ONLY !!",
-    "arabicTitle": "تحتاج فقط إلى شخص واحد لم يسبق له المصافحة !! الولايات المتحدة الأمريكية فقط!!",
-    "description": "submitted by    /u/Objective_Hand_2157    to    r/CryptoReferrals  \n [link]   [comments]",
-    "arabicDescription": "تم الإرسال بواسطة /u/Objective_Hand_2157 إلى r/CryptoReferrals [رابط] [تعليقات]",
-    "link": "https://www.reddit.com/r/CryptoReferrals/comments/1vx77ni/only_need_1_person_that_has_never_had_handshake/",
-    "sourceName": "مجموعة ريديت (1)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T16:12:09.000Z",
+    "id": "https://www.reddit.com/r/hot_stocks/comments/1vx6i3c/vz_stock_analysis_aug_24/",
+    "title": "🔍 VZ - Stock analysis Aug 24",
+    "arabicTitle": "🔍 VZ - تحليل الأسهم 24 أغسطس",
+    "description": "submitted by    /u/Routine_Bat6675  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/Routine_Bat6675 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/hot_stocks/comments/1vx6i3c/vz_stock_analysis_aug_24/",
+    "sourceName": "hot_stocks",
+    "category": "الاسهم",
+    "pubDate": "2026-08-24T15:46:28.000Z",
     "media": {
       "image": null
     }
@@ -420,15 +420,15 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/dogecoin/comments/1vx65e4/thank_you_bitcoin_doge_is_next_lets_go_woof/",
-    "title": "Thank you bitcoin! Doge is next! Let’s go! Woof!",
-    "arabicTitle": "شكرا لك بيتكوين! دوجي هو التالي! دعنا نذهب! اللحمة!",
-    "description": "submitted by    /u/Elegant-Wedding8582    to    r/dogecoin  \n [link]   [comments]",
-    "arabicDescription": "تم الإرسال بواسطة /u/Elegant-Wedding8582 إلى r/dogecoin [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/dogecoin/comments/1vx65e4/thank_you_bitcoin_doge_is_next_lets_go_woof/",
-    "sourceName": "مجموعة ريديت (7)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T15:33:28.000Z",
+    "id": "https://www.reddit.com/r/hot_stocks/comments/1vx4i8y/netflix_is_suddenly_6th_in_reddit_mentions_today/",
+    "title": "Netflix is suddenly 6th in Reddit mentions today with 109, after 19 yesterday",
+    "arabicTitle": "أصبحت Netflix فجأة في المركز السادس في قائمة Reddit اليوم بـ 109، بعد 19 بالأمس",
+    "description": "submitted by    /u/Reasonable-Hold-1079  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/Reasonable-Hold-1079 [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/hot_stocks/comments/1vx4i8y/netflix_is_suddenly_6th_in_reddit_mentions_today/",
+    "sourceName": "hot_stocks",
+    "category": "الاسهم",
+    "pubDate": "2026-08-24T14:32:32.000Z",
     "media": {
       "image": null
     }
@@ -440,9 +440,51 @@
     "description": "Dresden alone is running three fabs:\n - ESMC above 10 billion euro\n - Infineon's Smart Power Fab at 5 billion\n - GlobalFoundries at 1.1 billion \n And the rest?\n - Photonic chip fab in Aachen\n - Battery research fab in Münster\n - 12 inch line in Itzehoe\n - MEMS foundry in Erfurt\n - A 1.3 billion euro insulin plant in Frankfurt\n - 750 million euro of AI data halls in the Rhein-Main region \n What stands out on the map: \n One would expect only big construction names, but that that wasn't always the case:\n - Krämmel, a firm from Bavaria, builds the Rohbau of Roche's biggest German investment\n - Gustav Epple from Stuttgart builds KETEK's cleanroom hall turnkey\n - Riedel Bau from Schweinfurt does the Rohbau for Fraunhofer's battery research fab. \n Also worth noting:\n - Tesla and PowerCo build in-house, with no GC\n - Exyte appears on 6 of the 20 projects on the map.\n - Six projects don't name a builder publicly. \n The buildout never stopped. It's just changing shape. More specialized projects. Technically harder and more challenging to manage. All of them fighting for the finite pool of talent required to build them. So Intel did leave, but other cranes are going up.\n https://lnkd.in/p/dFFUEQjQ\n    submitted by    /u/Full-Discussion3745    to    r/EU_Economics  \n [link]   [comments]",
     "arabicDescription": "تدير مدينة دريسدن وحدها ثلاث مصانع عملاقة: - شركة ESMC بأكثر من 10 مليارات يورو - شركة Smart Power Fab التابعة لشركة Infineon بقيمة 5 مليارات - شركة GlobalFoundries بقيمة 1.1 مليار والباقي؟ - مصنع الرقائق الضوئية في آخن - مصنع أبحاث البطاريات في مونستر - خط إنتاج 12 بوصة في إيتزهو - MEM",
     "link": "https://www.reddit.com/r/EU_Economics/comments/1vx41f8/what_does_the_reality_of_german_high_tech_look/",
-    "sourceName": "مجموعة ريديت (1)",
+    "sourceName": "مجموعة ريديت (2)",
     "category": "مُدمج",
     "pubDate": "2026-08-24T14:14:49.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/litecoin/comments/1vx3xvv/and_the_manipulation_games_have_started/",
+    "title": "And the manipulation games have started.",
+    "arabicTitle": "وبدأت ألعاب التلاعب.",
+    "description": "Some douchbag(s) short $20 million of LTC futures at $53 then sells $3 million of spot LTC, lowerinh the price enough to trigger stops and liquidations. The cascade takes it to $49. The short gains roughly 7.5%, or about $1.5 million. They later repurchase cheaper the spot LTC without giving all of that move back, and profit.\n And this what we are seeing in range until 55 is surpassed. Then in the next region and so on until we have an order book that's not so easily pushed around. \n One day the book will be less thin. If you were wondering why they push the narrative 'everyone hates litecoin' so much is if speculative narrative were to grow suddenly they lose a lot of money. It's not that hard to understand Litecoin is a better Bitcoin. That narrative sticks in the right people's mind and people stand to lose millions. \n What's wild is there is still probable squeeze if market makers decide to do it. 14 years of mining has some perks. \n    submitted by    /u/foulflaneur  \n [link]   [comments]",
+    "arabicDescription": "تقوم بعض الحقائب ببيع 20 مليون دولار من عقود LTC الآجلة بسعر 53 دولارًا، ثم تبيع 3 ملايين دولار من LTC الفوري، مما يخفض السعر بما يكفي لتحفيز عمليات الإيقاف والتصفية. يأخذ التتالي إلى 49 دولارًا. مكاسب قصيرة ما يقرب من 7.5٪، أو حوالي 1.5 مليون دولار. هم في وقت لاحق repu",
+    "link": "https://www.reddit.com/r/litecoin/comments/1vx3xvv/and_the_manipulation_games_have_started/",
+    "sourceName": "litecoin",
+    "category": "كريبتو",
+    "pubDate": "2026-08-24T14:10:50.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/bondmarket/comments/1vx393z/reject_the_data_center_embrace_the_dollar_general/",
+    "title": "“Reject the data center, embrace the dollar general.”",
+    "arabicTitle": "“ارفضوا مركز البيانات، واحتضنوا الدولار بشكل عام”.",
+    "description": "submitted by    /u/webabybears    to    r/bondmarket  \n [link]   [comments]",
+    "arabicDescription": "تم تقديمه بواسطة /u/webabybears إلى r/bondmarket [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/bondmarket/comments/1vx393z/reject_the_data_center_embrace_the_dollar_general/",
+    "sourceName": "مجموعة ريديت (2)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-24T13:44:31.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/hot_stocks/comments/1vx2i6x/top_daily_stocks_aug_24/",
+    "title": "🚨 TOP DAILY STOCKS - Aug 24",
+    "arabicTitle": "🚨 أعلى الأسهم اليومية - 24 أغسطس",
+    "description": "submitted by    /u/Routine_Bat6675  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/Routine_Bat6675 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/hot_stocks/comments/1vx2i6x/top_daily_stocks_aug_24/",
+    "sourceName": "hot_stocks",
+    "category": "الاسهم",
+    "pubDate": "2026-08-24T13:14:40.000Z",
     "media": {
       "image": null
     }
@@ -490,15 +532,15 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/ethtrader/comments/1vx0esb/congrats_eth/",
-    "title": "Congrats ETH 👍",
-    "arabicTitle": "تهانينا لإيث 👍",
-    "description": "submitted by    /u/Elegant-Wedding8582    to    r/ethtrader  \n [link]   [comments]",
-    "arabicDescription": "تم الإرسال بواسطة /u/Elegant-Wedding8582 إلى r/ethtrader [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/ethtrader/comments/1vx0esb/congrats_eth/",
-    "sourceName": "مجموعة ريديت (7)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T11:41:51.000Z",
+    "id": "https://www.reddit.com/r/hot_stocks/comments/1vx17k3/todays_premarket_movers_aug_24/",
+    "title": "🚨 Today's Pre-Market Movers - Aug 24",
+    "arabicTitle": "🚨 محركات ما قبل السوق اليوم - 24 أغسطس",
+    "description": "submitted by    /u/Routine_Bat6675  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/Routine_Bat6675 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/hot_stocks/comments/1vx17k3/todays_premarket_movers_aug_24/",
+    "sourceName": "hot_stocks",
+    "category": "الاسهم",
+    "pubDate": "2026-08-24T12:19:21.000Z",
     "media": {
       "image": null
     }
@@ -510,7 +552,7 @@
     "description": "submitted by    /u/ReasonablePoetry1226    to    r/EconomyCharts  \n [link]   [comments]",
     "arabicDescription": "مقدم من /u/ReasonablePoetry1226 إلى r/EconomyCharts [الرابط] [التعليقات]",
     "link": "https://www.reddit.com/r/EconomyCharts/comments/1vwxzt4/us_debt_with_and_without_bush_and_trump_tax_cuts/",
-    "sourceName": "مجموعة ريديت (1)",
+    "sourceName": "مجموعة ريديت (2)",
     "category": "مُدمج",
     "pubDate": "2026-08-24T09:35:45.000Z",
     "media": {
@@ -518,57 +560,57 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/Wallstreetsilver/comments/1vwsy8m/do_you_realize/",
-    "title": "Do you realize?",
-    "arabicTitle": "هل تدرك؟",
-    "description": "Since 1980, the M2 money supply increased 15 fold.\n The US national debt increased 46 fold.\n The S&P 500 increased 72 fold.\n The NASDAQ composite increased 177 fold.\n Even gold went up 5 fold.\n Silver? Its price is up by 40% (and until October last year this number was negative...).\n Do you realize how cheap it is? Do you realize how many dollars are sloshing around, looking for something to invest in? Do you realize why it is perfectly reasonable to expect the price of silver to catch up with the money supply? Do you realize how ludicrous it is to expect it to fall below its 1980 high? Do you realize why a silver price of $500 or more is within reach?\n It's basic arithmetic.\n    submitted by    /u/mementoil    to    r/Wallstreetsilver  \n [link]   [comments]",
-    "arabicDescription": "منذ عام 1980، زاد المعروض النقدي M2 بمقدار 15 ضعفًا. وزاد الدين القومي الأمريكي 46 ضعفا. ارتفع مؤشر S&P 500 بمقدار 72 ضعفًا. ارتفع مؤشر ناسداك المركب بمقدار 177 مرة. حتى الذهب ارتفع 5 أضعاف. فضي؟ سعره يصل بنسبة 40٪ (وحتى أكتوبر من العام الماضي ر",
-    "link": "https://www.reddit.com/r/Wallstreetsilver/comments/1vwsy8m/do_you_realize/",
-    "sourceName": "مجموعة ريديت (4)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T04:42:40.000Z",
+    "id": "https://www.reddit.com/r/hot_stocks/comments/1vwxb3z/nvo_stock_analysis_aug_24/",
+    "title": "🔍 NVO - Stock analysis Aug 24",
+    "arabicTitle": "🔍 NVO - تحليل الأسهم 24 أغسطس",
+    "description": "submitted by    /u/Routine_Bat6675  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/Routine_Bat6675 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/hot_stocks/comments/1vwxb3z/nvo_stock_analysis_aug_24/",
+    "sourceName": "hot_stocks",
+    "category": "الاسهم",
+    "pubDate": "2026-08-24T08:55:52.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/CryptoChartWatch/comments/1vwsia7/is_it_me_or_does_it_look_like_its_going_to_hit/",
-    "title": "Is it me or does it look like it’s going to hit the fan tomorrow?",
-    "arabicTitle": "هل أنا أم يبدو أنه سيضرب المروحة غدًا؟",
-    "description": "I’ve read the run was mainly institutional buying. May be the case since 77k keeps getting tested and won’t break. If so, this chart looks like something’s about to happen when the NYSE opens tomorrow!\n    submitted by    /u/jongolfpro    to    r/CryptoChartWatch  \n [link]   [comments]",
-    "arabicDescription": "لقد قرأت أن السباق كان في الأساس شراءًا مؤسسيًا. قد يكون هذا هو الحال نظرًا لأن 77 ألفًا يستمر في الاختبار ولن ينكسر. إذا كان الأمر كذلك، فإن هذا الرسم البياني يبدو وكأن شيئًا ما على وشك الحدوث عندما تفتح بورصة نيويورك غدًا! تم تقديمه بواسطة /u/jongolfpro إلى r/CryptoChartWatch",
-    "link": "https://www.reddit.com/r/CryptoChartWatch/comments/1vwsia7/is_it_me_or_does_it_look_like_its_going_to_hit/",
+    "id": "https://www.reddit.com/r/Chainlink/comments/1vwwowh/sergey_nazarov_addresses_cftc_tokenization_is_key/",
+    "title": "Sergey Nazarov Addresses CFTC: Tokenization Is Key to U.S. Future in Global Finance",
+    "arabicTitle": "سيرغي نزاروف يخاطب هيئة تداول السلع الآجلة (CFTC): التحويل إلى الرموز هو مفتاح مستقبل الولايات المتحدة في التمويل العالمي",
+    "description": "Chainlink co-founder Sergey Nazarov spoke at the inaugural meeting of the CFTC’s Innovation Advisory Committee (IAC), where he emphasized that tokenization is essential to the United States’ future in global finance.\n He highlighted the need for regulatory clarity, the importance of tokenized U.S. equities, and the benefits of moving to 24/7 onchain markets for collateral transparency and risk reduction.\n Sergey also noted that blockchains, smart contracts, and oracles will be increasingly valuable as AI scales cyber risks across finance.\n  \n“The speed at which the U.S. financial system moves onchain will determine America’s position in the global financial system.” — Sergey Nazarov, CFTC IAC roundtable\n  \nWatch the full stream of the CFTC’s first Innovation Advisory Committee meeting:\n https://www.youtube.com/watch?v=9rTCARzj98I\n    submitted by    /u/chainlink_Bharath    to    r/Chainlink  \n [link]   [comments]",
+    "arabicDescription": "تحدث سيرجي نزاروف، المؤسس المشارك لـ Chainlink، في الاجتماع الافتتاحي للجنة الاستشارية للابتكار (IAC) التابعة لـ CFTC، حيث أكد على أن الترميز ضروري لمستقبل الولايات المتحدة في التمويل العالمي. وسلط الضوء على الحاجة إلى التنظيم",
+    "link": "https://www.reddit.com/r/Chainlink/comments/1vwwowh/sergey_nazarov_addresses_cftc_tokenization_is_key/",
     "sourceName": "مجموعة ريديت (7)",
     "category": "مُدمج",
-    "pubDate": "2026-08-24T04:18:22.000Z",
+    "pubDate": "2026-08-24T08:18:00.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/BeginnerInvesting/comments/1vwrvl5/what_are_the_best_investing_trading_apps/",
-    "title": "What are the best investing/ trading apps?",
-    "arabicTitle": "ما هي أفضل تطبيقات الاستثمار/التداول؟",
-    "description": "hello! i don't know if somebody will see this, but i will still shoot my shot. does any one of you know what are the best trading apps? i've been suffering from compulsive gambling bcs i keep chasing losses, which resulted to greater and more losses. so i thought that instead of gambling the money away, i should just invest or trade it. alsooo, where and what is the best way to invest my money? \n Thank you for those who will respond!\n    submitted by    /u/QuirkyPotato6870    to    r/BeginnerInvesting  \n [link]   [comments]",
-    "arabicDescription": "مرحبًا! لا أعرف إذا كان شخص ما سيرى هذا، لكنني سأستمر في إطلاق النار. هل يعرف أحدكم ما هي أفضل تطبيقات التداول؟ لقد كنت أعاني من القمار القهري وأواصل مطاردة الخسائر، مما أدى إلى خسائر أكبر وأكثر.",
-    "link": "https://www.reddit.com/r/BeginnerInvesting/comments/1vwrvl5/what_are_the_best_investing_trading_apps/",
-    "sourceName": "مجموعة ريديت (4)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-24T03:46:26.000Z",
+    "id": "https://www.reddit.com/r/litecoin/comments/1vwu9jc/litecoin_still_alive/",
+    "title": "LITECOIN STILL ALIVE🗣️🗣️",
+    "arabicTitle": "LITECOIN لا تزال على قيد الحياة🗣️🗣️",
+    "description": "Do you trade LTC? Remember, you don't have to trade just against the dollar; you can trade directly against the asset itself to accumulate more LTC and keep your wallet full without using actual fiat currency. In other words, it's LTC buying LTC—putting that Litecoin to work. But the key is to take profits, buy a few beers and some snacks with your gains, and enjoy the analysis for your next move before it happens. Cheers! 🍺\n    submitted by    /u/JOMICCI  \n [link]   [comments]",
+    "arabicDescription": "هل تتداول LTC؟ تذكر أنه ليس عليك التداول مقابل الدولار فقط؛ يمكنك التداول مباشرة مقابل الأصل نفسه لتجميع المزيد من LTC والحفاظ على محفظتك ممتلئة دون استخدام العملة الورقية الفعلية. بمعنى آخر، إنها LTC تشتري LTC — قذفة",
+    "link": "https://www.reddit.com/r/litecoin/comments/1vwu9jc/litecoin_still_alive/",
+    "sourceName": "litecoin",
+    "category": "كريبتو",
+    "pubDate": "2026-08-24T05:55:41.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/wallstreetbets/comments/1vwovao/1000000_full_porting_spcx_and_mstr/",
-    "title": "$1,000,000 - Full Porting $SPCX and $MSTR",
-    "arabicTitle": "1,000,000 دولار - النقل الكامل لـ $SPCX و$MSTR",
-    "description": "Yes, I max margin. Wish me luck bulls.\n    submitted by    /u/Dull_Fly_7443    to    r/wallstreetbets  \n [link]   [comments]",
-    "arabicDescription": "نعم، أنا الحد الأقصى للهامش. تمنى لي الحظ الثيران. تم الإرسال بواسطة /u/Dull_Fly_7443 إلى r/wallstreetbets [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/wallstreetbets/comments/1vwovao/1000000_full_porting_spcx_and_mstr/",
-    "sourceName": "مجموعة ريديت (4)",
+    "id": "https://www.reddit.com/r/RWATimes/comments/1vwq0t2/wintermute_moves_987m_in_bitcoin_to_binance_what/",
+    "title": "Wintermute Moves $98.7M in Bitcoin to Binance: What It Signals for the Market",
+    "arabicTitle": "يقوم Wintermute بنقل 98.7 مليون دولار من عملة البيتكوين إلى Binance: ما الذي يشير إليه السوق",
+    "description": "This post contains content not supported on old Reddit. Click here to view the full post\n    submitted by    /u/rwatimes    to    r/RWATimes  \n [link]   [comments]",
+    "arabicDescription": "تحتوي هذه المشاركة على محتوى غير مدعوم في Reddit القديم. انقر هنا لعرض المشاركة الكاملة المقدمة من /u/rwatimes إلى r/RWATimes [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/RWATimes/comments/1vwq0t2/wintermute_moves_987m_in_bitcoin_to_binance_what/",
+    "sourceName": "مجموعة ريديت (7)",
     "category": "مُدمج",
-    "pubDate": "2026-08-24T01:20:39.000Z",
+    "pubDate": "2026-08-24T02:15:22.000Z",
     "media": {
       "image": null
     }
@@ -588,71 +630,71 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/amcstock/comments/1vwjov6/august_just_set_a_new_alltime_domestic_box_office/",
-    "title": "August just set a new all-time domestic box office record Already over $1.1B with more than a week left. Q3 is now on pace for around $3B, which would also be an all-time Q3 record. That’s a pretty good setup for AMC heading into earnings.",
-    "arabicTitle": "سجل شهر أغسطس رقمًا قياسيًا جديدًا في شباك التذاكر المحلي على الإطلاق، حيث تجاوز بالفعل 1.1 مليار دولار مع بقاء أكثر من أسبوع. يتجه الربع الثالث الآن نحو 3 مليارات دولار، وهو ما سيكون أيضًا رقمًا قياسيًا في الربع الثالث على الإطلاق. يعد هذا إعدادًا جيدًا لـ AMC متجهًا إلى الأرباح.",
-    "description": "submitted by    /u/AdvertisingSea2745    to    r/amcstock  \n [link]   [comments]",
-    "arabicDescription": "مقدم من /u/AdvertisingSea2745 إلى r/amcstock [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/amcstock/comments/1vwjov6/august_just_set_a_new_alltime_domestic_box_office/",
-    "sourceName": "مجموعة ريديت (4)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-23T21:33:35.000Z",
+    "id": "https://www.reddit.com/r/litecoin/comments/1vwgrie/yeat_had_litecoin_at_the_top_of_his_portfolio/",
+    "title": "Yeat had Litecoin at the top of his portfolio, fully LTC portfolio actually, SUPER BULLISH!!",
+    "arabicTitle": "كان Yeat يتصدر Litecoin في محفظته، ومحفظة LTC بالكامل في الواقع، صاعد للغاية !!",
+    "description": "Billions of dollars\n    submitted by    /u/brdbrd1  \n [link]   [comments]",
+    "arabicDescription": "مليارات الدولارات مقدمة من /u/brdbrd1 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/litecoin/comments/1vwgrie/yeat_had_litecoin_at_the_top_of_his_portfolio/",
+    "sourceName": "litecoin",
+    "category": "كريبتو",
+    "pubDate": "2026-08-23T19:39:02.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/wallstreetbetsGER/comments/1vwiw1o/wer_hätte_das_gedacht_lame_duck_heißt_es_oder/",
-    "title": "Wer hätte das gedacht 😉😂Lame Duck heißt es oder 😂",
-    "arabicTitle": "من كان يظن 😉😂 البطة العرجاء هي ما يطلق عليها أو 😂",
-    "description": "submitted by    /u/Little_Scene_513    to    r/wallstreetbetsGER  \n [link]   [comments]",
-    "arabicDescription": "تم الإرسال بواسطة /u/Little_Scene_513 إلى r/wallstreetbetsGER [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/wallstreetbetsGER/comments/1vwiw1o/wer_hätte_das_gedacht_lame_duck_heißt_es_oder/",
-    "sourceName": "مجموعة ريديت (4)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-23T21:01:26.000Z",
+    "id": "https://www.reddit.com/r/litecoin/comments/1vwczxd/will_litvm_be_interoperable_with_mweb_or_will_you/",
+    "title": "Will LitVM be interoperable with MWEB or will you only be able to peg to one of the layers at once?",
+    "arabicTitle": "هل سيكون LitVM قابلاً للتشغيل المتبادل مع MWEB أم أنك ستتمكن فقط من الارتباط بإحدى الطبقات في وقت واحد؟",
+    "description": "Question. Can you have coins both in MWEB and zkLTC?\n    submitted by    /u/Tiny_Nothing_3215  \n [link]   [comments]",
+    "arabicDescription": "سؤال. هل يمكنك الحصول على عملات معدنية في MWEB وzkLTC؟ مقدم من /u/Tiny_Nothing_3215 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/litecoin/comments/1vwczxd/will_litvm_be_interoperable_with_mweb_or_will_you/",
+    "sourceName": "litecoin",
+    "category": "كريبتو",
+    "pubDate": "2026-08-23T17:17:14.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/Amd/comments/1vweyz9/first_amd_system_9950x_7900_xtx_going_linux_and/",
-    "title": "First AMD system: 9950X + 7900 XTX. Going Linux and diving into local AI",
-    "arabicTitle": "نظام AMD الأول: 9950X + 7900 XTX. الانتقال إلى Linux والغوص في الذكاء الاصطناعي المحلي",
-    "description": "After years of laptops and Nvidia GPUs, I'm finally moving back to a desktop and going AMD for the first time.\n Picked up this build:\n - Ryzen 9 9950X — 16C/32T\n - XFX Speedster MERC 310 RX 7900 XTX — 24GB\n - 32GB G.Skill Flare X5 DDR5-6000 CL28\n - MSI MAG B650 Tomahawk WiFi\n - MSI MAG CoreLiquid 360mm AIO\n - Thermaltake Toughpower GT 850W Gold\n - MSI M470 1TB NVMe\n - Cooler Master 600 dual-chamber case\n I'm coming from an RTX 4080 laptop, but one of the biggest reasons I wanted the 7900 XTX was the 24GB VRAM.\n I want to explore local AI pretty heavily: local LLMs, coding models/agents, image generation, embeddings, llama.cpp, vLLM, PyTorch/ROCm and anything else I can get running locally.\n I'll also be gaming, mainly Battlefield 6, football/soccer games and CS2, but AI and experimentation are probably going to be the more interesting part of the machine for me.\n I'm also finally ditching Windows as my main OS and moving to Linux for the first time. I may keep a small Windows partition as insurance while I learn.\n I'll stick with 32GB RAM initially and only jump to 64GB/96GB if local models give me a real reason to.\n For the AMD veterans here, what should a first-timer know?\n Particularly interested in:\n - ROCm setup/advice for the 7900 XTX\n - Linux distro recommendations for an AMD + AI machine\n - Useful monitoring/tuning software\n - Local AI tools that work particularly well on RDNA3\n - Anything you'd configure differently from day one\n I'm expecting a little more tinkering than CUDA, but that's part of the reason I'm interested in trying it.\n    submitted by    /u/AIOfficialBot    to    r/Amd  \n [link]   [comments]",
-    "arabicDescription": "بعد سنوات من استخدام أجهزة الكمبيوتر المحمولة ووحدات معالجة الرسوميات Nvidia، أعود أخيرًا إلى الكمبيوتر المكتبي وأستخدم AMD للمرة الأولى. تم التقاط هذا الإصدار: - Ryzen 9 9950X - 16C/32T - XFX Speedster MERC 310 RX 7900 XTX - 24 جيجابايت - 32 جيجابايت G.Skill Flare X5 DDR5-6000 CL28 - MSI MA",
-    "link": "https://www.reddit.com/r/Amd/comments/1vweyz9/first_amd_system_9950x_7900_xtx_going_linux_and/",
-    "sourceName": "مجموعة ريديت (4)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-23T18:30:47.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/WallStreetbetsELITE/comments/1vwa9ul/alvin_graylin_says_chinese_gpu_ceos_told_him_they/",
-    "title": "Alvin Graylin says Chinese GPU CEOs told him they would have died without US export controls.",
-    "arabicTitle": "يقول ألفين جرايلين إن الرؤساء التنفيذيين لشركة GPU الصينية أخبروه أنهم كانوا سيموتون بدون ضوابط التصدير الأمريكية.",
-    "description": "The policy designed to crush Chinese semiconductor progress instead gave them a protected market, state resources and forced adoption. Now the CEOs openly admit they would have died without it.\n    submitted by    /u/Prime-Paradox    to    r/WallStreetbetsELITE  \n [link]   [comments]",
-    "arabicDescription": "وبدلاً من ذلك، أعطتهم السياسة المصممة لسحق التقدم الصيني في مجال أشباه الموصلات سوقًا محمية وموارد الدولة والتبني القسري. والآن يعترف الرؤساء التنفيذيون علانية أنهم كانوا سيموتون بدونها. تم تقديمه بواسطة /u/Prime-Paradox إلى r/WallStreetbetsELITE [",
-    "link": "https://www.reddit.com/r/WallStreetbetsELITE/comments/1vwa9ul/alvin_graylin_says_chinese_gpu_ceos_told_him_they/",
-    "sourceName": "مجموعة ريديت (4)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-23T15:32:45.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://www.reddit.com/r/MBOT_Stock/comments/1vw924k/cuando_despegara_microbot/",
-    "title": "Cuando despegara Microbot",
-    "arabicTitle": "عندما سوف تقلع Microbot",
-    "description": "Cuando despegara Microbot?. Es la pregunta que a día de hoy se hace el mercado( al menos sus inversores)\n Después de la aprobación por parte de la FDA de su sistema Liberty, la acción se disparo hasta casi los 5$ ( 4’67 llego ha hacer de máximo) pero un año después cotiza en 1’50$, que ha pasado en este tiempo para este descenso?.\n Si analizamos la evolución de la expansión observamos de una parte, varios centros médicos que han adoptado Liberty, el primero fue el Emory University Hospital a finales de noviembre de 2025, le siguió a finales de ese mismo año un centro sin confirmar su nombre( hay varios casos así) en New York, ya en 2026 se unen, Tampa General Hospital en Florida, ademas de otros sistemas hospitalarios en Massachussetts, Carolina del Norte,Michigan, Pennsylvania. Ademas recibe la autorización para su comercialización en Israel.\n Paralelamente podemos observar un interesante despliegue de ofertas de empleo por parte de la compañía, ofreciendo empleos destinados a la formación, seguimiento y escalado de ventas en los territorios ya anunciados así como en otros territorios marcados como objetivo por parte de Microbot. Esto, sin duda, representa una prueba clara de que la expansión se esta llevando a cabo y se están sentando las bases necesarias para su despliegue y expansión, no tendría sentido crear este entramado sin otro objetivo.\n También es destacable su inclusión en junio de este año en la red de veteranos en un acuerdo con Lovell Government Services, que abre la posibilidad de acceder a un mercado en el que se realizan cerca de 35.000 procedimientos anuales, y que durante este tercer trimestre del año quedara plenamente activado.\n La contratación a finales de abril de 2026, de un responsable para la expansión en Europa, Asia y Oriente Medio, es otra de las piezas de este puzzle llamado Microbot, que pueden pasar desapercibidas, pero que sin duda muestran el carácter ambicioso y prometedor de esta empresa.\n En este tercer trimestre que estamos de momento conocemos que han habido nuevas contrataciones, ademas de un aumento de centros dentro de las primeras cadenas hospitalarias.\n Falta por conocer cuando el mercado empezara a valorar todo el potencial de Microbot\n    submitted by    /u/MycologistThin2694  \n [link]   [comments]",
-    "arabicDescription": "متى سينطلق Microbot؟ هذا هو السؤال الذي يطرحه السوق اليوم (على الأقل على المستثمرين). بعد موافقة إدارة الأغذية والعقاقير (FDA) على نظام Liberty الخاص بها، ارتفع سعر السهم إلى ما يقرب من 5 دولارات (كان الحد الأقصى 4.67 دولارًا) ولكن",
-    "link": "https://www.reddit.com/r/MBOT_Stock/comments/1vw924k/cuando_despegara_microbot/",
-    "sourceName": "MBOT_Stock",
+    "id": "https://www.reddit.com/r/hot_stocks/comments/1vwbz3c/adbe_stock_analysis_aug_23/",
+    "title": "🔍 ADBE - Stock analysis Aug 23",
+    "arabicTitle": "🔍 ADBE - تحليل الأسهم 23 أغسطس",
+    "description": "submitted by    /u/Routine_Bat6675  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/Routine_Bat6675 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/hot_stocks/comments/1vwbz3c/adbe_stock_analysis_aug_23/",
+    "sourceName": "hot_stocks",
     "category": "الاسهم",
-    "pubDate": "2026-08-23T14:45:16.000Z",
+    "pubDate": "2026-08-23T16:37:50.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/litecoin/comments/1vwa0kb/if_there_were_ever_a_litecoin_mascot_battle_who/",
+    "title": "If there were ever a Litecoin mascot battle who would win?",
+    "arabicTitle": "إذا كانت هناك معركة تميمة Litecoin فمن سيفوز؟",
+    "description": "submitted by    /u/Minute-Lake-1819  \n [link]   [comments]",
+    "arabicDescription": "مقدمة من /u/Minute-Lake-1819 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/litecoin/comments/1vwa0kb/if_there_were_ever_a_litecoin_mascot_battle_who/",
+    "sourceName": "litecoin",
+    "category": "كريبتو",
+    "pubDate": "2026-08-23T15:22:46.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/litecoin/comments/1vw9ekq/which_electrumltc_should_i_use/",
+    "title": "Which Electrum-LTC should i use?",
+    "arabicTitle": "ما هو Electrum-LTC الذي يجب أن أستخدمه؟",
+    "description": "So it's getting a little bit confusing, litecoin.com recommend me to download Electrum-LTC from here but i also found a github repository and its website that is newer which is ltc-electrum and the website is ltc-electrum.github.io. Which should i download and use?\n    submitted by    /u/AnyCryptographer3675  \n [link]   [comments]",
+    "arabicDescription": "لذلك أصبح الأمر مربكًا بعض الشيء، يوصيني موقع litecoin.com بتنزيل Electrum-LTC من هنا، لكنني وجدت أيضًا مستودع github وموقعه الإلكتروني الأحدث وهو ltc-electrum والموقع الإلكتروني هو ltc-electrum.github.io. ماذا يجب أن أفعل",
+    "link": "https://www.reddit.com/r/litecoin/comments/1vw9ekq/which_electrumltc_should_i_use/",
+    "sourceName": "litecoin",
+    "category": "كريبتو",
+    "pubDate": "2026-08-23T14:59:12.000Z",
     "media": {
       "image": null
     }
@@ -672,43 +714,85 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/weedstocks/comments/1vw323z/daily_discussion_thread_august_23_2026/",
-    "title": "Daily Discussion Thread - August 23, 2026",
-    "arabicTitle": "موضوع المناقشة اليومية - 23 أغسطس 2026",
-    "description": "Welcome to the r/weedstocks Daily Discussion Thread!\n  \nNew to Reddit? Read This.\n New to r/weedstocks? Read This\n Want to start trading? Read This.\n Use the search bar before asking any question. All questions that can be answered by these resources may be removed.\n  \nLooking for research resources about which company to invest in? Please refer to our sidebar -- specifically our featured Investing References to help you in your research process.\n This thread is intended for the community to talk about whichever company with others in a casual manner. \n Unrelated discussion will always be removed (as per rule #3). Reddit is full of various other communities, and while we understand cross-discussion, unrelated topics should be discussed in their appropriate subreddits.\n Please remember proper reddiquette when participating in the conversation. As always, rule #1 \"be kind and respectful\" will be strictly enforced here to prevent any uncivil discussion and personal attacks.\n    submitted by    /u/AutoModerator    to    r/weedstocks  \n [link]   [comments]",
-    "arabicDescription": "مرحبًا بك في موضوع المناقشة اليومية لـ r/weedstocks! هل أنت جديد في رديت؟ اقرأ هذا. جديد على ص / الأعشاب؟ اقرأ هذا هل تريد أن تبدأ التداول؟ اقرأ هذا. استخدم شريط البحث قبل طرح أي سؤال. جميع الأسئلة التي يمكن أن تجيب عليها هذه الموارد ب",
-    "link": "https://www.reddit.com/r/weedstocks/comments/1vw323z/daily_discussion_thread_august_23_2026/",
-    "sourceName": "مجموعة ريديت (4)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-23T09:55:07.000Z",
+    "id": "https://www.reddit.com/r/hot_stocks/comments/1vw1zdf/lly_stock_analysis_aug_23/",
+    "title": "🔍 LLY - Stock analysis Aug 23",
+    "arabicTitle": "🔍 LLY - تحليل الأسهم 23 أغسطس",
+    "description": "submitted by    /u/Routine_Bat6675  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/Routine_Bat6675 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/hot_stocks/comments/1vw1zdf/lly_stock_analysis_aug_23/",
+    "sourceName": "hot_stocks",
+    "category": "الاسهم",
+    "pubDate": "2026-08-23T08:52:15.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/EMJX/comments/1vw2ll9/realistic_expections_of_news/",
-    "title": "Realistic expections of news",
-    "arabicTitle": "توقعات واقعية للأخبار",
-    "description": "I've been thinking about this for a while. Obviously as a business they can't just hype and pump the stock. Eric has said he can't release certain information. \n So what can they release realistically that will increase the price other than official filings and earnings releases? \n Is there anything crypto related that they could release in the near term? \n Can they even announce capital investment with EMJX, or is that restricted to quarterly filings?\n    submitted by    /u/Famous-Recognition-4    to    r/EMJX  \n [link]   [comments]",
-    "arabicDescription": "لقد كنت أفكر في هذا لفترة من الوقت. من الواضح أنهم كعمل تجاري لا يمكنهم مجرد الضجيج وضخ الأسهم. قال إريك إنه لا يستطيع نشر معلومات معينة. إذن ما الذي يمكنهم إطلاقه بشكل واقعي من شأنه أن يزيد السعر غير الرسمي",
-    "link": "https://www.reddit.com/r/EMJX/comments/1vw2ll9/realistic_expections_of_news/",
-    "sourceName": "مجموعة ريديت (4)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-23T09:28:17.000Z",
+    "id": "https://www.reddit.com/r/hot_stocks/comments/1vvqyj1/atlassian_nasdaq_team_great_fundamentals_but_the/",
+    "title": "Atlassian (NASDAQ: TEAM) : Great Fundamentals — But the Chart Flashing \"Overbought) in the Near Term",
+    "arabicTitle": "Atlassian (NASDAQ: TEAM): أساسيات رائعة - لكن الرسم البياني يومض \"في منطقة ذروة الشراء\" على المدى القريب",
+    "description": "submitted by    /u/BuenoMuch  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/BuenoMuch [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/hot_stocks/comments/1vvqyj1/atlassian_nasdaq_team_great_fundamentals_but_the/",
+    "sourceName": "hot_stocks",
+    "category": "الاسهم",
+    "pubDate": "2026-08-22T23:16:32.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/wallstreetbets_wins/comments/1vw2foq/apple_announced_its_largestever_stock_buyback/",
-    "title": "Apple Announced Its Largest-Ever Stock Buyback Under Tim Cook's Leadership. Here's Why the Size of the Repurchase Program Matters for Shareholders.",
-    "arabicTitle": "أعلنت شركة Apple عن أكبر عملية إعادة شراء للأسهم على الإطلاق تحت قيادة تيم كوك. إليك سبب أهمية حجم برنامج إعادة الشراء للمساهمين.",
-    "description": "submitted by    /u/MickeyMoss    to    r/wallstreetbets_wins  \n [link]   [comments]",
-    "arabicDescription": "تم الإرسال بواسطة /u/MickeyMoss إلى r/wallstreetbets_wins [الرابط] [التعليقات]",
-    "link": "https://www.reddit.com/r/wallstreetbets_wins/comments/1vw2foq/apple_announced_its_largestever_stock_buyback/",
-    "sourceName": "مجموعة ريديت (4)",
-    "category": "مُدمج",
-    "pubDate": "2026-08-23T09:18:28.000Z",
+    "id": "https://www.reddit.com/r/litecoin/comments/1vvj2jo/ltc_47/",
+    "title": "LTC 4.7",
+    "arabicTitle": "إل تي سي 4.7",
+    "description": "Almost here. Finish line to 100LTC\n    submitted by    /u/PlaneConstruction999  \n [link]   [comments]",
+    "arabicDescription": "هنا تقريبا. خط النهاية إلى 100LTC مقدم من /u/PlaneConstruction999 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/litecoin/comments/1vvj2jo/ltc_47/",
+    "sourceName": "litecoin",
+    "category": "كريبتو",
+    "pubDate": "2026-08-22T17:54:14.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/hot_stocks/comments/1vvh570/hood_stock_analysis_aug_22/",
+    "title": "🔍 HOOD - Stock analysis Aug 22",
+    "arabicTitle": "🔍 هود - تحليل الأسهم 22 أغسطس",
+    "description": "submitted by    /u/Routine_Bat6675  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/Routine_Bat6675 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/hot_stocks/comments/1vvh570/hood_stock_analysis_aug_22/",
+    "sourceName": "hot_stocks",
+    "category": "الاسهم",
+    "pubDate": "2026-08-22T16:39:17.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/litecoin/comments/1vvepqn/for_charlie_lee_anything/",
+    "title": "For Charlie Lee, anything.",
+    "arabicTitle": "بالنسبة لتشارلي لي، أي شيء.",
+    "description": "Cause no one can deny…\n This love I have inside…\n And I give it all to you…\n My love, my love. My endless Litecoin loveeeee…\n    submitted by    /u/Minute-Lake-1819  \n [link]   [comments]",
+    "arabicDescription": "لأنه لا يمكن لأحد أن ينكر... هذا الحب الذي بداخلي... وأعطيه لك كله... حبي، حبي. حبي اللانهائي لعملة Litecoin... مقدم بواسطة /u/Minute-Lake-1819 [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/litecoin/comments/1vvepqn/for_charlie_lee_anything/",
+    "sourceName": "litecoin",
+    "category": "كريبتو",
+    "pubDate": "2026-08-22T15:02:09.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/hot_stocks/comments/1vve07x/reddit_is_arguing_about_tesla_again_273_mentions/",
+    "title": "Reddit is arguing about Tesla again: 273 mentions today, against 102 yesterday",
+    "arabicTitle": "يتجادل Reddit حول Tesla مرة أخرى: 273 إشارة اليوم، مقابل 102 بالأمس",
+    "description": "submitted by    /u/Reasonable-Hold-1079  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/Reasonable-Hold-1079 [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/hot_stocks/comments/1vve07x/reddit_is_arguing_about_tesla_again_273_mentions/",
+    "sourceName": "hot_stocks",
+    "category": "الاسهم",
+    "pubDate": "2026-08-22T14:33:06.000Z",
     "media": {
       "image": null
     }
@@ -728,113 +812,169 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/MBOT_Stock/comments/1vunb88/microbot_medical_mbot_stock_hub_2026_liberty/",
-    "title": "Microbot Medical ($MBOT) Stock Hub 2026: LIBERTY Enters the Commercial-Proof Phase",
-    "arabicTitle": "Microbot Medical ($MBOT) Stock Hub 2026: LIBERTY تدخل مرحلة الدليل التجاري",
-    "description": "https://www.merlintrader.com/microbot-medical-stock-hub/\n Microbot Medical has cleared the regulatory hurdle and entered the harder phase: proving repeat utilization, gross margin and scalable hospital economics for the single-use LIBERTY endovascular  robotic system. The Q2 Form 10-Q filed on August 11, 2026 put numbers behind the launch: revenue of $241,000, cost of revenue of $884,000, an operating loss of $6.188 million and liquidity of $67.37 million.\n Updated aug 18\n    submitted by    /u/Merlin8121  \n [link]   [comments]",
-    "arabicDescription": "https://www.merlintrader.com/microbot-medical-stock-hub/ قامت شركة Microbot Medical بإزالة العقبة التنظيمية ودخلت المرحلة الأصعب: إثبات الاستخدام المتكرر والهامش الإجمالي واقتصاديات المستشفى القابلة للتطوير لنظام LIBERTY للأوعية الدموية الداخلي للاستخدام مرة واحدة",
-    "link": "https://www.reddit.com/r/MBOT_Stock/comments/1vunb88/microbot_medical_mbot_stock_hub_2026_liberty/",
-    "sourceName": "MBOT_Stock",
-    "category": "الاسهم",
-    "pubDate": "2026-08-21T17:46:32.000Z",
+    "id": "https://www.reddit.com/r/litecoin/comments/1vv2yzi/i_promise_litecoin_will_reach_20b_market_cap_very/",
+    "title": "I promise Litecoin will reach $20B market cap very soon",
+    "arabicTitle": "أعدك بأن Litecoin ستصل إلى القيمة السوقية البالغة 20 مليار دولار قريبًا جدًا",
+    "description": "Privacy coins are MOVING\n Litecoins offers multiple different things, all in 1 coin, MULTIPLE NARRATIVES, Litecoin is the BEST coin, this will be very LITE work💪\n    submitted by    /u/brdbrd1  \n [link]   [comments]",
+    "arabicDescription": "عملات الخصوصية تتحرك تقدم Litecoins العديد من الأشياء المختلفة، كل ذلك في عملة واحدة، روايات متعددة، Litecoin هي أفضل عملة، سيكون هذا عملاً بسيطًا للغاية 💪 مقدم من /u/brdbrd1 [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/litecoin/comments/1vv2yzi/i_promise_litecoin_will_reach_20b_market_cap_very/",
+    "sourceName": "litecoin",
+    "category": "كريبتو",
+    "pubDate": "2026-08-22T04:55:40.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/MBOT_Stock/comments/1vubdww/espansione_microbot_medical_pt_2/",
-    "title": "Espansione Microbot Medical - Pt. 2",
-    "arabicTitle": "Espansione Microbot Medical - حزب العمال. 2",
-    "description": "Altre fonti inoltre affermano che Microbot ha nominato Alon Tamir VP Sales EMEA con l’incarico di costruire la strategia commerciale, compresi distribuzione e partnership strategiche e che l’azienda punta a entrare nei mercati internazionali entro fine 2026. Inoltre Microbot indica che sono stati fatti già test preclinici in Europa e che in particola re dei medici francesi degli ospedali Timone e Gustave cancer center abbiamo già valutato positivamente la tecnologia.\n    submitted by    /u/JohnOSaints  \n [link]   [comments]",
-    "arabicDescription": "وتشير مصادر أخرى أيضًا إلى أن شركة Microbot قامت بتعيين ألون تامير نائب رئيس المبيعات في أوروبا والشرق الأوسط وأفريقيا بمهمة بناء الإستراتيجية التجارية، بما في ذلك التوزيع والشراكات الإستراتيجية وأن الشركة تهدف إلى دخول الأسواق الدولية من خلال",
-    "link": "https://www.reddit.com/r/MBOT_Stock/comments/1vubdww/espansione_microbot_medical_pt_2/",
-    "sourceName": "MBOT_Stock",
+    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vur68f/treasury_secretary_bessent_says_we_can_grow_our/",
+    "title": "Treasury Secretary Bessent says \"we can grow our way out\" of $40 trillion US national debt with tariffs and economic growth.",
+    "arabicTitle": "يقول وزير الخزانة بيسنت: \"يمكننا أن نخرج طريقنا للخروج\" من الدين القومي الأمريكي البالغ 40 تريليون دولار من خلال التعريفات الجمركية والنمو الاقتصادي.",
+    "description": "submitted by    /u/NecessaryGrowth2  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/NecessaryGrowth2 [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vur68f/treasury_secretary_bessent_says_we_can_grow_our/",
+    "sourceName": "MarketPulseReport",
     "category": "الاسهم",
-    "pubDate": "2026-08-21T09:26:50.000Z",
+    "pubDate": "2026-08-21T20:08:20.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/MBOT_Stock/comments/1vtm0gc/espansione_microbot_medical_in_europa/",
-    "title": "Espansione Microbot Medical in Europa",
-    "arabicTitle": "التوسع الطبي لـ Microbot في أوروبا",
-    "description": "Diverse fonti parlano della concreta possibilità di adottare il sistema Liberty anche in Europa entro la fine del 2026.\n A mio parere ci sono i presupposti per un forte rialzo in linea con l’ultima rating di H.C. Wainwright\n    submitted by    /u/JohnOSaints  \n [link]   [comments]",
-    "arabicDescription": "تتحدث مصادر مختلفة عن إمكانية ملموسة لاعتماد نظام Liberty أيضًا في أوروبا بحلول نهاية عام 2026. في رأيي، هناك الظروف اللازمة لزيادة قوية بما يتماشى مع أحدث HC. تصنيف. وينرايت مقدم من /u/JohnOSaints",
-    "link": "https://www.reddit.com/r/MBOT_Stock/comments/1vtm0gc/espansione_microbot_medical_in_europa/",
-    "sourceName": "MBOT_Stock",
-    "category": "الاسهم",
-    "pubDate": "2026-08-20T15:04:11.000Z",
+    "id": "https://www.reddit.com/r/litecoin/comments/1vuqryn/go_high_ltc_crossed_70_on_kucoin_and_then_went/",
+    "title": "Go High LTC crossed $70 on kucoin and then went down.",
+    "arabicTitle": "تجاوزت Go High LTC مستوى 70 دولارًا على kucoin ثم انخفضت.",
+    "description": "submitted by    /u/TableUpset6902  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/TableUpset6902 [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/litecoin/comments/1vuqryn/go_high_ltc_crossed_70_on_kucoin_and_then_went/",
+    "sourceName": "litecoin",
+    "category": "كريبتو",
+    "pubDate": "2026-08-21T19:53:15.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/MBOT_Stock/comments/1vrlar2/wow/",
-    "title": "wow~",
-    "arabicTitle": "واو~",
-    "description": "Guys, Microbot Medical is here! Buy up, everyone—this is TOTALLY gonna be a 10x stock in the future~ Hahaha! I strongly encourage you all to sell your house, sell your land, and sell your internal organs to go all-in\n    submitted by    /u/harelgaedot  \n [link]   [comments]",
-    "arabicDescription": "يا شباب، Microbot Medical هنا! اشتروا جميعًا، سيكون هذا سهمًا بقيمة 10 أضعاف في المستقبل ~ هاهاها! أنا أشجعكم جميعًا بشدة على بيع منزلك، وبيع أرضك، وبيع أعضائك الداخلية للقيام بكل شيء مقدم من /u/harelgaedot [الرابط",
-    "link": "https://www.reddit.com/r/MBOT_Stock/comments/1vrlar2/wow/",
-    "sourceName": "MBOT_Stock",
+    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vs1wed/just_in_sec_officially_proposes_new_rules_to/",
+    "title": "JUST IN: 🇺🇸 SEC officially proposes new rules to create clear regulatory framework for crypto.",
+    "arabicTitle": "فقط في: 🇺🇸 تقترح هيئة الأوراق المالية والبورصة (SEC) رسميًا قواعد جديدة لإنشاء إطار تنظيمي واضح للعملات المشفرة.",
+    "description": "submitted by    /u/NecessaryGrowth2  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/NecessaryGrowth2 [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vs1wed/just_in_sec_officially_proposes_new_rules_to/",
+    "sourceName": "MarketPulseReport",
     "category": "الاسهم",
-    "pubDate": "2026-08-18T10:27:54.000Z",
+    "pubDate": "2026-08-18T21:01:30.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/MBOT_Stock/comments/1vr3sma/vision_completa/",
-    "title": "vision completa",
-    "arabicTitle": "رؤية كاملة",
-    "description": "El mercado esta castigando los resultados del ultimo trimestre( también ha sido el primero), es cierto que los ingresos brutos han sido decepcionantes, pero quedarse unicamente con esa cifra, creo que es mirar solo una parte del conjunto.\n Para empezar el trimestre, en realidad ni tan siquiera fue completo, el full marketing llego a mediados de abril, en el mismo se confirmaron la expansion en 4 estados nuevos para llegar ahasta 7, mientras el recuento de comunicados de expansion de centros como minimo nos da 8( pensando la cifra mas baja). También en ese trimstre se solicito al fabricante B.Y. Medimor un aumenento de producción para conseguir stock suficiente, posteriormente en junio se añade como segundo fabricante a Sanmina una multinacional dedicada a la fabricación a gran escala de este tipo de equipos medicos, lo cual ademas ayuda a rebajar los costes de fabricación. También se añaden un jefe de venta o encargado de llevar la expansión en Europa, Asia y Oriente Medio, se recibe autorización para la comercialización en Israel, Se consiguel el premio starup innovadora, aumenta el personal en varios estados de EEUU con puestos claves en la expansión comercial del producto...\n Es logico pensar que este primer periodo comercial, los centros que han apostado por Liberty esten mas centrados en la formación e introducción del mismo que ya desde el primer realizando intervenciones, creo que aqui esta el motivo de los cortos ingresos.\n La vision mas amplia de todo lo realizado hasta ahora creo que da para pensar que lo mejor estar por llegar,el terreno esta sembrado y abonado, regado regularmente, ahora hay que esperar la cosecha.\n    submitted by    /u/Cheap_Yak_2642  \n [link]   [comments]",
-    "arabicDescription": "يعاقب السوق نتائج الربع الأخير (كان أيضًا الأول)، وصحيح أن إجمالي الدخل كان مخيباً للآمال، ولكن البقاء عند هذا الرقم فقط، أعتقد أنه يعني النظر إلى جزء فقط من الكل. للبدء",
-    "link": "https://www.reddit.com/r/MBOT_Stock/comments/1vr3sma/vision_completa/",
-    "sourceName": "MBOT_Stock",
+    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vp5n9h/just_in_president_trump_says_he_will_soon_declare/",
+    "title": "JUST IN: 🇺🇸 President Trump says he will soon declare the Strait of Hormuz \"territory of the United States.\"",
+    "arabicTitle": "فقط في: 🇺🇸 يقول الرئيس ترامب إنه سيعلن قريبًا أن مضيق هرمز \"منطقة تابعة للولايات المتحدة\".",
+    "description": "submitted by    /u/NecessaryGrowth2  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/NecessaryGrowth2 [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vp5n9h/just_in_president_trump_says_he_will_soon_declare/",
+    "sourceName": "MarketPulseReport",
     "category": "الاسهم",
-    "pubDate": "2026-08-17T20:25:47.000Z",
+    "pubDate": "2026-08-15T15:25:04.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/MBOT_Stock/comments/1vpo88j/scam/",
-    "title": "scam",
-    "arabicTitle": "غش",
-    "description": "MBOT will walk the exact same path as XACT Robotics. It'll eventually shut down, won't it?\n What, MBOT is different?\n Will it really end up being different?\n Everyone here is a complete fanatic, take my advice and stop investing.\n    submitted by    /u/harelgaedot  \n [link]   [comments]",
-    "arabicDescription": "سوف يسير MBOT على نفس المسار تمامًا مثل XACT Robotics. سيتم إغلاقه في النهاية، أليس كذلك؟ ماذا، MBOT مختلف؟ هل سينتهي الأمر حقًا ليكون مختلفًا؟ الجميع هنا متعصبون تمامًا، خذوا نصيحتي وتوقفوا عن الاستثمار. مقدم من /u/harelga",
-    "link": "https://www.reddit.com/r/MBOT_Stock/comments/1vpo88j/scam/",
-    "sourceName": "MBOT_Stock",
+    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vorfxu/how_do_you_connect_macro_headlines_to_the_assets/",
+    "title": "How do you connect macro headlines to the assets actually exposed to them?",
+    "arabicTitle": "كيف يمكنك ربط العناوين الكلية بالأصول المعرضة لها بالفعل؟",
+    "description": "A headline is only the starting point. The useful work is tracing the chain: event → rates, currencies, or commodities → sectors → equities.\n I opened Market Insights Community for people who enjoy that research process: market pulse, macro, sector rotation, commodities, global events, and evidence-based discussion. It is a research and discussion space—not trade alerts or financial advice.\n Discord: https://discord.gg/XbW5sAgNUC\n    submitted by    /u/the-commons  \n [link]   [comments]",
+    "arabicDescription": "العنوان هو مجرد نقطة البداية. والعمل المفيد هو تتبع السلسلة: الأحداث ← الأسعار، أو العملات، أو السلع ← القطاعات ← الأسهم. لقد فتحت مجتمع Market Insights Community للأشخاص الذين يستمتعون بعملية البحث هذه: نبض السوق، الكلي، القطاع",
+    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vorfxu/how_do_you_connect_macro_headlines_to_the_assets/",
+    "sourceName": "MarketPulseReport",
     "category": "الاسهم",
-    "pubDate": "2026-08-16T05:14:53.000Z",
+    "pubDate": "2026-08-15T03:00:59.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/MBOT_Stock/comments/1vovkjn/scam_out/",
-    "title": "scam out",
-    "arabicTitle": "احتيال",
-    "description": "This stock is a scam, do not fall for it.\n  \nA shell of a public company: It maintains the appearance of a legitimate Nasdaq-listed company, but in reality, it survives solely on continuous capital raises.\n Legal exploitation: It repeatedly pumps out good news to inflate the stock price, only to follow up with stock offerings that crash the price and absorb shareholders' money.\n Relentless destruction of shareholder value: Through endless share issuances and reverse stock splits, it melts away investor accounts, making it a textbook high-risk stock to avoid.\n  \n   submitted by    /u/harelgaedot  \n [link]   [comments]",
-    "arabicDescription": "هذا السهم هو عملية احتيال، لا تسقط عنه. هيكل شركة عامة: تحافظ على مظهر الشركة المشروعة المدرجة في بورصة ناسداك، لكنها في الواقع لا تعيش إلا على زيادات رأس المال المستمرة. الاستغلال القانوني: يضخ المادة اللزجة بشكل متكرر",
-    "link": "https://www.reddit.com/r/MBOT_Stock/comments/1vovkjn/scam_out/",
-    "sourceName": "MBOT_Stock",
+    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1voowr9/nvidia_following_the_pattern/",
+    "title": "NVIDIA following the pattern",
+    "arabicTitle": "NVIDIA تتبع النمط",
+    "description": "Is NVIDIA following the pattern where its stock price rises leading up to earnings and then drops after the earnings report?\n It’s been nothing but this pattern for the last few quarters, hasn’t it?\n    submitted by    /u/PrimaryResolve641  \n [link]   [comments]",
+    "arabicDescription": "هل تتبع NVIDIA النمط الذي يرتفع فيه سعر سهمها مما يؤدي إلى الأرباح ثم ينخفض ​​بعد تقرير الأرباح؟ لم يكن الأمر سوى هذا النمط خلال الأرباع القليلة الماضية، أليس كذلك؟ مقدم من /u/PrimaryResolve641 [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1voowr9/nvidia_following_the_pattern/",
+    "sourceName": "MarketPulseReport",
     "category": "الاسهم",
-    "pubDate": "2026-08-15T06:41:55.000Z",
+    "pubDate": "2026-08-15T00:58:50.000Z",
     "media": {
       "image": null
     }
   },
   {
-    "id": "https://www.reddit.com/r/MBOT_Stock/comments/1vocjhs/microbot_medical_price_target_cut_to_400share/",
-    "title": "Microbot Medical Price Target Cut to $4.00/Share From $5.00 by B. Riley Securities",
-    "arabicTitle": "تم تخفيض السعر المستهدف لسعر Microbot Medical إلى 4.00 دولارات أمريكية للسهم من 5.00 دولارات أمريكية بواسطة B. Riley Securities",
-    "description": "Not exactly what we needed. This will go lower than it's been since pre-FDA approval.\n    submitted by    /u/Sigurdsson007  \n [link]   [comments]",
-    "arabicDescription": "ليس بالضبط ما نحتاجه. سينخفض ​​هذا عما كان عليه منذ موافقة إدارة الغذاء والدواء المسبقة. مقدم من /u/Sigurdsson007 [رابط] [تعليقات]",
-    "link": "https://www.reddit.com/r/MBOT_Stock/comments/1vocjhs/microbot_medical_price_target_cut_to_400share/",
-    "sourceName": "MBOT_Stock",
+    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1voj1ed/the_markets_are_rigged_why_the_next_crash_is/",
+    "title": "🚨The Markets Are Rigged: Why the Next Crash is Coming",
+    "arabicTitle": "🚨الأسواق مزورة: لماذا سيأتي الانهيار التالي",
+    "description": "submitted by    /u/Trends-Journal  \n [link]   [comments]",
+    "arabicDescription": "مقدم من /u/Trends-Journal [الرابط] [التعليقات]",
+    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1voj1ed/the_markets_are_rigged_why_the_next_crash_is/",
+    "sourceName": "MarketPulseReport",
     "category": "الاسهم",
-    "pubDate": "2026-08-14T16:46:59.000Z",
+    "pubDate": "2026-08-14T20:46:39.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vncqie/the_ai_buildout_is_now_showing_in_every_gov_data/",
+    "title": "the AI buildout is now showing in every gov data. are we still bearish?",
+    "arabicTitle": "يظهر الآن تصميم الذكاء الاصطناعي في كل البيانات الحكومية. هل ما زلنا هبوطيين؟",
+    "description": "the same tables put electric power and specialty transformers at an all-time high\n    submitted by    /u/convexpayoff  \n [link]   [comments]",
+    "arabicDescription": "نفس الجداول تضع الطاقة الكهربائية والمحولات المتخصصة في أعلى مستوياتها على الإطلاق المقدمة من /u/convexpayoff [رابط] [تعليقات]",
+    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vncqie/the_ai_buildout_is_now_showing_in_every_gov_data/",
+    "sourceName": "MarketPulseReport",
+    "category": "الاسهم",
+    "pubDate": "2026-08-13T14:45:28.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vmeova/riot_signed_a_91b_20year_lease_with_an_unnamed/",
+    "title": "Riot signed a $9.1B, 20-year lease with an unnamed frontier AI lab, some reports quoted it to be Anthropic and it names bitcoin sales as the funding source for the equity",
+    "arabicTitle": "وقعت شركة Riot عقد إيجار بقيمة 9.1 مليار دولار لمدة 20 عامًا مع مختبر ذكاء اصطناعي حدودي لم يذكر اسمه، وذكرت بعض التقارير أنه أنثروبيكي وذكرت مبيعات البيتكوين كمصدر تمويل للأسهم",
+    "description": "Riot Platforms $RIOT filed an 8-K on Aug 10 saying it has \"executed a data center lease with a leading frontier AI lab for 191 MW of critical IT capacity\" at its Rockdale, Texas campus. the 20-year initial term carries $9.1 billion of contract revenue, and $16.1 billion if the tenant takes both five-year extensions. \n https://preview.redd.it/z7xppmr48yih1.png?width=1208&format=png&auto=webp&s=2e3f7cca97e76ffe9cc9d65a17d03f3cd6f81217\n    submitted by    /u/convexpayoff  \n [link]   [comments]",
+    "arabicDescription": "قدمت شركة Riot Platforms $RIOT مذكرة 8-K في 10 أغسطس قائلة إنها \"نفذت عقد إيجار لمركز بيانات مع مختبر رائد للذكاء الاصطناعي على الحدود بسعة 191 ميجاوات من سعة تكنولوجيا المعلومات الحيوية\" في حرمها الجامعي في روكديل بولاية تكساس. تحمل المدة الأولية البالغة 20 عامًا 9.1 مليار دولار من إيرادات العقود",
+    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vmeova/riot_signed_a_91b_20year_lease_with_an_unnamed/",
+    "sourceName": "MarketPulseReport",
+    "category": "الاسهم",
+    "pubDate": "2026-08-12T13:49:12.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vlqk6j/deadline_to_submit_claims_on_the_wm_technology/",
+    "title": "Deadline to Submit Claims on the WM Technology ($MAPS) $7.5M Settlement is October 30, 2026",
+    "arabicTitle": "الموعد النهائي لتقديم المطالبات بشأن تسوية WM Technology ($MAPS) بقيمة 7.5 مليون دولار أمريكي هو 30 أكتوبر 2026",
+    "description": "Hey guys, if you missed it, WM Technology settled $7.5M with investors over claims that it inflated its monthly active user numbers and misled investors about user growth. The deadline to file a claim is October 30, 2026.\n In a nutshell, WM counted users from pop-under ads as active users even when they didn’t actually engage with the platform. In 2022, the company disclosed concerns about its MAU reporting, and $MAPS fell more than 25%.\n Investors now have until October 30, 2026 to submit a claim and get payment.\n If you invested in $MAPS at the time, you can check your eligibility and file a claim here\n Anyone here invested in $MAPS back then? How much were your losses?\n https://preview.redd.it/pcfzonuhmsih1.jpg?width=2340&format=pjpg&auto=webp&s=93d4f34474680d498210d15171e8131806c193ef\n    submitted by    /u/JuniorCharge4571  \n [link]   [comments]",
+    "arabicDescription": "مرحبًا يا شباب، إذا فاتكم الأمر، قامت شركة WM Technology بتسوية مبلغ 7.5 مليون دولار مع المستثمرين بسبب مزاعم بأنها قامت بتضخيم أعداد المستخدمين النشطين شهريًا وضللت المستثمرين بشأن نمو المستخدمين. الموعد النهائي لتقديم المطالبة هو 30 أكتوبر 2026. باختصار، أحصتنا WM",
+    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vlqk6j/deadline_to_submit_claims_on_the_wm_technology/",
+    "sourceName": "MarketPulseReport",
+    "category": "الاسهم",
+    "pubDate": "2026-08-11T18:58:52.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/MarketPulseReport/comments/1vl0crc/why_cant_the_world_escape_the_us_dollar/",
+    "title": "Why can’t the world escape the US dollar?",
+    "arabicTitle": "لماذا لا يستطيع العالم الهروب من الدولار الأمريكي؟",
+    "description": "Why can’t the world escape the US dollar?\n Despite de-dollarization efforts, BRICS, and China’s growing influence, the dollar still dominates global trade and finance.\n What do you think is the biggest obstacle to replacing the dollar?\n Curious to hear different perspectives.\n https://youtu.be/DE5XamAbG9o\n    submitted by    /u/Emergency-Bag-6760  \n [link]   [comments]",
+    "arabicDescription": "لماذا لا يستطيع العالم الهروب من الدولار الأمريكي؟ وعلى الرغم من جهود التخلص من الدولرة، ومجموعة البريكس، ونفوذ الصين المتزايد، لا يزال الدولار يهيمن على التجارة والتمويل العالميين. ما هو برأيك العائق الأكبر أمام استبدال الدولار؟ فضولي لسماع",
+    "link": "https://www.reddit.com/r/MarketPulseReport/comments/1vl0crc/why_cant_the_world_escape_the_us_dollar/",
+    "sourceName": "MarketPulseReport",
+    "category": "الاسهم",
+    "pubDate": "2026-08-10T23:05:28.000Z",
     "media": {
       "image": null
     }
