@@ -277,18 +277,12 @@ async function processTranslationQueue() {
   const el = document.getElementById(elementId);
   try {
     const queryText = text.substring(0, 300);
-    // نمرّر الطلب عبر بروكسي داخلي (/api/translate) بدل استدعاء Google مباشرة من المتصفح،
-    // لأن قوقل يحظر عادةً طلبات CORS المباشرة من صفحات الويب فيفشل النداء بصمت
-    const url = `/api/translate?q=${encodeURIComponent(queryText)}`;
-    const res = await fetch(url);
-    if (res.ok) {
-      const data = await res.json();
-      if (data && data.translated) {
-        translationCache.set(text, data.translated);
-        if (el) el.innerText = data.translated;
-      }
+    const translated = await translateClientSide(queryText);
+    if (translated) {
+      translationCache.set(text, translated);
+      if (el) el.innerText = translated;
     } else {
-      console.warn('فشلت الترجمة عبر /api/translate:', res.status);
+      console.warn('تعذّرت ترجمة النص من كل المزوّدين:', queryText.substring(0, 40));
     }
   } catch (error) {
     console.warn('خطأ أثناء الترجمة:', error);
@@ -299,6 +293,57 @@ async function processTranslationQueue() {
       processTranslationQueue();
     }, 200);
   }
+}
+
+// الموقع مستضاف على GitHub Pages (ثابت 100%، بدون خادم/Serverless Functions)،
+// لذلك نستدعي الترجمة مباشرة من المتصفح عبر مزوّدين يدعمان CORS فعلياً.
+const LINGVA_MIRRORS = [
+  'https://lingva.ml',
+  'https://lingva.garudalinux.org',
+  'https://translate.plausibility.cloud'
+];
+
+// كشف تلقائي مبسّط للغة المصدر (يابانية/صينية/إنجليزية) — بعض المصادر مثل
+// CRYPTO TIMES يابانية وBlockTempo صينية، وMyMemory تحتاج رمز اللغة الصحيح
+function detectSourceLang(text) {
+  if (/[\u3040-\u30ff]/.test(text)) return 'ja'; // هيراغانا/كاتاكانا = يابانية
+  if (/[\u4e00-\u9fff]/.test(text)) return 'zh-CN'; // رموز صينية (بدون هيراغانا)
+  return 'en';
+}
+
+async function translateClientSide(text) {
+  const sourceLang = detectSourceLang(text);
+
+  // المحاولة 1: MyMemory — مصمّمة أصلاً لطلبات المتصفح المباشرة (CORS مفعّل)
+  try {
+    const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${sourceLang}|ar`;
+    const res = await fetch(url);
+    if (res.ok) {
+      const data = await res.json();
+      const translated = data?.responseData?.translatedText;
+      if (translated && !translated.toUpperCase().includes('MYMEMORY WARNING')) {
+        return translated;
+      }
+    }
+  } catch (e) {
+    console.warn('فشل MyMemory:', e.message);
+  }
+
+  // المحاولة 2: Lingva (عدة مرايا احتياطية)
+  for (const base of LINGVA_MIRRORS) {
+    try {
+      const url = `${base}/api/v1/${sourceLang}/ar/${encodeURIComponent(text)}`;
+      const res = await fetch(url);
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.translation) return data.translation;
+      }
+    } catch (e) {
+      console.warn(`فشل Lingva (${base}):`, e.message);
+    }
+  }
+
+  return null;
 }
 
 async function fetchPrices() {
