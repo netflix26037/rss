@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>REDDIT بالعربي</title>
+
+<!-- إعدادات وضع "التطبيق" عند الإضافة للشاشة الرئيسية بالآيفون -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Reddit بالعربي">
+<meta name="theme-color" content="#030303">
+<meta name="format-detection" content="telephone=no">
+
+<!-- أيقونة الشاشة الرئيسية (Snoo برتقالي) — SVG محوّل مباشرة، لا حاجة لملف خارجي -->
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%23030303'/%3E%3Ccircle cx='90' cy='95' r='55' fill='%23FF4500'/%3E%3Cellipse cx='55' cy='55' rx='9' ry='16' fill='%23FF4500' transform='rotate(-25 55 55)'/%3E%3Cellipse cx='125' cy='55' rx='9' ry='16' fill='%23FF4500' transform='rotate(25 125 55)'/%3E%3Ccircle cx='68' cy='90' r='9' fill='white'/%3E%3Ccircle cx='112' cy='90' r='9' fill='white'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23FF4500'/%3E%3C/svg%3E">
+
+<!-- ربط بملف الـmanifest لتفعيل خصائص التطبيق الكاملة (اختياري لكن موصى به) -->
+<link rel="manifest" href="manifest.json">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          reddit: {
+            orange: '#FF4500',
+            orangeDark: '#D93A00',
+            bg: '#030303',
+            card: '#1A1A1B',
+            border: '#343536',
+            blue: '#0079D3',
+            upvote: '#FF8717',
+            down: '#7193FF',
+          }
+        },
+        fontFamily: {
+          plex: ["'IBM Plex Sans Arabic'", "'IBM Plex Sans'", 'sans-serif'],
+          mono: ["'IBM Plex Mono'", 'monospace'],
+        }
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+* { box-sizing: border-box; }
+
+html, body {
+  overscroll-behavior-y: contain; /* يمنع "الارتداد" الأبيض عند السحب لأعلى/أسفل مثل تطبيق أصلي */
+  height: 100%;
+}
+
+body {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none; /* يمنع قائمة الضغط المطوّل على الروابط/الصور */
+  touch-action: manipulation; /* يمنع تكبير الزوم بالنقر المزدوج */
+  background: #030303;
+}
+
+/* مساحة إضافية أعلى الهيدر تحسب شريط الحالة (الساعة/البطارية) عند فتح التطبيق من الشاشة الرئيسية بدون شريط سفاري */
+.pt-safe { padding-top: env(safe-area-inset-top); }
+
+.mono { font-family: 'IBM Plex Mono', monospace; }
+
+/* شعار Reddit (Snoo) — دائرة برتقالية مع أذنَي الروبوت المميزتين */
+.snoo-badge {
+  position: relative;
+  width: 34px; height: 34px;
+  background: #FF4500;
+  border-radius: 9999px;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 0 0 2px #030303, 0 2px 6px rgba(255,69,0,0.45);
+}
+.snoo-badge::before, .snoo-badge::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  width: 6px; height: 10px;
+  background: #FF4500;
+  border-radius: 3px;
+}
+.snoo-badge::before { left: 3px; transform: rotate(-25deg); }
+.snoo-badge::after { right: 3px; transform: rotate(25deg); }
+
+.ticker-scroll::-webkit-scrollbar, .chips-scroll::-webkit-scrollbar { display: none; }
+.ticker-scroll, .chips-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+.pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+
+/* مساحة كافية أسفل المحتوى حتى لا يختفي زر "تحميل المزيد" أو آخر مقال خلف
+   الشريط السفلي الثابت، مع احتساب مساحة الأمان لهواتف الآيفون ذات الحافة */
+.pb-nav-safe { padding-bottom: calc(6.5rem + env(safe-area-inset-bottom)); }
+
+/* شاشة البدء */
+#splash-screen {
+  opacity: 1;
+  transition: opacity .6s ease;
+}
+#splash-screen.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+.splash-stage {
+  perspective: 700px;
+}
+#splash-snoo {
+  animation: snooDance 1.5s ease-in-out infinite;
+  transform-origin: center bottom;
+  transform-style: preserve-3d;
+}
+@keyframes snooDance {
+  0%   { transform: rotateY(0deg)   rotateZ(0deg)   translateY(0)   scale(1); }
+  15%  { transform: rotateY(-28deg) rotateZ(-9deg)  translateY(-8px) scale(1.06); }
+  30%  { transform: rotateY(18deg)  rotateZ(7deg)   translateY(0)   scale(0.97); }
+  45%  { transform: rotateY(-18deg) rotateZ(-7deg)  translateY(-10px) scale(1.05); }
+  60%  { transform: rotateY(24deg)  rotateZ(9deg)   translateY(0)   scale(1); }
+  75%  { transform: rotateY(-12deg) rotateZ(-5deg)  translateY(-5px) scale(1.02); }
+  100% { transform: rotateY(0deg)   rotateZ(0deg)   translateY(0)   scale(1); }
+}
+/* غمزة دورية على العين اليمنى بعد ما تكون العينان مفتوحتين */
+#splash-eye-right {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: splashWink 3.2s ease-in-out infinite;
+}
+@keyframes splashWink {
+  0%, 15%, 100% { transform: scaleY(1); }
+  19%, 23% { transform: scaleY(0.08); }
+}
+#splash-eye-right { animation-duration: 1.8s; }
+@keyframes splashFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.pull-indicator {
+  position: fixed;
+  top: calc(72px + env(safe-area-inset-top));
+  left: 50%;
+  width: 38px;
+  height: 38px;
+  transform: translate(-50%, -30px) rotate(0deg);
+  opacity: 0;
+  background: #1A1A1B;
+  border: 1px solid #343536;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FF4500;
+  font-size: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+  z-index: 60;
+  pointer-events: none;
+  transition: opacity .15s ease, background .2s ease, border-color .2s ease;
+}
+.pull-indicator.ready {
+  background: #FF4500;
+  color: #fff;
+  border-color: #FF4500;
+}
+.pull-indicator.spinning i {
+  animation: pullSpin 0.7s linear infinite;
+}
+@keyframes pullSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.chip {
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+.chip.active {
+  background: #FF4500;
+  color: #fff;
+  font-weight: 700;
+  border-color: #FF4500;
+}
+
+@keyframes pulseSoft { 0%,100% { opacity: 1; } 50% { opacity: .5; } }
+.animate-pulse-soft { animation: pulseSoft 1.5s ease-in-out infinite; }
+
+.upvoted { color: #FF4500 !important; }
+</style>
+</head>
+<body class="text-gray-100 min-h-screen flex flex-col select-none pb-nav-safe">
+
+<!-- شاشة البدء (Splash Screen) -->
+<div id="splash-screen" class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-reddit-bg">
+  <div class="splash-stage">
+    <svg id="splash-snoo" viewBox="0 0 200 200" class="w-28 h-28 drop-shadow-[0_0_25px_rgba(255,69,0,0.45)]">
+      <!-- الأذنان -->
+      <ellipse cx="55" cy="40" rx="12" ry="20" fill="#FF4500" transform="rotate(-28 55 40)"/>
+      <ellipse cx="145" cy="40" rx="12" ry="20" fill="#FF4500" transform="rotate(28 145 40)"/>
+      <!-- الرأس -->
+      <circle cx="100" cy="105" r="80" fill="#FF4500"/>
+      <!-- العين اليسرى (مفتوحة دائماً) -->
+      <circle cx="72" cy="95" r="15" fill="#fff"/>
+      <circle cx="72" cy="97" r="7" fill="#1A1A1B"/>
+      <!-- العين اليمنى (مفتوحة، وتغمز بشكل دوري) -->
+      <g id="splash-eye-right">
+        <circle cx="128" cy="95" r="15" fill="#fff"/>
+        <circle cx="128" cy="97" r="7" fill="#1A1A1B"/>
+      </g>
+      <!-- الابتسامة -->
+      <path d="M68 135 Q100 165 132 135" stroke="#1A1A1B" stroke-width="8" fill="none" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <h1 class="mt-5 text-lg font-bold text-white">REDDIT <span class="text-reddit-orange">بالعربي</span></h1>
+  <p class="mt-2 text-[11px] text-gray-500 mono tracking-wide" style="animation: splashFadeIn 1s ease .4s both;">
+    صمم بواسطة <span class="text-reddit-orange font-bold">MOHAMMED</span>
+  </p>
+</div>
+
+<!-- مؤشر السحب للتحديث -->
+<div id="pull-indicator" class="pull-indicator">
+  <i class="fa-brands fa-reddit-alien"></i>
+</div>
+
+<!-- شريط الأسعار المباشر -->
+<div class="pt-safe bg-reddit-card text-white text-[10px] py-1.5 px-3 border-b border-reddit-border flex items-center justify-between sticky top-0 z-50 mono">
+  <div class="flex items-center gap-1.5 shrink-0 pl-2 border-l border-reddit-border">
+    <span class="relative flex h-2 w-2">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-reddit-orange opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-2 w-2 bg-reddit-orange"></span>
+    </span>
+    <span class="font-bold text-gray-400">مباشر</span>
+  </div>
+  <div class="ticker-scroll flex items-center gap-3 overflow-x-auto whitespace-nowrap scroll-smooth flex-grow py-0.5 px-2">
+    <div id="box-BRENT" class="flex items-center gap-1 px-2 py-0.5 rounded bg-black/40 border border-reddit-border">
+      <span class="font-bold text-amber-400"><i class="fa-solid fa-droplet text-[9px]"></i> BRENT</span>
+      <span id="price-BRENT" class="text-gray-200 font-bold">--.--</span>
+    </div>
+    <div id="box-BTC" class="flex items-center gap-1 px-2 py-0.5 rounded bg-black/40 border border-reddit-border">
+      <span class="font-bold text-reddit-orange">BTC</span>
+      <span id="price-BTC" class="text-gray-200 font-bold">--.--</span>
+    </div>
+  </div>
+</div>
+
+<!-- الهيدر العلوي -->
+<header class="bg-reddit-bg/95 border-b border-reddit-border px-4 py-2.5 sticky top-[29px] z-40 backdrop-blur-md">
+  <div class="flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <button onclick="toggleSidebar()" class="text-gray-300 text-lg p-1.5 hover:bg-white/5 rounded-lg active:scale-95 transition">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="flex items-center gap-2 cursor-pointer active:opacity-80 transition">
+        <div class="snoo-badge text-white">
+          <i class="fa-brands fa-reddit-alien text-base"></i>
+        </div>
+        <div>
+          <h1 class="text-sm font-bold text-white leading-none">REDDIT <span class="text-reddit-orange">بالعربي</span></h1>
+          <span id="digital-clock" class="text-[10px] mono text-gray-500">00:00:00</span>
+        </div>
+      </div>
+    </div>
+    <span class="text-[11px] font-bold text-reddit-orange bg-reddit-orange/10 px-2.5 py-1 rounded-full border border-reddit-orange/30">
+      نسخة الايفون
+    </span>
+  </div>
+
+  <!-- تصنيفات -->
+  <div id="category-chips" class="chips-scroll flex items-center gap-2 overflow-x-auto mt-3 pb-0.5">
+    <span class="text-[11px] text-gray-500 px-2 py-1.5">جاري تحميل التصنيفات...</span>
+  </div>
+</header>
+
+<!-- القائمة الجانبية -->
+<div id="sidebar-drawer" class="fixed inset-0 bg-black/80 z-50 hidden justify-center items-end sm:items-center transition-opacity">
+  <div class="bg-reddit-card rounded-t-2xl sm:rounded-2xl w-full max-w-lg max-h-[80vh] flex flex-col p-4 overflow-hidden border border-reddit-border shadow-2xl">
+    <div class="flex justify-between items-center mb-3 pb-2 border-b border-reddit-border">
+      <h2 class="text-sm font-bold text-gray-200 flex items-center gap-2">
+        <i class="fa-solid fa-bars text-reddit-orange"></i> المصادر والأقسام
+      </h2>
+      <button onclick="toggleSidebar()" class="text-gray-400 p-1 text-lg"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="overflow-y-auto space-y-3 pr-1" id="drawer-content">
+      <div id="sources-container" class="space-y-2">
+        <p class="text-xs text-gray-400 text-center py-4">جاري تحميل المصادر...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- المحتوى الرئيسي -->
+<main class="px-3 py-4 flex-grow w-full max-w-md mx-auto">
+  <div class="flex justify-between items-center mb-4 pb-2 border-b border-reddit-border">
+    <h2 id="current-feed-title" class="text-xs font-bold text-gray-200 truncate flex items-center gap-1.5">
+      <i class="fa-solid fa-fire text-reddit-orange"></i> التحديثات الأخيرة
+    </h2>
+    <span id="results-count" class="text-[10px] mono text-gray-500"></span>
+  </div>
+  <div id="articles-container" class="flex flex-col gap-2.5">
+    <div class="text-center py-16 text-gray-500 bg-reddit-card rounded-xl border border-reddit-border">
+      <i class="fa-brands fa-reddit text-4xl mb-2 text-reddit-orange animate-pulse"></i>
+      <p class="text-xs font-medium">جاري جلب المنشورات...</p>
+    </div>
+  </div>
+  <!-- عنصر مراقبة نهاية القائمة: يجلب المزيد تلقائياً عند الاقتراب منه، بدل زر -->
+  <div id="scroll-sentinel" class="h-6 flex items-center justify-center mt-3">
+    <span id="loading-more-indicator" class="hidden text-[11px] text-gray-500 mono">
+      <i class="fa-solid fa-circle-notch fa-spin"></i> جاري تحميل المزيد...
+    </span>
+    <span id="end-of-list-indicator" class="hidden text-[11px] text-gray-600">وصلت لنهاية القائمة</span>
+  </div>
+</main>
+
+<!-- شريط التنقل السفلي -->
+<nav class="fixed bottom-0 inset-x-0 bg-reddit-bg/95 border-t border-reddit-border backdrop-blur-lg z-50 pb-safe">
+  <div class="flex items-center justify-around py-2 max-w-md mx-auto text-xs font-bold">
+    <button onclick="switchTab('unread')" id="tab-unread" class="flex flex-col items-center gap-1 text-reddit-orange transition active:scale-95">
+      <div class="relative">
+        <i class="fa-solid fa-envelope-open-text text-lg"></i>
+        <span id="count-unread" class="absolute -top-1.5 -right-3 bg-reddit-orange text-white text-[9px] px-1.5 py-0.2 rounded-full min-w-[16px] text-center">0</span>
+      </div>
+      <span class="text-[10px]">غير مقروء</span>
+    </button>
+    <button onclick="switchTab('favorites')" id="tab-favorites" class="flex flex-col items-center gap-1 text-gray-400 transition active:scale-95">
+      <div class="relative">
+        <i class="fa-solid fa-star text-lg text-amber-400"></i>
+        <span id="count-favorites" class="absolute -top-1.5 -right-3 bg-amber-500 text-black text-[9px] px-1.5 py-0.2 rounded-full min-w-[16px] text-center">0</span>
+      </div>
+      <span class="text-[10px]">المفضلة</span>
+    </button>
+    <button onclick="switchTab('read')" id="tab-read" class="flex flex-col items-center gap-1 text-gray-400 transition active:scale-95">
+      <div class="relative">
+        <i class="fa-solid fa-check-double text-lg text-reddit-blue"></i>
+        <span id="count-read" class="absolute -top-1.5 -right-3 bg-reddit-blue text-white text-[9px] px-1.5 py-0.2 rounded-full min-w-[16px] text-center">0</span>
+      </div>
+      <span class="text-[10px]">تمت القراءة</span>
+    </button>
+  </div>
+</nav>
+
+<script>
+let sources = [];
+let allFetchedArticles = [];
+let currentTab = 'unread';
+let selectedCategory = 'الكل';
+let readIds = new Set(JSON.parse(localStorage.getItem('app_read_ids') || '[]'));
+let favoriteArticles = JSON.parse(localStorage.getItem('app_favorite_articles') || '[]');
+let observer = null;
+
+// كاش الترجمة الدائم: يُخزَّن بذاكرة المتصفح فلا تُعاد ترجمة نفس النص عبر
+// الجلسات المختلفة، مما يوفّر الحصة اليومية المجانية لخدمة الترجمة بشكل كبير
+const TRANSLATION_CACHE_KEY = 'app_translation_cache_v1';
+const TRANSLATION_CACHE_LIMIT = 800; // حد أقصى للعناصر المخزّنة حتى لا تتضخم الذاكرة
+let translationCache;
+try {
+  const savedCache = JSON.parse(localStorage.getItem(TRANSLATION_CACHE_KEY) || '{}');
+  translationCache = new Map(Object.entries(savedCache));
+} catch (e) {
+  translationCache = new Map();
+}
+
+function persistTranslationCache() {
+  try {
+    // نحتفظ فقط بآخر TRANSLATION_CACHE_LIMIT عنصر عند تجاوز الحد
+    if (translationCache.size > TRANSLATION_CACHE_LIMIT) {
+      const entries = Array.from(translationCache.entries()).slice(-TRANSLATION_CACHE_LIMIT);
+      translationCache = new Map(entries);
+    }
+    localStorage.setItem(TRANSLATION_CACHE_KEY, JSON.stringify(Object.fromEntries(translationCache)));
+  } catch (e) {
+    // تجاهل أخطاء امتلاء مساحة التخزين المحلية
+  }
+}
+
+const translationQueue = [];
+let isTranslating = false;
+
+// عرض مقسّم على دفعات: يقلل عدد العناصر التي تحتاج ترجمة فورية عند كل تبديل
+const PAGE_SIZE = 8;
+let renderedCount = 0;
+let activeList = [];
+
+function toggleSidebar() {
+  const drawer = document.getElementById('sidebar-drawer');
+  drawer.classList.toggle('hidden');
+  drawer.classList.toggle('flex');
+}
+
+function cleanText(raw) {
+  if (!raw) return '';
+  let txt = document.createElement("textarea");
+  txt.innerHTML = raw;
+  let decoded = txt.value;
+  return decoded.replace(/<[^>]*>?/gm, '').replace(/\s+/g, ' ').trim();
+}
+
+function queueTranslation(text, elementId) {
+  if (!text || text.trim() === '') return;
+  if (translationCache.has(text)) {
+    const el = document.getElementById(elementId);
+    if (el) {
+      el.innerText = translationCache.get(text);
+      el.classList.remove('opacity-70', 'animate-pulse-soft');
+    }
+    return;
+  }
+  translationQueue.push({ text, elementId });
+  processTranslationQueue();
+}
+
+async function processTranslationQueue() {
+  if (isTranslating || translationQueue.length === 0) return;
+  isTranslating = true;
+  const { text, elementId } = translationQueue.shift();
+  const el = document.getElementById(elementId);
+  try {
+    const queryText = text.substring(0, 300);
+    const translated = await translateClientSide(queryText);
+    if (translated) {
+      translationCache.set(text, translated);
+      persistTranslationCache();
+      if (el) el.innerText = translated;
+    } else {
+      console.warn('تعذّرت ترجمة النص من كل المزوّدين:', queryText.substring(0, 40));
+    }
+  } catch (error) {
+    console.warn('خطأ أثناء الترجمة:', error);
+  } finally {
+    if (el) el.classList.remove('opacity-70', 'animate-pulse-soft');
+    setTimeout(() => {
+      isTranslating = false;
+      processTranslationQueue();
+    }, 200);
+  }
+}
+
+// الموقع مستضاف على GitHub Pages (ثابت 100%، بدون خادم/Serverless Functions)،
+// لذلك نستدعي الترجمة مباشرة من المتصفح عبر مزوّدين يدعمان CORS فعلياً.
+const LINGVA_MIRRORS = [
+  'https://lingva.ml',
+  'https://lingva.garudalinux.org',
+  'https://translate.plausibility.cloud'
+];
+
+// أضف بريدك هنا لرفع حد الترجمة المجاني من 5,000 إلى 50,000 حرف باليوم (موثّق رسمياً من MyMemory)
+// يفضّل استخدام بريد ثانوي وليس بريدك الأساسي لأنه سيظهر في كود الصفحة العلني
+const MYMEMORY_EMAIL = 'netflix26037@gmail.com';
+
+// كشف تلقائي مبسّط للغة المصدر (يابانية/صينية/إنجليزية) — بعض المصادر مثل
+// CRYPTO TIMES يابانية وBlockTempo صينية، وMyMemory تحتاج رمز اللغة الصحيح
+function detectSourceLang(text) {
+  if (/[\u3040-\u30ff]/.test(text)) return 'ja'; // هيراغانا/كاتاكانا = يابانية
+  if (/[\u4e00-\u9fff]/.test(text)) return 'zh-CN'; // رموز صينية (بدون هيراغانا)
+  return 'en';
+}
+
+async function translateClientSide(text) {
+  const sourceLang = detectSourceLang(text);
+
+  // المحاولة 1: MyMemory — مصمّمة أصلاً لطلبات المتصفح المباشرة (CORS مفعّل)
+  try {
+    const emailParam = MYMEMORY_EMAIL ? `&de=${encodeURIComponent(MYMEMORY_EMAIL)}` : '';
+    const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${sourceLang}|ar${emailParam}`;
+    const res = await fetch(url);
+    if (res.ok) {
+      const data = await res.json();
+      const translated = data?.responseData?.translatedText;
+      if (translated && !translated.toUpperCase().includes('MYMEMORY WARNING') && data.responseStatus === 200) {
+        return translated;
+      }
+    }
+  } catch (e) {
+    console.warn('فشل MyMemory:', e.message);
+  }
+
+  // المحاولة 2: Lingva (عدة مرايا احتياطية)
+  for (const base of LINGVA_MIRRORS) {
+    try {
+      const url = `${base}/api/v1/${sourceLang}/ar/${encodeURIComponent(text)}`;
+      const res = await fetch(url);
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.translation) return data.translation;
+      }
+    } catch (e) {
+      console.warn(`فشل Lingva (${base}):`, e.message);
+    }
+  }
+
+  return null;
+}
+
+async function fetchPrices() {
+  try {
+    const btcRes = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+    const btcData = await btcRes.json();
+    if (btcData.bitcoin) {
+      document.getElementById('price-BTC').innerText = '$' + btcData.bitcoin.usd.toLocaleString();
+    }
+  } catch (e) {}
+  try {
+    const brentRes = await fetch('https://query1.finance.yahoo.com/v8/finance/chart/BZ=F');
+    const brentData = await brentRes.json();
+    const price = brentData.chart.result[0].meta.regularMarketPrice;
+    if (price) {
+      document.getElementById('price-BRENT').innerText = '$' + price.toFixed(2);
+    }
+  } catch (e) {}
+}
+
+async function fetchDirectData() {
+  const paths = ['feed.json', './feed.json', '/feed.json'];
+  for (let path of paths) {
+    try {
+      const response = await fetch(`${path}?nocache=${Date.now()}`);
+      if (response.ok) {
+        const data = await response.json();
+        let rawArticles = [];
+        if (Array.isArray(data)) rawArticles = data;
+        else if (data.articles && Array.isArray(data.articles)) rawArticles = data.articles;
+        else if (data.items && Array.isArray(data.items)) rawArticles = data.items;
+        if (rawArticles.length > 0) {
+          return rawArticles.map((art, idx) => ({
+            id: art.id || art.link || art.guid || `art-${idx}-${Date.now()}`,
+            arabicTitle: art.arabicTitle || '',
+            title: art.title || art.originalTitle || '',
+            arabicDescription: art.arabicDescription || '',
+            description: art.description || art.originalDescription || '',
+            link: art.link || '#',
+            sourceName: art.sourceName || 'Reddit',
+            category: art.category || 'عام',
+            pubDate: art.pubDate || new Date().toISOString(),
+            media: art.media || { image: art.image || null }
+          }));
+        }
+      }
+    } catch (e) {}
+  }
+  return [];
+}
+
+async function fetchSourcesJSON() {
+  try {
+    const response = await fetch(`./sources.json?nocache=${Date.now()}`);
+    if (response.ok) return await response.json();
+  } catch(e) {}
+  return [];
+}
+
+function timeAgo(dateString) {
+  const date = new Date(dateString);
+  const now = new Date();
+  const seconds = Math.floor((now - date) / 1000);
+  if (isNaN(seconds)) return 'الآن';
+  let interval = Math.floor(seconds / 3600);
+  if (interval >= 1) return `منذ ${interval} س`;
+  interval = Math.floor(seconds / 60);
+  if (interval >= 1) return `منذ ${interval} د`;
+  return `الآن`;
+}
+
+// ===== التصنيفات: عرضها كشرائح أفقية بدل تحميل كل شيء دفعة واحدة =====
+function getAllCategories() {
+  const set = new Set();
+  sources.forEach(s => set.add(s.category || 'عام'));
+  allFetchedArticles.forEach(a => set.add(a.category || 'عام'));
+  return ['الكل', ...Array.from(set)];
+}
+
+// عدد المقالات غير المقروءة لكل تصنيف (يُستخدم كعداد بجانب اسم التصنيف)
+function getUnreadCountForCategory(cat) {
+  const unread = allFetchedArticles.filter(a => !readIds.has(a.id));
+  if (cat === 'الكل') return unread.length;
+  return unread.filter(a => (a.category || 'عام') === cat).length;
+}
+
+function renderCategoryChips() {
+  const container = document.getElementById('category-chips');
+  const cats = getAllCategories();
+  container.innerHTML = '';
+  cats.forEach(cat => {
+    const btn = document.createElement('button');
+    const isActive = cat === selectedCategory;
+    const count = getUnreadCountForCategory(cat);
+    btn.className = `chip ${isActive ? 'active' : 'bg-reddit-card text-gray-300 border border-reddit-border'} text-[11px] font-bold px-3 py-1.5 rounded-full shrink-0 inline-flex items-center gap-1.5`;
+    const countClass = isActive
+      ? 'bg-black/20 text-white'
+      : 'bg-reddit-orange/15 text-reddit-orange';
+    btn.innerHTML = `
+      <span>${cat}</span>
+      <span class="${countClass} text-[10px] font-bold px-1.5 rounded-full min-w-[16px] leading-[16px] text-center mono">${count}</span>
+    `;
+    btn.onclick = () => selectCategory(cat);
+    container.appendChild(btn);
+  });
+}
+
+function selectCategory(cat) {
+  selectedCategory = cat;
+  renderCategoryChips();
+  renderCurrentTab();
+}
+
+function renderSources() {
+  const container = document.getElementById('sources-container');
+  container.innerHTML = '';
+  if (!sources || sources.length === 0) {
+    container.innerHTML = `<div class="text-center py-4 text-xs text-gray-400">جميع المصادر متاحة في القائمة الرئيسية</div>`;
+    return;
+  }
+  const grouped = {};
+  sources.forEach((s, idx) => {
+    const cat = s.category || 'عام';
+    if (!grouped[cat]) grouped[cat] = [];
+    grouped[cat].push({ ...s, idx });
+  });
+  for (const [cat, items] of Object.entries(grouped)) {
+    const groupDiv = document.createElement('div');
+    groupDiv.className = 'space-y-1 bg-black/30 p-2.5 rounded-xl border border-reddit-border';
+    groupDiv.innerHTML = `
+      <div class="flex items-center justify-between pb-1 border-b border-reddit-border">
+        <button onclick="filterCategoryFromDrawer('${cat.replace(/'/g, "\\'")}')" class="text-xs font-bold text-reddit-orange flex items-center gap-1">
+          <i class="fa-solid fa-folder-open"></i> ${cat}
+        </button>
+        <span class="text-[10px] text-gray-500 mono">${items.length}</span>
+      </div>
+      <ul class="space-y-1 pt-1.5"></ul>
+    `;
+    const ul = groupDiv.querySelector('ul');
+    items.forEach(item => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <div class="flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-reddit-card text-xs">
+          <button onclick="filterBySource('${item.name.replace(/'/g, "\\'")}')" class="text-right flex-grow truncate">
+            ${item.name}
+          </button>
+        </div>
+      `;
+      ul.appendChild(li);
+    });
+    container.appendChild(groupDiv);
+  }
+}
+
+function filterCategoryFromDrawer(cat) {
+  toggleSidebar();
+  selectCategory(cat);
+}
+
+function filterBySource(sourceName) {
+  toggleSidebar();
+  document.getElementById('current-feed-title').innerHTML = `<i class="fa-solid fa-fire text-reddit-orange"></i> ${sourceName}`;
+  const filtered = allFetchedArticles.filter(a => a.sourceName === sourceName);
+  renderArticlesContainer(filtered, false);
+}
+
+function markAsReadHover(id) {
+  if (!readIds.has(id)) {
+    readIds.add(id);
+    localStorage.setItem('app_read_ids', JSON.stringify([...readIds]));
+    updateCounts();
+  }
+}
+
+function toggleFavoriteArticle(articleId, event) {
+  if(event) event.stopPropagation();
+  const targetArticle = allFetchedArticles.find(a => a.id === articleId) || favoriteArticles.find(a => a.id === articleId);
+  if (!targetArticle) return;
+  const index = favoriteArticles.findIndex(a => a.id === articleId);
+  if (index > -1) {
+    favoriteArticles.splice(index, 1);
+  } else {
+    favoriteArticles.push(targetArticle);
+  }
+  localStorage.setItem('app_favorite_articles', JSON.stringify(favoriteArticles));
+  updateCounts();
+  renderCurrentTab();
+}
+
+function updateCounts() {
+  const unreadList = allFetchedArticles.filter(a => !readIds.has(a.id));
+  const readList = allFetchedArticles.filter(a => readIds.has(a.id));
+  document.getElementById('count-unread').innerText = unreadList.length;
+  document.getElementById('count-favorites').innerText = favoriteArticles.length;
+  document.getElementById('count-read').innerText = readList.length;
+  renderCategoryChips();
+}
+
+function switchTab(tab) {
+  currentTab = tab;
+  ['unread', 'favorites', 'read'].forEach(t => {
+    const btn = document.getElementById(`tab-${t}`);
+    if (t === tab) {
+      btn.className = "flex flex-col items-center gap-1 text-reddit-orange transition active:scale-95";
+    } else {
+      btn.className = "flex flex-col items-center gap-1 text-gray-400 transition active:scale-95";
+    }
+  });
+  renderCurrentTab();
+}
+
+function renderCurrentTab() {
+  updateCounts();
+  let displayList = [];
+  if (currentTab === 'unread') {
+    displayList = allFetchedArticles.filter(a => !readIds.has(a.id));
+  } else if (currentTab === 'read') {
+    displayList = allFetchedArticles.filter(a => readIds.has(a.id));
+  } else if (currentTab === 'favorites') {
+    displayList = favoriteArticles;
+  }
+  if (selectedCategory && selectedCategory !== 'الكل') {
+    displayList = displayList.filter(a => (a.category || 'عام') === selectedCategory);
+  }
+
+  const titleLabel = selectedCategory === 'الكل' ? 'التحديثات الأخيرة' : selectedCategory;
+  document.getElementById('current-feed-title').innerHTML = `<i class="fa-solid fa-fire text-reddit-orange"></i> ${titleLabel}`;
+
+  renderArticlesContainer(displayList, false);
+}
+
+// عرض تدريجي (Pagination) — لا تُترجم إلا العناصر المعروضة فعليًا، وهذا يقلّل
+// الضغط على خدمة الترجمة وعلى حجم البيانات المطلوب جلبها في كل مرة
+function renderArticlesContainer(fullList, append) {
+  const container = document.getElementById('articles-container');
+  const loadingIndicator = document.getElementById('loading-more-indicator');
+  const endIndicator = document.getElementById('end-of-list-indicator');
+
+  if (!append) {
+    activeList = fullList || [];
+    renderedCount = 0;
+    container.innerHTML = '';
+    translationQueue.length = 0;
+    isTranslating = false;
+    if (observer) observer.disconnect();
+  }
+
+  document.getElementById('results-count').innerText = activeList.length ? `${activeList.length} منشور` : '';
+
+  if (!activeList || activeList.length === 0) {
+    container.innerHTML = `<div class="text-center py-16 text-gray-500 bg-reddit-card rounded-xl border border-reddit-border text-xs">لا توجد مواضيع في هذا القسم حالياً.</div>`;
+    loadingIndicator.classList.add('hidden');
+    endIndicator.classList.add('hidden');
+    return;
+  }
+
+  if (!observer) {
+    observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const artId = entry.target.getAttribute('data-id');
+          if (artId) {
+            markAsReadHover(artId);
+            observer.unobserve(entry.target);
+          }
+        }
+      });
+    }, { threshold: 0.5 });
+  }
+
+  const nextSlice = activeList.slice(renderedCount, renderedCount + PAGE_SIZE);
+
+  nextSlice.forEach((item, sliceIdx) => {
+    const globalIdx = renderedCount + sliceIdx;
+    const isFav = favoriteArticles.some(a => a.id === item.id);
+    const agoText = timeAgo(item.pubDate);
+    const hasArabicTitle = Boolean(item.arabicTitle && item.arabicTitle.trim());
+    const hasArabicDesc = Boolean(item.arabicDescription && item.arabicDescription.trim());
+    const initialTitle = cleanText(hasArabicTitle ? item.arabicTitle : item.title);
+    const initialDesc = cleanText(hasArabicDesc ? item.arabicDescription : item.description);
+    const titleLoadingClass = !hasArabicTitle ? 'opacity-70 animate-pulse-soft' : '';
+    const descLoadingClass = !hasArabicDesc ? 'opacity-70 animate-pulse-soft' : '';
+
+    // تناوب خلفية المقالات: أبيض / رمادي غامق قريب من الأسود، على طراز Reddit القديم
+    const isAlt = globalIdx % 2 === 1;
+    const cardBg = isAlt ? 'bg-gray-900' : 'bg-white';
+    const cardBorder = isAlt ? 'border-gray-700' : 'border-gray-200';
+    const titleColor = isAlt ? 'text-white' : 'text-gray-900';
+    const descColor = isAlt ? 'text-gray-300' : 'text-gray-600';
+    const metaColor = isAlt ? 'text-gray-400' : 'text-gray-500';
+
+    let mediaHTML = '';
+    if (item.media && item.media.image) {
+      const mediaBg = isAlt ? 'bg-black border-gray-700' : 'bg-gray-100 border-gray-200';
+      mediaHTML = `
+        <div class="my-2 overflow-hidden rounded-lg border ${mediaBg}">
+          <img src="${item.media.image}" alt="Media" class="w-full max-h-[250px] object-cover" loading="lazy" onerror="this.style.display='none'">
+        </div>`;
+    }
+
+    const titleId = `title-${globalIdx}`;
+    const descId = `desc-${globalIdx}`;
+
+    const card = document.createElement('article');
+    card.setAttribute('data-id', item.id);
+    card.className = `w-full ${cardBg} border ${cardBorder} p-4 rounded-xl flex flex-col justify-between relative hover:border-gray-300 transition shadow-sm`;
+    card.innerHTML = `
+      <div>
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex items-center gap-1.5">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-reddit-orange/10 text-reddit-orange border border-reddit-orange/25">
+              <i class="fa-brands fa-reddit-alien"></i> ${item.sourceName || 'Reddit'}
+            </span>
+            <span class="text-[9px] mono ${metaColor}">${item.category || 'عام'}</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-[10px] mono ${metaColor}">
+              <i class="fa-regular fa-clock"></i> ${agoText}
+            </span>
+            <button onclick="toggleFavoriteArticle('${item.id.replace(/'/g, "\\'")}', event)" class="text-lg p-1 active:scale-125 transition ${isFav ? 'upvoted' : (isAlt ? 'text-gray-500' : 'text-gray-400')}">
+              <i class="${isFav ? 'fa-solid' : 'fa-regular'} fa-star"></i>
+            </button>
+          </div>
+        </div>
+        <h3 id="${titleId}" class="font-bold text-sm leading-snug mb-1.5 ${titleColor} ${titleLoadingClass}">${initialTitle}</h3>
+        ${mediaHTML}
+        <p id="${descId}" class="${descColor} text-xs line-clamp-3 mb-3 leading-relaxed ${descLoadingClass}">${initialDesc}</p>
+      </div>
+      <div class="flex items-center justify-between pt-2 border-t ${cardBorder} mt-1">
+        <a href="${item.link}" target="_blank" class="bg-reddit-orange text-white px-3 py-1.5 rounded-full text-[11px] font-bold flex items-center gap-1.5 transition active:scale-95 hover:bg-reddit-orangeDark">
+          زيارة المصدر <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+        </a>
+      </div>
+    `;
+    container.appendChild(card);
+
+    if (currentTab === 'unread') {
+      observer.observe(card);
+    }
+
+    if (!hasArabicTitle && initialTitle) {
+      queueTranslation(initialTitle, titleId);
+    }
+    if (!hasArabicDesc && initialDesc) {
+      queueTranslation(initialDesc, descId);
+    }
+  });
+
+  renderedCount += nextSlice.length;
+  isLoadingMore = false;
+  loadingIndicator.classList.add('hidden');
+
+  if (renderedCount < activeList.length) {
+    endIndicator.classList.add('hidden');
+  } else {
+    endIndicator.classList.remove('hidden');
+  }
+}
+
+function loadMore() {
+  if (isLoadingMore || renderedCount >= activeList.length) return;
+  isLoadingMore = true;
+  document.getElementById('loading-more-indicator').classList.remove('hidden');
+  document.getElementById('end-of-list-indicator').classList.add('hidden');
+  // تأخير بسيط حتى يظهر مؤشر التحميل بشكل ملحوظ للمستخدم قبل إضافة الدفعة التالية
+  setTimeout(() => {
+    renderArticlesContainer(activeList, true);
+  }, 250);
+}
+
+// مراقبة الاقتراب من نهاية القائمة لتحميل المزيد تلقائياً أثناء التمرير (بدون زر)
+let isLoadingMore = false;
+function initInfiniteScroll() {
+  const sentinel = document.getElementById('scroll-sentinel');
+  const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !isLoadingMore && renderedCount < activeList.length) {
+        loadMore();
+      }
+    });
+  }, { rootMargin: '300px 0px 300px 0px' });
+  scrollObserver.observe(sentinel);
+}
+
+// ===== السحب للتحديث (Pull to Refresh) =====
+const PULL_THRESHOLD = 70;
+let pullStartY = 0;
+let pullDistance = 0;
+let isPulling = false;
+let isRefreshing = false;
+
+function initPullToRefresh() {
+  const indicator = document.getElementById('pull-indicator');
+
+  document.addEventListener('touchstart', (e) => {
+    if (window.scrollY <= 0 && !isRefreshing) {
+      pullStartY = e.touches[0].clientY;
+      isPulling = true;
+    }
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!isPulling || isRefreshing) return;
+    const currentY = e.touches[0].clientY;
+    pullDistance = currentY - pullStartY;
+
+    if (pullDistance > 0 && window.scrollY <= 0) {
+      // نمنع الارتداد الافتراضي للمتصفح أثناء السحب لأسفل من أعلى الصفحة
+      if (e.cancelable) e.preventDefault();
+      const progress = Math.min(pullDistance / PULL_THRESHOLD, 1);
+      indicator.style.opacity = progress;
+      indicator.style.transform = `translate(-50%, ${-30 + progress * 60}px) rotate(${pullDistance * 2}deg)`;
+      indicator.classList.toggle('ready', pullDistance > PULL_THRESHOLD);
+    } else {
+      isPulling = false;
+    }
+  }, { passive: false });
+
+  document.addEventListener('touchend', async () => {
+    if (!isPulling) return;
+    isPulling = false;
+
+    if (pullDistance > PULL_THRESHOLD && !isRefreshing) {
+      isRefreshing = true;
+      indicator.classList.add('spinning', 'ready');
+      indicator.style.opacity = 1;
+      indicator.style.transform = 'translate(-50%, 30px)';
+      await refreshFeed();
+      isRefreshing = false;
+      indicator.classList.remove('spinning', 'ready');
+    }
+
+    indicator.style.opacity = 0;
+    indicator.style.transform = 'translate(-50%, -30px)';
+    pullDistance = 0;
+  });
+}
+
+async function refreshFeed() {
+  fetchPrices();
+  sources = await fetchSourcesJSON();
+  allFetchedArticles = await fetchDirectData();
+  renderSources();
+  renderCategoryChips();
+  renderCurrentTab();
+}
+
+// نقيس الارتفاع الفعلي للشريط السفلي الثابت ونضبط حشو الصفحة بدقة بدل تخمين
+// قيمة CSS ثابتة — هذا يضمن عدم اختفاء زر "تحميل المزيد" خلف الشريط مهما
+// اختلف حجم الخط أو الجهاز أو مساحة الأمان (Safe Area)
+function adjustBottomSpacing() {
+  const nav = document.querySelector('nav');
+  if (nav) {
+    const navHeight = nav.getBoundingClientRect().height;
+    document.body.style.paddingBottom = (navHeight + 28) + 'px';
+  }
+}
+
+function startClock() {
+  setInterval(() => {
+    const el = document.getElementById('digital-clock');
+    if (el) el.innerText = new Date().toTimeString().split(' ')[0];
+  }, 1000);
+}
+
+window.onload = async function() {
+  startClock();
+  initPullToRefresh();
+  initInfiniteScroll();
+  adjustBottomSpacing();
+  window.addEventListener('resize', adjustBottomSpacing);
+  window.addEventListener('orientationchange', adjustBottomSpacing);
+  fetchPrices();
+  setInterval(fetchPrices, 60000);
+  sources = await fetchSourcesJSON();
+  renderSources();
+  renderCategoryChips();
+  allFetchedArticles = await fetchDirectData();
+  renderCategoryChips();
+  renderCurrentTab();
+  hideSplashScreen();
+};
+
+// إخفاء شاشة البدء بعد اكتمال التحميل، مع حد أدنى لمدة العرض حتى لا تختفي
+// بسرعة جداً على الاتصالات السريعة قبل ما يشوفها المستخدم
+const SPLASH_MIN_DURATION = 2200;
+const splashStartTime = Date.now();
+function hideSplashScreen() {
+  const splash = document.getElementById('splash-screen');
+  if (!splash) return;
+  const elapsed = Date.now() - splashStartTime;
+  const remaining = Math.max(SPLASH_MIN_DURATION - elapsed, 0);
+  setTimeout(() => {
+    splash.classList.add('hide');
+    setTimeout(() => splash.remove(), 650);
+  }, remaining);
+}
+</script>
+</body>
+</html>
