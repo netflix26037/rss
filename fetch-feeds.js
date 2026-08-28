@@ -1,200 +1,697 @@
+```js
 const Parser = require('rss-parser');
 const axios = require('axios');
 const fs = require('fs');
 
 const parser = new Parser();
+
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 WebDashboard/2.0';
+const USER_AGENT =
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 ' +
+  '(KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 WebDashboard/2.0';
 
-// ==== خدمات الترجمة (بالترتيب: نجرب كل واحدة قبل الانتقال للتالية) ====
+// ============================================================
+// إعدادات عمر الأخبار
+// ============================================================
 
-// ==== ملاحظة مهمة ====
-// عناوين IP الخاصة بخوادم GitHub Actions مشتركة بين آلاف المستودعات، لذلك
-// خدمات الترجمة المجانية (MyMemory / Lingva / حتى Google Translate غير الرسمي)
-// تحظرها أو تُرجع 429 بشكل شبه دائم — هذا ليس خللاً بالكود بل بطبيعة البيئة.
-// لهذا تم تعطيل محاولات الترجمة هنا: الحقول تُترك فارغة، والصفحة (index.html)
-// تتكفل بالترجمة من طرف متصفح المستخدم نفسه (IP حقيقي غير محظور)، وهذا فعلياً
-// أوثق وأسرع من إضاعة وقت التشغيل بمحاولات فاشلة مضمونة.
-// إذا رغبت لاحقاً بإعادة تفعيل الترجمة هنا، استخدم مزوّداً يتطلب مفتاح API
-// (مثل DeepL أو Microsoft Translator) بدل الخدمات المجانية العامة.
+// الحد الأقصى لعمر الخبر: 48 ساعة
+const MAX_ARTICLE_AGE_MS = 48 * 60 * 60 * 1000;
 
+// لا نسمح بتاريخ مستقبلي أكثر من هذا الحد.
+// هذا يمنع بعض المصادر التي يكون فيها التاريخ خاطئاً.
+const MAX_FUTURE_MS = 5 * 60 * 1000;
+
+// ============================================================
+// الترجمة
+// ============================================================
+
+// الترجمة تتم حالياً من الواجهة الأمامية.
+// نترك الدالة كما هي للحفاظ على نظام المشروع الحالي.
 async function translateText(text) {
-    return '';
+  return '';
 }
 
-// ==== جلب الخلاصات ====
+// ============================================================
+// جلب RSS مع بديل عند 429
+// ============================================================
 
 async function fetchXmlWithFallback(rawUrl) {
-    try {
-        const res = await axios.get(rawUrl, {
-            headers: { 'User-Agent': USER_AGENT },
-            timeout: 8000
-        });
-        return res.data;
-    } catch (err) {
-        if (err.response && err.response.status === 429) {
-            const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(rawUrl)}`;
-            const proxyRes = await axios.get(proxyUrl, { timeout: 10000 });
-            return proxyRes.data;
-        }
-        throw err;
-    }
-}
-
-function groupRedditSources(sources) {
-    const redditSubreddits = [];
-    const nonRedditSources = [];
-
-    sources.forEach(src => {
-        const match = src.url.match(/reddit\.com\/r\/([^/]+)\/\.rss/i);
-        if (match && match[1]) {
-            redditSubreddits.push(match[1]);
-        } else {
-            nonRedditSources.push(src);
-        }
+  try {
+    const res = await axios.get(rawUrl, {
+      headers: {
+        'User-Agent': USER_AGENT
+      },
+      timeout: 8000
     });
 
-    const groupedSources = [...nonRedditSources];
-    const CHUNK_SIZE = 12;
-    for (let i = 0; i < redditSubreddits.length; i += CHUNK_SIZE) {
-        const chunk = redditSubreddits.slice(i, i + CHUNK_SIZE);
-        const combinedSubs = chunk.join('+');
-        groupedSources.push({
-            name: `مجموعة ريديت (${i / CHUNK_SIZE + 1})`,
-            url: `https://www.reddit.com/r/${combinedSubs}/.rss`,
-            category: 'مُدمج'
-        });
+    return res.data;
+
+  } catch (err) {
+
+    if (err.response && err.response.status === 429) {
+
+      console.log(`تم حظر المصدر مؤقتاً، تجربة البروكسي: ${rawUrl}`);
+
+      const proxyUrl =
+        `https://api.allorigins.win/raw?url=${encodeURIComponent(rawUrl)}`;
+
+      const proxyRes = await axios.get(proxyUrl, {
+        timeout: 10000
+      });
+
+      return proxyRes.data;
     }
 
-    return groupedSources;
+    throw err;
+  }
 }
+
+// ============================================================
+// تجميع مصادر Reddit
+// ============================================================
+
+function groupRedditSources(sources) {
+
+  const redditSubreddits = [];
+  const nonRedditSources = [];
+
+  sources.forEach(src => {
+
+    const match = src.url.match(
+      /reddit\.com\/r\/([^/]+)\/\.rss/i
+    );
+
+    if (match && match[1]) {
+      redditSubreddits.push(match[1]);
+    } else {
+      nonRedditSources.push(src);
+    }
+  });
+
+  const groupedSources = [...nonRedditSources];
+
+  const CHUNK_SIZE = 12;
+
+  for (
+    let i = 0;
+    i < redditSubreddits.length;
+    i += CHUNK_SIZE
+  ) {
+
+    const chunk = redditSubreddits.slice(
+      i,
+      i + CHUNK_SIZE
+    );
+
+    const combinedSubs = chunk.join('+');
+
+    groupedSources.push({
+      name: `مجموعة ريديت (${i / CHUNK_SIZE + 1})`,
+      url: `https://www.reddit.com/r/${combinedSubs}/.rss`,
+      category: 'مُدمج'
+    });
+  }
+
+  return groupedSources;
+}
+
+// ============================================================
+// تحميل كاش الترجمات
+// ============================================================
 
 function loadTranslationCache() {
-    const cache = new Map();
-    try {
-        const raw = fs.readFileSync('./feed.json', 'utf8');
-        const previousArticles = JSON.parse(raw);
-        for (const article of previousArticles) {
-            // نخزّن فقط المقالات التي تُرجمت فعلاً بنجاح (الترجمة تختلف عن النص الأصلي)
-            const titleOk = article.arabicTitle && article.arabicTitle !== article.title;
-            const descOk = article.arabicDescription && article.arabicDescription !== article.description;
-            if (titleOk || descOk) {
-                cache.set(article.id, {
-                    arabicTitle: titleOk ? article.arabicTitle : null,
-                    arabicDescription: descOk ? article.arabicDescription : null
-                });
-            }
-        }
-        console.log(`تم تحميل ${cache.size} ترجمة محفوظة مسبقاً من feed.json (لن تُعاد ترجمتها).`);
-    } catch (e) {
-        console.log('لا يوجد feed.json سابق، سيبدأ الأرشيف من الصفر.');
+
+  const cache = new Map();
+
+  try {
+
+    const raw = fs.readFileSync(
+      './feed.json',
+      'utf8'
+    );
+
+    const previousArticles = JSON.parse(raw);
+
+    for (const article of previousArticles) {
+
+      const titleOk =
+        article.arabicTitle &&
+        article.arabicTitle !== article.title;
+
+      const descOk =
+        article.arabicDescription &&
+        article.arabicDescription !== article.description;
+
+      if (titleOk || descOk) {
+
+        cache.set(article.id, {
+
+          arabicTitle:
+            titleOk
+              ? article.arabicTitle
+              : null,
+
+          arabicDescription:
+            descOk
+              ? article.arabicDescription
+              : null
+        });
+      }
     }
-    return cache;
+
+    console.log(
+      `تم تحميل ${cache.size} ترجمة محفوظة مسبقاً من feed.json.`
+    );
+
+  } catch (e) {
+
+    console.log(
+      'لا يوجد feed.json سابق، سيبدأ الأرشيف من الصفر.'
+    );
+  }
+
+  return cache;
 }
 
-const ONE_DAY_MS = 24 * 60 * 60 * 1000;
-const MAX_ARTICLE_AGE_MS = 48 * 60 * 60 * 1000; // لا نعرض أخباراً أقدم من 48 ساعة من صدورها
+// ============================================================
+// استخراج تاريخ المقال
+// ============================================================
+
+function getArticleDate(item) {
+
+  // نفضل pubDate
+  if (item.pubDate) {
+    return item.pubDate;
+  }
+
+  // ثم isoDate
+  if (item.isoDate) {
+    return item.isoDate;
+  }
+
+  // بعض المصادر قد تستخدم created / updated
+  if (item.created) {
+    return item.created;
+  }
+
+  if (item.updated) {
+    return item.updated;
+  }
+
+  return null;
+}
+
+// ============================================================
+// التحقق الصارم من عمر الخبر
+// ============================================================
+
+function getArticleAgeStatus(pubDateStr) {
+
+  // لا يوجد تاريخ = مرفوض
+  if (!pubDateStr) {
+    return {
+      valid: false,
+      reason: 'missing-date'
+    };
+  }
+
+  const pubTime = new Date(pubDateStr).getTime();
+
+  // تاريخ غير صالح = مرفوض
+  if (Number.isNaN(pubTime)) {
+    return {
+      valid: false,
+      reason: 'invalid-date'
+    };
+  }
+
+  const now = Date.now();
+
+  // تاريخ مستقبلي بشكل غير طبيعي = مرفوض
+  if (pubTime > now + MAX_FUTURE_MS) {
+    return {
+      valid: false,
+      reason: 'future-date'
+    };
+  }
+
+  const age = now - pubTime;
+
+  // أقدم من 48 ساعة = مرفوض
+  if (age > MAX_ARTICLE_AGE_MS) {
+    return {
+      valid: false,
+      reason: 'older-than-48-hours',
+      age
+    };
+  }
+
+  // صالح
+  return {
+    valid: true,
+    reason: 'within-48-hours',
+    age
+  };
+}
+
+// ============================================================
+// التحقق من أن المقال حديث
+// ============================================================
 
 function isWithinAllowedAge(pubDateStr) {
-  if (!pubDateStr) return true; // لو ما فيه تاريخ، نعتبره حديث احتياطاً
-  const pubTime = new Date(pubDateStr).getTime();
-  if (isNaN(pubTime)) return true; // تاريخ غير قابل للتحليل، نعتبره حديث احتياطاً
-  return (Date.now() - pubTime) <= MAX_ARTICLE_AGE_MS;
+
+  const status = getArticleAgeStatus(pubDateStr);
+
+  return status.valid;
 }
 
+// ============================================================
+// البرنامج الرئيسي
+// ============================================================
+
 async function run() {
-    const translationCache = loadTranslationCache();
-    let translatedCount = 0;
-    let reusedCount = 0;
-    let skippedOldCount = 0;
 
-    let rawSources = [];
+  const translationCache =
+    loadTranslationCache();
+
+  let translatedCount = 0;
+  let reusedCount = 0;
+
+  let skippedOldCount = 0;
+  let skippedNoDateCount = 0;
+  let skippedInvalidDateCount = 0;
+  let skippedFutureCount = 0;
+
+  let rawSources = [];
+
+  // ==========================================================
+  // تحميل المصادر
+  // ==========================================================
+
+  try {
+
+    const sourcesData =
+      fs.readFileSync(
+        './sources.json',
+        'utf8'
+      );
+
+    rawSources =
+      JSON.parse(sourcesData);
+
+  } catch (e) {
+
+    console.log(
+      'استخدام القائمة الافتراضية...'
+    );
+
+    rawSources = [
+
+      {
+        name: 'WorldNews',
+        url: 'https://www.reddit.com/r/worldnews/.rss',
+        category: 'أخبار'
+      }
+
+    ];
+  }
+
+  const sources =
+    groupRedditSources(rawSources);
+
+  console.log(
+    `تم تقليص الطلبات من ${rawSources.length} إلى ${sources.length} طلباً مدمجاً.`
+  );
+
+  let allArticles = [];
+
+  // ==========================================================
+  // جلب المصادر
+  // ==========================================================
+
+  for (const source of sources) {
+
     try {
-        const sourcesData = fs.readFileSync('./sources.json', 'utf8');
-        rawSources = JSON.parse(sourcesData);
-    } catch (e) {
-        console.log('استخدام القائمة الافتراضية...');
-        rawSources = [
-            { name: 'WorldNews', url: 'https://www.reddit.com/r/worldnews/.rss', category: 'أخبار' }
-        ];
-    }
 
-    const sources = groupRedditSources(rawSources);
-    console.log(`تم تقليص الطلبات من ${rawSources.length} إلى ${sources.length} طلباً مدمجاً لتفادي الحظر.`);
+      console.log(
+        `جاري جلب: ${source.name}...`
+      );
 
-    let allArticles = [];
+      const xmlData =
+        await fetchXmlWithFallback(
+          source.url
+        );
 
-    for (const source of sources) {
-        try {
-            console.log(`جاري جلب: ${source.name}...`);
-            const xmlData = await fetchXmlWithFallback(source.url);
-            const feed = await parser.parseString(xmlData);
+      const feed =
+        await parser.parseString(
+          xmlData
+        );
 
-            // تم رفع العدد هنا إلى 10 مقالات لكل مصدر لضمان تدفق ممتاز مع الحفاظ على استقرار الأداء
-            const items = (feed.items || []).slice(0, 10);
+      // ========================================================
+      // مهم جداً:
+      //
+      // لا نستخدم slice(0, 10) هنا.
+      //
+      // نفحص جميع عناصر RSS أولاً،
+      // ثم نطبق فلتر الـ48 ساعة.
+      // ========================================================
 
-            for (const item of items) {
-                const itemPubDate = item.pubDate || item.isoDate || null;
-                if (!isWithinAllowedAge(itemPubDate)) {
-                    skippedOldCount++;
-                    continue; // تجاهل المقالات الأقدم من 48 ساعة قبل حتى ترجمتها
-                }
+      const items =
+        feed.items || [];
 
-                const rawTitle = item.title || '';
-                const rawDesc = item.contentSnippet || item.content || item.summary || '';
+      let sourceArticleCount = 0;
 
-                let imageUrl = null;
-                if (item['media:content'] && item['media:content'].$.url) imageUrl = item['media:content'].$.url;
-                else if (item['media:thumbnail'] && item['media:thumbnail'].$.url) imageUrl = item['media:thumbnail'].$.url;
-                else if (item.enclosure && item.enclosure.url) imageUrl = item.enclosure.url;
+      for (const item of items) {
 
-                const articleId = item.guid || item.link || `id-${rawTitle}-${source.name}`;
-                const cached = translationCache.get(articleId);
+        // ------------------------------------------------------
+        // استخراج التاريخ
+        // ------------------------------------------------------
 
-                let arabicTitle;
-                if (cached && cached.arabicTitle) {
-                    arabicTitle = cached.arabicTitle;
-                    reusedCount++;
-                } else {
-                    arabicTitle = await translateText(rawTitle);
-                    translatedCount++;
-                }
+        const itemPubDate =
+          getArticleDate(item);
 
-                let arabicDescription;
-                if (cached && cached.arabicDescription) {
-                    arabicDescription = cached.arabicDescription;
-                    reusedCount++;
-                } else {
-                    arabicDescription = await translateText(rawDesc);
-                    translatedCount++;
-                }
+        const dateStatus =
+          getArticleAgeStatus(
+            itemPubDate
+          );
 
-                allArticles.push({
-                    id: articleId,
-                    title: rawTitle,
-                    arabicTitle: arabicTitle || '',
-                    description: rawDesc,
-                    arabicDescription: arabicDescription || '',
-                    link: item.link || '#',
-                    sourceName: source.name,
-                    category: source.category || 'عام',
-                    pubDate: item.pubDate || item.isoDate || new Date().toISOString(),
-                    media: { image: imageUrl }
-                });
-            }
+        // ------------------------------------------------------
+        // رفض المقالات غير الصالحة
+        // ------------------------------------------------------
 
-            await sleep(2000); // مهلة بين المصادر لتجنب ضغط الخوادم
+        if (!dateStatus.valid) {
 
-        } catch (err) {
-            console.log(`تخطي المصدر ${source.name}: (سبب: ${err.message})`);
-            await sleep(2000);
+          if (
+            dateStatus.reason ===
+            'older-than-48-hours'
+          ) {
+
+            skippedOldCount++;
+
+          } else if (
+            dateStatus.reason ===
+            'missing-date'
+          ) {
+
+            skippedNoDateCount++;
+
+          } else if (
+            dateStatus.reason ===
+            'invalid-date'
+          ) {
+
+            skippedInvalidDateCount++;
+
+          } else if (
+            dateStatus.reason ===
+            'future-date'
+          ) {
+
+            skippedFutureCount++;
+          }
+
+          continue;
         }
+
+        // ------------------------------------------------------
+        // بيانات المقال
+        // ------------------------------------------------------
+
+        const rawTitle =
+          item.title || '';
+
+        const rawDesc =
+          item.contentSnippet ||
+          item.content ||
+          item.summary ||
+          '';
+
+        // إذا لم يكن هناك عنوان فلا فائدة من المقال
+        if (!rawTitle.trim()) {
+          continue;
+        }
+
+        // ------------------------------------------------------
+        // الصورة
+        // ------------------------------------------------------
+
+        let imageUrl = null;
+
+        if (
+          item['media:content'] &&
+          item['media:content'].$ &&
+          item['media:content'].$.url
+        ) {
+
+          imageUrl =
+            item['media:content'].$.url;
+
+        } else if (
+          item['media:thumbnail'] &&
+          item['media:thumbnail'].$ &&
+          item['media:thumbnail'].$.url
+        ) {
+
+          imageUrl =
+            item['media:thumbnail'].$.url;
+
+        } else if (
+          item.enclosure &&
+          item.enclosure.url
+        ) {
+
+          imageUrl =
+            item.enclosure.url;
+        }
+
+        // ------------------------------------------------------
+        // ID المقال
+        // ------------------------------------------------------
+
+        const articleId =
+          item.guid ||
+          item.id ||
+          item.link ||
+          `id-${rawTitle}-${source.name}`;
+
+        // ------------------------------------------------------
+        // الترجمة المحفوظة
+        // ------------------------------------------------------
+
+        const cached =
+          translationCache.get(
+            articleId
+          );
+
+        // ------------------------------------------------------
+        // ترجمة العنوان
+        // ------------------------------------------------------
+
+        let arabicTitle;
+
+        if (
+          cached &&
+          cached.arabicTitle
+        ) {
+
+          arabicTitle =
+            cached.arabicTitle;
+
+          reusedCount++;
+
+        } else {
+
+          arabicTitle =
+            await translateText(
+              rawTitle
+            );
+
+          translatedCount++;
+        }
+
+        // ------------------------------------------------------
+        // ترجمة الوصف
+        // ------------------------------------------------------
+
+        let arabicDescription;
+
+        if (
+          cached &&
+          cached.arabicDescription
+        ) {
+
+          arabicDescription =
+            cached.arabicDescription;
+
+          reusedCount++;
+
+        } else {
+
+          arabicDescription =
+            await translateText(
+              rawDesc
+            );
+
+          translatedCount++;
+        }
+
+        // ------------------------------------------------------
+        // إضافة المقال
+        // ------------------------------------------------------
+
+        allArticles.push({
+
+          id: articleId,
+
+          title: rawTitle,
+
+          arabicTitle:
+            arabicTitle || '',
+
+          description:
+            rawDesc,
+
+          arabicDescription:
+            arabicDescription || '',
+
+          link:
+            item.link || '#',
+
+          sourceName:
+            source.name,
+
+          category:
+            source.category || 'عام',
+
+          // مهم:
+          // لا نضع تاريخاً افتراضياً مثل new Date()
+          // لأن ذلك كان يمكن أن يجعل مقالاً بلا تاريخ
+          // يبدو وكأنه خبر جديد.
+          pubDate:
+            itemPubDate,
+
+          media: {
+            image: imageUrl
+          }
+        });
+
+        sourceArticleCount++;
+      }
+
+      console.log(
+        `${source.name}: تم قبول ${sourceArticleCount} خبر حديث.`
+      );
+
+      // مهلة بين المصادر
+      await sleep(2000);
+
+    } catch (err) {
+
+      console.log(
+        `تخطي المصدر ${source.name}: ${err.message}`
+      );
+
+      await sleep(2000);
+    }
+  }
+
+  // ==========================================================
+  // إزالة التكرارات
+  // ==========================================================
+
+  const uniqueArticles = [];
+  const seenIds = new Set();
+
+  for (const article of allArticles) {
+
+    if (seenIds.has(article.id)) {
+      continue;
     }
 
-    allArticles.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
-    fs.writeFileSync('./feed.json', JSON.stringify(allArticles, null, 2), 'utf8');
-    console.log(`تمت العملية بنجاح! إجمالي المقالات (آخر 24 ساعة فقط): ${allArticles.length} | متجاهلة لقدمها: ${skippedOldCount} | ترجمات معاد استخدامها: ${reusedCount} | طلبات ترجمة جديدة فعلية: ${translatedCount}`);
+    seenIds.add(article.id);
+
+    uniqueArticles.push(article);
+  }
+
+  // ==========================================================
+  // ترتيب الأخبار
+  // ==========================================================
+
+  uniqueArticles.sort(
+    (a, b) =>
+      new Date(b.pubDate).getTime() -
+      new Date(a.pubDate).getTime()
+  );
+
+  // ==========================================================
+  // حماية إضافية قبل حفظ feed.json
+  //
+  // حتى لو حدث أي خطأ في مرحلة سابقة،
+  // لا نحفظ أي خبر يتجاوز 48 ساعة.
+  // ==========================================================
+
+  const finalArticles =
+    uniqueArticles.filter(article => {
+
+      return isWithinAllowedAge(
+        article.pubDate
+      );
+    });
+
+  // ==========================================================
+  // حفظ البيانات
+  // ==========================================================
+
+  fs.writeFileSync(
+    './feed.json',
+    JSON.stringify(
+      finalArticles,
+      null,
+      2
+    ),
+    'utf8'
+  );
+
+  // ==========================================================
+  // الإحصائيات
+  // ==========================================================
+
+  console.log('');
+  console.log('========================================');
+  console.log('اكتملت عملية تحديث الأخبار');
+  console.log('========================================');
+
+  console.log(
+    `إجمالي الأخبار الحديثة: ${finalArticles.length}`
+  );
+
+  console.log(
+    `المستبعدة لأنها أقدم من 48 ساعة: ${skippedOldCount}`
+  );
+
+  console.log(
+    `المستبعدة لعدم وجود تاريخ: ${skippedNoDateCount}`
+  );
+
+  console.log(
+    `المستبعدة بسبب تاريخ غير صالح: ${skippedInvalidDateCount}`
+  );
+
+  console.log(
+    `المستبعدة بسبب تاريخ مستقبلي: ${skippedFutureCount}`
+  );
+
+  console.log(
+    `الترجمات المعاد استخدامها: ${reusedCount}`
+  );
+
+  console.log(
+    `طلبات الترجمة الجديدة: ${translatedCount}`
+  );
+
+  console.log('========================================');
 }
 
 run();
+```
