@@ -437,32 +437,56 @@ async function processTranslationQueue() {
 }
 
 // الموقع مستضاف على GitHub Pages (ثابت 100%، بدون خادم/Serverless Functions)،
-// لذلك نستدعي الترجمة مباشرة من المتصفح عبر مزوّدين يدعمان CORS فعلياً.
-const LINGVA_MIRRORS = [
-  'https://lingva.ml',
-  'https://lingva.garudalinux.org',
-  'https://translate.plausibility.cloud'
-];
+// لذلك نستدعي Azure Translator مباشرة من المتصفح.
+//
+// ⚠️ ملاحظة أمان: المفتاح هنا هيكون ظاهر لأي حد يفتح "View Source".
+// ده مقبول بس لأن الموقع ده للتدريب وتطوير المهارات فقط، مش لمشروع إنتاجي حقيقي.
+// حط بياناتك الحقيقية من صفحة "Keys and Endpoint" في Azure Portal:
+const AZURE_TRANSLATOR_KEY = 'ضع_المفتاح_هنا';
+const AZURE_TRANSLATOR_ENDPOINT = 'https://api.cognitive.microsofttranslator.com';
+const AZURE_TRANSLATOR_REGION = 'qatarcentral'; // غيّرها حسب المنطقة بتاعتك
 
-// أضف بريدك هنا لرفع حد الترجمة المجاني من 5,000 إلى 50,000 حرف باليوم (موثّق رسمياً من MyMemory)
-// يفضّل استخدام بريد ثانوي وليس بريدك الأساسي لأنه سيظهر في كود الصفحة العلني
+// احتياطي: لو Azure فشل أو المفتاح خلص حده، نرجع لـ MyMemory كخطة بديلة
 const MYMEMORY_EMAIL = 'netflix26037@gmail.com';
 
 // كشف تلقائي مبسّط للغة المصدر (يابانية/صينية/إنجليزية) — بعض المصادر مثل
-// CRYPTO TIMES يابانية وBlockTempo صينية، وMyMemory تحتاج رمز اللغة الصحيح
+// CRYPTO TIMES يابانية وBlockTempo صينية
 function detectSourceLang(text) {
   if (/[\u3040-\u30ff]/.test(text)) return 'ja'; // هيراغانا/كاتاكانا = يابانية
-  if (/[\u4e00-\u9fff]/.test(text)) return 'zh-CN'; // رموز صينية (بدون هيراغانا)
+  if (/[\u4e00-\u9fff]/.test(text)) return 'zh-Hans'; // رموز صينية مبسّطة (رمز Azure الصحيح)
   return 'en';
 }
 
 async function translateClientSide(text) {
   const sourceLang = detectSourceLang(text);
 
-  // المحاولة 1: MyMemory — مصمّمة أصلاً لطلبات المتصفح المباشرة (CORS مفعّل)
+  // المحاولة 1: Azure Translator
+  try {
+    const url = `${AZURE_TRANSLATOR_ENDPOINT}/translate?api-version=3.0&from=${sourceLang}&to=ar`;
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Ocp-Apim-Subscription-Key': AZURE_TRANSLATOR_KEY,
+        'Ocp-Apim-Subscription-Region': AZURE_TRANSLATOR_REGION,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify([{ text }])
+    });
+    if (res.ok) {
+      const data = await res.json();
+      const translated = data?.[0]?.translations?.[0]?.text;
+      if (translated) return translated;
+    } else {
+      console.warn('فشل Azure Translator بكود:', res.status);
+    }
+  } catch (e) {
+    console.warn('خطأ في الاتصال بـ Azure Translator:', e.message);
+  }
+
+  // المحاولة 2 (احتياطي): MyMemory
   try {
     const emailParam = MYMEMORY_EMAIL ? `&de=${encodeURIComponent(MYMEMORY_EMAIL)}` : '';
-    const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${sourceLang}|ar${emailParam}`;
+    const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${sourceLang === 'zh-Hans' ? 'zh-CN' : sourceLang}|ar${emailParam}`;
     const res = await fetch(url);
     if (res.ok) {
       const data = await res.json();
@@ -472,21 +496,7 @@ async function translateClientSide(text) {
       }
     }
   } catch (e) {
-    console.warn('فشل MyMemory:', e.message);
-  }
-
-  // المحاولة 2: Lingva (عدة مرايا احتياطية)
-  for (const base of LINGVA_MIRRORS) {
-    try {
-      const url = `${base}/api/v1/${sourceLang}/ar/${encodeURIComponent(text)}`;
-      const res = await fetch(url);
-      if (res.ok) {
-        const data = await res.json();
-        if (data && data.translation) return data.translation;
-      }
-    } catch (e) {
-      console.warn(`فشل Lingva (${base}):`, e.message);
-    }
+    console.warn('فشل MyMemory الاحتياطي:', e.message);
   }
 
   return null;
