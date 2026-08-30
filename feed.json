@@ -330,6 +330,21 @@
     }
   },
   {
+    "id": "https://coinspectator.com/other/2026/08/30/how-does-a-donate-trading-fees-to-charity-meme-coin-actually-work/",
+    "title": "How does a “donate trading fees to charity” meme coin actually work?",
+    "arabicTitle": "كيف تعمل عملة ميم \"تبرع برسوم التداول للجمعيات الخيرية\" فعليا؟",
+    "description": "Kept seeing this framing and realised i didn’t fully understand the plumbing, so i worked it out. posting in case it’s useful, and because i think i may...",
+    "arabicDescription": "كنت أرى هذا الإطار وأدركت أنني لم أفهم السباكة تماما، لذا فهمت الأمر. أنشر في حال كان مفيدا، ولأنني أعتقد أنني قد...",
+    "fullContent": "<p><!-- SC_OFF --></p>\n<div class=\"md\">\n<p>Kept seeing this framing and realised i didn&#8217;t fully understand the plumbing, so i worked it out. posting in case it&#8217;s useful, and because i think i may still have one part wrong.</p>\n<p>where the money comes from seems like the first thing to clarify. it&#8217;s trading fees — the cut taken from buys and sells — rather than market cap or the token&#8217;s supply. so when something says &#8220;x% of supply&#8221; or &#8220;x% of market cap&#8221; is being allocated somewhere, that isn&#8217;t the same thing as actual income.</p>\n<p>the part i&#8217;m most interested in is when the allocation is actually enforced:</p>\n<ol>\n<li>\n<p>promised in the description: can potentially be changed, so there&#8217;s no guarantee</p>\n</li>\n<li>\n<p>configured after launch: stronger, but presumably still depends on whoever controls the setting</p>\n</li>\n<li>\n<p>set at creation and immutable: this seems like the strongest version because the creator can&#8217;t simply change it later</p>\n</li>\n</ol>\n<p>the recipient matters too. if fees go to a wallet controlled by a person, there&#8217;s still a trust assumption because someone has to actually send the money onward.</p>\n<p>for verification, i&#8217;d expect the useful evidence to be on-chain: look at the relevant fee account and trace the outgoing transactions. if a claim can&#8217;t ultimately be tied to transaction hashes, it&#8217;s still just a claim.</p>\n<p>one thing i still haven&#8217;t figured out: when someone says &#8220;x% of fees,&#8221; is that normally x% of the entire trading fee, or x% of the creator&#8217;s portion after the fee is split? that&#8217;s potentially a huge difference, and i haven&#8217;t seen it explained consistently.</p>\n<p>i know there are implementations where the allocation is enforced at creation, but i&#8217;m more interested in understanding the mechanism than promoting any particular platform.</p>\n<p>anyone who&#8217;s worked on this from the creator/developer side — how does the reporting actually work? that&#8217;s the part i can&#8217;t really see from outside.</p>\n</div>\n<p><!-- SC_ON -->   submitted by   <a href=\"https://www.reddit.com/user/StatisticianSuper\" data-wpel-link=\"external\" target=\"_blank\" rel=\"nofollow external noopener noreferrer\"> /u/StatisticianSuper </a> <br /> <span><a href=\"https://www.reddit.com/r/CryptoCurrency/comments/1w2mcie/how_does_a_donate_trading_fees_to_charity_meme/\" data-wpel-link=\"external\" target=\"_blank\" rel=\"nofollow external noopener noreferrer\">[link]</a></span>   <span><a href=\"https://www.reddit.com/r/CryptoCurrency/comments/1w2mcie/how_does_a_donate_trading_fees_to_charity_meme/\" data-wpel-link=\"external\" target=\"_blank\" rel=\"nofollow external noopener noreferrer\">[comments]</a></span>r/CryptoCurrency<a href=\"https://www.reddit.com/r/CryptoCurrency/comments/1w2mcie/how_does_a_donate_trading_fees_to_charity_meme/\" target=\"_blank\" class=\"feedzy-rss-link-icon\" data-wpel-link=\"external\" rel=\"nofollow external noopener noreferrer\">Read More</a></p>\n<p><a href=\"https://coinspectator.com/mainstream/2026/08/30/how-does-a-donate-trading-fees-to-charity-meme-coin-actually-work/\" data-wpel-link=\"internal\">Source</a></p>",
+    "link": "https://coinspectator.com/mainstream/2026/08/30/how-does-a-donate-trading-fees-to-charity-meme-coin-actually-work/",
+    "sourceName": "Bitcoin News, Analysis & Features by Coin Spectator",
+    "category": "عام",
+    "pubDate": "2026-08-30T16:38:03.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
     "id": "https://cryptopotato.com/?p=1447207",
     "title": "Bitcoin Price Analysis: Is BTC Entering a Consolidation Phase After Its Explosive Rally?",
     "arabicTitle": "تحليل سعر البيتكوين: هل يدخل البيتكوين مرحلة التوحيد بعد ارتفاعه الكبير؟",
@@ -520,6 +535,21 @@
     "sourceName": "Crypto Briefing",
     "category": "عام",
     "pubDate": "2026-08-30T16:09:02.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/Superstonk/comments/1w2lhv1/5yo_tinfoil_coming_true_gamestop_x_blockbuster/",
+    "title": "5yo tinfoil coming true? GameStop x Blockbuster?",
+    "arabicTitle": "هل يتحقق فيلم القصدير البالغ من العمر 5 سنوات؟ هل لعبة GameStop x Blockbuster؟",
+    "description": "ModRetro released a promo video a month ago that Palmer Lucky just retweeted again yesterday.\n https://x.com/palmerluckey/status/2093839332297814525?s=61\n It was a promo advertising you could try the M64 at blockbuster videos nationwide. It’s cute, you visit their site, enter your zip code, and it shows you the location in Bend, Oregon as the closest one.\n However there is a very brief but very deliberate cameo of GameStop’s logo on the “main character’s” skateboard. It flashes on screen for just a few frames both times it’s on screen.\n The opening of the video with a pan down from the top reminded me of the opening of the PushStartArcade Video so I went back and looked:\n The first PushStartArcade video was released June 15th, the Beta for power packs launched July 28th — 43 days from announcement to beta.\n ModRetro posted this promo on July 28th, 43 days from then is Sept. 9th, GameStop’s expected 2nd quarter announcement — but who knows, maybe tomorrow…\n Is physical video game rental coming back inside GameStop with this iconic brand associated?\n Could there be some alternative partnership that mixes nostalgia and technology?\n Will ModRetro’s page still point to only the location in Bend a month from now?\n I don’t know. This just seemed like a tease that was meant to create tinfoil and I didn’t see any yet.\n I still have my old blockbuster card, if this happens I wonder if it will still work?\n    submitted by    /u/Comprehensive-Fun747    to    r/Superstonk  \n [link]   [comments]",
+    "arabicDescription": "أصدرت مودريترو فيديو ترويجي قبل شهر أعاد Palmer Lucky تغريده مرة أخرى أمس. \n https://x.com/palmerluckey/status/2093839332297814525?s=61\n كان إعلانا ترويجا، يمكنك تجربة M64 في فيديوهات البلوكباستر على مستوى البلاد. إنه لطيف، تزور موقعهم، تدخل الرمز البريدي، ويظهر لك الموقع في بند، أوريغون كأقرب موقع. \n ومع ذلك، هناك ظهور قصير جدا ومتعمد لشعار GameStop على لوح التزلج الخاص ب \"الشخصية الرئيسية\". يومض على الشاشة لبضعة إطارات فقط في كل مرة يظهر فيهما على الشاشة. \n بداية الفيديو مع صورة من الأعلى ذكرتني ببداية فيديو PushStartArcade، لذا عدت ونظرت: \n تم إصدار أول فيديو للعبة PushStartArcade في 15 يونيو، أما النسخة التجريبية لحزم الطاقة فقد أطلقت في 28 يوليو — بعد 43 يوما من الإعلان إلى النسخة التجريبية. \n نشرت ModRetro هذا الإعلان في 28 يوليو، أي بعد 43 يوما من ذلك هو 9 سبتمبر، وهو الإعلان المتوقع من GameStop في الربع الثاني — لكن من يدري، ربما غدا... \n هل يعود تأجير ألعاب الفيديو المادية إلى GameStop مع هذا العلامة التجارية الأيقونية؟ \n هل يمكن أن يكون هناك شراكة بديلة تمزج بين الحنين والتكنولوجيا؟ \n هل ستظل صفحة ModRetro تشير فقط إلى الموقع في Bend بعد شهر؟ \n لا أعرف. بدا هذا مجرد تشويق يهدف إلى صنع ورق قصدير ولم أر أي شيء بعد. \n لا زلت أحتفظ ببطاقة بلوكباستر القديمة، إذا حدث هذا أتساءل هل ستظل تعمل؟ \n    تم الإرسال بواسطة /u/Comprehensive-Fun747 إلى r/Superstonk  \n [رابط] [تعليقات]",
+    "fullContent": "<table> <tr><td> <a href=\"https://www.reddit.com/r/Superstonk/comments/1w2lhv1/5yo_tinfoil_coming_true_gamestop_x_blockbuster/\"> <img src=\"https://preview.redd.it/unvb88hxcjmh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=57d9a6a64711bad4db8ecc3aa66095b15a2aa2a2\" alt=\"5yo tinfoil coming true? GameStop x Blockbuster?\" title=\"5yo tinfoil coming true? GameStop x Blockbuster?\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>ModRetro released a promo video a month ago that Palmer Lucky just retweeted again yesterday.</p> <p><a href=\"https://x.com/palmerluckey/status/2093839332297814525?s=61\">https://x.com/palmerluckey/status/2093839332297814525?s=61</a></p> <p>It was a promo advertising you could try the M64 at blockbuster videos nationwide. It’s cute, you visit their site, enter your zip code, and it shows you the location in Bend, Oregon as the closest one.</p> <p>However there is a very brief but very deliberate cameo of GameStop’s logo on the “main character’s” skateboard. It flashes on screen for just a few frames both times it’s on screen.</p> <p>The opening of the video with a pan down from the top reminded me of the opening of the PushStartArcade Video so I went back and looked:</p> <p>The first PushStartArcade video was released June 15th, the Beta for power packs launched July 28th — 43 days from announcement to beta.</p> <p>ModRetro posted this promo on July 28th, 43 days from then is Sept. 9th, GameStop’s expected 2nd quarter announcement — but who knows, maybe tomorrow…</p> <p>Is physical video game rental coming back inside GameStop with this iconic brand associated?</p> <p>Could there be some alternative partnership that mixes nostalgia and technology?</p> <p>Will ModRetro’s page still point to only the location in Bend a month from now?</p> <p>I don’t know. This just seemed like a tease that was meant to create tinfoil and I didn’t see any yet.</p> <p>I still have my old blockbuster card, if this happens I wonder if it will still work?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Comprehensive-Fun747\"> /u/Comprehensive-Fun747 </a> &#32; to &#32; <a href=\"https://www.reddit.com/r/Superstonk/\"> r/Superstonk </a> <br/> <span><a href=\"https://i.redd.it/unvb88hxcjmh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/Superstonk/comments/1w2lhv1/5yo_tinfoil_coming_true_gamestop_x_blockbuster/\">[comments]</a></span> </td></tr></table>",
+    "link": "https://www.reddit.com/r/Superstonk/comments/1w2lhv1/5yo_tinfoil_coming_true_gamestop_x_blockbuster/",
+    "sourceName": "مجتمعي",
+    "category": "عام",
+    "pubDate": "2026-08-30T16:05:16.000Z",
     "media": {
       "image": null
     }
@@ -750,21 +780,6 @@
     }
   },
   {
-    "id": "CBMipwFBVV95cUxOLXVhSHhEMVhmQ1l0RC1FelROdjR3cTU3UDA2OVNJMlNacGtRa1dCeXItQ3B4YmhUX3NhakR5S3BPODJ2a2JGdU9tLVNOS3V3S0ROY3NwTVhPeUduR256VDVtMWczTkJ0azB1MDc3dFJGN0luSzJ1TUw5S3ptbHUxSmRqRmFKQXJJNVg5VTl3d2tJUXo2OGpjdzFGdG5hQ2c2UlVEeFFFdw",
-    "title": "Bitcoin Is Surging, But Investors Are Still Worried About Bitcoin Treasury Companies. Here's Why They're Right. - Yahoo Finance",
-    "arabicTitle": "البيتكوين في ارتفاع، لكن المستثمرين لا يزالون قلقين بشأن شركات خزانة البيتكوين. إليك سبب صحة ذلك. - ياهو فاينانس",
-    "description": "Bitcoin Is Surging, But Investors Are Still Worried About Bitcoin Treasury Companies. Here's Why They're Right.  Yahoo Finance",
-    "arabicDescription": "البيتكوين في ارتفاع، لكن المستثمرين لا يزالون قلقين بشأن شركات خزانة البيتكوين. إليك سبب صحة ذلك. ياهو فاينانس",
-    "fullContent": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxOLXVhSHhEMVhmQ1l0RC1FelROdjR3cTU3UDA2OVNJMlNacGtRa1dCeXItQ3B4YmhUX3NhakR5S3BPODJ2a2JGdU9tLVNOS3V3S0ROY3NwTVhPeUduR256VDVtMWczTkJ0azB1MDc3dFJGN0luSzJ1TUw5S3ptbHUxSmRqRmFKQXJJNVg5VTl3d2tJUXo2OGpjdzFGdG5hQ2c2UlVEeFFFdw?oc=5\" target=\"_blank\">Bitcoin Is Surging, But Investors Are Still Worried About Bitcoin Treasury Companies. Here's Why They're Right.</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo Finance</font>",
-    "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOLXVhSHhEMVhmQ1l0RC1FelROdjR3cTU3UDA2OVNJMlNacGtRa1dCeXItQ3B4YmhUX3NhakR5S3BPODJ2a2JGdU9tLVNOS3V3S0ROY3NwTVhPeUduR256VDVtMWczTkJ0azB1MDc3dFJGN0luSzJ1TUw5S3ptbHUxSmRqRmFKQXJJNVg5VTl3d2tJUXo2OGpjdzFGdG5hQ2c2UlVEeFFFdw?oc=5",
-    "sourceName": "bitcoin - Google News",
-    "category": "عام",
-    "pubDate": "2026-08-30T15:35:47.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
     "id": "https://cryptodaily.co.uk/2026/08/validator-resource-exhaustion-blockchain-downtime",
     "title": "Validator Resource Exhaustion: The Quiet Risk Behind Blockchain Downtime",
     "arabicTitle": "استنزاف موارد المدقق: المخاطر الهادئة وراء توقف البلوكشين",
@@ -790,21 +805,6 @@
     "sourceName": "Crypto Briefing",
     "category": "عام",
     "pubDate": "2026-08-30T15:30:42.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
-    "id": "https://cryptobriefing.com/?p=353384",
-    "title": "Chelsea records 26% possession and 2.97 xG in thrilling 4-3 win over Brighton",
-    "arabicTitle": "تشيلسي يسجل 26٪ من الاستحواذ و2.97 xG في فوز مثير 4-3 على برايتون",
-    "description": "Chelsea's win highlights the potential of strategic efficiency over possession dominance, suggesting a shift in tactical paradigms in football.\nThe post Chelsea records 26% possession and 2.97 xG in thrilling 4-3 win over Brighton appeared first on Crypto Briefing.",
-    "arabicDescription": "يبرز فوز تشيلسي إمكانات الكفاءة الاستراتيجية على حساب السيطرة على الاستحواذ، مما يشير إلى تحول في النماذج التكتيكية في كرة القدم. \nنشر المنشور عن تشيلسي يسجل 26٪ من الاستحواذ و2.97 xG في فوز مثير 4-3 على برايتون أولا على موقع Crypto Briefing.",
-    "fullContent": "<p>Chelsea's win highlights the potential of strategic efficiency over possession dominance, suggesting a shift in tactical paradigms in football.</p>\n<p>The post <a href=\"https://cryptobriefing.com/chelsea-possession-xg-brighton-win/\">Chelsea records 26% possession and 2.97 xG in thrilling 4-3 win over Brighton</a> appeared first on <a href=\"https://cryptobriefing.com\">Crypto Briefing</a>.</p>\n",
-    "link": "https://cryptobriefing.com/chelsea-possession-xg-brighton-win/",
-    "sourceName": "Crypto Briefing",
-    "category": "عام",
-    "pubDate": "2026-08-30T15:29:19.000Z",
     "media": {
       "image": null
     }
@@ -1000,6 +1000,21 @@
     "sourceName": "dogecoin - Google News",
     "category": "عام",
     "pubDate": "2026-08-30T15:05:35.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/wallstreetbets_wins/comments/1w2jxg3/6_months_of_trumps_war_economic_vibes_down_10/",
+    "title": "6 months of Trump’s war: Economic vibes down -10%",
+    "arabicTitle": "6 أشهر من حرب ترامب: الأجواء الاقتصادية تراجعت -10٪",
+    "description": "submitted by    /u/AcanthocephalaNo8167    to    r/wallstreetbets_wins  \n [link]   [comments]",
+    "arabicDescription": "تم الإرسال بواسطة /u/AcanthocephalaNo8167 إلى r/wallstreetbets_wins  \n [رابط] [تعليقات]",
+    "fullContent": "<table> <tr><td> <a href=\"https://www.reddit.com/r/wallstreetbets_wins/comments/1w2jxg3/6_months_of_trumps_war_economic_vibes_down_10/\"> <img src=\"https://external-preview.redd.it/f0JBZi0Ux9C2OLx8JpxT7Z5kiWiXgBKPI1HT8vBM-3Y.jpeg?width=320&amp;crop=smart&amp;auto=webp&amp;s=c22f81547e55bc76aec5e0942a06cedbafed65fd\" alt=\"6 months of Trump’s war: Economic vibes down -10%\" title=\"6 months of Trump’s war: Economic vibes down -10%\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/AcanthocephalaNo8167\"> /u/AcanthocephalaNo8167 </a> &#32; to &#32; <a href=\"https://www.reddit.com/r/wallstreetbets_wins/\"> r/wallstreetbets_wins </a> <br/> <span><a href=\"/r/economy/comments/1w2j2ft/6_months_of_trumps_war_economic_vibes_down_10/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/wallstreetbets_wins/comments/1w2jxg3/6_months_of_trumps_war_economic_vibes_down_10/\">[comments]</a></span> </td></tr></table>",
+    "link": "https://www.reddit.com/r/wallstreetbets_wins/comments/1w2jxg3/6_months_of_trumps_war_economic_vibes_down_10/",
+    "sourceName": "مجموعة ريديت (3)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-30T15:03:34.000Z",
     "media": {
       "image": null
     }
@@ -1455,6 +1470,21 @@
     }
   },
   {
+    "id": "https://www.reddit.com/r/BeginnerInvesting/comments/1w2ia88/scam_phishing/",
+    "title": "Scam? Phishing?",
+    "arabicTitle": "احتيال؟ تصيد احتيالي؟",
+    "description": "What do you guys think about this https://anthropic-ipo.live/ .... I did some research and all of them says it is a scam.\n    submitted by    /u/NewBee_Investor_2026    to    r/BeginnerInvesting  \n [link]   [comments]",
+    "arabicDescription": "ما رأيكم في هذا https://anthropic-ipo.live/ .... قمت ببعض البحث وكلهم يقولون إنه عملية احتيال. \n    تم الإرسال بواسطة /u/NewBee_Investor_2026 إلى r/BeginnerInvesting  \n [رابط] [تعليقات]",
+    "fullContent": "<!-- SC_OFF --><div class=\"md\"><p>What do you guys think about this <a href=\"https://anthropic-ipo.live/\">https://anthropic-ipo.live/</a> .... I did some research and all of them says it is a scam.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/NewBee_Investor_2026\"> /u/NewBee_Investor_2026 </a> &#32; to &#32; <a href=\"https://www.reddit.com/r/BeginnerInvesting/\"> r/BeginnerInvesting </a> <br/> <span><a href=\"https://www.reddit.com/r/BeginnerInvesting/comments/1w2ia88/scam_phishing/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/BeginnerInvesting/comments/1w2ia88/scam_phishing/\">[comments]</a></span>",
+    "link": "https://www.reddit.com/r/BeginnerInvesting/comments/1w2ia88/scam_phishing/",
+    "sourceName": "مجموعة ريديت (3)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-30T13:58:06.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
     "id": "https://www.reddit.com/r/Economics/comments/1w2i9fk/americas_next_grocery_shock_is_brewing/",
     "title": "America's next grocery shock is brewing",
     "arabicTitle": "الصدمة القادمة في سوق البقالة في أمريكا تلوح في الأفق",
@@ -1515,16 +1545,16 @@
     }
   },
   {
-    "id": "https://coinspectator.com/other/2026/08/30/uniusdt-uniswap-record-burn-and-robinhood-record-volume/",
-    "title": "UNIUSDT Uniswap Record Burn and Robinhood Record Volume",
-    "arabicTitle": "حرق سجلات UNIUSDT Uniswap وحجم سجلات Robinhood",
-    "description": "UniSwap been getting a lot of volume on Robinhood over the last month Press release also showing record burn rate for UNIUSDT Volume on daily today killer Looking...",
-    "arabicDescription": "UniSwap يحصل على حجم كبير على Robinhood خلال الشهر الماضي، وبيان صحفي يظهر أيضا معدل احتراق قياسي ل UNIUSDT حجم التداول اليومي اليومي، ينظر...",
-    "fullContent": "<img width=\"140\" height=\"134\" src=\"https://coinspectator.com/wp-content/uploads/2026/08/f26ck7b1oimh1-ghUO3Q.png\" class=\"attachment-thumbnail size-thumbnail wp-post-image\" alt=\"Uniusdt uniswap record burn and robinhood record volume\" decoding=\"async\" loading=\"lazy\" /><p><img decoding=\"async\" src=\"https://preview.redd.it/f26ck7b1oimh1.png?width=140&amp;height=134&amp;auto=webp&amp;s=67a7c11a358f1f097372995efd60ac180d4e2381\" title=\"UNIUSDT Uniswap Record Burn and Robinhood Record Volume\" /></p>\n<table>\n<tr>\n<td> <a href=\"https://www.reddit.com/r/CryptoCurrency/comments/1w2i152/uniusdt_uniswap_record_burn_and_robinhood_record/\" data-wpel-link=\"external\" target=\"_blank\" rel=\"nofollow external noopener noreferrer\"> <img decoding=\"async\" src=\"https://preview.redd.it/f26ck7b1oimh1.png?width=140&amp;height=134&amp;auto=webp&amp;s=67a7c11a358f1f097372995efd60ac180d4e2381\" alt=\"UNIUSDT Uniswap Record Burn and Robinhood Record Volume\" title=\"UNIUSDT Uniswap Record Burn and Robinhood Record Volume\" /> </a> </td>\n<td> <!-- SC_OFF -->\n<div class=\"md\">\n<p>UniSwap been getting a lot of volume on Robinhood over the last month</p>\n<p>Press release also showing record burn rate for UNIUSDT</p>\n<p>Volume on daily today killer</p>\n<p>Looking at the chart the 5m wedges are accumulating for higher highs</p>\n<p><a href=\"https://preview.redd.it/f26ck7b1oimh1.png?width=567&amp;format=png&amp;auto=webp&amp;s=b1be1ca6fb5750ddf4ac16efee3ea704533c31c5\" data-wpel-link=\"external\" target=\"_blank\" rel=\"nofollow external noopener noreferrer\">https://preview.redd.it/f26ck7b1oimh1.png?width=567&amp;format=png&amp;auto=webp&amp;s=b1be1ca6fb5750ddf4ac16efee3ea704533c31c5</a></p>\n<p>Last time this squeezed on volume and press she went to $12 </p>\n<p>We get teh 3 bar daily run she could see $6+ easy</p>\n<p><a href=\"https://preview.redd.it/t86zaruaoimh1.png?width=912&amp;format=png&amp;auto=webp&amp;s=229a26d7d8c54ac142bc595ab609419b908286d1\" data-wpel-link=\"external\" target=\"_blank\" rel=\"nofollow external noopener noreferrer\">https://preview.redd.it/t86zaruaoimh1.png?width=912&amp;format=png&amp;auto=webp&amp;s=229a26d7d8c54ac142bc595ab609419b908286d1</a></p>\n</div>\n<p><!-- SC_ON -->   submitted by   <a href=\"https://www.reddit.com/user/JeffTheOmega1\" data-wpel-link=\"external\" target=\"_blank\" rel=\"nofollow external noopener noreferrer\"> /u/JeffTheOmega1 </a> <br /> <span><a href=\"https://www.reddit.com/r/CryptoCurrency/comments/1w2i152/uniusdt_uniswap_record_burn_and_robinhood_record/\" data-wpel-link=\"external\" target=\"_blank\" rel=\"nofollow external noopener noreferrer\">[link]</a></span>   <span><a href=\"https://www.reddit.com/r/CryptoCurrency/comments/1w2i152/uniusdt_uniswap_record_burn_and_robinhood_record/\" data-wpel-link=\"external\" target=\"_blank\" rel=\"nofollow external noopener noreferrer\">[comments]</a></span> </p></td>\n</tr>\n</table>\n<p>r/CryptoCurrency<a href=\"https://www.reddit.com/r/CryptoCurrency/comments/1w2i152/uniusdt_uniswap_record_burn_and_robinhood_record/\" target=\"_blank\" class=\"feedzy-rss-link-icon\" data-wpel-link=\"external\" rel=\"nofollow external noopener noreferrer\">Read More</a></p>\n<p><a href=\"https://coinspectator.com/mainstream/2026/08/30/uniusdt-uniswap-record-burn-and-robinhood-record-volume/\" data-wpel-link=\"internal\">Source</a></p>",
-    "link": "https://coinspectator.com/mainstream/2026/08/30/uniusdt-uniswap-record-burn-and-robinhood-record-volume/",
-    "sourceName": "Bitcoin News, Analysis & Features by Coin Spectator",
-    "category": "عام",
-    "pubDate": "2026-08-30T13:47:16.000Z",
+    "id": "https://www.reddit.com/r/MBOT_Stock/comments/1w2hxhu/cardiovascular_and_interventional_radiological/",
+    "title": "Cardiovascular and Interventional Radiological Society of Europe (CIRSE) Annual Congress.",
+    "arabicTitle": "المؤتمر السنوي لجمعية القلب والأوعية الدموية والأشعة التداخلية في أوروبا (CIRSE).",
+    "description": "What the chances they annouce ce after the event? \n    submitted by    /u/Beautiful-Treacle549  \n [link]   [comments]",
+    "arabicDescription": "ما هي فرص إعلانهم بعد الحدث؟  \n    مقدم بواسطة /u/Beautiful-Treacle549  \n [رابط] [تعليقات]",
+    "fullContent": "<!-- SC_OFF --><div class=\"md\"><p>What the chances they annouce ce after the event? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Beautiful-Treacle549\"> /u/Beautiful-Treacle549 </a> <br/> <span><a href=\"https://www.reddit.com/r/MBOT_Stock/comments/1w2hxhu/cardiovascular_and_interventional_radiological/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MBOT_Stock/comments/1w2hxhu/cardiovascular_and_interventional_radiological/\">[comments]</a></span>",
+    "link": "https://www.reddit.com/r/MBOT_Stock/comments/1w2hxhu/cardiovascular_and_interventional_radiological/",
+    "sourceName": "MBOT_Stock",
+    "category": "الاسهم",
+    "pubDate": "2026-08-30T13:42:58.000Z",
     "media": {
       "image": null
     }
@@ -1645,6 +1675,21 @@
     "sourceName": "مجموعة ريديت (1)",
     "category": "مُدمج",
     "pubDate": "2026-08-30T13:31:00.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/Wallstreetsilver/comments/1w2hl85/gm_fam_i_got_a_baaad_feeling_about_this_jedi/",
+    "title": "Gm, fam. I got a baaad feeling about this. Jedi thing again. Check USA ...who did this? still got those silver coins in your drawer like me?",
+    "arabicTitle": "يا أخي. عندي شعور سيء تجاه هذا. موضوع الجيداي مرة ثانية. تحقق من الولايات المتحدة ... مين سوى هذا؟ لا زلت تملك هالكم الفضية في درجك زي ما عندي؟",
+    "description": "submitted by    /u/algomoneyfest    to    r/Wallstreetsilver  \n [link]   [comments]",
+    "arabicDescription": "تم تقديمه بواسطة /u/algomoneyfest إلى r/Wallstreetsilver  \n [رابط] [تعليقات]",
+    "fullContent": "<table> <tr><td> <a href=\"https://www.reddit.com/r/Wallstreetsilver/comments/1w2hl85/gm_fam_i_got_a_baaad_feeling_about_this_jedi/\"> <img src=\"https://preview.redd.it/auuiqlm9kimh1.png?width=140&amp;height=77&amp;auto=webp&amp;s=04953264e25039b1ee22e37088f25c490b811a28\" alt=\"Gm, fam. I got a baaad feeling about this. Jedi thing again. Check USA ...who did this? still got those silver coins in your drawer like me?\" title=\"Gm, fam. I got a baaad feeling about this. Jedi thing again. Check USA ...who did this? still got those silver coins in your drawer like me?\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/algomoneyfest\"> /u/algomoneyfest </a> &#32; to &#32; <a href=\"https://www.reddit.com/r/Wallstreetsilver/\"> r/Wallstreetsilver </a> <br/> <span><a href=\"/r/SilverDegenClub/comments/1w2hkq1/gm_fam_i_got_a_baaad_feeling_about_this_jedi/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/Wallstreetsilver/comments/1w2hl85/gm_fam_i_got_a_baaad_feeling_about_this_jedi/\">[comments]</a></span> </td></tr></table>",
+    "link": "https://www.reddit.com/r/Wallstreetsilver/comments/1w2hl85/gm_fam_i_got_a_baaad_feeling_about_this_jedi/",
+    "sourceName": "مجموعة ريديت (3)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-30T13:28:28.000Z",
     "media": {
       "image": null
     }
@@ -1905,21 +1950,6 @@
     }
   },
   {
-    "id": "https://www.reddit.com/r/SpaceXLounge/comments/1w2fxir/successful_deployment_of_the_nancy_grace_roman/",
-    "title": "Successful deployment of the Nancy Grace Roman telescope.",
-    "arabicTitle": "نشر تلسكوب نانسي غريس الروماني بنجاح.",
-    "description": "submitted by    /u/Adeldor    to    r/SpaceXLounge  \n [link]   [comments]",
-    "arabicDescription": "تم الإرسال بواسطة /u/Adeldor إلى r/SpaceXLounge  \n [رابط] [تعليقات]",
-    "fullContent": "<table> <tr><td> <a href=\"https://www.reddit.com/r/SpaceXLounge/comments/1w2fxir/successful_deployment_of_the_nancy_grace_roman/\"> <img src=\"https://external-preview.redd.it/tma8bImewE4KFn422FStCadEvfw40krWQSghC8l9C4I.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=dfff7056be98bc70df8d59ed2b2daabcc335bd0c\" alt=\"Successful deployment of the Nancy Grace Roman telescope.\" title=\"Successful deployment of the Nancy Grace Roman telescope.\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Adeldor\"> /u/Adeldor </a> &#32; to &#32; <a href=\"https://www.reddit.com/r/SpaceXLounge/\"> r/SpaceXLounge </a> <br/> <span><a href=\"https://files.catbox.moe/nhvr8r.jpg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/SpaceXLounge/comments/1w2fxir/successful_deployment_of_the_nancy_grace_roman/\">[comments]</a></span> </td></tr></table>",
-    "link": "https://www.reddit.com/r/SpaceXLounge/comments/1w2fxir/successful_deployment_of_the_nancy_grace_roman/",
-    "sourceName": "مجتمعي",
-    "category": "عام",
-    "pubDate": "2026-08-30T12:11:36.000Z",
-    "media": {
-      "image": null
-    }
-  },
-  {
     "id": "https://abcnews.com/video/136065136/",
     "title": "WATCH:  Woman alleges she was ejected from mountain coaster in Colorado",
     "arabicTitle": "شاهد: امرأة تدعي أنها طردت من قطار جبال في كولورادو",
@@ -2154,6 +2184,21 @@
     "link": "https://www.reddit.com/r/WallStreetbetsELITE/comments/1w2f7uu/us_factory_farming_has_gone_too_far/",
     "sourceName": "مجتمعي",
     "category": "عام",
+    "pubDate": "2026-08-30T11:36:29.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/WallStreetbetsELITE/comments/1w2f7uu/us_factory_farming_has_gone_too_far/",
+    "title": "U.S factory farming has gone too far",
+    "arabicTitle": "لقد تجاوزت الزراعة الصناعية في الولايات المتحدة حدودا",
+    "description": "submitted by    /u/Kpets    to    r/WallStreetbetsELITE  \n [link]   [comments]",
+    "arabicDescription": "مقدم بواسطة /u/Kpets إلى r/WallStreetbetsELITE  \n [رابط] [تعليقات]",
+    "fullContent": "<table> <tr><td> <a href=\"https://www.reddit.com/r/WallStreetbetsELITE/comments/1w2f7uu/us_factory_farming_has_gone_too_far/\"> <img src=\"https://external-preview.redd.it/OW4zazRtdnkwaW1oMbh6FG7PriCKdGi9SA_itE835_r4jDdHXJu14kYZvk6u.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=70240dd4693161a281530f1b1cf39636c84bef85\" alt=\"U.S factory farming has gone too far\" title=\"U.S factory farming has gone too far\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Kpets\"> /u/Kpets </a> &#32; to &#32; <a href=\"https://www.reddit.com/r/WallStreetbetsELITE/\"> r/WallStreetbetsELITE </a> <br/> <span><a href=\"https://v.redd.it/pwcejbzy0imh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/WallStreetbetsELITE/comments/1w2f7uu/us_factory_farming_has_gone_too_far/\">[comments]</a></span> </td></tr></table>",
+    "link": "https://www.reddit.com/r/WallStreetbetsELITE/comments/1w2f7uu/us_factory_farming_has_gone_too_far/",
+    "sourceName": "مجموعة ريديت (3)",
+    "category": "مُدمج",
     "pubDate": "2026-08-30T11:36:29.000Z",
     "media": {
       "image": null
@@ -2625,6 +2670,21 @@
     }
   },
   {
+    "id": "https://www.reddit.com/r/wallstreetbetsGER/comments/1w2cn1i/stell_dir_vor_du_zahlst_100k_nur_um_das_10/",
+    "title": "Stell dir vor du zahlst 100k, nur um das 10 Sekunden eher zu bekommen",
+    "arabicTitle": "Stell dir vor du zahlst 100k, nur um das 10 Sekunden eher zu bekommen",
+    "description": "submitted by    /u/Adventurous-Bite3466    to    r/wallstreetbetsGER  \n [link]   [comments]",
+    "arabicDescription": "تم النشر بواسطة /u/Adventurous-Bite3466 إلى r/wallstreetbetsGER  \n [رابط] [تعليقات]",
+    "fullContent": "<table> <tr><td> <a href=\"https://www.reddit.com/r/wallstreetbetsGER/comments/1w2cn1i/stell_dir_vor_du_zahlst_100k_nur_um_das_10/\"> <img src=\"https://external-preview.redd.it/N2RhYWFsdDdiaG1oMZsjpkeCfIREfWISKRfkJ0uVBhi2Mc7FbNBNe1HtKIB2.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=3a40b1ed8e2b003c04ee3784c9c279819891b4cb\" alt=\"Stell dir vor du zahlst 100k, nur um das 10 Sekunden eher zu bekommen\" title=\"Stell dir vor du zahlst 100k, nur um das 10 Sekunden eher zu bekommen\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Adventurous-Bite3466\"> /u/Adventurous-Bite3466 </a> &#32; to &#32; <a href=\"https://www.reddit.com/r/wallstreetbetsGER/\"> r/wallstreetbetsGER </a> <br/> <span><a href=\"https://v.redd.it/f77tenw7bhmh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/wallstreetbetsGER/comments/1w2cn1i/stell_dir_vor_du_zahlst_100k_nur_um_das_10/\">[comments]</a></span> </td></tr></table>",
+    "link": "https://www.reddit.com/r/wallstreetbetsGER/comments/1w2cn1i/stell_dir_vor_du_zahlst_100k_nur_um_das_10/",
+    "sourceName": "مجموعة ريديت (3)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-30T09:12:08.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
     "id": "https://coindoo.com/?p=188090",
     "title": "Crypto Built Robinhood Chain’s $25B – Are Stocks Going to Catch Up?",
     "arabicTitle": "شركة كريبتو بنت سلسلة روبنهود التي بلغت قيمتها 25 مليار دولار – هل ستلحق الأسهم بالركب؟",
@@ -2937,6 +2997,21 @@
     "pubDate": "2026-08-30T07:30:00.000Z",
     "media": {
       "image": "https://www.cointribune.com/app/uploads/2026/08/XRP-echeance-quantique-1.png"
+    }
+  },
+  {
+    "id": "irans-khamenei-urges-gulf-rulers-072132137.html",
+    "title": "Iran's Khamenei urges Gulf rulers in written message to confront 'real enemy'",
+    "arabicTitle": "خامنئي الإيراني يحث حكام الخليج في رسالة مكتوبة على مواجهة 'العدو الحقيقي'",
+    "description": "",
+    "arabicDescription": "",
+    "fullContent": "",
+    "link": "https://www.yahoo.com/news/world/articles/irans-khamenei-urges-gulf-rulers-072132137.html",
+    "sourceName": "Yahoo News - Top Stories",
+    "category": "عام",
+    "pubDate": "2026-08-30T07:21:32.000Z",
+    "media": {
+      "image": null
     }
   },
   {
@@ -3745,6 +3820,21 @@
     "sourceName": "CRIPTO TENDENCIA",
     "category": "عام",
     "pubDate": "2026-08-29T19:30:00.000Z",
+    "media": {
+      "image": null
+    }
+  },
+  {
+    "id": "https://www.reddit.com/r/ADTX/comments/1w1va4m/crazy_potential/",
+    "title": "Crazy potential",
+    "arabicTitle": "إمكانات مجنونة",
+    "description": "I grabbed a million shares this week and might get more if it dips again. This is a hidden gem if they execute on what they're writing on the wall right now. This is the bottom floor of a huge run.\n    submitted by    /u/Impressive-Intern-61    to    r/ADTX  \n [link]   [comments]",
+    "arabicDescription": "حصلت على مليون سهم هذا الأسبوع وقد أحصل على المزيد إذا انخفض السعر مرة أخرى. هذه جوهرة مخفية إذا نفذوا ما يكتبون على الحائط الآن. هذه هي البداية من سلسلة ضخمة. \n    تم الإرسال بواسطة /u/Impressive-Intern-61 إلى r/ADTX  \n [رابط] [تعليقات]",
+    "fullContent": "<!-- SC_OFF --><div class=\"md\"><p>I grabbed a million shares this week and might get more if it dips again. This is a hidden gem if they execute on what they&#39;re writing on the wall right now. This is the bottom floor of a huge run.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Impressive-Intern-61\"> /u/Impressive-Intern-61 </a> &#32; to &#32; <a href=\"https://www.reddit.com/r/ADTX/\"> r/ADTX </a> <br/> <span><a href=\"https://www.reddit.com/r/ADTX/comments/1w1va4m/crazy_potential/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ADTX/comments/1w1va4m/crazy_potential/\">[comments]</a></span>",
+    "link": "https://www.reddit.com/r/ADTX/comments/1w1va4m/crazy_potential/",
+    "sourceName": "مجموعة ريديت (3)",
+    "category": "مُدمج",
+    "pubDate": "2026-08-29T19:15:48.000Z",
     "media": {
       "image": null
     }
