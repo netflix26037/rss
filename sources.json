@@ -715,11 +715,6 @@
     "category": "عام"
   },
   {
-    "name": "CoinDesk",
-    "url": "https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml",
-    "category": "عام"
-  },
-  {
     "name": "The Merkle",
     "url": "https://themerkle.com/feed/",
     "category": "عام"
@@ -857,11 +852,6 @@
   {
     "name": "Blockworks",
     "url": "https://blockworks.co/feed/",
-    "category": "عام"
-  },
-  {
-    "name": "CoinDesk Japan",
-    "url": "https://www.coindeskjapan.com/feed/",
     "category": "عام"
   },
   {
