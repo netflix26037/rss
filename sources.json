@@ -629,12 +629,7 @@
     "url": "https://thedefiant.io/feed/",
     "category": "عام"
   },
-  {
-    "name": "Bitcoin.fr",
-    "url": "https://bitcoin.fr/feed/",
-    "category": "عام"
-  },
-  {
+ {
     "name": "Cryptocurrency News",
     "url": "https://www.investing.com/rss/news_301.rss",
     "category": "عام"
