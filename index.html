@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>REDDIT بالعربي</title>
+
+<!-- إعدادات وضع "التطبيق" عند الإضافة للشاشة الرئيسية بالآيفون -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Reddit بالعربي">
+<meta name="theme-color" content="#030303">
+<meta name="format-detection" content="telephone=no">
+
+<!-- أيقونة الشاشة الرئيسية (Snoo برتقالي) — SVG محوّل مباشرة، لا حاجة لملف خارجي -->
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+
+<!-- ربط بملف الـmanifest لتفعيل خصائص التطبيق الكاملة (اختياري لكن موصى به) -->
+<link rel="manifest" href="manifest.json">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          reddit: {
+            orange: '#FF4500',
+            orangeDark: '#D93A00',
+            bg: '#030303',
+            card: '#1A1A1B',
+            border: '#343536',
+            blue: '#0079D3',
+            upvote: '#FF8717',
+            down: '#7193FF',
+          }
+        },
+        fontFamily: {
+          plex: ["'IBM Plex Sans Arabic'", "'IBM Plex Sans'", 'sans-serif'],
+          mono: ["'IBM Plex Mono'", 'monospace'],
+        }
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+* { box-sizing: border-box; }
+
+html, body {
+  overscroll-behavior-y: contain; /* يمنع "الارتداد" الأبيض عند السحب لأعلى/أسفل مثل تطبيق أصلي */
+  height: 100%;
+}
+
+body {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none; /* يمنع قائمة الضغط المطوّل على الروابط/الصور */
+  touch-action: manipulation; /* يمنع تكبير الزوم بالنقر المزدوج */
+  background: #030303;
+}
+
+/* مساحة إضافية أعلى الهيدر تحسب شريط الحالة (الساعة/البطارية) عند فتح التطبيق من الشاشة الرئيسية بدون شريط سفاري */
+.pt-safe { padding-top: env(safe-area-inset-top); }
+
+.mono { font-family: 'IBM Plex Mono', monospace; }
+
+/* شعار Reddit (Snoo) — دائرة برتقالية مع أذنَي الروبوت المميزتين */
+.snoo-badge {
+  position: relative;
+  width: 34px; height: 34px;
+  background: #FF4500;
+  border-radius: 9999px;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 0 0 2px #030303, 0 2px 6px rgba(255,69,0,0.45);
+}
+.snoo-badge::before, .snoo-badge::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  width: 6px; height: 10px;
+  background: #FF4500;
+  border-radius: 3px;
+}
+.snoo-badge::before { left: 3px; transform: rotate(-25deg); }
+.snoo-badge::after { right: 3px; transform: rotate(25deg); }
+
+.ticker-scroll::-webkit-scrollbar, .chips-scroll::-webkit-scrollbar { display: none; }
+.ticker-scroll, .chips-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+.pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+
+/* مساحة كافية أسفل المحتوى حتى لا يختفي زر "تحميل المزيد" أو آخر مقال خلف
+   الشريط السفلي الثابت، مع احتساب مساحة الأمان لهواتف الآيفون ذات الحافة */
+.pb-nav-safe { padding-bottom: calc(6.5rem + env(safe-area-inset-bottom)); }
+
+/* شاشة البدء */
+#splash-screen {
+  opacity: 1;
+  transition: opacity .6s ease;
+}
+#splash-screen.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+.splash-stage {
+  perspective: 700px;
+}
+#splash-snoo {
+  animation: snooDance 1.5s ease-in-out infinite;
+  transform-origin: center bottom;
+  transform-style: preserve-3d;
+}
+@keyframes snooDance {
+  0%   { transform: rotateY(0deg)   rotateZ(0deg)   translateY(0)   scale(1); }
+  15%  { transform: rotateY(-28deg) rotateZ(-9deg)  translateY(-8px) scale(1.06); }
+  30%  { transform: rotateY(18deg)  rotateZ(7deg)   translateY(0)   scale(0.97); }
+  45%  { transform: rotateY(-18deg) rotateZ(-7deg)  translateY(-10px) scale(1.05); }
+  60%  { transform: rotateY(24deg)  rotateZ(9deg)   translateY(0)   scale(1); }
+  75%  { transform: rotateY(-12deg) rotateZ(-5deg)  translateY(-5px) scale(1.02); }
+  100% { transform: rotateY(0deg)   rotateZ(0deg)   translateY(0)   scale(1); }
+}
+/* غمزة دورية على العين اليمنى بعد ما تكون العينان مفتوحتين */
+#splash-eye-right {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: splashWink 3.2s ease-in-out infinite;
+}
+@keyframes splashWink {
+  0%, 15%, 100% { transform: scaleY(1); }
+  19%, 23% { transform: scaleY(0.08); }
+}
+#splash-eye-right { animation-duration: 1.8s; }
+@keyframes splashFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.pull-indicator {
+  position: fixed;
+  top: calc(72px + env(safe-area-inset-top));
+  left: 50%;
+  width: 38px;
+  height: 38px;
+  transform: translate(-50%, -30px) rotate(0deg);
+  opacity: 0;
+  background: #1A1A1B;
+  border: 1px solid #343536;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FF4500;
+  font-size: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+  z-index: 60;
+  pointer-events: none;
+  transition: opacity .15s ease, background .2s ease, border-color .2s ease;
+}
+.pull-indicator.ready {
+  background: #FF4500;
+  color: #fff;
+  border-color: #FF4500;
+}
+.pull-indicator.spinning i {
+  animation: pullSpin 0.7s linear infinite;
+}
+@keyframes pullSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.chip {
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+.chip.active {
+  background: #FF4500;
+  color: #fff;
+  font-weight: 700;
+  border-color: #FF4500;
+}
+
+@keyframes pulseSoft { 0%,100% { opacity: 1; } 50% { opacity: .5; } }
+.animate-pulse-soft { animation: pulseSoft 1.5s ease-in-out infinite; }
+
+.upvoted { color: #FF4500 !important; }
+</style>
+</head>
+<body class="text-gray-100 min-h-screen flex flex-col select-none pb-nav-safe">
+
+<!-- شاشة البدء (Splash Screen) -->
+<div id="splash-screen" class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-reddit-bg">
+  <p id="splash-greeting" class="mb-5 text-[35px] font-bold text-white" style="animation: splashFadeIn .8s ease .15s both;"></p>
+  <div class="splash-stage">
+    <svg id="splash-snoo" viewBox="0 0 200 200" class="w-28 h-28 drop-shadow-[0_0_25px_rgba(255,69,0,0.45)]">
+      <!-- الأذنان -->
+      <ellipse cx="55" cy="40" rx="12" ry="20" fill="#FF4500" transform="rotate(-28 55 40)"/>
+      <ellipse cx="145" cy="40" rx="12" ry="20" fill="#FF4500" transform="rotate(28 145 40)"/>
+      <!-- الرأس -->
+      <circle cx="100" cy="105" r="80" fill="#FF4500"/>
+      <!-- العين اليسرى (مفتوحة دائماً) -->
+      <circle cx="72" cy="95" r="15" fill="#fff"/>
+      <circle cx="72" cy="97" r="7" fill="#1A1A1B"/>
+      <!-- العين اليمنى (مفتوحة، وتغمز بشكل دوري) -->
+      <g id="splash-eye-right">
+        <circle cx="128" cy="95" r="15" fill="#fff"/>
+        <circle cx="128" cy="97" r="7" fill="#1A1A1B"/>
+      </g>
+      <!-- الابتسامة -->
+      <path d="M68 135 Q100 165 132 135" stroke="#1A1A1B" stroke-width="8" fill="none" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <h1 class="mt-5 text-lg font-bold text-white">REDDIT <span class="text-reddit-orange">بالعربي</span></h1>
+  <p class="mt-2 text-[11px] text-gray-500 mono tracking-wide" style="animation: splashFadeIn 1s ease .4s both;">
+    صمم بواسطة <span class="text-reddit-orange font-bold">MOHAMMED</span>
+  </p>
+</div>
+<script>
+  (function() {
+    var el = document.getElementById('splash-greeting');
+    if (!el) return;
+    var now = new Date();
+    if (now.getDay() === 5) {
+      el.innerText = 'جمعة مباركة 🕌';
+    } else if (now.getHours() < 12) {
+      el.innerText = 'صباح الخير ☀️';
+    } else {
+      el.innerText = 'مساء الخير 🌙';
+    }
+  })();
+</script>
+
+<!-- مؤشر السحب للتحديث -->
+<div id="pull-indicator" class="pull-indicator">
+  <i class="fa-brands fa-reddit-alien"></i>
+</div>
+
+<!-- الهيدر العلوي -->
+<header id="main-header" class="pt-safe bg-reddit-bg/95 border-b border-reddit-border px-4 py-2.5 sticky top-0 z-40 backdrop-blur-md">
+  <div class="flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <button onclick="toggleSidebar()" class="text-gray-300 text-lg p-1.5 hover:bg-white/5 rounded-lg active:scale-95 transition">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="flex items-center gap-2 cursor-pointer active:opacity-80 transition">
+        <div class="snoo-badge text-white">
+          <i class="fa-brands fa-reddit-alien text-base"></i>
+        </div>
+        <div>
+          <h1 class="text-sm font-bold text-white leading-none">REDDIT <span class="text-reddit-orange">بالعربي</span></h1>
+          <span id="digital-clock" class="text-[10px] mono text-gray-500">00:00:00</span>
+        </div>
+      </div>
+    </div>
+    <span class="text-[11px] font-bold text-reddit-orange bg-reddit-orange/10 px-2.5 py-1 rounded-full border border-reddit-orange/30">
+      نسخة الايفون
+    </span>
+  </div>
+
+  <!-- تصنيفات -->
+  <div id="category-chips" class="chips-scroll flex items-center gap-2 overflow-x-auto mt-3 pb-0.5">
+    <span class="text-[11px] text-gray-500 px-2 py-1.5">جاري تحميل التصنيفات...</span>
+  </div>
+</header>
+
+<!-- القائمة الجانبية -->
+<div id="sidebar-drawer" class="fixed inset-0 bg-black/80 z-50 hidden justify-center items-end sm:items-center transition-opacity">
+  <div class="bg-reddit-card rounded-t-2xl sm:rounded-2xl w-full max-w-lg max-h-[80vh] flex flex-col p-4 overflow-hidden border border-reddit-border shadow-2xl">
+    <div class="flex justify-between items-center mb-3 pb-2 border-b border-reddit-border">
+      <h2 class="text-sm font-bold text-gray-200 flex items-center gap-2">
+        <i class="fa-solid fa-bars text-reddit-orange"></i> المصادر والأقسام
+      </h2>
+      <button onclick="toggleSidebar()" class="text-gray-400 p-1 text-lg"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="overflow-y-auto space-y-3 pr-1" id="drawer-content">
+      <div id="sources-container" class="space-y-2">
+        <p class="text-xs text-gray-400 text-center py-4">جاري تحميل المصادر...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- المحتوى الرئيسي -->
+<main class="px-3 py-4 flex-grow w-full max-w-md mx-auto">
+  <div class="flex justify-between items-center mb-4 pb-2 border-b border-reddit-border">
+    <h2 id="current-feed-title" class="text-xs font-bold text-gray-200 truncate flex items-center gap-1.5">
+      <i class="fa-solid fa-fire text-reddit-orange"></i> التحديثات الأخيرة
+    </h2>
+    <span id="results-count" class="text-[10px] mono text-gray-500"></span>
+  </div>
+  <div id="articles-container" class="flex flex-col gap-2.5">
+    <div class="text-center py-16 text-gray-500 bg-reddit-card rounded-xl border border-reddit-border">
+      <i class="fa-brands fa-reddit text-4xl mb-2 text-reddit-orange animate-pulse"></i>
+      <p class="text-xs font-medium">جاري جلب المنشورات...</p>
+    </div>
+  </div>
+  <!-- عنصر مراقبة نهاية القائمة: يجلب المزيد تلقائياً عند الاقتراب منه، بدل زر -->
+  <div id="scroll-sentinel" class="h-6 flex items-center justify-center mt-3">
+    <span id="loading-more-indicator" class="hidden text-[11px] text-gray-500 mono">
+      <i class="fa-solid fa-circle-notch fa-spin"></i> جاري تحميل المزيد...
+    </span>
+    <span id="end-of-list-indicator" class="hidden text-[11px] text-gray-600">وصلت لنهاية القائمة</span>
+  </div>
+</main>
+
+<!-- شريط التنقل السفلي -->
+<nav class="fixed bottom-0 inset-x-0 bg-reddit-bg/95 border-t border-reddit-border backdrop-blur-lg z-50 pb-safe">
+  <div class="flex items-center justify-around py-2 max-w-md mx-auto text-xs font-bold">
+    <button onclick="switchTab('unread')" id="tab-unread" class="flex flex-col items-center gap-1 text-reddit-orange transition active:scale-95">
+      <div class="relative">
+        <i class="fa-solid fa-envelope-open-text text-lg"></i>
+        <span id="count-unread" class="absolute -top-1.5 -right-3 bg-reddit-orange text-white text-[9px] px-1.5 py-0.2 rounded-full min-w-[16px] text-center">0</span>
+      </div>
+      <span class="text-[10px]">غير مقروء</span>
+    </button>
+    <button onclick="switchTab('favorites')" id="tab-favorites" class="flex flex-col items-center gap-1 text-gray-400 transition active:scale-95">
+      <div class="relative">
+        <i class="fa-solid fa-star text-lg text-amber-400"></i>
+        <span id="count-favorites" class="absolute -top-1.5 -right-3 bg-amber-500 text-black text-[9px] px-1.5 py-0.2 rounded-full min-w-[16px] text-center">0</span>
+      </div>
+      <span class="text-[10px]">المفضلة</span>
+    </button>
+    <button onclick="switchTab('read')" id="tab-read" class="flex flex-col items-center gap-1 text-gray-400 transition active:scale-95">
+      <div class="relative">
+        <i class="fa-solid fa-check-double text-lg text-reddit-blue"></i>
+        <span id="count-read" class="absolute -top-1.5 -right-3 bg-reddit-blue text-white text-[9px] px-1.5 py-0.2 rounded-full min-w-[16px] text-center">0</span>
+      </div>
+      <span class="text-[10px]">تمت القراءة</span>
+    </button>
+  </div>
+</nav>
+
+<script>
+let sources = [];
+let allFetchedArticles = [];
+let currentTab = 'unread';
+let selectedCategory = 'الكل';
+let readIds = new Set(JSON.parse(localStorage.getItem('app_read_ids') || '[]'));
+let favoriteArticles = JSON.parse(localStorage.getItem('app_favorite_articles') || '[]');
+let observer = null;
+
+// كاش الترجمة الدائم: يُخزَّن بذاكرة المتصفح فلا تُعاد ترجمة نفس النص عبر
+// الجلسات المختلفة، مما يوفّر الحصة اليومية المجانية لخدمة الترجمة بشكل كبير
+const TRANSLATION_CACHE_KEY = 'app_translation_cache_v1';
+const TRANSLATION_CACHE_LIMIT = 800; // حد أقصى للعناصر المخزّنة حتى لا تتضخم الذاكرة
+let translationCache;
+try {
+  const savedCache = JSON.parse(localStorage.getItem(TRANSLATION_CACHE_KEY) || '{}');
+  translationCache = new Map(Object.entries(savedCache));
+} catch (e) {
+  translationCache = new Map();
+}
+
+function persistTranslationCache() {
+  try {
+    // نحتفظ فقط بآخر TRANSLATION_CACHE_LIMIT عنصر عند تجاوز الحد
+    if (translationCache.size > TRANSLATION_CACHE_LIMIT) {
+      const entries = Array.from(translationCache.entries()).slice(-TRANSLATION_CACHE_LIMIT);
+      translationCache = new Map(entries);
+    }
+    localStorage.setItem(TRANSLATION_CACHE_KEY, JSON.stringify(Object.fromEntries(translationCache)));
+  } catch (e) {
+    // تجاهل أخطاء امتلاء مساحة التخزين المحلية
+  }
+}
+
+const translationQueue = [];
+let isTranslating = false;
+
+// عرض مقسّم على دفعات: يقلل عدد العناصر التي تحتاج ترجمة فورية عند كل تبديل
+const PAGE_SIZE = 20;
+let renderedCount = 0;
+let activeList = [];
+
+function toggleSidebar() {
+  const drawer = document.getElementById('sidebar-drawer');
+  drawer.classList.toggle('hidden');
+  drawer.classList.toggle('flex');
+}
+
+function cleanText(raw) {
+  if (!raw) return '';
+  let txt = document.createElement("textarea");
+  txt.innerHTML = raw;
+  let decoded = txt.value;
+  return decoded.replace(/<[^>]*>?/gm, '').replace(/\s+/g, ' ').trim();
+}
+
+function queueTranslation(text, elementId) {
+  if (!text || text.trim() === '') return;
+  if (translationCache.has(text)) {
+    const el = document.getElementById(elementId);
+    if (el) {
+      el.innerText = translationCache.get(text);
+      el.classList.remove('opacity-70', 'animate-pulse-soft');
+    }
+    return;
+  }
+  translationQueue.push({ text, elementId });
+  processTranslationQueue();
+}
+
+async function processTranslationQueue() {
+  if (isTranslating || translationQueue.length === 0) return;
+  isTranslating = true;
+  const { text, elementId } = translationQueue.shift();
+  const el = document.getElementById(elementId);
+  try {
+    const queryText = text.substring(0, 300);
+    const translated = await translateClientSide(queryText);
+    if (translated) {
+      translationCache.set(text, translated);
+      persistTranslationCache();
+      if (el) el.innerText = translated;
+    } else {
+      console.warn('تعذّرت ترجمة النص من كل المزوّدين:', queryText.substring(0, 40));
+    }
+  } catch (error) {
+    console.warn('خطأ أثناء الترجمة:', error);
+  } finally {
+    if (el) el.classList.remove('opacity-70', 'animate-pulse-soft');
+    setTimeout(() => {
+      isTranslating = false;
+      processTranslationQueue();
+    }, 200);
+  }
+}
+
+// الموقع مستضاف على GitHub Pages (ثابت 100%، بدون خادم/Serverless Functions)،
+// لذلك نستدعي الترجمة مباشرة من المتصفح عبر مزوّدين يدعمان CORS فعلياً.
+const LINGVA_MIRRORS = [
+  'https://lingva.ml',
+  'https://lingva.garudalinux.org',
+  'https://translate.plausibility.cloud'
+];
+
+// أضف بريدك هنا لرفع حد الترجمة المجاني من 5,000 إلى 50,000 حرف باليوم (موثّق رسمياً من MyMemory)
+// يفضّل استخدام بريد ثانوي وليس بريدك الأساسي لأنه سيظهر في كود الصفحة العلني
+const MYMEMORY_EMAIL = 'netflix26037@gmail.com';
+
+// Microsoft Translator (المزوّد الأساسي الجديد): أسرع وأدق وحصته أكبر بكثير
+// (2 مليون حرف مجاناً شهرياً على مستوى F0). أنشئ مورد "Translator" مجاني من
+// portal.azure.com واحصل على المفتاح والمنطقة (Region) من صفحة "Keys and Endpoint"
+// تنبيه: المفتاح سيكون ظاهراً بكود الصفحة العلني — هذا مقبول لأن مستوى F0 مجاني
+// بحد أقصى صارم (لا رسوم إضافية أبداً)، لكن لو استُنزف الحد من طرف آخرين سينفد بسرعة أكبر
+const AZURE_TRANSLATOR_KEY = ''; // مثال: 'a1b2c3d4e5f6...'
+const AZURE_TRANSLATOR_REGION = ''; // مثال: 'uaenorth' أو 'eastus'
+
+// كشف تلقائي مبسّط للغة المصدر (يابانية/صينية/إنجليزية) — بعض المصادر مثل
+// CRYPTO TIMES يابانية وBlockTempo صينية، وMyMemory تحتاج رمز اللغة الصحيح
+function detectSourceLang(text) {
+  if (/[\u3040-\u30ff]/.test(text)) return 'ja'; // هيراغانا/كاتاكانا = يابانية
+  if (/[\u4e00-\u9fff]/.test(text)) return 'zh-CN'; // رموز صينية (بدون هيراغانا)
+  return 'en';
+}
+
+// المحاولة الأولى: Microsoft Translator (إن كان مفعّلاً بمفتاح صالح)
+async function translateViaAzure(text, sourceLang) {
+  if (!AZURE_TRANSLATOR_KEY || !AZURE_TRANSLATOR_REGION) return null;
+  try {
+    const url = `https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&to=ar&from=${sourceLang === 'zh-CN' ? 'zh-Hans' : sourceLang}`;
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Ocp-Apim-Subscription-Key': AZURE_TRANSLATOR_KEY,
+        'Ocp-Apim-Subscription-Region': AZURE_TRANSLATOR_REGION,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify([{ Text: text }])
+    });
+    if (res.ok) {
+      const data = await res.json();
+      const translated = data?.[0]?.translations?.[0]?.text;
+      if (translated) return translated;
+    } else {
+      console.warn('فشل Microsoft Translator:', res.status);
+    }
+  } catch (e) {
+    console.warn('خطأ Microsoft Translator:', e.message);
+  }
+  return null;
+}
+
+async function translateClientSide(text) {
+  const sourceLang = detectSourceLang(text);
+
+  // المحاولة 0: Microsoft Translator (أسرع وأدق، إذا كان مفعّلاً بمفتاح)
+  const azureResult = await translateViaAzure(text, sourceLang);
+  if (azureResult) return azureResult;
+
+  // المحاولة 1: MyMemory — مصمّمة أصلاً لطلبات المتصفح المباشرة (CORS مفعّل)
+  try {
+    const emailParam = MYMEMORY_EMAIL ? `&de=${encodeURIComponent(MYMEMORY_EMAIL)}` : '';
+    const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${sourceLang}|ar${emailParam}`;
+    const res = await fetch(url);
+    if (res.ok) {
+      const data = await res.json();
+      const translated = data?.responseData?.translatedText;
+      if (translated && !translated.toUpperCase().includes('MYMEMORY WARNING') && data.responseStatus === 200) {
+        return translated;
+      }
+    }
+  } catch (e) {
+    console.warn('فشل MyMemory:', e.message);
+  }
+
+  // المحاولة 2: Lingva (عدة مرايا احتياطية)
+  for (const base of LINGVA_MIRRORS) {
+    try {
+      const url = `${base}/api/v1/${sourceLang}/ar/${encodeURIComponent(text)}`;
+      const res = await fetch(url);
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.translation) return data.translation;
+      }
+    } catch (e) {
+      console.warn(`فشل Lingva (${base}):`, e.message);
+    }
+  }
+
+  return null;
+}
+
+async function fetchDirectData() {
+  const paths = ['feed.json', './feed.json', '/feed.json'];
+  for (let path of paths) {
+    try {
+      const response = await fetch(`${path}?nocache=${Date.now()}`);
+      if (response.ok) {
+        const data = await response.json();
+        let rawArticles = [];
+        if (Array.isArray(data)) rawArticles = data;
+        else if (data.articles && Array.isArray(data.articles)) rawArticles = data.articles;
+        else if (data.items && Array.isArray(data.items)) rawArticles = data.items;
+        if (rawArticles.length > 0) {
+          return rawArticles.map((art, idx) => ({
+            id: art.id || art.link || art.guid || `art-${idx}-${Date.now()}`,
+            arabicTitle: art.arabicTitle || '',
+            title: art.title || art.originalTitle || '',
+            arabicDescription: art.arabicDescription || '',
+            description: art.description || art.originalDescription || '',
+            link: art.link || '#',
+            sourceName: art.sourceName || 'Reddit',
+            category: art.category || 'عام',
+            pubDate: art.pubDate || new Date().toISOString(),
+            media: art.media || { image: art.image || null }
+          }));
+        }
+      }
+    } catch (e) {}
+  }
+  return [];
+}
+
+async function fetchSourcesJSON() {
+  try {
+    const response = await fetch(`./sources.json?nocache=${Date.now()}`);
+    if (response.ok) return await response.json();
+  } catch(e) {}
+  return [];
+}
+
+function timeAgo(dateString) {
+  const date = new Date(dateString);
+  const now = new Date();
+  const seconds = Math.floor((now - date) / 1000);
+  if (isNaN(seconds)) return 'الآن';
+  let interval = Math.floor(seconds / 3600);
+  if (interval >= 1) return `منذ ${interval} س`;
+  interval = Math.floor(seconds / 60);
+  if (interval >= 1) return `منذ ${interval} د`;
+  return `الآن`;
+}
+
+// ===== التصنيفات: عرضها كشرائح أفقية بدل تحميل كل شيء دفعة واحدة =====
+function getAllCategories() {
+  const set = new Set();
+  sources.forEach(s => set.add(s.category || 'عام'));
+  allFetchedArticles.forEach(a => set.add(a.category || 'عام'));
+  return ['الكل', ...Array.from(set)];
+}
+
+// عدد المقالات غير المقروءة لكل تصنيف (يُستخدم كعداد بجانب اسم التصنيف)
+function getUnreadCountForCategory(cat) {
+  const unread = allFetchedArticles.filter(a => !readIds.has(a.id));
+  if (cat === 'الكل') return unread.length;
+  return unread.filter(a => (a.category || 'عام') === cat).length;
+}
+
+function renderCategoryChips() {
+  const container = document.getElementById('category-chips');
+  const cats = getAllCategories();
+  container.innerHTML = '';
+  cats.forEach(cat => {
+    const btn = document.createElement('button');
+    const isActive = cat === selectedCategory;
+    const count = getUnreadCountForCategory(cat);
+    btn.className = `chip ${isActive ? 'active' : 'bg-reddit-card text-gray-300 border border-reddit-border'} text-[11px] font-bold px-3 py-1.5 rounded-full shrink-0 inline-flex items-center gap-1.5`;
+    const countClass = isActive
+      ? 'bg-black/20 text-white'
+      : 'bg-reddit-orange/15 text-reddit-orange';
+    btn.innerHTML = `
+      <span>${cat}</span>
+      <span class="${countClass} text-[10px] font-bold px-1.5 rounded-full min-w-[16px] leading-[16px] text-center mono">${count}</span>
+    `;
+    btn.onclick = () => selectCategory(cat);
+    container.appendChild(btn);
+  });
+}
+
+function selectCategory(cat) {
+  selectedCategory = cat;
+  renderCategoryChips();
+  renderCurrentTab();
+}
+
+function renderSources() {
+  const container = document.getElementById('sources-container');
+  container.innerHTML = '';
+  if (!sources || sources.length === 0) {
+    container.innerHTML = `<div class="text-center py-4 text-xs text-gray-400">جميع المصادر متاحة في القائمة الرئيسية</div>`;
+    return;
+  }
+  const grouped = {};
+  sources.forEach((s, idx) => {
+    const cat = s.category || 'عام';
+    if (!grouped[cat]) grouped[cat] = [];
+    grouped[cat].push({ ...s, idx });
+  });
+  for (const [cat, items] of Object.entries(grouped)) {
+    const groupDiv = document.createElement('div');
+    groupDiv.className = 'space-y-1 bg-black/30 p-2.5 rounded-xl border border-reddit-border';
+    groupDiv.innerHTML = `
+      <div class="flex items-center justify-between pb-1 border-b border-reddit-border">
+        <button onclick="filterCategoryFromDrawer('${cat.replace(/'/g, "\\'")}')" class="text-xs font-bold text-reddit-orange flex items-center gap-1">
+          <i class="fa-solid fa-folder-open"></i> ${cat}
+        </button>
+        <span class="text-[10px] text-gray-500 mono">${items.length}</span>
+      </div>
+      <ul class="space-y-1 pt-1.5"></ul>
+    `;
+    const ul = groupDiv.querySelector('ul');
+    items.forEach(item => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <div class="flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-reddit-card text-xs">
+          <button onclick="filterBySource('${item.name.replace(/'/g, "\\'")}')" class="text-right flex-grow truncate">
+            ${item.name}
+          </button>
+        </div>
+      `;
+      ul.appendChild(li);
+    });
+    container.appendChild(groupDiv);
+  }
+}
+
+function filterCategoryFromDrawer(cat) {
+  toggleSidebar();
+  selectCategory(cat);
+}
+
+function filterBySource(sourceName) {
+  toggleSidebar();
+  document.getElementById('current-feed-title').innerHTML = `<i class="fa-solid fa-fire text-reddit-orange"></i> ${sourceName}`;
+  const filtered = allFetchedArticles.filter(a => a.sourceName === sourceName);
+  renderArticlesContainer(filtered, false);
+}
+
+function markAsReadHover(id) {
+  if (!readIds.has(id)) {
+    readIds.add(id);
+    localStorage.setItem('app_read_ids', JSON.stringify([...readIds]));
+    updateCounts();
+  }
+}
+
+// إظهار/إخفاء الوصف الكامل (غير المقصوص) للخبر عند الضغط على زر "ملخص"
+// نضيف إطاراً وخلفية مميزة عند الفتح حتى يكون التغيير واضحاً دائماً، حتى لو
+// كان النص أصلاً قصيراً ولا يوجد فرق بصري من مجرد فك القص
+function toggleSummary(descId, btn) {
+  const el = document.getElementById(descId);
+  if (!el) return;
+  const isExpanded = el.classList.toggle('summary-expanded');
+  el.classList.toggle('line-clamp-3', !isExpanded);
+  el.classList.toggle('p-2.5', isExpanded);
+  el.classList.toggle('rounded-lg', isExpanded);
+  el.classList.toggle('bg-reddit-orange/5', isExpanded);
+  el.classList.toggle('border', isExpanded);
+  el.classList.toggle('border-reddit-orange/20', isExpanded);
+  btn.innerHTML = isExpanded
+    ? '<i class="fa-solid fa-chevron-up text-[9px]"></i> إخفاء'
+    : '<i class="fa-solid fa-align-right text-[9px]"></i> ملخص';
+}
+
+function toggleFavoriteArticle(articleId, event) {
+  if(event) event.stopPropagation();
+  const targetArticle = allFetchedArticles.find(a => a.id === articleId) || favoriteArticles.find(a => a.id === articleId);
+  if (!targetArticle) return;
+  const index = favoriteArticles.findIndex(a => a.id === articleId);
+  if (index > -1) {
+    favoriteArticles.splice(index, 1);
+  } else {
+    favoriteArticles.push(targetArticle);
+  }
+  localStorage.setItem('app_favorite_articles', JSON.stringify(favoriteArticles));
+  updateCounts();
+  renderCurrentTab();
+}
+
+function updateCounts() {
+  const unreadList = allFetchedArticles.filter(a => !readIds.has(a.id));
+  const readList = allFetchedArticles.filter(a => readIds.has(a.id));
+  document.getElementById('count-unread').innerText = unreadList.length;
+  document.getElementById('count-favorites').innerText = favoriteArticles.length;
+  document.getElementById('count-read').innerText = readList.length;
+  renderCategoryChips();
+}
+
+function switchTab(tab) {
+  currentTab = tab;
+  ['unread', 'favorites', 'read'].forEach(t => {
+    const btn = document.getElementById(`tab-${t}`);
+    if (t === tab) {
+      btn.className = "flex flex-col items-center gap-1 text-reddit-orange transition active:scale-95";
+    } else {
+      btn.className = "flex flex-col items-center gap-1 text-gray-400 transition active:scale-95";
+    }
+  });
+  renderCurrentTab();
+}
+
+function renderCurrentTab() {
+  updateCounts();
+  let displayList = [];
+  if (currentTab === 'unread') {
+    displayList = allFetchedArticles.filter(a => !readIds.has(a.id));
+  } else if (currentTab === 'read') {
+    displayList = allFetchedArticles.filter(a => readIds.has(a.id));
+  } else if (currentTab === 'favorites') {
+    displayList = favoriteArticles;
+  }
+  if (selectedCategory && selectedCategory !== 'الكل') {
+    displayList = displayList.filter(a => (a.category || 'عام') === selectedCategory);
+  }
+
+  const titleLabel = selectedCategory === 'الكل' ? 'التحديثات الأخيرة' : selectedCategory;
+  document.getElementById('current-feed-title').innerHTML = `<i class="fa-solid fa-fire text-reddit-orange"></i> ${titleLabel}`;
+
+  renderArticlesContainer(displayList, false);
+}
+
+// عرض تدريجي (Pagination) — لا تُترجم إلا العناصر المعروضة فعليًا، وهذا يقلّل
+// الضغط على خدمة الترجمة وعلى حجم البيانات المطلوب جلبها في كل مرة
+function renderArticlesContainer(fullList, append) {
+  const container = document.getElementById('articles-container');
+  const loadingIndicator = document.getElementById('loading-more-indicator');
+  const endIndicator = document.getElementById('end-of-list-indicator');
+
+  if (!append) {
+    activeList = fullList || [];
+    renderedCount = 0;
+    container.innerHTML = '';
+    translationQueue.length = 0;
+    isTranslating = false;
+    if (observer) observer.disconnect();
+    // مهلة قصيرة قبل السماح للتمرير اللانهائي بالتفعيل، حتى يستقر التخطيط
+    // ولا يبدأ سلسلة تحميل متتالية سريعة فور إعادة تعيين القائمة (مثل التحديث بالسحب)
+    scrollObserverCooldownUntil = Date.now() + 400;
+  }
+
+  document.getElementById('results-count').innerText = activeList.length ? `${activeList.length} منشور` : '';
+
+  if (!activeList || activeList.length === 0) {
+    container.innerHTML = `<div class="text-center py-16 text-gray-500 bg-reddit-card rounded-xl border border-reddit-border text-xs">لا توجد مواضيع في هذا القسم حالياً.</div>`;
+    loadingIndicator.classList.add('hidden');
+    endIndicator.classList.add('hidden');
+    return;
+  }
+
+  if (!observer) {
+    observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const artId = entry.target.getAttribute('data-id');
+          if (artId) {
+            markAsReadHover(artId);
+            observer.unobserve(entry.target);
+          }
+        }
+      });
+    }, { threshold: 0.5 });
+  }
+
+  const nextSlice = activeList.slice(renderedCount, renderedCount + PAGE_SIZE);
+
+  nextSlice.forEach((item, sliceIdx) => {
+    const globalIdx = renderedCount + sliceIdx;
+    const isFav = favoriteArticles.some(a => a.id === item.id);
+    const agoText = timeAgo(item.pubDate);
+    const hasArabicTitle = Boolean(item.arabicTitle && item.arabicTitle.trim());
+    const hasArabicDesc = Boolean(item.arabicDescription && item.arabicDescription.trim());
+    const initialTitle = cleanText(hasArabicTitle ? item.arabicTitle : item.title);
+    const initialDesc = cleanText(hasArabicDesc ? item.arabicDescription : item.description);
+    const titleLoadingClass = !hasArabicTitle ? 'opacity-70 animate-pulse-soft' : '';
+    const descLoadingClass = !hasArabicDesc ? 'opacity-70 animate-pulse-soft' : '';
+
+    // تناوب خلفية المقالات: أبيض / رمادي غامق قريب من الأسود، على طراز Reddit القديم
+    const isAlt = globalIdx % 2 === 1;
+    const cardBg = isAlt ? 'bg-gray-900' : 'bg-white';
+    const cardBorder = isAlt ? 'border-gray-700' : 'border-gray-200';
+    const titleColor = isAlt ? 'text-white' : 'text-gray-900';
+    const descColor = isAlt ? 'text-gray-300' : 'text-gray-600';
+    const metaColor = isAlt ? 'text-gray-400' : 'text-gray-500';
+
+    let mediaHTML = '';
+    if (item.media && item.media.image) {
+      const mediaBg = isAlt ? 'bg-black border-gray-700' : 'bg-gray-100 border-gray-200';
+      mediaHTML = `
+        <div class="my-2 overflow-hidden rounded-lg border ${mediaBg}">
+          <img src="${item.media.image}" alt="Media" class="w-full max-h-[250px] object-cover" loading="lazy" onerror="this.style.display='none'">
+        </div>`;
+    }
+
+    const titleId = `title-${globalIdx}`;
+    const descId = `desc-${globalIdx}`;
+
+    const card = document.createElement('article');
+    card.setAttribute('data-id', item.id);
+    card.className = `w-full ${cardBg} border ${cardBorder} p-4 rounded-xl flex flex-col justify-between relative hover:border-gray-300 transition shadow-sm`;
+    card.innerHTML = `
+      <div>
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex items-center gap-1.5">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-reddit-orange/10 text-reddit-orange border border-reddit-orange/25">
+              <i class="fa-brands fa-reddit-alien"></i> ${item.sourceName || 'Reddit'}
+            </span>
+            <span class="text-[9px] mono ${metaColor}">${item.category || 'عام'}</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-[10px] mono ${metaColor}">
+              <i class="fa-regular fa-clock"></i> ${agoText}
+            </span>
+            <button onclick="toggleFavoriteArticle('${item.id.replace(/'/g, "\\'")}', event)" class="text-lg p-1 active:scale-125 transition ${isFav ? 'upvoted' : (isAlt ? 'text-gray-500' : 'text-gray-400')}">
+              <i class="${isFav ? 'fa-solid' : 'fa-regular'} fa-star"></i>
+            </button>
+          </div>
+        </div>
+        <h3 id="${titleId}" class="font-bold text-base leading-snug mb-1.5 ${titleColor} ${titleLoadingClass}">${initialTitle}</h3>
+        ${mediaHTML}
+        <p id="${descId}" class="${descColor} text-sm line-clamp-3 mb-3 leading-relaxed ${descLoadingClass}">${initialDesc}</p>
+      </div>
+      <div class="flex items-center justify-between pt-2 border-t ${cardBorder} mt-1 gap-2">
+        <a href="${item.link}" target="_blank" class="bg-reddit-orange text-white px-3 py-1.5 rounded-full text-[11px] font-bold flex items-center gap-1.5 transition active:scale-95 hover:bg-reddit-orangeDark">
+          زيارة المصدر <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+        </a>
+        <button onclick="toggleSummary('${descId}', this)" class="px-3 py-1.5 rounded-full text-[11px] font-bold flex items-center gap-1.5 transition active:scale-95 border ${isAlt ? 'border-gray-600 text-gray-300 hover:bg-white/5' : 'border-gray-300 text-gray-700 hover:bg-gray-100'}">
+          <i class="fa-solid fa-align-right text-[9px]"></i> ملخص
+        </button>
+      </div>
+    `;
+    container.appendChild(card);
+
+    if (currentTab === 'unread') {
+      observer.observe(card);
+    }
+
+    if (!hasArabicTitle && initialTitle) {
+      queueTranslation(initialTitle, titleId);
+    }
+    if (!hasArabicDesc && initialDesc) {
+      queueTranslation(initialDesc, descId);
+    }
+  });
+
+  renderedCount += nextSlice.length;
+  isLoadingMore = false;
+  loadingIndicator.classList.add('hidden');
+
+  if (renderedCount < activeList.length) {
+    endIndicator.classList.add('hidden');
+  } else {
+    endIndicator.classList.remove('hidden');
+  }
+}
+
+function loadMore() {
+  if (isLoadingMore || renderedCount >= activeList.length) return;
+  isLoadingMore = true;
+  document.getElementById('loading-more-indicator').classList.remove('hidden');
+  document.getElementById('end-of-list-indicator').classList.add('hidden');
+  // تأخير بسيط حتى يظهر مؤشر التحميل بشكل ملحوظ للمستخدم قبل إضافة الدفعة التالية
+  setTimeout(() => {
+    renderArticlesContainer(activeList, true);
+  }, 250);
+}
+
+// مراقبة الاقتراب من نهاية القائمة لتحميل المزيد تلقائياً أثناء التمرير (بدون زر)
+let isLoadingMore = false;
+let scrollObserverCooldownUntil = 0; // يمنع تسلسل تحميل سريع متتالي فور إعادة تعيين القائمة (كالتحديث بالسحب)
+function initInfiniteScroll() {
+  const sentinel = document.getElementById('scroll-sentinel');
+  const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !isLoadingMore && renderedCount < activeList.length && Date.now() > scrollObserverCooldownUntil) {
+        loadMore();
+      }
+    });
+  }, { rootMargin: '150px 0px 150px 0px' });
+  scrollObserver.observe(sentinel);
+}
+
+// ===== السحب للتحديث (Pull to Refresh) =====
+const PULL_THRESHOLD = 70;
+let pullStartY = 0;
+let pullDistance = 0;
+let isPulling = false;
+let isRefreshing = false;
+
+function initPullToRefresh() {
+  const indicator = document.getElementById('pull-indicator');
+
+  document.addEventListener('touchstart', (e) => {
+    if (window.scrollY <= 0 && !isRefreshing) {
+      pullStartY = e.touches[0].clientY;
+      isPulling = true;
+    }
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!isPulling || isRefreshing) return;
+    const currentY = e.touches[0].clientY;
+    pullDistance = currentY - pullStartY;
+
+    if (pullDistance > 0 && window.scrollY <= 0) {
+      // نمنع الارتداد الافتراضي للمتصفح أثناء السحب لأسفل من أعلى الصفحة
+      if (e.cancelable) e.preventDefault();
+      const progress = Math.min(pullDistance / PULL_THRESHOLD, 1);
+      indicator.style.opacity = progress;
+      indicator.style.transform = `translate(-50%, ${-30 + progress * 60}px) rotate(${pullDistance * 2}deg)`;
+      indicator.classList.toggle('ready', pullDistance > PULL_THRESHOLD);
+    } else {
+      isPulling = false;
+    }
+  }, { passive: false });
+
+  document.addEventListener('touchend', async () => {
+    if (!isPulling) return;
+    isPulling = false;
+
+    if (pullDistance > PULL_THRESHOLD && !isRefreshing) {
+      isRefreshing = true;
+      indicator.classList.add('spinning', 'ready');
+      indicator.style.opacity = 1;
+      indicator.style.transform = 'translate(-50%, 30px)';
+
+      try {
+        // حد أقصى 10 ثوانٍ للتحديث حتى لا يعلق المؤشر للأبد عند بطء الشبكة أو تعطّلها
+        await Promise.race([
+          refreshFeed(),
+          new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 10000))
+        ]);
+      } catch (err) {
+        console.warn('فشل التحديث بالسحب:', err.message);
+      } finally {
+        // finally تضمن رجوع الواجهة لوضعها الطبيعي دائماً، نجح التحديث أو فشل
+        isRefreshing = false;
+        indicator.classList.remove('spinning', 'ready');
+      }
+    }
+
+    indicator.style.opacity = 0;
+    indicator.style.transform = 'translate(-50%, -30px)';
+    pullDistance = 0;
+  });
+
+  // إذا انقطعت لفتة اللمس فجأة (مثل تدخّل إيماءة نظام)، نصفّر الحالة حتى لا تعلق
+  document.addEventListener('touchcancel', () => {
+    isPulling = false;
+    pullDistance = 0;
+    if (!isRefreshing) {
+      indicator.style.opacity = 0;
+      indicator.style.transform = 'translate(-50%, -30px)';
+      indicator.classList.remove('spinning', 'ready');
+    }
+  });
+}
+
+async function refreshFeed() {
+  try {
+    sources = await fetchSourcesJSON();
+  } catch (e) {
+    console.warn('فشل تحديث المصادر:', e.message);
+  }
+
+  try {
+    allFetchedArticles = await fetchDirectData();
+  } catch (e) {
+    console.warn('فشل تحديث الأخبار:', e.message);
+  }
+
+  try {
+    renderSources();
+    renderCategoryChips();
+    renderCurrentTab();
+  } catch (e) {
+    console.warn('فشل عرض المحتوى بعد التحديث:', e.message);
+  }
+}
+
+// نقيس الارتفاع الفعلي للشريط السفلي الثابت ونضبط حشو الصفحة بدقة بدل تخمين
+// قيمة CSS ثابتة — هذا يضمن عدم اختفاء زر "تحميل المزيد" خلف الشريط مهما
+// اختلف حجم الخط أو الجهاز أو مساحة الأمان (Safe Area)
+function adjustBottomSpacing() {
+  const nav = document.querySelector('nav');
+  if (nav) {
+    const navHeight = nav.getBoundingClientRect().height;
+    document.body.style.paddingBottom = (navHeight + 28) + 'px';
+  }
+}
+
+function startClock() {
+  setInterval(() => {
+    const el = document.getElementById('digital-clock');
+    if (el) el.innerText = new Date().toTimeString().split(' ')[0];
+  }, 1000);
+}
+
+window.onload = async function() {
+  try {
+    startClock();
+    initPullToRefresh();
+    initInfiniteScroll();
+    adjustBottomSpacing();
+    window.addEventListener('resize', adjustBottomSpacing);
+    window.addEventListener('orientationchange', adjustBottomSpacing);
+    sources = await fetchSourcesJSON();
+    renderSources();
+    renderCategoryChips();
+    allFetchedArticles = await fetchDirectData();
+    renderCategoryChips();
+    renderCurrentTab();
+  } catch (err) {
+    console.warn('خطأ أثناء تحميل الصفحة:', err.message);
+  } finally {
+    // finally تضمن إخفاء شاشة البدء دائماً، نجح التحميل أو فشل بأي خطأ
+    hideSplashScreen();
+  }
+};
+
+// شبكة أمان مستقلة: تخفي شاشة البدء بالقوة بعد 8 ثوانٍ مهما صار، حتى لو
+// تعلّق onload نفسه بشكل كامل لسبب غير متوقع (حلقة تكرار، تعليق شبكة تام...)
+setTimeout(() => {
+  const splash = document.getElementById('splash-screen');
+  if (splash && !splash.classList.contains('hide')) {
+    console.warn('تم إخفاء شاشة البدء إجبارياً بعد انتهاء المهلة الآمنة');
+    splash.classList.add('hide');
+    setTimeout(() => splash.remove(), 650);
+  }
+}, 8000);
+
+// إخفاء شاشة البدء بعد اكتمال التحميل، مع حد أدنى لمدة العرض حتى لا تختفي
+// بسرعة جداً على الاتصالات السريعة قبل ما يشوفها المستخدم
+const SPLASH_MIN_DURATION = 2200;
+const splashStartTime = Date.now();
+function hideSplashScreen() {
+  const splash = document.getElementById('splash-screen');
+  if (!splash) return;
+  const elapsed = Date.now() - splashStartTime;
+  const remaining = Math.max(SPLASH_MIN_DURATION - elapsed, 0);
+  setTimeout(() => {
+    splash.classList.add('hide');
+    setTimeout(() => splash.remove(), 650);
+  }, remaining);
+}
+</script>
+</body>
+</html>
