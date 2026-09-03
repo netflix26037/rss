@@ -978,5 +978,10 @@
     "name": "Benzinga",
     "url": "https://www.benzinga.com/feed",
     "category": "اسهم"
+  },
+  {
+    "name": "Bloomberg Crypto",
+    "url": "https://feeds.bloomberg.com/Crypto/news.rss",
+    "category": "كريبتو"
   }
 ]
