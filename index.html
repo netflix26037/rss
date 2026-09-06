@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReadSync</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --card: #171a21;
+    --text: #e8e8ea;
+    --muted: #8b8f9a;
+    --accent: #5b8cff;
+    --border: #262a33;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 20px 16px 80px; }
+  h1 { font-size: 20px; margin: 0 0 16px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: #0c0e12;
+    color: var(--text);
+    margin-bottom: 8px;
+    font-size: 15px;
+  }
+  button {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: none;
+    background: var(--accent);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  button.secondary { background: #2a2f3a; color: var(--text); }
+  button.small { padding: 6px 10px; font-size: 13px; }
+  .row { display: flex; gap: 8px; }
+  .row input { flex: 1; }
+  #app { display: none; }
+  .topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .muted { color: var(--muted); font-size: 13px; }
+  .feed-item { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--border); }
+  .feed-item:last-child { border-bottom: none; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 12px; }
+  .tabs button.active { background: var(--accent); }
+  .article {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .article:last-child { border-bottom: none; }
+  .article.is-read { opacity: 0.45; }
+  .article a { color: var(--text); text-decoration: none; font-weight: 600; }
+  .article a:hover { text-decoration: underline; }
+  .article .meta { color: var(--muted); font-size: 12px; margin: 2px 0 6px; }
+  .article .snippet { color: var(--muted); font-size: 13px; margin-bottom: 6px; }
+  .error { color: #ff6b6b; font-size: 13px; margin-top: 4px; }
+  #authMsg { min-height: 18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div id="auth" class="card">
+    <h1>ReadSync</h1>
+    <p class="muted">سجّل حسابًا واحدًا، واستخدمه من الكمبيوتر والجوال لمتابعة نفس قائمة المقروء/غير المقروء.</p>
+    <input id="email" type="email" placeholder="البريد الإلكتروني">
+    <input id="password" type="password" placeholder="كلمة المرور">
+    <div class="row">
+      <button onclick="doLogin()">تسجيل الدخول</button>
+      <button class="secondary" onclick="doRegister()">إنشاء حساب</button>
+    </div>
+    <div id="authMsg" class="error"></div>
+  </div>
+
+  <div id="app">
+    <div class="topbar">
+      <div><strong id="whoami"></strong></div>
+      <button class="secondary small" onclick="logout()">تسجيل الخروج</button>
+    </div>
+
+    <div class="card">
+      <div class="row">
+        <input id="feedUrl" placeholder="رابط RSS، مثال: https://hnrss.org/frontpage">
+        <button onclick="addFeed()">إضافة</button>
+      </div>
+      <div id="feedList"></div>
+    </div>
+
+    <div class="tabs">
+      <button id="tabAll" class="active" onclick="setFilter(false)">الكل</button>
+      <button id="tabUnread" onclick="setFilter(true)">غير المقروء فقط</button>
+      <button class="secondary" onclick="loadArticles()">تحديث</button>
+    </div>
+
+    <div id="articles" class="card"></div>
+  </div>
+
+</div>
+
+<script>
+let token = localStorage.getItem('readsync_token');
+let unreadOnly = false;
+
+function authHeaders() {
+  return { 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' };
+}
+
+async function doRegister() {
+  await authAction('/api/register');
+}
+async function doLogin() {
+  await authAction('/api/login');
+}
+
+async function authAction(path) {
+  const email = document.getElementById('email').value.trim();
+  const password = document.getElementById('password').value;
+  const msg = document.getElementById('authMsg');
+  msg.textContent = '';
+  try {
+    const res = await fetch(path, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password })
+    });
+    const data = await res.json();
+    if (!res.ok) { msg.textContent = data.error || 'حدث خطأ'; return; }
+    token = data.token;
+    localStorage.setItem('readsync_token', token);
+    showApp(data.email);
+  } catch (e) {
+    msg.textContent = 'تعذّر الاتصال بالسيرفر';
+  }
+}
+
+function logout() {
+  localStorage.removeItem('readsync_token');
+  token = null;
+  document.getElementById('app').style.display = 'none';
+  document.getElementById('auth').style.display = 'block';
+}
+
+function showApp(email) {
+  document.getElementById('auth').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+  document.getElementById('whoami').textContent = email;
+  loadFeeds();
+  loadArticles();
+}
+
+async function loadFeeds() {
+  const res = await fetch('/api/feeds', { headers: authHeaders() });
+  if (!res.ok) return;
+  const feeds = await res.json();
+  const el = document.getElementById('feedList');
+  el.innerHTML = feeds.length ? '' : '<p class="muted">لا توجد مصادر بعد.</p>';
+  feeds.forEach(f => {
+    const div = document.createElement('div');
+    div.className = 'feed-item';
+    div.innerHTML = `
+      <span>${escapeHtml(f.title)}</span>
+      <span>
+        <button class="small secondary" onclick="refreshFeed('${f.id}')">تحديث</button>
+        <button class="small secondary" onclick="deleteFeed('${f.id}')">حذف</button>
+      </span>`;
+    el.appendChild(div);
+  });
+}
+
+async function addFeed() {
+  const url = document.getElementById('feedUrl').value.trim();
+  if (!url) return;
+  const res = await fetch('/api/feeds', { method: 'POST', headers: authHeaders(), body: JSON.stringify({ url }) });
+  const data = await res.json();
+  if (!res.ok) { alert(data.error || 'تعذّرت إضافة المصدر'); return; }
+  document.getElementById('feedUrl').value = '';
+  loadFeeds();
+  loadArticles();
+}
+
+async function refreshFeed(id) {
+  await fetch(`/api/feeds/${id}/refresh`, { method: 'POST', headers: authHeaders() });
+  loadArticles();
+}
+
+async function deleteFeed(id) {
+  await fetch(`/api/feeds/${id}`, { method: 'DELETE', headers: authHeaders() });
+  loadFeeds();
+  loadArticles();
+}
+
+function setFilter(val) {
+  unreadOnly = val;
+  document.getElementById('tabAll').classList.toggle('active', !val);
+  document.getElementById('tabUnread').classList.toggle('active', val);
+  loadArticles();
+}
+
+async function loadArticles() {
+  const res = await fetch('/api/articles?unreadOnly=' + unreadOnly, { headers: authHeaders() });
+  if (!res.ok) return;
+  const articles = await res.json();
+  const el = document.getElementById('articles');
+  el.innerHTML = articles.length ? '' : '<p class="muted">لا توجد مواضيع بعد — أضف مصدرًا أعلاه.</p>';
+  articles.forEach(a => {
+    const div = document.createElement('div');
+    div.className = 'article' + (a.read ? ' is-read' : '');
+    const date = new Date(a.publishedAt).toLocaleString();
+    div.innerHTML = `
+      <a href="${a.link}" target="_blank" onclick="markRead('${a.id}', true)">${escapeHtml(a.title)}</a>
+      <div class="meta">${escapeHtml(a.feedTitle || '')} · ${date}</div>
+      <div class="snippet">${escapeHtml(a.snippet || '')}</div>
+      <button class="small secondary" onclick="markRead('${a.id}', ${!a.read})">
+        ${a.read ? 'وضع كغير مقروء' : 'وضع كمقروء'}
+      </button>`;
+    el.appendChild(div);
+  });
+}
+
+async function markRead(articleId, read) {
+  await fetch(`/api/articles/${articleId}/${read ? 'read' : 'unread'}`, { method: 'POST', headers: authHeaders() });
+  loadArticles();
+}
+
+function escapeHtml(s) {
+  return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+// Auto-login if we already have a token
+if (token) {
+  fetch('/api/me', { headers: authHeaders() })
+    .then(res => res.ok ? res.json() : Promise.reject())
+    .then(data => showApp(data.email))
+    .catch(() => { localStorage.removeItem('readsync_token'); token = null; });
+}
+</script>
+</body>
+</html>
