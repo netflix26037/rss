@@ -2,13 +2,12 @@
   "name": "readsync",
   "version": "1.0.0",
   "private": true,
-  "description": "Multi-device RSS reader with per-user read-state sync",
+  "description": "Personal RSS reader with read-state synced across your own devices",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "bcryptjs": "^2.4.3",
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "rss-parser": "^3.13.0"

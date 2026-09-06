@@ -1,5 +1,4 @@
 const express = require('express');
-const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const RSSParser = require('rss-parser');
 const path = require('path');
@@ -9,24 +8,31 @@ const app = express();
 const parser = new RSSParser();
 const PORT = process.env.PORT || 3000;
 const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me';
+// This is the "password" for your personal reader. Change it via an
+// environment variable before exposing this beyond your own network:
+//   ACCESS_CODE=something-only-you-know npm start
+const ACCESS_CODE = process.env.ACCESS_CODE || '5566';
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // ---------------------------------------------------------------------------
-// Auth helpers
+// Auth — single user, one shared passphrase. No accounts, no registration.
 // ---------------------------------------------------------------------------
 
-function makeToken(user) {
-  return jwt.sign({ uid: user.id, email: user.email }, JWT_SECRET, { expiresIn: '30d' });
-}
+app.post('/api/login', (req, res) => {
+  const { code } = req.body || {};
+  if (code !== ACCESS_CODE) return res.status(401).json({ error: 'رمز الدخول غير صحيح' });
+  const token = jwt.sign({ ok: true }, JWT_SECRET, { expiresIn: '365d' });
+  res.json({ token });
+});
 
 function auth(req, res, next) {
   const header = req.headers.authorization || '';
   const token = header.startsWith('Bearer ') ? header.slice(7) : null;
   if (!token) return res.status(401).json({ error: 'missing token' });
   try {
-    req.userId = jwt.verify(token, JWT_SECRET).uid;
+    jwt.verify(token, JWT_SECRET);
     next();
   } catch (e) {
     return res.status(401).json({ error: 'invalid token' });
@@ -34,54 +40,19 @@ function auth(req, res, next) {
 }
 
 // ---------------------------------------------------------------------------
-// Auth routes
-// ---------------------------------------------------------------------------
-
-app.post('/api/register', async (req, res) => {
-  const { email, password } = req.body || {};
-  if (!email || !password) return res.status(400).json({ error: 'email and password required' });
-  const db = loadDB();
-  if (db.users.find(u => u.email.toLowerCase() === email.toLowerCase())) {
-    return res.status(409).json({ error: 'email already registered' });
-  }
-  const passwordHash = await bcrypt.hash(password, 10);
-  const user = { id: id(), email, passwordHash, createdAt: Date.now() };
-  db.users.push(user);
-  saveDB(db);
-  res.json({ token: makeToken(user), email: user.email });
-});
-
-app.post('/api/login', async (req, res) => {
-  const { email, password } = req.body || {};
-  const db = loadDB();
-  const user = db.users.find(u => u.email.toLowerCase() === (email || '').toLowerCase());
-  if (!user) return res.status(401).json({ error: 'invalid credentials' });
-  const ok = await bcrypt.compare(password || '', user.passwordHash);
-  if (!ok) return res.status(401).json({ error: 'invalid credentials' });
-  res.json({ token: makeToken(user), email: user.email });
-});
-
-app.get('/api/me', auth, (req, res) => {
-  const db = loadDB();
-  const user = db.users.find(u => u.id === req.userId);
-  if (!user) return res.status(404).json({ error: 'user not found' });
-  res.json({ email: user.email });
-});
-
-// ---------------------------------------------------------------------------
 // Feeds
 // ---------------------------------------------------------------------------
 
 app.get('/api/feeds', auth, (req, res) => {
   const db = loadDB();
-  res.json(db.feeds.filter(f => f.userId === req.userId));
+  res.json(db.feeds);
 });
 
 app.post('/api/feeds', auth, async (req, res) => {
   const { url } = req.body || {};
   if (!url) return res.status(400).json({ error: 'url required' });
   const db = loadDB();
-  if (db.feeds.find(f => f.userId === req.userId && f.url === url)) {
+  if (db.feeds.find(f => f.url === url)) {
     return res.status(409).json({ error: 'feed already added' });
   }
   let parsed;
@@ -90,7 +61,7 @@ app.post('/api/feeds', auth, async (req, res) => {
   } catch (e) {
     return res.status(400).json({ error: 'could not fetch/parse feed: ' + e.message });
   }
-  const feed = { id: id(), userId: req.userId, url, title: parsed.title || url };
+  const feed = { id: id(), url, title: parsed.title || url };
   db.feeds.push(feed);
   storeArticles(db, feed, parsed);
   saveDB(db);
@@ -99,7 +70,7 @@ app.post('/api/feeds', auth, async (req, res) => {
 
 app.delete('/api/feeds/:feedId', auth, (req, res) => {
   const db = loadDB();
-  const feed = db.feeds.find(f => f.id === req.params.feedId && f.userId === req.userId);
+  const feed = db.feeds.find(f => f.id === req.params.feedId);
   if (!feed) return res.status(404).json({ error: 'not found' });
   db.feeds = db.feeds.filter(f => f.id !== feed.id);
   saveDB(db);
@@ -108,7 +79,7 @@ app.delete('/api/feeds/:feedId', auth, (req, res) => {
 
 app.post('/api/feeds/:feedId/refresh', auth, async (req, res) => {
   const db = loadDB();
-  const feed = db.feeds.find(f => f.id === req.params.feedId && f.userId === req.userId);
+  const feed = db.feeds.find(f => f.id === req.params.feedId);
   if (!feed) return res.status(404).json({ error: 'not found' });
   let parsed;
   try {
@@ -142,21 +113,21 @@ function storeArticles(db, feed, parsed) {
 
 // ---------------------------------------------------------------------------
 // Articles + read-state — this is the part that keeps devices in sync.
-// "Read" is stored per (userId, articleId) on the server, not on the device,
-// so opening the same account elsewhere always reflects the same state.
+// "Read" is a single list stored on the server (readIds), so opening this
+// same app from any device always shows the same read/unread state.
 // ---------------------------------------------------------------------------
 
 app.get('/api/articles', auth, (req, res) => {
   const db = loadDB();
-  const myFeeds = db.feeds.filter(f => f.userId === req.userId);
-  const feedTitleById = Object.fromEntries(myFeeds.map(f => [f.id, f.title]));
-  const myFeedIds = new Set(myFeeds.map(f => f.id));
-  const myReads = new Set(db.reads.filter(r => r.userId === req.userId).map(r => r.articleId));
+  const feedTitleById = Object.fromEntries(db.feeds.map(f => [f.id, f.title]));
+  const readSet = new Set(db.readIds);
   const unreadOnly = req.query.unreadOnly === 'true';
 
-  let articles = db.articles
-    .filter(a => myFeedIds.has(a.feedId))
-    .map(a => ({ ...a, feedTitle: feedTitleById[a.feedId], read: myReads.has(a.id) }));
+  let articles = db.articles.map(a => ({
+    ...a,
+    feedTitle: feedTitleById[a.feedId],
+    read: readSet.has(a.id),
+  }));
 
   if (unreadOnly) articles = articles.filter(a => !a.read);
 
@@ -166,9 +137,8 @@ app.get('/api/articles', auth, (req, res) => {
 
 app.post('/api/articles/:articleId/read', auth, (req, res) => {
   const db = loadDB();
-  const exists = db.reads.find(r => r.userId === req.userId && r.articleId === req.params.articleId);
-  if (!exists) {
-    db.reads.push({ userId: req.userId, articleId: req.params.articleId, readAt: Date.now() });
+  if (!db.readIds.includes(req.params.articleId)) {
+    db.readIds.push(req.params.articleId);
     saveDB(db);
   }
   res.json({ ok: true });
@@ -176,7 +146,7 @@ app.post('/api/articles/:articleId/read', auth, (req, res) => {
 
 app.post('/api/articles/:articleId/unread', auth, (req, res) => {
   const db = loadDB();
-  db.reads = db.reads.filter(r => !(r.userId === req.userId && r.articleId === req.params.articleId));
+  db.readIds = db.readIds.filter(id => id !== req.params.articleId);
   saveDB(db);
   res.json({ ok: true });
 });

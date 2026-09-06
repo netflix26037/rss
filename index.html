@@ -59,10 +59,7 @@
   .feed-item:last-child { border-bottom: none; }
   .tabs { display: flex; gap: 8px; margin-bottom: 12px; }
   .tabs button.active { background: var(--accent); }
-  .article {
-    padding: 12px 0;
-    border-bottom: 1px solid var(--border);
-  }
+  .article { padding: 12px 0; border-bottom: 1px solid var(--border); }
   .article:last-child { border-bottom: none; }
   .article.is-read { opacity: 0.45; }
   .article a { color: var(--text); text-decoration: none; font-weight: 600; }
@@ -70,7 +67,6 @@
   .article .meta { color: var(--muted); font-size: 12px; margin: 2px 0 6px; }
   .article .snippet { color: var(--muted); font-size: 13px; margin-bottom: 6px; }
   .error { color: #ff6b6b; font-size: 13px; margin-top: 4px; }
-  #authMsg { min-height: 18px; }
 </style>
 </head>
 <body>
@@ -78,19 +74,15 @@
 
   <div id="auth" class="card">
     <h1>ReadSync</h1>
-    <p class="muted">سجّل حسابًا واحدًا، واستخدمه من الكمبيوتر والجوال لمتابعة نفس قائمة المقروء/غير المقروء.</p>
-    <input id="email" type="email" placeholder="البريد الإلكتروني">
-    <input id="password" type="password" placeholder="كلمة المرور">
-    <div class="row">
-      <button onclick="doLogin()">تسجيل الدخول</button>
-      <button class="secondary" onclick="doRegister()">إنشاء حساب</button>
-    </div>
+    <p class="muted">قارئ مواضيع شخصي — أدخل رمز الدخول نفسه من أي جهاز لديك لمتابعة نفس قائمة المقروء/غير المقروء.</p>
+    <input id="code" type="password" placeholder="رمز الدخول">
+    <button onclick="doLogin()">دخول</button>
     <div id="authMsg" class="error"></div>
   </div>
 
   <div id="app">
     <div class="topbar">
-      <div><strong id="whoami"></strong></div>
+      <div><strong>ReadSync</strong></div>
       <button class="secondary small" onclick="logout()">تسجيل الخروج</button>
     </div>
 
@@ -121,29 +113,21 @@ function authHeaders() {
   return { 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' };
 }
 
-async function doRegister() {
-  await authAction('/api/register');
-}
 async function doLogin() {
-  await authAction('/api/login');
-}
-
-async function authAction(path) {
-  const email = document.getElementById('email').value.trim();
-  const password = document.getElementById('password').value;
+  const code = document.getElementById('code').value;
   const msg = document.getElementById('authMsg');
   msg.textContent = '';
   try {
-    const res = await fetch(path, {
+    const res = await fetch('/api/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password })
+      body: JSON.stringify({ code })
     });
     const data = await res.json();
     if (!res.ok) { msg.textContent = data.error || 'حدث خطأ'; return; }
     token = data.token;
     localStorage.setItem('readsync_token', token);
-    showApp(data.email);
+    showApp();
   } catch (e) {
     msg.textContent = 'تعذّر الاتصال بالسيرفر';
   }
@@ -156,10 +140,9 @@ function logout() {
   document.getElementById('auth').style.display = 'block';
 }
 
-function showApp(email) {
+function showApp() {
   document.getElementById('auth').style.display = 'none';
   document.getElementById('app').style.display = 'block';
-  document.getElementById('whoami').textContent = email;
   loadFeeds();
   loadArticles();
 }
@@ -244,9 +227,8 @@ function escapeHtml(s) {
 
 // Auto-login if we already have a token
 if (token) {
-  fetch('/api/me', { headers: authHeaders() })
-    .then(res => res.ok ? res.json() : Promise.reject())
-    .then(data => showApp(data.email))
+  fetch('/api/feeds', { headers: authHeaders() })
+    .then(res => res.ok ? showApp() : Promise.reject())
     .catch(() => { localStorage.removeItem('readsync_token'); token = null; });
 }
 </script>

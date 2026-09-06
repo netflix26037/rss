@@ -1,5 +1,5 @@
-// Very small JSON-file "database" — good enough for a prototype.
-// Swap this for real Postgres/SQLite when you outgrow it (see README).
+// Very small JSON-file "database" — good enough for a personal prototype.
+// Swap this for real SQLite/Postgres when you outgrow it (see README).
 
 const fs = require('fs');
 const path = require('path');
@@ -9,7 +9,7 @@ const DB_FILE = path.join(__dirname, 'data.json');
 
 function loadDB() {
   if (!fs.existsSync(DB_FILE)) {
-    const empty = { users: [], feeds: [], articles: [], reads: [] };
+    const empty = { feeds: [], articles: [], readIds: [] };
     fs.writeFileSync(DB_FILE, JSON.stringify(empty, null, 2));
     return empty;
   }
