@@ -277,6 +277,14 @@ body {
       <button onclick="toggleSidebar()" class="text-gray-400 p-1 text-lg"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="overflow-y-auto space-y-3 pr-1" id="drawer-content">
+      <!-- قسم المزامنة بين الأجهزة -->
+      <div class="bg-black/30 p-3 rounded-xl border border-reddit-border space-y-2">
+        <h3 class="text-xs font-bold text-reddit-orange flex items-center gap-1.5">
+          <i class="fa-solid fa-arrows-rotate"></i> المزامنة بين الأجهزة
+        </h3>
+        <div id="sync-status" class="text-[11px] text-gray-400"></div>
+        <div id="sync-controls" class="flex flex-col gap-2"></div>
+      </div>
       <div id="sources-container" class="space-y-2">
         <p class="text-xs text-gray-400 text-center py-4">جاري تحميل المصادر...</p>
       </div>
@@ -341,6 +349,7 @@ let currentTab = 'unread';
 let selectedCategory = 'الكل';
 let readIds = new Set(JSON.parse(localStorage.getItem('app_read_ids') || '[]'));
 let favoriteArticles = JSON.parse(localStorage.getItem('app_favorite_articles') || '[]');
+let syncCode = localStorage.getItem('app_sync_code') || '';
 let observer = null;
 
 // كاش الترجمة الدائم: يُخزَّن بذاكرة المتصفح فلا تُعاد ترجمة نفس النص عبر
@@ -375,6 +384,112 @@ let isTranslating = false;
 const PAGE_SIZE = 20;
 let renderedCount = 0;
 let activeList = [];
+
+// ===== المزامنة بين الأجهزة =====
+function syncKey() {
+  return `rss-ar-sync-${syncCode}`;
+}
+
+function generateRandomCode() {
+  return Math.random().toString(36).substring(2, 8).toUpperCase();
+}
+
+async function pushSyncState() {
+  if (!KVDB_BUCKET_ID || !syncCode) return;
+  try {
+    const payload = JSON.stringify({
+      readIds: [...readIds],
+      favorites: favoriteArticles,
+      updatedAt: Date.now()
+    });
+    await fetch(`https://kvdb.io/${KVDB_BUCKET_ID}/${syncKey()}`, {
+      method: 'PUT',
+      body: payload
+    });
+  } catch (e) {
+    console.warn('فشل رفع بيانات المزامنة:', e.message);
+  }
+}
+
+async function pullSyncState() {
+  if (!KVDB_BUCKET_ID || !syncCode) return;
+  try {
+    const res = await fetch(`https://kvdb.io/${KVDB_BUCKET_ID}/${syncKey()}`);
+    if (!res.ok) return; // لا يوجد بيانات محفوظة بعد لهذا الكود، طبيعي أول مرة
+    const remote = await res.json();
+    if (remote.readIds) {
+      remote.readIds.forEach(id => readIds.add(id));
+      localStorage.setItem('app_read_ids', JSON.stringify([...readIds]));
+    }
+    if (remote.favorites) {
+      const localIds = new Set(favoriteArticles.map(a => a.id));
+      remote.favorites.forEach(fav => {
+        if (!localIds.has(fav.id)) favoriteArticles.push(fav);
+      });
+      localStorage.setItem('app_favorite_articles', JSON.stringify(favoriteArticles));
+    }
+  } catch (e) {
+    console.warn('فشل جلب بيانات المزامنة:', e.message);
+  }
+}
+
+async function generateNewSyncCode() {
+  syncCode = generateRandomCode();
+  localStorage.setItem('app_sync_code', syncCode);
+  await pushSyncState();
+  renderSyncUI();
+}
+
+async function linkExistingSyncCode() {
+  const input = document.getElementById('sync-code-input');
+  const code = (input?.value || '').trim().toUpperCase();
+  if (!code) return;
+  syncCode = code;
+  localStorage.setItem('app_sync_code', syncCode);
+  await pullSyncState();
+  updateCounts();
+  renderCurrentTab();
+  renderSyncUI();
+}
+
+function unlinkSync() {
+  syncCode = '';
+  localStorage.removeItem('app_sync_code');
+  renderSyncUI();
+}
+
+function renderSyncUI() {
+  const status = document.getElementById('sync-status');
+  const controls = document.getElementById('sync-controls');
+  if (!status || !controls) return;
+
+  if (!KVDB_BUCKET_ID) {
+    status.innerHTML = 'المزامنة غير مفعّلة بعد على هذا الموقع.';
+    controls.innerHTML = '';
+    return;
+  }
+
+  if (syncCode) {
+    status.innerHTML = `متصل — كود جهازك: <span class="text-reddit-orange font-bold mono">${syncCode}</span>`;
+    controls.innerHTML = `
+      <button onclick="navigator.clipboard.writeText('${syncCode}')" class="bg-reddit-card border border-reddit-border text-gray-300 text-[11px] font-bold py-2 rounded-lg">
+        <i class="fa-solid fa-copy"></i> نسخ الكود لإدخاله بالجهاز الآخر
+      </button>
+      <button onclick="unlinkSync()" class="text-[11px] text-gray-500 underline">فك الربط</button>
+    `;
+  } else {
+    status.innerHTML = 'غير متصل بأي جهاز آخر بعد.';
+    controls.innerHTML = `
+      <button onclick="generateNewSyncCode()" class="bg-reddit-orange text-white text-[11px] font-bold py-2 rounded-lg">
+        إنشاء كود مزامنة جديد (أول جهاز)
+      </button>
+      <div class="flex gap-2">
+        <input id="sync-code-input" type="text" placeholder="أدخل كود من جهاز آخر" class="flex-grow bg-black/40 border border-reddit-border rounded-lg px-2 text-[11px] text-white placeholder-gray-500" maxlength="8">
+        <button onclick="linkExistingSyncCode()" class="bg-reddit-card border border-reddit-border text-gray-300 text-[11px] font-bold px-3 rounded-lg">ربط</button>
+      </div>
+    `;
+  }
+}
 
 function toggleSidebar() {
   const drawer = document.getElementById('sidebar-drawer');
@@ -440,6 +555,11 @@ const LINGVA_MIRRORS = [
 
 // أضف بريدك هنا لرفع حد الترجمة المجاني من 5,000 إلى 50,000 حرف باليوم (موثّق رسمياً من MyMemory)
 // يفضّل استخدام بريد ثانوي وليس بريدك الأساسي لأنه سيظهر في كود الصفحة العلني
+// المزامنة بين الأجهزة (كمبيوتر/جوال) عبر KVdb.io — خدمة تخزين بسيطة مجانية
+// بدون حساب حقيقي. افتح setup-sync.html مرة واحدة واحصل على معرّف المساحة،
+// وحطه هنا:
+const KVDB_BUCKET_ID = ''; // مثال: 'Fd55uogXyxYdnXJvnyN8Xo'
+
 const MYMEMORY_EMAIL = 'netflix26037@gmail.com';
 
 // Microsoft Translator (المزوّد الأساسي الجديد): أسرع وأدق وحصته أكبر بكثير
@@ -676,6 +796,7 @@ function markAsReadHover(id) {
     readIds.add(id);
     localStorage.setItem('app_read_ids', JSON.stringify([...readIds]));
     updateCounts();
+    pushSyncState();
   }
 }
 
@@ -710,6 +831,7 @@ function toggleFavoriteArticle(articleId, event) {
   localStorage.setItem('app_favorite_articles', JSON.stringify(favoriteArticles));
   updateCounts();
   renderCurrentTab();
+  pushSyncState();
 }
 
 function updateCounts() {
@@ -1045,6 +1167,8 @@ window.onload = async function() {
     adjustBottomSpacing();
     window.addEventListener('resize', adjustBottomSpacing);
     window.addEventListener('orientationchange', adjustBottomSpacing);
+    renderSyncUI();
+    await pullSyncState();
     sources = await fetchSourcesJSON();
     renderSources();
     renderCategoryChips();
