@@ -46,10 +46,6 @@
   }
 </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<!-- Firebase (للمزامنة عبر حساب حقيقي بإيميل وكلمة مرور) -->
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
@@ -281,14 +277,6 @@ body {
       <button onclick="toggleSidebar()" class="text-gray-400 p-1 text-lg"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="overflow-y-auto space-y-3 pr-1" id="drawer-content">
-      <!-- قسم المزامنة بين الأجهزة -->
-      <div class="bg-black/30 p-3 rounded-xl border border-reddit-border space-y-2">
-        <h3 class="text-xs font-bold text-reddit-orange flex items-center gap-1.5">
-          <i class="fa-solid fa-arrows-rotate"></i> المزامنة بين الأجهزة
-        </h3>
-        <div id="sync-status" class="text-[11px] text-gray-400"></div>
-        <div id="sync-controls" class="flex flex-col gap-2"></div>
-      </div>
       <div id="sources-container" class="space-y-2">
         <p class="text-xs text-gray-400 text-center py-4">جاري تحميل المصادر...</p>
       </div>
@@ -389,44 +377,21 @@ let renderedCount = 0;
 let activeList = [];
 
 // ===== المزامنة بين الأجهزة =====
-// ===== المزامنة عبر حساب حقيقي (Firebase Auth + Firestore) =====
-let firebaseApp = null;
-let firebaseAuth = null;
-let firebaseDb = null;
-let currentUser = null;
-
-function isFirebaseConfigured() {
-  return Boolean(FIREBASE_CONFIG.apiKey && FIREBASE_CONFIG.projectId);
-}
-
-function initFirebase() {
-  if (!isFirebaseConfigured() || typeof firebase === 'undefined') return;
-  try {
-    firebaseApp = firebase.initializeApp(FIREBASE_CONFIG);
-    firebaseAuth = firebase.auth();
-    firebaseDb = firebase.firestore();
-
-    firebaseAuth.onAuthStateChanged(async (user) => {
-      currentUser = user;
-      if (user) {
-        await pullSyncState();
-        updateCounts();
-        renderCurrentTab();
-      }
-      renderSyncUI();
-    });
-  } catch (e) {
-    console.warn('فشل تهيئة Firebase:', e.message);
-  }
-}
+// ===== مزامنة صامتة تلقائية بين الأجهزة (بدون أي حساب أو واجهة) =====
+// بما إنك المستخدم الوحيد، كل الأجهزة تشارك نفس المفتاح الثابت تلقائياً —
+// ما فيه تسجيل دخول ولا كود يُدخل، تشتغل من نفسها بالخلفية
+const SYNC_KEY = 'my-personal-reddit-reader'; // ثابت لكل أجهزتك، لا تغيّره
 
 async function pushSyncState() {
-  if (!firebaseDb || !currentUser) return;
+  if (!KVDB_BUCKET_ID) return;
   try {
-    await firebaseDb.collection('users').doc(currentUser.uid).set({
-      readIds: [...readIds],
-      favorites: favoriteArticles,
-      updatedAt: Date.now()
+    await fetch(`https://kvdb.io/${KVDB_BUCKET_ID}/${SYNC_KEY}`, {
+      method: 'PUT',
+      body: JSON.stringify({
+        readIds: [...readIds],
+        favorites: favoriteArticles,
+        updatedAt: Date.now()
+      })
     });
   } catch (e) {
     console.warn('فشل رفع بيانات المزامنة:', e.message);
@@ -434,11 +399,11 @@ async function pushSyncState() {
 }
 
 async function pullSyncState() {
-  if (!firebaseDb || !currentUser) return;
+  if (!KVDB_BUCKET_ID) return;
   try {
-    const doc = await firebaseDb.collection('users').doc(currentUser.uid).get();
-    if (!doc.exists) return; // أول مرة يسجّل فيها هذا الحساب دخول، لا يوجد بيانات محفوظة بعد
-    const remote = doc.data();
+    const res = await fetch(`https://kvdb.io/${KVDB_BUCKET_ID}/${SYNC_KEY}`);
+    if (!res.ok) return; // أول مرة، لا يوجد شيء محفوظ بعد — طبيعي
+    const remote = await res.json();
     if (remote.readIds) {
       remote.readIds.forEach(id => readIds.add(id));
       localStorage.setItem('app_read_ids', JSON.stringify([...readIds]));
@@ -452,87 +417,6 @@ async function pullSyncState() {
     }
   } catch (e) {
     console.warn('فشل جلب بيانات المزامنة:', e.message);
-  }
-}
-
-async function signUpWithEmail() {
-  const email = (document.getElementById('sync-email')?.value || '').trim();
-  const password = document.getElementById('sync-password')?.value || '';
-  const errEl = document.getElementById('sync-error');
-  errEl.innerText = '';
-  if (!email || password.length < 6) {
-    errEl.innerText = 'أدخل بريداً صحيحاً وكلمة مرور 6 أحرف على الأقل';
-    return;
-  }
-  try {
-    await firebaseAuth.createUserWithEmailAndPassword(email, password);
-  } catch (e) {
-    errEl.innerText = translateFirebaseError(e.code);
-  }
-}
-
-async function loginWithEmail() {
-  const email = (document.getElementById('sync-email')?.value || '').trim();
-  const password = document.getElementById('sync-password')?.value || '';
-  const errEl = document.getElementById('sync-error');
-  errEl.innerText = '';
-  if (!email || !password) {
-    errEl.innerText = 'أدخل البريد وكلمة المرور';
-    return;
-  }
-  try {
-    await firebaseAuth.signInWithEmailAndPassword(email, password);
-  } catch (e) {
-    errEl.innerText = translateFirebaseError(e.code);
-  }
-}
-
-function logoutSync() {
-  if (firebaseAuth) firebaseAuth.signOut();
-}
-
-function translateFirebaseError(code) {
-  const map = {
-    'auth/email-already-in-use': 'هذا البريد مستخدم مسبقاً — جرّب تسجيل الدخول بدل إنشاء حساب',
-    'auth/invalid-email': 'صيغة البريد الإلكتروني غير صحيحة',
-    'auth/weak-password': 'كلمة المرور ضعيفة، استخدم 6 أحرف على الأقل',
-    'auth/wrong-password': 'كلمة المرور غير صحيحة',
-    'auth/user-not-found': 'لا يوجد حساب بهذا البريد',
-    'auth/invalid-credential': 'البريد أو كلمة المرور غير صحيحة',
-    'auth/too-many-requests': 'محاولات كثيرة، حاول لاحقاً',
-  };
-  return map[code] || 'حدث خطأ، حاول مرة أخرى';
-}
-
-function renderSyncUI() {
-  const status = document.getElementById('sync-status');
-  const controls = document.getElementById('sync-controls');
-  if (!status || !controls) return;
-
-  if (!isFirebaseConfigured()) {
-    status.innerHTML = 'المزامنة غير مفعّلة بعد على هذا الموقع.';
-    controls.innerHTML = '';
-    return;
-  }
-
-  if (currentUser) {
-    status.innerHTML = `مسجّل الدخول: <span class="text-reddit-orange font-bold">${currentUser.email}</span>`;
-    controls.innerHTML = `
-      <button onclick="logoutSync()" class="bg-reddit-card border border-reddit-border text-gray-300 text-[11px] font-bold py-2 rounded-lg">
-        تسجيل الخروج
-      </button>
-    `;
-  } else {
-    status.innerHTML = 'سجّل دخولك لمزامنة قراءاتك ومفضلتك بين أجهزتك.';
-    controls.innerHTML = `
-      <input id="sync-email" type="email" placeholder="البريد الإلكتروني" class="bg-black/40 border border-reddit-border rounded-lg px-2 py-1.5 text-[11px] text-white placeholder-gray-500">
-      <input id="sync-password" type="password" placeholder="كلمة المرور" class="bg-black/40 border border-reddit-border rounded-lg px-2 py-1.5 text-[11px] text-white placeholder-gray-500">
-      <div id="sync-error" class="text-[10px] text-red-400"></div>
-      <div class="flex gap-2">
-        <button onclick="loginWithEmail()" class="flex-grow bg-reddit-orange text-white text-[11px] font-bold py-2 rounded-lg">تسجيل الدخول</button>
-        <button onclick="signUpWithEmail()" class="flex-grow bg-reddit-card border border-reddit-border text-gray-300 text-[11px] font-bold py-2 rounded-lg">إنشاء حساب</button>
-      </div>
-    `;
   }
 }
 
@@ -601,17 +485,9 @@ const LINGVA_MIRRORS = [
 // أضف بريدك هنا لرفع حد الترجمة المجاني من 5,000 إلى 50,000 حرف باليوم (موثّق رسمياً من MyMemory)
 // يفضّل استخدام بريد ثانوي وليس بريدك الأساسي لأنه سيظهر في كود الصفحة العلني
 
-// المزامنة بين الأجهزة عبر حساب حقيقي (إيميل وكلمة مرور) باستخدام Firebase
-// (مجاني بالكامل من قوقل، بدون بطاقة ائتمان). أنشئ مشروع Firebase مجاني،
-// فعّل Authentication (Email/Password) وFirestore Database، وحط إعداداتك هنا:
-const FIREBASE_CONFIG = {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: ""
-};
+// المزامنة الصامتة بين أجهزتك: افتح setup-sync.html مرة واحدة فقط بأي متصفح
+// (لا حاجة لحساب أو تسجيل)، وحط الرمز اللي يطلع لك هنا:
+const KVDB_BUCKET_ID = ''; // مثال: 'Fd55uogXyxYdnXJvnyN8Xo'
 
 const MYMEMORY_EMAIL = 'netflix26037@gmail.com';
 
@@ -1220,8 +1096,7 @@ window.onload = async function() {
     adjustBottomSpacing();
     window.addEventListener('resize', adjustBottomSpacing);
     window.addEventListener('orientationchange', adjustBottomSpacing);
-    renderSyncUI();
-    initFirebase();
+    await pullSyncState();
     sources = await fetchSourcesJSON();
     renderSources();
     renderCategoryChips();
