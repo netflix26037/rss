@@ -14,7 +14,9 @@ const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
 // (Settings → Secrets and variables → Actions) — لا تضع القيم هنا مباشرة أبداً.
 
 const AZURE_TRANSLATOR_KEY = process.env.AZURE_TRANSLATOR_KEY;
-const AZURE_TRANSLATOR_REGION = process.env.AZURE_TRANSLATOR_REGION || 'qatarcentral';
+// مورد Azure من نوع "Global" لا يحتاج رأس المنطقة إطلاقاً — نتركه فارغاً
+// افتراضياً بدل تخمين منطقة معيّنة قد لا تطابق موردك الفعلي وتسبب خطأ 401
+const AZURE_TRANSLATOR_REGION = process.env.AZURE_TRANSLATOR_REGION || '';
 const AZURE_TRANSLATOR_ENDPOINT = 'https://api.cognitive.microsofttranslator.com';
 
 // إعادة محاولة بسيطة عند فشل مؤقت (مثل تجاوز حد الطلبات اللحظي 429/5xx)
@@ -28,15 +30,21 @@ async function translateText(text, retries = 2) {
 
     for (let attempt = 0; attempt <= retries; attempt++) {
         try {
+            const headers = {
+                'Ocp-Apim-Subscription-Key': AZURE_TRANSLATOR_KEY,
+                'Content-type': 'application/json',
+            };
+            // نضيف رأس المنطقة فقط لو كان مضبوطاً فعلياً — موارد "Global" ترفض
+            // الطلب (خطأ 401) حتى لو كانت قيمة الرأس فارغة، فلازم يُحذف بالكامل
+            if (AZURE_TRANSLATOR_REGION) {
+                headers['Ocp-Apim-Subscription-Region'] = AZURE_TRANSLATOR_REGION;
+            }
+
             const res = await axios({
                 baseURL: AZURE_TRANSLATOR_ENDPOINT,
                 url: '/translate',
                 method: 'post',
-                headers: {
-                    'Ocp-Apim-Subscription-Key': AZURE_TRANSLATOR_KEY,
-                    'Ocp-Apim-Subscription-Region': AZURE_TRANSLATOR_REGION,
-                    'Content-type': 'application/json',
-                },
+                headers,
                 params: {
                     'api-version': '3.0',
                     'from': 'en',
