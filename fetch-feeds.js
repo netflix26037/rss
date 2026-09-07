@@ -54,7 +54,11 @@ async function translateText(text, retries = 2) {
                 timeout: 8000,
             });
 
-            return res.data?.[0]?.translations?.[0]?.text || '';
+            const translated = res.data?.[0]?.translations?.[0]?.text || '';
+            // مهلة قصيرة بعد كل طلب ناجح — مستوى Free F0 يقيّد عدد الطلبات
+            // بالثانية الواحدة، وهذا يمنع الاصطدام بخطأ 429 المتكرر
+            await sleep(350);
+            return translated;
         } catch (err) {
             const status = err.response?.status;
             const isRetryable = status === 429 || (status && status >= 500);
