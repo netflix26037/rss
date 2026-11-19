@@ -980,6 +980,11 @@
     "category": "اسهم"
   },
   {
+    "name": "GME / GameStop - Google News",
+    "url": "https://news.google.com/news/rss/search?q=%22gme%22%2C%22gamestop%22&hl=en-US&gl=US&ceid=US:en",
+    "category": "اسهم"
+  },
+  {
     "name": "Bloomberg Crypto",
     "url": "https://feeds.bloomberg.com/Crypto/news.rss",
     "category": "كريبتو"
@@ -987,6 +992,56 @@
   {
     "name": "DL News",
     "url": "https://www.dlnews.com/rss/",
+    "category": "كريبتو"
+  },
+  {
+    "name": "Chainlink - Google News",
+    "url": "https://news.google.com/news/rss/search?q=Chainlink&hl=en",
+    "category": "كريبتو"
+  },
+  {
+    "name": "Crypto - Google News",
+    "url": "https://news.google.com/news/rss/search?q=crypto&hl=en",
+    "category": "كريبتو"
+  },
+  {
+    "name": "Dogecoin - Google News (US)",
+    "url": "https://news.google.com/news/rss/search?q=dogecoin&hl=en-US&gl=US&ceid=US:en",
+    "category": "كريبتو"
+  },
+  {
+    "name": "Sui - Google News",
+    "url": "https://news.google.com/news/rss/search?q=sui&hl=en-US&gl=US&ceid=US:en",
+    "category": "كريبتو"
+  },
+  {
+    "name": "YouTube - UClf1NZB9mFLnMDiwVWsBi9w",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UClf1NZB9mFLnMDiwVWsBi9w",
+    "category": "كريبتو"
+  },
+  {
+    "name": "BitBoy Crypto - YouTube",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCjemQfjaXAzA-95RKoy9n_g",
+    "category": "كريبتو"
+  },
+  {
+    "name": "Bitcoin Insider",
+    "url": "https://www.bitcoininsider.org/rss.xml",
+    "category": "كريبتو"
+  },
+  {
+    "name": "Chainlink - YouTube",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCnjkrlqaWEBSnKZQ71gdyFA",
+    "category": "كريبتو"
+  },
+  {
+    "name": "LINKTrader",
+    "url": "https://www.reddit.com/r/LINKTrader/.rss",
+    "category": "كريبتو"
+  },
+  {
+    "name": "CryptoCurrencyNews",
+    "url": "https://cryptocurrencynews.com/feed/",
     "category": "كريبتو"
   },
   {
